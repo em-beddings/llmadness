@@ -1,2 +1,116 @@
-# llmadness
-LLMadness Agent Arena
+# LLMadness
+
+LLMadness is a local-first March Madness arena for foundation models.
+
+It does three things:
+
+1. Takes a bracket config plus supporting data snapshots.
+2. Runs multiple model agents to produce full bracket picks and reasoning traces as JSON.
+3. Serves a Next.js web app that shows each model's bracket, its trace, and a scored leaderboard.
+
+## Stack
+
+- Next.js app router for the web app
+- TypeScript for the agent pipeline and scripts
+- Plain JSON files for configs, submissions, traces, and scores
+- No database
+
+## Project layout
+
+- `app/`: web app routes
+- `components/`: UI for leaderboard, bracket board, and traces
+- `agents/`: central agent plus model/data source adapters
+- `scripts/`: CLI scripts to generate brackets and score them
+- `data/configs/`: bracket configs
+- `data/models/`: model definitions used for a run
+- `data/sources/`: local snapshot files you want attached to a run
+- `data/runs/`: generated JSON output per run
+
+## Core architecture
+
+`CentralBracketAgent` is the coordinator. For each model it:
+
+1. Collects snapshots from configured data sources.
+2. Passes the bracket plus source snapshots to the model adapter.
+3. Saves one JSON file per model with picks, confidences, rationale, and reasoning steps.
+
+Current adapters:
+
+- `mock`: deterministic local adapter for demo/testing
+- `openai-compatible`: generic chat-completions style adapter using `OPENAI_API_KEY`
+
+Current data sources:
+
+- derived team metric snapshot from the config
+- local JSON files for news/injury digests
+
+The intended production path is to keep the same interfaces and swap in richer sources:
+
+- bracket feed once Selection Sunday drops
+- team stats API
+- injury/news feed
+- optional odds or market-implied priors
+
+## Demo data
+
+A demo run is checked in at `data/runs/demo-2026/` so the UI renders immediately.
+
+- Config: `data/configs/demo-bracket.json`
+- Models: `data/models/demo-models.json`
+- Run: `data/runs/demo-2026/`
+
+## Local setup
+
+```bash
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000`.
+
+## Generate a run
+
+```bash
+npm run generate:brackets -- --config data/configs/demo-bracket.json --models data/models/demo-models.json --run-id demo-2026
+```
+
+This writes:
+
+- `data/runs/<run-id>/manifest.json`
+- `data/runs/<run-id>/<model-id>.json`
+
+## Score a run
+
+```bash
+npm run score:brackets -- --run-id demo-2026 --results data/results/demo-actual-results.json
+```
+
+This writes:
+
+- `data/runs/<run-id>/leaderboard.json`
+- `data/runs/<run-id>/actual-results.json`
+
+## Real tournament workflow for Selection Sunday
+
+When the real bracket is released:
+
+1. Create a `data/configs/<year>-mens-bracket.json` file with all teams and games.
+2. Drop source snapshots into `data/sources/` or replace the data source classes with live API collectors.
+3. Create a model list in `data/models/<run-name>.json`.
+4. Run `generate:brackets`.
+5. After results come in, run `score:brackets`.
+6. Open the web app and browse `/runs/<run-id>`.
+
+## JSON contract notes
+
+The bracket config is graph-based rather than hardcoded to 64 games:
+
+- `teams[]` describes the field
+- `games[]` defines each matchup
+- each game uses either a team slot or a prior-game winner slot
+
+That means you can load the real NCAA bracket tomorrow without changing the app shape.
+
+## Domain direction
+
+The app metadata is already branded as `LLMadness`. You can point either `LLMadness.com` or `LLMadness.ai` at the deployed Next.js app later without changing the storage model.
