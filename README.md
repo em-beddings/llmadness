@@ -4,8 +4,8 @@ LLMadness is a local-first March Madness arena for foundation models.
 
 It does three things:
 
-1. Takes a bracket config plus supporting data snapshots.
-2. Runs multiple model agents to produce full bracket picks and reasoning traces as JSON.
+1. Takes a bracket config.
+2. Runs multiple model agents with tool access to produce full bracket picks, reasoning traces, and tool transcripts as JSON.
 3. Serves a Next.js web app that shows each model's bracket, its trace, and a scored leaderboard.
 
 ## Stack
@@ -19,32 +19,35 @@ It does three things:
 
 - `app/`: web app routes
 - `components/`: UI for leaderboard, bracket board, and traces
-- `agents/`: central agent plus model/data source adapters
+- `agents/`: central agent plus model/tool adapters
 - `scripts/`: CLI scripts to generate brackets and score them
 - `data/configs/`: bracket configs
 - `data/models/`: model definitions used for a run
-- `data/sources/`: local snapshot files you want attached to a run
 - `data/runs/`: generated JSON output per run
 
 ## Core architecture
 
 `CentralBracketAgent` is the coordinator. For each model it:
 
-1. Collects snapshots from configured data sources.
-2. Passes the bracket plus source snapshots to the model adapter.
+1. Walks the bracket game-by-game in tournament order.
+2. Passes the current matchup, prior picks, and tool access to the model adapter.
 3. Saves one JSON file per model with picks, confidences, rationale, and reasoning steps.
 
 Current adapters:
 
 - `mock`: deterministic local adapter for demo/testing
-- `openai-compatible`: generic chat-completions style adapter using `OPENAI_API_KEY`
+- `openai-compatible`: generic chat-completions style adapter using iterative tool calls
 
-Current data sources:
+Built-in agent tools:
 
-- derived team metric snapshot from the config
-- local JSON files for news/injury digests
+- `list_teams`
+- `get_games`
+- `lookup_cbb_ratings`
+- `search_web`
+- `search_espn_news`
+- `fetch_webpage`
 
-The intended production path is to keep the same interfaces and swap in richer sources:
+The intended production path is to keep the same interfaces and swap in richer tool backends:
 
 - bracket feed once Selection Sunday drops
 - team stats API
@@ -79,6 +82,12 @@ This writes:
 - `data/runs/<run-id>/manifest.json`
 - `data/runs/<run-id>/<model-id>.json`
 
+Each submission now includes:
+
+- `picks`
+- `reasoning`
+- `toolCalls`
+
 ## Score a run
 
 ```bash
@@ -95,11 +104,15 @@ This writes:
 When the real bracket is released:
 
 1. Create a `data/configs/<year>-mens-bracket.json` file with all teams and games.
-2. Drop source snapshots into `data/sources/` or replace the data source classes with live API collectors.
-3. Create a model list in `data/models/<run-name>.json`.
-4. Run `generate:brackets`.
-5. After results come in, run `score:brackets`.
-6. Open the web app and browse `/runs/<run-id>`.
+2. Create a model list in `data/models/<run-name>.json`.
+3. Run `generate:brackets`.
+4. After results come in, run `score:brackets`.
+5. Open the web app and browse `/runs/<run-id>`.
+
+Recommended environment for live tool use:
+
+- `OPENAI_API_KEY` for the model
+- local ratings files at `data/stats/torvik.json` and `data/stats/kenpom.json` are used automatically by `lookup_cbb_ratings`
 
 ## JSON contract notes
 

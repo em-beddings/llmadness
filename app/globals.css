@@ -147,50 +147,139 @@ h1 {
   margin-top: 4px;
 }
 
-.bracket-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(240px, 1fr));
-  gap: 18px;
-  align-items: start;
+.bracket-shell {
   overflow-x: auto;
-  padding-bottom: 12px;
 }
 
-.round-column {
+.tournament-bracket {
+  display: grid;
+  grid-template-columns: minmax(640px, 1fr) minmax(250px, 280px) minmax(640px, 1fr);
+  gap: 18px;
+  min-width: 1540px;
+  align-items: start;
+}
+
+.bracket-side {
+  display: grid;
+  gap: 18px;
+}
+
+.region-panel,
+.finals-panel {
   padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.56);
 }
 
-.round-header {
+.region-header {
   display: flex;
   justify-content: space-between;
   gap: 12px;
   align-items: baseline;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
-.game-card {
-  border-top: 1px solid var(--line);
-  padding: 14px 0;
+.region-header span,
+.region-round-label,
+.bracket-node-meta,
+.championship-label {
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
-.game-card:first-of-type {
-  border-top: 0;
-  padding-top: 0;
+.region-grid {
+  display: grid;
+  gap: 14px;
 }
 
-.game-card-top,
-.winner-row {
-  display: flex;
-  justify-content: space-between;
+.region-grid-left {
+  grid-template-columns: repeat(var(--round-count), minmax(160px, 1fr));
+}
+
+.region-grid-right {
+  grid-template-columns: repeat(var(--round-count), minmax(160px, 1fr));
+}
+
+.region-round {
+  display: grid;
   gap: 10px;
 }
 
-.team-row {
-  padding: 4px 0;
+.region-round-grid {
+  display: grid;
+  grid-template-rows: repeat(var(--row-count), minmax(84px, auto));
 }
 
-.winner-row {
+.region-round-slot {
+  align-self: center;
+}
+
+.bracket-node {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px;
+  background: rgba(250, 248, 242, 0.9);
+  min-height: 74px;
+}
+
+.bracket-node::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  border-top: 1px solid rgba(14, 106, 83, 0.35);
+}
+
+.bracket-node-left::after {
+  right: -17px;
+}
+
+.bracket-node-right::after {
+  left: -17px;
+}
+
+.bracket-node-center::after {
+  display: none;
+}
+
+.bracket-node-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.bracket-team {
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+
+.bracket-team + .bracket-team {
+  margin-top: 4px;
+}
+
+.bracket-team-winner {
+  background: rgba(14, 106, 83, 0.14);
+  font-weight: 700;
+}
+
+.bracket-pick {
   margin-top: 8px;
+  font-size: 0.88rem;
+  color: var(--accent);
+}
+
+.finals-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.championship-wrap {
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
 }
 
 .rationale {
@@ -217,6 +306,19 @@ h1 {
   margin-bottom: 0;
 }
 
+.code-block {
+  margin: 12px 0 0;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(18, 28, 22, 0.06);
+  font-family: "SFMono-Regular", "Menlo", "Monaco", monospace;
+  font-size: 0.82rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 @media (max-width: 900px) {
   .hero,
   .page-header {
@@ -226,5 +328,9 @@ h1 {
   .shell {
     width: min(100vw - 20px, 1400px);
     padding-top: 20px;
+  }
+
+  .tournament-bracket {
+    min-width: 1100px;
   }
 }

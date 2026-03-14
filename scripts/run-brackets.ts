@@ -1,7 +1,6 @@
 import path from "node:path";
 import { mkdir } from "node:fs/promises";
 import { CentralBracketAgent } from "@/agents/central-agent";
-import { DerivedTeamSnapshotDataSource, StaticFileDataSource } from "@/agents/data-sources";
 import { MockModelAdapter } from "@/agents/mock-model";
 import { OpenAICompatibleAdapter } from "@/agents/openai-compatible";
 import { readJsonFile, writeJsonFile } from "@/lib/fs";
@@ -29,18 +28,10 @@ async function main() {
 
   const outDir = path.join(process.cwd(), "data", "runs", runId);
   await mkdir(outDir, { recursive: true });
-
-  const agent = new CentralBracketAgent(
-    [
-      new DerivedTeamSnapshotDataSource(),
-      new StaticFileDataSource("news-digest", "News digest", "data/sources/demo-news.json"),
-      new StaticFileDataSource("injury-report", "Injury report", "data/sources/demo-injuries.json")
-    ],
-    {
-      mock: new MockModelAdapter(),
-      "openai-compatible": new OpenAICompatibleAdapter()
-    }
-  );
+  const agent = new CentralBracketAgent({
+    mock: new MockModelAdapter(),
+    "openai-compatible": new OpenAICompatibleAdapter()
+  });
 
   const manifest = {
     id: runId,

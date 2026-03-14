@@ -56,6 +56,16 @@ export const modelDefinitionSchema = z.object({
   settings: z.record(z.union([z.number(), z.string(), z.boolean()])).optional()
 });
 
+export const agentToolCallSchema = z.object({
+  id: z.string(),
+  toolName: z.string(),
+  arguments: z.any(),
+  startedAt: z.string(),
+  completedAt: z.string(),
+  summary: z.string(),
+  result: z.any()
+});
+
 export const bracketSubmissionSchema = z.object({
   runId: z.string(),
   model: modelDefinitionSchema,
@@ -66,7 +76,7 @@ export const bracketSubmissionSchema = z.object({
       gameId: z.string(),
       winnerId: z.string(),
       confidence: z.number().min(0).max(1),
-      rationale: z.string()
+      rationale: z.string().min(40)
     })
   ),
   reasoning: z.array(
@@ -77,14 +87,7 @@ export const bracketSubmissionSchema = z.object({
       evidence: z.array(z.string())
     })
   ),
-  sources: z.array(
-    z.object({
-      id: z.string(),
-      title: z.string(),
-      collectedAt: z.string(),
-      payload: z.any()
-    })
-  )
+  toolCalls: z.array(agentToolCallSchema).default([])
 });
 
 export const actualResultsSchema = z.object({

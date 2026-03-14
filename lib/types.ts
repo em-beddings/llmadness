@@ -49,11 +49,20 @@ export interface BracketConfig {
   games: GameDefinition[];
 }
 
-export interface DataSourceSnapshot {
+export interface AgentToolDefinition {
+  name: string;
+  description: string;
+  inputSchema: Record<string, unknown>;
+}
+
+export interface AgentToolCall {
   id: string;
-  title: string;
-  collectedAt: string;
-  payload: unknown;
+  toolName: string;
+  arguments: unknown;
+  startedAt: string;
+  completedAt: string;
+  summary: string;
+  result: unknown;
 }
 
 export interface ModelDefinition {
@@ -79,6 +88,15 @@ export interface BracketPick {
   rationale: string;
 }
 
+export interface GamePredictionContext {
+  game: GameDefinition;
+  slotAName: string;
+  slotBName: string;
+  slotATeamId: string;
+  slotBTeamId: string;
+  priorPicks: BracketPick[];
+}
+
 export interface BracketSubmission {
   runId: string;
   model: ModelDefinition;
@@ -86,7 +104,7 @@ export interface BracketSubmission {
   configId: string;
   picks: BracketPick[];
   reasoning: ReasoningStep[];
-  sources: DataSourceSnapshot[];
+  toolCalls: AgentToolCall[];
 }
 
 export interface ActualResults {

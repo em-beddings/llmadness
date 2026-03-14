@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BracketBoard } from "@/components/bracket-board";
 import { TracePanel } from "@/components/trace-panel";
+import { ToolCallPanel } from "@/components/tool-call-panel";
 import { loadSubmissionView } from "@/lib/repository";
 import { notFound } from "next/navigation";
 
@@ -30,6 +31,7 @@ export default async function ModelPage({
       </section>
       <BracketBoard view={view} />
       <TracePanel steps={view.submission.reasoning} />
+      <ToolCallPanel calls={view.submission.toolCalls} />
     </main>
   );
 }

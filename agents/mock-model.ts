@@ -1,5 +1,5 @@
-import { groupGamesByRound, indexTeams } from "@/lib/bracket";
-import { BracketSubmission, ModelDefinition } from "@/lib/types";
+import { indexTeams } from "@/lib/bracket";
+import { ModelDefinition } from "@/lib/types";
 import { ModelAdapter, PredictionInput } from "@/agents/interfaces";
 
 function seededScore(seed: number) {
@@ -11,66 +11,61 @@ function hashString(input: string) {
 }
 
 export class MockModelAdapter implements ModelAdapter {
-  async generateBracket(input: PredictionInput, model: ModelDefinition): Promise<Omit<BracketSubmission, "runId" | "generatedAt">> {
+  async predictGame(
+    input: PredictionInput,
+    model: ModelDefinition
+  ): Promise<{
+    pick: {
+      gameId: string;
+      winnerId: string;
+      confidence: number;
+      rationale: string;
+    };
+    reasoningStep: {
+      id: string;
+      title: string;
+      summary: string;
+      evidence: string[];
+    };
+  }> {
     const teamIndex = indexTeams(input.config);
-    const winners = new Map<string, string>();
+    const currentGame = input.currentGame;
 
-    const picks = groupGamesByRound(input.config).flatMap(({ round, games }) =>
-      games.map((game) => {
-        const teamA =
-          game.slotA.kind === "team"
-            ? teamIndex.get(game.slotA.teamId)
-            : teamIndex.get(winners.get(game.slotA.gameId) ?? "");
-        const teamB =
-          game.slotB.kind === "team"
-            ? teamIndex.get(game.slotB.teamId)
-            : teamIndex.get(winners.get(game.slotB.gameId) ?? "");
+    if (!currentGame) {
+      throw new Error("MockModelAdapter requires currentGame.");
+    }
 
-        if (!teamA || !teamB) {
-          throw new Error(`Unable to resolve game ${game.id}`);
-        }
+    const teamA = teamIndex.get(currentGame.slotATeamId);
+    const teamB = teamIndex.get(currentGame.slotBTeamId);
 
-        const modelBias = hashString(model.id) % 5;
-        const scoreA = seededScore(teamA.seed) + (teamA.metrics?.net ?? 0) / 10 + modelBias;
-        const scoreB = seededScore(teamB.seed) + (teamB.metrics?.net ?? 0) / 10 + ((modelBias + 2) % 5);
-        const winner = scoreA >= scoreB ? teamA : teamB;
-        const loser = winner.id === teamA.id ? teamB : teamA;
-        const confidence = Math.min(0.95, Math.max(0.51, 0.55 + Math.abs(scoreA - scoreB) / 20));
+    if (!teamA || !teamB) {
+      throw new Error(`Unable to resolve game ${currentGame.game.id}`);
+    }
 
-        winners.set(game.id, winner.id);
-
-        return {
-          gameId: game.id,
-          winnerId: winner.id,
-          confidence,
-          rationale: `${winner.name} advances over ${loser.name} because ${model.label} weights seed, NET-like team strength, and path consistency in the ${round}.`
-        };
-      })
-    );
+    const modelBias = hashString(model.id) % 5;
+    const scoreA = seededScore(teamA.seed) + (teamA.metrics?.net ?? 0) / 10 + modelBias;
+    const scoreB = seededScore(teamB.seed) + (teamB.metrics?.net ?? 0) / 10 + ((modelBias + 2) % 5);
+    const winner = scoreA >= scoreB ? teamA : teamB;
+    const loser = winner.id === teamA.id ? teamB : teamA;
+    const confidence = Math.min(0.95, Math.max(0.51, 0.55 + Math.abs(scoreA - scoreB) / 20));
 
     return {
-      configId: input.config.id,
-      model,
-      picks,
-      reasoning: [
-        {
-          id: "shape-of-bracket",
-          title: "Overall bracket construction",
-          summary: `${model.label} starts from seed strength, then adjusts for team quality metrics and prefers internally consistent later-round paths.`,
-          evidence: [
-            "Higher seeds receive a baseline advantage.",
-            "Team metrics in the config can override close seed-based games.",
-            "Confidence rises when the chosen winner has a clear score gap."
-          ]
-        },
-        {
-          id: "source-usage",
-          title: "Data sources consulted",
-          summary: `${input.sources.length} source snapshots were attached to this run and available to the model agent.`,
-          evidence: input.sources.map((source) => `${source.title} (${source.id})`)
-        }
-      ],
-      sources: input.sources
+      pick: {
+        gameId: currentGame.game.id,
+        winnerId: winner.id,
+        confidence,
+        rationale: `${winner.name} advances over ${loser.name} because ${model.label} gives the winner a stronger composite profile when seed strength and the built-in team metrics are considered together. This matchup also fits the bracket path the model has already committed to, so the pick balances raw team quality with a coherent tournament progression.`
+      },
+      reasoningStep: {
+        id: `reason-${currentGame.game.id}`,
+        title: `${currentGame.game.label}`,
+        summary: `${model.label} chose ${winner.name} over ${loser.name}.`,
+        evidence: [
+          `${winner.name} seed: ${winner.seed}`,
+          `${loser.name} seed: ${loser.seed}`,
+          `Round: ${currentGame.game.round}`
+        ]
+      }
     };
   }
 }
