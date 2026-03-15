@@ -11,7 +11,7 @@ import {
   GameDefinition,
   ModelDefinition,
   Team,
-  TournamentRound
+  TournamentRound,
 } from "@/lib/types";
 
 const ROOT = process.cwd();
@@ -29,10 +29,13 @@ const ROUND_OF_64_PAIRINGS: Array<[number, number]> = [
   [6, 11],
   [3, 14],
   [7, 10],
-  [2, 15]
+  [2, 15],
 ];
 
-const REGION_TEAMS: Record<(typeof REGIONS)[number], Array<{ name: string; shortName: string; conference: string }>> = {
+const REGION_TEAMS: Record<
+  (typeof REGIONS)[number],
+  Array<{ name: string; shortName: string; conference: string }>
+> = {
   East: [
     { name: "Duke", shortName: "DUKE", conference: "ACC" },
     { name: "Mississippi State", shortName: "MSST", conference: "SEC" },
@@ -49,7 +52,7 @@ const REGION_TEAMS: Record<(typeof REGIONS)[number], Array<{ name: string; short
     { name: "Yale", shortName: "YALE", conference: "Ivy" },
     { name: "Akron", shortName: "AKR", conference: "MAC" },
     { name: "Vermont", shortName: "UVM", conference: "America East" },
-    { name: "Longwood", shortName: "LONG", conference: "Big South" }
+    { name: "Longwood", shortName: "LONG", conference: "Big South" },
   ],
   West: [
     { name: "Houston", shortName: "HOU", conference: "Big 12" },
@@ -67,7 +70,7 @@ const REGION_TEAMS: Record<(typeof REGIONS)[number], Array<{ name: string; short
     { name: "Samford", shortName: "SAM", conference: "SoCon" },
     { name: "Colgate", shortName: "COL", conference: "Patriot" },
     { name: "Eastern Washington", shortName: "EWU", conference: "Big Sky" },
-    { name: "Howard", shortName: "HOW", conference: "MEAC" }
+    { name: "Howard", shortName: "HOW", conference: "MEAC" },
   ],
   South: [
     { name: "North Carolina", shortName: "UNC", conference: "ACC" },
@@ -85,7 +88,7 @@ const REGION_TEAMS: Record<(typeof REGIONS)[number], Array<{ name: string; short
     { name: "Charleston", shortName: "COC", conference: "CAA" },
     { name: "South Dakota State", shortName: "SDSU2", conference: "Summit" },
     { name: "UC Irvine", shortName: "UCI", conference: "Big West" },
-    { name: "Wagner", shortName: "WAG", conference: "NEC" }
+    { name: "Wagner", shortName: "WAG", conference: "NEC" },
   ],
   Midwest: [
     { name: "Purdue", shortName: "PUR", conference: "Big Ten" },
@@ -103,12 +106,15 @@ const REGION_TEAMS: Record<(typeof REGIONS)[number], Array<{ name: string; short
     { name: "College of Charleston", shortName: "COFC", conference: "CAA" },
     { name: "Oakland", shortName: "OAK", conference: "Horizon" },
     { name: "Morehead State", shortName: "MORE", conference: "OVC" },
-    { name: "Stetson", shortName: "STET", conference: "ASUN" }
-  ]
+    { name: "Stetson", shortName: "STET", conference: "ASUN" },
+  ],
 };
 
 function teamId(name: string) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 function metricForSeed(seed: number, regionIndex: number) {
@@ -128,10 +134,10 @@ function buildTeams(): Team[] {
         conference: entry.conference,
         metrics: {
           net: Number(metricForSeed(seed, regionIndex).toFixed(1)),
-          kenpom: Number((metricForSeed(seed, regionIndex) - 1.8).toFixed(1))
-        }
+          kenpom: Number((metricForSeed(seed, regionIndex) - 1.8).toFixed(1)),
+        },
       };
-    })
+    }),
   );
 }
 
@@ -140,7 +146,10 @@ function regionTeam(region: (typeof REGIONS)[number], seed: number) {
   return teamId(entry.name);
 }
 
-function buildRegionGames(region: (typeof REGIONS)[number], regionIndex: number) {
+function buildRegionGames(
+  region: (typeof REGIONS)[number],
+  regionIndex: number,
+) {
   const games: GameDefinition[] = [];
 
   ROUND_OF_64_PAIRINGS.forEach(([seedA, seedB], pairIndex) => {
@@ -150,7 +159,7 @@ function buildRegionGames(region: (typeof REGIONS)[number], regionIndex: number)
       region,
       label: `${region} ${seedA}/${seedB}`,
       slotA: { kind: "team", teamId: regionTeam(region, seedA) },
-      slotB: { kind: "team", teamId: regionTeam(region, seedB) }
+      slotB: { kind: "team", teamId: regionTeam(region, seedB) },
     });
   });
 
@@ -160,8 +169,14 @@ function buildRegionGames(region: (typeof REGIONS)[number], regionIndex: number)
       round: "Round of 32",
       region,
       label: `${region} Round of 32 ${i + 1}`,
-      slotA: { kind: "winner", gameId: `r64-${region.toLowerCase()}-${i * 2 + 1}` },
-      slotB: { kind: "winner", gameId: `r64-${region.toLowerCase()}-${i * 2 + 2}` }
+      slotA: {
+        kind: "winner",
+        gameId: `r64-${region.toLowerCase()}-${i * 2 + 1}`,
+      },
+      slotB: {
+        kind: "winner",
+        gameId: `r64-${region.toLowerCase()}-${i * 2 + 2}`,
+      },
     });
   }
 
@@ -171,8 +186,14 @@ function buildRegionGames(region: (typeof REGIONS)[number], regionIndex: number)
       round: "Sweet 16",
       region,
       label: `${region} Sweet 16 ${i + 1}`,
-      slotA: { kind: "winner", gameId: `r32-${region.toLowerCase()}-${i * 2 + 1}` },
-      slotB: { kind: "winner", gameId: `r32-${region.toLowerCase()}-${i * 2 + 2}` }
+      slotA: {
+        kind: "winner",
+        gameId: `r32-${region.toLowerCase()}-${i * 2 + 1}`,
+      },
+      slotB: {
+        kind: "winner",
+        gameId: `r32-${region.toLowerCase()}-${i * 2 + 2}`,
+      },
     });
   }
 
@@ -182,7 +203,7 @@ function buildRegionGames(region: (typeof REGIONS)[number], regionIndex: number)
     region,
     label: `${region} Regional Final`,
     slotA: { kind: "winner", gameId: `s16-${region.toLowerCase()}-1` },
-    slotB: { kind: "winner", gameId: `s16-${region.toLowerCase()}-2` }
+    slotB: { kind: "winner", gameId: `s16-${region.toLowerCase()}-2` },
   });
 
   void regionIndex;
@@ -191,7 +212,9 @@ function buildRegionGames(region: (typeof REGIONS)[number], regionIndex: number)
 
 function buildConfig(): BracketConfig {
   const teams = buildTeams();
-  const games = REGIONS.flatMap((region, regionIndex) => buildRegionGames(region, regionIndex));
+  const games = REGIONS.flatMap((region, regionIndex) =>
+    buildRegionGames(region, regionIndex),
+  );
 
   games.push(
     {
@@ -199,32 +222,32 @@ function buildConfig(): BracketConfig {
       round: "Final Four",
       label: "National semifinal 1",
       slotA: { kind: "winner", gameId: "e8-east-1" },
-      slotB: { kind: "winner", gameId: "e8-west-1" }
+      slotB: { kind: "winner", gameId: "e8-west-1" },
     },
     {
       id: "f4-2",
       round: "Final Four",
       label: "National semifinal 2",
       slotA: { kind: "winner", gameId: "e8-south-1" },
-      slotB: { kind: "winner", gameId: "e8-midwest-1" }
+      slotB: { kind: "winner", gameId: "e8-midwest-1" },
     },
     {
       id: "title",
       round: "Championship",
       label: "National championship",
       slotA: { kind: "winner", gameId: "f4-1" },
-      slotB: { kind: "winner", gameId: "f4-2" }
-    }
+      slotB: { kind: "winner", gameId: "f4-2" },
+    },
   );
 
   return {
     id: "demo-2026-bracket",
-    title: "LLMadness Demo Bracket",
+    title: "LLMadness",
     year: 2026,
     division: "mens",
     publishedAt: "2026-03-15T22:00:00Z",
     teams,
-    games
+    games,
   };
 }
 
@@ -242,7 +265,7 @@ function determineActualResults(config: BracketConfig): ActualResults {
     "Sweet 16",
     "Elite 8",
     "Final Four",
-    "Championship"
+    "Championship",
   ];
 
   for (const round of roundOrder) {
@@ -271,8 +294,8 @@ function determineActualResults(config: BracketConfig): ActualResults {
     configId: config.id,
     results: config.games.map((game) => ({
       gameId: game.id,
-      winnerId: winners.get(game.id) ?? ""
-    }))
+      winnerId: winners.get(game.id) ?? "",
+    })),
   };
 }
 
@@ -283,11 +306,11 @@ async function main() {
   await writeJsonFile(path.join(ROOT, CONFIG_PATH), config);
   await writeJsonFile(path.join(ROOT, RESULTS_PATH), results);
 
-  const models = modelDefinitionSchema.array().parse(
-    await readJsonFile<ModelDefinition[]>(path.join(ROOT, MODELS_PATH))
-  );
+  const models = modelDefinitionSchema
+    .array()
+    .parse(await readJsonFile<ModelDefinition[]>(path.join(ROOT, MODELS_PATH)));
   const agent = new CentralBracketAgent({
-    mock: new MockModelAdapter()
+    mock: new MockModelAdapter(),
   });
 
   const outDir = path.join(ROOT, "data", "runs", RUN_ID);
@@ -301,7 +324,7 @@ async function main() {
     configPath: CONFIG_PATH,
     submissions: [] as Array<{ modelId: string; file: string }>,
     leaderboardPath: path.join("data", "runs", RUN_ID, "leaderboard.json"),
-    actualResultsPath: path.join("data", "runs", RUN_ID, "actual-results.json")
+    actualResultsPath: path.join("data", "runs", RUN_ID, "actual-results.json"),
   };
 
   for (const model of models) {
@@ -316,7 +339,10 @@ async function main() {
 
   await writeJsonFile(path.join(ROOT, manifest.actualResultsPath), results);
   await writeJsonFile(path.join(ROOT, manifest.leaderboardPath), leaderboard);
-  await writeJsonFile(path.join(ROOT, "data", "runs", RUN_ID, "manifest.json"), manifest);
+  await writeJsonFile(
+    path.join(ROOT, "data", "runs", RUN_ID, "manifest.json"),
+    manifest,
+  );
 }
 
 main().catch((error) => {

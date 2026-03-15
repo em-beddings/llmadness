@@ -48,6 +48,14 @@ export interface SubmissionView {
   }>;
 }
 
+export interface SubmissionSummary {
+  modelId: string;
+  modelLabel: string;
+  description?: string;
+  championshipPick: string | null;
+  finalFourPicks: string[];
+}
+
 export const loadRunManifest = cache(async (runId: string) => {
   return readJsonFile<RunManifest>(path.join(RUNS_DIR, runId, "manifest.json"));
 });
@@ -123,11 +131,34 @@ export async function loadDashboard(runId: string) {
     loadBracketConfig(manifest.configPath),
     loadLeaderboard(runId)
   ]);
+  const teamIndex = indexTeams(config);
+  const submissions = await Promise.all(
+    manifest.submissions.map(async (entry) => {
+      const submission = await readJsonFile<BracketSubmission>(path.join(ROOT, entry.file));
+      const championshipGame = config.games.find((game) => game.round === "Championship");
+      const finalFourGames = config.games.filter((game) => game.round === "Final Four");
+      const championshipPick = championshipGame
+        ? submission.picks.find((pick) => pick.gameId === championshipGame.id)
+        : undefined;
+
+      return {
+        modelId: submission.model.id,
+        modelLabel: submission.model.label,
+        description: submission.model.description,
+        championshipPick: championshipPick ? teamIndex.get(championshipPick.winnerId)?.name ?? championshipPick.winnerId : null,
+        finalFourPicks: finalFourGames
+          .map((game) => submission.picks.find((pick) => pick.gameId === game.id))
+          .filter((pick): pick is NonNullable<typeof pick> => Boolean(pick))
+          .map((pick) => teamIndex.get(pick.winnerId)?.name ?? pick.winnerId)
+      } satisfies SubmissionSummary;
+    })
+  );
 
   return {
     manifest,
     config,
-    leaderboard
+    leaderboard,
+    submissions
   };
 }
 

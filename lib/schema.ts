@@ -50,7 +50,18 @@ export const bracketConfigSchema = z.object({
 export const modelDefinitionSchema = z.object({
   id: z.string(),
   label: z.string(),
-  provider: z.enum(["mock", "openai-compatible"]),
+  provider: z.enum([
+    "mock",
+    "openai",
+    "anthropic",
+    "google-gemini",
+    "xai",
+    "moonshot",
+    "qwen",
+    "minimax",
+    "deepseek",
+    "mimo"
+  ]),
   model: z.string(),
   description: z.string().optional(),
   settings: z.record(z.union([z.number(), z.string(), z.boolean()])).optional()

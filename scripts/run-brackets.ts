@@ -1,9 +1,12 @@
 import path from "node:path";
 import { mkdir } from "node:fs/promises";
+import { loadEnvConfig } from "@next/env";
 import { CentralBracketAgent } from "@/agents/central-agent";
 import { MockModelAdapter } from "@/agents/mock-model";
 import { OpenAICompatibleAdapter } from "@/agents/openai-compatible";
 import { readJsonFile, writeJsonFile } from "@/lib/fs";
+import { resolveModelDefinition } from "@/lib/model-runtime";
+import { LIVE_PROVIDERS } from "@/lib/providers";
 import { bracketConfigSchema, modelDefinitionSchema } from "@/lib/schema";
 import { BracketConfig, ModelDefinition } from "@/lib/types";
 
@@ -13,6 +16,8 @@ function readArg(flag: string) {
 }
 
 async function main() {
+  loadEnvConfig(process.cwd());
+
   const configPath = readArg("--config");
   const modelsPath = readArg("--models");
   const runId = readArg("--run-id") ?? `run-${new Date().toISOString().slice(0, 10)}`;
@@ -24,14 +29,17 @@ async function main() {
   const config = bracketConfigSchema.parse(await readJsonFile<BracketConfig>(path.join(process.cwd(), configPath)));
   const models = modelDefinitionSchema.array().parse(
     await readJsonFile<ModelDefinition[]>(path.join(process.cwd(), modelsPath))
-  );
+  ).map(resolveModelDefinition);
 
   const outDir = path.join(process.cwd(), "data", "runs", runId);
   await mkdir(outDir, { recursive: true });
-  const agent = new CentralBracketAgent({
-    mock: new MockModelAdapter(),
-    "openai-compatible": new OpenAICompatibleAdapter()
-  });
+  const liveAdapter = new OpenAICompatibleAdapter();
+  const agent = new CentralBracketAgent(
+    Object.fromEntries([
+      ["mock", new MockModelAdapter()],
+      ...LIVE_PROVIDERS.map((provider) => [provider, liveAdapter])
+    ])
+  );
 
   const manifest = {
     id: runId,

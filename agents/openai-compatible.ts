@@ -1,5 +1,6 @@
 import { ModelDefinition } from "@/lib/types";
 import { ModelAdapter, PredictionInput } from "@/agents/interfaces";
+import { resolveProviderRuntime } from "@/lib/providers";
 
 type ChatMessage =
   | { role: "system" | "user" | "assistant"; content: string | null; tool_calls?: ToolCall[] }
@@ -74,12 +75,22 @@ function mapTools(input: PredictionInput) {
   }));
 }
 
-async function createChatCompletion(body: Record<string, unknown>, apiKey: string, baseUrl: string) {
-  const response = await fetch(`${baseUrl}/chat/completions`, {
+function joinUrl(baseUrl: string, path: string) {
+  return `${baseUrl.replace(/\/+$/, "")}/${path.replace(/^\/+/, "")}`;
+}
+
+async function createChatCompletion(
+  body: Record<string, unknown>,
+  apiKey: string,
+  baseUrl: string,
+  defaultHeaders?: Record<string, string>
+) {
+  const response = await fetch(joinUrl(baseUrl, "/chat/completions"), {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`
+      Authorization: `Bearer ${apiKey}`,
+      ...defaultHeaders
     },
     body: JSON.stringify(body)
   });
@@ -101,12 +112,7 @@ async function createChatCompletion(body: Record<string, unknown>, apiKey: strin
 
 export class OpenAICompatibleAdapter implements ModelAdapter {
   async predictGame(input: PredictionInput, model: ModelDefinition) {
-    const apiKey = process.env.OPENAI_API_KEY;
-    const baseUrl = process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1";
-
-    if (!apiKey) {
-      throw new Error("OPENAI_API_KEY is required for openai-compatible models.");
-    }
+    const runtime = resolveProviderRuntime(model.provider);
 
     const messages: ChatMessage[] = [
       { role: "system", content: buildSystemPrompt(input) },
@@ -125,8 +131,9 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
           tools,
           tool_choice: "auto"
         },
-        apiKey,
-        baseUrl
+        runtime.apiKey,
+        runtime.baseUrl,
+        runtime.defaultHeaders
       );
 
       const message = payload.choices?.[0]?.message;
@@ -172,8 +179,9 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
           ],
           response_format: { type: "json_object" }
         },
-        apiKey,
-        baseUrl
+        runtime.apiKey,
+        runtime.baseUrl,
+        runtime.defaultHeaders
       );
 
       const content = finalPayload.choices?.[0]?.message?.content;

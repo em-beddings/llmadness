@@ -36,7 +36,7 @@ It does three things:
 Current adapters:
 
 - `mock`: deterministic local adapter for demo/testing
-- `openai-compatible`: generic chat-completions style adapter using iterative tool calls
+- live providers: generic chat-completions style adapter using iterative tool calls for `openai`, `anthropic`, `google-gemini`, `xai`, `moonshot`, `qwen`, `minimax`, `deepseek`, and `mimo`
 
 Built-in agent tools:
 
@@ -60,6 +60,7 @@ A demo run is checked in at `data/runs/demo-2026/` so the UI renders immediately
 
 - Config: `data/configs/demo-bracket.json`
 - Models: `data/models/demo-models.json`
+- Live model roster: `data/models/live-models.json`
 - Run: `data/runs/demo-2026/`
 
 ## Local setup
@@ -111,8 +112,36 @@ When the real bracket is released:
 
 Recommended environment for live tool use:
 
-- `OPENAI_API_KEY` for the model
+- provider API keys/base URLs from `.env.example`
 - local ratings files at `data/stats/torvik.json` and `data/stats/kenpom.json` are used automatically by `lookup_cbb_ratings`
+- `data/models/live-models.json` resolves each API model name from environment variables, so you can swap exact provider model IDs without editing JSON
+
+## Live provider setup
+
+Copy `.env.example` to `.env.local` or `.env` and fill in only the providers you plan to run.
+
+Then validate the configuration:
+
+```bash
+npm run validate:live
+```
+
+That checks:
+
+- required API key for each configured provider
+- provider base URL availability
+- environment-backed model ID resolution for every live model entry
+
+Generate a live run with:
+
+```bash
+npm run generate:brackets -- --config data/configs/demo-bracket.json --models data/models/live-models.json --run-id live-demo
+```
+
+Notes:
+
+- `MIMO_BASE_URL` is intentionally required because the hosted endpoint can vary.
+- The env-backed `LLMADNESS_MODEL_*` variables are the last-mile override layer. The defaults in `.env.example` are starting points, not hard guarantees across providers or account tiers.
 
 ## JSON contract notes
 

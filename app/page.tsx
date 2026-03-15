@@ -16,6 +16,20 @@ export default async function HomePage() {
           <p className="hero-copy">
             Run multiple foundation models against the same tournament snapshot, store each full bracket plus reasoning trace as JSON, and compare them live once games start.
           </p>
+          <div className="hero-stats">
+            <div className="stat-chip">
+              <strong>{dashboard.config.teams.length}</strong>
+              <span>teams</span>
+            </div>
+            <div className="stat-chip">
+              <strong>{dashboard.config.games.length}</strong>
+              <span>games</span>
+            </div>
+            <div className="stat-chip">
+              <strong>{dashboard.manifest.submissions.length}</strong>
+              <span>models</span>
+            </div>
+          </div>
         </div>
         <div className="hero-card">
           <span>Current run</span>
@@ -24,7 +38,11 @@ export default async function HomePage() {
           <Link href={`/runs/${dashboard.manifest.id}`}>Open dashboard</Link>
         </div>
       </section>
-      <LeaderboardTable leaderboard={dashboard.leaderboard} runId={dashboard.manifest.id} />
+      <LeaderboardTable
+        leaderboard={dashboard.leaderboard}
+        runId={dashboard.manifest.id}
+        submissions={dashboard.submissions}
+      />
     </main>
   );
 }

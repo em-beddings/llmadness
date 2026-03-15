@@ -65,10 +65,22 @@ export interface AgentToolCall {
   result: unknown;
 }
 
+export type ModelProvider =
+  | "mock"
+  | "openai"
+  | "anthropic"
+  | "google-gemini"
+  | "xai"
+  | "moonshot"
+  | "qwen"
+  | "minimax"
+  | "deepseek"
+  | "mimo";
+
 export interface ModelDefinition {
   id: string;
   label: string;
-  provider: "mock" | "openai-compatible";
+  provider: ModelProvider;
   model: string;
   description?: string;
   settings?: Record<string, number | string | boolean>;
