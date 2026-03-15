@@ -55,6 +55,11 @@ export interface SubmissionSummary {
   providerBrand: ProviderBrand;
   description?: string;
   championshipPick: string | null;
+  championshipMatchup: {
+    slotA: string;
+    slotB: string;
+    winner: string | null;
+  } | null;
   finalFourPicks: string[];
 }
 
@@ -142,6 +147,7 @@ export async function loadDashboard(runId: string) {
       const championshipPick = championshipGame
         ? submission.picks.find((pick) => pick.gameId === championshipGame.id)
         : undefined;
+      const winners = new Map(submission.picks.map((pick) => [pick.gameId, pick.winnerId]));
 
       return {
         modelId: submission.model.id,
@@ -149,6 +155,15 @@ export async function loadDashboard(runId: string) {
         providerBrand: resolveProviderBrand(submission.model),
         description: submission.model.description,
         championshipPick: championshipPick ? teamIndex.get(championshipPick.winnerId)?.name ?? championshipPick.winnerId : null,
+        championshipMatchup: championshipGame
+          ? {
+              slotA: resolveCompetitorName(config, championshipGame.slotA, winners),
+              slotB: resolveCompetitorName(config, championshipGame.slotB, winners),
+              winner: championshipPick
+                ? teamIndex.get(championshipPick.winnerId)?.name ?? championshipPick.winnerId
+                : null
+            }
+          : null,
         finalFourPicks: finalFourGames
           .map((game) => submission.picks.find((pick) => pick.gameId === game.id))
           .filter((pick): pick is NonNullable<typeof pick> => Boolean(pick))

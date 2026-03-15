@@ -31,7 +31,6 @@ export function LeaderboardTable({
     <section className="panel leaderboard-panel">
       <div className="section-header">
         <div>
-          <p className="eyebrow">Standings</p>
           <h2>Leaderboard</h2>
         </div>
         <p>Round-weighted scoring with title picks called out.</p>
@@ -48,36 +47,40 @@ export function LeaderboardTable({
             >
               <div className="podium-rank">#{index + 1}</div>
               <div>
-                <p className="podium-label">Model</p>
                 <h3>{entry.modelLabel}</h3>
               </div>
               <div className="podium-score">
                 <strong>{entry.totalPoints}</strong>
-                <span>/ {entry.maxPoints}</span>
+                <span className="score-available">/ {entry.maxPoints}</span>
               </div>
               <div className="podium-meta">
                 <span>{Math.round(entry.accuracy * 100)}% accuracy</span>
-                <span>{summary?.championshipPick ?? "No title pick"}</span>
               </div>
-              {summary?.finalFourPicks?.length ? (
-                <div className="pick-chip-row">
-                  {summary.finalFourPicks.map((team) => (
-                    <span
-                      className="pick-chip"
-                      key={`${entry.modelId}-${team}`}
-                    >
-                      {team}
-                    </span>
-                  ))}
+              {summary?.championshipMatchup ? (
+                <div className="leaderboard-matchup">
+                  <div
+                    className={`bracket-team ${summary.championshipMatchup.winner === summary.championshipMatchup.slotA ? "bracket-team-winner" : ""}`}
+                  >
+                    <span>{summary.championshipMatchup.slotA}</span>
+                  </div>
+                  <div
+                    className={`bracket-team ${summary.championshipMatchup.winner === summary.championshipMatchup.slotB ? "bracket-team-winner" : ""}`}
+                  >
+                    <span>{summary.championshipMatchup.slotB}</span>
+                  </div>
                 </div>
               ) : null}
+              <div className="leader-bottomline leader-bottomline-nowrap">
+                <span>Championship pick</span>
+                <strong>{summary?.championshipPick ?? "Unknown"}</strong>
+              </div>
             </Link>
           );
         })}
       </div>
 
       <div className="leaderboard-cards">
-        {field.map((entry) => {
+        {field.map((entry, index) => {
           const summary = getSummary(entry.modelId, submissions);
           return (
             <Link
@@ -85,14 +88,16 @@ export function LeaderboardTable({
               href={`/runs/${runId}/models/${entry.modelId}`}
               key={entry.modelId}
             >
+              <div className="leader-rank">#{index + 4}</div>
               <div className="leader-topline">
                 <strong>{entry.modelLabel}</strong>
                 <span>{Math.round(entry.accuracy * 100)}%</span>
               </div>
               <div className="leader-points">
-                {entry.totalPoints} / {entry.maxPoints}
+                <strong>{entry.totalPoints}</strong>
+                <span className="score-available">/ {entry.maxPoints}</span>
               </div>
-              <div className="leader-bottomline">
+              <div className="leader-bottomline leader-bottomline-nowrap">
                 <span>Championship pick</span>
                 <strong>{summary?.championshipPick ?? "Unknown"}</strong>
               </div>

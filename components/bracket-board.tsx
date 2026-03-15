@@ -118,7 +118,6 @@ function RegionBracket({
     <section className="region-panel">
       <div className="region-header">
         <h3>{region}</h3>
-        <span>{firstRoundGames * 2} teams</span>
       </div>
       <div
         className={`region-grid region-grid-${side}`}
@@ -138,7 +137,6 @@ function RegionBracket({
 
           return (
             <div className="region-round" key={`${region}-${roundName}`}>
-              <div className="region-round-label">{roundName}</div>
               <div className="region-round-grid">
                 {games.map((game, gameIndex) => (
                   <div
