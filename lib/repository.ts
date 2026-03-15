@@ -2,6 +2,7 @@ import path from "node:path";
 import { cache } from "react";
 import { groupGamesByRound, indexTeams, resolveCompetitorName } from "@/lib/bracket";
 import { readJsonFile } from "@/lib/fs";
+import { ProviderBrand, resolveProviderBrand } from "@/lib/provider-brand";
 import {
   ActualResults,
   BracketConfig,
@@ -51,6 +52,7 @@ export interface SubmissionView {
 export interface SubmissionSummary {
   modelId: string;
   modelLabel: string;
+  providerBrand: ProviderBrand;
   description?: string;
   championshipPick: string | null;
   finalFourPicks: string[];
@@ -144,6 +146,7 @@ export async function loadDashboard(runId: string) {
       return {
         modelId: submission.model.id,
         modelLabel: submission.model.label,
+        providerBrand: resolveProviderBrand(submission.model),
         description: submission.model.description,
         championshipPick: championshipPick ? teamIndex.get(championshipPick.winnerId)?.name ?? championshipPick.winnerId : null,
         finalFourPicks: finalFourGames

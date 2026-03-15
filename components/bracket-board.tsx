@@ -4,7 +4,12 @@ import { useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import { SubmissionView } from "@/lib/repository";
 
-const REGIONAL_ROUNDS = ["Round of 64", "Round of 32", "Sweet 16", "Elite 8"] as const;
+const REGIONAL_ROUNDS = [
+  "Round of 64",
+  "Round of 32",
+  "Sweet 16",
+  "Elite 8",
+] as const;
 
 function getRegions(view: SubmissionView) {
   return Array.from(
@@ -12,24 +17,34 @@ function getRegions(view: SubmissionView) {
       view.gamesByRound
         .flatMap((round) => round.games)
         .map((game) => game.region)
-        .filter((region): region is string => Boolean(region))
-    )
+        .filter((region): region is string => Boolean(region)),
+    ),
   );
 }
 
 function getRegionalRounds(view: SubmissionView, region: string) {
   return REGIONAL_ROUNDS.filter((roundName) =>
-    view.gamesByRound.some((round) => round.round === roundName && round.games.some((game) => game.region === region))
+    view.gamesByRound.some(
+      (round) =>
+        round.round === roundName &&
+        round.games.some((game) => game.region === region),
+    ),
   );
 }
 
-function getGamesForRound(view: SubmissionView, roundName: string, region?: string) {
+function getGamesForRound(
+  view: SubmissionView,
+  roundName: string,
+  region?: string,
+) {
   const round = view.gamesByRound.find((entry) => entry.round === roundName);
   if (!round) {
     return [];
   }
 
-  return region ? round.games.filter((game) => game.region === region) : round.games;
+  return region
+    ? round.games.filter((game) => game.region === region)
+    : round.games;
 }
 
 function rowStart(roundIndex: number, gameIndex: number) {
@@ -43,20 +58,38 @@ function rowCount(firstRoundGames: number) {
 function GameNode({
   game,
   align,
-  onSelect
+  onSelect,
 }: {
   game: SubmissionView["gamesByRound"][number]["games"][number];
   align: "left" | "right" | "center";
   onSelect: (gameId: string) => void;
 }) {
   return (
-    <button className={`bracket-node bracket-node-${align}`} onClick={() => onSelect(game.id)} type="button">
-      <div className="bracket-node-meta">
-        <span>{game.label}</span>
-        {game.confidence !== null ? <span>{Math.round(game.confidence * 100)}%</span> : null}
+    <button
+      className={`bracket-node bracket-node-${align}`}
+      onClick={() => onSelect(game.id)}
+      type="button"
+    >
+      <div
+        className={`bracket-team ${game.winner === game.slotA ? "bracket-team-winner" : ""}`}
+      >
+        <span>{game.slotA}</span>
+        {game.winner === game.slotA && game.confidence !== null ? (
+          <span className="bracket-team-confidence">
+            {Math.round(game.confidence * 100)}%
+          </span>
+        ) : null}
       </div>
-      <div className={`bracket-team ${game.winner === game.slotA ? "bracket-team-winner" : ""}`}>{game.slotA}</div>
-      <div className={`bracket-team ${game.winner === game.slotB ? "bracket-team-winner" : ""}`}>{game.slotB}</div>
+      <div
+        className={`bracket-team ${game.winner === game.slotB ? "bracket-team-winner" : ""}`}
+      >
+        <span>{game.slotB}</span>
+        {game.winner === game.slotB && game.confidence !== null ? (
+          <span className="bracket-team-confidence">
+            {Math.round(game.confidence * 100)}%
+          </span>
+        ) : null}
+      </div>
     </button>
   );
 }
@@ -65,7 +98,7 @@ function RegionBracket({
   view,
   region,
   side,
-  onSelect
+  onSelect,
 }: {
   view: SubmissionView;
   region: string;
@@ -74,7 +107,11 @@ function RegionBracket({
 }) {
   const rounds = getRegionalRounds(view, region);
   const displayRounds = side === "left" ? rounds : [...rounds].reverse();
-  const firstRoundGames = getGamesForRound(view, rounds[0] ?? "Round of 64", region).length;
+  const firstRoundGames = getGamesForRound(
+    view,
+    rounds[0] ?? "Round of 64",
+    region,
+  ).length;
   const rows = rowCount(firstRoundGames);
 
   return (
@@ -88,12 +125,15 @@ function RegionBracket({
         style={
           {
             "--round-count": String(displayRounds.length),
-            "--row-count": String(rows)
+            "--row-count": String(rows),
           } as CSSProperties
         }
       >
         {displayRounds.map((roundName, visibleRoundIndex) => {
-          const sourceRoundIndex = side === "left" ? visibleRoundIndex : rounds.length - visibleRoundIndex - 1;
+          const sourceRoundIndex =
+            side === "left"
+              ? visibleRoundIndex
+              : rounds.length - visibleRoundIndex - 1;
           const games = getGamesForRound(view, roundName, region);
 
           return (
@@ -104,7 +144,9 @@ function RegionBracket({
                   <div
                     className="region-round-slot"
                     key={game.id}
-                    style={{ gridRow: `${rowStart(sourceRoundIndex, gameIndex)} / span 1` }}
+                    style={{
+                      gridRow: `${rowStart(sourceRoundIndex, gameIndex)} / span 1`,
+                    }}
                   >
                     <GameNode game={game} align={side} onSelect={onSelect} />
                   </div>
@@ -120,7 +162,7 @@ function RegionBracket({
 
 function FinalsBracket({
   view,
-  onSelect
+  onSelect,
 }: {
   view: SubmissionView;
   onSelect: (gameId: string) => void;
@@ -134,14 +176,20 @@ function FinalsBracket({
 
   return (
     <section className="finals-panel">
-      <div className="region-header">
-        <h3>Finals</h3>
-        <span>National stage</span>
-      </div>
-      <div className="finals-stack">
-        {semifinals.map((game) => (
-          <GameNode game={game} align="center" key={game.id} onSelect={onSelect} />
-        ))}
+      <div className="finals-stage-grid">
+        <div className="final-four-section">
+          <div className="championship-label">Final Four</div>
+          <div className="final-four-grid">
+            {semifinals.map((game) => (
+              <GameNode
+                game={game}
+                align="center"
+                key={game.id}
+                onSelect={onSelect}
+              />
+            ))}
+          </div>
+        </div>
         {championship ? (
           <div className="championship-wrap">
             <div className="championship-label">Championship</div>
@@ -158,21 +206,28 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
   const [selectedGameId, setSelectedGameId] = useState<string | null>(null);
 
   const selectedGame = useMemo(
-    () => view.gamesByRound.flatMap((round) => round.games).find((game) => game.id === selectedGameId) ?? null,
-    [selectedGameId, view.gamesByRound]
+    () =>
+      view.gamesByRound
+        .flatMap((round) => round.games)
+        .find((game) => game.id === selectedGameId) ?? null,
+    [selectedGameId, view.gamesByRound],
   );
 
   const selectedReasoning = useMemo(
-    () => view.submission.reasoning.find((step) => step.id === `reason-${selectedGameId}`) ?? null,
-    [selectedGameId, view.submission.reasoning]
+    () =>
+      view.submission.reasoning.find(
+        (step) => step.id === `reason-${selectedGameId}`,
+      ) ?? null,
+    [selectedGameId, view.submission.reasoning],
   );
 
   return (
     <>
       <section className="panel bracket-shell">
         <div className="section-header">
-          <h2>Bracket</h2>
-          <p>Click any game for rationale, confidence, and the run transcript.</p>
+          <p>
+            Click any game for rationale, confidence, and the run transcript.
+          </p>
         </div>
         <div className="tournament-bracket">
           <FinalsBracket onSelect={setSelectedGameId} view={view} />
@@ -191,7 +246,11 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
       </section>
 
       {selectedGame ? (
-        <div className="modal-overlay" onClick={() => setSelectedGameId(null)} role="presentation">
+        <div
+          className="modal-overlay"
+          onClick={() => setSelectedGameId(null)}
+          role="presentation"
+        >
           <div
             aria-modal="true"
             className="game-modal"
@@ -206,7 +265,11 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
                   {selectedGame.slotA} vs {selectedGame.slotB}
                 </p>
               </div>
-              <button className="modal-close" onClick={() => setSelectedGameId(null)} type="button">
+              <button
+                className="modal-close"
+                onClick={() => setSelectedGameId(null)}
+                type="button"
+              >
                 Close
               </button>
             </div>
@@ -218,7 +281,11 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
               </div>
               <div className="modal-stat">
                 <span>Confidence</span>
-                <strong>{selectedGame.confidence !== null ? `${Math.round(selectedGame.confidence * 100)}%` : "N/A"}</strong>
+                <strong>
+                  {selectedGame.confidence !== null
+                    ? `${Math.round(selectedGame.confidence * 100)}%`
+                    : "N/A"}
+                </strong>
               </div>
               <div className="modal-stat">
                 <span>Round</span>
@@ -228,7 +295,10 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
 
             <section className="modal-section">
               <h3>Rationale</h3>
-              <p>{selectedGame.rationale ?? "No rationale recorded for this game."}</p>
+              <p>
+                {selectedGame.rationale ??
+                  "No rationale recorded for this game."}
+              </p>
             </section>
 
             {selectedReasoning ? (
@@ -255,8 +325,12 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
                         <strong>{call.toolName}</strong>
                         <span>{call.summary}</span>
                       </div>
-                      <pre className="code-block">{JSON.stringify(call.arguments, null, 2)}</pre>
-                      <pre className="code-block">{JSON.stringify(call.result, null, 2)}</pre>
+                      <pre className="code-block">
+                        {JSON.stringify(call.arguments, null, 2)}
+                      </pre>
+                      <pre className="code-block">
+                        {JSON.stringify(call.result, null, 2)}
+                      </pre>
                     </article>
                   ))}
                 </div>

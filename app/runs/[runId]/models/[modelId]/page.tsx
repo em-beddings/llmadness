@@ -25,7 +25,7 @@ export default async function ModelPage({
           </p>
         </div>
         <Link className="back-link" href={`/runs/${runId}`}>
-          Back to run
+          Back to leaderboard
         </Link>
       </section>
       <BracketBoard view={view} />
