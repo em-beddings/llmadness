@@ -690,6 +690,14 @@ h3 {
     background: #fafafa;
 }
 
+.bracket-team-correct {
+    background: #e7f6e7;
+}
+
+.bracket-team-wrong {
+    background: #f8e4e4;
+}
+
 .bracket-team-confidence {
     color: var(--muted);
     font-size: 0.66rem;
@@ -916,5 +924,39 @@ h3 {
     .game-modal-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .leader-card {
+        grid-template-columns: 40px minmax(0, 1fr) minmax(88px, auto);
+        gap: 8px 12px;
+    }
+
+    .leader-rank {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .leader-topline {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .leader-points {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .leader-accuracy {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        text-align: right;
+    }
+
+    .leader-card .leader-bottomline {
+        grid-column: 3;
+        grid-row: 2;
+        justify-self: end;
+        text-align: right;
     }
 }

@@ -37,6 +37,7 @@ export interface RenderedGame {
   slotA: string;
   slotB: string;
   winner: string | null;
+  winnerStatus: "correct" | "wrong" | null;
   confidence: number | null;
   rationale: string | null;
 }
@@ -100,7 +101,11 @@ export const loadSubmission = cache(async (runId: string, modelId: string) => {
 });
 
 export async function loadSubmissionView(runId: string, modelId: string): Promise<SubmissionView | null> {
-  const [manifest, submission] = await Promise.all([loadRunManifest(runId), loadSubmission(runId, modelId)]);
+  const [manifest, submission, actualResults] = await Promise.all([
+    loadRunManifest(runId),
+    loadSubmission(runId, modelId),
+    loadActualResults(runId)
+  ]);
   if (!submission) {
     return null;
   }
@@ -109,6 +114,7 @@ export async function loadSubmissionView(runId: string, modelId: string): Promis
   const teamIndex = indexTeams(config);
   const picks = new Map(submission.picks.map((pick) => [pick.gameId, pick]));
   const winners = new Map(submission.picks.map((pick) => [pick.gameId, pick.winnerId]));
+  const actualResultMap = new Map(actualResults?.results.map((result) => [result.gameId, result.winnerId]) ?? []);
 
   return {
     submission,
@@ -116,6 +122,7 @@ export async function loadSubmissionView(runId: string, modelId: string): Promis
       round,
       games: games.map((game) => {
         const pick = picks.get(game.id);
+        const actualWinnerId = actualResultMap.get(game.id);
         return {
           id: game.id,
           label: game.label,
@@ -124,6 +131,13 @@ export async function loadSubmissionView(runId: string, modelId: string): Promis
           slotA: resolveCompetitorName(config, game.slotA, winners),
           slotB: resolveCompetitorName(config, game.slotB, winners),
           winner: pick ? teamIndex.get(pick.winnerId)?.name ?? pick.winnerId : null,
+          winnerStatus: pick
+            ? actualWinnerId
+              ? actualWinnerId === pick.winnerId
+                ? "correct"
+                : "wrong"
+              : null
+            : null,
           confidence: pick?.confidence ?? null,
           rationale: pick?.rationale ?? null
         };

@@ -71,7 +71,7 @@ function GameNode({
       type="button"
     >
       <div
-        className={`bracket-team ${game.winner === game.slotA ? "bracket-team-winner" : ""}`}
+        className={`bracket-team ${game.winner === game.slotA ? `bracket-team-winner ${game.winnerStatus ? `bracket-team-${game.winnerStatus}` : ""}` : ""}`}
       >
         <span>{game.slotA}</span>
         {game.winner === game.slotA && game.confidence !== null ? (
@@ -81,7 +81,7 @@ function GameNode({
         ) : null}
       </div>
       <div
-        className={`bracket-team ${game.winner === game.slotB ? "bracket-team-winner" : ""}`}
+        className={`bracket-team ${game.winner === game.slotB ? `bracket-team-winner ${game.winnerStatus ? `bracket-team-${game.winnerStatus}` : ""}` : ""}`}
       >
         <span>{game.slotB}</span>
         {game.winner === game.slotB && game.confidence !== null ? (

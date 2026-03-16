@@ -13,11 +13,11 @@ export default async function Season2026Page() {
           <h1>{dashboard.config.title}</h1>
         </div>
         <div className="hero-card run-summary-card">
-          <span>Field snapshot</span>
-          <strong>{dashboard.config.teams.length} teams</strong>
+          <span>LLMadness</span>
+          <strong>AI Tournament Challenge</strong>
           <p>
-            {dashboard.manifest.submissions.length} models competing across{" "}
-            {dashboard.config.games.length} games.
+            {dashboard.manifest.submissions.length} models attempting a perfect
+            bracket
           </p>
         </div>
       </section>
