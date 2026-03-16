@@ -188,6 +188,14 @@ function joinUrl(baseUrl: string, path: string) {
   return `${baseUrl.replace(/\/+$/, "")}/${path.replace(/^\/+/, "")}`;
 }
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function isRetriableModelError(message: string) {
+  return /Model request failed:\s*(429|500|502|503|504)\b/.test(message);
+}
+
 async function createChatCompletion(
   body: Record<string, unknown>,
   apiKey: string,
@@ -217,6 +225,30 @@ async function createChatCompletion(
       };
     }>;
   };
+}
+
+async function createChatCompletionWithRetry(
+  body: Record<string, unknown>,
+  apiKey: string,
+  baseUrl: string,
+  defaultHeaders?: Record<string, string>
+) {
+  const maxAttempts = 3;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      return await createChatCompletion(body, apiKey, baseUrl, defaultHeaders);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      if (attempt >= maxAttempts || !isRetriableModelError(message)) {
+        throw error;
+      }
+
+      await sleep(400 * attempt);
+    }
+  }
+
+  throw new Error("Model request failed after retries.");
 }
 
 async function requestFinalJson(
@@ -253,11 +285,11 @@ async function requestFinalJson(
       throw error;
     }
 
-    return createChatCompletion(
+    return createChatCompletionWithRetry(
       {
         model: params.model,
         temperature: params.temperature,
-        messages: finalMessages
+        messages: finalMessages,
       },
       runtime.apiKey,
       runtime.baseUrl,
@@ -279,7 +311,7 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
     const tools = mapTools(input);
 
     for (let step = 0; step < maxToolRounds; step += 1) {
-      const payload = await createChatCompletion(
+      const payload = await createChatCompletionWithRetry(
         {
           model: model.model,
           temperature: Number(model.settings?.temperature ?? 0.2),
