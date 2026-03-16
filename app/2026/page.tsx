@@ -1,7 +1,7 @@
 import { LeaderboardTable } from "@/components/leaderboard-table";
 import { loadDashboard } from "@/lib/repository";
 
-const RUN_ID = "2026";
+const RUN_ID = "demo-2026";
 
 export default async function Season2026Page() {
   const dashboard = await loadDashboard(RUN_ID);

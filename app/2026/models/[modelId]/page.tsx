@@ -3,7 +3,7 @@ import { BracketBoard } from "@/components/bracket-board";
 import { loadSubmissionView } from "@/lib/repository";
 import { notFound } from "next/navigation";
 
-const RUN_ID = "2026";
+const RUN_ID = "demo-2026";
 
 export default async function ModelPage({
   params,
