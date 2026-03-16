@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-4",
+    "label": "GPT-5.4",
+    "provider": "mock",
+    "model": "gpt-5-4",
+    "description": "OpenAI • Frontier GPT model for general-purpose reasoning, tool use, and agentic workflows."
+  },
+  "gameId": "title",
+  "generatedAt": "2026-03-16T23:48:46.889Z",
+  "pick": {
+    "gameId": "title",
+    "winnerId": "iowa-state",
+    "confidence": 0.65,
+    "rationale": "Iowa State advances over Houston because GPT-5.4 rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-title",
+    "title": "National championship",
+    "summary": "GPT-5.4 chose Iowa State over Houston.",
+    "evidence": [
+      "Iowa State seed: 2",
+      "Houston seed: 2",
+      "Round: Championship"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "title-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:46.889Z",
+      "content": "Mock prediction for National championship in Championship."
+    },
+    {
+      "id": "title-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:46.889Z",
+      "content": "Houston vs Iowa State. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "title-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:46.889Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"title\",\n    \"winnerId\": \"iowa-state\",\n    \"confidence\": 0.65\n  },\n  \"reasoning\": \"Iowa State was chosen over Houston using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mock",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "s16-midwest-2",
+  "generatedAt": "2026-03-16T23:48:47.015Z",
+  "pick": {
+    "gameId": "s16-midwest-2",
+    "winnerId": "iowa-state",
+    "confidence": 0.6000000000000001,
+    "rationale": "Iowa State advances over Tennessee because MiMo-V2-Flash rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-s16-midwest-2",
+    "title": "Midwest Sweet 16 2",
+    "summary": "MiMo-V2-Flash chose Iowa State over Tennessee.",
+    "evidence": [
+      "Iowa State seed: 2",
+      "Tennessee seed: 6",
+      "Round: Sweet 16"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "s16-midwest-2-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:47.015Z",
+      "content": "Mock prediction for Midwest Sweet 16 2 in Sweet 16."
+    },
+    {
+      "id": "s16-midwest-2-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:47.015Z",
+      "content": "Tennessee vs Iowa State. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "s16-midwest-2-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:47.015Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"s16-midwest-2\",\n    \"winnerId\": \"iowa-state\",\n    \"confidence\": 0.6000000000000001\n  },\n  \"reasoning\": \"Iowa State was chosen over Tennessee using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

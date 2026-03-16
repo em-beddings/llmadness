@@ -5,9 +5,12 @@ import { readJsonFile } from "@/lib/fs";
 import { ProviderBrand, resolveProviderBrand } from "@/lib/provider-brand";
 import {
   ActualResults,
+  AgentToolCall,
   BracketConfig,
   BracketSubmission,
   Leaderboard,
+  ModelTraceEvent,
+  ReasoningStep,
   TournamentRound
 } from "@/lib/types";
 
@@ -40,6 +43,9 @@ export interface RenderedGame {
   winnerStatus: "correct" | "wrong" | null;
   confidence: number | null;
   rationale: string | null;
+  reasoningStep: ReasoningStep | null;
+  toolCalls: AgentToolCall[];
+  modelTrace: ModelTraceEvent[];
 }
 
 export interface SubmissionView {
@@ -114,6 +120,7 @@ export async function loadSubmissionView(runId: string, modelId: string): Promis
   const teamIndex = indexTeams(config);
   const picks = new Map(submission.picks.map((pick) => [pick.gameId, pick]));
   const winners = new Map(submission.picks.map((pick) => [pick.gameId, pick.winnerId]));
+  const gameRunIndex = new Map((submission.gameRuns ?? []).map((gameRun) => [gameRun.gameId, gameRun]));
   const actualResultMap = new Map(actualResults?.results.map((result) => [result.gameId, result.winnerId]) ?? []);
 
   return {
@@ -122,6 +129,7 @@ export async function loadSubmissionView(runId: string, modelId: string): Promis
       round,
       games: games.map((game) => {
         const pick = picks.get(game.id);
+        const gameRun = gameRunIndex.get(game.id);
         const actualWinnerId = actualResultMap.get(game.id);
         return {
           id: game.id,
@@ -139,7 +147,10 @@ export async function loadSubmissionView(runId: string, modelId: string): Promis
               : null
             : null,
           confidence: pick?.confidence ?? null,
-          rationale: pick?.rationale ?? null
+          rationale: pick?.rationale ?? null,
+          reasoningStep: gameRun?.reasoningStep ?? null,
+          toolCalls: gameRun?.toolCalls ?? [],
+          modelTrace: gameRun?.modelTrace ?? []
         };
       })
     }))

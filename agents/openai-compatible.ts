@@ -1,4 +1,4 @@
-import { ModelDefinition } from "@/lib/types";
+import { ModelDefinition, ModelTraceEvent } from "@/lib/types";
 import { ModelAdapter, PredictionInput } from "@/agents/interfaces";
 import { resolveProviderRuntime } from "@/lib/providers";
 
@@ -74,6 +74,19 @@ const DEFAULT_RATE_LIMITS: Record<string, RateLimitBudget> = {
 };
 
 const rateLimitStates = new Map<string, RateLimitState>();
+
+function traceEvent(
+  id: string,
+  type: ModelTraceEvent["type"],
+  payload: Pick<ModelTraceEvent, "content" | "toolName" | "arguments" | "result"> = {}
+): ModelTraceEvent {
+  return {
+    id,
+    type,
+    createdAt: new Date().toISOString(),
+    ...payload
+  };
+}
 
 function compactValue(value: unknown, depth = 0): unknown {
   if (typeof value === "string") {
@@ -459,11 +472,17 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
   async predictGame(input: PredictionInput, model: ModelDefinition) {
     const runtime = resolveProviderRuntime(model.provider);
     const maxToolRounds = Number(model.settings?.maxToolRounds ?? 10);
+    const trace: ModelTraceEvent[] = [];
+    const systemPrompt = buildSystemPrompt(input, maxToolRounds);
+    const userPrompt = buildUserPrompt(input);
+    const currentGameId = input.currentGame?.game.id ?? "game";
 
     const messages: ChatMessage[] = [
-      { role: "system", content: buildSystemPrompt(input, maxToolRounds) },
-      { role: "user", content: buildUserPrompt(input) }
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userPrompt }
     ];
+    trace.push(traceEvent(`${currentGameId}-system`, "system_prompt", { content: systemPrompt }));
+    trace.push(traceEvent(`${currentGameId}-user`, "user_prompt", { content: userPrompt }));
 
     const tools = mapTools(input);
 
@@ -488,24 +507,50 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
       }
 
       if (message.tool_calls && message.tool_calls.length > 0) {
+        trace.push(
+          traceEvent(`${currentGameId}-assistant-${step}`, "assistant_message", {
+            content: message.content ?? null
+          })
+        );
         messages.push({
           role: "assistant",
           content: message.content ?? null,
           tool_calls: message.tool_calls
         });
 
-        for (const toolCall of message.tool_calls) {
+        for (const [toolIndex, toolCall] of message.tool_calls.entries()) {
           const args = toolCall.function.arguments ? JSON.parse(toolCall.function.arguments) : {};
+          trace.push(
+            traceEvent(`${currentGameId}-tool-call-${step}-${toolIndex}`, "tool_call", {
+              toolName: toolCall.function.name,
+              arguments: args,
+              content: message.content ?? null
+            })
+          );
           const result = await input.tools.invoke(toolCall.function.name, args);
+          const serializedResult = serializeToolResultForModel(toolCall.function.name, result);
+          trace.push(
+            traceEvent(`${currentGameId}-tool-result-${step}-${toolIndex}`, "tool_result", {
+              toolName: toolCall.function.name,
+              result,
+              content: serializedResult
+            })
+          );
           messages.push({
             role: "tool",
             tool_call_id: toolCall.id,
-            content: serializeToolResultForModel(toolCall.function.name, result)
+            content: serializedResult
           });
         }
 
         continue;
       }
+
+      trace.push(
+        traceEvent(`${currentGameId}-assistant-final-${step}`, "assistant_message", {
+          content: message.content ?? ""
+        })
+      );
 
       const finalPayload = await requestFinalJson(
         {
@@ -528,7 +573,9 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
         throw new Error("Model returned no final JSON content.");
       }
 
-      return JSON.parse(extractJsonObject(content)) as {
+      trace.push(traceEvent(`${currentGameId}-final-json`, "final_json", { content }));
+
+      const parsed = JSON.parse(extractJsonObject(content)) as {
         pick: {
           gameId: string;
           winnerId: string;
@@ -541,6 +588,11 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
           summary: string;
           evidence: string[];
         };
+      };
+
+      return {
+        ...parsed,
+        modelTrace: trace
       };
     }
 

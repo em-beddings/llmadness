@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gemini-3-flash",
+    "label": "Gemini 3 Flash",
+    "provider": "mock",
+    "model": "gemini-3-flash",
+    "description": "Google DeepMind • Fast Gemini model optimized for low-latency reasoning, multimodal inputs, and tool use."
+  },
+  "gameId": "f4-1",
+  "generatedAt": "2026-03-16T23:48:47.004Z",
+  "pick": {
+    "gameId": "f4-1",
+    "winnerId": "houston",
+    "confidence": 0.65,
+    "rationale": "Houston advances over UConn because Gemini 3 Flash rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-f4-1",
+    "title": "National semifinal 1",
+    "summary": "Gemini 3 Flash chose Houston over UConn.",
+    "evidence": [
+      "Houston seed: 2",
+      "UConn seed: 2",
+      "Round: Final Four"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "f4-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:47.004Z",
+      "content": "Mock prediction for National semifinal 1 in Final Four."
+    },
+    {
+      "id": "f4-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:47.004Z",
+      "content": "UConn vs Houston. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "f4-1-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:47.004Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"f4-1\",\n    \"winnerId\": \"houston\",\n    \"confidence\": 0.65\n  },\n  \"reasoning\": \"Houston was chosen over UConn using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mock",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "r64-midwest-1",
+  "generatedAt": "2026-03-16T23:48:47.011Z",
+  "pick": {
+    "gameId": "r64-midwest-1",
+    "winnerId": "michigan",
+    "confidence": 0.95,
+    "rationale": "Michigan advances over Howard because MiMo-V2-Flash rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-r64-midwest-1",
+    "title": "Midwest 1/16",
+    "summary": "MiMo-V2-Flash chose Michigan over Howard.",
+    "evidence": [
+      "Michigan seed: 1",
+      "Howard seed: 16",
+      "Round: Round of 64"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "r64-midwest-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:47.011Z",
+      "content": "Mock prediction for Midwest 1/16 in Round of 64."
+    },
+    {
+      "id": "r64-midwest-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:47.011Z",
+      "content": "Michigan vs Howard. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "r64-midwest-1-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:47.011Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-midwest-1\",\n    \"winnerId\": \"michigan\",\n    \"confidence\": 0.95\n  },\n  \"reasoning\": \"Michigan was chosen over Howard using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { indexTeams } from "@/lib/bracket";
-import { ModelDefinition } from "@/lib/types";
+import { ModelDefinition, ModelTraceEvent } from "@/lib/types";
 import { ModelAdapter, PredictionInput } from "@/agents/interfaces";
 
 function seededScore(seed: number) {
@@ -8,6 +8,15 @@ function seededScore(seed: number) {
 
 function hashString(input: string) {
   return input.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0);
+}
+
+function makeTraceEvent(gameId: string, suffix: string, type: ModelTraceEvent["type"], content: string): ModelTraceEvent {
+  return {
+    id: `${gameId}-${suffix}`,
+    type,
+    createdAt: new Date().toISOString(),
+    content
+  };
 }
 
 export class MockModelAdapter implements ModelAdapter {
@@ -27,6 +36,7 @@ export class MockModelAdapter implements ModelAdapter {
       summary: string;
       evidence: string[];
     };
+    modelTrace: ModelTraceEvent[];
   }> {
     const teamIndex = indexTeams(input.config);
     const currentGame = input.currentGame;
@@ -65,7 +75,38 @@ export class MockModelAdapter implements ModelAdapter {
           `${loser.name} seed: ${loser.seed}`,
           `Round: ${currentGame.game.round}`
         ]
-      }
+      },
+      modelTrace: [
+        makeTraceEvent(
+          currentGame.game.id,
+          "system",
+          "system_prompt",
+          `Mock prediction for ${currentGame.game.label} in ${currentGame.game.round}.`
+        ),
+        makeTraceEvent(
+          currentGame.game.id,
+          "user",
+          "user_prompt",
+          `${teamA.name} vs ${teamB.name}. Resolve a winner using the mock bracket heuristic.`
+        ),
+        makeTraceEvent(
+          currentGame.game.id,
+          "final",
+          "final_json",
+          JSON.stringify(
+            {
+              pick: {
+                gameId: currentGame.game.id,
+                winnerId: winner.id,
+                confidence
+              },
+              reasoning: `${winner.name} was chosen over ${loser.name} using seed position plus a deterministic model bias.`
+            },
+            null,
+            2
+          )
+        )
+      ]
     };
   }
 }

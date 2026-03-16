@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gemini-3-flash",
+    "label": "Gemini 3 Flash",
+    "provider": "mock",
+    "model": "gemini-3-flash",
+    "description": "Google DeepMind • Fast Gemini model optimized for low-latency reasoning, multimodal inputs, and tool use."
+  },
+  "gameId": "s16-west-2",
+  "generatedAt": "2026-03-16T23:48:47.002Z",
+  "pick": {
+    "gameId": "s16-west-2",
+    "winnerId": "purdue",
+    "confidence": 0.7000000000000001,
+    "rationale": "Purdue advances over Gonzaga because Gemini 3 Flash rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-s16-west-2",
+    "title": "West Sweet 16 2",
+    "summary": "Gemini 3 Flash chose Purdue over Gonzaga.",
+    "evidence": [
+      "Purdue seed: 2",
+      "Gonzaga seed: 3",
+      "Round: Sweet 16"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "s16-west-2-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:47.002Z",
+      "content": "Mock prediction for West Sweet 16 2 in Sweet 16."
+    },
+    {
+      "id": "s16-west-2-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:47.002Z",
+      "content": "Gonzaga vs Purdue. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "s16-west-2-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:47.002Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"s16-west-2\",\n    \"winnerId\": \"purdue\",\n    \"confidence\": 0.7000000000000001\n  },\n  \"reasoning\": \"Purdue was chosen over Gonzaga using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

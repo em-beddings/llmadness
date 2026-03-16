@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "claude-opus-4-6",
+    "label": "Claude Opus 4.6",
+    "provider": "mock",
+    "model": "claude-opus-4-6",
+    "description": "Anthropic • Hybrid reasoning model that pushes the frontier for coding and AI agents, featuring a 1M context window."
+  },
+  "gameId": "s16-east-2",
+  "generatedAt": "2026-03-16T23:48:46.896Z",
+  "pick": {
+    "gameId": "s16-east-2",
+    "winnerId": "uconn",
+    "confidence": 0.6000000000000001,
+    "rationale": "UConn advances over Louisville because Claude Opus 4.6 rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-s16-east-2",
+    "title": "East Sweet 16 2",
+    "summary": "Claude Opus 4.6 chose UConn over Louisville.",
+    "evidence": [
+      "UConn seed: 2",
+      "Louisville seed: 6",
+      "Round: Sweet 16"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "s16-east-2-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:46.896Z",
+      "content": "Mock prediction for East Sweet 16 2 in Sweet 16."
+    },
+    {
+      "id": "s16-east-2-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:46.896Z",
+      "content": "Louisville vs UConn. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "s16-east-2-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:46.896Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"s16-east-2\",\n    \"winnerId\": \"uconn\",\n    \"confidence\": 0.6000000000000001\n  },\n  \"reasoning\": \"UConn was chosen over Louisville using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

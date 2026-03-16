@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mock",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "r64-west-3",
+  "generatedAt": "2026-03-16T23:48:47.008Z",
+  "pick": {
+    "gameId": "r64-west-3",
+    "winnerId": "wisconsin",
+    "confidence": 0.95,
+    "rationale": "Wisconsin advances over High Point because MiMo-V2-Flash rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-r64-west-3",
+    "title": "West 5/12",
+    "summary": "MiMo-V2-Flash chose Wisconsin over High Point.",
+    "evidence": [
+      "Wisconsin seed: 5",
+      "High Point seed: 12",
+      "Round: Round of 64"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "r64-west-3-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:47.008Z",
+      "content": "Mock prediction for West 5/12 in Round of 64."
+    },
+    {
+      "id": "r64-west-3-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:47.008Z",
+      "content": "Wisconsin vs High Point. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "r64-west-3-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:47.008Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-west-3\",\n    \"winnerId\": \"wisconsin\",\n    \"confidence\": 0.95\n  },\n  \"reasoning\": \"Wisconsin was chosen over High Point using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

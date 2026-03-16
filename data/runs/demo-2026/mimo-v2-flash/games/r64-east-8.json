@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mock",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "r64-east-8",
+  "generatedAt": "2026-03-16T23:48:47.007Z",
+  "pick": {
+    "gameId": "r64-east-8",
+    "winnerId": "uconn",
+    "confidence": 0.95,
+    "rationale": "UConn advances over Furman because MiMo-V2-Flash rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-r64-east-8",
+    "title": "East 2/15",
+    "summary": "MiMo-V2-Flash chose UConn over Furman.",
+    "evidence": [
+      "UConn seed: 2",
+      "Furman seed: 15",
+      "Round: Round of 64"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "r64-east-8-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:47.007Z",
+      "content": "Mock prediction for East 2/15 in Round of 64."
+    },
+    {
+      "id": "r64-east-8-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:47.007Z",
+      "content": "UConn vs Furman. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "r64-east-8-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:47.007Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-east-8\",\n    \"winnerId\": \"uconn\",\n    \"confidence\": 0.95\n  },\n  \"reasoning\": \"UConn was chosen over Furman using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

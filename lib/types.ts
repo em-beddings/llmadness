@@ -65,6 +65,22 @@ export interface AgentToolCall {
   result: unknown;
 }
 
+export interface ModelTraceEvent {
+  id: string;
+  type:
+    | "system_prompt"
+    | "user_prompt"
+    | "assistant_message"
+    | "tool_call"
+    | "tool_result"
+    | "final_json";
+  createdAt: string;
+  content?: string | null;
+  toolName?: string;
+  arguments?: unknown;
+  result?: unknown;
+}
+
 export type ModelProvider =
   | "mock"
   | "openai"
@@ -116,13 +132,26 @@ export interface BracketSubmission {
   picks: BracketPick[];
   reasoning: ReasoningStep[];
   toolCalls: AgentToolCall[];
+  gameRuns: GameRunArtifact[];
+}
+
+export interface GameRunArtifact {
+  runId: string;
+  configId: string;
+  model: ModelDefinition;
+  gameId: string;
+  generatedAt: string;
+  pick: BracketPick;
+  reasoningStep?: ReasoningStep;
+  toolCalls: AgentToolCall[];
+  modelTrace: ModelTraceEvent[];
 }
 
 export interface ActualResults {
   configId: string;
   results: Array<{
     gameId: string;
-    winnerId: string;
+    winnerId?: string;
   }>;
 }
 

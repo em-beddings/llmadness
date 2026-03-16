@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gemini-3-flash",
+    "label": "Gemini 3 Flash",
+    "provider": "mock",
+    "model": "gemini-3-flash",
+    "description": "Google DeepMind • Fast Gemini model optimized for low-latency reasoning, multimodal inputs, and tool use."
+  },
+  "gameId": "r32-east-3",
+  "generatedAt": "2026-03-16T23:48:47.000Z",
+  "pick": {
+    "gameId": "r32-east-3",
+    "winnerId": "michigan-state",
+    "confidence": 0.8,
+    "rationale": "Michigan State advances over Louisville because Gemini 3 Flash rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-r32-east-3",
+    "title": "East Round of 32 3",
+    "summary": "Gemini 3 Flash chose Michigan State over Louisville.",
+    "evidence": [
+      "Michigan State seed: 3",
+      "Louisville seed: 6",
+      "Round: Round of 32"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "r32-east-3-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:47.000Z",
+      "content": "Mock prediction for East Round of 32 3 in Round of 32."
+    },
+    {
+      "id": "r32-east-3-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:47.000Z",
+      "content": "Louisville vs Michigan State. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "r32-east-3-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:47.000Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r32-east-3\",\n    \"winnerId\": \"michigan-state\",\n    \"confidence\": 0.8\n  },\n  \"reasoning\": \"Michigan State was chosen over Louisville using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

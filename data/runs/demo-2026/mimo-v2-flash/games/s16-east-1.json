@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mock",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "s16-east-1",
+  "generatedAt": "2026-03-16T23:48:47.014Z",
+  "pick": {
+    "gameId": "s16-east-1",
+    "winnerId": "duke",
+    "confidence": 0.9,
+    "rationale": "Duke advances over St. John's because MiMo-V2-Flash rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-s16-east-1",
+    "title": "East Sweet 16 1",
+    "summary": "MiMo-V2-Flash chose Duke over St. John's.",
+    "evidence": [
+      "Duke seed: 1",
+      "St. John's seed: 5",
+      "Round: Sweet 16"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "s16-east-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:47.014Z",
+      "content": "Mock prediction for East Sweet 16 1 in Sweet 16."
+    },
+    {
+      "id": "s16-east-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:47.014Z",
+      "content": "Duke vs St. John's. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "s16-east-1-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:47.014Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"s16-east-1\",\n    \"winnerId\": \"duke\",\n    \"confidence\": 0.9\n  },\n  \"reasoning\": \"Duke was chosen over St. John's using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

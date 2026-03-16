@@ -76,28 +76,58 @@ export const agentToolCallSchema = z.object({
   result: z.any()
 });
 
+export const modelTraceEventSchema = z.object({
+  id: z.string(),
+  type: z.enum([
+    "system_prompt",
+    "user_prompt",
+    "assistant_message",
+    "tool_call",
+    "tool_result",
+    "final_json"
+  ]),
+  createdAt: z.string(),
+  content: z.string().nullable().optional(),
+  toolName: z.string().optional(),
+  arguments: z.any().optional(),
+  result: z.any().optional()
+});
+
+export const reasoningStepSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  summary: z.string(),
+  evidence: z.array(z.string())
+});
+
+export const bracketPickSchema = z.object({
+  gameId: z.string(),
+  winnerId: z.string(),
+  confidence: z.number().min(0).max(1),
+  rationale: z.string().min(40)
+});
+
+export const gameRunArtifactSchema = z.object({
+  runId: z.string(),
+  configId: z.string(),
+  model: modelDefinitionSchema,
+  gameId: z.string(),
+  generatedAt: z.string(),
+  pick: bracketPickSchema,
+  reasoningStep: reasoningStepSchema.optional(),
+  toolCalls: z.array(agentToolCallSchema).default([]),
+  modelTrace: z.array(modelTraceEventSchema).default([])
+});
+
 export const bracketSubmissionSchema = z.object({
   runId: z.string(),
   model: modelDefinitionSchema,
   generatedAt: z.string(),
   configId: z.string(),
-  picks: z.array(
-    z.object({
-      gameId: z.string(),
-      winnerId: z.string(),
-      confidence: z.number().min(0).max(1),
-      rationale: z.string().min(40)
-    })
-  ),
-  reasoning: z.array(
-    z.object({
-      id: z.string(),
-      title: z.string(),
-      summary: z.string(),
-      evidence: z.array(z.string())
-    })
-  ),
-  toolCalls: z.array(agentToolCallSchema).default([])
+  picks: z.array(bracketPickSchema),
+  reasoning: z.array(reasoningStepSchema),
+  toolCalls: z.array(agentToolCallSchema).default([]),
+  gameRuns: z.array(gameRunArtifactSchema).default([])
 });
 
 export const actualResultsSchema = z.object({
@@ -105,7 +135,7 @@ export const actualResultsSchema = z.object({
   results: z.array(
     z.object({
       gameId: z.string(),
-      winnerId: z.string()
+      winnerId: z.string().optional()
     })
   )
 });

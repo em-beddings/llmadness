@@ -3,8 +3,8 @@ import {
   AgentToolDefinition,
   BracketConfig,
   BracketPick,
-  BracketSubmission,
   GamePredictionContext,
+  ModelTraceEvent,
   ModelDefinition
 } from "@/lib/types";
 
@@ -27,6 +27,7 @@ export interface ModelAdapter {
       summary: string;
       evidence: string[];
     };
+    modelTrace?: ModelTraceEvent[];
   }>;
 }
 

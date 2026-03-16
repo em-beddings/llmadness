@@ -1,0 +1,50 @@
+{
+  "runId": "demo-2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mock",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "r64-east-5",
+  "generatedAt": "2026-03-16T23:48:47.007Z",
+  "pick": {
+    "gameId": "r64-east-5",
+    "winnerId": "louisville",
+    "confidence": 0.95,
+    "rationale": "Louisville advances over South Florida because MiMo-V2-Flash rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge."
+  },
+  "reasoningStep": {
+    "id": "reason-r64-east-5",
+    "title": "East 6/11",
+    "summary": "MiMo-V2-Flash chose Louisville over South Florida.",
+    "evidence": [
+      "Louisville seed: 6",
+      "South Florida seed: 11",
+      "Round: Round of 64"
+    ]
+  },
+  "toolCalls": [],
+  "modelTrace": [
+    {
+      "id": "r64-east-5-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-16T23:48:47.007Z",
+      "content": "Mock prediction for East 6/11 in Round of 64."
+    },
+    {
+      "id": "r64-east-5-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-16T23:48:47.007Z",
+      "content": "Louisville vs South Florida. Resolve a winner using the mock bracket heuristic."
+    },
+    {
+      "id": "r64-east-5-final",
+      "type": "final_json",
+      "createdAt": "2026-03-16T23:48:47.007Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-east-5\",\n    \"winnerId\": \"louisville\",\n    \"confidence\": 0.95\n  },\n  \"reasoning\": \"Louisville was chosen over South Florida using seed position plus a deterministic model bias.\"\n}"
+    }
+  ]
+}

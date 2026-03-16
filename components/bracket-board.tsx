@@ -247,11 +247,8 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
   );
 
   const selectedReasoning = useMemo(
-    () =>
-      view.submission.reasoning.find(
-        (step) => step.id === `reason-${selectedGameId}`,
-      ) ?? null,
-    [selectedGameId, view.submission.reasoning],
+    () => selectedGame?.reasoningStep ?? null,
+    [selectedGame],
   );
 
   return (
@@ -316,7 +313,7 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
               <div className="modal-stat">
                 <span>Confidence</span>
                 <strong>
-                  {selectedGame.confidence !== null
+              {selectedGame.confidence !== null
                     ? `${Math.round(selectedGame.confidence * 100)}%`
                     : "N/A"}
                 </strong>
@@ -349,11 +346,11 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
 
             <section className="modal-section">
               <h3>Tool calls</h3>
-              {view.submission.toolCalls.length === 0 ? (
-                <p>No tool calls were recorded for this run.</p>
+              {selectedGame.toolCalls.length === 0 ? (
+                <p>No tool calls were recorded for this game.</p>
               ) : (
                 <div className="modal-tool-list">
-                  {view.submission.toolCalls.map((call) => (
+                  {selectedGame.toolCalls.map((call) => (
                     <article className="trace-card" key={call.id}>
                       <div className="leader-topline">
                         <strong>{call.toolName}</strong>
@@ -365,6 +362,38 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
                       <pre className="code-block">
                         {JSON.stringify(call.result, null, 2)}
                       </pre>
+                    </article>
+                  ))}
+                </div>
+              )}
+            </section>
+
+            <section className="modal-section">
+              <h3>Model trace</h3>
+              {selectedGame.modelTrace.length === 0 ? (
+                <p>No model trace was recorded for this game.</p>
+              ) : (
+                <div className="modal-tool-list">
+                  {selectedGame.modelTrace.map((event) => (
+                    <article className="trace-card" key={event.id}>
+                      <div className="leader-topline">
+                        <strong>{event.type.replaceAll("_", " ")}</strong>
+                        <span>{new Date(event.createdAt).toLocaleTimeString()}</span>
+                      </div>
+                      {event.toolName ? <p>{event.toolName}</p> : null}
+                      {event.arguments !== undefined ? (
+                        <pre className="code-block">
+                          {JSON.stringify(event.arguments, null, 2)}
+                        </pre>
+                      ) : null}
+                      {event.result !== undefined ? (
+                        <pre className="code-block">
+                          {JSON.stringify(event.result, null, 2)}
+                        </pre>
+                      ) : null}
+                      {event.content ? (
+                        <pre className="code-block">{event.content}</pre>
+                      ) : null}
                     </article>
                   ))}
                 </div>
