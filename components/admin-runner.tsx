@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useMemo, useState } from "react";
 import type { AdminConfigOption, AdminModelOption, AdminRunJob } from "@/lib/admin";
 
 const ROUND_OPTIONS = [
+  "First Four",
   "Round of 64",
   "Round of 32",
   "Sweet 16",

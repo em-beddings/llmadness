@@ -1,6 +1,7 @@
 import { BracketConfig, CompetitorRef, Team, TournamentRound } from "@/lib/types";
 
 export const ROUND_ORDER: TournamentRound[] = [
+  "First Four",
   "Round of 64",
   "Round of 32",
   "Sweet 16",
@@ -44,6 +45,8 @@ export function groupGamesByRound(config: BracketConfig) {
 
 export function roundPoints(round: TournamentRound): number {
   switch (round) {
+    case "First Four":
+      return 0;
     case "Round of 64":
       return 1;
     case "Round of 32":

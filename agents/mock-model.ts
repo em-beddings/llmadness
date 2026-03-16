@@ -43,8 +43,8 @@ export class MockModelAdapter implements ModelAdapter {
     }
 
     const modelBias = hashString(model.id) % 5;
-    const scoreA = seededScore(teamA.seed) + (teamA.metrics?.net ?? 0) / 10 + modelBias;
-    const scoreB = seededScore(teamB.seed) + (teamB.metrics?.net ?? 0) / 10 + ((modelBias + 2) % 5);
+    const scoreA = seededScore(teamA.seed) + modelBias;
+    const scoreB = seededScore(teamB.seed) + ((modelBias + 2) % 5);
     const winner = scoreA >= scoreB ? teamA : teamB;
     const loser = winner.id === teamA.id ? teamB : teamA;
     const confidence = Math.min(0.95, Math.max(0.51, 0.55 + Math.abs(scoreA - scoreB) / 20));
@@ -54,7 +54,7 @@ export class MockModelAdapter implements ModelAdapter {
         gameId: currentGame.game.id,
         winnerId: winner.id,
         confidence,
-        rationale: `${winner.name} advances over ${loser.name} because ${model.label} gives the winner a stronger composite profile when seed strength and the built-in team metrics are considered together. This matchup also fits the bracket path the model has already committed to, so the pick balances raw team quality with a coherent tournament progression.`
+        rationale: `${winner.name} advances over ${loser.name} because ${model.label} rates the matchup more favorably once seed position and its internal decision bias are applied together. This mock pick is mainly meant to exercise the bracket flow and keep the tournament path coherent from one game to the next, rather than to reflect any live statistical edge.`
       },
       reasoningStep: {
         id: `reason-${currentGame.game.id}`,

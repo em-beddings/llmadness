@@ -3,6 +3,7 @@ import { createAdminRunJob } from "@/lib/admin";
 import { TournamentRound } from "@/lib/types";
 
 const VALID_ROUNDS: TournamentRound[] = [
+  "First Four",
   "Round of 64",
   "Round of 32",
   "Sweet 16",

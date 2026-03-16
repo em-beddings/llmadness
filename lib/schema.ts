@@ -6,8 +6,7 @@ export const teamSchema = z.object({
   shortName: z.string(),
   seed: z.number().int(),
   region: z.string(),
-  conference: z.string().optional(),
-  metrics: z.record(z.number()).optional()
+  conference: z.string().optional()
 });
 
 export const competitorRefSchema = z.discriminatedUnion("kind", [
@@ -24,6 +23,7 @@ export const competitorRefSchema = z.discriminatedUnion("kind", [
 export const gameDefinitionSchema = z.object({
   id: z.string(),
   round: z.enum([
+    "First Four",
     "Round of 64",
     "Round of 32",
     "Sweet 16",

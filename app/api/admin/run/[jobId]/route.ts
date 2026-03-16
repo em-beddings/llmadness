@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { loadAdminJob } from "@/lib/admin";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(_request: Request, context: { params: Promise<{ jobId: string }> }) {
   try {
     const { jobId } = await context.params;

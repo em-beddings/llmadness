@@ -174,9 +174,11 @@ function FinalsBracket({
 
   return (
     <section className="finals-panel">
-      <div className="finals-stage-grid">
+        <div className="finals-stage-grid">
         <div className="final-four-section">
-          <div className="championship-label">Final Four</div>
+          <div className="region-header">
+            <h3>Final Four</h3>
+          </div>
           <div className="final-four-grid">
             {semifinals.map((game) => (
               <GameNode
@@ -190,10 +192,43 @@ function FinalsBracket({
         </div>
         {championship ? (
           <div className="championship-wrap">
-            <div className="championship-label">Championship</div>
+            <div className="region-header">
+              <h3>Championship</h3>
+            </div>
             <GameNode game={championship} align="center" onSelect={onSelect} />
           </div>
         ) : null}
+      </div>
+    </section>
+  );
+}
+
+function FirstFourBracket({
+  view,
+  onSelect,
+}: {
+  view: SubmissionView;
+  onSelect: (gameId: string) => void;
+}) {
+  const games = getGamesForRound(view, "First Four");
+  if (games.length === 0) {
+    return null;
+  }
+
+  return (
+    <section className="first-four-panel">
+      <div className="region-header">
+        <h3>First Four</h3>
+      </div>
+      <div className="first-four-grid">
+        {games.map((game) => (
+          <GameNode
+            key={game.id}
+            game={game}
+            align="center"
+            onSelect={onSelect}
+          />
+        ))}
       </div>
     </section>
   );
@@ -240,6 +275,7 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
               />
             ))}
           </div>
+          <FirstFourBracket onSelect={setSelectedGameId} view={view} />
         </div>
       </section>
 

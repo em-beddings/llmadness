@@ -128,7 +128,7 @@ export class AgentToolRuntime implements ToolRuntime {
 export class ListTeamsTool implements AgentTool {
   definition: AgentToolDefinition = {
     name: "list_teams",
-    description: "List teams in the bracket with IDs, seeds, regions, conferences, and any built-in metrics.",
+    description: "List teams in the bracket with IDs, seeds, regions, and conferences.",
     inputSchema: {
       type: "object",
       properties: {

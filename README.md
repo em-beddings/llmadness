@@ -56,9 +56,9 @@ The intended production path is to keep the same interfaces and swap in richer t
 
 ## Demo data
 
-A demo run is checked in at `data/runs/demo-2026/` so the UI renders immediately.
+A sample 2026 run is checked in at `data/runs/demo-2026/` so the UI renders immediately.
 
-- Config: `data/configs/demo-bracket.json`
+- Config: `data/configs/2026-mens-bracket.json`
 - Models: `data/models/demo-models.json`
 - Live model roster: `data/models/live-models.json`
 - Run: `data/runs/demo-2026/`
@@ -75,7 +75,7 @@ Then open `http://localhost:3000`.
 ## Generate a run
 
 ```bash
-npm run generate:brackets -- --config data/configs/demo-bracket.json --models data/models/demo-models.json --run-id demo-2026
+npm run generate:brackets -- --config data/configs/2026-mens-bracket.json --models data/models/demo-models.json --run-id demo-2026
 ```
 
 This writes:
@@ -135,7 +135,7 @@ That checks:
 Generate a live run with:
 
 ```bash
-npm run generate:brackets -- --config data/configs/demo-bracket.json --models data/models/live-models.json --run-id live-demo
+npm run generate:brackets -- --config data/configs/2026-mens-bracket.json --models data/models/live-models.json --run-id live-demo
 ```
 
 Notes:

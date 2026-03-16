@@ -8,6 +8,7 @@ import { scoreSubmissions } from "@/lib/scoring";
 import {
   ActualResults,
   BracketConfig,
+  CompetitorRef,
   GameDefinition,
   ModelDefinition,
   Team,
@@ -15,7 +16,7 @@ import {
 } from "@/lib/types";
 
 const ROOT = process.cwd();
-const CONFIG_PATH = "data/configs/demo-bracket.json";
+const CONFIG_PATH = "data/configs/2026-mens-bracket.json";
 const RESULTS_PATH = "data/results/demo-actual-results.json";
 const MODELS_PATH = "data/models/demo-models.json";
 const RUN_ID = "demo-2026";
@@ -32,82 +33,151 @@ const ROUND_OF_64_PAIRINGS: Array<[number, number]> = [
   [2, 15],
 ];
 
-const REGION_TEAMS: Record<
-  (typeof REGIONS)[number],
-  Array<{ name: string; shortName: string; conference: string }>
-> = {
-  East: [
-    { name: "Duke", shortName: "DUKE", conference: "ACC" },
-    { name: "Mississippi State", shortName: "MSST", conference: "SEC" },
-    { name: "Kentucky", shortName: "UK", conference: "SEC" },
-    { name: "Maryland", shortName: "MD", conference: "Big Ten" },
-    { name: "Oregon", shortName: "ORE", conference: "Big Ten" },
-    { name: "BYU", shortName: "BYU", conference: "Big 12" },
-    { name: "Clemson", shortName: "CLEM", conference: "ACC" },
-    { name: "Florida Atlantic", shortName: "FAU", conference: "AAC" },
-    { name: "Colorado State", shortName: "CSU", conference: "MWC" },
-    { name: "New Mexico", shortName: "UNM", conference: "MWC" },
-    { name: "VCU", shortName: "VCU", conference: "A10" },
-    { name: "Liberty", shortName: "LIB", conference: "CUSA" },
-    { name: "Yale", shortName: "YALE", conference: "Ivy" },
-    { name: "Akron", shortName: "AKR", conference: "MAC" },
-    { name: "Vermont", shortName: "UVM", conference: "America East" },
-    { name: "Longwood", shortName: "LONG", conference: "Big South" },
-  ],
-  West: [
-    { name: "Houston", shortName: "HOU", conference: "Big 12" },
-    { name: "Wisconsin", shortName: "WIS", conference: "Big Ten" },
-    { name: "Illinois", shortName: "ILL", conference: "Big Ten" },
-    { name: "Saint Mary's", shortName: "SMC", conference: "WCC" },
-    { name: "San Diego State", shortName: "SDSU", conference: "MWC" },
-    { name: "Texas Tech", shortName: "TTU", conference: "Big 12" },
-    { name: "Dayton", shortName: "DAY", conference: "A10" },
-    { name: "Nebraska", shortName: "NEB", conference: "Big Ten" },
-    { name: "Northwestern", shortName: "NU", conference: "Big Ten" },
-    { name: "Utah State", shortName: "USU", conference: "MWC" },
-    { name: "Drake", shortName: "DRA", conference: "MVC" },
-    { name: "Grand Canyon", shortName: "GCU", conference: "WAC" },
-    { name: "Samford", shortName: "SAM", conference: "SoCon" },
-    { name: "Colgate", shortName: "COL", conference: "Patriot" },
-    { name: "Eastern Washington", shortName: "EWU", conference: "Big Sky" },
-    { name: "Howard", shortName: "HOW", conference: "MEAC" },
-  ],
-  South: [
-    { name: "North Carolina", shortName: "UNC", conference: "ACC" },
-    { name: "Texas", shortName: "TEX", conference: "SEC" },
-    { name: "Baylor", shortName: "BAY", conference: "Big 12" },
-    { name: "Auburn", shortName: "AUB", conference: "SEC" },
-    { name: "Gonzaga", shortName: "ZAGS", conference: "WCC" },
-    { name: "Florida", shortName: "UF", conference: "SEC" },
-    { name: "Washington State", shortName: "WSU", conference: "WCC" },
-    { name: "TCU", shortName: "TCU", conference: "Big 12" },
-    { name: "Boise State", shortName: "BSU", conference: "MWC" },
-    { name: "Virginia", shortName: "UVA", conference: "ACC" },
-    { name: "Indiana State", shortName: "INST", conference: "MVC" },
-    { name: "McNeese", shortName: "MCN", conference: "Southland" },
-    { name: "Charleston", shortName: "COC", conference: "CAA" },
-    { name: "South Dakota State", shortName: "SDSU2", conference: "Summit" },
-    { name: "UC Irvine", shortName: "UCI", conference: "Big West" },
-    { name: "Wagner", shortName: "WAG", conference: "NEC" },
-  ],
-  Midwest: [
-    { name: "Purdue", shortName: "PUR", conference: "Big Ten" },
-    { name: "Michigan State", shortName: "MSU", conference: "Big Ten" },
-    { name: "Creighton", shortName: "CREI", conference: "Big East" },
-    { name: "Alabama", shortName: "BAMA", conference: "SEC" },
-    { name: "Marquette", shortName: "MARQ", conference: "Big East" },
-    { name: "Iowa State", shortName: "ISU", conference: "Big 12" },
-    { name: "Texas A&M", shortName: "TAMU", conference: "SEC" },
-    { name: "Florida State", shortName: "FSU", conference: "ACC" },
-    { name: "Kansas State", shortName: "KSU", conference: "Big 12" },
-    { name: "Michigan", shortName: "MICH", conference: "Big Ten" },
-    { name: "Princeton", shortName: "PRIN", conference: "Ivy" },
-    { name: "James Madison", shortName: "JMU", conference: "Sun Belt" },
-    { name: "College of Charleston", shortName: "COFC", conference: "CAA" },
-    { name: "Oakland", shortName: "OAK", conference: "Horizon" },
-    { name: "Morehead State", shortName: "MORE", conference: "OVC" },
-    { name: "Stetson", shortName: "STET", conference: "ASUN" },
-  ],
+type RegionName = (typeof REGIONS)[number];
+
+interface TeamSeedEntry {
+  kind: "team";
+  team: {
+    name: string;
+    shortName: string;
+    conference: string;
+  };
+}
+
+interface PlayInSeedEntry {
+  kind: "play-in";
+  playInGameId: string;
+}
+
+type SeedEntry = TeamSeedEntry | PlayInSeedEntry;
+
+interface PlayInGameEntry {
+  id: string;
+  region: RegionName;
+  seed: number;
+  teams: Array<{
+    name: string;
+    shortName: string;
+    conference: string;
+  }>;
+}
+
+const PLAY_IN_GAMES: PlayInGameEntry[] = [
+  {
+    id: "ff-west-11",
+    region: "West",
+    seed: 11,
+    teams: [
+      { name: "NC State", shortName: "NCSU", conference: "ACC" },
+      { name: "Texas", shortName: "TEX", conference: "SEC" },
+    ],
+  },
+  {
+    id: "ff-midwest-11",
+    region: "Midwest",
+    seed: 11,
+    teams: [
+      { name: "SMU", shortName: "SMU", conference: "ACC" },
+      { name: "Miami (OH)", shortName: "M-OH", conference: "MAC" },
+    ],
+  },
+  {
+    id: "ff-midwest-16",
+    region: "Midwest",
+    seed: 16,
+    teams: [
+      { name: "Howard", shortName: "HOW", conference: "MEAC" },
+      { name: "UMBC", shortName: "UMBC", conference: "America East" },
+    ],
+  },
+  {
+    id: "ff-south-16",
+    region: "South",
+    seed: 16,
+    teams: [
+      { name: "Lehigh", shortName: "LEH", conference: "Patriot" },
+      { name: "Prairie View A&M", shortName: "PVAM", conference: "SWAC" },
+    ],
+  },
+];
+
+function winnerRef(gameId: string): CompetitorRef {
+  return { kind: "winner", gameId };
+}
+
+const REGION_FIELDS: Record<RegionName, Record<number, SeedEntry>> = {
+  East: {
+    1: { kind: "team", team: { name: "Duke", shortName: "DUKE", conference: "ACC" } },
+    2: { kind: "team", team: { name: "UConn", shortName: "UCONN", conference: "Big East" } },
+    3: { kind: "team", team: { name: "Michigan State", shortName: "MSU", conference: "Big Ten" } },
+    4: { kind: "team", team: { name: "Kansas", shortName: "KU", conference: "Big 12" } },
+    5: { kind: "team", team: { name: "St. John's", shortName: "SJU", conference: "Big East" } },
+    6: { kind: "team", team: { name: "Louisville", shortName: "LOU", conference: "ACC" } },
+    7: { kind: "team", team: { name: "UCLA", shortName: "UCLA", conference: "Big Ten" } },
+    8: { kind: "team", team: { name: "Ohio State", shortName: "OSU", conference: "Big Ten" } },
+    9: { kind: "team", team: { name: "TCU", shortName: "TCU", conference: "Big 12" } },
+    10: { kind: "team", team: { name: "UCF", shortName: "UCF", conference: "Big 12" } },
+    11: { kind: "team", team: { name: "South Florida", shortName: "USF", conference: "AAC" } },
+    12: { kind: "team", team: { name: "Northern Iowa", shortName: "UNI", conference: "MVC" } },
+    13: { kind: "team", team: { name: "California Baptist", shortName: "CBU", conference: "WAC" } },
+    14: { kind: "team", team: { name: "North Dakota State", shortName: "NDSU", conference: "Summit" } },
+    15: { kind: "team", team: { name: "Furman", shortName: "FUR", conference: "SoCon" } },
+    16: { kind: "team", team: { name: "Siena", shortName: "SIE", conference: "MAAC" } },
+  },
+  West: {
+    1: { kind: "team", team: { name: "Arizona", shortName: "ARIZ", conference: "Big 12" } },
+    2: { kind: "team", team: { name: "Purdue", shortName: "PUR", conference: "Big Ten" } },
+    3: { kind: "team", team: { name: "Gonzaga", shortName: "GONZ", conference: "WCC" } },
+    4: { kind: "team", team: { name: "Arkansas", shortName: "ARK", conference: "SEC" } },
+    5: { kind: "team", team: { name: "Wisconsin", shortName: "WIS", conference: "Big Ten" } },
+    6: { kind: "team", team: { name: "BYU", shortName: "BYU", conference: "Big 12" } },
+    7: { kind: "team", team: { name: "Miami (FL)", shortName: "MIA", conference: "ACC" } },
+    8: { kind: "team", team: { name: "Villanova", shortName: "NOVA", conference: "Big East" } },
+    9: { kind: "team", team: { name: "Utah State", shortName: "USU", conference: "MWC" } },
+    10: { kind: "team", team: { name: "Missouri", shortName: "MIZZ", conference: "SEC" } },
+    11: { kind: "play-in", playInGameId: "ff-west-11" },
+    12: { kind: "team", team: { name: "High Point", shortName: "HPU", conference: "Big South" } },
+    13: { kind: "team", team: { name: "Hawai'i", shortName: "HAW", conference: "Big West" } },
+    14: { kind: "team", team: { name: "Kennesaw State", shortName: "KENN", conference: "Conference USA" } },
+    15: { kind: "team", team: { name: "Queens", shortName: "QUE", conference: "ASUN" } },
+    16: { kind: "team", team: { name: "LIU", shortName: "LIU", conference: "NEC" } },
+  },
+  South: {
+    1: { kind: "team", team: { name: "Florida", shortName: "FLA", conference: "SEC" } },
+    2: { kind: "team", team: { name: "Houston", shortName: "HOU", conference: "Big 12" } },
+    3: { kind: "team", team: { name: "Illinois", shortName: "ILL", conference: "Big Ten" } },
+    4: { kind: "team", team: { name: "Nebraska", shortName: "NEB", conference: "Big Ten" } },
+    5: { kind: "team", team: { name: "Vanderbilt", shortName: "VANDY", conference: "SEC" } },
+    6: { kind: "team", team: { name: "North Carolina", shortName: "UNC", conference: "ACC" } },
+    7: { kind: "team", team: { name: "Saint Mary's", shortName: "SMC", conference: "WCC" } },
+    8: { kind: "team", team: { name: "Clemson", shortName: "CLEM", conference: "ACC" } },
+    9: { kind: "team", team: { name: "Iowa", shortName: "IOWA", conference: "Big Ten" } },
+    10: { kind: "team", team: { name: "Texas A&M", shortName: "TAMU", conference: "SEC" } },
+    11: { kind: "team", team: { name: "VCU", shortName: "VCU", conference: "A-10" } },
+    12: { kind: "team", team: { name: "McNeese", shortName: "MCN", conference: "Southland" } },
+    13: { kind: "team", team: { name: "Troy", shortName: "TROY", conference: "Sun Belt" } },
+    14: { kind: "team", team: { name: "Penn", shortName: "PENN", conference: "Ivy" } },
+    15: { kind: "team", team: { name: "Idaho", shortName: "IDA", conference: "Big Sky" } },
+    16: { kind: "play-in", playInGameId: "ff-south-16" },
+  },
+  Midwest: {
+    1: { kind: "team", team: { name: "Michigan", shortName: "MICH", conference: "Big Ten" } },
+    2: { kind: "team", team: { name: "Iowa State", shortName: "ISU", conference: "Big 12" } },
+    3: { kind: "team", team: { name: "Virginia", shortName: "UVA", conference: "ACC" } },
+    4: { kind: "team", team: { name: "Alabama", shortName: "BAMA", conference: "SEC" } },
+    5: { kind: "team", team: { name: "Texas Tech", shortName: "TTU", conference: "Big 12" } },
+    6: { kind: "team", team: { name: "Tennessee", shortName: "TENN", conference: "SEC" } },
+    7: { kind: "team", team: { name: "Kentucky", shortName: "UK", conference: "SEC" } },
+    8: { kind: "team", team: { name: "Georgia", shortName: "UGA", conference: "SEC" } },
+    9: { kind: "team", team: { name: "Saint Louis", shortName: "SLU", conference: "A-10" } },
+    10: { kind: "team", team: { name: "Santa Clara", shortName: "SCU", conference: "WCC" } },
+    11: { kind: "play-in", playInGameId: "ff-midwest-11" },
+    12: { kind: "team", team: { name: "Akron", shortName: "AKR", conference: "MAC" } },
+    13: { kind: "team", team: { name: "Hofstra", shortName: "HOF", conference: "CAA" } },
+    14: { kind: "team", team: { name: "Wright State", shortName: "WSU", conference: "Horizon" } },
+    15: { kind: "team", team: { name: "Tennessee State", shortName: "TNST", conference: "OVC" } },
+    16: { kind: "play-in", playInGameId: "ff-midwest-16" },
+  },
 };
 
 function teamId(name: string) {
@@ -117,39 +187,62 @@ function teamId(name: string) {
     .replace(/^-|-$/g, "");
 }
 
-function metricForSeed(seed: number, regionIndex: number) {
-  return 40 - seed * 1.7 + regionIndex * 0.6;
-}
-
 function buildTeams(): Team[] {
-  return REGIONS.flatMap((region, regionIndex) =>
-    REGION_TEAMS[region].map((entry, teamIndex) => {
-      const seed = teamIndex + 1;
-      return {
-        id: teamId(entry.name),
-        name: entry.name,
-        shortName: entry.shortName,
-        seed,
-        region,
-        conference: entry.conference,
-        metrics: {
-          net: Number(metricForSeed(seed, regionIndex).toFixed(1)),
-          kenpom: Number((metricForSeed(seed, regionIndex) - 1.8).toFixed(1)),
-        },
-      };
-    }),
-  );
+  const teams: Team[] = [];
+
+  for (const region of REGIONS) {
+    for (let seed = 1; seed <= 16; seed += 1) {
+      const entry = REGION_FIELDS[region][seed];
+      if (entry.kind === "team") {
+        teams.push({
+          id: teamId(entry.team.name),
+          name: entry.team.name,
+          shortName: entry.team.shortName,
+          seed,
+          region,
+          conference: entry.team.conference,
+        });
+      }
+    }
+  }
+
+  for (const playIn of PLAY_IN_GAMES) {
+    for (const team of playIn.teams) {
+      teams.push({
+        id: teamId(team.name),
+        name: team.name,
+        shortName: team.shortName,
+        seed: playIn.seed,
+        region: playIn.region,
+        conference: team.conference,
+      });
+    }
+  }
+
+  return teams;
 }
 
-function regionTeam(region: (typeof REGIONS)[number], seed: number) {
-  const entry = REGION_TEAMS[region][seed - 1];
-  return teamId(entry.name);
+function buildFirstFourGames(): GameDefinition[] {
+  return PLAY_IN_GAMES.map((game) => ({
+    id: game.id,
+    round: "First Four",
+    region: game.region,
+    label: `${game.region} 11 play-in`.replace("11", String(game.seed)),
+    slotA: { kind: "team", teamId: teamId(game.teams[0].name) },
+    slotB: { kind: "team", teamId: teamId(game.teams[1].name) },
+  }));
 }
 
-function buildRegionGames(
-  region: (typeof REGIONS)[number],
-  regionIndex: number,
-) {
+function seedRef(region: RegionName, seed: number): CompetitorRef {
+  const entry = REGION_FIELDS[region][seed];
+  if (entry.kind === "team") {
+    return { kind: "team", teamId: teamId(entry.team.name) };
+  }
+
+  return { kind: "winner", gameId: entry.playInGameId };
+}
+
+function buildRegionGames(region: RegionName): GameDefinition[] {
   const games: GameDefinition[] = [];
 
   ROUND_OF_64_PAIRINGS.forEach(([seedA, seedB], pairIndex) => {
@@ -158,8 +251,8 @@ function buildRegionGames(
       round: "Round of 64",
       region,
       label: `${region} ${seedA}/${seedB}`,
-      slotA: { kind: "team", teamId: regionTeam(region, seedA) },
-      slotB: { kind: "team", teamId: regionTeam(region, seedB) },
+      slotA: seedRef(region, seedA),
+      slotB: seedRef(region, seedB),
     });
   });
 
@@ -169,14 +262,8 @@ function buildRegionGames(
       round: "Round of 32",
       region,
       label: `${region} Round of 32 ${i + 1}`,
-      slotA: {
-        kind: "winner",
-        gameId: `r64-${region.toLowerCase()}-${i * 2 + 1}`,
-      },
-      slotB: {
-        kind: "winner",
-        gameId: `r64-${region.toLowerCase()}-${i * 2 + 2}`,
-      },
+      slotA: winnerRef(`r64-${region.toLowerCase()}-${i * 2 + 1}`),
+      slotB: winnerRef(`r64-${region.toLowerCase()}-${i * 2 + 2}`),
     });
   }
 
@@ -186,14 +273,8 @@ function buildRegionGames(
       round: "Sweet 16",
       region,
       label: `${region} Sweet 16 ${i + 1}`,
-      slotA: {
-        kind: "winner",
-        gameId: `r32-${region.toLowerCase()}-${i * 2 + 1}`,
-      },
-      slotB: {
-        kind: "winner",
-        gameId: `r32-${region.toLowerCase()}-${i * 2 + 2}`,
-      },
+      slotA: winnerRef(`r32-${region.toLowerCase()}-${i * 2 + 1}`),
+      slotB: winnerRef(`r32-${region.toLowerCase()}-${i * 2 + 2}`),
     });
   }
 
@@ -202,47 +283,44 @@ function buildRegionGames(
     round: "Elite 8",
     region,
     label: `${region} Regional Final`,
-    slotA: { kind: "winner", gameId: `s16-${region.toLowerCase()}-1` },
-    slotB: { kind: "winner", gameId: `s16-${region.toLowerCase()}-2` },
+    slotA: winnerRef(`s16-${region.toLowerCase()}-1`),
+    slotB: winnerRef(`s16-${region.toLowerCase()}-2`),
   });
 
-  void regionIndex;
   return games;
 }
 
 function buildConfig(): BracketConfig {
   const teams = buildTeams();
-  const games = REGIONS.flatMap((region, regionIndex) =>
-    buildRegionGames(region, regionIndex),
-  );
-
-  games.push(
+  const games = [
+    ...buildFirstFourGames(),
+    ...REGIONS.flatMap((region) => buildRegionGames(region)),
     {
       id: "f4-1",
-      round: "Final Four",
+      round: "Final Four" as const,
       label: "National semifinal 1",
-      slotA: { kind: "winner", gameId: "e8-east-1" },
-      slotB: { kind: "winner", gameId: "e8-west-1" },
+      slotA: winnerRef("e8-east-1"),
+      slotB: winnerRef("e8-south-1"),
     },
     {
       id: "f4-2",
-      round: "Final Four",
+      round: "Final Four" as const,
       label: "National semifinal 2",
-      slotA: { kind: "winner", gameId: "e8-south-1" },
-      slotB: { kind: "winner", gameId: "e8-midwest-1" },
+      slotA: winnerRef("e8-west-1"),
+      slotB: winnerRef("e8-midwest-1"),
     },
     {
       id: "title",
-      round: "Championship",
+      round: "Championship" as const,
       label: "National championship",
-      slotA: { kind: "winner", gameId: "f4-1" },
-      slotB: { kind: "winner", gameId: "f4-2" },
+      slotA: winnerRef("f4-1"),
+      slotB: winnerRef("f4-2"),
     },
-  );
+  ];
 
   return {
     id: "demo-2026-bracket",
-    title: "LLMadness",
+    title: "2026 NCAA Men's Tournament",
     year: 2026,
     division: "mens",
     publishedAt: "2026-03-15T22:00:00Z",
@@ -260,6 +338,7 @@ function determineActualResults(config: BracketConfig): ActualResults {
   const winners = new Map<string, string>();
 
   const roundOrder: TournamentRound[] = [
+    "First Four",
     "Round of 64",
     "Round of 32",
     "Sweet 16",
@@ -283,8 +362,8 @@ function determineActualResults(config: BracketConfig): ActualResults {
         throw new Error(`Unable to resolve actual result for ${game.id}`);
       }
 
-      const scoreA = seedStrength(teamA.seed) + (teamA.metrics?.net ?? 0) / 10;
-      const scoreB = seedStrength(teamB.seed) + (teamB.metrics?.net ?? 0) / 10;
+      const scoreA = seedStrength(teamA.seed);
+      const scoreB = seedStrength(teamB.seed);
       const winner = scoreA >= scoreB ? teamA : teamB;
       winners.set(game.id, winner.id);
     }
@@ -339,10 +418,7 @@ async function main() {
 
   await writeJsonFile(path.join(ROOT, manifest.actualResultsPath), results);
   await writeJsonFile(path.join(ROOT, manifest.leaderboardPath), leaderboard);
-  await writeJsonFile(
-    path.join(ROOT, "data", "runs", RUN_ID, "manifest.json"),
-    manifest,
-  );
+  await writeJsonFile(path.join(ROOT, "data", "runs", RUN_ID, "manifest.json"), manifest);
 }
 
 main().catch((error) => {

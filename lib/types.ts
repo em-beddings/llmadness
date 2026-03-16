@@ -1,4 +1,5 @@
 export type TournamentRound =
+  | "First Four"
   | "Round of 64"
   | "Round of 32"
   | "Sweet 16"
@@ -15,7 +16,6 @@ export interface Team {
   seed: Seed;
   region: string;
   conference?: string;
-  metrics?: Record<string, number>;
 }
 
 export interface TeamRef {
