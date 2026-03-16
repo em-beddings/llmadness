@@ -1,7 +1,7 @@
 import path from "node:path";
 import { readJsonFile } from "@/lib/fs";
 import { AgentToolCall, AgentToolDefinition, BracketConfig, Team } from "@/lib/types";
-import { AgentTool, PredictionInput, ToolRuntime } from "@/agents/interfaces";
+import { AgentTool, PredictionInput, ToolRuntime, ToolRuntimeOptions } from "@/agents/interfaces";
 
 function makeId(prefix: string) {
   return `${prefix}-${Math.random().toString(36).slice(2, 10)}`;
@@ -36,11 +36,16 @@ function normalizeRatingsPayload(payload: unknown) {
     return payload;
   }
 
-  if (payload && typeof payload === "object" && "teams" in payload && Array.isArray((payload as { teams: unknown }).teams)) {
-    return (payload as { teams: unknown[] }).teams;
+  if (payload && typeof payload === "object") {
+    for (const key of ["data", "teams", "rows"]) {
+      const value = (payload as Record<string, unknown>)[key];
+      if (Array.isArray(value)) {
+        return value;
+      }
+    }
   }
 
-  throw new Error("Ratings payload must be an array or an object with a teams array.");
+  throw new Error("Ratings payload must be an array or an object with a data, teams, or rows array.");
 }
 
 function normalizeTeamLookupName(name: string) {
@@ -65,7 +70,8 @@ export class AgentToolRuntime implements ToolRuntime {
 
   constructor(
     private readonly tools: AgentTool[],
-    private readonly input: PredictionInput
+    private readonly input: PredictionInput,
+    private readonly options: ToolRuntimeOptions = {}
   ) {}
 
   list() {
@@ -93,7 +99,7 @@ export class AgentToolRuntime implements ToolRuntime {
     }
     const completedAt = new Date().toISOString();
 
-    this.transcriptEntries.push({
+    const call = {
       id: makeId("tool"),
       toolName: name,
       arguments: args,
@@ -101,7 +107,10 @@ export class AgentToolRuntime implements ToolRuntime {
       completedAt,
       summary,
       result
-    });
+    } satisfies AgentToolCall;
+
+    this.transcriptEntries.push(call);
+    await this.options.onToolCall?.(call);
 
     return result;
   }
@@ -384,7 +393,7 @@ export class LookupRatingsTool implements AgentTool {
   }
 }
 
-export function createDefaultTools(config: BracketConfig) {
+export function createDefaultTools(config: BracketConfig, options: ToolRuntimeOptions = {}) {
   const input = {
     config,
     priorPicks: [],
@@ -401,7 +410,8 @@ export function createDefaultTools(config: BracketConfig) {
       new SearchEspnNewsTool(),
       new FetchWebpageTool()
     ],
-    input
+    input,
+    options
   );
 
   input.tools = runtime;

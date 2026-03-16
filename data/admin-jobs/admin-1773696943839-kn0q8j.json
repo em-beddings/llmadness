@@ -1,0 +1,1054 @@
+{
+  "id": "admin-1773696943839-kn0q8j",
+  "status": "error",
+  "createdAt": "2026-03-16T21:35:43.839Z",
+  "updatedAt": "2026-03-16T21:36:41.451Z",
+  "input": {
+    "configFile": "demo-bracket.json",
+    "modelKey": "live-models.json::claude-opus-4-6",
+    "round": "Championship",
+    "slotATeamId": "duke",
+    "slotBTeamId": "purdue",
+    "label": ""
+  },
+  "events": [
+    {
+      "id": "event-3i724k67",
+      "timestamp": "2026-03-16T21:35:43.839Z",
+      "message": "Job created."
+    },
+    {
+      "id": "event-0blh99zj",
+      "timestamp": "2026-03-16T21:35:43.840Z",
+      "message": "Job started."
+    },
+    {
+      "id": "event-1g8vs7t1",
+      "timestamp": "2026-03-16T21:35:43.845Z",
+      "message": "Loaded LLMadness."
+    },
+    {
+      "id": "event-rfbfcjqm",
+      "timestamp": "2026-03-16T21:35:43.845Z",
+      "message": "Running Claude Opus 4.6 on Duke vs Purdue."
+    },
+    {
+      "id": "event-m8f6r7wi",
+      "timestamp": "2026-03-16T21:35:47.813Z",
+      "message": "Tool: lookup_cbb_ratings - Ratings payload must be an array or an object with a teams array."
+    },
+    {
+      "id": "event-0nktwzye",
+      "timestamp": "2026-03-16T21:35:49.945Z",
+      "message": "Tool: lookup_cbb_ratings - Ratings payload must be an array or an object with a teams array."
+    },
+    {
+      "id": "event-vaq67142",
+      "timestamp": "2026-03-16T21:35:53.100Z",
+      "message": "Tool: list_teams - Returned 64 teams."
+    },
+    {
+      "id": "event-53wg73ye",
+      "timestamp": "2026-03-16T21:36:00.577Z",
+      "message": "Tool: search_web - Returned 5 search results for \"Duke vs Purdue basketball championship matchup analysis 2024 2025\"."
+    },
+    {
+      "id": "event-czwcy2k7",
+      "timestamp": "2026-03-16T21:36:04.384Z",
+      "message": "Tool: search_espn_news - Returned 5 search results for \"Duke Purdue basketball 2024 2025 season analysis\"."
+    },
+    {
+      "id": "event-c3mg8jg4",
+      "timestamp": "2026-03-16T21:36:09.697Z",
+      "message": "Tool: search_web - Returned 3 search results for \"Purdue basketball 2025 Zach Edey replacement offense defense analysis\"."
+    },
+    {
+      "id": "event-8xyffi5f",
+      "timestamp": "2026-03-16T21:36:13.493Z",
+      "message": "Tool: search_web - Returned 3 search results for \"Duke basketball 2025 Cooper Flagg freshman analysis offense defense\"."
+    },
+    {
+      "id": "event-2n9n8qhb",
+      "timestamp": "2026-03-16T21:36:18.810Z",
+      "message": "Tool: search_web - Returned 3 search results for \"\"March Madness 2025\" Duke Purdue tournament performance analysis predictions\"."
+    },
+    {
+      "id": "event-6vohm73q",
+      "timestamp": "2026-03-16T21:36:41.451Z",
+      "message": "Model request failed: 400 {\"error\":{\"code\":\"invalid_request_error\",\"message\":\"response_format.type: Input should be 'json_schema'\",\"type\":\"invalid_request_error\",\"param\":null}}"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "tool-33l5qfxk",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "duke",
+          "purdue"
+        ]
+      },
+      "startedAt": "2026-03-16T21:35:47.807Z",
+      "completedAt": "2026-03-16T21:35:47.812Z",
+      "summary": "Ratings payload must be an array or an object with a teams array.",
+      "result": {
+        "error": "Ratings payload must be an array or an object with a teams array."
+      }
+    },
+    {
+      "id": "tool-uxevz23i",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamNames": [
+          "Duke",
+          "Purdue"
+        ]
+      },
+      "startedAt": "2026-03-16T21:35:49.935Z",
+      "completedAt": "2026-03-16T21:35:49.944Z",
+      "summary": "Ratings payload must be an array or an object with a teams array.",
+      "result": {
+        "error": "Ratings payload must be an array or an object with a teams array."
+      }
+    },
+    {
+      "id": "tool-zf6m00zw",
+      "toolName": "list_teams",
+      "arguments": {},
+      "startedAt": "2026-03-16T21:35:53.098Z",
+      "completedAt": "2026-03-16T21:35:53.098Z",
+      "summary": "Returned 64 teams.",
+      "result": [
+        {
+          "id": "duke",
+          "name": "Duke",
+          "shortName": "DUKE",
+          "seed": 1,
+          "region": "East",
+          "conference": "ACC",
+          "metrics": {
+            "net": 38.3,
+            "kenpom": 36.5
+          }
+        },
+        {
+          "id": "mississippi-state",
+          "name": "Mississippi State",
+          "shortName": "MSST",
+          "seed": 2,
+          "region": "East",
+          "conference": "SEC",
+          "metrics": {
+            "net": 36.6,
+            "kenpom": 34.8
+          }
+        },
+        {
+          "id": "kentucky",
+          "name": "Kentucky",
+          "shortName": "UK",
+          "seed": 3,
+          "region": "East",
+          "conference": "SEC",
+          "metrics": {
+            "net": 34.9,
+            "kenpom": 33.1
+          }
+        },
+        {
+          "id": "maryland",
+          "name": "Maryland",
+          "shortName": "MD",
+          "seed": 4,
+          "region": "East",
+          "conference": "Big Ten",
+          "metrics": {
+            "net": 33.2,
+            "kenpom": 31.4
+          }
+        },
+        {
+          "id": "oregon",
+          "name": "Oregon",
+          "shortName": "ORE",
+          "seed": 5,
+          "region": "East",
+          "conference": "Big Ten",
+          "metrics": {
+            "net": 31.5,
+            "kenpom": 29.7
+          }
+        },
+        {
+          "id": "byu",
+          "name": "BYU",
+          "shortName": "BYU",
+          "seed": 6,
+          "region": "East",
+          "conference": "Big 12",
+          "metrics": {
+            "net": 29.8,
+            "kenpom": 28
+          }
+        },
+        {
+          "id": "clemson",
+          "name": "Clemson",
+          "shortName": "CLEM",
+          "seed": 7,
+          "region": "East",
+          "conference": "ACC",
+          "metrics": {
+            "net": 28.1,
+            "kenpom": 26.3
+          }
+        },
+        {
+          "id": "florida-atlantic",
+          "name": "Florida Atlantic",
+          "shortName": "FAU",
+          "seed": 8,
+          "region": "East",
+          "conference": "AAC",
+          "metrics": {
+            "net": 26.4,
+            "kenpom": 24.6
+          }
+        },
+        {
+          "id": "colorado-state",
+          "name": "Colorado State",
+          "shortName": "CSU",
+          "seed": 9,
+          "region": "East",
+          "conference": "MWC",
+          "metrics": {
+            "net": 24.7,
+            "kenpom": 22.9
+          }
+        },
+        {
+          "id": "new-mexico",
+          "name": "New Mexico",
+          "shortName": "UNM",
+          "seed": 10,
+          "region": "East",
+          "conference": "MWC",
+          "metrics": {
+            "net": 23,
+            "kenpom": 21.2
+          }
+        },
+        {
+          "id": "vcu",
+          "name": "VCU",
+          "shortName": "VCU",
+          "seed": 11,
+          "region": "East",
+          "conference": "A10",
+          "metrics": {
+            "net": 21.3,
+            "kenpom": 19.5
+          }
+        },
+        {
+          "id": "liberty",
+          "name": "Liberty",
+          "shortName": "LIB",
+          "seed": 12,
+          "region": "East",
+          "conference": "CUSA",
+          "metrics": {
+            "net": 19.6,
+            "kenpom": 17.8
+          }
+        },
+        {
+          "id": "yale",
+          "name": "Yale",
+          "shortName": "YALE",
+          "seed": 13,
+          "region": "East",
+          "conference": "Ivy",
+          "metrics": {
+            "net": 17.9,
+            "kenpom": 16.1
+          }
+        },
+        {
+          "id": "akron",
+          "name": "Akron",
+          "shortName": "AKR",
+          "seed": 14,
+          "region": "East",
+          "conference": "MAC",
+          "metrics": {
+            "net": 16.2,
+            "kenpom": 14.4
+          }
+        },
+        {
+          "id": "vermont",
+          "name": "Vermont",
+          "shortName": "UVM",
+          "seed": 15,
+          "region": "East",
+          "conference": "America East",
+          "metrics": {
+            "net": 14.5,
+            "kenpom": 12.7
+          }
+        },
+        {
+          "id": "longwood",
+          "name": "Longwood",
+          "shortName": "LONG",
+          "seed": 16,
+          "region": "East",
+          "conference": "Big South",
+          "metrics": {
+            "net": 12.8,
+            "kenpom": 11
+          }
+        },
+        {
+          "id": "houston",
+          "name": "Houston",
+          "shortName": "HOU",
+          "seed": 1,
+          "region": "West",
+          "conference": "Big 12",
+          "metrics": {
+            "net": 38.9,
+            "kenpom": 37.1
+          }
+        },
+        {
+          "id": "wisconsin",
+          "name": "Wisconsin",
+          "shortName": "WIS",
+          "seed": 2,
+          "region": "West",
+          "conference": "Big Ten",
+          "metrics": {
+            "net": 37.2,
+            "kenpom": 35.4
+          }
+        },
+        {
+          "id": "illinois",
+          "name": "Illinois",
+          "shortName": "ILL",
+          "seed": 3,
+          "region": "West",
+          "conference": "Big Ten",
+          "metrics": {
+            "net": 35.5,
+            "kenpom": 33.7
+          }
+        },
+        {
+          "id": "saint-mary-s",
+          "name": "Saint Mary's",
+          "shortName": "SMC",
+          "seed": 4,
+          "region": "West",
+          "conference": "WCC",
+          "metrics": {
+            "net": 33.8,
+            "kenpom": 32
+          }
+        },
+        {
+          "id": "san-diego-state",
+          "name": "San Diego State",
+          "shortName": "SDSU",
+          "seed": 5,
+          "region": "West",
+          "conference": "MWC",
+          "metrics": {
+            "net": 32.1,
+            "kenpom": 30.3
+          }
+        },
+        {
+          "id": "texas-tech",
+          "name": "Texas Tech",
+          "shortName": "TTU",
+          "seed": 6,
+          "region": "West",
+          "conference": "Big 12",
+          "metrics": {
+            "net": 30.4,
+            "kenpom": 28.6
+          }
+        },
+        {
+          "id": "dayton",
+          "name": "Dayton",
+          "shortName": "DAY",
+          "seed": 7,
+          "region": "West",
+          "conference": "A10",
+          "metrics": {
+            "net": 28.7,
+            "kenpom": 26.9
+          }
+        },
+        {
+          "id": "nebraska",
+          "name": "Nebraska",
+          "shortName": "NEB",
+          "seed": 8,
+          "region": "West",
+          "conference": "Big Ten",
+          "metrics": {
+            "net": 27,
+            "kenpom": 25.2
+          }
+        },
+        {
+          "id": "northwestern",
+          "name": "Northwestern",
+          "shortName": "NU",
+          "seed": 9,
+          "region": "West",
+          "conference": "Big Ten",
+          "metrics": {
+            "net": 25.3,
+            "kenpom": 23.5
+          }
+        },
+        {
+          "id": "utah-state",
+          "name": "Utah State",
+          "shortName": "USU",
+          "seed": 10,
+          "region": "West",
+          "conference": "MWC",
+          "metrics": {
+            "net": 23.6,
+            "kenpom": 21.8
+          }
+        },
+        {
+          "id": "drake",
+          "name": "Drake",
+          "shortName": "DRA",
+          "seed": 11,
+          "region": "West",
+          "conference": "MVC",
+          "metrics": {
+            "net": 21.9,
+            "kenpom": 20.1
+          }
+        },
+        {
+          "id": "grand-canyon",
+          "name": "Grand Canyon",
+          "shortName": "GCU",
+          "seed": 12,
+          "region": "West",
+          "conference": "WAC",
+          "metrics": {
+            "net": 20.2,
+            "kenpom": 18.4
+          }
+        },
+        {
+          "id": "samford",
+          "name": "Samford",
+          "shortName": "SAM",
+          "seed": 13,
+          "region": "West",
+          "conference": "SoCon",
+          "metrics": {
+            "net": 18.5,
+            "kenpom": 16.7
+          }
+        },
+        {
+          "id": "colgate",
+          "name": "Colgate",
+          "shortName": "COL",
+          "seed": 14,
+          "region": "West",
+          "conference": "Patriot",
+          "metrics": {
+            "net": 16.8,
+            "kenpom": 15
+          }
+        },
+        {
+          "id": "eastern-washington",
+          "name": "Eastern Washington",
+          "shortName": "EWU",
+          "seed": 15,
+          "region": "West",
+          "conference": "Big Sky",
+          "metrics": {
+            "net": 15.1,
+            "kenpom": 13.3
+          }
+        },
+        {
+          "id": "howard",
+          "name": "Howard",
+          "shortName": "HOW",
+          "seed": 16,
+          "region": "West",
+          "conference": "MEAC",
+          "metrics": {
+            "net": 13.4,
+            "kenpom": 11.6
+          }
+        },
+        {
+          "id": "north-carolina",
+          "name": "North Carolina",
+          "shortName": "UNC",
+          "seed": 1,
+          "region": "South",
+          "conference": "ACC",
+          "metrics": {
+            "net": 39.5,
+            "kenpom": 37.7
+          }
+        },
+        {
+          "id": "texas",
+          "name": "Texas",
+          "shortName": "TEX",
+          "seed": 2,
+          "region": "South",
+          "conference": "SEC",
+          "metrics": {
+            "net": 37.8,
+            "kenpom": 36
+          }
+        },
+        {
+          "id": "baylor",
+          "name": "Baylor",
+          "shortName": "BAY",
+          "seed": 3,
+          "region": "South",
+          "conference": "Big 12",
+          "metrics": {
+            "net": 36.1,
+            "kenpom": 34.3
+          }
+        },
+        {
+          "id": "auburn",
+          "name": "Auburn",
+          "shortName": "AUB",
+          "seed": 4,
+          "region": "South",
+          "conference": "SEC",
+          "metrics": {
+            "net": 34.4,
+            "kenpom": 32.6
+          }
+        },
+        {
+          "id": "gonzaga",
+          "name": "Gonzaga",
+          "shortName": "ZAGS",
+          "seed": 5,
+          "region": "South",
+          "conference": "WCC",
+          "metrics": {
+            "net": 32.7,
+            "kenpom": 30.9
+          }
+        },
+        {
+          "id": "florida",
+          "name": "Florida",
+          "shortName": "UF",
+          "seed": 6,
+          "region": "South",
+          "conference": "SEC",
+          "metrics": {
+            "net": 31,
+            "kenpom": 29.2
+          }
+        },
+        {
+          "id": "washington-state",
+          "name": "Washington State",
+          "shortName": "WSU",
+          "seed": 7,
+          "region": "South",
+          "conference": "WCC",
+          "metrics": {
+            "net": 29.3,
+            "kenpom": 27.5
+          }
+        },
+        {
+          "id": "tcu",
+          "name": "TCU",
+          "shortName": "TCU",
+          "seed": 8,
+          "region": "South",
+          "conference": "Big 12",
+          "metrics": {
+            "net": 27.6,
+            "kenpom": 25.8
+          }
+        },
+        {
+          "id": "boise-state",
+          "name": "Boise State",
+          "shortName": "BSU",
+          "seed": 9,
+          "region": "South",
+          "conference": "MWC",
+          "metrics": {
+            "net": 25.9,
+            "kenpom": 24.1
+          }
+        },
+        {
+          "id": "virginia",
+          "name": "Virginia",
+          "shortName": "UVA",
+          "seed": 10,
+          "region": "South",
+          "conference": "ACC",
+          "metrics": {
+            "net": 24.2,
+            "kenpom": 22.4
+          }
+        },
+        {
+          "id": "indiana-state",
+          "name": "Indiana State",
+          "shortName": "INST",
+          "seed": 11,
+          "region": "South",
+          "conference": "MVC",
+          "metrics": {
+            "net": 22.5,
+            "kenpom": 20.7
+          }
+        },
+        {
+          "id": "mcneese",
+          "name": "McNeese",
+          "shortName": "MCN",
+          "seed": 12,
+          "region": "South",
+          "conference": "Southland",
+          "metrics": {
+            "net": 20.8,
+            "kenpom": 19
+          }
+        },
+        {
+          "id": "charleston",
+          "name": "Charleston",
+          "shortName": "COC",
+          "seed": 13,
+          "region": "South",
+          "conference": "CAA",
+          "metrics": {
+            "net": 19.1,
+            "kenpom": 17.3
+          }
+        },
+        {
+          "id": "south-dakota-state",
+          "name": "South Dakota State",
+          "shortName": "SDSU2",
+          "seed": 14,
+          "region": "South",
+          "conference": "Summit",
+          "metrics": {
+            "net": 17.4,
+            "kenpom": 15.6
+          }
+        },
+        {
+          "id": "uc-irvine",
+          "name": "UC Irvine",
+          "shortName": "UCI",
+          "seed": 15,
+          "region": "South",
+          "conference": "Big West",
+          "metrics": {
+            "net": 15.7,
+            "kenpom": 13.9
+          }
+        },
+        {
+          "id": "wagner",
+          "name": "Wagner",
+          "shortName": "WAG",
+          "seed": 16,
+          "region": "South",
+          "conference": "NEC",
+          "metrics": {
+            "net": 14,
+            "kenpom": 12.2
+          }
+        },
+        {
+          "id": "purdue",
+          "name": "Purdue",
+          "shortName": "PUR",
+          "seed": 1,
+          "region": "Midwest",
+          "conference": "Big Ten",
+          "metrics": {
+            "net": 40.1,
+            "kenpom": 38.3
+          }
+        },
+        {
+          "id": "michigan-state",
+          "name": "Michigan State",
+          "shortName": "MSU",
+          "seed": 2,
+          "region": "Midwest",
+          "conference": "Big Ten",
+          "metrics": {
+            "net": 38.4,
+            "kenpom": 36.6
+          }
+        },
+        {
+          "id": "creighton",
+          "name": "Creighton",
+          "shortName": "CREI",
+          "seed": 3,
+          "region": "Midwest",
+          "conference": "Big East",
+          "metrics": {
+            "net": 36.7,
+            "kenpom": 34.9
+          }
+        },
+        {
+          "id": "alabama",
+          "name": "Alabama",
+          "shortName": "BAMA",
+          "seed": 4,
+          "region": "Midwest",
+          "conference": "SEC",
+          "metrics": {
+            "net": 35,
+            "kenpom": 33.2
+          }
+        },
+        {
+          "id": "marquette",
+          "name": "Marquette",
+          "shortName": "MARQ",
+          "seed": 5,
+          "region": "Midwest",
+          "conference": "Big East",
+          "metrics": {
+            "net": 33.3,
+            "kenpom": 31.5
+          }
+        },
+        {
+          "id": "iowa-state",
+          "name": "Iowa State",
+          "shortName": "ISU",
+          "seed": 6,
+          "region": "Midwest",
+          "conference": "Big 12",
+          "metrics": {
+            "net": 31.6,
+            "kenpom": 29.8
+          }
+        },
+        {
+          "id": "texas-a-m",
+          "name": "Texas A&M",
+          "shortName": "TAMU",
+          "seed": 7,
+          "region": "Midwest",
+          "conference": "SEC",
+          "metrics": {
+            "net": 29.9,
+            "kenpom": 28.1
+          }
+        },
+        {
+          "id": "florida-state",
+          "name": "Florida State",
+          "shortName": "FSU",
+          "seed": 8,
+          "region": "Midwest",
+          "conference": "ACC",
+          "metrics": {
+            "net": 28.2,
+            "kenpom": 26.4
+          }
+        },
+        {
+          "id": "kansas-state",
+          "name": "Kansas State",
+          "shortName": "KSU",
+          "seed": 9,
+          "region": "Midwest",
+          "conference": "Big 12",
+          "metrics": {
+            "net": 26.5,
+            "kenpom": 24.7
+          }
+        },
+        {
+          "id": "michigan",
+          "name": "Michigan",
+          "shortName": "MICH",
+          "seed": 10,
+          "region": "Midwest",
+          "conference": "Big Ten",
+          "metrics": {
+            "net": 24.8,
+            "kenpom": 23
+          }
+        },
+        {
+          "id": "princeton",
+          "name": "Princeton",
+          "shortName": "PRIN",
+          "seed": 11,
+          "region": "Midwest",
+          "conference": "Ivy",
+          "metrics": {
+            "net": 23.1,
+            "kenpom": 21.3
+          }
+        },
+        {
+          "id": "james-madison",
+          "name": "James Madison",
+          "shortName": "JMU",
+          "seed": 12,
+          "region": "Midwest",
+          "conference": "Sun Belt",
+          "metrics": {
+            "net": 21.4,
+            "kenpom": 19.6
+          }
+        },
+        {
+          "id": "college-of-charleston",
+          "name": "College of Charleston",
+          "shortName": "COFC",
+          "seed": 13,
+          "region": "Midwest",
+          "conference": "CAA",
+          "metrics": {
+            "net": 19.7,
+            "kenpom": 17.9
+          }
+        },
+        {
+          "id": "oakland",
+          "name": "Oakland",
+          "shortName": "OAK",
+          "seed": 14,
+          "region": "Midwest",
+          "conference": "Horizon",
+          "metrics": {
+            "net": 18,
+            "kenpom": 16.2
+          }
+        },
+        {
+          "id": "morehead-state",
+          "name": "Morehead State",
+          "shortName": "MORE",
+          "seed": 15,
+          "region": "Midwest",
+          "conference": "OVC",
+          "metrics": {
+            "net": 16.3,
+            "kenpom": 14.5
+          }
+        },
+        {
+          "id": "stetson",
+          "name": "Stetson",
+          "shortName": "STET",
+          "seed": 16,
+          "region": "Midwest",
+          "conference": "ASUN",
+          "metrics": {
+            "net": 14.6,
+            "kenpom": 12.8
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-2hxspgo5",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke vs Purdue basketball championship matchup analysis 2024 2025",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-16T21:35:59.703Z",
+      "completedAt": "2026-03-16T21:36:00.575Z",
+      "summary": "Returned 5 search results for \"Duke vs Purdue basketball championship matchup analysis 2024 2025\".",
+      "result": [
+        {
+          "title": "Dick Vitale&#x27;s complete 2025 men&#x27;s NCAA tournament bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F44291868%2Fdick%2Dvitale%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dbracket%2Dpicks%2Dduke%2D2025&rut=396dd2ea1c86e9a716f899126e2d45dc21a4cd80c6169140c868a1f3a95e086d",
+          "snippet": "The legendary broadcaster fills out his complete bracket ahead of the men&#x27;s NCAA tournament."
+        },
+        {
+          "title": "2024-25 Purdue Boilermakers Men&#x27;s Schedule and Results | College ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fpurdue%2Fmen%2F2025%2Dschedule.html&rut=45be30b04c0819e437b1bb6f3d155daefa99b9842561e68bff1cb4fcc5963bb0",
+          "snippet": "Check out the detailed 2024 -25 Purdue Boilermakers Schedule and Results for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "March Madness Bracket: Expert NCAA Tournament 68-Team Guide - Pickswise",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.pickswise.com%2Fnews%2Fmarch%2Dmadness%2Dbracket%2Dguide%2Dfull%2D68%2Dteam%2Dguide%2Dexpert%2Dinsight%2Dto%2Dthe%2Dmens%2D2025%2Dncaa%2Dtournament%2F&rut=a4346ba6333f266c26b7685dce6412aba5c4392aae5e320b28bbd83f93d7f185",
+          "snippet": "7. #5 seeds were on a 9-3 run over #12 seeds entering the 2024 NCAA Tournament, but 2 of them lost their first-round matchups ( Duke , Saint Mary&#x27;s). When targeting an upset in this matchup , make sure the #12 seed is in the top 50 in scoring margin."
+        },
+        {
+          "title": "March Madness AI Bracket Predictions: ChatGPT Picks for Every NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Dai%2Dbracket%2Dpredictions%2F&rut=8be853cecfe4ab64c154ba490f2676a156e203424727f5c8ec6e2d0050bf6779",
+          "snippet": "We asked ChatGPT to fill out a March Madness bracket and offer its AI bracket predictions and exact score projection for every game in the 2025 NCAA Tournament."
+        },
+        {
+          "title": "NCAA Tournament Bracket Watch 2025: Duke warned, Purdue humbled, SNL ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F6142150%2F2025%2F02%2F18%2Fncaa%2Dtournament%2Dbracket%2Dprojections%2Dduke%2Dpurdue%2F&rut=51b322e71a9830cb4d7b99f519b5937b8dbc6c52a52e37b7635f7f4fd196405f",
+          "snippet": "NCAA Tournament Bracket Watch 2025 : Duke warned, Purdue humbled, SNL eras ranked By Joe Rexrode Feb. 18, 2025Updated Feb. 21, 2025 Share full article"
+        }
+      ]
+    },
+    {
+      "id": "tool-hugqd8xu",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Duke Purdue basketball 2024 2025 season analysis",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-16T21:36:03.655Z",
+      "completedAt": "2026-03-16T21:36:04.383Z",
+      "summary": "Returned 5 search results for \"Duke Purdue basketball 2024 2025 season analysis\".",
+      "result": [
+        {
+          "title": "Duke Blue Devils Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=ab512dd169cecc568f3e68bdfd34eb7854f83358f4d205b03c61830b2266eb15",
+          "snippet": "Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news. Find standings and the full 2025 -26 season schedule."
+        },
+        {
+          "title": "Duke Blue Devils 2024-25 Postseason NCAAM Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F150%2Fseason%2F2025&rut=abb498d8c28e42e98478e5bdec8a2ba732802f7175f50275f801d6b634496c4d",
+          "snippet": "ESPN has the full 2024 -25 Duke Blue Devils Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Blue Devils games."
+        },
+        {
+          "title": "Purdue Boilermakers Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2509%2Fpurdue%2Dboilermakers&rut=d3f2a29517253450becd7969553ff73e7e9efdda660d5946c14c98fc6001155a",
+          "snippet": "Visit ESPN for Purdue Boilermakers live scores, video highlights, and latest news. Find standings and the full 2025 -26 season schedule."
+        },
+        {
+          "title": "NCAA men&#x27;s basketball Power Rankings: Duke tops final 2024-25 ... - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F44130212%2Fmens%2Dcollege%2Dbasketball%2Dpower%2Drankings%2Dduke%2Dnew%2Dno%2D1%2Dregular%2Dseason%2Dfinales%2D2025&rut=5537bd562d5346f7a47aaebbe01a09d682b5c2108cdd104023d15f3353fd0ed4",
+          "snippet": "Our final Power Rankings of the season feature a new No. 1. Auburn&#x27;s loss to Texas A&M on Tuesday opened the door for Duke to take over the top spot. The Blue Devils have looked incredibly dominant over several weeks, winning their past seven games by nearly 32 points per game."
+        },
+        {
+          "title": "Duke Blue Devils 2025-26 Men&#x27;s College Basketball Stats - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fstats%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=93ba140573181c6caa5bdb75c293110dc543ad177d47e69b49ca9bead805083e",
+          "snippet": "Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news. Find standings and the full 2025 -26 season schedule."
+        }
+      ]
+    },
+    {
+      "id": "tool-btljegow",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Purdue basketball 2025 Zach Edey replacement offense defense analysis",
+        "maxResults": 3
+      },
+      "startedAt": "2026-03-16T21:36:08.772Z",
+      "completedAt": "2026-03-16T21:36:09.696Z",
+      "summary": "Returned 3 search results for \"Purdue basketball 2025 Zach Edey replacement offense defense analysis\".",
+      "result": [
+        {
+          "title": "Meet The Opponent: Zach Edey-Less Purdue Has Changed, But Not Radically",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Findiana%2Fbasketball%2Fmeet%2Dthe%2Dopponent%2Dzach%2Dedey%2Dless%2Dpurdue%2Dhas%2Dchanged%2Dbut%2Dnot%2Dradically%2D01jjt4t6z2ms&rut=6324e0cbaa8efadbfd1a1a7322f5e6846831a47fbc3407e29dc71e02a9663c2e",
+          "snippet": "Purdue hasn&#x27;t sacrificed its 2-point distribution - it&#x27;s actually higher at 49.6% from 49.3% in 2024 - but where the Edey effect is felt is in free throws."
+        },
+        {
+          "title": "Purdue is desperately missing Zach Edey, but the biggest impact of his ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbustingbrackets.com%2Fpurdue%2Dis%2Ddesperately%2Dmissing%2Dzach%2Dedey%2Dbut%2Dthe%2Dbiggest%2Dimpact%2Dof%2Dhis%2Dabsence%2Dwas%2Dunexpected&rut=f9a68369d6c8158dbfd9d0e1b8678854d37184659d5290126fd0de9d908aa91f",
+          "snippet": "Braden Smith and Trey Kaufman-Renn have replicated the back-to-back Wooden Award winner&#x27;s offensive production, but Edey&#x27;s defensive impact is proving to be irreplaceable for Matt Painter."
+        },
+        {
+          "title": "Purdue Continues Thriving Even With Zach Edey In The NBA",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.forbes.com%2Fsites%2Ftimcasey%2F2025%2F02%2F11%2Fpurdue%2Dcontinues%2Dthriving%2Deven%2Dwith%2Dzach%2Dedey%2Din%2Dthe%2Dnba%2F&rut=3e0753c93d6fc79beaac0019a257e71bb1f1ef5790a399f9d41ef5be2957612d",
+          "snippet": "Purdue (19-5) is No. 7 in the AP poll and first in the Big Ten Conference with an 11-2 league record. The Boilermakers have won 11 of their past 12 games."
+        }
+      ]
+    },
+    {
+      "id": "tool-hwznp5v8",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke basketball 2025 Cooper Flagg freshman analysis offense defense",
+        "maxResults": 3
+      },
+      "startedAt": "2026-03-16T21:36:12.514Z",
+      "completedAt": "2026-03-16T21:36:13.491Z",
+      "summary": "Returned 3 search results for \"Duke basketball 2025 Cooper Flagg freshman analysis offense defense\".",
+      "result": [
+        {
+          "title": "NBA 2025 Draft Prospects | Cooper Flagg | NBA.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nba.com%2Fdraft%2F2025%2Fprospects%2Fcooper%2Dflagg&rut=39008fc91dbaf61490b64be7b122a1b1e317a8b184bb7548cfef2246d3681402",
+          "snippet": "Cooper Flagg sits down with Andy Katz to discuss this year&#x27;s NBA Draft and what he brings to the table. Overview Cooper Flagg was the first freshman named Maine Gatorade Player of the Year after ..."
+        },
+        {
+          "title": "Cooper Flagg | Swish Theory",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ftheswishtheory.com%2Fscouting%2Dreports%2Fcooper%2Dflagg%2F&rut=d7a75ae891e47689dd8565c7c14e842d52865df65dc55ce36f2b016191404463",
+          "snippet": "The Offense Cooper Flagg&#x27;s biggest strengths as an offensive player are rarely on display at Duke , for schematic purposes. Duke has thrown Flagg into the fire as a pick-and-roll operator, which has been a developmental positive in some ways while drastically reducing his offensive efficiency. Flagg , at his best, is attacking the rim."
+        },
+        {
+          "title": "Cooper Flagg: NBA Draft Prospect Analysis - sensepark.media",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsensepark.media%2F2025%2Dnba%2Ddraft%2Dcooper%2Dflagg%2Dprospect%2Dbreakdown%2F&rut=5f83b571d8844259e5e19aeedb232d4ac74c91a3f242dfe83a60e84903a49136",
+          "snippet": "Explore the analysis of Cooper Flagg , Duke&#x27;s standout freshman and projected top pick for the 2025 NBA draft. NBA executives discuss his strengths, weaknesses, and NBA potential."
+        }
+      ]
+    },
+    {
+      "id": "tool-rbut15e9",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "\"March Madness 2025\" Duke Purdue tournament performance analysis predictions",
+        "maxResults": 3
+      },
+      "startedAt": "2026-03-16T21:36:18.092Z",
+      "completedAt": "2026-03-16T21:36:18.809Z",
+      "summary": "Returned 3 search results for \"\"March Madness 2025\" Duke Purdue tournament performance analysis predictions\".",
+      "result": [
+        {
+          "title": "March Madness 2025: Analysis, Predictions, and Key Storylines",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbirminghamjournal.co.uk%2Fmarch%2Dmadness%2D2025%2F&rut=f243a4cec01b2eec1172a89891ddb6c810404280cc8703c2bcdbdc0a2dc941e7",
+          "snippet": "March Madness 2025 is shaping as one of the most aggressive tournaments in recent history. With powerhouse groups like Kansas, Duke , and Purdue in contention, rising Cinderella stories, and elite NBA potentialities showcasing their skills, this year&#x27;s event may be a must-watch event."
+        },
+        {
+          "title": "March Madness Projections 2025: Predicting the Field of 68 ahead of ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportskeeda.com%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dprojections%2D2025%2Dpredicting%2Dfield%2D68%2Dahead%2Dmajor%2Dshowdown%2Dft%2Dduke%2Dauburn%2Dand%2Dmore&rut=f981d1a8a2416f4d050189b0445badf50bfd7bd23a1c0e7668bdb332ee67b41e",
+          "snippet": "March Madness 2025 bracket projections (Images via Instagram) With March Madness just around the corner, men&#x27;s college basketball teams are gearing up for the highs and lows that come with ..."
+        },
+        {
+          "title": "March Madness Predictions 2025 - 2025 Aksi",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2F2025.aksi.co%2Fmarch%2Dmadness%2Dpredictions%2D2025%2F&rut=517bbc0eeceabbcda614c756cb1cea8b48e24cae344cdca659d40d9287c4338d",
+          "snippet": "March Madness 2025 Predicting the outcome of March Madness is always a challenging endeavor, as unforeseen injuries, unexpected upsets, and the inherent volatility of college basketball can dramatically alter the tournament&#x27;s trajectory. However, by analyzing current roster projections, coaching expertise, and recent historical performance , we can formulate educated guesses regarding the top ..."
+        }
+      ]
+    }
+  ],
+  "error": "Model request failed: 400 {\"error\":{\"code\":\"invalid_request_error\",\"message\":\"response_format.type: Input should be 'json_schema'\",\"type\":\"invalid_request_error\",\"param\":null}}"
+}

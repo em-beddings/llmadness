@@ -7,7 +7,6 @@ export type ProviderBrand =
   | "xai"
   | "moonshot"
   | "qwen"
-  | "minimax"
   | "deepseek"
   | "mimo"
   | "unknown";
@@ -19,7 +18,6 @@ const PROVIDER_LABELS: Record<ProviderBrand, string> = {
   xai: "xAI",
   moonshot: "Moonshot",
   qwen: "Qwen",
-  minimax: "MiniMax",
   deepseek: "DeepSeek",
   mimo: "MiMo",
   unknown: "Unknown"
@@ -34,7 +32,6 @@ function inferFromText(value: string): ProviderBrand {
   if (normalized.includes("grok")) return "xai";
   if (normalized.includes("kimi")) return "moonshot";
   if (normalized.includes("qwen")) return "qwen";
-  if (normalized.includes("minimax")) return "minimax";
   if (normalized.includes("deepseek")) return "deepseek";
   if (normalized.includes("mimo")) return "mimo";
 

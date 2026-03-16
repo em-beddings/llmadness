@@ -41,3 +41,7 @@ export interface ToolRuntime {
   transcript(): AgentToolCall[];
   updateContext(context: Pick<PredictionInput, "priorPicks" | "currentGame">): void;
 }
+
+export interface ToolRuntimeOptions {
+  onToolCall?: (call: AgentToolCall) => void | Promise<void>;
+}

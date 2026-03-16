@@ -58,7 +58,6 @@ export const modelDefinitionSchema = z.object({
     "xai",
     "moonshot",
     "qwen",
-    "minimax",
     "deepseek",
     "mimo"
   ]),

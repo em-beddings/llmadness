@@ -1,0 +1,301 @@
+{
+  "id": "admin-1773697771955-swxl8y",
+  "status": "error",
+  "createdAt": "2026-03-16T21:49:31.955Z",
+  "updatedAt": "2026-03-16T21:50:12.166Z",
+  "input": {
+    "configFile": "demo-bracket.json",
+    "modelKey": "live-models.json::claude-opus-4-6",
+    "round": "Championship",
+    "slotATeamId": "kentucky",
+    "slotBTeamId": "purdue",
+    "label": ""
+  },
+  "events": [
+    {
+      "id": "event-yj01cp0z",
+      "timestamp": "2026-03-16T21:49:31.955Z",
+      "message": "Job created."
+    },
+    {
+      "id": "event-8kqkp0zl",
+      "timestamp": "2026-03-16T21:49:31.956Z",
+      "message": "Job started."
+    },
+    {
+      "id": "event-82vnz2zn",
+      "timestamp": "2026-03-16T21:49:31.964Z",
+      "message": "Loaded LLMadness."
+    },
+    {
+      "id": "event-ktl7eqie",
+      "timestamp": "2026-03-16T21:49:31.964Z",
+      "message": "Running Claude Opus 4.6 on Kentucky vs Purdue."
+    },
+    {
+      "id": "event-fmkf56zd",
+      "timestamp": "2026-03-16T21:49:35.741Z",
+      "message": "Tool: lookup_cbb_ratings - Ratings payload must be an array or an object with a teams array."
+    },
+    {
+      "id": "event-6kz20omc",
+      "timestamp": "2026-03-16T21:49:38.989Z",
+      "message": "Tool: lookup_cbb_ratings - Ratings payload must be an array or an object with a teams array."
+    },
+    {
+      "id": "event-kf9ew93i",
+      "timestamp": "2026-03-16T21:49:43.771Z",
+      "message": "Tool: search_web - Returned 5 search results for \"Kentucky Purdue basketball 2026 championship matchup analysis\"."
+    },
+    {
+      "id": "event-sspns7pj",
+      "timestamp": "2026-03-16T21:49:47.409Z",
+      "message": "Tool: search_espn_news - Returned 3 search results for \"Kentucky basketball 2026 tournament\"."
+    },
+    {
+      "id": "event-n0bgzr2f",
+      "timestamp": "2026-03-16T21:49:53.644Z",
+      "message": "Tool: search_espn_news - Returned 3 search results for \"Purdue basketball 2026 tournament\"."
+    },
+    {
+      "id": "event-hpanrbq4",
+      "timestamp": "2026-03-16T21:49:58.082Z",
+      "message": "Tool: fetch_webpage - Fetched https://www.espn.com/mens-college-basketball/story/_/id/48156563/march-madness-2026-every-team-mens-ncaa-tournament-bracket-explained and extracted 3000 characters of text."
+    },
+    {
+      "id": "event-ndykqz5j",
+      "timestamp": "2026-03-16T21:50:01.827Z",
+      "message": "Tool: search_web - Returned 3 search results for \"Kentucky Wildcats 2026 NCAA tournament seed ranking\"."
+    },
+    {
+      "id": "event-lvco356z",
+      "timestamp": "2026-03-16T21:50:06.058Z",
+      "message": "Tool: search_web - Returned 3 search results for \"Purdue Boilermakers 2026 NCAA tournament seed Big Ten champion\"."
+    },
+    {
+      "id": "event-61e0v2p9",
+      "timestamp": "2026-03-16T21:50:11.969Z",
+      "message": "Tool: fetch_webpage - Fetched https://getindiana.com/news/purdue-big-ten-tournament-championship-2026 and extracted 3000 characters of text."
+    },
+    {
+      "id": "event-nyicf08w",
+      "timestamp": "2026-03-16T21:50:12.166Z",
+      "message": "Model request failed: 429 {\"error\":{\"code\":\"rate_limit_error\",\"message\":\"This request would exceed your organization's rate limit of 30,000 input tokens per minute (org: c70e2154-9f62-421b-8bec-12f89cb2b33e, model: claude-opus-4-1-20250805). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://claude.com/contact-sales to discuss your options for a rate limit increase.\",\"type\":\"invalid_request_error\",\"param\":null}}"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "tool-w9b8kuou",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "kentucky",
+          "purdue"
+        ]
+      },
+      "startedAt": "2026-03-16T21:49:35.729Z",
+      "completedAt": "2026-03-16T21:49:35.740Z",
+      "summary": "Ratings payload must be an array or an object with a teams array.",
+      "result": {
+        "error": "Ratings payload must be an array or an object with a teams array."
+      }
+    },
+    {
+      "id": "tool-dvc12me4",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamNames": [
+          "Kentucky",
+          "Purdue"
+        ]
+      },
+      "startedAt": "2026-03-16T21:49:38.986Z",
+      "completedAt": "2026-03-16T21:49:38.989Z",
+      "summary": "Ratings payload must be an array or an object with a teams array.",
+      "result": {
+        "error": "Ratings payload must be an array or an object with a teams array."
+      }
+    },
+    {
+      "id": "tool-17matahw",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Kentucky Purdue basketball 2026 championship matchup analysis",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-16T21:49:42.966Z",
+      "completedAt": "2026-03-16T21:49:43.771Z",
+      "summary": "Returned 5 search results for \"Kentucky Purdue basketball 2026 championship matchup analysis\".",
+      "result": [
+        {
+          "title": "2026 NCAA Men&#x27;s Basketball Tournament Breakdown | FOX Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fstories%2Fcollege%2Dbasketball%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dbreakdown%2Dtop%2Dmatchups%2Dupsets%2Dpredictions&rut=ea3ca0bad459cd3de8c46c3293b016ea8fc626943122b4e2f7fccd8d6df6a995",
+          "snippet": "From upset picks to Final Four predictions, FOX Sports&#x27; Michael Cohen breaks down the complete NCAA Men&#x27;s Basketball Tournament bracket."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=00bb961e03ffb0e1cf54c8a42f614137c560df42d3ecc2accdefd2ed100a7c67",
+          "snippet": "From Selection Sunday to the Championship , track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "2026 NCAA Tournament bracket: March Madness schedule and scores by ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fncaa%2Dtournament%2Dbracket%2D2026%2Dmarch%2Dmadness%2Dschedule%2Dscores%2Dregion%2Dchannels%2Dtimes%2F&rut=e44a7198427c8babc411f01ac4dc8b81147c12a11d04a4246051b2f74719c662",
+          "snippet": "2026 NCAA Tournament bracket: March Madness schedule and scores by region, TV channels and tip times Follow the Road to the Final Four all month long with an updating bracket and TV schedule"
+        },
+        {
+          "title": "March Madness predictions 2026: Using AI to pick NCAA Tournament ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dpredictions%2D2026%2Dai%2Dncaa%2Dbracket%2Dupsets%2Dfinal%2Dfour%2F3d157a657476c406adeae878&rut=f1042613b204e5074b928cfc72471e8401e9aecba2b0f90c67187fc4b76473b6",
+          "snippet": "Here&#x27;s how Gemini responded when asked who would win every matchup in the tournament (upsets in bold). MARCH MADNESS HQ: Live NCAA bracket | Full TV schedule | Printable bracket March Madness ..."
+        },
+        {
+          "title": "March Madness bracket, seeding, predictions, snubs for 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmarch%2Dmadness%2Dbracket%2Dseeding%2Dpredictions%2Dsnubs%2Dfor%2D2026%2Dncaa%2Dtournament%2Far%2DAA1YG8vb&rut=9a8bafd6a6d442e7a66330b9c3226679a02d0222099ac085f8b205ac1fdabd36",
+          "snippet": "The 68-team bracket for the 2026 NCAA men&#x27;s basketball tournament will be unveiled on 6 p.m. ET, Sunday, March 15. Watch bracket reveal live with Fubo (free trial)"
+        }
+      ]
+    },
+    {
+      "id": "tool-nt3tp0f2",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Kentucky basketball 2026 tournament",
+        "maxResults": 3
+      },
+      "startedAt": "2026-03-16T21:49:46.741Z",
+      "completedAt": "2026-03-16T21:49:47.408Z",
+      "summary": "Returned 3 search results for \"Kentucky basketball 2026 tournament\".",
+      "result": [
+        {
+          "title": "Sports Shows Online - Sports on ITVX - Live & On-Demand on ITVX",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Ditv.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DftyzU3AXNbU3G_ulQ1X6Syk9kLdE_LAf9YOQjGVfY6kwFRJuQ7NPCTi5jhHf8XcvYgaF6Uc1PsKx2njvC5gJ%252DSGNANlN_Df_8wWarPysboqOZ0jZUCR48T3zfoYuu3O3i7hHVZZS5edSo2_xNRpSyGykqxYfk2vRWKplOb9atu8.t8Gy3VJVMB5LxIDzA8AoGQ%26rut%3D4e3aa54badb0f2cd94241e1a465c43f22a5341cf670e89236791ddd6473b35cb%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8wtacnTeQ3y1kQCGWfOo0OjVUCUzgbIe6SmmRQQ6FDalANwwNTXL1sGJ1W0QrEYaYUW9ps3qyz33HcUwvGkFuqc%252DlUYC0n3e_a%252D%252DHTNXsyqoOK2l6iMkkxbOiK_RZ%252D9_jKJVCBjqqO9IHqYsv9UugWPYf5_sFwRZhftt_Deww1Kizeil5d9x5Fv_7xf47HqMqWTj7VWFHTeIT551hOyU1m1Z1bEY%2526u%253DaHR0cHMlM2ElMmYlMmZ0cmFjay50cmFmZmljZ3VhcmQuYWklMmZpdHZ4X2NfciUyZmdvb2dsZS1hZHMlMmZ2MSUyZmNsaWNrJTJmJTNmcHJvcGVydHlfaWQlM2R0Zy0wMTgyNzctMDAxJTI2c291cmNlX2lkJTNkcyUyNmNyZWF0aXZlX2lkJTNkJTI2Y2FtcGFpZ25faWQlM2Q1MjI2MDUwNzklMjZjcmVhdGl2ZV9zZXRfaWQlM2QxMzIyNzE1MDIyMDQxMjA5JTI2cGxhY2VtZW50X2lkJTNkJTI2a2V5d29yZCUzZHdhdGNoJTI1MjBzcG9ydHMlMjZzZXNzaW9uX2lkJTNkJTI2ZmVlZGl0ZW1pZCUzZCUyNnRhcmdldGlkJTNka3dkLTgyNjcxMjMxMDQ5OTQxJTNhbG9jLTE4OCUyNmxvY19pbnRlcmVzdF9tcyUzZCUyNmxvY19waHlzaWNhbF9tcyUzZDQxNTEwJTI2bWF0Y2h0eXBlJTNkYiUyNmRldmljZSUzZGMlMjZkZXZpY2Vtb2RlbCUzZCUyNmlmbW9iaWxlJTNkJTI2aWZub3Rtb2JpbGUlM2QxJTI2aWZzZWFyY2glM2QxJTI2aWZjb250ZW50JTNkJTI2dGFyZ2V0JTNkJTI2cGFyYW0xJTNkJTI2cGFyYW0yJTNkJTI2cmFuZG9tJTNkJTI2YWRwb3NpdGlvbiUzZCUyNmdhX3NvdXJjZWlkJTNkJTdic291cmNlaWQlN2QlMjZnYV9hZHR5cGUlM2QlMjZnYV9tZXJjaGFudF9pZCUzZCUyNmdhX3Byb2R1Y3RfY2hhbm5lbCUzZCUyNmdhX3Byb2R1Y3RfaWQlM2QlMjZnYV9wcm9kdWN0X2NvdW50cnklM2QlMjZnYV9wcm9kdWN0X2xhbmd1YWdlJTNkJTI2Z2FfcHJvZHVjdF9wYXJ0aXRpb25faWQlM2QlMjZnYV9zdG9yZV9jb2RlJTNkJTI2ZGVzdGluYXRpb25fdXJsJTNkaHR0cHMlMjUzQSUyNTJGJTI1MkZ3d3cuaXR2LmNvbSUyNTJGd2F0Y2glMjUyRmNhdGVnb3JpZXMlMjUyRnNwb3J0JTI2bXNjbGtpZCUzZGVhZTZhMDhhNTg2MTE1ZTc0ZTE0YzkzMjIyOWFlNjI5JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkSVRWJTI1MjAlMjU3QyUyNTIwVUslMjUyMCUyNTdDJTI1MjBDb252ZXJzaW9uJTI1MjAlMjU3QyUyNTIwUmVhY3RpdmF0aW9uJTI1MjAlMjU3QyUyNTIwR2VuZXJpYyUyNnV0bV90ZXJtJTNkd2F0Y2glMjUyMHNwb3J0cyUyNnV0bV9jb250ZW50JTNkSVRWJTI1MjAlMjU3QyUyNTIwVUslMjUyMCUyNTdDJTI1MjBDb252ZXJzaW9uJTI1MjAlMjU3QyUyNTIwUmVhY3RpdmF0aW9uJTI1MjAlMjU3QyUyNTIwU3BvcnQ%2526rlid%253Deae6a08a586115e74e14c932229ae629%26vqd%3D4%2D318642408732641273412701934389391885677%26iurl%3D%257B1%257DIG%253D3CF7EB69A482431BBB94EC69217B26D8%2526CID%253D0EE03DBFC391666500D02AA1C29F67E9%2526ID%253DDevEx%252C5045.1&rut=74348fcb12697fc71d300b41a0e01f1a0e3192745900fa566008f2e775db4fde",
+          "snippet": "All episodes in one place on ITVX. Stream sports free on ITVX, with more shows than anywhere else"
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=817c5ef2189fc9189dfb721b6f9a9abf0f6e00d6bf5c5acd11670e48c2f57437",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        },
+        {
+          "title": "Kentucky Wildcats 2025-26 Postseason NCAAM Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F96%2Fkentucky%2Dwildcats&rut=78aa9092f38070c23021d99f348f11a0a6172ff9da691e391af3f950bc81ca3d",
+          "snippet": "ESPN has the full 2025-26 Kentucky Wildcats Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Wildcats games."
+        }
+      ]
+    },
+    {
+      "id": "tool-b5185njl",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Purdue basketball 2026 tournament",
+        "maxResults": 3
+      },
+      "startedAt": "2026-03-16T21:49:52.942Z",
+      "completedAt": "2026-03-16T21:49:53.642Z",
+      "summary": "Returned 3 search results for \"Purdue basketball 2026 tournament\".",
+      "result": [
+        {
+          "title": "Sports Shows Online - Sports on ITVX - Live & On-Demand on ITVX",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Ditv.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3Dsp9%252DzSyAg7WDTSpiPpnnDurb8FXtN3V2wQ11kjqnuSCTMHUEyKwonZxzC09gPNFSbAYXP7p5Jq6XOB9D4unbeKZ02wme6f19MZMk1Aa_b5QK91PYgfFYn7n8XnNrqoDvQAkvpiCHgMmbUtcAhCmO07TnfK6d6SJZ70%252DIoYPZHMU.PsV2_kvszkcWd%252DmZAwyteA%26rut%3D511558722e1ff3bfc7fe321bc0a7a2de41157b5daa7ca8893804148259dbdfcb%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8LdpZnqZQ2G4LaAjVZXtcIDVUCUxOlcJcndajRUBHe0KOLPJrzmyrg69L6exSjyW5Egwzy%252DV33DUlloT7kmz364nyjvPjF6ESZsji_Lq1%252Diou9HEk%252DEh_3JtNXrsIktTbWJoDtZS8V6O07ND597HF%252Dh05zbh6C00ggTu0W7a1gExWndW6LtG_smvpvLryYk5KJsjYIa7F4T4e4cKaJJSEBF_TH8w%2526u%253DaHR0cHMlM2ElMmYlMmZ0cmFjay50cmFmZmljZ3VhcmQuYWklMmZpdHZ4X2NfciUyZmdvb2dsZS1hZHMlMmZ2MSUyZmNsaWNrJTJmJTNmcHJvcGVydHlfaWQlM2R0Zy0wMTgyNzctMDAxJTI2c291cmNlX2lkJTNkcyUyNmNyZWF0aXZlX2lkJTNkJTI2Y2FtcGFpZ25faWQlM2Q1MjI2MDUwNzklMjZjcmVhdGl2ZV9zZXRfaWQlM2QxMzIyNzE1MDIyMDQxMjA5JTI2cGxhY2VtZW50X2lkJTNkJTI2a2V5d29yZCUzZHdhdGNoJTI1MjBzcG9ydHMlMjZzZXNzaW9uX2lkJTNkJTI2ZmVlZGl0ZW1pZCUzZCUyNnRhcmdldGlkJTNka3dkLTgyNjcxMjMxMDQ5OTQxJTNhbG9jLTE4OCUyNmxvY19pbnRlcmVzdF9tcyUzZCUyNmxvY19waHlzaWNhbF9tcyUzZDQxNjc1JTI2bWF0Y2h0eXBlJTNkYiUyNmRldmljZSUzZGMlMjZkZXZpY2Vtb2RlbCUzZCUyNmlmbW9iaWxlJTNkJTI2aWZub3Rtb2JpbGUlM2QxJTI2aWZzZWFyY2glM2QxJTI2aWZjb250ZW50JTNkJTI2dGFyZ2V0JTNkJTI2cGFyYW0xJTNkJTI2cGFyYW0yJTNkJTI2cmFuZG9tJTNkJTI2YWRwb3NpdGlvbiUzZCUyNmdhX3NvdXJjZWlkJTNkJTdic291cmNlaWQlN2QlMjZnYV9hZHR5cGUlM2QlMjZnYV9tZXJjaGFudF9pZCUzZCUyNmdhX3Byb2R1Y3RfY2hhbm5lbCUzZCUyNmdhX3Byb2R1Y3RfaWQlM2QlMjZnYV9wcm9kdWN0X2NvdW50cnklM2QlMjZnYV9wcm9kdWN0X2xhbmd1YWdlJTNkJTI2Z2FfcHJvZHVjdF9wYXJ0aXRpb25faWQlM2QlMjZnYV9zdG9yZV9jb2RlJTNkJTI2ZGVzdGluYXRpb25fdXJsJTNkaHR0cHMlMjUzQSUyNTJGJTI1MkZ3d3cuaXR2LmNvbSUyNTJGd2F0Y2glMjUyRmNhdGVnb3JpZXMlMjUyRnNwb3J0JTI2bXNjbGtpZCUzZDMzN2RjMGIxZDFkYzE1YWY5OWM1YTkwOWFhZGQ2ZmE0JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkSVRWJTI1MjAlMjU3QyUyNTIwVUslMjUyMCUyNTdDJTI1MjBDb252ZXJzaW9uJTI1MjAlMjU3QyUyNTIwUmVhY3RpdmF0aW9uJTI1MjAlMjU3QyUyNTIwR2VuZXJpYyUyNnV0bV90ZXJtJTNkd2F0Y2glMjUyMHNwb3J0cyUyNnV0bV9jb250ZW50JTNkSVRWJTI1MjAlMjU3QyUyNTIwVUslMjUyMCUyNTdDJTI1MjBDb252ZXJzaW9uJTI1MjAlMjU3QyUyNTIwUmVhY3RpdmF0aW9uJTI1MjAlMjU3QyUyNTIwU3BvcnQ%2526rlid%253D337dc0b1d1dc15af99c5a909aadd6fa4%26vqd%3D4%2D255213470512099716787774853997127201441%26iurl%3D%257B1%257DIG%253D98F1DE013B3E4E0EA0C1A5E9FFE42805%2526CID%253D18EACCE23D2F6C9B063CDBFC3C586D5E%2526ID%253DDevEx%252C5045.1&rut=909e29d926cc282af10559559b8518b6115e7081c263f22d8a3b007bc989febe",
+          "snippet": "All episodes in one place on ITVX. Stream sports free on ITVX, with more shows than anywhere else"
+        },
+        {
+          "title": "Purdue trips No. 3 Michigan to win Big Ten tournament title",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48217484%2Fpurdue%2Dtrips%2Dno%2D3%2Dmichigan%2Dwin%2Dbig%2Dten%2Dtournament%2Dtitle&rut=4cbb8bc570a889142a865f1e68ec4f586915b06dfb4b6245af6e22b5c41f3b14",
+          "snippet": "Oscar Cluff scored 21 points as Purdue , which lost four of its last six regular-season games, topped No. 3 Michigan to win its first Big Ten tournament since 2023."
+        },
+        {
+          "title": "Queens University vs. Purdue (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856519%2Fqueens%2Dpurdue&rut=74be2927d248ad8828aae50129715656b7776938e27312402fe808ef736bd08f",
+          "snippet": "Live coverage of the Queens University Royals vs. Purdue Boilermakers NCAAM game on ESPN, including live score, highlights and updated stats."
+        }
+      ]
+    },
+    {
+      "id": "tool-uhjjclyg",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48156563/march-madness-2026-every-team-mens-ncaa-tournament-bracket-explained",
+        "maxChars": 5000
+      },
+      "startedAt": "2026-03-16T21:49:57.742Z",
+      "completedAt": "2026-03-16T21:49:58.081Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/story/_/id/48156563/march-madness-2026-every-team-mens-ncaa-tournament-bracket-explained and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48156563/march-madness-2026-every-team-mens-ncaa-tournament-bracket-explained",
+        "text": "Men's March Madness 2026 bracket: Get to know all 68 teams - ESPN Men's March Madness 2026 bracket: Get to know all 68 teams --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 23h Myron Medcalf Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 20h Joe Lunardi March Madness 101: NCAA tournament format, history, facts UConn Huskies 9h Dana E. Lee and Alonzo Olmedo Six tips on how to bet the NCAA tournament like a veteran 1d Mark Zinno Betting buzz: NCAA tournament point spreads larger than ever 4h ESPN Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2h Jeff Borzello Men's March Madness 2026 bracket: Get to know all 68 teams play Why Duke has a 'very, very difficult' draw in the East (1:29) Jay Bilas, Jay Williams and Seth Greenberg examine potential roadblocks for Duke in the East Region. (1:29) Myron Medcalf Mar 15, 2026, 06:45 PM ET Close Covers college basketball Joined ESPN.com in 2011 Graduate of Minnesota State University, Mankato Follow on X Multiple Authors Email Print Open Extended Reactions Get your popcorn ready because this NCAA tournament could be one of the best in recent memory. The top seeds are elite programs with the potential to cut down the nets. The underdogs are dangerous, too. The field also has undeniable star power. Top transfers such as Yaxel Lendeborg at Michigan and freshman stars (see: AJ Dybantsa , a candidate for the No. 1 pick in the 2026 NBA draft) are all in the same tier of teams this year, chasing the same dreams. It's a lot to consider. But we're here to help. Our annual NCAA tournament guide gives you the information you need to know about each team, pertinent information about any current issues that could impact their postseason, key injuries to note -- and, finally, our projections on their ceiling. We're got enough to help the nerds and the newcomers to the NCAA tournament chaos make sense of everything. Here is what you need to know about all 68 teams in the NCAA tournament. All stats current through regular season unless otherwise noted. Odds by DraftKings Sports, subject to change. Jump to: 1-seeds | 2-seeds | 3-seeds | 4-seeds | 5-seeds | 6-seeds | 7-seeds | 8-seeds | 9-seeds | 10-seeds | 11-seeds | 12-seeds | 13-seeds | 14-seeds | 15-seeds | 16-seeds 1-seeds Duke Blue Devils Region: East Record: 32-2 Tournament ceiling: National championship (+300) Cameron Boozer (22.7 PPG, 10.2 RPG, 41% "
+      }
+    },
+    {
+      "id": "tool-y8f4qbp4",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Kentucky Wildcats 2026 NCAA tournament seed ranking",
+        "maxResults": 3
+      },
+      "startedAt": "2026-03-16T21:50:00.962Z",
+      "completedAt": "2026-03-16T21:50:01.825Z",
+      "summary": "Returned 3 search results for \"Kentucky Wildcats 2026 NCAA tournament seed ranking\".",
+      "result": [
+        {
+          "title": "Where Kentucky finished in NCAA Tournament seed rankings",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.aseaofblue.com%2Fkentucky%2Dwildcats%2Dnews%2F166459%2Fuk%2Dbasketball%2Dncaa%2Dtournament%2Dseed%2Drankings&rut=510801f860bec3b22e2fc8b9ed5bb1f66454d045f6438fc7dd2737dcd7d66446",
+          "snippet": "The list gives a little more context for where Kentucky Basketball landed. The Wildcats were slotted No. 25 overall, which made them the highest-ranked No. 7 seed in the tournament ."
+        },
+        {
+          "title": "Overall seed list reveals Kentucky was one spot away from a No. 6 seed ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fteams%2Fkentucky%2Dwildcats%2Fnews%2Foverall%2Dseed%2Dlist%2Dreveals%2Dkentucky%2Dwas%2Done%2Dspot%2Daway%2Dfrom%2Da%2Dno%2D6%2Dseed%2F&rut=239ab2e1dfcdee722c4c41e5fb4cf6f364d0d0fc7ed8ac923e0801f9b39afe1d",
+          "snippet": "Shortly after the NCAA Tournament bracket reveal, the committee released the seed list for the 68 participating teams. You probably already know by now that Kentucky earned the No. 7 seed in the Midwest Region and will play Santa Clara in St. Louis on Friday. But the seed list shows how close the Wildcats were to moving up a line. At No. 25 overall, Kentucky was the top No. 7 seed , just one ..."
+        },
+        {
+          "title": "Here&#x27;s Kentucky&#x27;s bracket draw for the 2026 NCAA Tournament | Lexington ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kentucky.com%2Fsports%2Fcollege%2Fkentucky%2Dsports%2Fuk%2Dbasketball%2Dmen%2Farticle315058527.html&rut=abf8f97d07af4a36ddef950fbd54ec3cb9234b1675ae1a2f9c286bf4f0fdedc0",
+          "snippet": "The Kentucky Wildcats will be a 7 seed in the 2026 NCAA Tournament , with their first game set for Friday."
+        }
+      ]
+    },
+    {
+      "id": "tool-slzghckv",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Purdue Boilermakers 2026 NCAA tournament seed Big Ten champion",
+        "maxResults": 3
+      },
+      "startedAt": "2026-03-16T21:50:04.708Z",
+      "completedAt": "2026-03-16T21:50:06.056Z",
+      "summary": "Returned 3 search results for \"Purdue Boilermakers 2026 NCAA tournament seed Big Ten champion\".",
+      "result": [
+        {
+          "title": "Purdue Wins 2026 Big Ten Tournament Championship, Earns No. 2 Seed in ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgetindiana.com%2Fnews%2Fpurdue%2Dbig%2Dten%2Dtournament%2Dchampionship%2D2026&rut=32923e86e7457052aa1e8eb239b2495cbd23572557c09b71514c4518e7f5be2c",
+          "snippet": "Purdue toppled top-seeded Michigan 80-72 to win the 2026 Big Ten Tournament title in Chicago, earning a No. 2 seed in the NCAA Tournament ."
+        },
+        {
+          "title": "2026 Big Ten basketball tournament bracket, results: Purdue knocks off ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Fmens%2Dcollege%2Dbasketball%2Farticle%2F2026%2Dbig%2Dten%2Dbasketball%2Dtournament%2Dbracket%2Dresults%2Dpurdue%2Dknocks%2Doff%2Dmichigan%2Din%2Dtitle%2Dgame%2D062156383.html&rut=baebd7255a2c461caac31086c1c4d6edca2adb9265a145e01af1eb876450704c",
+          "snippet": "CHICAGO, ILLINOIS - MARCH 15: Fletcher Loyer #2 of the Purdue Boilermakers reacts after a play during the second half of the Big Ten Men&#x27;s Basketball Tournament Championship game against the ..."
+        },
+        {
+          "title": "Purdue basketball proved its formidable challenge in loaded 2026 March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.indystar.com%2Fstory%2Fsports%2Fcollege%2Fpurdue%2F2026%2F03%2F16%2Fmarch%2Dmadness%2Dpreview%2Dpurdue%2Dbasketball%2Dwest%2Dregional%2Dchallenge%2Dwin%2Dmichigan%2Dbig%2Dten%2Dtournament%2F89167914007%2F&rut=268ee4d7950b9e1627da995a065a3ea31e160a1d5167b282fed5898a549b5ea5",
+          "snippet": "Purdue basketball won the Big Ten Tournament championship, defeating Michigan 80-72. The Boilermakers demonstrated a complete performance, overcoming previous shortcomings in rebounding and defense."
+        }
+      ]
+    },
+    {
+      "id": "tool-t4v830yx",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://getindiana.com/news/purdue-big-ten-tournament-championship-2026",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-16T21:50:11.195Z",
+      "completedAt": "2026-03-16T21:50:11.967Z",
+      "summary": "Fetched https://getindiana.com/news/purdue-big-ten-tournament-championship-2026 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://getindiana.com/news/purdue-big-ten-tournament-championship-2026",
+        "text": "Purdue Wins 2026 Big Ten Tournament Championship, Earns No. 2 Seed in NCAA Tournament - Get Indiana. Things to do Travel Guides Get In. Podcast All News Regions Contact Things to do Get In. Podcast All News Regions Contact Changelog Pricing PRODUCT Design Content Publish RESOURCES Blog Careers Docs About Join Events Experts Discover something new in Indiana every week. Join the newsletter. Discover something new in Indiana every week. Join the newsletter. Purdue Wins 2026 Big Ten Tournament Championship, Earns No. 2 Seed in NCAA Tournament Purdue toppled top-seeded Michigan 80-72 to win the 2026 Big Ten Tournament title in Chicago, earning a No. 2 seed in the NCAA Tournament. Jarred Porter Sports Get IN. Sports March 15, 2026 Share This Post Share This Post Jarred Porter Purdue Wins 2026 Big Ten Tournament Championship, Earns No. 2 Seed in NCAA Tournament Purdue toppled top-seeded Michigan 80-72 to win the 2026 Big Ten Tournament title in Chicago, earning a No. 2 seed in the NCAA Tournament. Get IN. Sports Sports Sports Mar 15, 2026 Photo by CBS Sports Share This Post Four games. Four days. One Big Ten championship. The Purdue Boilermakers defeated top-seeded Michigan 80-72 at the United Center in Chicago on Sunday to win the 2026 Big Ten Tournament championship. Purdue became the first No. 7 seed in tournament history to win the event, and it is the program's third Big Ten Tournament title. Behind dominant performances from Oscar Cluff, Trey Kaufman-Renn, and Braden Smith, Matt Painter's squad overcame foul trouble, a halftime tie, and the Big Ten's Player of the Year to cut down the nets. Hours later, the Boilermakers learned they earned a No. 2 seed in the 2026 NCAA Tournament. Purdue will face No. 15 seed Queens in the first round in the West Region, where Arizona is the No. 1 seed. It marks the 11th straight NCAA Tournament appearance for the program and the ninth consecutive year Purdue has been seeded No. 4 or better. Purdue shot nearly 53% from the field and committed just two turnovers for the entire game. Michigan turned it over seven times, and the Boilermakers converted those mistakes into 13 points. Oscar Cluff led Purdue with 21 points, 12 of which came in the second half. He played the final 5:31 with four fouls, a gutsy move by Painter that paid off. Trey Kaufman-Renn added 20 points after battling foul trouble of his own in the first half. Fletcher Loyer chipped in 14. Braden Smith filled the stat sheet with 14 points, 11 assists, and three steals, leaving him just one assist behind Bobby Hurley's all-time NCAA Division I career assists record of 1,076. He even did it in two different jerseys. Smith came out of a first-half media timeout wearing a black No. 41 jersey with no name on the back after ripping his No. 3 during play. Doesn't matter what number is on the chest, the assists still count, and they're still piling up toward history. Photo by Indystar Michigan did not go down quietly. Yaxel Lendeborg, the Big Ten Player of t"
+      }
+    }
+  ],
+  "error": "Model request failed: 429 {\"error\":{\"code\":\"rate_limit_error\",\"message\":\"This request would exceed your organization's rate limit of 30,000 input tokens per minute (org: c70e2154-9f62-421b-8bec-12f89cb2b33e, model: claude-opus-4-1-20250805). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://claude.com/contact-sales to discuss your options for a rate limit increase.\",\"type\":\"invalid_request_error\",\"param\":null}}"
+}

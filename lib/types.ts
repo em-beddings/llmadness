@@ -73,7 +73,6 @@ export type ModelProvider =
   | "xai"
   | "moonshot"
   | "qwen"
-  | "minimax"
   | "deepseek"
   | "mimo";
 

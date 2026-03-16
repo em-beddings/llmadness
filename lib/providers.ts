@@ -21,7 +21,6 @@ export const LIVE_PROVIDERS: Exclude<ModelProvider, "mock">[] = [
   "xai",
   "moonshot",
   "qwen",
-  "minimax",
   "deepseek",
   "mimo"
 ];
@@ -59,11 +58,6 @@ const PROVIDER_SPECS: Record<Exclude<ModelProvider, "mock">, ProviderSpec> = {
     envKey: "QWEN_API_KEY",
     baseUrlEnv: "QWEN_BASE_URL",
     defaultBaseUrl: "https://dashscope.aliyuncs.com/compatible-mode/v1"
-  },
-  minimax: {
-    envKey: "MINIMAX_API_KEY",
-    baseUrlEnv: "MINIMAX_BASE_URL",
-    defaultBaseUrl: "https://api.minimax.io/v1"
   },
   deepseek: {
     envKey: "DEEPSEEK_API_KEY",

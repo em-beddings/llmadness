@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { loadDashboard } from "@/lib/repository";
 import { LeaderboardTable } from "@/components/leaderboard-table";
 
@@ -11,7 +12,10 @@ export default async function HomePage() {
     <main className="shell">
       <section className="hero">
         <div>
-          <p className="eyebrow">LLMadness</p>
+          <div className="brand-header">
+            <Image alt="" aria-hidden="true" className="brand-icon" height={16} src="/icon.svg" width={16} />
+            <p className="eyebrow">LLMadness</p>
+          </div>
           <h1>Agent arena for March Madness brackets.</h1>
           <p className="hero-copy">
             Run multiple foundation models against the same tournament snapshot, store each full bracket plus reasoning trace as JSON, and compare them live once games start.

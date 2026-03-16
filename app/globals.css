@@ -101,6 +101,24 @@ h3 {
   text-transform: uppercase;
 }
 
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.brand-header .eyebrow {
+  margin-bottom: 0;
+}
+
+.brand-icon {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+  flex: 0 0 auto;
+}
+
 .hero-copy,
 .section-header p,
 .page-header p,
@@ -362,6 +380,95 @@ h3 {
   display: block;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.admin-form,
+.admin-result-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.admin-trace-list {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-trace-item {
+  display: grid;
+  gap: 4px;
+}
+
+.admin-trace-item span {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.admin-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-field {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-field span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.admin-field select,
+.admin-field input,
+.admin-submit {
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  background-color: #fff;
+  background-image:
+    var(--dash-border),
+    var(--dash-border-vertical),
+    var(--dash-border),
+    var(--dash-border-vertical);
+  background-position: top left, top right, bottom left, top left;
+  background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+  background-repeat: no-repeat;
+  color: var(--ink);
+}
+
+.admin-submit {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.admin-error {
+  color: #9a2f2f;
+}
+
+.admin-result-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-matchup {
+  max-width: 420px;
+}
+
+.admin-result-callout {
+  display: grid;
+  gap: 8px;
+  max-width: 420px;
 }
 
 .bracket-shell {
@@ -640,7 +747,8 @@ h3 {
   .page-header,
   .podium-grid,
   .regions-overview,
-  .finals-stage-grid {
+  .finals-stage-grid,
+  .admin-grid {
     grid-template-columns: 1fr;
   }
 
@@ -649,6 +757,11 @@ h3 {
   }
 
   .modal-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-field-grid,
+  .admin-result-meta {
     grid-template-columns: 1fr;
   }
 
