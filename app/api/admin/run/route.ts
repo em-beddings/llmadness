@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { createAdminRunJob } from "@/lib/admin";
 import { TournamentRound } from "@/lib/types";
 
+export const dynamic = "force-dynamic";
+
 const VALID_ROUNDS: TournamentRound[] = [
   "First Four",
   "Round of 64",

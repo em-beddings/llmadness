@@ -8,11 +8,11 @@ function getSummary(modelId: string, submissions: SubmissionSummary[]) {
 
 export function LeaderboardTable({
   leaderboard,
-  runId,
+  modelHrefBase,
   submissions,
 }: {
   leaderboard: Leaderboard | null;
-  runId: string;
+  modelHrefBase: string;
   submissions: SubmissionSummary[];
 }) {
   if (!leaderboard) {
@@ -42,7 +42,7 @@ export function LeaderboardTable({
           return (
             <Link
               className={`podium-card podium-card-${index + 1}`}
-              href={`/runs/${runId}/models/${entry.modelId}`}
+              href={`${modelHrefBase}/${entry.modelId}`}
               key={entry.modelId}
             >
               <div className="podium-rank">#{index + 1}</div>
@@ -85,20 +85,21 @@ export function LeaderboardTable({
           return (
             <Link
               className="leader-card"
-              href={`/runs/${runId}/models/${entry.modelId}`}
+              href={`${modelHrefBase}/${entry.modelId}`}
               key={entry.modelId}
             >
               <div className="leader-rank">#{index + 4}</div>
               <div className="leader-topline">
                 <strong>{entry.modelLabel}</strong>
-                <span>{Math.round(entry.accuracy * 100)}%</span>
               </div>
               <div className="leader-points">
                 <strong>{entry.totalPoints}</strong>
                 <span className="score-available">/ {entry.maxPoints}</span>
               </div>
+              <div className="leader-accuracy">
+                <span>{Math.round(entry.accuracy * 100)}%</span>
+              </div>
               <div className="leader-bottomline leader-bottomline-nowrap">
-                <span>Championship pick</span>
                 <strong>{summary?.championshipPick ?? "Unknown"}</strong>
               </div>
             </Link>

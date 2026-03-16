@@ -1,13 +1,10 @@
 import { LeaderboardTable } from "@/components/leaderboard-table";
 import { loadDashboard } from "@/lib/repository";
 
-export default async function RunPage({
-  params,
-}: {
-  params: Promise<{ runId: string }>;
-}) {
-  const { runId } = await params;
-  const dashboard = await loadDashboard(runId);
+const RUN_ID = "demo-2026";
+
+export default async function Season2026Page() {
+  const dashboard = await loadDashboard(RUN_ID);
 
   return (
     <main className="shell">
@@ -27,7 +24,7 @@ export default async function RunPage({
 
       <LeaderboardTable
         leaderboard={dashboard.leaderboard}
-        runId={runId}
+        modelHrefBase="/2026/models"
         submissions={dashboard.submissions}
       />
     </main>

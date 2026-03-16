@@ -108,7 +108,7 @@ When the real bracket is released:
 2. Create a model list in `data/models/<run-name>.json`.
 3. Run `generate:brackets`.
 4. After results come in, run `score:brackets`.
-5. Open the web app and browse `/runs/<run-id>`.
+5. Open the web app and browse the public season route, for example `/2026`.
 
 Recommended environment for live tool use:
 

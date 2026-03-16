@@ -241,6 +241,14 @@ h3 {
     margin-bottom: 12px;
 }
 
+.bracket-section-header {
+    justify-content: flex-end;
+}
+
+.bracket-section-header p {
+    text-align: right;
+}
+
 .podium-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -260,6 +268,24 @@ h3 {
     padding: 14px;
     display: grid;
     gap: 10px;
+}
+
+.podium-card {
+    background-color: var(--panel);
+    background-image:
+        var(--dash-border-strong), var(--dash-border-vertical-strong),
+        var(--dash-border-strong), var(--dash-border-vertical-strong);
+    background-position:
+        top left,
+        top right,
+        bottom left,
+        top left;
+    background-size:
+        100% 2px,
+        2px 100%,
+        100% 2px,
+        2px 100%;
+    background-repeat: no-repeat;
 }
 
 .podium-card h3 {
@@ -375,7 +401,7 @@ h3 {
 }
 
 .leader-card {
-    grid-template-columns: 48px minmax(0, 1.5fr) minmax(0, 0.8fr) minmax(0, 1fr);
+    grid-template-columns: 48px minmax(0, 1.7fr) minmax(120px, 0.7fr) minmax(72px, 0.35fr) minmax(140px, 0.95fr);
     align-items: baseline;
     gap: 12px;
     padding: 12px 0;
@@ -394,6 +420,16 @@ h3 {
     display: flex;
     align-items: baseline;
     gap: 8px;
+}
+
+.leader-accuracy {
+    color: var(--muted);
+    white-space: nowrap;
+    text-align: right;
+}
+
+.leader-card .leader-bottomline {
+    justify-content: flex-end;
 }
 
 .model-card {

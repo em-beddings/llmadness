@@ -3,13 +3,15 @@ import { BracketBoard } from "@/components/bracket-board";
 import { loadSubmissionView } from "@/lib/repository";
 import { notFound } from "next/navigation";
 
+const RUN_ID = "demo-2026";
+
 export default async function ModelPage({
   params,
 }: {
-  params: Promise<{ runId: string; modelId: string }>;
+  params: Promise<{ modelId: string }>;
 }) {
-  const { runId, modelId } = await params;
-  const view = await loadSubmissionView(runId, modelId);
+  const { modelId } = await params;
+  const view = await loadSubmissionView(RUN_ID, modelId);
 
   if (!view) {
     notFound();
@@ -24,7 +26,7 @@ export default async function ModelPage({
             {view.submission.model.description ?? view.submission.model.model}
           </p>
         </div>
-        <Link className="back-link" href={`/runs/${runId}`}>
+        <Link className="back-link" href="/2026">
           Back to leaderboard
         </Link>
       </section>

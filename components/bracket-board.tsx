@@ -257,7 +257,7 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
   return (
     <>
       <section className="panel bracket-shell">
-        <div className="section-header">
+        <div className="section-header bracket-section-header">
           <p>
             Click any game for rationale, confidence, and the run transcript.
           </p>
