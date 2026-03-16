@@ -1,10 +1,9 @@
 import path from "node:path";
-import { readdir } from "node:fs/promises";
 import { createDefaultTools } from "@/agents/tools";
 import { createModelAdapters } from "@/lib/model-adapters";
 import { resolveModelDefinition } from "@/lib/model-runtime";
 import { indexTeams } from "@/lib/bracket";
-import { readJsonFile, writeJsonFile } from "@/lib/fs";
+import { listJsonFilesRecursive, readJsonFile, writeJsonFile } from "@/lib/fs";
 import { bracketConfigSchema, modelDefinitionSchema } from "@/lib/schema";
 import { BracketConfig, ModelDefinition, TournamentRound } from "@/lib/types";
 
@@ -111,13 +110,11 @@ function jobPath(jobId: string) {
   return path.join(ADMIN_JOBS_DIR, `${jobId}.json`);
 }
 
-async function listJsonFiles(dir: string) {
-  const entries = await readdir(dir, { withFileTypes: true });
-  return entries.filter((entry) => entry.isFile() && entry.name.endsWith(".json")).map((entry) => entry.name);
-}
-
 export async function loadAdminData() {
-  const [configFiles, modelFiles] = await Promise.all([listJsonFiles(CONFIGS_DIR), listJsonFiles(MODELS_DIR)]);
+  const [configFiles, modelFiles] = await Promise.all([
+    listJsonFilesRecursive(CONFIGS_DIR),
+    listJsonFilesRecursive(MODELS_DIR)
+  ]);
 
   const configs = await Promise.all(
     configFiles.map(async (file) => {
@@ -276,6 +273,17 @@ export async function runAdminPrediction(
   const winner = teamIndex.get(result.pick.winnerId);
   await options?.onEvent?.(`Completed prediction. Winner: ${winner?.name ?? result.pick.winnerId}.`);
 
+  const reasoningStep = result.reasoningStep
+    ? {
+        ...result.reasoningStep,
+        evidence: Array.isArray(result.reasoningStep.evidence)
+          ? result.reasoningStep.evidence.map((item) => String(item))
+          : result.reasoningStep.evidence == null
+            ? []
+            : [String(result.reasoningStep.evidence)]
+      }
+    : undefined;
+
   return {
     model: {
       id: model.id,
@@ -295,7 +303,7 @@ export async function runAdminPrediction(
       confidence: result.pick.confidence,
       rationale: result.pick.rationale
     },
-    reasoningStep: result.reasoningStep,
+    reasoningStep,
     toolCalls
   };
 }

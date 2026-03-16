@@ -15,3 +15,25 @@ export async function listDirectories(dirPath: string) {
   const entries = await readdir(dirPath, { withFileTypes: true });
   return entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name);
 }
+
+export async function listJsonFilesRecursive(dirPath: string, prefix = ""): Promise<string[]> {
+  const entries = await readdir(dirPath, { withFileTypes: true });
+  const nested = await Promise.all(
+    entries.map(async (entry) => {
+      const nextPath = path.join(dirPath, entry.name);
+      const nextPrefix = prefix ? path.join(prefix, entry.name) : entry.name;
+
+      if (entry.isDirectory()) {
+        return listJsonFilesRecursive(nextPath, nextPrefix);
+      }
+
+      if (entry.isFile() && entry.name.endsWith(".json")) {
+        return [nextPrefix];
+      }
+
+      return [];
+    })
+  );
+
+  return nested.flat().sort((a, b) => a.localeCompare(b));
+}

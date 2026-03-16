@@ -21,7 +21,7 @@ It does three things:
 - `components/`: UI for leaderboard, bracket board, and traces
 - `agents/`: central agent plus model/tool adapters
 - `scripts/`: CLI scripts to generate brackets and score them
-- `data/configs/`: bracket configs
+- `data/configs/`: bracket configs, optionally nested by year
 - `data/models/`: model definitions used for a run
 - `data/runs/`: generated JSON output per run
 
@@ -58,7 +58,7 @@ The intended production path is to keep the same interfaces and swap in richer t
 
 A sample 2026 run is checked in at `data/runs/demo-2026/` so the UI renders immediately.
 
-- Config: `data/configs/2026-mens-bracket.json`
+- Config: `data/configs/2026/2026-mens-bracket.json`
 - Models: `data/models/demo-models.json`
 - Live model roster: `data/models/live-models.json`
 - Run: `data/runs/demo-2026/`
@@ -75,7 +75,7 @@ Then open `http://localhost:3000`.
 ## Generate a run
 
 ```bash
-npm run generate:brackets -- --config data/configs/2026-mens-bracket.json --models data/models/demo-models.json --run-id demo-2026
+npm run generate:brackets -- --config data/configs/2026/2026-mens-bracket.json --models data/models/demo-models.json --run-id demo-2026
 ```
 
 This writes:
@@ -92,7 +92,7 @@ Each submission now includes:
 ## Score a run
 
 ```bash
-npm run score:brackets -- --run-id demo-2026 --results data/results/demo-actual-results.json
+npm run score:brackets -- --run-id demo-2026 --results data/results/2026/2026-actual-results.json
 ```
 
 This writes:
@@ -104,7 +104,7 @@ This writes:
 
 When the real bracket is released:
 
-1. Create a `data/configs/<year>-mens-bracket.json` file with all teams and games.
+1. Create a bracket config file such as `data/configs/<year>/<year>-mens-bracket.json`.
 2. Create a model list in `data/models/<run-name>.json`.
 3. Run `generate:brackets`.
 4. After results come in, run `score:brackets`.
@@ -113,7 +113,7 @@ When the real bracket is released:
 Recommended environment for live tool use:
 
 - provider API keys/base URLs from `.env.example`
-- local ratings files at `data/stats/torvik.json` and `data/stats/kenpom.json` are used automatically by `lookup_cbb_ratings`
+- local ratings files at `data/stats/<year>/torvik.json` and `data/stats/<year>/kenpom.json` are used automatically by `lookup_cbb_ratings`
 - `data/models/live-models.json` resolves each API model name from environment variables, so you can swap exact provider model IDs without editing JSON
 
 ## Live provider setup
@@ -135,7 +135,7 @@ That checks:
 Generate a live run with:
 
 ```bash
-npm run generate:brackets -- --config data/configs/2026-mens-bracket.json --models data/models/live-models.json --run-id live-demo
+npm run generate:brackets -- --config data/configs/2026/2026-mens-bracket.json --models data/models/live-models.json --run-id live-demo
 ```
 
 Notes:

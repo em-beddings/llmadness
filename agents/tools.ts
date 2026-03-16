@@ -321,10 +321,11 @@ export class LookupRatingsTool implements AgentTool {
     }
   };
 
-  private async loadRatingsPayload() {
+  private async loadRatingsPayload(year: number) {
+    const yearSegment = String(year);
     const [torvikPayload, kenpomPayload] = await Promise.all([
-      readJsonFile<unknown>(path.join(process.cwd(), "data/stats/torvik.json")),
-      readJsonFile<unknown>(path.join(process.cwd(), "data/stats/kenpom.json"))
+      readJsonFile<unknown>(path.join(process.cwd(), `data/stats/${yearSegment}/torvik.json`)),
+      readJsonFile<unknown>(path.join(process.cwd(), `data/stats/${yearSegment}/kenpom.json`))
     ]);
 
     return {
@@ -335,7 +336,7 @@ export class LookupRatingsTool implements AgentTool {
 
   async execute(args: unknown, input: PredictionInput) {
     const parsed = (args ?? {}) as { teamIds?: string[]; teamNames?: string[] };
-    const ratingsRows = await this.loadRatingsPayload();
+    const ratingsRows = await this.loadRatingsPayload(input.config.year);
     const teams = matchTeams(input.config.teams, parsed.teamIds, parsed.teamNames);
     const wantedNames = new Set(
       teams.flatMap((team) => [normalizeTeamLookupName(team.name), normalizeTeamLookupName(team.shortName)])

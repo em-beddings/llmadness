@@ -35,6 +35,12 @@ export function AdminRunner({
     [configs, selectedConfigFile]
   );
 
+  const reasoningEvidence = Array.isArray(job?.result?.reasoningStep?.evidence)
+    ? job.result.reasoningStep.evidence
+    : job?.result?.reasoningStep?.evidence == null
+      ? []
+      : [String(job.result.reasoningStep.evidence)];
+
   useEffect(() => {
     if (!selectedConfig) {
       return;
@@ -269,11 +275,13 @@ export function AdminRunner({
                     <section className="modal-section">
                       <h3>Reasoning Step</h3>
                       <p>{job.result.reasoningStep.summary}</p>
-                      <ul>
-                        {job.result.reasoningStep.evidence.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
+                      {reasoningEvidence.length > 0 ? (
+                        <ul>
+                          {reasoningEvidence.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : null}
                     </section>
                   ) : null}
                 </>

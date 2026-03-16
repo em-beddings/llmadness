@@ -16,8 +16,8 @@ import {
 } from "@/lib/types";
 
 const ROOT = process.cwd();
-const CONFIG_PATH = "data/configs/2026-mens-bracket.json";
-const RESULTS_PATH = "data/results/demo-actual-results.json";
+const CONFIG_PATH = "data/configs/2026/2026-mens-bracket.json";
+const RESULTS_PATH = "data/results/2026/2026-actual-results.json";
 const MODELS_PATH = "data/models/demo-models.json";
 const RUN_ID = "demo-2026";
 
