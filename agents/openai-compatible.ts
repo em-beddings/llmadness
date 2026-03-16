@@ -2,6 +2,18 @@ import { ModelDefinition } from "@/lib/types";
 import { ModelAdapter, PredictionInput } from "@/agents/interfaces";
 import { resolveProviderRuntime } from "@/lib/providers";
 
+interface RateLimitBudget {
+  requestsPerMinute?: number;
+  inputTokensPerMinute?: number;
+  minDelayMs?: number;
+}
+
+interface RateLimitState {
+  requestTimestamps: number[];
+  tokenReservations: Array<{ timestamp: number; tokens: number }>;
+  nextAvailableAt: number;
+}
+
 type ChatMessage =
   | { role: "system" | "user" | "assistant"; content: string | null; tool_calls?: ToolCall[] }
   | { role: "tool"; content: string; tool_call_id: string };
@@ -14,6 +26,54 @@ interface ToolCall {
     arguments: string;
   };
 }
+
+const ONE_MINUTE_MS = 60_000;
+const TOKEN_ESTIMATE_DIVISOR = 4;
+
+const DEFAULT_RATE_LIMITS: Record<string, RateLimitBudget> = {
+  openai: {
+    requestsPerMinute: 60,
+    inputTokensPerMinute: 180_000,
+    minDelayMs: 250
+  },
+  anthropic: {
+    requestsPerMinute: 30,
+    inputTokensPerMinute: 24_000,
+    minDelayMs: 700
+  },
+  "google-gemini": {
+    requestsPerMinute: 30,
+    inputTokensPerMinute: 120_000,
+    minDelayMs: 350
+  },
+  xai: {
+    requestsPerMinute: 30,
+    inputTokensPerMinute: 120_000,
+    minDelayMs: 350
+  },
+  moonshot: {
+    requestsPerMinute: 30,
+    inputTokensPerMinute: 120_000,
+    minDelayMs: 350
+  },
+  qwen: {
+    requestsPerMinute: 30,
+    inputTokensPerMinute: 120_000,
+    minDelayMs: 350
+  },
+  deepseek: {
+    requestsPerMinute: 30,
+    inputTokensPerMinute: 120_000,
+    minDelayMs: 350
+  },
+  mimo: {
+    requestsPerMinute: 30,
+    inputTokensPerMinute: 120_000,
+    minDelayMs: 350
+  }
+};
+
+const rateLimitStates = new Map<string, RateLimitState>();
 
 function compactValue(value: unknown, depth = 0): unknown {
   if (typeof value === "string") {
@@ -192,16 +252,109 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function getNumericSetting(model: ModelDefinition, key: string) {
+  const value = model.settings?.[key];
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
+function estimateInputTokens(body: Record<string, unknown>) {
+  return Math.max(1, Math.ceil(JSON.stringify(body).length / TOKEN_ESTIMATE_DIVISOR));
+}
+
+function getRateLimitBudget(model: ModelDefinition) {
+  const defaults = DEFAULT_RATE_LIMITS[model.provider] ?? {};
+
+  return {
+    requestsPerMinute: getNumericSetting(model, "requestsPerMinute") ?? defaults.requestsPerMinute,
+    inputTokensPerMinute: getNumericSetting(model, "inputTokensPerMinute") ?? defaults.inputTokensPerMinute,
+    minDelayMs: getNumericSetting(model, "minDelayMs") ?? defaults.minDelayMs ?? 0
+  };
+}
+
+function getRateLimitState(key: string) {
+  const existing = rateLimitStates.get(key);
+  if (existing) {
+    return existing;
+  }
+
+  const state: RateLimitState = {
+    requestTimestamps: [],
+    tokenReservations: [],
+    nextAvailableAt: 0
+  };
+
+  rateLimitStates.set(key, state);
+  return state;
+}
+
+function pruneRateLimitState(state: RateLimitState, now: number) {
+  while (state.requestTimestamps.length > 0 && now - state.requestTimestamps[0] >= ONE_MINUTE_MS) {
+    state.requestTimestamps.shift();
+  }
+
+  while (state.tokenReservations.length > 0 && now - state.tokenReservations[0].timestamp >= ONE_MINUTE_MS) {
+    state.tokenReservations.shift();
+  }
+}
+
+async function waitForRateLimitWindow(model: ModelDefinition, body: Record<string, unknown>) {
+  const budget = getRateLimitBudget(model);
+  if (!budget.requestsPerMinute && !budget.inputTokensPerMinute && !budget.minDelayMs) {
+    return;
+  }
+
+  const state = getRateLimitState(`${model.provider}:${model.model}`);
+  const estimatedTokens = estimateInputTokens(body);
+
+  while (true) {
+    const now = Date.now();
+    pruneRateLimitState(state, now);
+
+    let waitMs = Math.max(0, state.nextAvailableAt - now);
+
+    if (budget.requestsPerMinute && state.requestTimestamps.length >= budget.requestsPerMinute) {
+      waitMs = Math.max(waitMs, ONE_MINUTE_MS - (now - state.requestTimestamps[0]));
+    }
+
+    if (budget.inputTokensPerMinute) {
+      const reservedTokens = state.tokenReservations.reduce((sum, entry) => sum + entry.tokens, 0);
+      if (reservedTokens + estimatedTokens > budget.inputTokensPerMinute) {
+        let runningTokens = reservedTokens;
+        for (const entry of state.tokenReservations) {
+          runningTokens -= entry.tokens;
+          if (runningTokens + estimatedTokens <= budget.inputTokensPerMinute) {
+            waitMs = Math.max(waitMs, ONE_MINUTE_MS - (now - entry.timestamp));
+            break;
+          }
+        }
+      }
+    }
+
+    if (waitMs > 0) {
+      await sleep(waitMs);
+      continue;
+    }
+
+    state.requestTimestamps.push(now);
+    state.tokenReservations.push({ timestamp: now, tokens: estimatedTokens });
+    state.nextAvailableAt = now + (budget.minDelayMs ?? 0);
+    return;
+  }
+}
+
 function isRetriableModelError(message: string) {
   return /Model request failed:\s*(429|500|502|503|504)\b/.test(message);
 }
 
 async function createChatCompletion(
+  model: ModelDefinition,
   body: Record<string, unknown>,
   apiKey: string,
   baseUrl: string,
   defaultHeaders?: Record<string, string>
 ) {
+  await waitForRateLimitWindow(model, body);
+
   const response = await fetch(joinUrl(baseUrl, "/chat/completions"), {
     method: "POST",
     headers: {
@@ -228,6 +381,7 @@ async function createChatCompletion(
 }
 
 async function createChatCompletionWithRetry(
+  model: ModelDefinition,
   body: Record<string, unknown>,
   apiKey: string,
   baseUrl: string,
@@ -237,7 +391,7 @@ async function createChatCompletionWithRetry(
 
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     try {
-      return await createChatCompletion(body, apiKey, baseUrl, defaultHeaders);
+      return await createChatCompletion(model, body, apiKey, baseUrl, defaultHeaders);
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       if (attempt >= maxAttempts || !isRetriableModelError(message)) {
@@ -253,6 +407,7 @@ async function createChatCompletionWithRetry(
 
 async function requestFinalJson(
   params: {
+    definition: ModelDefinition;
     model: string;
     temperature: number;
     messages: ChatMessage[];
@@ -269,6 +424,7 @@ async function requestFinalJson(
 
   try {
     return await createChatCompletion(
+      params.definition,
       {
         model: params.model,
         temperature: params.temperature,
@@ -286,6 +442,7 @@ async function requestFinalJson(
     }
 
     return createChatCompletionWithRetry(
+      params.definition,
       {
         model: params.model,
         temperature: params.temperature,
@@ -312,6 +469,7 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
 
     for (let step = 0; step < maxToolRounds; step += 1) {
       const payload = await createChatCompletionWithRetry(
+        model,
         {
           model: model.model,
           temperature: Number(model.settings?.temperature ?? 0.2),
@@ -351,6 +509,7 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
 
       const finalPayload = await requestFinalJson(
         {
+          definition: model,
           model: model.model,
           temperature: Number(model.settings?.temperature ?? 0.2),
           messages: [
