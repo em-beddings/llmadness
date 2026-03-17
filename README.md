@@ -72,6 +72,42 @@ npm run dev
 
 Then open `http://localhost:3000`.
 
+## GitHub Pages deploy
+
+The public site is now a static export, so the intended production flow is:
+
+1. Run bracket generation locally.
+2. Run scoring locally as results come in.
+3. Commit the updated JSON under `data/`.
+4. Push to `main`.
+5. GitHub Actions builds and deploys the static `out/` export to GitHub Pages.
+
+The Pages workflow lives at `.github/workflows/deploy-pages.yml`.
+
+### Custom domain
+
+The repo is configured to publish with `llmadness.com` via `public/CNAME`.
+
+In GitHub:
+
+1. Open repository `Settings > Pages`.
+2. Set `Source` to `GitHub Actions`.
+3. After the first deploy, confirm the custom domain is `llmadness.com`.
+4. Enable HTTPS once DNS has propagated.
+
+At your DNS provider, point the apex domain to GitHub Pages with these A records:
+
+- `185.199.108.153`
+- `185.199.109.153`
+- `185.199.110.153`
+- `185.199.111.153`
+
+For `www`, add a CNAME:
+
+- `www` -> `<your-github-username>.github.io`
+
+If you want `www.llmadness.com` to redirect to `llmadness.com`, configure that in your DNS or registrar settings after Pages is active.
+
 ## Generate a run
 
 ```bash
