@@ -1,0 +1,805 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "grok-4-2",
+    "label": "Grok 4.2",
+    "provider": "xai",
+    "model": "grok-4.20-beta-0309-reasoning",
+    "description": "xAI • Large reasoning model designed for real-time information access, coding, and general problem solving."
+  },
+  "gameId": "ff-midwest-16",
+  "generatedAt": "2026-03-17T21:10:34.324Z",
+  "pick": {
+    "gameId": "ff-midwest-16",
+    "winnerId": "umbc",
+    "confidence": 56,
+    "rationale": "UMBC enters with superior overall metrics, ranking 185th in both KenPom and Torvik compared to Howard's 207th, driven by stronger adjusted offense despite comparable defensive efficiency. The Retrievers also own a better record (24-8 vs 23-10), defeated Howard 95-77 in last season's meeting, and are listed as a slight 1.5- to 2.5-point favorite by multiple sportsbooks. Howard boasts a strong 8-game win streak and productive guard duo, but UMBC's experience as America East champions and consistent edge in advanced stats provide the nod in this tightly contested First Four play-in."
+  },
+  "reasoningStep": {
+    "id": "metrics-headtohead",
+    "title": "Ratings, Records, and History Comparison",
+    "summary": "UMBC shows better efficiency and prior success against Howard, making them the slight favorite in a low-major matchup.",
+    "evidence": [
+      "KenPom/Torvik: UMBC #185 (adj o 108.2) vs Howard #207 (adj o 103.2)",
+      "records 24-8 vs 23-10",
+      "UMBC won 2025 H2H by 18 pts",
+      "betting lines favor UMBC by 1.5-2.5 pts",
+      "no significant injuries reported"
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-5muehcyg",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "howard",
+          "umbc"
+        ]
+      },
+      "startedAt": "2026-03-17T21:10:16.342Z",
+      "completedAt": "2026-03-17T21:10:16.348Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "howard",
+          "teamName": "Howard",
+          "torvik": {
+            "rank": 206,
+            "team": "Howard",
+            "conf": "MEAC",
+            "record": "23-10",
+            "adjoe": 103.41612619063604,
+            "oe Rank": 276,
+            "adjde": 106.21885293459086,
+            "de Rank": 123,
+            "barthag": 0.4237206510070102,
+            "rank.1": 206,
+            "proj. W": 23,
+            "Proj. L": 10,
+            "Pro Con W": 11,
+            "Pro Con L": 3,
+            "Con Rec.": "11-3",
+            "sos": 0.2182227012834373,
+            "ncsos": 0.3452378246061259,
+            "consos": 0.0829314790582963,
+            "Proj. SOS": 0.2182227012834373,
+            "Proj. Noncon SOS": 0.3452378246061259,
+            "Proj. Con SOS": 0.0829314790582963,
+            "elite SOS": 0.9241563475213302,
+            "elite noncon SOS": 0.8634019755658309,
+            "Opp OE": 101.17991379516911,
+            "Opp DE": 114.2635706087128,
+            "Opp Proj. OE": 101.17991379516911,
+            "Opp Proj DE": 114.2635706087128,
+            "Con Adj OE": 104.13015388205592,
+            "Con Adj DE": 105.22400204985412,
+            "Qual O": 101.5301621396368,
+            "Qual D": 111.26690286496986,
+            "Qual Barthag": 0.258625819201012,
+            "Qual Games": 2,
+            "FUN": -0.0446752148450214,
+            "ConPF": 1131,
+            "ConPA": 886,
+            "ConPoss": 983.2875,
+            "ConOE": 1.1502231036192363,
+            "ConDE": 0.9010589476628148,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.7857142857142857,
+            "WAB": -6.877782036029614,
+            "WAB Rk": 135,
+            "Fun Rk": 288,
+            "adjt": 69.02671829458002
+          },
+          "kenpom": {
+            "rank": 207,
+            "team": "Howard",
+            "conf": "MEAC",
+            "record": "23-10",
+            "adj_em": -3.17,
+            "adj_o": 103.2,
+            "adj_o_rank": 283,
+            "adj_d": 106.4,
+            "adj_d_rank": 118,
+            "adj_t": 69.1,
+            "adj_t_rank": 89,
+            "luck": -0.01,
+            "luck_rank": 209,
+            "sos_adj_em": -14.64,
+            "sos_adj_em_rank": 364,
+            "sos_opp_o": 100.5,
+            "sos_opp_o_rank": 364,
+            "sos_opp_d": 115.2,
+            "sos_opp_d_rank": 361,
+            "ncsos_adj_em": -1.71,
+            "ncsos_adj_em_rank": 230
+          }
+        },
+        {
+          "teamId": "umbc",
+          "teamName": "UMBC",
+          "torvik": {
+            "rank": 185,
+            "team": "UMBC",
+            "conf": "AE",
+            "record": "24-8",
+            "adjoe": 107.5051010272995,
+            "oe Rank": 193,
+            "adjde": 109.20599179259196,
+            "de Rank": 187,
+            "barthag": 0.4549914663317805,
+            "rank.1": 185,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 14,
+            "Pro Con L": 2,
+            "Con Rec.": "14-2",
+            "sos": 0.2227117521945229,
+            "ncsos": 0.32757626195436,
+            "consos": 0.1504523185135762,
+            "Proj. SOS": 0.2227117521945229,
+            "Proj. Noncon SOS": 0.32757626195436,
+            "Proj. Con SOS": 0.1504523185135762,
+            "elite SOS": 0.931868842810656,
+            "elite noncon SOS": 0.8641554932109268,
+            "Opp OE": 101.16264654316164,
+            "Opp DE": 114.62297629233308,
+            "Opp Proj. OE": 101.16264654316164,
+            "Opp Proj DE": 114.62297629233308,
+            "Con Adj OE": 107.43602387594034,
+            "Con Adj DE": 107.3943562670972,
+            "Qual O": 104.099654899586,
+            "Qual D": 116.3230074470595,
+            "Qual Barthag": 0.2181030340381372,
+            "Qual Games": 1,
+            "FUN": -0.0003913630267735,
+            "ConPF": 1213,
+            "ConPA": 1015,
+            "ConPoss": 1051.8125000000002,
+            "ConOE": 1.153247370610256,
+            "ConDE": 0.965000891318557,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.875,
+            "WAB": -5.1341552187462565,
+            "WAB Rk": 100,
+            "Fun Rk": 175,
+            "adjt": 65.98244942917215
+          },
+          "kenpom": {
+            "rank": 185,
+            "team": "UMBC",
+            "conf": "AE",
+            "record": "24-8",
+            "adj_em": -1.68,
+            "adj_o": 108.2,
+            "adj_o_rank": 184,
+            "adj_d": 109.9,
+            "adj_d_rank": 193,
+            "adj_t": 66.3,
+            "adj_t_rank": 243,
+            "luck": 0.046,
+            "luck_rank": 70,
+            "sos_adj_em": -14.92,
+            "sos_adj_em_rank": 365,
+            "sos_opp_o": 100.5,
+            "sos_opp_o_rank": 363,
+            "sos_opp_d": 115.5,
+            "sos_opp_d_rank": 364,
+            "ncsos_adj_em": -7.05,
+            "ncsos_adj_em_rank": 334
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-1so1he1a",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Howard vs UMBC 2026 prediction or preview",
+        "maxResults": 10
+      },
+      "startedAt": "2026-03-17T21:10:16.348Z",
+      "completedAt": "2026-03-17T21:10:17.138Z",
+      "summary": "Returned 10 search results for \"Howard vs UMBC 2026 prediction or preview\".",
+      "result": [
+        {
+          "title": "Howard vs UMBC prediction for March Madness First Four game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dumbc%2Dprediction%2Dmarch%2Dmadness%2Dfirst%2Dfour%2F89194898007%2F&rut=6da3dd97c5a3833a3800036d1eb8055b2f495267f57f5e001ec76359f3bc526d",
+          "snippet": "Here&#x27;s our Howard vs UMBC prediction in the First Four NCAA Tournament game of March Madness 2026 . The winner advances to face Michigan basketball."
+        },
+        {
+          "title": "UMBC vs Howard Prediction, Picks & Odds | 17 Mar 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsgambler.com%2Fbetting%2Dtips%2Fbasketball%2Fumbc%2Dretrievers%2Dvs%2Dhoward%2Dbison%2Dprediction%2Dodds%2D2026%2D03%2D17%2F&rut=5a24e1c2068e2b759c5f6096e24f0f253d808acc63b2f30b9aae516af63bd851",
+          "snippet": "UMBC vs Howard prediction and same game parlay picks. NCAA College Basketball preview with betting odds, player props and stats."
+        },
+        {
+          "title": "UMBC vs. Howard prediction: March Madness First Four odds, pick, best ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnypost.com%2F2026%2F03%2F17%2Fbetting%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dmarch%2Dmadness%2Dfirst%2Dfour%2Dodds%2Dpick%2Dbest%2Dbet%2Dtuesday%2F&rut=3863e3b820994b421dfdb083cdd037efdfc8f052c7570c3195db05e65aa96609",
+          "snippet": "Read the Post&#x27;s March Madness First Four betting preview , including odds and a prediction for UMBC vs . Howard ."
+        },
+        {
+          "title": "UMBC vs Howard | Preview, Prediction and Top Prop Bets",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fthegruelingtruth.com%2Fbasketball%2Fcollege%2Dbasketball%2Fncaa%2Dfist%2Dfour%2Dumbc%2Dvs%2Dhoward%2Dpreview%2Dprediction%2Dand%2Dtop%2Dprop%2Dbets%2F&rut=aeedaea82366f39a6a09bd778d0fff771dbed311dde4c5e7816d2a5141e51539",
+          "snippet": "UMBC and Howard will play the first game of the NCAA Tournament on Tuesday night in Dayton, Ohio in what likes a tight matchup! Date: Tuesday, March 17, 2026 | Time: 6:40 PM ET Location: UD Arena, Dayton, OH | TV: truTV Betting Line: Howard -3.5 | Over/Under: 148.5 The Matchup Context: Howard&#x27;s Guard Play vs UMBC&#x27;s Veteran Experience The Howard Bison arrive in Dayton carrying the ..."
+        },
+        {
+          "title": "UMBC vs. Howard odds, prediction, time: 2026 First Four picks from ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fgeneral%2Fnews%2Fumbc%2Dhoward%2Dodds%2Dprediction%2Dspread%2Dline%2Dtime%2D2026%2Dfirst%2Dfour%2Dpicks%2Dfrom%2Dproven%2Dmodel%2F&rut=3dfad7e0fdbd1484471a5f7b5f7806a6933dc096470077e576657f56dfc94487",
+          "snippet": "SportsLine&#x27;s model simulated UMBC Retrievers vs . Howard Bison and revealed its college basketball picks for this First Four 2026 matchup on Tuesday By Andy Bryan Mar 17, 2026 at 7:14 am ET • 2 ..."
+        },
+        {
+          "title": "Howard vs UMBC Prediction and Preview: NCAA Tournament First Four",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fhoward%2Dvs%2Dumbc%2Dprediction%2Dpreview%2D081133863.html&rut=668802333e65a8dcef5e45bdf1ce99ac4a60b399da70dc4e5d799b27c57bf115",
+          "snippet": "Howard and UMBC get the 2026 NCAA Tournament rolling with its First Four matchup. Here&#x27;s the CFN preview and prediction ."
+        },
+        {
+          "title": "UMBC vs. Howard: NCAA Tournament Predictions & Preview",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fumbc%2Dvs%2Dhoward%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=51ad50c1ee3fec42844a4d1afbfbf5e72cfdb7e5d94a07061a13f5bebad06458",
+          "snippet": "Howard 2026 NCAA Tournament Preview Howard men&#x27;s basketball is a MEAC dynasty by any reasonable standard. The Bison claimed their third MEAC tournament title in four seasons on Saturday, beating North Carolina Central 70-63, and will head back to the NCAA Tournament for the third time in that same span under head coach Kenneth Blakney."
+        },
+        {
+          "title": "UMBC vs Howard Prediction, Picks & Odds for Today&#x27;s March Madness Game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fncaab%2Fmarch%2Dmadness%2Fumbc%2Dvs%2Dhoward%2Dpredictions%2Dpicks%2Dodds%2Dtuesday%2D3%2D17%2D2026&rut=c399a3ba8eff3828b86159044ec7b7359145b15f33ef4d05fab4d27347f16601",
+          "snippet": "The Bison will have a tough time putting up points in our UMBC vs . Howard predictions and college basketball picks for March 17."
+        },
+        {
+          "title": "Howard vs UMBC odds, prediction, betting for March Madness NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.app.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dvs%2Dumbc%2Dncaa%2Dtournament%2Dodds%2Dprediction%2Din%2Dmarch%2Dmadness%2Dbrackets%2F89199411007%2F&rut=7e6e27adb8ba5bc4ffcac61d7ab8eaf6cb7166a4d7543dcd40e69f2ab289f244",
+          "snippet": "The UMBC Retrievers will play the Howard Bison in the First Four play-in game of the NCAA Men&#x27;s Basketball Tournament on Tuesday, March 17, 2026 , 6:40 p.m. in Dayton, Ohio. (stream with Sling)."
+        },
+        {
+          "title": "UMBC vs. Howard Prediction, Projected Lineups, and Injury Report for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dprojected%2Dlineups%2F&rut=d6ab69109c50ab199027d53c0948a970343036d5f8cafcfc49a4be48b88c508f",
+          "snippet": "UMBC vs . Howard Prediction , Projected Lineups, and Injury Report for March Madness First Four Round March 17, 2026 | 8:53 AM EDT"
+        }
+      ]
+    },
+    {
+      "id": "tool-hnzviv8k",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Howard UMBC March Madness 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:10:17.138Z",
+      "completedAt": "2026-03-17T21:10:17.194Z",
+      "summary": "Returned 0 search results for \"Howard UMBC March Madness 2026\".",
+      "result": []
+    },
+    {
+      "id": "tool-bs59m3hb",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nypost.com/2026/03/17/betting/umbc-vs-howard-prediction-march-madness-first-four-odds-pick-best-bet-tuesday/",
+        "maxChars": 2000
+      },
+      "startedAt": "2026-03-17T21:10:20.930Z",
+      "completedAt": "2026-03-17T21:10:21.027Z",
+      "summary": "Fetched https://nypost.com/2026/03/17/betting/umbc-vs-howard-prediction-march-madness-first-four-odds-pick-best-bet-tuesday/ and extracted 2000 characters of text.",
+      "result": {
+        "url": "https://nypost.com/2026/03/17/betting/umbc-vs-howard-prediction-march-madness-first-four-odds-pick-best-bet-tuesday/",
+        "text": "UMBC vs. Howard prediction: March Madness First Four odds, pick, best bet Tuesday Primary Menu Sections US News Metro Long Island Politics World News Page Six Sports NFL MLB Olympics NBA NHL College Football College Basketball WNBA Post Sports+ Sports Betting Business Personal Finance Opinion Entertainment TV Movies Music Celebrities Awards Theater Shopping Lifestyle Weird But True Sex & Relationships Viral Trends Human Interest Parenting Fashion & Beauty Food & Drink Travel Health Wellness Fitness Health Care Medicine Men&#8217;s Health Women&#8217;s Health Mental Health Nutrition Real Estate Alexa Media Tech Science Space Environment Wildlife Archaeology Astrology Video Photos Pod Force One NY POSTcast Today&#8217;s Paper Covers Columnists Horoscopes Crosswords & Games Sports Odds Podcasts Careers Email Newsletters Official Store Home Delivery Tips Search Email New York Post Switch between CA and NY editions here. Got it Edition CA NY Open Betting navigation Sports Sports Sports Plus Sports Betting Columnists Olympics NFL MLB NBA NHL WNBA NWSL PWHL NCAAB NCAAF Sports Entertainment Golf Tennis Wrestling MMA Soccer Sports Betting Sportsbooks Betting Apps NFL NBA NHL Editorial Standards FanDuel Fanatics bet365 BetMGM Kalshi DraftKings Search Search Shop now The Amazon Big Spring Sale returns for 2026: We have the dates and early deals Betting UMBC vs. Howard prediction: March Madness First Four odds, pick, best bet Tuesday By Erich Richter Published March 17, 2026, 2:00 p.m. ET Howard has a big opportunity against UMBC. Getty Images Gambling content 21+. The New York Post may receive an affiliate commission if you sign up through our links. Read our editorial standards for more information. March Madness really begins with the First Four, which is where we tip off with UMBC vs. Howard on Tuesday night. UMBC comes in as a 1.5-point favorite at Fanatics Sportsbook , as the two teams look to advance to the first round of the March Madness tournament, where the winner wi"
+      }
+    },
+    {
+      "id": "tool-mgeste13",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://thegruelingtruth.com/basketball/college-basketball/ncaa-fist-four-umbc-vs-howard-preview-prediction-and-top-prop-bets/",
+        "maxChars": 2000
+      },
+      "startedAt": "2026-03-17T21:10:21.027Z",
+      "completedAt": "2026-03-17T21:10:21.236Z",
+      "summary": "Fetched https://thegruelingtruth.com/basketball/college-basketball/ncaa-fist-four-umbc-vs-howard-preview-prediction-and-top-prop-bets/ and extracted 2000 characters of text.",
+      "result": {
+        "url": "https://thegruelingtruth.com/basketball/college-basketball/ncaa-fist-four-umbc-vs-howard-preview-prediction-and-top-prop-bets/",
+        "text": "UMBC vs Howard | Preview, Prediction and Top Prop Bets Seen on: 📈 Guides 📙 Strategies 📈 Odds 🔢 Calculators 🔍 Reviews Facebook Twitter Youtube US USA Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida Georgia Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Ohio Oklahoma Oregon Pennsylvania Rhode Island South Carolina South Dakota Tennessee Texas Utah Vermont Virginia Washington West Virginia Wisconsin Wyoming TGT on YouTube About TGT The TGT Team How TGT rates Responsible Gambling Advice Contact Our Team Writers Wanted Content Disclaimer Affiliate Disclosure Top 10s 🏅 Top10 Articles Top 10 Biggest What if’s in NCAA Tournament History: Kenyon Martin, Scott May, Rick Pitino and more Top 10 Greatest Cinderella Stories in NCAA Tournament History March Madness Upset Watch: The 10 Teams Most Likely to Shock the First Round Top 10 College Basketball Teams that didn’t win a National Championship The Top 10 First-Round Upsets in NCAA Tournament History Top 10 Indiana High School Girls Basketball Teams of All Time Top 10 College Basketball programs to never win a National Championship What’s Luck Got to Do with It? Top 10 Awful Cleveland Browns’ Decisions Since 1999 📰 Latest News 1982 New York Jets: A Muddy field away from the Super Bowl Top 10 Indiana Hoosiers of the 1970s Making Sense of What Comes Next for J.J. McCarthy and the Vikings Quarterback Situation Top 10 Purdue Boilermakers Basketball Players of All Time NFL Quarterback Rankings: Week 15 NFL Quarterback Rankings: Week 14 Shedeur Sanders’ First NFL Start Is About His Future, Not the Browns’ Present Virginia Tech Just Hit Its Home-Run Hire with James Franklin 🥇 Most Read Articles Top 15 College Basketball Coaches Top 17 Dirtiest College Basketball Coaches Top 20 Big Ten Basketball Players 17 Reasons Why"
+      }
+    },
+    {
+      "id": "tool-rnvw4dkc",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Howard vs UMBC betting odds 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:10:21.236Z",
+      "completedAt": "2026-03-17T21:10:22.076Z",
+      "summary": "Returned 5 search results for \"Howard vs UMBC betting odds 2026\".",
+      "result": [
+        {
+          "title": "Howard vs. UMBC NCAA Tournament odds, picks and predictions",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsbookwire.usatoday.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F17%2Fhoward%2Dvs%2Dumbc%2Dncaa%2Dtournament%2Dodds%2Dpicks%2Dand%2Dpredictions%2F89190864007%2F&rut=9c33fd9e9693bcbad5a1bcb16d2e58bf69ecfcea7be5be00e21e07f92745ea9b",
+          "snippet": "The Howard Bison and the UMBC Retrievers meet Tuesday in a First 4 NCAA Tournament game. Tip-off from UD Arena in Dayton, Ohio, is set for 6:40 p.m. ET."
+        },
+        {
+          "title": "Howard vs UMBC: Betting Odds and How to Watch - HBCU Gameday",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fhbcugameday.com%2F2026%2F03%2F16%2Fhoward%2Dvs%2Dumbc%2Dbetting%2Dodds%2Dand%2Dhow%2Dto%2Dwatch%2F&rut=cfb55da779314bf5c9bb3a6134df15e7d5cf21bee83b902eec9b4575ab3981ab",
+          "snippet": "Howard vs UMBC Betting Odds According to BetMGM Sportsbook, the UMBC Retrievers are a 2.5-point favorite over the Howard Bison in the NCAA Tournament First Four matchup. The relatively tight line reflects what many expect to be a competitive game between two conference champions fighting to advance into the main tournament bracket."
+        },
+        {
+          "title": "UMBC vs. Howard odds, prediction: 2026 NCAA Tournament First Four picks ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsline.com%2Finsiders%2Fumbc%2Dvs%2Dhoward%2Dodds%2Dprediction%2D2026%2Dncaa%2Dtournament%2Dpicks%2Dfrom%2Dproven%2Dmodel%2F&rut=ada5bd6fe4715d7ecf71fb4da868ff89f9f8994ab4a9f4103167bbd5593e02b2",
+          "snippet": "The Retrievers and Bison met last season, with the Retrievers winning 95-77. UMBC is a 1.5-point favorite in the latest UMBC vs Howard odds from DraftKings Sportsbook, while the over/under for total points scored is 141.5. Before making any Howard vs . UMBC picks, check out the college basketball predictions from the SportsLine Projection Model."
+        },
+        {
+          "title": "Howard vs UMBC odds, prediction, betting for March Madness NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.app.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dvs%2Dumbc%2Dncaa%2Dtournament%2Dodds%2Dprediction%2Din%2Dmarch%2Dmadness%2Dbrackets%2F89199411007%2F&rut=7e6e27adb8ba5bc4ffcac61d7ab8eaf6cb7166a4d7543dcd40e69f2ab289f244",
+          "snippet": "NCAA Tournament Howard vs . UMBC March Madness odds in first-round game, with point spread, moneyline, over/under betting ."
+        },
+        {
+          "title": "UMBC vs Howard Prediction, Picks & Odds | 17 Mar 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsgambler.com%2Fbetting%2Dtips%2Fbasketball%2Fumbc%2Dretrievers%2Dvs%2Dhoward%2Dbison%2Dprediction%2Dodds%2D2026%2D03%2D17%2F&rut=5a24e1c2068e2b759c5f6096e24f0f253d808acc63b2f30b9aae516af63bd851",
+          "snippet": "UMBC vs Howard prediction and same game parlay picks. NCAA College Basketball preview with betting odds , player props and stats."
+        }
+      ]
+    },
+    {
+      "id": "tool-tqfv77gg",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://hbcugameday.com/2026/03/16/howard-vs-umbc-betting-odds-and-how-to-watch/",
+        "maxChars": 1000
+      },
+      "startedAt": "2026-03-17T21:10:26.425Z",
+      "completedAt": "2026-03-17T21:10:27.043Z",
+      "summary": "Fetched https://hbcugameday.com/2026/03/16/howard-vs-umbc-betting-odds-and-how-to-watch/ and extracted 1000 characters of text.",
+      "result": {
+        "url": "https://hbcugameday.com/2026/03/16/howard-vs-umbc-betting-odds-and-how-to-watch/",
+        "text": "Howard vs UMBC: Betting Odds and How to Watch - HBCU Gameday Skip to content Football Men&#039;s Basketball Women&#039;s Basketball View All HBCU GAMEDAY Home About Contact Headlines Scoreboard Football Men&#8217;s Basketball Women&#8217;s Basketball HBCU Football HBCU Basketball HBCU Sports HBCU at the Olympics HBCU Baseball HBCU Cheerleading HBCU eSports HBCU Golf HBCU Gymnastics HBCU Soccer HBCU Softball HBCU Tennis HBCU Track and Field HBCU Volleyball HBCU wrestling HBCU Culture HBCU Academics HBCU Bands Celebrity HBCUs CIAA Bowie State Chowan Claflin Elizabeth City State University Fayetteville State University Johnson C. Smith Lincoln University (PA) Livingstone Saint Augustine&#8217;s University Shaw University Virginia State Virginia Union Winston-Salem State University MEAC Coppin State Delaware State Howard University Maryland Eastern Shore Morgan State Norfolk State North Carolina Central University South Carolina State SIAC Albany State Benedict Central State Clark Atlanta "
+      }
+    },
+    {
+      "id": "tool-rm0gxxfj",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://sportsbookwire.usatoday.com/story/sports/ncaab/2026/03/17/howard-vs-umbc-ncaa-tournament-odds-picks-and-predictions/89190864007/",
+        "maxChars": 1500
+      },
+      "startedAt": "2026-03-17T21:10:27.043Z",
+      "completedAt": "2026-03-17T21:10:27.191Z",
+      "summary": "Fetched https://sportsbookwire.usatoday.com/story/sports/ncaab/2026/03/17/howard-vs-umbc-ncaa-tournament-odds-picks-and-predictions/89190864007/ and extracted 1500 characters of text.",
+      "result": {
+        "url": "https://sportsbookwire.usatoday.com/story/sports/ncaab/2026/03/17/howard-vs-umbc-ncaa-tournament-odds-picks-and-predictions/89190864007/",
+        "text": "Howard vs. UMBC NCAA Tournament odds, picks and predictions Skip to main content Home NFL MLB NBA NHL NCAA Football NCAA Basketball UFC/MMA PGA Tour Games WNBA Newsletter Soccer NASCAR CFL Bet 101 Industry News Betting Map Online Casino USA TODAY Sports Howard Bison vs. UMBC Retrievers odds, picks and predictions Daniel Dobish Sportsbook Wire The Howard Bison (23-10) and the UMBC Retrievers (24-8) meet Tuesday in a First 4 NCAA Tournament game. Tip-off from UD Arena in Dayton, Ohio, is scheduled for 6:40 p.m. ET (truTV). Let's analyze NCAA basketball odds around the Howard vs. UMBC odds and make our expert college basketball picks and predictions for the best bets. Howard of the Mid-Eastern Athletic Conference is making its third NCAA Tournament appearance in the past 4 seasons under coach Kenny Blakeney. The Bison have a 2-headed monster with G Bryce Harris and G Cedric Taylor III each averaging a team-best 17.1 points per game (PPG). Harris has the edge with a team-best 6.9 rebounds per game, to 6.7 RPG for Taylor. The Bison have won 8 in a row, while going 11-1 straight up (SU) in the past 12 games. That lone loss was an 97-81 OT setback at home to the Yale Bulldogs Feb. 9. Howard is 11-1 ATS in the 12-game span. The Under cashed in each of the 2 games in the MEAC Tournament. UMBC is back in the NCAA Tournament for the first time since 2018, when it became the first-ever No. 16 seed to topple a No. 1 seed, stunning the Virginia Cavaliers. UMBC (the University of Maryland, "
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "ff-midwest-16-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T21:10:13.324Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: ff-midwest-16\nCurrent game label: Midwest 16 play-in\nRound: First Four\nResolved teams: Howard (howard) vs UMBC (umbc)\nPrior committed picks: 2"
+    },
+    {
+      "id": "ff-midwest-16-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T21:10:13.324Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"ff-midwest-16\",\n      \"round\": \"First Four\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 16 play-in\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"howard\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"umbc\"\n      }\n    },\n    \"slotAName\": \"Howard\",\n    \"slotBName\": \"UMBC\",\n    \"slotATeamId\": \"howard\",\n    \"slotBTeamId\": \"umbc\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 62,\n        \"rationale\": \"Texas holds solid top-40 rankings in both KenPom and Torvik with elite adjusted offense, despite defensive shortcomings. The Longhorns recently defeated NC State 102-97 in a neutral-site game where they were slight underdogs, showing they can exploit the Wolfpack's style. While NC State owns a marginally better record and is reportedly a small betting favorite, Texas's experience in the tougher SEC and head-to-head success provide a credible edge in this close First Four matchup.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 74,\n        \"rationale\": \"SMU ranks significantly higher than Miami (OH) in both KenPom (42 vs 93) and Torvik (42 vs 87), boasting elite adjusted offense from a much tougher ACC schedule compared to the MAC. Miami (OH)'s 31-1 record is impressive but inflated by weak competition, while SMU's experience against high-major foes provides a clear advantage in this play-in game. Betting markets reflect this with SMU as a 6.5-point favorite, and no major injuries or recent news alter the metrics favoring the Mustangs.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": 62,\n      \"rationale\": \"Texas holds solid top-40 rankings in both KenPom and Torvik with elite adjusted offense, despite defensive shortcomings. The Longhorns recently defeated NC State 102-97 in a neutral-site game where they were slight underdogs, showing they can exploit the Wolfpack's style. While NC State owns a marginally better record and is reportedly a small betting favorite, Texas's experience in the tougher SEC and head-to-head success provide a credible edge in this close First Four matchup.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": 74,\n      \"rationale\": \"SMU ranks significantly higher than Miami (OH) in both KenPom (42 vs 93) and Torvik (42 vs 87), boasting elite adjusted offense from a much tougher ACC schedule compared to the MAC. Miami (OH)'s 31-1 record is impressive but inflated by weak competition, while SMU's experience against high-major foes provides a clear advantage in this play-in game. Betting markets reflect this with SMU as a 6.5-point favorite, and no major injuries or recent news alter the metrics favoring the Mustangs.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "ff-midwest-16-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:10:16.342Z",
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:10:16.342Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "howard",
+          "umbc"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:10:16.348Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "howard",
+          "teamName": "Howard",
+          "torvik": {
+            "rank": 206,
+            "team": "Howard",
+            "conf": "MEAC",
+            "record": "23-10",
+            "adjoe": 103.41612619063604,
+            "oe Rank": 276,
+            "adjde": 106.21885293459086,
+            "de Rank": 123,
+            "barthag": 0.4237206510070102,
+            "rank.1": 206,
+            "proj. W": 23,
+            "Proj. L": 10,
+            "Pro Con W": 11,
+            "Pro Con L": 3,
+            "Con Rec.": "11-3",
+            "sos": 0.2182227012834373,
+            "ncsos": 0.3452378246061259,
+            "consos": 0.0829314790582963,
+            "Proj. SOS": 0.2182227012834373,
+            "Proj. Noncon SOS": 0.3452378246061259,
+            "Proj. Con SOS": 0.0829314790582963,
+            "elite SOS": 0.9241563475213302,
+            "elite noncon SOS": 0.8634019755658309,
+            "Opp OE": 101.17991379516911,
+            "Opp DE": 114.2635706087128,
+            "Opp Proj. OE": 101.17991379516911,
+            "Opp Proj DE": 114.2635706087128,
+            "Con Adj OE": 104.13015388205592,
+            "Con Adj DE": 105.22400204985412,
+            "Qual O": 101.5301621396368,
+            "Qual D": 111.26690286496986,
+            "Qual Barthag": 0.258625819201012,
+            "Qual Games": 2,
+            "FUN": -0.0446752148450214,
+            "ConPF": 1131,
+            "ConPA": 886,
+            "ConPoss": 983.2875,
+            "ConOE": 1.1502231036192363,
+            "ConDE": 0.9010589476628148,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.7857142857142857,
+            "WAB": -6.877782036029614,
+            "WAB Rk": 135,
+            "Fun Rk": 288,
+            "adjt": 69.02671829458002
+          },
+          "kenpom": {
+            "rank": 207,
+            "team": "Howard",
+            "conf": "MEAC",
+            "record": "23-10",
+            "adj_em": -3.17,
+            "adj_o": 103.2,
+            "adj_o_rank": 283,
+            "adj_d": 106.4,
+            "adj_d_rank": 118,
+            "adj_t": 69.1,
+            "adj_t_rank": 89,
+            "luck": -0.01,
+            "luck_rank": 209,
+            "sos_adj_em": -14.64,
+            "sos_adj_em_rank": 364,
+            "sos_opp_o": 100.5,
+            "sos_opp_o_rank": 364,
+            "sos_opp_d": 115.2,
+            "sos_opp_d_rank": 361,
+            "ncsos_adj_em": -1.71,
+            "ncsos_adj_em_rank": 230
+          }
+        },
+        {
+          "teamId": "umbc",
+          "teamName": "UMBC",
+          "torvik": {
+            "rank": 185,
+            "team": "UMBC",
+            "conf": "AE",
+            "record": "24-8",
+            "adjoe": 107.5051010272995,
+            "oe Rank": 193,
+            "adjde": 109.20599179259196,
+            "de Rank": 187,
+            "barthag": 0.4549914663317805,
+            "rank.1": 185,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 14,
+            "Pro Con L": 2,
+            "Con Rec.": "14-2",
+            "sos": 0.2227117521945229,
+            "ncsos": 0.32757626195436,
+            "consos": 0.1504523185135762,
+            "Proj. SOS": 0.2227117521945229,
+            "Proj. Noncon SOS": 0.32757626195436,
+            "Proj. Con SOS": 0.1504523185135762,
+            "elite SOS": 0.931868842810656,
+            "elite noncon SOS": 0.8641554932109268,
+            "Opp OE": 101.16264654316164,
+            "Opp DE": 114.62297629233308,
+            "Opp Proj. OE": 101.16264654316164,
+            "Opp Proj DE": 114.62297629233308,
+            "Con Adj OE": 107.43602387594034,
+            "Con Adj DE": 107.3943562670972,
+            "Qual O": 104.099654899586,
+            "Qual D": 116.3230074470595,
+            "Qual Barthag": 0.2181030340381372,
+            "Qual Games": 1,
+            "FUN": -0.0003913630267735,
+            "ConPF": 1213,
+            "ConPA": 1015,
+            "ConPoss": 1051.8125000000002,
+            "ConOE": 1.153247370610256,
+            "ConDE": 0.965000891318557,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.875,
+            "WAB": -5.1341552187462565,
+            "WAB Rk": 100,
+            "Fun Rk": 175,
+            "adjt": 65.98244942917215
+          },
+          "kenpom": {
+            "rank": 185,
+            "team": "UMBC",
+            "conf": "AE",
+            "record": "24-8",
+            "adj_em": -1.68,
+            "adj_o": 108.2,
+            "adj_o_rank": 184,
+            "adj_d": 109.9,
+            "adj_d_rank": 193,
+            "adj_t": 66.3,
+            "adj_t_rank": 243,
+            "luck": 0.046,
+            "luck_rank": 70,
+            "sos_adj_em": -14.92,
+            "sos_adj_em_rank": 365,
+            "sos_opp_o": 100.5,
+            "sos_opp_o_rank": 363,
+            "sos_opp_d": 115.5,
+            "sos_opp_d_rank": 364,
+            "ncsos_adj_em": -7.05,
+            "ncsos_adj_em_rank": 334
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"howard\",\n      \"teamName\": \"Howard\",\n      \"torvik\": {\n        \"rank\": 206,\n        \"team\": \"Howard\",\n        \"conf\": \"MEAC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 103.41612619063604,\n        \"oe Rank\": 276,\n        \"adjde\": 106.21885293459086,\n        \"de Rank\": 123\n      },\n      \"kenpom\": {\n        \"rank\": 207,\n        \"team\": \"Howard\",\n        \"conf\": \"MEAC\",\n        \"record\": \"23-10\",\n        \"adj_em\": -3.17,\n        \"adj_o\": 103.2,\n        \"adj_o_rank\": 283,\n        \"adj_d\": 106.4\n      }\n    },\n    {\n      \"teamId\": \"umbc\",\n      \"teamName\": \"UMBC\",\n      \"torvik\": {\n        \"rank\": 185,\n        \"team\": \"UMBC\",\n        \"conf\": \"AE\",\n        \"record\": \"24-8\",\n        \"adjoe\": 107.5051010272995,\n        \"oe Rank\": 193,\n        \"adjde\": 109.20599179259196,\n        \"de Rank\": 187\n      },\n      \"kenpom\": {\n        \"rank\": 185,\n        \"team\": \"UMBC\",\n        \"conf\": \"AE\",\n        \"record\": \"24-8\",\n        \"adj_em\": -1.68,\n        \"adj_o\": 108.2,\n        \"adj_o_rank\": 184,\n        \"adj_d\": 109.9\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-16-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:10:16.348Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Howard vs UMBC 2026 prediction or preview",
+        "maxResults": 10
+      },
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:10:17.138Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Howard vs UMBC prediction for March Madness First Four game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dumbc%2Dprediction%2Dmarch%2Dmadness%2Dfirst%2Dfour%2F89194898007%2F&rut=6da3dd97c5a3833a3800036d1eb8055b2f495267f57f5e001ec76359f3bc526d",
+          "snippet": "Here&#x27;s our Howard vs UMBC prediction in the First Four NCAA Tournament game of March Madness 2026 . The winner advances to face Michigan basketball."
+        },
+        {
+          "title": "UMBC vs Howard Prediction, Picks & Odds | 17 Mar 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsgambler.com%2Fbetting%2Dtips%2Fbasketball%2Fumbc%2Dretrievers%2Dvs%2Dhoward%2Dbison%2Dprediction%2Dodds%2D2026%2D03%2D17%2F&rut=5a24e1c2068e2b759c5f6096e24f0f253d808acc63b2f30b9aae516af63bd851",
+          "snippet": "UMBC vs Howard prediction and same game parlay picks. NCAA College Basketball preview with betting odds, player props and stats."
+        },
+        {
+          "title": "UMBC vs. Howard prediction: March Madness First Four odds, pick, best ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnypost.com%2F2026%2F03%2F17%2Fbetting%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dmarch%2Dmadness%2Dfirst%2Dfour%2Dodds%2Dpick%2Dbest%2Dbet%2Dtuesday%2F&rut=3863e3b820994b421dfdb083cdd037efdfc8f052c7570c3195db05e65aa96609",
+          "snippet": "Read the Post&#x27;s March Madness First Four betting preview , including odds and a prediction for UMBC vs . Howard ."
+        },
+        {
+          "title": "UMBC vs Howard | Preview, Prediction and Top Prop Bets",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fthegruelingtruth.com%2Fbasketball%2Fcollege%2Dbasketball%2Fncaa%2Dfist%2Dfour%2Dumbc%2Dvs%2Dhoward%2Dpreview%2Dprediction%2Dand%2Dtop%2Dprop%2Dbets%2F&rut=aeedaea82366f39a6a09bd778d0fff771dbed311dde4c5e7816d2a5141e51539",
+          "snippet": "UMBC and Howard will play the first game of the NCAA Tournament on Tuesday night in Dayton, Ohio in what likes a tight matchup! Date: Tuesday, March 17, 2026 | Time: 6:40 PM ET Location: UD Arena, Dayton, OH | TV: truTV Betting Line: Howard -3.5 | Over/Under: 148.5 The Matchup Context: Howard&#x27;s Guard Play vs UMBC&#x27;s Veteran Experience The Howard Bison arrive in Dayton carrying the ..."
+        },
+        {
+          "title": "UMBC vs. Howard odds, prediction, time: 2026 First Four picks from ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fgeneral%2Fnews%2Fumbc%2Dhoward%2Dodds%2Dprediction%2Dspread%2Dline%2Dtime%2D2026%2Dfirst%2Dfour%2Dpicks%2Dfrom%2Dproven%2Dmodel%2F&rut=3dfad7e0fdbd1484471a5f7b5f7806a6933dc096470077e576657f56dfc94487",
+          "snippet": "SportsLine&#x27;s model simulated UMBC Retrievers vs . Howard Bison and revealed its college basketball picks for this First Four 2026 matchup on Tuesday By Andy Bryan Mar 17, 2026 at 7:14 am ET • 2 ..."
+        },
+        {
+          "title": "Howard vs UMBC Prediction and Preview: NCAA Tournament First Four",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fhoward%2Dvs%2Dumbc%2Dprediction%2Dpreview%2D081133863.html&rut=668802333e65a8dcef5e45bdf1ce99ac4a60b399da70dc4e5d799b27c57bf115",
+          "snippet": "Howard and UMBC get the 2026 NCAA Tournament rolling with its First Four matchup. Here&#x27;s the CFN preview and prediction ."
+        },
+        {
+          "title": "UMBC vs. Howard: NCAA Tournament Predictions & Preview",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fumbc%2Dvs%2Dhoward%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=51ad50c1ee3fec42844a4d1afbfbf5e72cfdb7e5d94a07061a13f5bebad06458",
+          "snippet": "Howard 2026 NCAA Tournament Preview Howard men&#x27;s basketball is a MEAC dynasty by any reasonable standard. The Bison claimed their third MEAC tournament title in four seasons on Saturday, beating North Carolina Central 70-63, and will head back to the NCAA Tournament for the third time in that same span under head coach Kenneth Blakney."
+        },
+        {
+          "title": "UMBC vs Howard Prediction, Picks & Odds for Today&#x27;s March Madness Game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fncaab%2Fmarch%2Dmadness%2Fumbc%2Dvs%2Dhoward%2Dpredictions%2Dpicks%2Dodds%2Dtuesday%2D3%2D17%2D2026&rut=c399a3ba8eff3828b86159044ec7b7359145b15f33ef4d05fab4d27347f16601",
+          "snippet": "The Bison will have a tough time putting up points in our UMBC vs . Howard predictions and college basketball picks for March 17."
+        },
+        {
+          "title": "Howard vs UMBC odds, prediction, betting for March Madness NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.app.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dvs%2Dumbc%2Dncaa%2Dtournament%2Dodds%2Dprediction%2Din%2Dmarch%2Dmadness%2Dbrackets%2F89199411007%2F&rut=7e6e27adb8ba5bc4ffcac61d7ab8eaf6cb7166a4d7543dcd40e69f2ab289f244",
+          "snippet": "The UMBC Retrievers will play the Howard Bison in the First Four play-in game of the NCAA Men&#x27;s Basketball Tournament on Tuesday, March 17, 2026 , 6:40 p.m. in Dayton, Ohio. (stream with Sling)."
+        },
+        {
+          "title": "UMBC vs. Howard Prediction, Projected Lineups, and Injury Report for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dprojected%2Dlineups%2F&rut=d6ab69109c50ab199027d53c0948a970343036d5f8cafcfc49a4be48b88c508f",
+          "snippet": "UMBC vs . Howard Prediction , Projected Lineups, and Injury Report for March Madness First Four Round March 17, 2026 | 8:53 AM EDT"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Howard vs UMBC prediction for March Madness First Four game\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dumbc%2Dprediction%2Dmarch%2Dmadness%2Dfirst%2Dfour%2F89194898007%2F&rut=6da3dd97c5a3833a3800036d1eb8055b2f495267f57f5e001ec76359f3bc526d\",\n      \"snippet\": \"Here&#x27;s our Howard vs UMBC prediction in the First Four NCAA Tournament game of March Madness 2026 . The winner advances to face Michigan basketball.\"\n    },\n    {\n      \"title\": \"UMBC vs Howard Prediction, Picks & Odds | 17 Mar 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsgambler.com%2Fbetting%2Dtips%2Fbasketball%2Fumbc%2Dretrievers%2Dvs%2Dhoward%2Dbison%2Dprediction%2Dodds%2D2026%2D03%2D17%2F&rut=5a24e1c2068e2b759c5f6096e24f0f253d808acc63b2f30b9aae516af63bd851\",\n      \"snippet\": \"UMBC vs Howard prediction and same game parlay picks. NCAA College Basketball preview with betting odds, player props and stats.\"\n    },\n    {\n      \"title\": \"UMBC vs. Howard prediction: March Madness First Four odds, pick, best ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnypost.com%2F2026%2F03%2F17%2Fbetting%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dmarch%2Dmadness%2Dfirst%2Dfour%2Dodds%2Dpick%2Dbest%2Dbet%2Dtuesday%2F&rut=3863e3b820994b421dfdb083cdd037efdfc8f052c7570c3195db05e65aa96609\",\n      \"snippet\": \"Read the Post&#x27;s March Madness First Four betting preview , including odds and a prediction for UMBC vs . Howard .\"\n    },\n    {\n      \"title\": \"UMBC vs Howard | Preview, Prediction and Top Prop Bets\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fthegruelingtruth.com%2Fbasketball%2Fcollege%2Dbasketball%2Fncaa%2Dfist%2Dfour%2Dumbc%2Dvs%2Dhoward%2Dpreview%2Dprediction%2Dand%2Dtop%2Dprop%2Dbets%2F&rut=aeedaea82366f39a6a09bd778d0fff771dbed311dde4c5e7816d2a5141e51539\",\n      \"snippet\": \"UMBC and Howard will play the first game of the NCAA Tournament on Tuesday night in Dayton, Ohio in what likes a tight matchup! Date: Tuesday, March 17, 2026 | Time: 6:40 PM ET Location: UD Arena, Dayton, OH | TV: truTV Betting Line: Howard -3.5 | Over/Under: 148.5 The Matchup Context: Howard&#x27;s Guard Play vs UMBC&#x27;s Veteran Experience The Howard Bison arrive in Dayton carrying the ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-16-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:10:17.138Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Howard UMBC March Madness 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:10:17.194Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "ff-midwest-16-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:10:20.930Z",
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:10:20.930Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nypost.com/2026/03/17/betting/umbc-vs-howard-prediction-march-madness-first-four-odds-pick-best-bet-tuesday/",
+        "maxChars": 2000
+      },
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:10:21.027Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://nypost.com/2026/03/17/betting/umbc-vs-howard-prediction-march-madness-first-four-odds-pick-best-bet-tuesday/",
+        "text": "UMBC vs. Howard prediction: March Madness First Four odds, pick, best bet Tuesday Primary Menu Sections US News Metro Long Island Politics World News Page Six Sports NFL MLB Olympics NBA NHL College Football College Basketball WNBA Post Sports+ Sports Betting Business Personal Finance Opinion Entertainment TV Movies Music Celebrities Awards Theater Shopping Lifestyle Weird But True Sex & Relationships Viral Trends Human Interest Parenting Fashion & Beauty Food & Drink Travel Health Wellness Fitness Health Care Medicine Men&#8217;s Health Women&#8217;s Health Mental Health Nutrition Real Estate Alexa Media Tech Science Space Environment Wildlife Archaeology Astrology Video Photos Pod Force One NY POSTcast Today&#8217;s Paper Covers Columnists Horoscopes Crosswords & Games Sports Odds Podcasts Careers Email Newsletters Official Store Home Delivery Tips Search Email New York Post Switch between CA and NY editions here. Got it Edition CA NY Open Betting navigation Sports Sports Sports Plus Sports Betting Columnists Olympics NFL MLB NBA NHL WNBA NWSL PWHL NCAAB NCAAF Sports Entertainment Golf Tennis Wrestling MMA Soccer Sports Betting Sportsbooks Betting Apps NFL NBA NHL Editorial Standards FanDuel Fanatics bet365 BetMGM Kalshi DraftKings Search Search Shop now The Amazon Big Spring Sale returns for 2026: We have the dates and early deals Betting UMBC vs. Howard prediction: March Madness First Four odds, pick, best bet Tuesday By Erich Richter Published March 17, 2026, 2:00 p.m. ET Howard has a big opportunity against UMBC. Getty Images Gambling content 21+. The New York Post may receive an affiliate commission if you sign up through our links. Read our editorial standards for more information. March Madness really begins with the First Four, which is where we tip off with UMBC vs. Howard on Tuesday night. UMBC comes in as a 1.5-point favorite at Fanatics Sportsbook , as the two teams look to advance to the first round of the March Madness tournament, where the winner wi"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://nypost.com/2026/03/17/betting/umbc-vs-howard-prediction-march-madness-first-four-odds-pick-best-bet-tuesday/\",\n    \"text\": \"UMBC vs. Howard prediction: March Madness First Four odds, pick, best bet Tuesday Primary Menu Sections US News Metro Long Island Politics World News Page Six Sports NFL MLB Olympics NBA NHL College Football College Basketball WNBA Post Sports+ Sports Betting Business Personal Finance Opinion Entertainment TV Movies Music Celebrities Awards Theater Shopping Lifestyle Weird But True Sex & Relationships Viral Trends Human Interest Parenting Fashion & Beauty Food & Drink Travel Health Wellness Fitness Health Care Medicine Men&#8217;s Health Women&#8217;s Health Mental Health Nutrition Real Estate Alexa Media Tech Science Space Environment Wildlife Archaeology Astrology Video Photos Pod Force One NY POSTcast Today&#8217;s Paper Covers Columnists Horoscopes Crosswords & Games Sports Odds Podcasts Careers Email Newsletters Official Store Home Delivery Tips Search Email New York Post Switch between CA and NY editions here. Got it Edition CA NY Open Betting navigation Sports Sports Sports Plus Sports Betting Columnists Olympics NFL MLB NBA NHL WNBA NWSL PWHL NCAAB NCAAF Sports Entertainment Golf Tennis Wrestling MMA Soccer Sports Betting Sportsbooks Betting Apps NFL NBA NHL Editorial Stand... [truncated 800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-16-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:10:21.027Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://thegruelingtruth.com/basketball/college-basketball/ncaa-fist-four-umbc-vs-howard-preview-prediction-and-top-prop-bets/",
+        "maxChars": 2000
+      },
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:10:21.236Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://thegruelingtruth.com/basketball/college-basketball/ncaa-fist-four-umbc-vs-howard-preview-prediction-and-top-prop-bets/",
+        "text": "UMBC vs Howard | Preview, Prediction and Top Prop Bets Seen on: 📈 Guides 📙 Strategies 📈 Odds 🔢 Calculators 🔍 Reviews Facebook Twitter Youtube US USA Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida Georgia Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Ohio Oklahoma Oregon Pennsylvania Rhode Island South Carolina South Dakota Tennessee Texas Utah Vermont Virginia Washington West Virginia Wisconsin Wyoming TGT on YouTube About TGT The TGT Team How TGT rates Responsible Gambling Advice Contact Our Team Writers Wanted Content Disclaimer Affiliate Disclosure Top 10s 🏅 Top10 Articles Top 10 Biggest What if’s in NCAA Tournament History: Kenyon Martin, Scott May, Rick Pitino and more Top 10 Greatest Cinderella Stories in NCAA Tournament History March Madness Upset Watch: The 10 Teams Most Likely to Shock the First Round Top 10 College Basketball Teams that didn’t win a National Championship The Top 10 First-Round Upsets in NCAA Tournament History Top 10 Indiana High School Girls Basketball Teams of All Time Top 10 College Basketball programs to never win a National Championship What’s Luck Got to Do with It? Top 10 Awful Cleveland Browns’ Decisions Since 1999 📰 Latest News 1982 New York Jets: A Muddy field away from the Super Bowl Top 10 Indiana Hoosiers of the 1970s Making Sense of What Comes Next for J.J. McCarthy and the Vikings Quarterback Situation Top 10 Purdue Boilermakers Basketball Players of All Time NFL Quarterback Rankings: Week 15 NFL Quarterback Rankings: Week 14 Shedeur Sanders’ First NFL Start Is About His Future, Not the Browns’ Present Virginia Tech Just Hit Its Home-Run Hire with James Franklin 🥇 Most Read Articles Top 15 College Basketball Coaches Top 17 Dirtiest College Basketball Coaches Top 20 Big Ten Basketball Players 17 Reasons Why"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://thegruelingtruth.com/basketball/college-basketball/ncaa-fist-four-umbc-vs-howard-preview-prediction-and-top-prop-bets/\",\n    \"text\": \"UMBC vs Howard | Preview, Prediction and Top Prop Bets Seen on: 📈 Guides 📙 Strategies 📈 Odds 🔢 Calculators 🔍 Reviews Facebook Twitter Youtube US USA Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida Georgia Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Ohio Oklahoma Oregon Pennsylvania Rhode Island South Carolina South Dakota Tennessee Texas Utah Vermont Virginia Washington West Virginia Wisconsin Wyoming TGT on YouTube About TGT The TGT Team How TGT rates Responsible Gambling Advice Contact Our Team Writers Wanted Content Disclaimer Affiliate Disclosure Top 10s 🏅 Top10 Articles Top 10 Biggest What if’s in NCAA Tournament History: Kenyon Martin, Scott May, Rick Pitino and more Top 10 Greatest Cinderella Stories in NCAA Tournament History March Madness Upset Watch: The 10 Teams Most Likely to Shock the First Round Top 10 College Basketball Teams that didn’t win a National Championship The Top 10 First-Round Upsets in NCAA Tournament History Top 10 Indiana High School G... [truncated 800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-16-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:10:21.236Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Howard vs UMBC betting odds 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:10:22.076Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Howard vs. UMBC NCAA Tournament odds, picks and predictions",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsbookwire.usatoday.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F17%2Fhoward%2Dvs%2Dumbc%2Dncaa%2Dtournament%2Dodds%2Dpicks%2Dand%2Dpredictions%2F89190864007%2F&rut=9c33fd9e9693bcbad5a1bcb16d2e58bf69ecfcea7be5be00e21e07f92745ea9b",
+          "snippet": "The Howard Bison and the UMBC Retrievers meet Tuesday in a First 4 NCAA Tournament game. Tip-off from UD Arena in Dayton, Ohio, is set for 6:40 p.m. ET."
+        },
+        {
+          "title": "Howard vs UMBC: Betting Odds and How to Watch - HBCU Gameday",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fhbcugameday.com%2F2026%2F03%2F16%2Fhoward%2Dvs%2Dumbc%2Dbetting%2Dodds%2Dand%2Dhow%2Dto%2Dwatch%2F&rut=cfb55da779314bf5c9bb3a6134df15e7d5cf21bee83b902eec9b4575ab3981ab",
+          "snippet": "Howard vs UMBC Betting Odds According to BetMGM Sportsbook, the UMBC Retrievers are a 2.5-point favorite over the Howard Bison in the NCAA Tournament First Four matchup. The relatively tight line reflects what many expect to be a competitive game between two conference champions fighting to advance into the main tournament bracket."
+        },
+        {
+          "title": "UMBC vs. Howard odds, prediction: 2026 NCAA Tournament First Four picks ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsline.com%2Finsiders%2Fumbc%2Dvs%2Dhoward%2Dodds%2Dprediction%2D2026%2Dncaa%2Dtournament%2Dpicks%2Dfrom%2Dproven%2Dmodel%2F&rut=ada5bd6fe4715d7ecf71fb4da868ff89f9f8994ab4a9f4103167bbd5593e02b2",
+          "snippet": "The Retrievers and Bison met last season, with the Retrievers winning 95-77. UMBC is a 1.5-point favorite in the latest UMBC vs Howard odds from DraftKings Sportsbook, while the over/under for total points scored is 141.5. Before making any Howard vs . UMBC picks, check out the college basketball predictions from the SportsLine Projection Model."
+        },
+        {
+          "title": "Howard vs UMBC odds, prediction, betting for March Madness NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.app.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dvs%2Dumbc%2Dncaa%2Dtournament%2Dodds%2Dprediction%2Din%2Dmarch%2Dmadness%2Dbrackets%2F89199411007%2F&rut=7e6e27adb8ba5bc4ffcac61d7ab8eaf6cb7166a4d7543dcd40e69f2ab289f244",
+          "snippet": "NCAA Tournament Howard vs . UMBC March Madness odds in first-round game, with point spread, moneyline, over/under betting ."
+        },
+        {
+          "title": "UMBC vs Howard Prediction, Picks & Odds | 17 Mar 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsgambler.com%2Fbetting%2Dtips%2Fbasketball%2Fumbc%2Dretrievers%2Dvs%2Dhoward%2Dbison%2Dprediction%2Dodds%2D2026%2D03%2D17%2F&rut=5a24e1c2068e2b759c5f6096e24f0f253d808acc63b2f30b9aae516af63bd851",
+          "snippet": "UMBC vs Howard prediction and same game parlay picks. NCAA College Basketball preview with betting odds , player props and stats."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Howard vs. UMBC NCAA Tournament odds, picks and predictions\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsbookwire.usatoday.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F17%2Fhoward%2Dvs%2Dumbc%2Dncaa%2Dtournament%2Dodds%2Dpicks%2Dand%2Dpredictions%2F89190864007%2F&rut=9c33fd9e9693bcbad5a1bcb16d2e58bf69ecfcea7be5be00e21e07f92745ea9b\",\n      \"snippet\": \"The Howard Bison and the UMBC Retrievers meet Tuesday in a First 4 NCAA Tournament game. Tip-off from UD Arena in Dayton, Ohio, is set for 6:40 p.m. ET.\"\n    },\n    {\n      \"title\": \"Howard vs UMBC: Betting Odds and How to Watch - HBCU Gameday\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fhbcugameday.com%2F2026%2F03%2F16%2Fhoward%2Dvs%2Dumbc%2Dbetting%2Dodds%2Dand%2Dhow%2Dto%2Dwatch%2F&rut=cfb55da779314bf5c9bb3a6134df15e7d5cf21bee83b902eec9b4575ab3981ab\",\n      \"snippet\": \"Howard vs UMBC Betting Odds According to BetMGM Sportsbook, the UMBC Retrievers are a 2.5-point favorite over the Howard Bison in the NCAA Tournament First Four matchup. The relatively tight line reflects what many expect to be a competitive game between two conference champions fighting to advance into the main tournament bracket.\"\n    },\n    {\n      \"title\": \"UMBC vs. Howard odds, prediction: 2026 NCAA Tournament First Four picks ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsline.com%2Finsiders%2Fumbc%2Dvs%2Dhoward%2Dodds%2Dprediction%2D2026%2Dncaa%2Dtournament%2Dpicks%2Dfrom%2Dproven%2Dmodel%2F&rut=ada5bd6fe4715d7ecf71fb4da868ff89f9f8994ab4a9f4103167bbd5593e02b2\",\n      \"snippet\": \"The Retrievers and Bison met last season, with the Retrievers winning 95-77. UMBC is a 1.5-point favorite in the latest UMBC vs Howard odds from DraftKings Sportsbook, while the over/under for total points scored is 141.5. Before making any Howard vs . UMBC picks, check out the college basketball predictions from the SportsLine Projection Model.\"\n    },\n    {\n      \"title\": \"Howard vs UMBC odds, prediction, betting for March Madness NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.app.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dvs%2Dumbc%2Dncaa%2Dtournament%2Dodds%2Dprediction%2Din%2Dmarch%2Dmadness%2Dbrackets%2F89199411007%2F&rut=7e6e27adb8ba5bc4ffcac61d7ab8eaf6cb7166a4d7543dcd40e69f2ab289f244\",\n      \"snippet\": \"NCAA Tournament Howard vs . UMBC March Madness odds in first-round game, with point spread, moneyline, over/under betting .\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-16-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:10:26.425Z",
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:10:26.425Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://hbcugameday.com/2026/03/16/howard-vs-umbc-betting-odds-and-how-to-watch/",
+        "maxChars": 1000
+      },
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:10:27.043Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://hbcugameday.com/2026/03/16/howard-vs-umbc-betting-odds-and-how-to-watch/",
+        "text": "Howard vs UMBC: Betting Odds and How to Watch - HBCU Gameday Skip to content Football Men&#039;s Basketball Women&#039;s Basketball View All HBCU GAMEDAY Home About Contact Headlines Scoreboard Football Men&#8217;s Basketball Women&#8217;s Basketball HBCU Football HBCU Basketball HBCU Sports HBCU at the Olympics HBCU Baseball HBCU Cheerleading HBCU eSports HBCU Golf HBCU Gymnastics HBCU Soccer HBCU Softball HBCU Tennis HBCU Track and Field HBCU Volleyball HBCU wrestling HBCU Culture HBCU Academics HBCU Bands Celebrity HBCUs CIAA Bowie State Chowan Claflin Elizabeth City State University Fayetteville State University Johnson C. Smith Lincoln University (PA) Livingstone Saint Augustine&#8217;s University Shaw University Virginia State Virginia Union Winston-Salem State University MEAC Coppin State Delaware State Howard University Maryland Eastern Shore Morgan State Norfolk State North Carolina Central University South Carolina State SIAC Albany State Benedict Central State Clark Atlanta "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://hbcugameday.com/2026/03/16/howard-vs-umbc-betting-odds-and-how-to-watch/\",\n    \"text\": \"Howard vs UMBC: Betting Odds and How to Watch - HBCU Gameday Skip to content Football Men&#039;s Basketball Women&#039;s Basketball View All HBCU GAMEDAY Home About Contact Headlines Scoreboard Football Men&#8217;s Basketball Women&#8217;s Basketball HBCU Football HBCU Basketball HBCU Sports HBCU at the Olympics HBCU Baseball HBCU Cheerleading HBCU eSports HBCU Golf HBCU Gymnastics HBCU Soccer HBCU Softball HBCU Tennis HBCU Track and Field HBCU Volleyball HBCU wrestling HBCU Culture HBCU Academics HBCU Bands Celebrity HBCUs CIAA Bowie State Chowan Claflin Elizabeth City State University Fayetteville State University Johnson C. Smith Lincoln University (PA) Livingstone Saint Augustine&#8217;s University Shaw University Virginia State Virginia Union Winston-Salem State University MEAC Coppin State Delaware State Howard University Maryland Eastern Shore Morgan State Norfolk State North Carolina Central University South Carolina State SIAC Albany State Benedict Central State Clark Atlanta \"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-16-tool-call-2-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:10:27.043Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://sportsbookwire.usatoday.com/story/sports/ncaab/2026/03/17/howard-vs-umbc-ncaa-tournament-odds-picks-and-predictions/89190864007/",
+        "maxChars": 1500
+      },
+      "content": ""
+    },
+    {
+      "id": "ff-midwest-16-tool-result-2-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:10:27.191Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://sportsbookwire.usatoday.com/story/sports/ncaab/2026/03/17/howard-vs-umbc-ncaa-tournament-odds-picks-and-predictions/89190864007/",
+        "text": "Howard vs. UMBC NCAA Tournament odds, picks and predictions Skip to main content Home NFL MLB NBA NHL NCAA Football NCAA Basketball UFC/MMA PGA Tour Games WNBA Newsletter Soccer NASCAR CFL Bet 101 Industry News Betting Map Online Casino USA TODAY Sports Howard Bison vs. UMBC Retrievers odds, picks and predictions Daniel Dobish Sportsbook Wire The Howard Bison (23-10) and the UMBC Retrievers (24-8) meet Tuesday in a First 4 NCAA Tournament game. Tip-off from UD Arena in Dayton, Ohio, is scheduled for 6:40 p.m. ET (truTV). Let's analyze NCAA basketball odds around the Howard vs. UMBC odds and make our expert college basketball picks and predictions for the best bets. Howard of the Mid-Eastern Athletic Conference is making its third NCAA Tournament appearance in the past 4 seasons under coach Kenny Blakeney. The Bison have a 2-headed monster with G Bryce Harris and G Cedric Taylor III each averaging a team-best 17.1 points per game (PPG). Harris has the edge with a team-best 6.9 rebounds per game, to 6.7 RPG for Taylor. The Bison have won 8 in a row, while going 11-1 straight up (SU) in the past 12 games. That lone loss was an 97-81 OT setback at home to the Yale Bulldogs Feb. 9. Howard is 11-1 ATS in the 12-game span. The Under cashed in each of the 2 games in the MEAC Tournament. UMBC is back in the NCAA Tournament for the first time since 2018, when it became the first-ever No. 16 seed to topple a No. 1 seed, stunning the Virginia Cavaliers. UMBC (the University of Maryland, "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://sportsbookwire.usatoday.com/story/sports/ncaab/2026/03/17/howard-vs-umbc-ncaa-tournament-odds-picks-and-predictions/89190864007/\",\n    \"text\": \"Howard vs. UMBC NCAA Tournament odds, picks and predictions Skip to main content Home NFL MLB NBA NHL NCAA Football NCAA Basketball UFC/MMA PGA Tour Games WNBA Newsletter Soccer NASCAR CFL Bet 101 Industry News Betting Map Online Casino USA TODAY Sports Howard Bison vs. UMBC Retrievers odds, picks and predictions Daniel Dobish Sportsbook Wire The Howard Bison (23-10) and the UMBC Retrievers (24-8) meet Tuesday in a First 4 NCAA Tournament game. Tip-off from UD Arena in Dayton, Ohio, is scheduled for 6:40 p.m. ET (truTV). Let's analyze NCAA basketball odds around the Howard vs. UMBC odds and make our expert college basketball picks and predictions for the best bets. Howard of the Mid-Eastern Athletic Conference is making its third NCAA Tournament appearance in the past 4 seasons under coach Kenny Blakeney. The Bison have a 2-headed monster with G Bryce Harris and G Cedric Taylor III each averaging a team-best 17.1 points per game (PPG). Harris has the edge with a team-best 6.9 rebounds per game, to 6.7 RPG for Taylor. The Bison have won 8 in a row, while going 11-1 straight up (SU) in the past 12 games. That lone loss was an 97-81 OT setback at home to the Yale Bulldogs Feb. 9. Howa... [truncated 300 chars]\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-16-assistant-final-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:10:31.848Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"ff-midwest-16\",\n    \"winnerId\": \"umbc\",\n    \"confidence\": 56,\n    \"rationale\": \"UMBC enters with superior overall metrics, ranking 185th in both KenPom and Torvik compared to Howard's 207th, driven by stronger adjusted offense despite comparable defensive efficiency. The Retrievers also own a better record (24-8 vs 23-10), defeated Howard 95-77 in last season's meeting, and are listed as a slight 1.5- to 2.5-point favorite by multiple sportsbooks. Howard boasts a strong 8-game win streak and productive guard duo, but UMBC's experience as America East champions and consistent edge in advanced stats provide the nod in this tightly contested First Four play-in.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"metrics-headtohead\",\n    \"title\": \"Ratings, Records, and History Comparison\",\n    \"summary\": \"UMBC shows better efficiency and prior success against Howard, making them the slight favorite in a low-major matchup.\",\n    \"evidence\": \"KenPom/Torvik: UMBC #185 (adj o 108.2) vs Howard #207 (adj o 103.2); records 24-8 vs 23-10; UMBC won 2025 H2H by 18 pts; betting lines favor UMBC by 1.5-2.5 pts; no significant injuries reported.\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-16-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T21:10:34.324Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"ff-midwest-16\",\n    \"winnerId\": \"umbc\",\n    \"confidence\": 56,\n    \"rationale\": \"UMBC enters with superior overall metrics, ranking 185th in both KenPom and Torvik compared to Howard's 207th, driven by stronger adjusted offense despite comparable defensive efficiency. The Retrievers also own a better record (24-8 vs 23-10), defeated Howard 95-77 in last season's meeting, and are listed as a slight 1.5- to 2.5-point favorite by multiple sportsbooks. Howard boasts a strong 8-game win streak and productive guard duo, but UMBC's experience as America East champions and consistent edge in advanced stats provide the nod in this tightly contested First Four play-in.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"metrics-headtohead\",\n    \"title\": \"Ratings, Records, and History Comparison\",\n    \"summary\": \"UMBC shows better efficiency and prior success against Howard, making them the slight favorite in a low-major matchup.\",\n    \"evidence\": [\n      \"KenPom/Torvik: UMBC #185 (adj o 108.2) vs Howard #207 (adj o 103.2)\",\n      \"records 24-8 vs 23-10\",\n      \"UMBC won 2025 H2H by 18 pts\",\n      \"betting lines favor UMBC by 1.5-2.5 pts\",\n      \"no significant injuries reported\"\n    ]\n  }\n}"
+    }
+  ]
+}
