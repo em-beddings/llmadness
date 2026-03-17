@@ -1,0 +1,811 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "e8-west-1",
+  "generatedAt": "2026-03-17T20:34:34.766Z",
+  "pick": {
+    "gameId": "e8-west-1",
+    "winnerId": "arizona",
+    "confidence": 0.6,
+    "rationale": "Arizona gets the nod because the overall efficiency edge is meaningful on both major systems (KenPom #3 vs. #8; Torvik #3 vs. #8), and the Wildcats’ elite defense (top-3 on both) is the more reliable Elite 8 separator against a Purdue team that’s merely good defensively. Purdue’s path is very real—its No. 1 offense on Torvik and top-2 KenPom AdjO can beat anyone if it wins the three-point and foul-line math—but Arizona’s ability to generate stops and still score efficiently gives it slightly more stable ways to control the game. Confidence is moderate because Purdue’s offensive ceiling is the highest unit on the floor, making this a credible upset despite Arizona’s higher baseline."
+  },
+  "reasoningStep": {
+    "id": "demo-2026-bracket:e8-west-1",
+    "title": "Elite 8 West Regional Final pick based on two-way efficiency edge and matchup volatility",
+    "summary": "Arizona is the slight favorite due to a stronger overall profile and a much better defensive baseline, while Purdue’s elite offense keeps upset risk high.",
+    "evidence": [
+      "Ratings: Arizona (KenPom #3, AdjEM 37.56; AdjO 127.2 #7; AdjD 89.7) vs Purdue (KenPom #8, AdjEM 30.5; AdjO 131.0 #2; AdjD 100.5).",
+      "Torvik: Arizona #3 (AdjD rank 3) vs Purdue #8 (AdjO rank 1; AdjD rank 36).",
+      "Matchup framing: Arizona’s top-tier defense vs Purdue’s top-tier offense; Arizona’s two-way balance provides the slightly safer advancement path."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-t0eqmirf",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "arizona",
+          "purdue"
+        ]
+      },
+      "startedAt": "2026-03-17T20:32:39.417Z",
+      "completedAt": "2026-03-17T20:32:39.423Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "arizona",
+          "teamName": "Arizona",
+          "torvik": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adjoe": 126.22482613026838,
+            "oe Rank": 10,
+            "adjde": 91.12598305356042,
+            "de Rank": 3,
+            "barthag": 0.9769540425666804,
+            "rank.1": 3,
+            "proj. W": 31.54848779503724,
+            "Proj. L": 2.451512204962764,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.7321035008087977,
+            "ncsos": 0.5608968275917484,
+            "consos": 0.8383219215796915,
+            "Proj. SOS": 0.7391634605797618,
+            "Proj. Noncon SOS": 0.5608968275917484,
+            "Proj. Con SOS": 0.8383219215796915,
+            "elite SOS": 0.6107621530374404,
+            "elite noncon SOS": 0.7185030373892591,
+            "Opp OE": 116.77681864454006,
+            "Opp DE": 103.54326761743802,
+            "Opp Proj. OE": 117.0215450602533,
+            "Opp Proj DE": 103.19943867573676,
+            "Con Adj OE": 126.41731670872475,
+            "Con Adj DE": 91.4031269731425,
+            "Qual O": 126.51726928825438,
+            "Qual D": 91.07345061890346,
+            "Qual Barthag": 0.977690783748864,
+            "Qual Games": 18,
+            "FUN": 0.0953869115257397,
+            "ConPF": 1513,
+            "ConPA": 1265,
+            "ConPoss": 1284.0875,
+            "ConOE": 1.178268614872429,
+            "ConDE": 0.9851353587664392,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 12.797428549241603,
+            "WAB Rk": 3,
+            "Fun Rk": 12,
+            "adjt": 70.03680025527512
+          },
+          "kenpom": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adj_em": 37.56,
+            "adj_o": 127.2,
+            "adj_o_rank": 7,
+            "adj_d": 89.7,
+            "adj_d_rank": 3,
+            "adj_t": 69.9,
+            "adj_t_rank": 54,
+            "luck": 0.018,
+            "luck_rank": 133,
+            "sos_adj_em": 14.35,
+            "sos_adj_em_rank": 13,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 16,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 15,
+            "ncsos_adj_em": 3.29,
+            "ncsos_adj_em_rank": 100
+          }
+        },
+        {
+          "teamId": "purdue",
+          "teamName": "Purdue",
+          "torvik": {
+            "rank": 8,
+            "team": "Purdue",
+            "conf": "B10",
+            "record": "26-8",
+            "adjoe": 132.5590018717881,
+            "oe Rank": 1,
+            "adjde": 100.22998490394092,
+            "de Rank": 36,
+            "barthag": 0.9613928328523536,
+            "rank.1": 8,
+            "proj. W": 26.322831607258287,
+            "Proj. L": 8.677168392741715,
+            "Pro Con W": 13,
+            "Pro Con L": 7,
+            "Con Rec.": "13-7",
+            "sos": 0.7738873012840924,
+            "ncsos": 0.6219659076422837,
+            "consos": 0.8419016741264107,
+            "Proj. SOS": 0.7798109505410649,
+            "Proj. Noncon SOS": 0.6219659076422837,
+            "Proj. Con SOS": 0.8419016741264107,
+            "elite SOS": 0.5857079383362542,
+            "elite noncon SOS": 0.722668600210557,
+            "Opp OE": 118.11871487142692,
+            "Opp DE": 102.80794183549465,
+            "Opp Proj. OE": 118.39174829162324,
+            "Opp Proj DE": 102.45670093676576,
+            "Con Adj OE": 132.14925970300166,
+            "Con Adj DE": 101.75766092890537,
+            "Qual O": 132.79838144731065,
+            "Qual D": 99.64657099351015,
+            "Qual Barthag": 0.9645256920634808,
+            "Qual Games": 20,
+            "FUN": -0.005166987961009,
+            "ConPF": 1596,
+            "ConPA": 1455,
+            "ConPoss": 1300.375,
+            "ConOE": 1.2273382678073632,
+            "ConDE": 1.1189080073055848,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.65,
+            "WAB": 8.263350871996156,
+            "WAB Rk": 7,
+            "Fun Rk": 188,
+            "adjt": 64.60054116704829
+          },
+          "kenpom": {
+            "rank": 8,
+            "team": "Purdue",
+            "conf": "B10",
+            "record": "26-8",
+            "adj_em": 30.5,
+            "adj_o": 131,
+            "adj_o_rank": 2,
+            "adj_d": 100.5,
+            "adj_d_rank": 36,
+            "adj_t": 64.6,
+            "adj_t_rank": 323,
+            "luck": -0.011,
+            "luck_rank": 211,
+            "sos_adj_em": 15.18,
+            "sos_adj_em_rank": 8,
+            "sos_opp_o": 118.1,
+            "sos_opp_o_rank": 10,
+            "sos_opp_d": 102.9,
+            "sos_opp_d_rank": 10,
+            "ncsos_adj_em": 6.28,
+            "ncsos_adj_em_rank": 51
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-64rtax5s",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Arizona Purdue injury update March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:32:39.424Z",
+      "completedAt": "2026-03-17T20:32:40.129Z",
+      "summary": "Returned 5 search results for \"Arizona Purdue injury update March 2026\".",
+      "result": [
+        {
+          "title": "Men&#x27;s College Basketball Scores, 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fscoreboard&rut=8d079b750faaf92cc86aad815adc6ad7c7b44a83d340012568a4d7b6875d6d91",
+          "snippet": "Live scores for every 2025-26 NCAAM season game on ESPN. Includes box scores, video highlights, play breakdowns and updated odds."
+        },
+        {
+          "title": "Purdue Boilermakers Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2509%2Fpurdue%2Dboilermakers&rut=6749637ba70b2005c1af58fb699ee74483858ff14011037f3ea6d0a38fbca681",
+          "snippet": "Visit ESPN for Purdue Boilermakers live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=8e03b6e11ebef4125ca9d73e7b992caf68038f23922f1dbce13a6445bedbb76f",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news. Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "Even after losing defending Big 12 Player of the Year JT Toppin to a season-ending knee injury in a loss at Arizona State, they finished in a three-way tie for third in the Big 12."
+        },
+        {
+          "title": "NBA Injury Status - 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=16983922c6f72a3bcbcca0f572278882e22341b208ebde06312eb54ac68646e8",
+          "snippet": "Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve."
+        }
+      ]
+    },
+    {
+      "id": "tool-8audloyy",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona vs Purdue Elite Eight West Regional Final availability injuries 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:32:40.129Z",
+      "completedAt": "2026-03-17T20:32:41.125Z",
+      "summary": "Returned 5 search results for \"Arizona vs Purdue Elite Eight West Regional Final availability injuries 2026\".",
+      "result": [
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "Breaking Down the 2026 Men&#x27;s NCAA Tournament Bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.theringer.com%2F2026%2F03%2F16%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dbreakdown%2D2026&rut=254ab211231fe0da517d1619a150abca0b3ef473155e7c71b5b3e7773d56e066",
+          "snippet": "The Wildcats seemingly have it all—including elite defense—but there are reasons to be wary of the West region&#x27;s top seed. Arizona hasn&#x27;t gotten past the Sweet 16 in its four tournament ..."
+        },
+        {
+          "title": "No. 2 Arizona earns No. 1 seed in a West Region that includes Purdue ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fapnews.com%2Farticle%2Fncaa%2Dtournament%2Dwest%2Dregion%2Dmarch%2Dmadness%2D694a4d758defebb0e83160ea154af303&rut=2825e11436b126f8b627cba9631e6750b12e61d69274306c9b38165c0d2e9280",
+          "snippet": "No. 2 Arizona can add a No. 1 seed to its impressive resume. The Big 12 regular-season and tournament champion Wildcats are the No. 1 seed in the West Region and will open the NCAA Tournament against Long Island University Friday in San Diego."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "The Vols keep inching closer to the elusive Final Four, bowing out in the regional final each of the past two years. Last year&#x27;s 50-point effort in the Elite Eight against Houston is an ugly memory."
+        }
+      ]
+    },
+    {
+      "id": "tool-yqlgt9pr",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://apnews.com/article/ncaa-tournament-west-region-march-madness-694a4d758defebb0e83160ea154af303",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T20:32:43.491Z",
+      "completedAt": "2026-03-17T20:32:44.478Z",
+      "summary": "Fetched https://apnews.com/article/ncaa-tournament-west-region-march-madness-694a4d758defebb0e83160ea154af303 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://apnews.com/article/ncaa-tournament-west-region-march-madness-694a4d758defebb0e83160ea154af303",
+        "text": "No. 2 Arizona earns top seed in West Region of NCAA Tournament | AP News Menu World SECTIONS Iran war Russia-Ukraine war Español China Asia Pacific Latin America Europe Africa TOP STORIES LIVE Trump says most allies and NATO refuse to help secure the Strait of Hormuz Islandwide blackout hits Cuba as it struggles with deepening energy crisis Spain’s king acknowledges ‘much abuse’ in the conquest of the Americas Newsletters The Morning Wire Our flagship newsletter breaks down the biggest headlines of the day. The Afternoon Wire Get caught up on what you may have missed throughout the day. See All Newsletters U.S. SECTIONS Immigration Weather Education Transportation Abortion LGBTQ+ Notable Deaths TOP STORIES Last protester in immigration detention after Trump’s campus crackdown has been released Illinois voters pick a new generation of Democrats after near-record retirements Apache women seek court intervention as federal land is turned over for copper mining Newsletters The Morning Wire Our flagship newsletter breaks down the biggest headlines of the day. See All Newsletters AP QUIZZES Test Your News I.Q. — take today’s quiz Politics SECTIONS 2026 Elections Election Results Election calendar White House Congress Supreme Court The latest AP-NORC polls Ground Game TOP STORIES Top counterterrorism official Kent resigns over Trump's Iran war, says Iran posed no imminent threat Kennedy Center votes to shut down operations for 2 years and names a new president Trump says a former president had an Iran confession. Aides to his predecessors deny recent contact Newsletters Ground Game Exclusive insights and key stories from the world of politics. See All Newsletters Sports SECTIONS March Madness NBA NHL MLB NFL Soccer Golf Auto Racing TOP STORIES Iranian women soccer players granted asylum in Australia are pictured training in Brisbane Yaxel Lendeborg tells AP Kentucky offered him $7 million to $9 million before he chose Michigan Alabama's Aden Holloway, the Tide's No. 2 scorer, is arrested on a felony drug charge Newsletters AP Top 25 Poll Alerts Get email alerts for every college football Top 25 Poll release. The Sports Wire Your home base for in-depth reporting from the world of sports. See All Newsletters Entertainment SECTIONS Movies Fashion Television Celebrity Interviews Music Books TOP STORIES In win for 'One Battle After Another,' the Oscars meet an anxious moment Oscars postmortem: Showrunner on Conan, the tie and biggest moments Len Deighton, author of bestselling spy thrillers, dead at 97 Newsletters AP Entertainment Wire Get AP's first personalized newsletter delivering you entertainment news twice a week. See All Newsletters Business SECTIONS Tariffs Inflation Financial Markets Financial Wellness Technology TOP STORIES Trump's tax law changes may increase the number of donors, but reduce donations to nonprofits Nvidia CEO heralds ‘inference inflection’ as next phase of AI boom, backed by $1 trillion in orders Oil prices resume their rise, but"
+      }
+    },
+    {
+      "id": "tool-utjw2yy5",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T20:32:44.478Z",
+      "completedAt": "2026-03-17T20:32:44.860Z",
+      "summary": "Fetched https://www.rotowire.com/cbasketball/injury-report.php and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "text": "2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injury Report - Latest NCAAB Injuries Up-to-date college basketball injuries By Conference ALL AAC ACC Big Ten Big 12 Big East MVC Mtn West Pac-12 SEC WCC By Position ALL G F C Daily Site All Teams FanDuel DraftKings Loading College Basketball Injury Report Unlock the Full Injury Report Today Subscribe Now RotoWire Facebook RotoWire Instagram RotoWire Twitter RotoWire YouTube RotoWire BlueS"
+      }
+    },
+    {
+      "id": "tool-bk13o8vf",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T20:32:44.860Z",
+      "completedAt": "2026-03-17T20:32:45.283Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      }
+    },
+    {
+      "id": "tool-zh10zega",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona Wildcats injury report March 2026 Purdue Boilermakers injury report March 2026 key players",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:34:19.136Z",
+      "completedAt": "2026-03-17T20:34:19.959Z",
+      "summary": "Returned 5 search results for \"Arizona Wildcats injury report March 2026 Purdue Boilermakers injury report March 2026 key players\".",
+      "result": [
+        {
+          "title": "2025-2026 NCAA BB Games: Wildcats Boilermakers Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbetiq.teamrankings.com%2Fcollege%2Dbasketball%2Fmatchups%2Fwildcats%2Dboilermakers%2D2026%2D03%2D12%2Finjury%2Dreport%2F&rut=0eb2225470bd8421a7db43ff68278e0bf1485a9799f801fd0af66b13f823cefa",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Northwestern and Purdue . Injury details for both teams, with notes on expected availability of every injured player ."
+        },
+        {
+          "title": "College Basketball Injury Report - Latest NCAAB Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report ."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "Home Page - Men&#x27;s Basketball - Purdue Boilermakers",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fpurduesports.com%2Fsports%2Fmens%2Dbasketball&rut=72d5bda41ca5b6f366f706baa3ee9f7fee32e4a7c4c8888bdc078ab677b2288d",
+          "snippet": "The Official Athletic Site of Purdue University, partner of WMT Digital. The most comprehensive coverage of the Purdue Boilermakers with rosters, schedules, scores, highlights, game recaps, and more!"
+        },
+        {
+          "title": "2025-2026 NCAA BB Games: Wildcats Boilermakers Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fwildcats%2Dboilermakers%2D2026%2D03%2D12%2Finjuries&rut=60f1b058383fd0791fc95718bdaa568959b1e37efee19bd96aa13fdbc92440f0",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Northwestern and Purdue . Includes ats, over/under and straight up odds analysis."
+        }
+      ]
+    },
+    {
+      "id": "tool-e2d8xi2y",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://betiq.teamrankings.com/college-basketball/matchups/wildcats-boilermakers-2026-03-12/injury-report/",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T20:34:21.604Z",
+      "completedAt": "2026-03-17T20:34:22.209Z",
+      "summary": "Fetched https://betiq.teamrankings.com/college-basketball/matchups/wildcats-boilermakers-2026-03-12/injury-report/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://betiq.teamrankings.com/college-basketball/matchups/wildcats-boilermakers-2026-03-12/injury-report/",
+        "text": "2025-2026 NCAA BB Games: Wildcats Boilermakers Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu BetIQ Make Smarter Sports Bets Log In Subscribe Home NFL NBA MLB NCAAF NCAAB Fantasy Football Articles Sportsbooks Main Menu Choose Your State: Colorado Illinois Indiana Iowa Kansas Kentucky Louisiana Maryland Massachusetts Michigan Mississippi Nevada New Jersey New York North Carolina Ohio Pennsylvania Tennessee Virginia West Virginia Wyoming Ontario, Canada Main Menu NFL Predictions Trends Odds Matchups NFL NFL Predictions Season Predictions Super Bowl Predictions Spread Predictions Over/Under Predictions Moneyline Predictions Game Winner Predictions NFL NFL Trends Custom Trends Tool Win-Loss Trends Spread Trends Over/Under Trends Closing Line Trends Line Movement Trends NFL Trends NFL Closing Line Trends Win-Loss Records By Closing Spread Spread Records By Closing Spread Over/Under Records By Closing Over/Under Win-Loss + Spread Records By Closing Spread Spread + Over/Under Records By Combined Closing Lines NFL Trends NFL Line Movement Trends ATS Results By Movement ATS Results By Opener Then Movement ATS Results By Movement Then Opener OU Results By Movement OU Results By Opener Then Movement OU Results By Movement Then Opener NFL NFL Matchups Matchups Home Main Menu NBA Predictions Trends Odds Matchups NBA NBA Predictions Season Predictions Today's Predictions Spread Predictions Over/Under Predictions Moneyline Predictions Game Winner Predictions NBA NBA Trends Custom Trends Tool Win-Loss Trends Spread Trends Over/Under Trends Closing Line Trends Line Movement Trends NBA Trends NBA Closing Line Trends Win-Loss Records By Closing Spread Spread Records By Closing Spread Over/Under Records By Closing Over/Under Win-Loss + Spread Records By Closing Spread Spread + Over/Under Records By Combined Closing Lines NBA Trends NBA Line Movement Trends ATS Results By Movement ATS Results By Opener Then Movement ATS Results By Movement Then Opener OU Results By Movement OU Results By Opener Then Movement OU Results By Movement Then Opener NBA NBA Matchups Matchups Home Miami @ Charlotte Okla City @ Orlando Phoenix @ Minnesota Philadelphia @ Denver Cleveland @ Milwaukee San Antonio @ Sacramento Indiana @ New York Detroit @ Washington Main Menu MLB Predictions Trends Odds Matchups MLB MLB Predictions Season Prediction"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "e8-west-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T20:32:34.597Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: e8-west-1\nCurrent game label: West Regional Final\nRound: Elite 8\nResolved teams: Arizona (arizona) vs Purdue (purdue)\nPrior committed picks: 61"
+    },
+    {
+      "id": "e8-west-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T20:32:34.597Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"e8-west-1\",\n      \"round\": \"Elite 8\",\n      \"region\": \"West\",\n      \"label\": \"West Regional Final\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"s16-west-1\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"s16-west-2\"\n      }\n    },\n    \"slotAName\": \"Arizona\",\n    \"slotBName\": \"Purdue\",\n    \"slotATeamId\": \"arizona\",\n    \"slotBTeamId\": \"purdue\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.61,\n        \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.84,\n        \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.64,\n        \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.99,\n        \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Nebraska is the clear pick based on a major efficiency gap: the Huskers rate top-20 nationally (KenPom #14, Torvik #19) with an elite defense, while Troy sits around the mid-140s on both systems with a below-average two-way profile. That defensive floor should travel well in a one-game setting and make it hard for Troy to generate enough efficient offense to keep pace. Troy’s upset path is mostly shooting/turnover variance, but Nebraska’s overall quality and stop-making ability make the favorite the much more likely advancer.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.64,\n        \"rationale\": \"North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.94,\n        \"rationale\": \"Illinois is a top-10 caliber team by both KenPom and Torvik (elite #1/#2-level offense with a top-25 defense), while Penn profiles around the mid-150s with a below-average offense, which is a massive baseline gap for a 3/14 game. ESPN Analytics and the betting market also imply a near-certain Illini advance (about 97% win probability and a spread in the mid-20s). Penn’s credible upset path is mostly three-point variance plus Illinois turnovers, but Penn’s limited offensive efficiency makes it hard to sustain enough scoring to capitalize over 40 minutes.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.6,\n        \"rationale\": \"Saint Mary’s gets the nod because the efficiency metrics show a meaningful overall edge: KenPom has the Gaels #24 vs. Texas A&M #39 (better AdjEM and notably stronger defense), and Torvik similarly favors Saint Mary’s (#25 vs. #39). In a likely slower, half-court game, Saint Mary’s defensive consistency and ability to control tempo are a good fit for March, while A&M’s upset path is real if it turns this into a more physical, chaotic game and wins the offensive-rebounding/turnover margins. I didn’t find a clear, confirmed availability issue for either side that would override the ratings edge, so I’m siding with the higher two-way baseline.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Houston is a top-5 team in both KenPom and Torvik with an elite defense and a top-20 offense, while Idaho profiles closer to the ~140–150 range with middling efficiency on both ends. That gap in physicality, depth, and shot-quality creation should be decisive over 40 minutes, especially because Houston’s defensive pressure can choke off Idaho’s already-average offense. Idaho’s only credible upset path is extreme three-point variance plus Houston having an unusually poor turnover/shooting game, but the baseline efficiency mismatch makes Houston the overwhelming advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Michigan is the clear advance based on a massive two-way efficiency gap: they’re rated #2 nationally in both KenPom (AdjEM +38.4) and Torvik, while UMBC sits around #185 with a negative adjusted margin. Michigan’s elite defense should choke off UMBC’s middling offense, and Michigan’s top-10 caliber offense gives them multiple ways to create separation even if the pace slows. UMBC’s only credible upset path is extreme three-point variance plus Michigan turnovers, but the baseline talent/athleticism and efficiency mismatch makes that outcome very unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 0.57,\n        \"rationale\": \"Georgia gets a slight nod on overall ceiling and offensive punch: both KenPom and Torvik rate the Bulldogs a bit higher overall (KP #31 vs #41; Torvik #37 vs #44) with a notably stronger adjusted offense. Saint Louis is very live because its defense grades better on both systems (top-60 level) and it’s been consistent all year, so this is close to a coin flip. With no clear, matchup-flipping availability news surfaced in the quick scan, I’ll side with Georgia’s higher-end shot creation, but keep confidence modest given the narrow efficiency gap.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.69,\n        \"rationale\": \"Even with Texas Tech missing star forward JT Toppin for the season, the Red Raiders still hold a clear efficiency edge over Akron in both KenPom (No. 19 vs. No. 64) and Torvik (No. 12 vs. No. 68), driven by a top-15 caliber offense and a much stronger defensive baseline. Importantly, Texas Tech’s All-American point guard Christian Anderson is reported available for the tournament, which stabilizes their shot creation and late-game execution. Akron is a credible upset threat as a veteran, high-win MAC champ with a top-60 offense, but its weaker defense makes it harder to string together enough stops if Texas Tech plays to its ratings.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Alabama has a substantial baseline edge in both major efficiency sets (KenPom #16 / Torvik #17) driven by an elite, top-3 caliber offense, while Hofstra profiles more like a solid but clearly lower-ceiling top-90 team. Hofstra’s path to the upset is real if it can turn this into a high-variance three-point game and avoid getting sped up, but Alabama’s shot-creation, pace control, and overall athleticism advantage should generate enough efficient looks to separate over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way quality and scoring ceiling.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 0.76,\n        \"rationale\": \"Tennessee is the better overall team on both major efficiency sets (KenPom #15 / Torvik #15) and, most importantly in a 6/11, brings a much stronger defensive profile (top-15 AdjD) that should travel and make it harder for SMU’s offense to stay efficient for 40 minutes. SMU can absolutely win if its top-30 offense gets hot from three and it avoids live-ball turnovers, but its defense (around top-95) is the more exploitable unit in this matchup. With no clearly verified, matchup-flipping availability news found in the quick scan, I’m siding with Tennessee’s higher two-way floor and stop-making edge.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-6\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Virginia has a clear top-tier efficiency profile (KenPom #13, Torvik #14) with a top-30 offense and top-15 defense, which is typically decisive in a 3/14 matchup. Wright State appears more like a mid-major underdog (reported around ~#139 on KenPom in a tournament preview), so its upset path is largely three-point/turnover variance and Virginia having an uncharacteristically poor offensive night. ESPN’s matchup predictor heavily favors Virginia (about 93%), aligning with the underlying quality gap. With no verified, major Virginia availability issue found in the quick news scan, the Cavaliers’ two-way floor makes them the strong advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-7\",\n        \"winnerId\": \"kentucky\",\n        \"confidence\": 0.58,\n        \"rationale\": \"This is close on the numbers, but Kentucky’s defensive edge is the separator: KenPom has the Wildcats notably better on AdjD (99.1 vs. Santa Clara 104.3), which tends to be the more stable advantage in a one-game setting. Santa Clara’s offense is legitimately dangerous (top-25 AdjO on KenPom and top-15 on Torvik), giving the 10-seed a very real upset path if it gets hot from three and Kentucky can’t turn stops into transition points. Still, with overall quality roughly comparable and no clear availability red flags surfaced in the quick scan, I’ll side with Kentucky’s higher defensive floor and SEC-tested physicality.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-8\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Iowa State should advance as the 2-seed with a major talent, athleticism, and depth edge that typically overwhelms a 15-seed over 40 minutes, especially if the Cyclones can turn defense into transition chances. Tennessee State’s credible upset path is mostly high-variance shooting plus forcing turnovers to keep the game close late, but the market expectation (Iowa State favored by well over 20 in early lines) implies that path is narrow. With no clear, verified availability red flags surfaced in the quick scan that would materially narrow the gap, I’m sticking with the heavy favorite.\"\n      },\n      {\n        \"gameId\": \"r32-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Duke is the pick because the underlying quality gap is still enormous: both KenPom and Torvik rate Duke No. 1 overall with an elite top-5 offense and the nation’s best defense, while TCU profiles as a solid but clearly lower-ceiling top-50 team. Duke’s main concern is availability (Caleb Foster remains out with a foot fracture), but the Blue Devils’ depth and defensive ceiling should keep TCU’s offense from sustaining efficient scoring for 40 minutes. TCU’s upset path is real if it turns the game into a physical grind and wins the 3-point/turnover variance, but Duke’s baseline efficiency margin makes it the much more likely winner.\"\n      },\n      {\n        \"gameId\": \"r32-east-2\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.56,\n        \"rationale\": \"This is essentially a coin-flip on the efficiency numbers, but St. John’s has a tiny edge in both KenPom (AdjEM 24.8 vs. 24.5) and Torvik, with slightly better offensive efficiency while still defending at an elite level. Kansas’ path is very real because its top-10 defense can grind the game down and force St. John’s into tougher half-court possessions, but the Jayhawks also carry more volatility given the ongoing uncertainty around Darryn Peterson’s availability. With the teams so closely matched, I’ll side with the marginally higher two-way baseline and cleaner current availability outlook for St. John’s.\"\n      },\n      {\n        \"gameId\": \"r32-east-3\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.57,\n        \"rationale\": \"This matchup projects as close on baseline team strength, but Louisville’s biggest swing factor remains Mikel Brown Jr.’s back injury—reporting indicates Louisville’s results dipped in games he missed, and any limitation raises their turnover and late-clock shot-creation risk against Michigan State’s physical, disciplined style. Louisville’s efficiency profile is strong enough that it can absolutely win if Brown is near full strength and the Cardinals make shots in the half court, but the health uncertainty makes Michigan State the slightly safer advance. Because Louisville has a very real path if Brown looks right, confidence stays modest.\"\n      },\n      {\n        \"gameId\": \"r32-east-4\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.6,\n        \"rationale\": \"I’m taking UConn because UCLA’s main edge is a strong, efficient offense, but their biggest swing piece (Tyler Bilodeau) has been managing a knee strain, and any limitation lowers UCLA’s scoring reliability against UConn’s size/physicality. UConn also entered the tournament with some injury questions of its own, but the Huskies’ typical tournament profile—rim protection, rebounding, and half-court defense—gives them a steadier path to win if this turns into a grind. UCLA absolutely has a credible upset path if Bilodeau is truly full-go and the Bruins’ shot-making carries, so confidence stays moderate.\"\n      },\n      {\n        \"gameId\": \"r32-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Arizona has a massive baseline edge in both major efficiency sets (KenPom #3; Torvik #3) with an elite defense and top-tier offense, which is typically decisive in a Round of 32 game. Villanova is solid (KP #33 / Torvik #36) and can keep it close if it wins the three-point variance and forces a slower half-court game, but Arizona’s two-way ceiling gives it more reliable paths to separation. Villanova also appears to be without starting forward Matt Hodge (season-ending ACL), which further tightens the underdog’s margin for error.\"\n      },\n      {\n        \"gameId\": \"r32-west-2\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Arkansas gets a narrow edge because the efficiency profiles are essentially even but slightly favor the Razorbacks on KenPom (No. 17 vs. No. 22) and Torvik (No. 20 vs. No. 21), with both teams sporting top-10 caliber offenses and similar defensive levels. In a game that likely comes down to a few possessions, Arkansas’ marginally higher adjusted efficiency margin and scoring ceiling make them the slightly safer advance. Wisconsin absolutely has a credible path if it controls tempo and turns this into a half-court execution game, so confidence stays modest.\"\n      },\n      {\n        \"gameId\": \"r32-west-3\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.63,\n        \"rationale\": \"Gonzaga’s overall profile is stronger on both major efficiency sets (KenPom #11; Torvik #11), and its elite defense is a good counter to BYU’s top-10 caliber offense. BYU has a very real upset path because it can score with anyone, but its defense grades much weaker, which is a tough way to live against a balanced Gonzaga team over 40 minutes. The main caution is Gonzaga’s Braden Huff injury situation, which lowers confidence, but the Zags’ two-way baseline and stop-making still give them more reliable ways to win.\"\n      },\n      {\n        \"gameId\": \"r32-west-4\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Purdue has the clearer high-end profile edge: both KenPom and Torvik rate the Boilermakers around #8 overall with a top-2 caliber offense, while Miami (FL) is more in the #30–35 range with a smaller efficiency margin. Miami’s path is credible because it’s good enough defensively to keep Purdue from running away and can win if it hits threes and forces Purdue into a higher-turnover game, but Purdue’s shot-quality creation and scoring consistency give it more reliable ways to control the game. With no verified, matchup-flipping availability news surfaced in the quick scan, I’m siding with the stronger overall team and elite offense.\"\n      },\n      {\n        \"gameId\": \"r32-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.83,\n        \"rationale\": \"Florida is the stronger team by a clear margin in both major efficiency sets (KenPom #4; Torvik #4) and has the more complete two-way profile, especially defensively (top-5 AdjD), which tends to be the most reliable separator in Round of 32 games. Iowa is good enough to make this competitive with a top-30 offense and a solid overall profile (KP #25 / Torvik #26), and its upset path is real if it wins the three-point/turnover variance and keeps Florida out of transition. Still, Florida’s higher baseline on both ends gives it more ways to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r32-south-2\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Vanderbilt gets a slight edge because its overall efficiency profile is marginally stronger (KenPom #12 vs. Nebraska #14; Torvik #10 vs. #19), driven by an elite, top-6 offense that can score reliably in the half court. Nebraska’s path is very real because its defense is the best unit on the floor (top-10 on both systems), and if it turns this into a lower-possession game while limiting Vanderbilt’s clean looks, the upset is absolutely live. With no clear, verified availability news found that materially changes either team’s baseline, I’ll side with Vanderbilt’s higher offensive ceiling in what projects as a near coin-flip.\"\n      },\n      {\n        \"gameId\": \"r32-south-3\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.74,\n        \"rationale\": \"Illinois has a clear top-tier efficiency edge over North Carolina in both KenPom and Torvik, driven by the nation’s best/near-best adjusted offense and a still-solid top-25 defense, which is a strong Round of 32 formula. UNC is good enough to make this competitive with a top-35 offense/defense profile, but it’s operating with a thinner margin after the season-ending loss of Caleb Wilson, and Illinois’ shot-quality creation should be the most reliable separator. North Carolina’s upset path is real if it controls tempo and wins the turnover/3-point variance, but Illinois has more ways to win if the game is played at a normal efficiency level.\"\n      },\n      {\n        \"gameId\": \"r32-south-4\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.84,\n        \"rationale\": \"Houston has a clear top-tier efficiency edge over Saint Mary’s on both KenPom and Torvik (both rate Houston #5 overall), driven by an elite defense that can choke off Saint Mary’s slower, half-court offense. Saint Mary’s is good enough defensively to keep this from turning into a blowout, but it’s harder to see the Gaels generating enough efficient scoring if Houston controls the glass and forces tough late-clock possessions. The underdog’s path is a low-possession grind plus hot shooting, yet Houston’s defensive floor and overall athleticism make it the more reliable advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Michigan is the pick because the underlying efficiency gap is still sizable: Michigan is #2 in both KenPom and Torvik with an elite defense, while Georgia sits around the low-30s/high-30s and is much weaker defensively. Georgia can absolutely win if its top-20 caliber offense gets hot from three and it forces Michigan into turnovers, but Michigan’s ability to generate stops and create higher-quality looks gives it more reliable paths to control the game. The main watch item is Michigan forward Yaxel Lendeborg’s ankle, but reporting indicates he’s expected to play, keeping Michigan’s baseline advantage intact.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-2\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.54,\n        \"rationale\": \"This projects as a near coin-flip on overall power: Alabama is slightly higher on KenPom and has the game’s best offense (top-3 AdjO), which can be decisive if the pace rises and it becomes a shot-making contest. Texas Tech’s defense is the best unit on the floor and Christian Anderson is confirmed available, but the season-ending loss of JT Toppin still narrows Tech’s margin for error against an Alabama team that can score in bunches. Texas Tech has a very credible path if it controls tempo and forces Alabama into tougher half-court possessions, so confidence stays low.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-3\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.53,\n        \"rationale\": \"This is essentially a coin-flip on the efficiency numbers, but Virginia gets a slight nod because its overall profile is marginally stronger in KenPom (No. 13 vs. No. 15) and it’s been more consistent across the season (29-4 vs. 22-11). Both teams are elite defensively (top-15 AdjD on both KenPom and Torvik), so in a likely slower, half-court game I trust Virginia’s steadier shot quality and late-game execution a bit more. Tennessee absolutely has a credible path if it wins the offensive-rebounding/physicality battle and turns Virginia’s offense into a drought, so confidence stays low.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-4\",\n        \"winnerId\": \"kentucky\",\n        \"confidence\": 0.61,\n        \"rationale\": \"I’m taking Kentucky because Iowa State’s backcourt takes a major hit with lead guard Keshon Gilbert ruled out for the NCAA tournament (groin), which meaningfully lowers their creation/ball-security baseline in a Round of 32 game. Kentucky’s underlying profile is solid (KenPom #28; Torvik #32) with a balanced offense/defense that can win without needing extreme shooting variance. Iowa State still has a credible upset path if its defense controls tempo and it wins the turnover/3-point margins, but without Gilbert the Cyclones’ margin for error shrinks enough that Kentucky is the slightly safer advance.\"\n      },\n      {\n        \"gameId\": \"s16-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Duke is still the stronger team by a wide margin in the core efficiency profiles (KenPom and Torvik both have Duke #1 overall with the nation’s best defense and a top-5 offense), while St. John’s is more in the ~top-20 range with a good-but-not-elite offense. Even with Duke’s backcourt depth hit from Caleb Foster’s foot fracture, the Blue Devils’ defensive ceiling and overall shot-quality edge give them more reliable ways to control the game. St. John’s has a credible upset path if it turns this into a physical, turnover-driven game and wins the three-point variance, but Duke’s two-way dominance makes it the likelier Sweet 16 survivor.\"\n      },\n      {\n        \"gameId\": \"s16-east-2\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.6,\n        \"rationale\": \"I’m taking UConn because their typical Sweet 16 formula—size, defensive physicality, and controlling the glass—matches well against a Michigan State team that can get bogged down if it isn’t generating easy points in transition. With no clearly verified, matchup-flipping availability news surfaced in the quick scan, I’ll side with UConn’s higher-end talent/ceiling and the more reliable half-court scoring paths in a game that’s likely to tighten late. Michigan State absolutely has a credible upset path if it wins the turnover battle and hits enough threes to stretch UConn’s rim protection, which is why confidence stays moderate.\"\n      },\n      {\n        \"gameId\": \"s16-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Arizona is the stronger team by a clear margin in the available power ratings, sitting #3 in both KenPom and Torvik with an elite defense (top-3 on both) and a top-10 offense, while Arkansas profiles more like a top-20 team with a much more vulnerable defense (around #50). Arkansas’ path is credible because its offense is truly elite (top-5 AdjO) and can win a one-game shot-making battle, but Arizona’s defensive ceiling plus overall efficiency edge gives it more reliable ways to control the game. With no verified, matchup-flipping availability issue surfaced in the quick injury/news checks, I’m siding with the higher two-way baseline.\"\n      },\n      {\n        \"gameId\": \"s16-west-2\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Purdue’s elite offense is the most bankable unit in this matchup (top-2 KenPom AdjO; #1 Torvik AdjO), and Gonzaga’s path gets tougher if Braden Huff remains sidelined, as recent reporting suggests he’s unlikely to be back yet. Gonzaga’s top-10 defense gives them a very credible upset route if they can turn it into a lower-possession grind and keep Purdue off the foul line/second chances, but Purdue’s shot-quality creation and overall efficiency edge make them the slightly safer Sweet 16 pick.\"\n      },\n      {\n        \"gameId\": \"s16-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.66,\n        \"rationale\": \"Florida has the stronger overall two-way profile in the major efficiency ratings (KenPom #4; Torvik #4), and its elite defense (top-5 on both) is the most reliable separator in a Sweet 16 game against an opponent that can really score. Vanderbilt’s upset path is very real because its offense is elite (AdjO #6 on both systems) and it has already shown it can punish Florida when it forces turnovers and gets out in transition, but Florida’s higher defensive ceiling and slightly better overall margin give it more stable ways to win if it plays to form. The main swing factor is Florida’s lead-guard health/availability, so confidence stays moderate rather than high.\"\n      },\n      {\n        \"gameId\": \"s16-south-2\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.56,\n        \"rationale\": \"This is close on raw power (KenPom #5 Houston vs. #7 Illinois; Torvik #5 vs. #6), but Houston’s elite defense is the most reliable unit on the floor and gives it a clearer path to controlling shot quality and the glass in a Sweet 16 setting. Illinois’ #1/#2-level offense can absolutely win if it hits threes and avoids live-ball turnovers, but Houston’s defensive pressure and consistency tend to travel better than offense when the game tightens late. With no clear, verified availability news found that materially changes either team’s baseline, I’ll lean slightly to the Cougars’ defensive floor in what projects as a one-possession type game.\"\n      },\n      {\n        \"gameId\": \"s16-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Michigan is the safer pick because it has the much stronger overall two-way profile (KenPom/Torvik both #2) with an elite defense that can better withstand Alabama’s high-variance, pace-and-shooting driven attack. Alabama’s offense is good enough to win this outright (top-3 AdjO on both systems), but its defense grades far behind Michigan’s, which is a tough way to live if Michigan controls shot quality and the glass. The upset path is real if Alabama turns it into a track meet and wins the 3-point math, but Michigan’s defensive floor and higher overall efficiency margin make it the likelier Sweet 16 survivor.\"\n      },\n      {\n        \"gameId\": \"s16-midwest-2\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Virginia has the clearer two-way edge in the underlying power ratings (KenPom #13 / Torvik #14) versus Kentucky (KenPom #28 / Torvik #32), with a notably better defensive efficiency that should hold up in a Sweet 16 half-court environment. Kentucky’s path is credible if it can speed the game up and win the shot-variance battle, but its overall profile is a step below and it’s more dependent on making tough shots against an elite UVA defense. With no verified, matchup-flipping availability news surfaced in the quick checks, I’m siding with Virginia’s higher baseline consistency and defensive floor.\"\n      },\n      {\n        \"gameId\": \"e8-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Duke is the pick because its verified efficiency profile is still the best in the country (KenPom and Torvik both rate Duke #1 with an elite top-5 offense and the nation’s top defense), giving it the highest baseline in a one-game regional final. UConn has a credible path if it controls the glass and turns this into a physical, half-court grind, but Duke’s defensive ceiling plus more consistent shot-quality creation make it slightly more likely to win the possession battle. Confidence is only moderate because Duke is without Caleb Foster and I couldn’t confirm UConn’s current ratings/health status from the available ratings lookup.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r32-midwest-2\",\n      \"winnerId\": \"alabama\",\n      \"confidence\": 0.54,\n      \"rationale\": \"This projects as a near coin-flip on overall power: Alabama is slightly higher on KenPom and has the game’s best offense (top-3 AdjO), which can be decisive if the pace rises and it becomes a shot-making contest. Texas Tech’s defense is the best unit on the floor and Christian Anderson is confirmed available, but the season-ending loss of JT Toppin still narrows Tech’s margin for error against an Alabama team that can score in bunches. Texas Tech has a very credible path if it controls tempo and forces Alabama into tougher half-court possessions, so confidence stays low.\"\n    },\n    {\n      \"gameId\": \"r32-midwest-3\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.53,\n      \"rationale\": \"This is essentially a coin-flip on the efficiency numbers, but Virginia gets a slight nod because its overall profile is marginally stronger in KenPom (No. 13 vs. No. 15) and it’s been more consistent across the season (29-4 vs. 22-11). Both teams are elite defensively (top-15 AdjD on both KenPom and Torvik), so in a likely slower, half-court game I trust Virginia’s steadier shot quality and late-game execution a bit more. Tennessee absolutely has a credible path if it wins the offensive-rebounding/physicality battle and turns Virginia’s offense into a drought, so confidence stays low.\"\n    },\n    {\n      \"gameId\": \"r32-midwest-4\",\n      \"winnerId\": \"kentucky\",\n      \"confidence\": 0.61,\n      \"rationale\": \"I’m taking Kentucky because Iowa State’s backcourt takes a major hit with lead guard Keshon Gilbert ruled out for the NCAA tournament (groin), which meaningfully lowers their creation/ball-security baseline in a Round of 32 game. Kentucky’s underlying profile is solid (KenPom #28; Torvik #32) with a balanced offense/defense that can win without needing extreme shooting variance. Iowa State still has a credible upset path if its defense controls tempo and it wins the turnover/3-point margins, but without Gilbert the Cyclones’ margin for error shrinks enough that Kentucky is the slightly safer advance.\"\n    },\n    {\n      \"gameId\": \"s16-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Duke is still the stronger team by a wide margin in the core efficiency profiles (KenPom and Torvik both have Duke #1 overall with the nation’s best defense and a top-5 offense), while St. John’s is more in the ~top-20 range with a good-but-not-elite offense. Even with Duke’s backcourt depth hit from Caleb Foster’s foot fracture, the Blue Devils’ defensive ceiling and overall shot-quality edge give them more reliable ways to control the game. St. John’s has a credible upset path if it turns this into a physical, turnover-driven game and wins the three-point variance, but Duke’s two-way dominance makes it the likelier Sweet 16 survivor.\"\n    },\n    {\n      \"gameId\": \"s16-east-2\",\n      \"winnerId\": \"uconn\",\n      \"confidence\": 0.6,\n      \"rationale\": \"I’m taking UConn because their typical Sweet 16 formula—size, defensive physicality, and controlling the glass—matches well against a Michigan State team that can get bogged down if it isn’t generating easy points in transition. With no clearly verified, matchup-flipping availability news surfaced in the quick scan, I’ll side with UConn’s higher-end talent/ceiling and the more reliable half-court scoring paths in a game that’s likely to tighten late. Michigan State absolutely has a credible upset path if it wins the turnover battle and hits enough threes to stretch UConn’s rim protection, which is why confidence stays moderate.\"\n    },\n    {\n      \"gameId\": \"s16-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.72,\n      \"rationale\": \"Arizona is the stronger team by a clear margin in the available power ratings, sitting #3 in both KenPom and Torvik with an elite defense (top-3 on both) and a top-10 offense, while Arkansas profiles more like a top-20 team with a much more vulnerable defense (around #50). Arkansas’ path is credible because its offense is truly elite (top-5 AdjO) and can win a one-game shot-making battle, but Arizona’s defensive ceiling plus overall efficiency edge gives it more reliable ways to control the game. With no verified, matchup-flipping availability issue surfaced in the quick injury/news checks, I’m siding with the higher two-way baseline.\"\n    },\n    {\n      \"gameId\": \"s16-west-2\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.64,\n      \"rationale\": \"Purdue’s elite offense is the most bankable unit in this matchup (top-2 KenPom AdjO; #1 Torvik AdjO), and Gonzaga’s path gets tougher if Braden Huff remains sidelined, as recent reporting suggests he’s unlikely to be back yet. Gonzaga’s top-10 defense gives them a very credible upset route if they can turn it into a lower-possession grind and keep Purdue off the foul line/second chances, but Purdue’s shot-quality creation and overall efficiency edge make them the slightly safer Sweet 16 pick.\"\n    },\n    {\n      \"gameId\": \"s16-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.66,\n      \"rationale\": \"Florida has the stronger overall two-way profile in the major efficiency ratings (KenPom #4; Torvik #4), and its elite defense (top-5 on both) is the most reliable separator in a Sweet 16 game against an opponent that can really score. Vanderbilt’s upset path is very real because its offense is elite (AdjO #6 on both systems) and it has already shown it can punish Florida when it forces turnovers and gets out in transition, but Florida’s higher defensive ceiling and slightly better overall margin give it more stable ways to win if it plays to form. The main swing factor is Florida’s lead-guard health/availability, so confidence stays moderate rather than high.\"\n    },\n    {\n      \"gameId\": \"s16-south-2\",\n      \"winnerId\": \"houston\",\n      \"confidence\": 0.56,\n      \"rationale\": \"This is close on raw power (KenPom #5 Houston vs. #7 Illinois; Torvik #5 vs. #6), but Houston’s elite defense is the most reliable unit on the floor and gives it a clearer path to controlling shot quality and the glass in a Sweet 16 setting. Illinois’ #1/#2-level offense can absolutely win if it hits threes and avoids live-ball turnovers, but Houston’s defensive pressure and consistency tend to travel better than offense when the game tightens late. With no clear, verified availability news found that materially changes either team’s baseline, I’ll lean slightly to the Cougars’ defensive floor in what projects as a one-possession type game.\"\n    },\n    {\n      \"gameId\": \"s16-midwest-1\",\n      \"winnerId\": \"michigan\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Michigan is the safer pick because it has the much stronger overall two-way profile (KenPom/Torvik both #2) with an elite defense that can better withstand Alabama’s high-variance, pace-and-shooting driven attack. Alabama’s offense is good enough to win this outright (top-3 AdjO on both systems), but its defense grades far behind Michigan’s, which is a tough way to live if Michigan controls shot quality and the glass. The upset path is real if Alabama turns it into a track meet and wins the 3-point math, but Michigan’s defensive floor and higher overall efficiency margin make it the likelier Sweet 16 survivor.\"\n    },\n    {\n      \"gameId\": \"s16-midwest-2\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.64,\n      \"rationale\": \"Virginia has the clearer two-way edge in the underlying power ratings (KenPom #13 / Torvik #14) versus Kentucky (KenPom #28 / Torvik #32), with a notably better defensive efficiency that should hold up in a Sweet 16 half-court environment. Kentucky’s path is credible if it can speed the game up and win the shot-variance battle, but its overall profile is a step below and it’s more dependent on making tough shots against an elite UVA defense. With no verified, matchup-flipping availability news surfaced in the quick checks, I’m siding with Virginia’s higher baseline consistency and defensive floor.\"\n    },\n    {\n      \"gameId\": \"e8-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.64,\n      \"rationale\": \"Duke is the pick because its verified efficiency profile is still the best in the country (KenPom and Torvik both rate Duke #1 with an elite top-5 offense and the nation’s top defense), giving it the highest baseline in a one-game regional final. UConn has a credible path if it controls the glass and turns this into a physical, half-court grind, but Duke’s defensive ceiling plus more consistent shot-quality creation make it slightly more likely to win the possession battle. Confidence is only moderate because Duke is without Caleb Foster and I couldn’t confirm UConn’s current ratings/health status from the available ratings lookup.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "e8-west-1-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:32:39.417Z",
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:32:39.417Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "arizona",
+          "purdue"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:32:39.424Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "arizona",
+          "teamName": "Arizona",
+          "torvik": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adjoe": 126.22482613026838,
+            "oe Rank": 10,
+            "adjde": 91.12598305356042,
+            "de Rank": 3,
+            "barthag": 0.9769540425666804,
+            "rank.1": 3,
+            "proj. W": 31.54848779503724,
+            "Proj. L": 2.451512204962764,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.7321035008087977,
+            "ncsos": 0.5608968275917484,
+            "consos": 0.8383219215796915,
+            "Proj. SOS": 0.7391634605797618,
+            "Proj. Noncon SOS": 0.5608968275917484,
+            "Proj. Con SOS": 0.8383219215796915,
+            "elite SOS": 0.6107621530374404,
+            "elite noncon SOS": 0.7185030373892591,
+            "Opp OE": 116.77681864454006,
+            "Opp DE": 103.54326761743802,
+            "Opp Proj. OE": 117.0215450602533,
+            "Opp Proj DE": 103.19943867573676,
+            "Con Adj OE": 126.41731670872475,
+            "Con Adj DE": 91.4031269731425,
+            "Qual O": 126.51726928825438,
+            "Qual D": 91.07345061890346,
+            "Qual Barthag": 0.977690783748864,
+            "Qual Games": 18,
+            "FUN": 0.0953869115257397,
+            "ConPF": 1513,
+            "ConPA": 1265,
+            "ConPoss": 1284.0875,
+            "ConOE": 1.178268614872429,
+            "ConDE": 0.9851353587664392,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 12.797428549241603,
+            "WAB Rk": 3,
+            "Fun Rk": 12,
+            "adjt": 70.03680025527512
+          },
+          "kenpom": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adj_em": 37.56,
+            "adj_o": 127.2,
+            "adj_o_rank": 7,
+            "adj_d": 89.7,
+            "adj_d_rank": 3,
+            "adj_t": 69.9,
+            "adj_t_rank": 54,
+            "luck": 0.018,
+            "luck_rank": 133,
+            "sos_adj_em": 14.35,
+            "sos_adj_em_rank": 13,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 16,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 15,
+            "ncsos_adj_em": 3.29,
+            "ncsos_adj_em_rank": 100
+          }
+        },
+        {
+          "teamId": "purdue",
+          "teamName": "Purdue",
+          "torvik": {
+            "rank": 8,
+            "team": "Purdue",
+            "conf": "B10",
+            "record": "26-8",
+            "adjoe": 132.5590018717881,
+            "oe Rank": 1,
+            "adjde": 100.22998490394092,
+            "de Rank": 36,
+            "barthag": 0.9613928328523536,
+            "rank.1": 8,
+            "proj. W": 26.322831607258287,
+            "Proj. L": 8.677168392741715,
+            "Pro Con W": 13,
+            "Pro Con L": 7,
+            "Con Rec.": "13-7",
+            "sos": 0.7738873012840924,
+            "ncsos": 0.6219659076422837,
+            "consos": 0.8419016741264107,
+            "Proj. SOS": 0.7798109505410649,
+            "Proj. Noncon SOS": 0.6219659076422837,
+            "Proj. Con SOS": 0.8419016741264107,
+            "elite SOS": 0.5857079383362542,
+            "elite noncon SOS": 0.722668600210557,
+            "Opp OE": 118.11871487142692,
+            "Opp DE": 102.80794183549465,
+            "Opp Proj. OE": 118.39174829162324,
+            "Opp Proj DE": 102.45670093676576,
+            "Con Adj OE": 132.14925970300166,
+            "Con Adj DE": 101.75766092890537,
+            "Qual O": 132.79838144731065,
+            "Qual D": 99.64657099351015,
+            "Qual Barthag": 0.9645256920634808,
+            "Qual Games": 20,
+            "FUN": -0.005166987961009,
+            "ConPF": 1596,
+            "ConPA": 1455,
+            "ConPoss": 1300.375,
+            "ConOE": 1.2273382678073632,
+            "ConDE": 1.1189080073055848,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.65,
+            "WAB": 8.263350871996156,
+            "WAB Rk": 7,
+            "Fun Rk": 188,
+            "adjt": 64.60054116704829
+          },
+          "kenpom": {
+            "rank": 8,
+            "team": "Purdue",
+            "conf": "B10",
+            "record": "26-8",
+            "adj_em": 30.5,
+            "adj_o": 131,
+            "adj_o_rank": 2,
+            "adj_d": 100.5,
+            "adj_d_rank": 36,
+            "adj_t": 64.6,
+            "adj_t_rank": 323,
+            "luck": -0.011,
+            "luck_rank": 211,
+            "sos_adj_em": 15.18,
+            "sos_adj_em_rank": 8,
+            "sos_opp_o": 118.1,
+            "sos_opp_o_rank": 10,
+            "sos_opp_d": 102.9,
+            "sos_opp_d_rank": 10,
+            "ncsos_adj_em": 6.28,
+            "ncsos_adj_em_rank": 51
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"arizona\",\n      \"teamName\": \"Arizona\",\n      \"torvik\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adjoe\": 126.22482613026838,\n        \"oe Rank\": 10,\n        \"adjde\": 91.12598305356042,\n        \"de Rank\": 3\n      },\n      \"kenpom\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adj_em\": 37.56,\n        \"adj_o\": 127.2,\n        \"adj_o_rank\": 7,\n        \"adj_d\": 89.7\n      }\n    },\n    {\n      \"teamId\": \"purdue\",\n      \"teamName\": \"Purdue\",\n      \"torvik\": {\n        \"rank\": 8,\n        \"team\": \"Purdue\",\n        \"conf\": \"B10\",\n        \"record\": \"26-8\",\n        \"adjoe\": 132.5590018717881,\n        \"oe Rank\": 1,\n        \"adjde\": 100.22998490394092,\n        \"de Rank\": 36\n      },\n      \"kenpom\": {\n        \"rank\": 8,\n        \"team\": \"Purdue\",\n        \"conf\": \"B10\",\n        \"record\": \"26-8\",\n        \"adj_em\": 30.5,\n        \"adj_o\": 131,\n        \"adj_o_rank\": 2,\n        \"adj_d\": 100.5\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "e8-west-1-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:32:39.424Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Arizona Purdue injury update March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:32:40.129Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Men&#x27;s College Basketball Scores, 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fscoreboard&rut=8d079b750faaf92cc86aad815adc6ad7c7b44a83d340012568a4d7b6875d6d91",
+          "snippet": "Live scores for every 2025-26 NCAAM season game on ESPN. Includes box scores, video highlights, play breakdowns and updated odds."
+        },
+        {
+          "title": "Purdue Boilermakers Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2509%2Fpurdue%2Dboilermakers&rut=6749637ba70b2005c1af58fb699ee74483858ff14011037f3ea6d0a38fbca681",
+          "snippet": "Visit ESPN for Purdue Boilermakers live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=8e03b6e11ebef4125ca9d73e7b992caf68038f23922f1dbce13a6445bedbb76f",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news. Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "Even after losing defending Big 12 Player of the Year JT Toppin to a season-ending knee injury in a loss at Arizona State, they finished in a three-way tie for third in the Big 12."
+        },
+        {
+          "title": "NBA Injury Status - 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=16983922c6f72a3bcbcca0f572278882e22341b208ebde06312eb54ac68646e8",
+          "snippet": "Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Men&#x27;s College Basketball Scores, 2025-26 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fscoreboard&rut=8d079b750faaf92cc86aad815adc6ad7c7b44a83d340012568a4d7b6875d6d91\",\n      \"snippet\": \"Live scores for every 2025-26 NCAAM season game on ESPN. Includes box scores, video highlights, play breakdowns and updated odds.\"\n    },\n    {\n      \"title\": \"Purdue Boilermakers Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2509%2Fpurdue%2Dboilermakers&rut=6749637ba70b2005c1af58fb699ee74483858ff14011037f3ea6d0a38fbca681\",\n      \"snippet\": \"Visit ESPN for Purdue Boilermakers live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=8e03b6e11ebef4125ca9d73e7b992caf68038f23922f1dbce13a6445bedbb76f\",\n      \"snippet\": \"Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news. Get the latest NCAAM standings and game analysis.\"\n    },\n    {\n      \"title\": \"Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce\",\n      \"snippet\": \"Even after losing defending Big 12 Player of the Year JT Toppin to a season-ending knee injury in a loss at Arizona State, they finished in a three-way tie for third in the Big 12.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "e8-west-1-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:32:40.129Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona vs Purdue Elite Eight West Regional Final availability injuries 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:32:41.125Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "Breaking Down the 2026 Men&#x27;s NCAA Tournament Bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.theringer.com%2F2026%2F03%2F16%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dbreakdown%2D2026&rut=254ab211231fe0da517d1619a150abca0b3ef473155e7c71b5b3e7773d56e066",
+          "snippet": "The Wildcats seemingly have it all—including elite defense—but there are reasons to be wary of the West region&#x27;s top seed. Arizona hasn&#x27;t gotten past the Sweet 16 in its four tournament ..."
+        },
+        {
+          "title": "No. 2 Arizona earns No. 1 seed in a West Region that includes Purdue ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fapnews.com%2Farticle%2Fncaa%2Dtournament%2Dwest%2Dregion%2Dmarch%2Dmadness%2D694a4d758defebb0e83160ea154af303&rut=2825e11436b126f8b627cba9631e6750b12e61d69274306c9b38165c0d2e9280",
+          "snippet": "No. 2 Arizona can add a No. 1 seed to its impressive resume. The Big 12 regular-season and tournament champion Wildcats are the No. 1 seed in the West Region and will open the NCAA Tournament against Long Island University Friday in San Diego."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "The Vols keep inching closer to the elusive Final Four, bowing out in the regional final each of the past two years. Last year&#x27;s 50-point effort in the Elite Eight against Houston is an ugly memory."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report.\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA.\"\n    },\n    {\n      \"title\": \"Breaking Down the 2026 Men&#x27;s NCAA Tournament Bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.theringer.com%2F2026%2F03%2F16%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dbreakdown%2D2026&rut=254ab211231fe0da517d1619a150abca0b3ef473155e7c71b5b3e7773d56e066\",\n      \"snippet\": \"The Wildcats seemingly have it all—including elite defense—but there are reasons to be wary of the West region&#x27;s top seed. Arizona hasn&#x27;t gotten past the Sweet 16 in its four tournament ...\"\n    },\n    {\n      \"title\": \"No. 2 Arizona earns No. 1 seed in a West Region that includes Purdue ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fapnews.com%2Farticle%2Fncaa%2Dtournament%2Dwest%2Dregion%2Dmarch%2Dmadness%2D694a4d758defebb0e83160ea154af303&rut=2825e11436b126f8b627cba9631e6750b12e61d69274306c9b38165c0d2e9280\",\n      \"snippet\": \"No. 2 Arizona can add a No. 1 seed to its impressive resume. The Big 12 regular-season and tournament champion Wildcats are the No. 1 seed in the West Region and will open the NCAA Tournament against Long Island University Friday in San Diego.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "e8-west-1-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:32:43.491Z",
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:32:43.491Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://apnews.com/article/ncaa-tournament-west-region-march-madness-694a4d758defebb0e83160ea154af303",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:32:44.478Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://apnews.com/article/ncaa-tournament-west-region-march-madness-694a4d758defebb0e83160ea154af303",
+        "text": "No. 2 Arizona earns top seed in West Region of NCAA Tournament | AP News Menu World SECTIONS Iran war Russia-Ukraine war Español China Asia Pacific Latin America Europe Africa TOP STORIES LIVE Trump says most allies and NATO refuse to help secure the Strait of Hormuz Islandwide blackout hits Cuba as it struggles with deepening energy crisis Spain’s king acknowledges ‘much abuse’ in the conquest of the Americas Newsletters The Morning Wire Our flagship newsletter breaks down the biggest headlines of the day. The Afternoon Wire Get caught up on what you may have missed throughout the day. See All Newsletters U.S. SECTIONS Immigration Weather Education Transportation Abortion LGBTQ+ Notable Deaths TOP STORIES Last protester in immigration detention after Trump’s campus crackdown has been released Illinois voters pick a new generation of Democrats after near-record retirements Apache women seek court intervention as federal land is turned over for copper mining Newsletters The Morning Wire Our flagship newsletter breaks down the biggest headlines of the day. See All Newsletters AP QUIZZES Test Your News I.Q. — take today’s quiz Politics SECTIONS 2026 Elections Election Results Election calendar White House Congress Supreme Court The latest AP-NORC polls Ground Game TOP STORIES Top counterterrorism official Kent resigns over Trump's Iran war, says Iran posed no imminent threat Kennedy Center votes to shut down operations for 2 years and names a new president Trump says a former president had an Iran confession. Aides to his predecessors deny recent contact Newsletters Ground Game Exclusive insights and key stories from the world of politics. See All Newsletters Sports SECTIONS March Madness NBA NHL MLB NFL Soccer Golf Auto Racing TOP STORIES Iranian women soccer players granted asylum in Australia are pictured training in Brisbane Yaxel Lendeborg tells AP Kentucky offered him $7 million to $9 million before he chose Michigan Alabama's Aden Holloway, the Tide's No. 2 scorer, is arrested on a felony drug charge Newsletters AP Top 25 Poll Alerts Get email alerts for every college football Top 25 Poll release. The Sports Wire Your home base for in-depth reporting from the world of sports. See All Newsletters Entertainment SECTIONS Movies Fashion Television Celebrity Interviews Music Books TOP STORIES In win for 'One Battle After Another,' the Oscars meet an anxious moment Oscars postmortem: Showrunner on Conan, the tie and biggest moments Len Deighton, author of bestselling spy thrillers, dead at 97 Newsletters AP Entertainment Wire Get AP's first personalized newsletter delivering you entertainment news twice a week. See All Newsletters Business SECTIONS Tariffs Inflation Financial Markets Financial Wellness Technology TOP STORIES Trump's tax law changes may increase the number of donors, but reduce donations to nonprofits Nvidia CEO heralds ‘inference inflection’ as next phase of AI boom, backed by $1 trillion in orders Oil prices resume their rise, but"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://apnews.com/article/ncaa-tournament-west-region-march-madness-694a4d758defebb0e83160ea154af303\",\n    \"text\": \"No. 2 Arizona earns top seed in West Region of NCAA Tournament | AP News Menu World SECTIONS Iran war Russia-Ukraine war Español China Asia Pacific Latin America Europe Africa TOP STORIES LIVE Trump says most allies and NATO refuse to help secure the Strait of Hormuz Islandwide blackout hits Cuba as it struggles with deepening energy crisis Spain’s king acknowledges ‘much abuse’ in the conquest of the Americas Newsletters The Morning Wire Our flagship newsletter breaks down the biggest headlines of the day. The Afternoon Wire Get caught up on what you may have missed throughout the day. See All Newsletters U.S. SECTIONS Immigration Weather Education Transportation Abortion LGBTQ+ Notable Deaths TOP STORIES Last protester in immigration detention after Trump’s campus crackdown has been released Illinois voters pick a new generation of Democrats after near-record retirements Apache women seek court intervention as federal land is turned over for copper mining Newsletters The Morning Wire Our flagship newsletter breaks down the biggest headlines of the day. See All Newsletters AP QUIZZES Test Your News I.Q. — take today’s quiz Politics SECTIONS 2026 Elections Election Results Election... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "e8-west-1-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:32:44.478Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:32:44.860Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "text": "2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injury Report - Latest NCAAB Injuries Up-to-date college basketball injuries By Conference ALL AAC ACC Big Ten Big 12 Big East MVC Mtn West Pac-12 SEC WCC By Position ALL G F C Daily Site All Teams FanDuel DraftKings Loading College Basketball Injury Report Unlock the Full Injury Report Today Subscribe Now RotoWire Facebook RotoWire Instagram RotoWire Twitter RotoWire YouTube RotoWire BlueS"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.rotowire.com/cbasketball/injury-report.php\",\n    \"text\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "e8-west-1-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:32:44.860Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:32:45.283Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/injuries\",\n    \"text\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker R... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "e8-west-1-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:34:19.136Z",
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:34:19.136Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona Wildcats injury report March 2026 Purdue Boilermakers injury report March 2026 key players",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:34:19.959Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2025-2026 NCAA BB Games: Wildcats Boilermakers Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbetiq.teamrankings.com%2Fcollege%2Dbasketball%2Fmatchups%2Fwildcats%2Dboilermakers%2D2026%2D03%2D12%2Finjury%2Dreport%2F&rut=0eb2225470bd8421a7db43ff68278e0bf1485a9799f801fd0af66b13f823cefa",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Northwestern and Purdue . Injury details for both teams, with notes on expected availability of every injured player ."
+        },
+        {
+          "title": "College Basketball Injury Report - Latest NCAAB Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report ."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "Home Page - Men&#x27;s Basketball - Purdue Boilermakers",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fpurduesports.com%2Fsports%2Fmens%2Dbasketball&rut=72d5bda41ca5b6f366f706baa3ee9f7fee32e4a7c4c8888bdc078ab677b2288d",
+          "snippet": "The Official Athletic Site of Purdue University, partner of WMT Digital. The most comprehensive coverage of the Purdue Boilermakers with rosters, schedules, scores, highlights, game recaps, and more!"
+        },
+        {
+          "title": "2025-2026 NCAA BB Games: Wildcats Boilermakers Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fwildcats%2Dboilermakers%2D2026%2D03%2D12%2Finjuries&rut=60f1b058383fd0791fc95718bdaa568959b1e37efee19bd96aa13fdbc92440f0",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Northwestern and Purdue . Includes ats, over/under and straight up odds analysis."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025-2026 NCAA BB Games: Wildcats Boilermakers Injury Report -\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbetiq.teamrankings.com%2Fcollege%2Dbasketball%2Fmatchups%2Fwildcats%2Dboilermakers%2D2026%2D03%2D12%2Finjury%2Dreport%2F&rut=0eb2225470bd8421a7db43ff68278e0bf1485a9799f801fd0af66b13f823cefa\",\n      \"snippet\": \"Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Northwestern and Purdue . Injury details for both teams, with notes on expected availability of every injured player .\"\n    },\n    {\n      \"title\": \"College Basketball Injury Report - Latest NCAAB Injuries\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report .\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA.\"\n    },\n    {\n      \"title\": \"Home Page - Men&#x27;s Basketball - Purdue Boilermakers\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpurduesports.com%2Fsports%2Fmens%2Dbasketball&rut=72d5bda41ca5b6f366f706baa3ee9f7fee32e4a7c4c8888bdc078ab677b2288d\",\n      \"snippet\": \"The Official Athletic Site of Purdue University, partner of WMT Digital. The most comprehensive coverage of the Purdue Boilermakers with rosters, schedules, scores, highlights, game recaps, and more!\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "e8-west-1-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:34:21.604Z",
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:34:21.604Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://betiq.teamrankings.com/college-basketball/matchups/wildcats-boilermakers-2026-03-12/injury-report/",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "e8-west-1-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:34:22.209Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://betiq.teamrankings.com/college-basketball/matchups/wildcats-boilermakers-2026-03-12/injury-report/",
+        "text": "2025-2026 NCAA BB Games: Wildcats Boilermakers Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu BetIQ Make Smarter Sports Bets Log In Subscribe Home NFL NBA MLB NCAAF NCAAB Fantasy Football Articles Sportsbooks Main Menu Choose Your State: Colorado Illinois Indiana Iowa Kansas Kentucky Louisiana Maryland Massachusetts Michigan Mississippi Nevada New Jersey New York North Carolina Ohio Pennsylvania Tennessee Virginia West Virginia Wyoming Ontario, Canada Main Menu NFL Predictions Trends Odds Matchups NFL NFL Predictions Season Predictions Super Bowl Predictions Spread Predictions Over/Under Predictions Moneyline Predictions Game Winner Predictions NFL NFL Trends Custom Trends Tool Win-Loss Trends Spread Trends Over/Under Trends Closing Line Trends Line Movement Trends NFL Trends NFL Closing Line Trends Win-Loss Records By Closing Spread Spread Records By Closing Spread Over/Under Records By Closing Over/Under Win-Loss + Spread Records By Closing Spread Spread + Over/Under Records By Combined Closing Lines NFL Trends NFL Line Movement Trends ATS Results By Movement ATS Results By Opener Then Movement ATS Results By Movement Then Opener OU Results By Movement OU Results By Opener Then Movement OU Results By Movement Then Opener NFL NFL Matchups Matchups Home Main Menu NBA Predictions Trends Odds Matchups NBA NBA Predictions Season Predictions Today's Predictions Spread Predictions Over/Under Predictions Moneyline Predictions Game Winner Predictions NBA NBA Trends Custom Trends Tool Win-Loss Trends Spread Trends Over/Under Trends Closing Line Trends Line Movement Trends NBA Trends NBA Closing Line Trends Win-Loss Records By Closing Spread Spread Records By Closing Spread Over/Under Records By Closing Over/Under Win-Loss + Spread Records By Closing Spread Spread + Over/Under Records By Combined Closing Lines NBA Trends NBA Line Movement Trends ATS Results By Movement ATS Results By Opener Then Movement ATS Results By Movement Then Opener OU Results By Movement OU Results By Opener Then Movement OU Results By Movement Then Opener NBA NBA Matchups Matchups Home Miami @ Charlotte Okla City @ Orlando Phoenix @ Minnesota Philadelphia @ Denver Cleveland @ Milwaukee San Antonio @ Sacramento Indiana @ New York Detroit @ Washington Main Menu MLB Predictions Trends Odds Matchups MLB MLB Predictions Season Prediction"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://betiq.teamrankings.com/college-basketball/matchups/wildcats-boilermakers-2026-03-12/injury-report/\",\n    \"text\": \"2025-2026 NCAA BB Games: Wildcats Boilermakers Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu BetIQ Make Smarter Sports Bets Log In Subscribe Home NFL NBA MLB NCAAF NCAAB Fantasy Football Articles Sportsbooks Main Menu Choose Your State: Colorado Illinois Indiana Iowa Kansas Kentucky Louisiana Maryland Massachusetts Michigan Mississippi Nevada New Jersey New York North Carolina Ohio Pennsylvania Tennessee Virginia West Virginia Wyoming Ontario, Canada Main Menu NFL Predictions Trends Odds Matchups NFL NFL Predictions Season Prediction... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "e8-west-1-assistant-final-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:34:28.888Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"e8-west-1\",\n    \"winnerId\": \"arizona\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Arizona gets the nod because the overall efficiency edge is meaningful on both major systems (KenPom #3 vs. #8; Torvik #3 vs. #8), and the Wildcats’ elite defense (top-3 on both) is the more reliable Elite 8 separator against a Purdue team that’s merely good defensively. Purdue’s path is very real—its No. 1 offense on Torvik and top-2 KenPom AdjO can beat anyone if it wins the three-point and foul-line math—but Arizona’s ability to generate stops and still score efficiently gives it slightly more stable ways to control the game. Confidence is moderate because Purdue’s offensive ceiling is the highest unit on the floor, making this a credible upset despite Arizona’s higher baseline.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"demo-2026-bracket:e8-west-1\",\n    \"title\": \"Elite 8 West Regional Final pick based on two-way efficiency edge and matchup volatility\",\n    \"summary\": \"Arizona is the slight favorite due to a stronger overall profile and a much better defensive baseline, while Purdue’s elite offense keeps upset risk high.\",\n    \"evidence\": \"Ratings: Arizona (KenPom #3, AdjEM 37.56; AdjO 127.2 #7; AdjD 89.7) vs Purdue (KenPom #8, AdjEM 30.5; AdjO 131.0 #2; AdjD 100.5). Torvik: Arizona #3 (AdjD rank 3) vs Purdue #8 (AdjO rank 1; AdjD rank 36). The matchup is essentially Arizona’s top-tier defense versus Purdue’s top-tier offense, with Arizona’s two-way balance providing the slightly safer advancement path.\"\n  }\n}"
+    },
+    {
+      "id": "e8-west-1-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T20:34:34.766Z",
+      "content": "{\"pick\":{\"gameId\":\"e8-west-1\",\"winnerId\":\"arizona\",\"confidence\":0.6,\"rationale\":\"Arizona gets the nod because the overall efficiency edge is meaningful on both major systems (KenPom #3 vs. #8; Torvik #3 vs. #8), and the Wildcats’ elite defense (top-3 on both) is the more reliable Elite 8 separator against a Purdue team that’s merely good defensively. Purdue’s path is very real—its No. 1 offense on Torvik and top-2 KenPom AdjO can beat anyone if it wins the three-point and foul-line math—but Arizona’s ability to generate stops and still score efficiently gives it slightly more stable ways to control the game. Confidence is moderate because Purdue’s offensive ceiling is the highest unit on the floor, making this a credible upset despite Arizona’s higher baseline.\"},\"reasoningStep\":{\"id\":\"demo-2026-bracket:e8-west-1\",\"title\":\"Elite 8 West Regional Final pick based on two-way efficiency edge and matchup volatility\",\"summary\":\"Arizona is the slight favorite due to a stronger overall profile and a much better defensive baseline, while Purdue’s elite offense keeps upset risk high.\",\"evidence\":[\"Ratings: Arizona (KenPom #3, AdjEM 37.56; AdjO 127.2 #7; AdjD 89.7) vs Purdue (KenPom #8, AdjEM 30.5; AdjO 131.0 #2; AdjD 100.5).\",\"Torvik: Arizona #3 (AdjD rank 3) vs Purdue #8 (AdjO rank 1; AdjD rank 36).\",\"Matchup framing: Arizona’s top-tier defense vs Purdue’s top-tier offense; Arizona’s two-way balance provides the slightly safer advancement path.\"]}}"
+    }
+  ]
+}
