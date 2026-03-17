@@ -15,7 +15,26 @@ import {
 
 async function readExistingGameRun(filePath: string) {
   try {
-    return gameRunArtifactSchema.parse(await readJsonFile<GameRunArtifact>(filePath)) as GameRunArtifact;
+    const raw = await readJsonFile<GameRunArtifact>(filePath);
+    const normalized = {
+      ...raw,
+      pick: raw?.pick
+        ? {
+            ...raw.pick,
+            confidence:
+              typeof raw.pick.confidence === "number" && raw.pick.confidence > 1 && raw.pick.confidence <= 100
+                ? raw.pick.confidence / 100
+                : raw.pick.confidence
+          }
+        : raw?.pick
+    };
+    const parsed = gameRunArtifactSchema.parse(normalized) as GameRunArtifact;
+
+    if (normalized.pick?.confidence !== raw.pick?.confidence) {
+      await writeJsonFile(filePath, parsed);
+    }
+
+    return parsed;
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === "ENOENT") {
       return null;
