@@ -1,0 +1,685 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "ff-midwest-16",
+  "generatedAt": "2026-03-17T19:53:42.504Z",
+  "pick": {
+    "gameId": "ff-midwest-16",
+    "winnerId": "umbc",
+    "confidence": 0.58,
+    "rationale": "UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup."
+  },
+  "reasoningStep": {
+    "id": "ff-midwest-16-analysis",
+    "title": "Efficiency edge and offensive ceiling favor UMBC",
+    "summary": "UMBC rates modestly better overall and substantially better offensively, which I’m weighting heavily in a First Four setting.",
+    "evidence": [
+      "KenPom: UMBC #185 (AdjEM -1.68, AdjO 108.2 #184, AdjD 109.9) vs Howard #207 (AdjEM -3.17, AdjO 103.2 #283, AdjD 106.4).",
+      "Torvik: UMBC #185 (AdjOE ~107.5 #193) vs Howard #206 (AdjOE ~103.4 #276).",
+      "Web/ESPN searches did not surface a definitive injury/availability issue significant enough to override the efficiency gap."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-kip3es0m",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "howard",
+          "umbc"
+        ]
+      },
+      "startedAt": "2026-03-17T19:53:26.576Z",
+      "completedAt": "2026-03-17T19:53:26.583Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "howard",
+          "teamName": "Howard",
+          "torvik": {
+            "rank": 206,
+            "team": "Howard",
+            "conf": "MEAC",
+            "record": "23-10",
+            "adjoe": 103.41612619063604,
+            "oe Rank": 276,
+            "adjde": 106.21885293459086,
+            "de Rank": 123,
+            "barthag": 0.4237206510070102,
+            "rank.1": 206,
+            "proj. W": 23,
+            "Proj. L": 10,
+            "Pro Con W": 11,
+            "Pro Con L": 3,
+            "Con Rec.": "11-3",
+            "sos": 0.2182227012834373,
+            "ncsos": 0.3452378246061259,
+            "consos": 0.0829314790582963,
+            "Proj. SOS": 0.2182227012834373,
+            "Proj. Noncon SOS": 0.3452378246061259,
+            "Proj. Con SOS": 0.0829314790582963,
+            "elite SOS": 0.9241563475213302,
+            "elite noncon SOS": 0.8634019755658309,
+            "Opp OE": 101.17991379516911,
+            "Opp DE": 114.2635706087128,
+            "Opp Proj. OE": 101.17991379516911,
+            "Opp Proj DE": 114.2635706087128,
+            "Con Adj OE": 104.13015388205592,
+            "Con Adj DE": 105.22400204985412,
+            "Qual O": 101.5301621396368,
+            "Qual D": 111.26690286496986,
+            "Qual Barthag": 0.258625819201012,
+            "Qual Games": 2,
+            "FUN": -0.0446752148450214,
+            "ConPF": 1131,
+            "ConPA": 886,
+            "ConPoss": 983.2875,
+            "ConOE": 1.1502231036192363,
+            "ConDE": 0.9010589476628148,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.7857142857142857,
+            "WAB": -6.877782036029614,
+            "WAB Rk": 135,
+            "Fun Rk": 288,
+            "adjt": 69.02671829458002
+          },
+          "kenpom": {
+            "rank": 207,
+            "team": "Howard",
+            "conf": "MEAC",
+            "record": "23-10",
+            "adj_em": -3.17,
+            "adj_o": 103.2,
+            "adj_o_rank": 283,
+            "adj_d": 106.4,
+            "adj_d_rank": 118,
+            "adj_t": 69.1,
+            "adj_t_rank": 89,
+            "luck": -0.01,
+            "luck_rank": 209,
+            "sos_adj_em": -14.64,
+            "sos_adj_em_rank": 364,
+            "sos_opp_o": 100.5,
+            "sos_opp_o_rank": 364,
+            "sos_opp_d": 115.2,
+            "sos_opp_d_rank": 361,
+            "ncsos_adj_em": -1.71,
+            "ncsos_adj_em_rank": 230
+          }
+        },
+        {
+          "teamId": "umbc",
+          "teamName": "UMBC",
+          "torvik": {
+            "rank": 185,
+            "team": "UMBC",
+            "conf": "AE",
+            "record": "24-8",
+            "adjoe": 107.5051010272995,
+            "oe Rank": 193,
+            "adjde": 109.20599179259196,
+            "de Rank": 187,
+            "barthag": 0.4549914663317805,
+            "rank.1": 185,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 14,
+            "Pro Con L": 2,
+            "Con Rec.": "14-2",
+            "sos": 0.2227117521945229,
+            "ncsos": 0.32757626195436,
+            "consos": 0.1504523185135762,
+            "Proj. SOS": 0.2227117521945229,
+            "Proj. Noncon SOS": 0.32757626195436,
+            "Proj. Con SOS": 0.1504523185135762,
+            "elite SOS": 0.931868842810656,
+            "elite noncon SOS": 0.8641554932109268,
+            "Opp OE": 101.16264654316164,
+            "Opp DE": 114.62297629233308,
+            "Opp Proj. OE": 101.16264654316164,
+            "Opp Proj DE": 114.62297629233308,
+            "Con Adj OE": 107.43602387594034,
+            "Con Adj DE": 107.3943562670972,
+            "Qual O": 104.099654899586,
+            "Qual D": 116.3230074470595,
+            "Qual Barthag": 0.2181030340381372,
+            "Qual Games": 1,
+            "FUN": -0.0003913630267735,
+            "ConPF": 1213,
+            "ConPA": 1015,
+            "ConPoss": 1051.8125000000002,
+            "ConOE": 1.153247370610256,
+            "ConDE": 0.965000891318557,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.875,
+            "WAB": -5.1341552187462565,
+            "WAB Rk": 100,
+            "Fun Rk": 175,
+            "adjt": 65.98244942917215
+          },
+          "kenpom": {
+            "rank": 185,
+            "team": "UMBC",
+            "conf": "AE",
+            "record": "24-8",
+            "adj_em": -1.68,
+            "adj_o": 108.2,
+            "adj_o_rank": 184,
+            "adj_d": 109.9,
+            "adj_d_rank": 193,
+            "adj_t": 66.3,
+            "adj_t_rank": 243,
+            "luck": 0.046,
+            "luck_rank": 70,
+            "sos_adj_em": -14.92,
+            "sos_adj_em_rank": 365,
+            "sos_opp_o": 100.5,
+            "sos_opp_o_rank": 363,
+            "sos_opp_d": 115.5,
+            "sos_opp_d_rank": 364,
+            "ncsos_adj_em": -7.05,
+            "ncsos_adj_em_rank": 334
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-guu3jnsn",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Howard vs UMBC First Four 2026 injury news",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:53:26.583Z",
+      "completedAt": "2026-03-17T19:53:27.360Z",
+      "summary": "Returned 5 search results for \"Howard vs UMBC First Four 2026 injury news\".",
+      "result": [
+        {
+          "title": "UMBC vs. Howard Prediction, Projected Lineups, and Injury Report for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dprojected%2Dlineups%2F&rut=d6ab69109c50ab199027d53c0948a970343036d5f8cafcfc49a4be48b88c508f",
+          "snippet": "UMBC vs . Howard Prediction, Projected Lineups, and Injury Report for March Madness First Four Round March 17, 2026 | 8:53 AM EDT"
+        },
+        {
+          "title": "Howard vs UMBC prediction for March Madness First Four game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dumbc%2Dprediction%2Dmarch%2Dmadness%2Dfirst%2Dfour%2F89194898007%2F&rut=6da3dd97c5a3833a3800036d1eb8055b2f495267f57f5e001ec76359f3bc526d",
+          "snippet": "Here&#x27;s our Howard vs UMBC prediction in the First Four NCAA Tournament game of March Madness 2026 . The winner advances to face Michigan basketball."
+        },
+        {
+          "title": "UMBC vs. Howard odds, prediction, time: 2026 First Four picks from ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fgeneral%2Fnews%2Fumbc%2Dhoward%2Dodds%2Dprediction%2Dspread%2Dline%2Dtime%2D2026%2Dfirst%2Dfour%2Dpicks%2Dfrom%2Dproven%2Dmodel%2F&rut=3dfad7e0fdbd1484471a5f7b5f7806a6933dc096470077e576657f56dfc94487",
+          "snippet": "SportsLine&#x27;s model simulated UMBC Retrievers vs . Howard Bison and revealed its college basketball picks for this First Four 2026 matchup on Tuesday By Andy Bryan Mar 17, 2026 at 7:14 am ET • 2 ..."
+        },
+        {
+          "title": "Howard vs UMBC Prediction and Preview: NCAA Tournament First Four",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fhoward%2Dvs%2Dumbc%2Dprediction%2Dpreview%2D081133863.html&rut=668802333e65a8dcef5e45bdf1ce99ac4a60b399da70dc4e5d799b27c57bf115",
+          "snippet": "Howard and UMBC get the 2026 NCAA Tournament rolling with its First Four matchup. Here&#x27;s the CFN preview and prediction."
+        },
+        {
+          "title": "UMBC vs. Howard Prediction, Odds, Key Player to Watch for NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fbetting%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dodds%2Dkey%2Dplayer%2Dto%2Dwatch%2Dfor%2Dncaa%2Dtournament%2Dfirst%2Dfour%2D01kkw5kcps2z&rut=6608d617e6b7614602a868a8855ccb3a4b946888400936f5dc454a531d9d210e",
+          "snippet": "The 2026 NCAA Tournament will begin on Tuesday night when the UMBC Retrievers and the Howard Bison will play against each other in the First Four . The good news is, one of these two schools will ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-6vxfkll0",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Howard UMBC injury availability",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:53:27.360Z",
+      "completedAt": "2026-03-17T19:53:28.066Z",
+      "summary": "Returned 5 search results for \"Howard UMBC injury availability\".",
+      "result": [
+        {
+          "title": "UMBC vs. Howard (Mar 17, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856435%2Fumbc%2Dhoward&rut=de6b2b37d1c9dea25fc0b6c4fb04c23517d840aa497d251d201581039fe628bf",
+          "snippet": "Live coverage of the UMBC Retrievers vs. Howard Bison NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Howard Bison Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F47%2Fhoward%2Dbison&rut=e98e99a9504175cf82e7a9b187620b60a51c5211c88078153fdd344db6b2fc6c",
+          "snippet": "Visit ESPN for Howard Bison live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "UMBC Retrievers Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2378%2Fumbc%2Dretrievers&rut=56348c08ea02fc3b1cede47391cc3f081d79d9bc203bef457737882b0a200993",
+          "snippet": "Visit ESPN for UMBC Retrievers live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Howard vs. UMBC 9/1/25 - Stream the Match Live - Watch ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fwatch%2Fplayer%3Fid%3Dab5e2377%2D617b%2D4d2e%2Db517%2Db0821a0e4d7b&rut=ededdd86c15dc47d188114b2f9b96492145172c5d2732be091fa533b8053e914",
+          "snippet": "Stream the NCAA Men&#x27;s Soccer Match Howard vs. UMBC live from % {channel} on Watch ESPN. Live stream on Monday, September 1, 2025."
+        },
+        {
+          "title": "espn_dtc",
+          "url": "//duckduckgo.com/l/?uddg=http%3A%2F%2Fwatch.product.api.espn.com%2Fapi%2Fproduct%2Fv3%2Fwatchespn%2Fweb%2Fplayback%2Fevent%3Fid%3Ddf02fa12%2Dd882%2D488b%2Db457%2D73e7ec90d2b2%26tz%3DUTC%252B1100%26lang%3Den%26countryCode%3DUS%26features%3DcontinueWatching%2Chigh%2Dvolume%2Drow%2Cwatch%2Dweb%2Dredesign%2CimageRatio58x13%2CpromoTiles%2CopenAuthz%2Cvideo%2Dheader%2Cexplore%2Drow%2Cbutton%2Dservice%2Cinline%2Dheader&rut=5e5c0ea623625f2a0a43e4793455b10bd1a5ff9386705e427dddb1396a4cd7fb",
+          "snippet": "df02fa12-d882-488b-b457-73e7ec90d2b2 \",\"tracking\": {\"trackingId\":\"df02fa12-d882-488b-b457-73e7ec90d2b2\",\"isStudio\":false,\"sport\":\"Basketball\",\"league\":\"NCAAM ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-owqzzwak",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://collegefootballnetwork.com/mens-college-basketball/umbc-vs-howard-prediction-projected-lineups/",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T19:53:30.508Z",
+      "completedAt": "2026-03-17T19:53:30.615Z",
+      "summary": "Fetched https://collegefootballnetwork.com/mens-college-basketball/umbc-vs-howard-prediction-projected-lineups/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://collegefootballnetwork.com/mens-college-basketball/umbc-vs-howard-prediction-projected-lineups/",
+        "text": "UMBC vs. Howard Prediction, Projected Lineups, and Injury Report for March Madness First Four Round | College Sports Network Discord RSS Twitter Home CFB College Teams AAC Army Black Knights Charlotte 49ers East Carolina Pirates Florida Atlantic Owls Memphis Tigers Navy Midshipmen North Texas Mean Green Rice Owls South Florida Bulls Temple Owls Tulane Green Wave Tulsa Golden Hurricane UAB Blazers UTSA Roadrunners ACC Boston College Eagles California Golden Bears Clemson Tigers Duke Blue Devils Florida State Seminoles Georgia Tech Yellow Jackets Louisville Cardinals Miami (FL) Hurricanes North Carolina State Wolfpack North Carolina Tar Heels Pittsburgh Panthers SMU Mustangs Stanford Cardinal Syracuse Orange Virginia Cavaliers Virginia Tech Hokies Wake Forest Demon Deacons Big 12 Arizona State Sun Devils Arizona Wildcats Baylor Bears BYU Cougars Cincinnati Bearcats Colorado Buffaloes Houston Cougars Iowa State Cyclones Kansas Jayhawks Kansas State Wildcats Oklahoma State Cowboys TCU Horned Frogs Texas Tech Red Raiders UCF Knights Utah Utes West Virginia Mountaineers Big Ten Illinois Fighting Illini Indiana Hoosiers Iowa Hawkeyes Maryland Terrapins Michigan State Spartans Michigan Wolverines Minnesota Golden Gophers Nebraska Cornhuskers Northwestern Wildcats Ohio State Buckeyes Oregon Ducks Penn State Nittany Lions Purdue Boilermakers Rutgers Scarlet Knights UCLA Bruins USC Trojans Washington Huskies Wisconsin Badgers SEC Alabama Crimson Tide Arkansas Razorbacks Auburn Tigers Florida Gators Georgia Bulldogs Kentucky Wildcats LSU Tigers Mississippi State Bulldogs Missouri Tigers Oklahoma Sooners Ole Miss Rebels South Carolina Gamecocks Tennessee Volunteers Texas A&#038;M Aggies Texas Longhorns Vanderbilt Commodores Conference USA FIU Golden Panthers Jacksonville State Gamecocks Liberty Flames Louisiana Tech Bulldogs Middle Tennessee Blue Raiders New Mexico State Aggies Sam Houston Bearkats UTEP Miners Western Kentucky Hilltoppers MAC Akron Zips Ball State Cardinals Bowling Green Falcons Buffalo Bulls Central Michigan Chippewas Eastern Michigan Eagles Kent State Golden Flashes Miami (OH) RedHawks Northern Illinois Huskies Ohio Bobcats Toledo Rockets Western Michigan Broncos Mountain West Air Force Falcons Boise State Broncos Colorado State Rams Fresno State Bulldogs Hawaii Rainbow Warriors Nevada Wolf Pack New Mexico Lobos San Diego State Aztecs San Jose State Spartans UNLV Rebels Utah State Aggies Wyoming Cowboys Pac-12 Oregon State Beavers Washington State Cougars Sun Belt Appalachian State Mountaineers Arkansas State Red Wolves Coastal Carolina Chanticleers Georgia Southern Eagles Georgia State Panthers James Madison Dukes Louisiana-Monroe Warhawks Louisiana Rajin&#8217; Cajuns Marshall Thundering Herd Old Dominion Monarchs South Alabama Jaguars Southern Miss Golden Eagles Texas State Bobcats Troy Trojans FBS Independents Notre Dame Fighting Irish UConn Huskies UMass Minutemen Olympics Nascar NBA NFL Men&#8217;s CBB Tennis Baseball Women&#8217;s CB"
+      }
+    },
+    {
+      "id": "tool-f48mpp29",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.cbssports.com/general/news/umbc-howard-odds-prediction-spread-line-time-2026-first-four-picks-from-proven-model/",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T19:53:30.616Z",
+      "completedAt": "2026-03-17T19:53:30.839Z",
+      "summary": "Fetched https://www.cbssports.com/general/news/umbc-howard-odds-prediction-spread-line-time-2026-first-four-picks-from-proven-model/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.cbssports.com/general/news/umbc-howard-odds-prediction-spread-line-time-2026-first-four-picks-from-proven-model/",
+        "text": "UMBC vs. Howard prediction, odds, spread, time: 2026 First Four picks from proven model - CBS Sports site: media | arena: general | pageType: stories | section: | slug: umbc-howard-odds-prediction-spread-line-time-2026-first-four-picks | sport: other | route: article_single.us | 6-keys: media/spln/other/reg/free/stories Skip to Main Content Close Menu All Sports Menu Sports Watch Fantasy Betting Featured NFL Bracket Brackets NCAA BB NCAA WBB NBA Golf UFC SportsSoccer Soccer MLB Explore More NCAA FB NHL Champions League SportsWwe WWE WNBA Boxing NASCAR Motor Sports NWSL UFL Horse Racing Northeast Tennis BIG3 High School Olympics Podcasts Shop Northeast Promotions PBR Northeast MLV Northeast 3ICE Northeast Play Golf NFL Explore NFL NFL News Free Agency Tracker Scores Schedule Standings Super Bowl Playoff Bracket Teams Stats NFL Draft Prospect Rankings Mock Drafts Power Rankings Video Players Injuries Transactions NFL Betting Fantasy Paramount + NFL Shop NFL Teams See All ArrowForward AFC East Bills Dolphins Jets Patriots AFC North Bengals Browns Ravens Steelers AFC South Colts Jaguars Texans Titans AFC West Broncos Chargers Chiefs Raiders NFC East Commanders Cowboys Eagles Giants NFC North Bears Lions Packers Vikings NFC South Buccaneers Falcons Panthers Saints NFC West 49ers Cardinals Rams Seahawks Brackets NCAA BB Explore NCAA BB College Basketball News Scores NCAA Tournament Bracket Games Live Bracket Printable Bracket March Madness Live Expert Brackets Expert Picks Schedule NIT Bracket Standings Rankings Expert Picks Odds Stats Teams Players College Basketball Betting Women's BB NBA Draft Prospect Rankings 2026 Top Recruits 2026 Top Classes CBS Sports Classic College Shop Shows & Podcasts See All ArrowForward NCAA WBB Explore NCAA WBB Women's College Basketball News Scores NCAA Tournament Live Bracket Printable Bracket Women's Bracket Games Schedule Expert Brackets WNIT WBIT Standings Rankings Teams Video College Shop Northeast NBA Explore NBA NBA News Scores Schedule Standings Stats Teams Expert Picks Odds Picks Props Prospect Rankings Mock Drafts Video Injuries Transactions Players Power Rankings NBA Betting NBA Shop Northeast NBA Teams See All ArrowForward Atlantic 76ers Celtics Knicks Nets Raptors Central Bucks Bulls Cavaliers Pacers Pistons Southeast Hawks Heat Hornets Magic Wizards Northwest Jazz Nuggets Thunder Timberwolves Trail Blazers Pacific Clippers Kings Lakers Suns Warriors Southwest Grizzlies Mavericks Pelicans Rockets Spurs Golf Explore Golf Golf News Leaderboard Schedule Stats Rankings Watch Live Golf Betting Masters Play Golf Northeast Golf Shop Northeast Shows & Podcasts See All ArrowForward UFC Explore UFC UFC News UFC on Paramount+ UFC Fight Night Schedule Rankings UFC Betting Soccer Explore Soccer Soccer News Champions League Serie A Europa League Premier League NWSL MLS Watch NWSL Watch EFL La Liga World Cup Women's World Cup CBS Sports Golazo Network Video Soccer Betting UCL Bracket Games Shop Northeast Live Channels Liv"
+      }
+    },
+    {
+      "id": "tool-8zh7te56",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://sports.yahoo.com/articles/howard-vs-umbc-prediction-preview-081133863.html",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T19:53:31.996Z",
+      "completedAt": "2026-03-17T19:53:32.859Z",
+      "summary": "Fetched https://sports.yahoo.com/articles/howard-vs-umbc-prediction-preview-081133863.html and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://sports.yahoo.com/articles/howard-vs-umbc-prediction-preview-081133863.html",
+        "text": "Howard vs UMBC Prediction and Preview: NCAA Tournament First Four - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Streaming TVs Gift ideas Best gifts for men Best gift cards Best gifts for mom Best gifts for teens Best gifts for couples Best gifts for sister-in-law Best gifts for girlfriends Best gifts for grandma Best gifts for sisters Best gifts for husbands Best birthday gifts for her Best get well soon gifts Best travel gifts Best gifts for mother-in-law Best anniversary gifts for wife Stores Amazon Best Buy Coach Outlet Home Depot Kate Spade New York Lowes Macy&#x27;s Nordstrom Sephora Sur La Table Target Ulta Walmart Wayfair Zappos Shopping Guides Best cordless stick vacuums Best water bottles Best vacuums Best air fryers Best luggage Best jeans Best bras Best nontoxic nail polish Best under eye cream Best skin tightening creams Best coffee makers Best comforters Best mops Best Hoka shoes for walking Best instant pot Deals Toys and games General Food Travel Autos EV & Future Tech Classic & Collector Deals & Buying Guides Ownership Safety & Recalls Policy & Environment New Vehicles & Reviews Auto Shows General People & Culture Gift ideas Buying guides Amazon Spring Sale deals Amazon Spring Sale tech deals Entertainment Celebrity TV Movies Music How to Watch Interviews Videos Finance My portfolio News Latest Originals Newsletters Stock market Crypto Earnings Tariffs Economics Tech Housing Fed meeting Markets Most active stocks Top stock gainers Biggest stock losers Trending tickers Highest dividend stocks Crypto Prediction markets Options Sectors Futures World indices Research Equities screener Penny stock screener Most shorted screener Undervalued growth screener Financial calendar Earnings calendar Stock comparison Currency converter Advanced charts Community Personal finance My Money Credit cards Banking Mortgages Mortgage calculator Insurance Taxes Student Loans Personal Loans Vide"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "ff-midwest-16-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T19:53:24.996Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: ff-midwest-16\nCurrent game label: Midwest 16 play-in\nRound: First Four\nResolved teams: Howard (howard) vs UMBC (umbc)\nPrior committed picks: 2"
+    },
+    {
+      "id": "ff-midwest-16-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T19:53:24.996Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"ff-midwest-16\",\n      \"round\": \"First Four\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 16 play-in\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"howard\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"umbc\"\n      }\n    },\n    \"slotAName\": \"Howard\",\n    \"slotBName\": \"UMBC\",\n    \"slotATeamId\": \"howard\",\n    \"slotBTeamId\": \"umbc\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": 0.62,\n      \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": 0.66,\n      \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "ff-midwest-16-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:53:26.576Z",
+      "content": null
+    },
+    {
+      "id": "ff-midwest-16-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:26.576Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "howard",
+          "umbc"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-16-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:26.583Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "howard",
+          "teamName": "Howard",
+          "torvik": {
+            "rank": 206,
+            "team": "Howard",
+            "conf": "MEAC",
+            "record": "23-10",
+            "adjoe": 103.41612619063604,
+            "oe Rank": 276,
+            "adjde": 106.21885293459086,
+            "de Rank": 123,
+            "barthag": 0.4237206510070102,
+            "rank.1": 206,
+            "proj. W": 23,
+            "Proj. L": 10,
+            "Pro Con W": 11,
+            "Pro Con L": 3,
+            "Con Rec.": "11-3",
+            "sos": 0.2182227012834373,
+            "ncsos": 0.3452378246061259,
+            "consos": 0.0829314790582963,
+            "Proj. SOS": 0.2182227012834373,
+            "Proj. Noncon SOS": 0.3452378246061259,
+            "Proj. Con SOS": 0.0829314790582963,
+            "elite SOS": 0.9241563475213302,
+            "elite noncon SOS": 0.8634019755658309,
+            "Opp OE": 101.17991379516911,
+            "Opp DE": 114.2635706087128,
+            "Opp Proj. OE": 101.17991379516911,
+            "Opp Proj DE": 114.2635706087128,
+            "Con Adj OE": 104.13015388205592,
+            "Con Adj DE": 105.22400204985412,
+            "Qual O": 101.5301621396368,
+            "Qual D": 111.26690286496986,
+            "Qual Barthag": 0.258625819201012,
+            "Qual Games": 2,
+            "FUN": -0.0446752148450214,
+            "ConPF": 1131,
+            "ConPA": 886,
+            "ConPoss": 983.2875,
+            "ConOE": 1.1502231036192363,
+            "ConDE": 0.9010589476628148,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.7857142857142857,
+            "WAB": -6.877782036029614,
+            "WAB Rk": 135,
+            "Fun Rk": 288,
+            "adjt": 69.02671829458002
+          },
+          "kenpom": {
+            "rank": 207,
+            "team": "Howard",
+            "conf": "MEAC",
+            "record": "23-10",
+            "adj_em": -3.17,
+            "adj_o": 103.2,
+            "adj_o_rank": 283,
+            "adj_d": 106.4,
+            "adj_d_rank": 118,
+            "adj_t": 69.1,
+            "adj_t_rank": 89,
+            "luck": -0.01,
+            "luck_rank": 209,
+            "sos_adj_em": -14.64,
+            "sos_adj_em_rank": 364,
+            "sos_opp_o": 100.5,
+            "sos_opp_o_rank": 364,
+            "sos_opp_d": 115.2,
+            "sos_opp_d_rank": 361,
+            "ncsos_adj_em": -1.71,
+            "ncsos_adj_em_rank": 230
+          }
+        },
+        {
+          "teamId": "umbc",
+          "teamName": "UMBC",
+          "torvik": {
+            "rank": 185,
+            "team": "UMBC",
+            "conf": "AE",
+            "record": "24-8",
+            "adjoe": 107.5051010272995,
+            "oe Rank": 193,
+            "adjde": 109.20599179259196,
+            "de Rank": 187,
+            "barthag": 0.4549914663317805,
+            "rank.1": 185,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 14,
+            "Pro Con L": 2,
+            "Con Rec.": "14-2",
+            "sos": 0.2227117521945229,
+            "ncsos": 0.32757626195436,
+            "consos": 0.1504523185135762,
+            "Proj. SOS": 0.2227117521945229,
+            "Proj. Noncon SOS": 0.32757626195436,
+            "Proj. Con SOS": 0.1504523185135762,
+            "elite SOS": 0.931868842810656,
+            "elite noncon SOS": 0.8641554932109268,
+            "Opp OE": 101.16264654316164,
+            "Opp DE": 114.62297629233308,
+            "Opp Proj. OE": 101.16264654316164,
+            "Opp Proj DE": 114.62297629233308,
+            "Con Adj OE": 107.43602387594034,
+            "Con Adj DE": 107.3943562670972,
+            "Qual O": 104.099654899586,
+            "Qual D": 116.3230074470595,
+            "Qual Barthag": 0.2181030340381372,
+            "Qual Games": 1,
+            "FUN": -0.0003913630267735,
+            "ConPF": 1213,
+            "ConPA": 1015,
+            "ConPoss": 1051.8125000000002,
+            "ConOE": 1.153247370610256,
+            "ConDE": 0.965000891318557,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.875,
+            "WAB": -5.1341552187462565,
+            "WAB Rk": 100,
+            "Fun Rk": 175,
+            "adjt": 65.98244942917215
+          },
+          "kenpom": {
+            "rank": 185,
+            "team": "UMBC",
+            "conf": "AE",
+            "record": "24-8",
+            "adj_em": -1.68,
+            "adj_o": 108.2,
+            "adj_o_rank": 184,
+            "adj_d": 109.9,
+            "adj_d_rank": 193,
+            "adj_t": 66.3,
+            "adj_t_rank": 243,
+            "luck": 0.046,
+            "luck_rank": 70,
+            "sos_adj_em": -14.92,
+            "sos_adj_em_rank": 365,
+            "sos_opp_o": 100.5,
+            "sos_opp_o_rank": 363,
+            "sos_opp_d": 115.5,
+            "sos_opp_d_rank": 364,
+            "ncsos_adj_em": -7.05,
+            "ncsos_adj_em_rank": 334
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"howard\",\n      \"teamName\": \"Howard\",\n      \"torvik\": {\n        \"rank\": 206,\n        \"team\": \"Howard\",\n        \"conf\": \"MEAC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 103.41612619063604,\n        \"oe Rank\": 276,\n        \"adjde\": 106.21885293459086,\n        \"de Rank\": 123\n      },\n      \"kenpom\": {\n        \"rank\": 207,\n        \"team\": \"Howard\",\n        \"conf\": \"MEAC\",\n        \"record\": \"23-10\",\n        \"adj_em\": -3.17,\n        \"adj_o\": 103.2,\n        \"adj_o_rank\": 283,\n        \"adj_d\": 106.4\n      }\n    },\n    {\n      \"teamId\": \"umbc\",\n      \"teamName\": \"UMBC\",\n      \"torvik\": {\n        \"rank\": 185,\n        \"team\": \"UMBC\",\n        \"conf\": \"AE\",\n        \"record\": \"24-8\",\n        \"adjoe\": 107.5051010272995,\n        \"oe Rank\": 193,\n        \"adjde\": 109.20599179259196,\n        \"de Rank\": 187\n      },\n      \"kenpom\": {\n        \"rank\": 185,\n        \"team\": \"UMBC\",\n        \"conf\": \"AE\",\n        \"record\": \"24-8\",\n        \"adj_em\": -1.68,\n        \"adj_o\": 108.2,\n        \"adj_o_rank\": 184,\n        \"adj_d\": 109.9\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-16-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:26.583Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Howard vs UMBC First Four 2026 injury news",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-16-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:27.360Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "UMBC vs. Howard Prediction, Projected Lineups, and Injury Report for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dprojected%2Dlineups%2F&rut=d6ab69109c50ab199027d53c0948a970343036d5f8cafcfc49a4be48b88c508f",
+          "snippet": "UMBC vs . Howard Prediction, Projected Lineups, and Injury Report for March Madness First Four Round March 17, 2026 | 8:53 AM EDT"
+        },
+        {
+          "title": "Howard vs UMBC prediction for March Madness First Four game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dumbc%2Dprediction%2Dmarch%2Dmadness%2Dfirst%2Dfour%2F89194898007%2F&rut=6da3dd97c5a3833a3800036d1eb8055b2f495267f57f5e001ec76359f3bc526d",
+          "snippet": "Here&#x27;s our Howard vs UMBC prediction in the First Four NCAA Tournament game of March Madness 2026 . The winner advances to face Michigan basketball."
+        },
+        {
+          "title": "UMBC vs. Howard odds, prediction, time: 2026 First Four picks from ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fgeneral%2Fnews%2Fumbc%2Dhoward%2Dodds%2Dprediction%2Dspread%2Dline%2Dtime%2D2026%2Dfirst%2Dfour%2Dpicks%2Dfrom%2Dproven%2Dmodel%2F&rut=3dfad7e0fdbd1484471a5f7b5f7806a6933dc096470077e576657f56dfc94487",
+          "snippet": "SportsLine&#x27;s model simulated UMBC Retrievers vs . Howard Bison and revealed its college basketball picks for this First Four 2026 matchup on Tuesday By Andy Bryan Mar 17, 2026 at 7:14 am ET • 2 ..."
+        },
+        {
+          "title": "Howard vs UMBC Prediction and Preview: NCAA Tournament First Four",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fhoward%2Dvs%2Dumbc%2Dprediction%2Dpreview%2D081133863.html&rut=668802333e65a8dcef5e45bdf1ce99ac4a60b399da70dc4e5d799b27c57bf115",
+          "snippet": "Howard and UMBC get the 2026 NCAA Tournament rolling with its First Four matchup. Here&#x27;s the CFN preview and prediction."
+        },
+        {
+          "title": "UMBC vs. Howard Prediction, Odds, Key Player to Watch for NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fbetting%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dodds%2Dkey%2Dplayer%2Dto%2Dwatch%2Dfor%2Dncaa%2Dtournament%2Dfirst%2Dfour%2D01kkw5kcps2z&rut=6608d617e6b7614602a868a8855ccb3a4b946888400936f5dc454a531d9d210e",
+          "snippet": "The 2026 NCAA Tournament will begin on Tuesday night when the UMBC Retrievers and the Howard Bison will play against each other in the First Four . The good news is, one of these two schools will ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"UMBC vs. Howard Prediction, Projected Lineups, and Injury Report for ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fumbc%2Dvs%2Dhoward%2Dprediction%2Dprojected%2Dlineups%2F&rut=d6ab69109c50ab199027d53c0948a970343036d5f8cafcfc49a4be48b88c508f\",\n      \"snippet\": \"UMBC vs . Howard Prediction, Projected Lineups, and Injury Report for March Madness First Four Round March 17, 2026 | 8:53 AM EDT\"\n    },\n    {\n      \"title\": \"Howard vs UMBC prediction for March Madness First Four game\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fhoward%2Dumbc%2Dprediction%2Dmarch%2Dmadness%2Dfirst%2Dfour%2F89194898007%2F&rut=6da3dd97c5a3833a3800036d1eb8055b2f495267f57f5e001ec76359f3bc526d\",\n      \"snippet\": \"Here&#x27;s our Howard vs UMBC prediction in the First Four NCAA Tournament game of March Madness 2026 . The winner advances to face Michigan basketball.\"\n    },\n    {\n      \"title\": \"UMBC vs. Howard odds, prediction, time: 2026 First Four picks from ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fgeneral%2Fnews%2Fumbc%2Dhoward%2Dodds%2Dprediction%2Dspread%2Dline%2Dtime%2D2026%2Dfirst%2Dfour%2Dpicks%2Dfrom%2Dproven%2Dmodel%2F&rut=3dfad7e0fdbd1484471a5f7b5f7806a6933dc096470077e576657f56dfc94487\",\n      \"snippet\": \"SportsLine&#x27;s model simulated UMBC Retrievers vs . Howard Bison and revealed its college basketball picks for this First Four 2026 matchup on Tuesday By Andy Bryan Mar 17, 2026 at 7:14 am ET • 2 ...\"\n    },\n    {\n      \"title\": \"Howard vs UMBC Prediction and Preview: NCAA Tournament First Four\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fhoward%2Dvs%2Dumbc%2Dprediction%2Dpreview%2D081133863.html&rut=668802333e65a8dcef5e45bdf1ce99ac4a60b399da70dc4e5d799b27c57bf115\",\n      \"snippet\": \"Howard and UMBC get the 2026 NCAA Tournament rolling with its First Four matchup. Here&#x27;s the CFN preview and prediction.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-16-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:27.360Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Howard UMBC injury availability",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-16-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:28.066Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "UMBC vs. Howard (Mar 17, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856435%2Fumbc%2Dhoward&rut=de6b2b37d1c9dea25fc0b6c4fb04c23517d840aa497d251d201581039fe628bf",
+          "snippet": "Live coverage of the UMBC Retrievers vs. Howard Bison NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Howard Bison Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F47%2Fhoward%2Dbison&rut=e98e99a9504175cf82e7a9b187620b60a51c5211c88078153fdd344db6b2fc6c",
+          "snippet": "Visit ESPN for Howard Bison live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "UMBC Retrievers Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2378%2Fumbc%2Dretrievers&rut=56348c08ea02fc3b1cede47391cc3f081d79d9bc203bef457737882b0a200993",
+          "snippet": "Visit ESPN for UMBC Retrievers live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Howard vs. UMBC 9/1/25 - Stream the Match Live - Watch ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fwatch%2Fplayer%3Fid%3Dab5e2377%2D617b%2D4d2e%2Db517%2Db0821a0e4d7b&rut=ededdd86c15dc47d188114b2f9b96492145172c5d2732be091fa533b8053e914",
+          "snippet": "Stream the NCAA Men&#x27;s Soccer Match Howard vs. UMBC live from % {channel} on Watch ESPN. Live stream on Monday, September 1, 2025."
+        },
+        {
+          "title": "espn_dtc",
+          "url": "//duckduckgo.com/l/?uddg=http%3A%2F%2Fwatch.product.api.espn.com%2Fapi%2Fproduct%2Fv3%2Fwatchespn%2Fweb%2Fplayback%2Fevent%3Fid%3Ddf02fa12%2Dd882%2D488b%2Db457%2D73e7ec90d2b2%26tz%3DUTC%252B1100%26lang%3Den%26countryCode%3DUS%26features%3DcontinueWatching%2Chigh%2Dvolume%2Drow%2Cwatch%2Dweb%2Dredesign%2CimageRatio58x13%2CpromoTiles%2CopenAuthz%2Cvideo%2Dheader%2Cexplore%2Drow%2Cbutton%2Dservice%2Cinline%2Dheader&rut=5e5c0ea623625f2a0a43e4793455b10bd1a5ff9386705e427dddb1396a4cd7fb",
+          "snippet": "df02fa12-d882-488b-b457-73e7ec90d2b2 \",\"tracking\": {\"trackingId\":\"df02fa12-d882-488b-b457-73e7ec90d2b2\",\"isStudio\":false,\"sport\":\"Basketball\",\"league\":\"NCAAM ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"UMBC vs. Howard (Mar 17, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856435%2Fumbc%2Dhoward&rut=de6b2b37d1c9dea25fc0b6c4fb04c23517d840aa497d251d201581039fe628bf\",\n      \"snippet\": \"Live coverage of the UMBC Retrievers vs. Howard Bison NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"Howard Bison Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F47%2Fhoward%2Dbison&rut=e98e99a9504175cf82e7a9b187620b60a51c5211c88078153fdd344db6b2fc6c\",\n      \"snippet\": \"Visit ESPN for Howard Bison live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"UMBC Retrievers Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2378%2Fumbc%2Dretrievers&rut=56348c08ea02fc3b1cede47391cc3f081d79d9bc203bef457737882b0a200993\",\n      \"snippet\": \"Visit ESPN for UMBC Retrievers live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Howard vs. UMBC 9/1/25 - Stream the Match Live - Watch ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fwatch%2Fplayer%3Fid%3Dab5e2377%2D617b%2D4d2e%2Db517%2Db0821a0e4d7b&rut=ededdd86c15dc47d188114b2f9b96492145172c5d2732be091fa533b8053e914\",\n      \"snippet\": \"Stream the NCAA Men&#x27;s Soccer Match Howard vs. UMBC live from % {channel} on Watch ESPN. Live stream on Monday, September 1, 2025.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-16-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:53:30.508Z",
+      "content": null
+    },
+    {
+      "id": "ff-midwest-16-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:30.508Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://collegefootballnetwork.com/mens-college-basketball/umbc-vs-howard-prediction-projected-lineups/",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-16-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:30.616Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://collegefootballnetwork.com/mens-college-basketball/umbc-vs-howard-prediction-projected-lineups/",
+        "text": "UMBC vs. Howard Prediction, Projected Lineups, and Injury Report for March Madness First Four Round | College Sports Network Discord RSS Twitter Home CFB College Teams AAC Army Black Knights Charlotte 49ers East Carolina Pirates Florida Atlantic Owls Memphis Tigers Navy Midshipmen North Texas Mean Green Rice Owls South Florida Bulls Temple Owls Tulane Green Wave Tulsa Golden Hurricane UAB Blazers UTSA Roadrunners ACC Boston College Eagles California Golden Bears Clemson Tigers Duke Blue Devils Florida State Seminoles Georgia Tech Yellow Jackets Louisville Cardinals Miami (FL) Hurricanes North Carolina State Wolfpack North Carolina Tar Heels Pittsburgh Panthers SMU Mustangs Stanford Cardinal Syracuse Orange Virginia Cavaliers Virginia Tech Hokies Wake Forest Demon Deacons Big 12 Arizona State Sun Devils Arizona Wildcats Baylor Bears BYU Cougars Cincinnati Bearcats Colorado Buffaloes Houston Cougars Iowa State Cyclones Kansas Jayhawks Kansas State Wildcats Oklahoma State Cowboys TCU Horned Frogs Texas Tech Red Raiders UCF Knights Utah Utes West Virginia Mountaineers Big Ten Illinois Fighting Illini Indiana Hoosiers Iowa Hawkeyes Maryland Terrapins Michigan State Spartans Michigan Wolverines Minnesota Golden Gophers Nebraska Cornhuskers Northwestern Wildcats Ohio State Buckeyes Oregon Ducks Penn State Nittany Lions Purdue Boilermakers Rutgers Scarlet Knights UCLA Bruins USC Trojans Washington Huskies Wisconsin Badgers SEC Alabama Crimson Tide Arkansas Razorbacks Auburn Tigers Florida Gators Georgia Bulldogs Kentucky Wildcats LSU Tigers Mississippi State Bulldogs Missouri Tigers Oklahoma Sooners Ole Miss Rebels South Carolina Gamecocks Tennessee Volunteers Texas A&#038;M Aggies Texas Longhorns Vanderbilt Commodores Conference USA FIU Golden Panthers Jacksonville State Gamecocks Liberty Flames Louisiana Tech Bulldogs Middle Tennessee Blue Raiders New Mexico State Aggies Sam Houston Bearkats UTEP Miners Western Kentucky Hilltoppers MAC Akron Zips Ball State Cardinals Bowling Green Falcons Buffalo Bulls Central Michigan Chippewas Eastern Michigan Eagles Kent State Golden Flashes Miami (OH) RedHawks Northern Illinois Huskies Ohio Bobcats Toledo Rockets Western Michigan Broncos Mountain West Air Force Falcons Boise State Broncos Colorado State Rams Fresno State Bulldogs Hawaii Rainbow Warriors Nevada Wolf Pack New Mexico Lobos San Diego State Aztecs San Jose State Spartans UNLV Rebels Utah State Aggies Wyoming Cowboys Pac-12 Oregon State Beavers Washington State Cougars Sun Belt Appalachian State Mountaineers Arkansas State Red Wolves Coastal Carolina Chanticleers Georgia Southern Eagles Georgia State Panthers James Madison Dukes Louisiana-Monroe Warhawks Louisiana Rajin&#8217; Cajuns Marshall Thundering Herd Old Dominion Monarchs South Alabama Jaguars Southern Miss Golden Eagles Texas State Bobcats Troy Trojans FBS Independents Notre Dame Fighting Irish UConn Huskies UMass Minutemen Olympics Nascar NBA NFL Men&#8217;s CBB Tennis Baseball Women&#8217;s CB"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://collegefootballnetwork.com/mens-college-basketball/umbc-vs-howard-prediction-projected-lineups/\",\n    \"text\": \"UMBC vs. Howard Prediction, Projected Lineups, and Injury Report for March Madness First Four Round | College Sports Network Discord RSS Twitter Home CFB College Teams AAC Army Black Knights Charlotte 49ers East Carolina Pirates Florida Atlantic Owls Memphis Tigers Navy Midshipmen North Texas Mean Green Rice Owls South Florida Bulls Temple Owls Tulane Green Wave Tulsa Golden Hurricane UAB Blazers UTSA Roadrunners ACC Boston College Eagles California Golden Bears Clemson Tigers Duke Blue Devils Florida State Seminoles Georgia Tech Yellow Jackets Louisville Cardinals Miami (FL) Hurricanes North Carolina State Wolfpack North Carolina Tar Heels Pittsburgh Panthers SMU Mustangs Stanford Cardinal Syracuse Orange Virginia Cavaliers Virginia Tech Hokies Wake Forest Demon Deacons Big 12 Arizona State Sun Devils Arizona Wildcats Baylor Bears BYU Cougars Cincinnati Bearcats Colorado Buffaloes Houston Cougars Iowa State Cyclones Kansas Jayhawks Kansas State Wildcats Oklahoma State Cowboys TCU Horned Frogs Texas Tech Red Raiders UCF Knights Utah Utes West Virginia Mountaineers Big Ten Illinois Fighting Illini Indiana Hoosiers Iowa Hawkeyes Maryland Terrapins Michigan State Spartans Michigan Wol... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-16-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:30.616Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.cbssports.com/general/news/umbc-howard-odds-prediction-spread-line-time-2026-first-four-picks-from-proven-model/",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-16-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:30.839Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.cbssports.com/general/news/umbc-howard-odds-prediction-spread-line-time-2026-first-four-picks-from-proven-model/",
+        "text": "UMBC vs. Howard prediction, odds, spread, time: 2026 First Four picks from proven model - CBS Sports site: media | arena: general | pageType: stories | section: | slug: umbc-howard-odds-prediction-spread-line-time-2026-first-four-picks | sport: other | route: article_single.us | 6-keys: media/spln/other/reg/free/stories Skip to Main Content Close Menu All Sports Menu Sports Watch Fantasy Betting Featured NFL Bracket Brackets NCAA BB NCAA WBB NBA Golf UFC SportsSoccer Soccer MLB Explore More NCAA FB NHL Champions League SportsWwe WWE WNBA Boxing NASCAR Motor Sports NWSL UFL Horse Racing Northeast Tennis BIG3 High School Olympics Podcasts Shop Northeast Promotions PBR Northeast MLV Northeast 3ICE Northeast Play Golf NFL Explore NFL NFL News Free Agency Tracker Scores Schedule Standings Super Bowl Playoff Bracket Teams Stats NFL Draft Prospect Rankings Mock Drafts Power Rankings Video Players Injuries Transactions NFL Betting Fantasy Paramount + NFL Shop NFL Teams See All ArrowForward AFC East Bills Dolphins Jets Patriots AFC North Bengals Browns Ravens Steelers AFC South Colts Jaguars Texans Titans AFC West Broncos Chargers Chiefs Raiders NFC East Commanders Cowboys Eagles Giants NFC North Bears Lions Packers Vikings NFC South Buccaneers Falcons Panthers Saints NFC West 49ers Cardinals Rams Seahawks Brackets NCAA BB Explore NCAA BB College Basketball News Scores NCAA Tournament Bracket Games Live Bracket Printable Bracket March Madness Live Expert Brackets Expert Picks Schedule NIT Bracket Standings Rankings Expert Picks Odds Stats Teams Players College Basketball Betting Women's BB NBA Draft Prospect Rankings 2026 Top Recruits 2026 Top Classes CBS Sports Classic College Shop Shows & Podcasts See All ArrowForward NCAA WBB Explore NCAA WBB Women's College Basketball News Scores NCAA Tournament Live Bracket Printable Bracket Women's Bracket Games Schedule Expert Brackets WNIT WBIT Standings Rankings Teams Video College Shop Northeast NBA Explore NBA NBA News Scores Schedule Standings Stats Teams Expert Picks Odds Picks Props Prospect Rankings Mock Drafts Video Injuries Transactions Players Power Rankings NBA Betting NBA Shop Northeast NBA Teams See All ArrowForward Atlantic 76ers Celtics Knicks Nets Raptors Central Bucks Bulls Cavaliers Pacers Pistons Southeast Hawks Heat Hornets Magic Wizards Northwest Jazz Nuggets Thunder Timberwolves Trail Blazers Pacific Clippers Kings Lakers Suns Warriors Southwest Grizzlies Mavericks Pelicans Rockets Spurs Golf Explore Golf Golf News Leaderboard Schedule Stats Rankings Watch Live Golf Betting Masters Play Golf Northeast Golf Shop Northeast Shows & Podcasts See All ArrowForward UFC Explore UFC UFC News UFC on Paramount+ UFC Fight Night Schedule Rankings UFC Betting Soccer Explore Soccer Soccer News Champions League Serie A Europa League Premier League NWSL MLS Watch NWSL Watch EFL La Liga World Cup Women's World Cup CBS Sports Golazo Network Video Soccer Betting UCL Bracket Games Shop Northeast Live Channels Liv"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.cbssports.com/general/news/umbc-howard-odds-prediction-spread-line-time-2026-first-four-picks-from-proven-model/\",\n    \"text\": \"UMBC vs. Howard prediction, odds, spread, time: 2026 First Four picks from proven model - CBS Sports site: media | arena: general | pageType: stories | section: | slug: umbc-howard-odds-prediction-spread-line-time-2026-first-four-picks | sport: other | route: article_single.us | 6-keys: media/spln/other/reg/free/stories Skip to Main Content Close Menu All Sports Menu Sports Watch Fantasy Betting Featured NFL Bracket Brackets NCAA BB NCAA WBB NBA Golf UFC SportsSoccer Soccer MLB Explore More NCAA FB NHL Champions League SportsWwe WWE WNBA Boxing NASCAR Motor Sports NWSL UFL Horse Racing Northeast Tennis BIG3 High School Olympics Podcasts Shop Northeast Promotions PBR Northeast MLV Northeast 3ICE Northeast Play Golf NFL Explore NFL NFL News Free Agency Tracker Scores Schedule Standings Super Bowl Playoff Bracket Teams Stats NFL Draft Prospect Rankings Mock Drafts Power Rankings Video Players Injuries Transactions NFL Betting Fantasy Paramount + NFL Shop NFL Teams See All ArrowForward AFC East Bills Dolphins Jets Patriots AFC North Bengals Browns Ravens Steelers AFC South Colts Jaguars Texans Titans AFC West Broncos Chargers Chiefs Raiders NFC East Commanders Cowboys Eagles Giants NFC... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-16-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:53:31.996Z",
+      "content": null
+    },
+    {
+      "id": "ff-midwest-16-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:31.996Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://sports.yahoo.com/articles/howard-vs-umbc-prediction-preview-081133863.html",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-16-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:32.859Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://sports.yahoo.com/articles/howard-vs-umbc-prediction-preview-081133863.html",
+        "text": "Howard vs UMBC Prediction and Preview: NCAA Tournament First Four - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Streaming TVs Gift ideas Best gifts for men Best gift cards Best gifts for mom Best gifts for teens Best gifts for couples Best gifts for sister-in-law Best gifts for girlfriends Best gifts for grandma Best gifts for sisters Best gifts for husbands Best birthday gifts for her Best get well soon gifts Best travel gifts Best gifts for mother-in-law Best anniversary gifts for wife Stores Amazon Best Buy Coach Outlet Home Depot Kate Spade New York Lowes Macy&#x27;s Nordstrom Sephora Sur La Table Target Ulta Walmart Wayfair Zappos Shopping Guides Best cordless stick vacuums Best water bottles Best vacuums Best air fryers Best luggage Best jeans Best bras Best nontoxic nail polish Best under eye cream Best skin tightening creams Best coffee makers Best comforters Best mops Best Hoka shoes for walking Best instant pot Deals Toys and games General Food Travel Autos EV & Future Tech Classic & Collector Deals & Buying Guides Ownership Safety & Recalls Policy & Environment New Vehicles & Reviews Auto Shows General People & Culture Gift ideas Buying guides Amazon Spring Sale deals Amazon Spring Sale tech deals Entertainment Celebrity TV Movies Music How to Watch Interviews Videos Finance My portfolio News Latest Originals Newsletters Stock market Crypto Earnings Tariffs Economics Tech Housing Fed meeting Markets Most active stocks Top stock gainers Biggest stock losers Trending tickers Highest dividend stocks Crypto Prediction markets Options Sectors Futures World indices Research Equities screener Penny stock screener Most shorted screener Undervalued growth screener Financial calendar Earnings calendar Stock comparison Currency converter Advanced charts Community Personal finance My Money Credit cards Banking Mortgages Mortgage calculator Insurance Taxes Student Loans Personal Loans Vide"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://sports.yahoo.com/articles/howard-vs-umbc-prediction-preview-081133863.html\",\n    \"text\": \"Howard vs UMBC Prediction and Preview: NCAA Tournament First Four - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Streamin... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-16-assistant-final-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:53:38.729Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"ff-midwest-16\",\n    \"winnerId\": \"umbc\",\n    \"confidence\": 0.58,\n    \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"ff-midwest-16-analysis\",\n    \"title\": \"Efficiency edge and offensive ceiling favor UMBC\",\n    \"summary\": \"UMBC rates modestly better overall and substantially better offensively, which I’m weighting heavily in a First Four setting.\",\n    \"evidence\": \"KenPom: UMBC #185 (AdjEM -1.68, AdjO 108.2 #184, AdjD 109.9) vs Howard #207 (AdjEM -3.17, AdjO 103.2 #283, AdjD 106.4). Torvik: UMBC #185 (AdjOE ~107.5 #193) vs Howard #206 (AdjOE ~103.4 #276). Web/ESPN searches did not surface a definitive injury/availability issue significant enough to override the efficiency gap.\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-16-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T19:53:42.504Z",
+      "content": "{\"pick\":{\"gameId\":\"ff-midwest-16\",\"winnerId\":\"umbc\",\"confidence\":0.58,\"rationale\":\"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"},\"reasoningStep\":{\"id\":\"ff-midwest-16-analysis\",\"title\":\"Efficiency edge and offensive ceiling favor UMBC\",\"summary\":\"UMBC rates modestly better overall and substantially better offensively, which I’m weighting heavily in a First Four setting.\",\"evidence\":[\"KenPom: UMBC #185 (AdjEM -1.68, AdjO 108.2 #184, AdjD 109.9) vs Howard #207 (AdjEM -3.17, AdjO 103.2 #283, AdjD 106.4).\",\"Torvik: UMBC #185 (AdjOE ~107.5 #193) vs Howard #206 (AdjOE ~103.4 #276).\",\"Web/ESPN searches did not surface a definitive injury/availability issue significant enough to override the efficiency gap.\"]}}"
+    }
+  ]
+}

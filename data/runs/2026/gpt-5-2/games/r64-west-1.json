@@ -1,0 +1,893 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-west-1",
+  "generatedAt": "2026-03-17T19:58:01.012Z",
+  "pick": {
+    "gameId": "r64-west-1",
+    "winnerId": "arizona",
+    "confidence": 0.98,
+    "rationale": "Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably."
+  },
+  "reasoningStep": {
+    "id": "r64-west-1-analysis",
+    "title": "Arizona’s top-3 efficiency profile vs LIU’s low-200s profile with no major availability flags",
+    "summary": "The matchup is a classic 1/16 quality gap: Arizona grades as an elite national-title caliber team on both offense and defense, while LIU profiles as a below-average tournament team that will struggle to score efficiently or get consistent stops.",
+    "evidence": [
+      "Ratings: Arizona KenPom #3 (AdjO 127.2, AdjD 89.7, AdjEM +37.56) and Torvik #3 (AdjO 126.2, AdjD 91.1); LIU KenPom #216 (AdjO 105.7, AdjD 109.6, AdjEM -3.95) and Torvik #234 (AdjO 103.6, AdjD 109.7).",
+      "Availability/news: a March 13 Big 12 Tournament availability report listed Arizona with no players on the injury report, and no credible recent reporting surfaced indicating a key Arizona absence that would materially narrow the gap."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-2pmh3vsl",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "arizona",
+          "liu"
+        ]
+      },
+      "startedAt": "2026-03-17T19:57:39.680Z",
+      "completedAt": "2026-03-17T19:57:39.686Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "arizona",
+          "teamName": "Arizona",
+          "torvik": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adjoe": 126.22482613026838,
+            "oe Rank": 10,
+            "adjde": 91.12598305356042,
+            "de Rank": 3,
+            "barthag": 0.9769540425666804,
+            "rank.1": 3,
+            "proj. W": 31.54848779503724,
+            "Proj. L": 2.451512204962764,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.7321035008087977,
+            "ncsos": 0.5608968275917484,
+            "consos": 0.8383219215796915,
+            "Proj. SOS": 0.7391634605797618,
+            "Proj. Noncon SOS": 0.5608968275917484,
+            "Proj. Con SOS": 0.8383219215796915,
+            "elite SOS": 0.6107621530374404,
+            "elite noncon SOS": 0.7185030373892591,
+            "Opp OE": 116.77681864454006,
+            "Opp DE": 103.54326761743802,
+            "Opp Proj. OE": 117.0215450602533,
+            "Opp Proj DE": 103.19943867573676,
+            "Con Adj OE": 126.41731670872475,
+            "Con Adj DE": 91.4031269731425,
+            "Qual O": 126.51726928825438,
+            "Qual D": 91.07345061890346,
+            "Qual Barthag": 0.977690783748864,
+            "Qual Games": 18,
+            "FUN": 0.0953869115257397,
+            "ConPF": 1513,
+            "ConPA": 1265,
+            "ConPoss": 1284.0875,
+            "ConOE": 1.178268614872429,
+            "ConDE": 0.9851353587664392,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 12.797428549241603,
+            "WAB Rk": 3,
+            "Fun Rk": 12,
+            "adjt": 70.03680025527512
+          },
+          "kenpom": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adj_em": 37.56,
+            "adj_o": 127.2,
+            "adj_o_rank": 7,
+            "adj_d": 89.7,
+            "adj_d_rank": 3,
+            "adj_t": 69.9,
+            "adj_t_rank": 54,
+            "luck": 0.018,
+            "luck_rank": 133,
+            "sos_adj_em": 14.35,
+            "sos_adj_em_rank": 13,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 16,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 15,
+            "ncsos_adj_em": 3.29,
+            "ncsos_adj_em_rank": 100
+          }
+        },
+        {
+          "teamId": "liu",
+          "teamName": "LIU",
+          "torvik": {
+            "rank": 234,
+            "team": "LIU",
+            "conf": "NEC",
+            "record": "24-10",
+            "adjoe": 103.60491085105896,
+            "oe Rank": 269,
+            "adjde": 109.718789493818,
+            "de Rank": 196,
+            "barthag": 0.3408827463001779,
+            "rank.1": 234,
+            "proj. W": 24,
+            "Proj. L": 10,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.3033339021829628,
+            "ncsos": 0.5261713064967573,
+            "consos": 0.168237958093902,
+            "Proj. SOS": 0.3033339021829628,
+            "Proj. Noncon SOS": 0.5261713064967573,
+            "Proj. Con SOS": 0.168237958093902,
+            "elite SOS": 0.9030316459843692,
+            "elite noncon SOS": 0.7849419574086505,
+            "Opp OE": 104.048686739136,
+            "Opp DE": 112.70071149766692,
+            "Opp Proj. OE": 104.048686739136,
+            "Opp Proj DE": 112.70071149766692,
+            "Con Adj OE": 101.46481068072876,
+            "Con Adj DE": 108.38092530478484,
+            "Qual O": 103.40216456525638,
+            "Qual D": 102.91054160445316,
+            "Qual Barthag": 0.5136982837252784,
+            "Qual Games": 2,
+            "FUN": 0.131690518627465,
+            "ConPF": 1301,
+            "ConPA": 1161,
+            "ConPoss": 1192.2375,
+            "ConOE": 1.091225531825664,
+            "ConDE": 0.9737992639889284,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": -5.796371420948493,
+            "WAB Rk": 116,
+            "Fun Rk": 3,
+            "adjt": 67.8123382304927
+          },
+          "kenpom": {
+            "rank": 216,
+            "team": "LIU",
+            "conf": "NEC",
+            "record": "24-10",
+            "adj_em": -3.95,
+            "adj_o": 105.7,
+            "adj_o_rank": 239,
+            "adj_d": 109.6,
+            "adj_d_rank": 186,
+            "adj_t": 67.9,
+            "adj_t_rank": 154,
+            "luck": 0.104,
+            "luck_rank": 12,
+            "sos_adj_em": -10.03,
+            "sos_adj_em_rank": 350,
+            "sos_opp_o": 103.6,
+            "sos_opp_o_rank": 333,
+            "sos_opp_d": 113.6,
+            "sos_opp_d_rank": 343,
+            "ncsos_adj_em": 2.08,
+            "ncsos_adj_em_rank": 120
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-49ylzuva",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona Wildcats injury report March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:57:39.686Z",
+      "completedAt": "2026-03-17T19:57:40.584Z",
+      "summary": "Returned 5 search results for \"Arizona Wildcats injury report March 2026 NCAA tournament\".",
+      "result": [
+        {
+          "title": "Iowa State basketball vs Arizona Big 12 Tournament injury report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.desmoinesregister.com%2Fstory%2Fsports%2Fcollege%2Fiowa%2Dstate%2Fbasketball%2Dmens%2F2026%2F03%2F13%2Fiowa%2Dstate%2Dbasketball%2Dvs%2Darizona%2Dfinal%2Dinjury%2Dreport%2Dreleased%2F89144483007%2F&rut=9af23ba1658901b8ddd39b2ae7889bcd87c5466c1f99445b06de8fa3d079ef53",
+          "snippet": "The final Big 12 availability report for Friday&#x27;s 6 p.m. Big 12 Tournament semifinal game featuring Iowa State basketball vs Arizona was released 90 minutes before tip-off."
+        },
+        {
+          "title": "College Basketball Injury Report - Latest NCAAB Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report ."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "2026 March Madness Bracket Predictions - Nate Silver",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.natesilver.net%2Fp%2F2026%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dpredictions&rut=6f9b15a2069c351663174c6ab103a68e71dd4481880d94bb2d83879bb62d7b70",
+          "snippet": "2026 March Madness Predictions Silver Bulletin odds for the men&#x27;s NCAA tournament , powered by our new COOPER ratings."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=06c6eb9f632ce722feb3d90942368ad1186f9f671e22ffd99e6b129a27764235",
+          "snippet": "From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries."
+        }
+      ]
+    },
+    {
+      "id": "tool-476c6wcu",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "LIU Sharks injury report March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:57:40.584Z",
+      "completedAt": "2026-03-17T19:57:41.368Z",
+      "summary": "Returned 5 search results for \"LIU Sharks injury report March 2026 NCAA tournament\".",
+      "result": [
+        {
+          "title": "2025-2026 NCAA BB Games: Lakers Sharks Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Flakers%2Dsharks%2D2026%2D03%2D10%2Finjuries&rut=68ef302a83075683a485fcbd17570a464d45d455602efec513ce508dbab2f872",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Mercyhurst and LIU . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "LIU Sharks become first team into 2026 NCAA Tournament after unusual ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fliu%2Dsharks%2Dbecome%2Dfirst%2Dteam%2D2026%2Dncaa%2Dtournament%2Dafter%2Dunusual%2Dnec%2Dsituation%2F6ab7e3f80c90dd310a6cc503&rut=0a7b9d9275a8be9d4f43577541eeceea006cd7402156b7cc015f5f2c3e01a3bc",
+          "snippet": "The first ticket to the 2026 NCAA tournament belongs to the LIU Sharks . LIU officially secured the Northeast Conference&#x27;s automatic bid thanks to a unique situation involving the Northeast ..."
+        },
+        {
+          "title": "The first team in the 2026 NCAA tournament is already set and the ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fthe%2Dfirst%2Dteam%2Din%2Dthe%2D2026%2Dncaa%2Dtournament%2Dis%2Dalready%2Dset%2Dand%2Dthe%2Dreason%2Dis%2Dunusual%2Far%2DAA1XJyJJ&rut=74d39a360764f59ba65cca3e91cf7c92d1c365d690a3aef77efbd87a34b313b5",
+          "snippet": "LIU is the first team to clinch a 2026 NCAA tournament spot after a unique NEC tournament situation guaranteed the Sharks an automatic bid."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "Ticket Punched: Previewing the LIU Sharks For the 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dliu%2Dsharks%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=785b19be85665b15e4c87db7b4c1157973b8ec9ecf0fc708d312233ace068762",
+          "snippet": "Tournament Index evaluation As it stands, LIU is a projected No. 16 seed both by our bracketology at Basket Under Review as well as on the Bracket Matrix. The Tournament Index rates the Sharks as a slightly-above-average No. 16 seed (21st in power rating out of 49 teams) compared to the last 12 NCAA Tournament fields."
+        }
+      ]
+    },
+    {
+      "id": "tool-owjunjxw",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Arizona LIU preview injury availability",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:57:41.368Z",
+      "completedAt": "2026-03-17T19:57:42.093Z",
+      "summary": "Returned 5 search results for \"Arizona LIU preview injury availability\".",
+      "result": [
+        {
+          "title": "Arizona Diamondbacks Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmlb%2Fteam%2Finjuries%2F_%2Fname%2Fari%2Farizona%2Ddiamondbacks&rut=bbd6114c9add4319ce2a71f5430a40472feac9561d4da5d5b26aced57c2600e5",
+          "snippet": "Visit ESPN for the current injury situation of the 2026 Arizona Diamondbacks. Latest news from the MLB on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Long Island University vs. Arizona (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856529%2Flong%2Disland%2Darizona&rut=9b4b850f426f7243fbe9f173347a25156f1f8cb7fd1b22d49e114c495d7a4853",
+          "snippet": "Live coverage of the Long Island University Sharks vs. Arizona Wildcats NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Arizona Diamondbacks Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmlb%2Fteam%2Finjuries%2F_%2Fname%2Fari%2F_nr%253D0%253B&rut=89c60ee787531929edd68e3e2b1a8e5dfb1652df013260c619154b51074748f3",
+          "snippet": "Visit ESPN for the current injury situation of the 2025 Arizona Diamondbacks. Latest news from the MLB on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Arizona Coyotes Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnhl%2Fteam%2Finjuries%2F_%2Fname%2Fari%2Farizon%25C3%2583%25C2%25A2%25C3%25A2%25E2%2580%259A%25C2%25AC%25C3%2582%25C2%25A6&rut=b2add741a28fd4c936e4416d7abb0d4cfb6d3d1bb0b89b6ac73e5c8538634d15",
+          "snippet": "Visit ESPN for the current injury situation of the 2023-24 Arizona Coyotes. Latest news from the NHL on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Arizona Cardinals Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fnfl%2Fteam%2Finjuries%2F_%2Fname%2Fari%2Farizona%2Dcardinals%2520%2D&rut=7011549e7f85c3a381b14b3687fd258b50c10136b834249c849030ce8c6fd889",
+          "snippet": "Visit ESPN for the current injury situation of the 2025 Arizona Cardinals. Latest news from the NFL on players that are out, day-by-day, or on the injured reserve."
+        }
+      ]
+    },
+    {
+      "id": "tool-z2g9108a",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.desmoinesregister.com/story/sports/college/iowa-state/basketball-mens/2026/03/13/iowa-state-basketball-vs-arizona-final-injury-report-released/89144483007/",
+        "maxChars": 8000
+      },
+      "startedAt": "2026-03-17T19:57:44.782Z",
+      "completedAt": "2026-03-17T19:57:44.969Z",
+      "summary": "Fetched https://www.desmoinesregister.com/story/sports/college/iowa-state/basketball-mens/2026/03/13/iowa-state-basketball-vs-arizona-final-injury-report-released/89144483007/ and extracted 1531 characters of text.",
+      "result": {
+        "url": "https://www.desmoinesregister.com/story/sports/college/iowa-state/basketball-mens/2026/03/13/iowa-state-basketball-vs-arizona-final-injury-report-released/89144483007/",
+        "text": "Iowa State basketball vs Arizona final injury report released Skip to main content Home Sports Hawk Central Big Ten Sports Cyclone Insider High School Insider SportsbookWire Odds USA TODAY Sports Recruiting All Iowa Sports Awards Iowa State basketball vs Arizona Big 12 Tournament injury report Register staff report | Des Moines Register The final Big 12 availability report for Friday's 6 p.m. Big 12 Tournament semifinal game featuring Iowa State basketball vs Arizona was released 90 minutes before tip-off. The No. 5-seeded Cyclones have one player listed as out and another as a game-time decision. No surprises for Iowa State, as both players have held those designations for some time. Meanwhile, the 1-seed Wildcats have no players on the injury report. More: Where to watch Iowa State basketball today vs Arizona in Big 12 Tournament These two teams met once during the regular season, with Arizona winning 73-57 in Tucson on March 2. Here is the full availability report for Friday's Iowa State vs Arizona game. Iowa State players listed as \"out\" Mason Williams Iowa State players listed as \"game-time decision\" Xzaivon Mitchell Arizona players listed as \"out\" none Arizona players listed as \"game-time decision\" none SMS Facebook Twitter Email Share your feedback to help improve our site! Share your feedback to help improve our site! Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your Privacy Choices © Copyright Gannett 2026"
+      }
+    },
+    {
+      "id": "tool-q9aykgdl",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503",
+        "maxChars": 8000
+      },
+      "startedAt": "2026-03-17T19:57:44.969Z",
+      "completedAt": "2026-03-17T19:57:45.222Z",
+      "summary": "Fetched https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503",
+        "text": "LIU Sharks become first team into 2026 NCAA Tournament after unusual NEC situation | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Strea"
+      }
+    },
+    {
+      "id": "tool-ewd51whq",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 8000
+      },
+      "startedAt": "2026-03-17T19:57:45.222Z",
+      "completedAt": "2026-03-17T19:57:45.884Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      }
+    },
+    {
+      "id": "tool-ys3qgp44",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Covers NCAAB injuries Arizona Wildcats Mar 17 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:57:46.837Z",
+      "completedAt": "2026-03-17T19:57:47.627Z",
+      "summary": "Returned 5 search results for \"Covers NCAAB injuries Arizona Wildcats Mar 17 2026\".",
+      "result": [
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report."
+        },
+        {
+          "title": "NCAA Tournament Injury Report: JT Toppin, Caleb Foster Highlight Most ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.actionnetwork.com%2Fncaab%2Fncaa%2Dtournament%2Dinjury%2Dreport%2Djt%2Dtoppin%2Dcaleb%2Dfoster%2Dmost%2Dimpactful%2Dplayers&rut=9dde05dd31b4d615230d9e6cb381e34ff40d389a68e9ae14e6327f73254e0c17",
+          "snippet": "Read for an NCAA Tournament injury report, including JT Toppin and Caleb Foster highlighting the most impactful players."
+        },
+        {
+          "title": "NCAAB Injuries 2026 - Find the Latest NCAAB Player Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.vegasinsider.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=ae72fffb5e2c8aaa5efb300f52e81403fdb74b5afaf311589406527e1780674b",
+          "snippet": "Find NCAAB Injury reports for the 2026 season provided by VegasInsider, along with more NCAAB betting information to assist your sports handicapping."
+        },
+        {
+          "title": "COLLEGEBASKETBALL Injury Report and Status 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=df57f8830206e81dda0ff15128d95afeeb505a38e15cd0a8964fb73c134f0084",
+          "snippet": "Stay updated with the latest COLLEGEBASKETBALL injuries and player statuses on CBS Sports."
+        }
+      ]
+    },
+    {
+      "id": "tool-381wjldx",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.actionnetwork.com/ncaab/ncaa-tournament-injury-report-jt-toppin-caleb-foster-most-impactful-players",
+        "maxChars": 8000
+      },
+      "startedAt": "2026-03-17T19:57:48.854Z",
+      "completedAt": "2026-03-17T19:57:49.377Z",
+      "summary": "Fetched https://www.actionnetwork.com/ncaab/ncaa-tournament-injury-report-jt-toppin-caleb-foster-most-impactful-players and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.actionnetwork.com/ncaab/ncaa-tournament-injury-report-jt-toppin-caleb-foster-most-impactful-players",
+        "text": "NCAA Tournament Injury Report: JT Toppin, Caleb Foster Highlight Most Impactful Players Sports Odds Picks Tools PRO Sports Betting Prediction Markets Casinos Resources NFL NFL Home Odds Props Futures Picks Teams ATS Standings Weather Injuries Officials Signals Public Betting Prop Projections Game Projections Systems NBA NBA Home Odds Props Futures Picks Teams ATS Standings Injuries Officials Signals Public Betting Prop Projections Game Projections Systems MLB MLB Home Odds Props Futures Picks Teams ATS Standings Weather Injuries Officials Signals Public Betting Prop Projections Game Projections Systems NHL NHL Home Odds Props Futures Picks Teams ATS Standings Injuries Signals Public Betting Game Projections Prop Projections Systems NCAAB NCAAB Home Odds Props Futures Picks Teams ATS Standings Injuries Signals Public Betting Game Projections Prop Projections Systems NCAAF NCAAF Home Odds Props Futures Picks Teams ATS Standings Weather Injuries Signals Public Betting Prop Projections Game Projections Systems WNBA WNBA Home Odds Props Futures Picks ATS Standings Injuries Signals Public Betting Prop Projections Game Projections Systems SOCCER Soccer Home Odds Picks Public Betting Systems GOLF Golf Home NASCAR NASCAR Home Odds UFC UFC Home NCAA BASEBALL NCAA Baseball Home NFL NBA MLB NHL NCAAB NCAAF WNBA UFC SOCCER NASCAR PROPS NBA Props NFL Props NCAAF Props NCAAB Props NHL Props MLB Props WNBA Props FUTURES NBA Futures NFL Futures NCAAF Futures NCAAB Futures NCAAW Futures NHL Futures MLB Futures WNBA Futures ALL PICKS PICKS BY GAME NFL NBA MLB NHL NCAAB NCAAF WNBA SOCCER DISCOVER EXPERTS SIGNALS PUBLIC BETTING GAME PROJECTIONS SYSTEMS PROP PROJECTIONS MY PRO DASHBOARD Online Sportsbooks & Bonuses Fanatics Sportsbook Promo BetMGM Bonus Code DraftKings Promo Code FanDuel Promo Code bet365 Bonus Code Hard Rock Bet Promo Code Caesars Sportsbook Promo Code theScore Bet Promo Code BetRivers Bonus Code Fliff Promo Code (Social) Rebet Promo Code (Social) PlayBracco Promo Code (Social) DFS Apps & Bonuses Underdog Promo Code Dabble Promo Code Sleeper Promo Code DraftKings Pick6 Promo Code Betr Picks Promo Code Boom Fantasy Promo Code Chalkboard Promo Code Bleacher Nation Fantasy Promo Code OwnersBox Promo Code PrizePicks Promo Code U.S. Legal States Tracker Arizona Sports Betting Colorado Sports Betting Connecticut Sports Betting Illinois Sports Betting Indiana Sports Betting Iowa Sports Betting Kansas Sports Betting Kentucky Sports Betting Louisiana Sports Betting Maine Sports Betting Maryland Sports Betting Massachusetts Sports Betting Michigan Sports Betting Missouri Sports Betting New Jersey Sports Betting New York Sports Betting North Carolina Sports Betting Ohio Sports Betting Pennsylvania Sports Betting Tennessee Sports Betting Vermont Sports Betting Virginia Sports Betting West Virginia Sports Betting Wyoming Sports Betting California Sports Betting Florida Sports Betting Georgia Sports Betting Texas Sports Betting Prediction Markets Home Markets Lead"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-west-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T19:57:36.289Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-west-1\nCurrent game label: West 1/16\nRound: Round of 64\nResolved teams: Arizona (arizona) vs LIU (liu)\nPrior committed picks: 12"
+    },
+    {
+      "id": "r64-west-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T19:57:36.289Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-west-1\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 1/16\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"arizona\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"liu\"\n      }\n    },\n    \"slotAName\": \"Arizona\",\n    \"slotBName\": \"LIU\",\n    \"slotATeamId\": \"arizona\",\n    \"slotBTeamId\": \"liu\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": 0.62,\n      \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": 0.66,\n      \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-16\",\n      \"winnerId\": \"umbc\",\n      \"confidence\": 0.58,\n      \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n    },\n    {\n      \"gameId\": \"ff-south-16\",\n      \"winnerId\": \"lehigh\",\n      \"confidence\": 0.56,\n      \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n    },\n    {\n      \"gameId\": \"r64-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.97,\n      \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n    },\n    {\n      \"gameId\": \"r64-east-2\",\n      \"winnerId\": \"tcu\",\n      \"confidence\": 0.6,\n      \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n    },\n    {\n      \"gameId\": \"r64-east-3\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 0.74,\n      \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n    },\n    {\n      \"gameId\": \"r64-east-4\",\n      \"winnerId\": \"kansas\",\n      \"confidence\": 0.86,\n      \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n    },\n    {\n      \"gameId\": \"r64-east-5\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.73,\n      \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n    },\n    {\n      \"gameId\": \"r64-east-6\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n    },\n    {\n      \"gameId\": \"r64-east-7\",\n      \"winnerId\": \"ucla\",\n      \"confidence\": 0.67,\n      \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n    },\n    {\n      \"gameId\": \"r64-east-8\",\n      \"winnerId\": \"uconn\",\n      \"confidence\": 0.93,\n      \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:39.680Z",
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:39.680Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "arizona",
+          "liu"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:39.686Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "arizona",
+          "teamName": "Arizona",
+          "torvik": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adjoe": 126.22482613026838,
+            "oe Rank": 10,
+            "adjde": 91.12598305356042,
+            "de Rank": 3,
+            "barthag": 0.9769540425666804,
+            "rank.1": 3,
+            "proj. W": 31.54848779503724,
+            "Proj. L": 2.451512204962764,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.7321035008087977,
+            "ncsos": 0.5608968275917484,
+            "consos": 0.8383219215796915,
+            "Proj. SOS": 0.7391634605797618,
+            "Proj. Noncon SOS": 0.5608968275917484,
+            "Proj. Con SOS": 0.8383219215796915,
+            "elite SOS": 0.6107621530374404,
+            "elite noncon SOS": 0.7185030373892591,
+            "Opp OE": 116.77681864454006,
+            "Opp DE": 103.54326761743802,
+            "Opp Proj. OE": 117.0215450602533,
+            "Opp Proj DE": 103.19943867573676,
+            "Con Adj OE": 126.41731670872475,
+            "Con Adj DE": 91.4031269731425,
+            "Qual O": 126.51726928825438,
+            "Qual D": 91.07345061890346,
+            "Qual Barthag": 0.977690783748864,
+            "Qual Games": 18,
+            "FUN": 0.0953869115257397,
+            "ConPF": 1513,
+            "ConPA": 1265,
+            "ConPoss": 1284.0875,
+            "ConOE": 1.178268614872429,
+            "ConDE": 0.9851353587664392,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 12.797428549241603,
+            "WAB Rk": 3,
+            "Fun Rk": 12,
+            "adjt": 70.03680025527512
+          },
+          "kenpom": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adj_em": 37.56,
+            "adj_o": 127.2,
+            "adj_o_rank": 7,
+            "adj_d": 89.7,
+            "adj_d_rank": 3,
+            "adj_t": 69.9,
+            "adj_t_rank": 54,
+            "luck": 0.018,
+            "luck_rank": 133,
+            "sos_adj_em": 14.35,
+            "sos_adj_em_rank": 13,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 16,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 15,
+            "ncsos_adj_em": 3.29,
+            "ncsos_adj_em_rank": 100
+          }
+        },
+        {
+          "teamId": "liu",
+          "teamName": "LIU",
+          "torvik": {
+            "rank": 234,
+            "team": "LIU",
+            "conf": "NEC",
+            "record": "24-10",
+            "adjoe": 103.60491085105896,
+            "oe Rank": 269,
+            "adjde": 109.718789493818,
+            "de Rank": 196,
+            "barthag": 0.3408827463001779,
+            "rank.1": 234,
+            "proj. W": 24,
+            "Proj. L": 10,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.3033339021829628,
+            "ncsos": 0.5261713064967573,
+            "consos": 0.168237958093902,
+            "Proj. SOS": 0.3033339021829628,
+            "Proj. Noncon SOS": 0.5261713064967573,
+            "Proj. Con SOS": 0.168237958093902,
+            "elite SOS": 0.9030316459843692,
+            "elite noncon SOS": 0.7849419574086505,
+            "Opp OE": 104.048686739136,
+            "Opp DE": 112.70071149766692,
+            "Opp Proj. OE": 104.048686739136,
+            "Opp Proj DE": 112.70071149766692,
+            "Con Adj OE": 101.46481068072876,
+            "Con Adj DE": 108.38092530478484,
+            "Qual O": 103.40216456525638,
+            "Qual D": 102.91054160445316,
+            "Qual Barthag": 0.5136982837252784,
+            "Qual Games": 2,
+            "FUN": 0.131690518627465,
+            "ConPF": 1301,
+            "ConPA": 1161,
+            "ConPoss": 1192.2375,
+            "ConOE": 1.091225531825664,
+            "ConDE": 0.9737992639889284,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": -5.796371420948493,
+            "WAB Rk": 116,
+            "Fun Rk": 3,
+            "adjt": 67.8123382304927
+          },
+          "kenpom": {
+            "rank": 216,
+            "team": "LIU",
+            "conf": "NEC",
+            "record": "24-10",
+            "adj_em": -3.95,
+            "adj_o": 105.7,
+            "adj_o_rank": 239,
+            "adj_d": 109.6,
+            "adj_d_rank": 186,
+            "adj_t": 67.9,
+            "adj_t_rank": 154,
+            "luck": 0.104,
+            "luck_rank": 12,
+            "sos_adj_em": -10.03,
+            "sos_adj_em_rank": 350,
+            "sos_opp_o": 103.6,
+            "sos_opp_o_rank": 333,
+            "sos_opp_d": 113.6,
+            "sos_opp_d_rank": 343,
+            "ncsos_adj_em": 2.08,
+            "ncsos_adj_em_rank": 120
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"arizona\",\n      \"teamName\": \"Arizona\",\n      \"torvik\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adjoe\": 126.22482613026838,\n        \"oe Rank\": 10,\n        \"adjde\": 91.12598305356042,\n        \"de Rank\": 3\n      },\n      \"kenpom\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adj_em\": 37.56,\n        \"adj_o\": 127.2,\n        \"adj_o_rank\": 7,\n        \"adj_d\": 89.7\n      }\n    },\n    {\n      \"teamId\": \"liu\",\n      \"teamName\": \"LIU\",\n      \"torvik\": {\n        \"rank\": 234,\n        \"team\": \"LIU\",\n        \"conf\": \"NEC\",\n        \"record\": \"24-10\",\n        \"adjoe\": 103.60491085105896,\n        \"oe Rank\": 269,\n        \"adjde\": 109.718789493818,\n        \"de Rank\": 196\n      },\n      \"kenpom\": {\n        \"rank\": 216,\n        \"team\": \"LIU\",\n        \"conf\": \"NEC\",\n        \"record\": \"24-10\",\n        \"adj_em\": -3.95,\n        \"adj_o\": 105.7,\n        \"adj_o_rank\": 239,\n        \"adj_d\": 109.6\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-1-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:39.686Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona Wildcats injury report March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:40.584Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Iowa State basketball vs Arizona Big 12 Tournament injury report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.desmoinesregister.com%2Fstory%2Fsports%2Fcollege%2Fiowa%2Dstate%2Fbasketball%2Dmens%2F2026%2F03%2F13%2Fiowa%2Dstate%2Dbasketball%2Dvs%2Darizona%2Dfinal%2Dinjury%2Dreport%2Dreleased%2F89144483007%2F&rut=9af23ba1658901b8ddd39b2ae7889bcd87c5466c1f99445b06de8fa3d079ef53",
+          "snippet": "The final Big 12 availability report for Friday&#x27;s 6 p.m. Big 12 Tournament semifinal game featuring Iowa State basketball vs Arizona was released 90 minutes before tip-off."
+        },
+        {
+          "title": "College Basketball Injury Report - Latest NCAAB Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report ."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "2026 March Madness Bracket Predictions - Nate Silver",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.natesilver.net%2Fp%2F2026%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dpredictions&rut=6f9b15a2069c351663174c6ab103a68e71dd4481880d94bb2d83879bb62d7b70",
+          "snippet": "2026 March Madness Predictions Silver Bulletin odds for the men&#x27;s NCAA tournament , powered by our new COOPER ratings."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=06c6eb9f632ce722feb3d90942368ad1186f9f671e22ffd99e6b129a27764235",
+          "snippet": "From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Iowa State basketball vs Arizona Big 12 Tournament injury report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.desmoinesregister.com%2Fstory%2Fsports%2Fcollege%2Fiowa%2Dstate%2Fbasketball%2Dmens%2F2026%2F03%2F13%2Fiowa%2Dstate%2Dbasketball%2Dvs%2Darizona%2Dfinal%2Dinjury%2Dreport%2Dreleased%2F89144483007%2F&rut=9af23ba1658901b8ddd39b2ae7889bcd87c5466c1f99445b06de8fa3d079ef53\",\n      \"snippet\": \"The final Big 12 availability report for Friday&#x27;s 6 p.m. Big 12 Tournament semifinal game featuring Iowa State basketball vs Arizona was released 90 minutes before tip-off.\"\n    },\n    {\n      \"title\": \"College Basketball Injury Report - Latest NCAAB Injuries\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report .\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA .\"\n    },\n    {\n      \"title\": \"2026 March Madness Bracket Predictions - Nate Silver\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.natesilver.net%2Fp%2F2026%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dpredictions&rut=6f9b15a2069c351663174c6ab103a68e71dd4481880d94bb2d83879bb62d7b70\",\n      \"snippet\": \"2026 March Madness Predictions Silver Bulletin odds for the men&#x27;s NCAA tournament , powered by our new COOPER ratings.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-1-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:40.584Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "LIU Sharks injury report March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:41.368Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2025-2026 NCAA BB Games: Lakers Sharks Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Flakers%2Dsharks%2D2026%2D03%2D10%2Finjuries&rut=68ef302a83075683a485fcbd17570a464d45d455602efec513ce508dbab2f872",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Mercyhurst and LIU . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "LIU Sharks become first team into 2026 NCAA Tournament after unusual ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fliu%2Dsharks%2Dbecome%2Dfirst%2Dteam%2D2026%2Dncaa%2Dtournament%2Dafter%2Dunusual%2Dnec%2Dsituation%2F6ab7e3f80c90dd310a6cc503&rut=0a7b9d9275a8be9d4f43577541eeceea006cd7402156b7cc015f5f2c3e01a3bc",
+          "snippet": "The first ticket to the 2026 NCAA tournament belongs to the LIU Sharks . LIU officially secured the Northeast Conference&#x27;s automatic bid thanks to a unique situation involving the Northeast ..."
+        },
+        {
+          "title": "The first team in the 2026 NCAA tournament is already set and the ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fthe%2Dfirst%2Dteam%2Din%2Dthe%2D2026%2Dncaa%2Dtournament%2Dis%2Dalready%2Dset%2Dand%2Dthe%2Dreason%2Dis%2Dunusual%2Far%2DAA1XJyJJ&rut=74d39a360764f59ba65cca3e91cf7c92d1c365d690a3aef77efbd87a34b313b5",
+          "snippet": "LIU is the first team to clinch a 2026 NCAA tournament spot after a unique NEC tournament situation guaranteed the Sharks an automatic bid."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "Ticket Punched: Previewing the LIU Sharks For the 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dliu%2Dsharks%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=785b19be85665b15e4c87db7b4c1157973b8ec9ecf0fc708d312233ace068762",
+          "snippet": "Tournament Index evaluation As it stands, LIU is a projected No. 16 seed both by our bracketology at Basket Under Review as well as on the Bracket Matrix. The Tournament Index rates the Sharks as a slightly-above-average No. 16 seed (21st in power rating out of 49 teams) compared to the last 12 NCAA Tournament fields."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025-2026 NCAA BB Games: Lakers Sharks Injury Report -\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Flakers%2Dsharks%2D2026%2D03%2D10%2Finjuries&rut=68ef302a83075683a485fcbd17570a464d45d455602efec513ce508dbab2f872\",\n      \"snippet\": \"Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Mercyhurst and LIU . Includes ats, over/under and straight up odds analysis.\"\n    },\n    {\n      \"title\": \"LIU Sharks become first team into 2026 NCAA Tournament after unusual ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fliu%2Dsharks%2Dbecome%2Dfirst%2Dteam%2D2026%2Dncaa%2Dtournament%2Dafter%2Dunusual%2Dnec%2Dsituation%2F6ab7e3f80c90dd310a6cc503&rut=0a7b9d9275a8be9d4f43577541eeceea006cd7402156b7cc015f5f2c3e01a3bc\",\n      \"snippet\": \"The first ticket to the 2026 NCAA tournament belongs to the LIU Sharks . LIU officially secured the Northeast Conference&#x27;s automatic bid thanks to a unique situation involving the Northeast ...\"\n    },\n    {\n      \"title\": \"The first team in the 2026 NCAA tournament is already set and the ... - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fthe%2Dfirst%2Dteam%2Din%2Dthe%2D2026%2Dncaa%2Dtournament%2Dis%2Dalready%2Dset%2Dand%2Dthe%2Dreason%2Dis%2Dunusual%2Far%2DAA1XJyJJ&rut=74d39a360764f59ba65cca3e91cf7c92d1c365d690a3aef77efbd87a34b313b5\",\n      \"snippet\": \"LIU is the first team to clinch a 2026 NCAA tournament spot after a unique NEC tournament situation guaranteed the Sharks an automatic bid.\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA .\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-1-tool-call-0-3",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:41.368Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Arizona LIU preview injury availability",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-result-0-3",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:42.093Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Arizona Diamondbacks Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmlb%2Fteam%2Finjuries%2F_%2Fname%2Fari%2Farizona%2Ddiamondbacks&rut=bbd6114c9add4319ce2a71f5430a40472feac9561d4da5d5b26aced57c2600e5",
+          "snippet": "Visit ESPN for the current injury situation of the 2026 Arizona Diamondbacks. Latest news from the MLB on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Long Island University vs. Arizona (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856529%2Flong%2Disland%2Darizona&rut=9b4b850f426f7243fbe9f173347a25156f1f8cb7fd1b22d49e114c495d7a4853",
+          "snippet": "Live coverage of the Long Island University Sharks vs. Arizona Wildcats NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Arizona Diamondbacks Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmlb%2Fteam%2Finjuries%2F_%2Fname%2Fari%2F_nr%253D0%253B&rut=89c60ee787531929edd68e3e2b1a8e5dfb1652df013260c619154b51074748f3",
+          "snippet": "Visit ESPN for the current injury situation of the 2025 Arizona Diamondbacks. Latest news from the MLB on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Arizona Coyotes Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnhl%2Fteam%2Finjuries%2F_%2Fname%2Fari%2Farizon%25C3%2583%25C2%25A2%25C3%25A2%25E2%2580%259A%25C2%25AC%25C3%2582%25C2%25A6&rut=b2add741a28fd4c936e4416d7abb0d4cfb6d3d1bb0b89b6ac73e5c8538634d15",
+          "snippet": "Visit ESPN for the current injury situation of the 2023-24 Arizona Coyotes. Latest news from the NHL on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Arizona Cardinals Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fnfl%2Fteam%2Finjuries%2F_%2Fname%2Fari%2Farizona%2Dcardinals%2520%2D&rut=7011549e7f85c3a381b14b3687fd258b50c10136b834249c849030ce8c6fd889",
+          "snippet": "Visit ESPN for the current injury situation of the 2025 Arizona Cardinals. Latest news from the NFL on players that are out, day-by-day, or on the injured reserve."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Arizona Diamondbacks Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmlb%2Fteam%2Finjuries%2F_%2Fname%2Fari%2Farizona%2Ddiamondbacks&rut=bbd6114c9add4319ce2a71f5430a40472feac9561d4da5d5b26aced57c2600e5\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2026 Arizona Diamondbacks. Latest news from the MLB on players that are out, day-by-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Long Island University vs. Arizona (Mar 20, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856529%2Flong%2Disland%2Darizona&rut=9b4b850f426f7243fbe9f173347a25156f1f8cb7fd1b22d49e114c495d7a4853\",\n      \"snippet\": \"Live coverage of the Long Island University Sharks vs. Arizona Wildcats NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"Arizona Diamondbacks Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmlb%2Fteam%2Finjuries%2F_%2Fname%2Fari%2F_nr%253D0%253B&rut=89c60ee787531929edd68e3e2b1a8e5dfb1652df013260c619154b51074748f3\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2025 Arizona Diamondbacks. Latest news from the MLB on players that are out, day-by-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Arizona Coyotes Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnhl%2Fteam%2Finjuries%2F_%2Fname%2Fari%2Farizon%25C3%2583%25C2%25A2%25C3%25A2%25E2%2580%259A%25C2%25AC%25C3%2582%25C2%25A6&rut=b2add741a28fd4c936e4416d7abb0d4cfb6d3d1bb0b89b6ac73e5c8538634d15\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2023-24 Arizona Coyotes. Latest news from the NHL on players that are out, day-by-day, or on the injured reserve.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:44.782Z",
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:44.782Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.desmoinesregister.com/story/sports/college/iowa-state/basketball-mens/2026/03/13/iowa-state-basketball-vs-arizona-final-injury-report-released/89144483007/",
+        "maxChars": 8000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:44.969Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.desmoinesregister.com/story/sports/college/iowa-state/basketball-mens/2026/03/13/iowa-state-basketball-vs-arizona-final-injury-report-released/89144483007/",
+        "text": "Iowa State basketball vs Arizona final injury report released Skip to main content Home Sports Hawk Central Big Ten Sports Cyclone Insider High School Insider SportsbookWire Odds USA TODAY Sports Recruiting All Iowa Sports Awards Iowa State basketball vs Arizona Big 12 Tournament injury report Register staff report | Des Moines Register The final Big 12 availability report for Friday's 6 p.m. Big 12 Tournament semifinal game featuring Iowa State basketball vs Arizona was released 90 minutes before tip-off. The No. 5-seeded Cyclones have one player listed as out and another as a game-time decision. No surprises for Iowa State, as both players have held those designations for some time. Meanwhile, the 1-seed Wildcats have no players on the injury report. More: Where to watch Iowa State basketball today vs Arizona in Big 12 Tournament These two teams met once during the regular season, with Arizona winning 73-57 in Tucson on March 2. Here is the full availability report for Friday's Iowa State vs Arizona game. Iowa State players listed as \"out\" Mason Williams Iowa State players listed as \"game-time decision\" Xzaivon Mitchell Arizona players listed as \"out\" none Arizona players listed as \"game-time decision\" none SMS Facebook Twitter Email Share your feedback to help improve our site! Share your feedback to help improve our site! Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your Privacy Choices © Copyright Gannett 2026"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.desmoinesregister.com/story/sports/college/iowa-state/basketball-mens/2026/03/13/iowa-state-basketball-vs-arizona-final-injury-report-released/89144483007/\",\n    \"text\": \"Iowa State basketball vs Arizona final injury report released Skip to main content Home Sports Hawk Central Big Ten Sports Cyclone Insider High School Insider SportsbookWire Odds USA TODAY Sports Recruiting All Iowa Sports Awards Iowa State basketball vs Arizona Big 12 Tournament injury report Register staff report | Des Moines Register The final Big 12 availability report for Friday's 6 p.m. Big 12 Tournament semifinal game featuring Iowa State basketball vs Arizona was released 90 minutes before tip-off. The No. 5-seeded Cyclones have one player listed as out and another as a game-time decision. No surprises for Iowa State, as both players have held those designations for some time. Meanwhile, the 1-seed Wildcats have no players on the injury report. More: Where to watch Iowa State basketball today vs Arizona in Big 12 Tournament These two teams met once during the regular season, with Arizona winning 73-57 in Tucson on March 2. Here is the full availability report for Friday's Iowa State vs Arizona game. Iowa State players listed as \\\"out\\\" Mason Williams Iowa State players listed as \\\"game-time decision\\\" Xzaivon Mitchell Arizona players listed as \\\"out\\\" none Arizona players listed ... [truncated 331 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:44.969Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503",
+        "maxChars": 8000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:45.222Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503",
+        "text": "LIU Sharks become first team into 2026 NCAA Tournament after unusual NEC situation | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Strea"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503\",\n    \"text\": \"LIU Sharks become first team into 2026 NCAA Tournament after unusual NEC situation | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlott... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:45.222Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 8000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:45.884Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/injuries\",\n    \"text\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker R... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:46.837Z",
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:46.837Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Covers NCAAB injuries Arizona Wildcats Mar 17 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:47.627Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report."
+        },
+        {
+          "title": "NCAA Tournament Injury Report: JT Toppin, Caleb Foster Highlight Most ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.actionnetwork.com%2Fncaab%2Fncaa%2Dtournament%2Dinjury%2Dreport%2Djt%2Dtoppin%2Dcaleb%2Dfoster%2Dmost%2Dimpactful%2Dplayers&rut=9dde05dd31b4d615230d9e6cb381e34ff40d389a68e9ae14e6327f73254e0c17",
+          "snippet": "Read for an NCAA Tournament injury report, including JT Toppin and Caleb Foster highlighting the most impactful players."
+        },
+        {
+          "title": "NCAAB Injuries 2026 - Find the Latest NCAAB Player Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.vegasinsider.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=ae72fffb5e2c8aaa5efb300f52e81403fdb74b5afaf311589406527e1780674b",
+          "snippet": "Find NCAAB Injury reports for the 2026 season provided by VegasInsider, along with more NCAAB betting information to assist your sports handicapping."
+        },
+        {
+          "title": "COLLEGEBASKETBALL Injury Report and Status 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=df57f8830206e81dda0ff15128d95afeeb505a38e15cd0a8964fb73c134f0084",
+          "snippet": "Stay updated with the latest COLLEGEBASKETBALL injuries and player statuses on CBS Sports."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA.\"\n    },\n    {\n      \"title\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report.\"\n    },\n    {\n      \"title\": \"NCAA Tournament Injury Report: JT Toppin, Caleb Foster Highlight Most ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.actionnetwork.com%2Fncaab%2Fncaa%2Dtournament%2Dinjury%2Dreport%2Djt%2Dtoppin%2Dcaleb%2Dfoster%2Dmost%2Dimpactful%2Dplayers&rut=9dde05dd31b4d615230d9e6cb381e34ff40d389a68e9ae14e6327f73254e0c17\",\n      \"snippet\": \"Read for an NCAA Tournament injury report, including JT Toppin and Caleb Foster highlighting the most impactful players.\"\n    },\n    {\n      \"title\": \"NCAAB Injuries 2026 - Find the Latest NCAAB Player Injuries\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.vegasinsider.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=ae72fffb5e2c8aaa5efb300f52e81403fdb74b5afaf311589406527e1780674b\",\n      \"snippet\": \"Find NCAAB Injury reports for the 2026 season provided by VegasInsider, along with more NCAAB betting information to assist your sports handicapping.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:48.854Z",
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:48.854Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.actionnetwork.com/ncaab/ncaa-tournament-injury-report-jt-toppin-caleb-foster-most-impactful-players",
+        "maxChars": 8000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-1-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:49.377Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.actionnetwork.com/ncaab/ncaa-tournament-injury-report-jt-toppin-caleb-foster-most-impactful-players",
+        "text": "NCAA Tournament Injury Report: JT Toppin, Caleb Foster Highlight Most Impactful Players Sports Odds Picks Tools PRO Sports Betting Prediction Markets Casinos Resources NFL NFL Home Odds Props Futures Picks Teams ATS Standings Weather Injuries Officials Signals Public Betting Prop Projections Game Projections Systems NBA NBA Home Odds Props Futures Picks Teams ATS Standings Injuries Officials Signals Public Betting Prop Projections Game Projections Systems MLB MLB Home Odds Props Futures Picks Teams ATS Standings Weather Injuries Officials Signals Public Betting Prop Projections Game Projections Systems NHL NHL Home Odds Props Futures Picks Teams ATS Standings Injuries Signals Public Betting Game Projections Prop Projections Systems NCAAB NCAAB Home Odds Props Futures Picks Teams ATS Standings Injuries Signals Public Betting Game Projections Prop Projections Systems NCAAF NCAAF Home Odds Props Futures Picks Teams ATS Standings Weather Injuries Signals Public Betting Prop Projections Game Projections Systems WNBA WNBA Home Odds Props Futures Picks ATS Standings Injuries Signals Public Betting Prop Projections Game Projections Systems SOCCER Soccer Home Odds Picks Public Betting Systems GOLF Golf Home NASCAR NASCAR Home Odds UFC UFC Home NCAA BASEBALL NCAA Baseball Home NFL NBA MLB NHL NCAAB NCAAF WNBA UFC SOCCER NASCAR PROPS NBA Props NFL Props NCAAF Props NCAAB Props NHL Props MLB Props WNBA Props FUTURES NBA Futures NFL Futures NCAAF Futures NCAAB Futures NCAAW Futures NHL Futures MLB Futures WNBA Futures ALL PICKS PICKS BY GAME NFL NBA MLB NHL NCAAB NCAAF WNBA SOCCER DISCOVER EXPERTS SIGNALS PUBLIC BETTING GAME PROJECTIONS SYSTEMS PROP PROJECTIONS MY PRO DASHBOARD Online Sportsbooks & Bonuses Fanatics Sportsbook Promo BetMGM Bonus Code DraftKings Promo Code FanDuel Promo Code bet365 Bonus Code Hard Rock Bet Promo Code Caesars Sportsbook Promo Code theScore Bet Promo Code BetRivers Bonus Code Fliff Promo Code (Social) Rebet Promo Code (Social) PlayBracco Promo Code (Social) DFS Apps & Bonuses Underdog Promo Code Dabble Promo Code Sleeper Promo Code DraftKings Pick6 Promo Code Betr Picks Promo Code Boom Fantasy Promo Code Chalkboard Promo Code Bleacher Nation Fantasy Promo Code OwnersBox Promo Code PrizePicks Promo Code U.S. Legal States Tracker Arizona Sports Betting Colorado Sports Betting Connecticut Sports Betting Illinois Sports Betting Indiana Sports Betting Iowa Sports Betting Kansas Sports Betting Kentucky Sports Betting Louisiana Sports Betting Maine Sports Betting Maryland Sports Betting Massachusetts Sports Betting Michigan Sports Betting Missouri Sports Betting New Jersey Sports Betting New York Sports Betting North Carolina Sports Betting Ohio Sports Betting Pennsylvania Sports Betting Tennessee Sports Betting Vermont Sports Betting Virginia Sports Betting West Virginia Sports Betting Wyoming Sports Betting California Sports Betting Florida Sports Betting Georgia Sports Betting Texas Sports Betting Prediction Markets Home Markets Lead"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.actionnetwork.com/ncaab/ncaa-tournament-injury-report-jt-toppin-caleb-foster-most-impactful-players\",\n    \"text\": \"NCAA Tournament Injury Report: JT Toppin, Caleb Foster Highlight Most Impactful Players Sports Odds Picks Tools PRO Sports Betting Prediction Markets Casinos Resources NFL NFL Home Odds Props Futures Picks Teams ATS Standings Weather Injuries Officials Signals Public Betting Prop Projections Game Projections Systems NBA NBA Home Odds Props Futures Picks Teams ATS Standings Injuries Officials Signals Public Betting Prop Projections Game Projections Systems MLB MLB Home Odds Props Futures Picks Teams ATS Standings Weather Injuries Officials Signals Public Betting Prop Projections Game Projections Systems NHL NHL Home Odds Props Futures Picks Teams ATS Standings Injuries Signals Public Betting Game Projections Prop Projections Systems NCAAB NCAAB Home Odds Props Futures Picks Teams ATS Standings Injuries Signals Public Betting Game Projections Prop Projections Systems NCAAF NCAAF Home Odds Props Futures Picks Teams ATS Standings Weather Injuries Signals Public Betting Prop Projections Game Projections Systems WNBA WNBA Home Odds Props Futures Picks ATS Standings Injuries Signals Public Betting Prop Projections Game Projections Systems SOCCER Soccer Home Odds Picks Public Betting Syste... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-final-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:56.283Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-west-1\",\n    \"winnerId\": \"arizona\",\n    \"confidence\": 0.98,\n    \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent, athleticism, and efficiency gap is so large that Arizona should advance comfortably.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"r64-west-1-analysis\",\n    \"title\": \"Arizona’s top-3 efficiency profile vs LIU’s low-200s profile with no major availability flags\",\n    \"summary\": \"The matchup is a classic 1/16 quality gap: Arizona grades as an elite national-title caliber team on both offense and defense, while LIU profiles as a below-average tournament team that will struggle to score efficiently or get consistent stops.\",\n    \"evidence\": \"Ratings: Arizona KenPom #3 (AdjO 127.2, AdjD 89.7, AdjEM +37.56) and Torvik #3 (AdjO 126.2, AdjD 91.1); LIU KenPom #216 (AdjO 105.7, AdjD 109.6, AdjEM -3.95) and Torvik #234 (AdjO 103.6, AdjD 109.7). Availability/news: a March 13 Big 12 Tournament availability report listed Arizona with no players on the injury report, and no credible recent reporting surfaced indicating a key Arizona absence that would materially narrow the gap.\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T19:58:01.012Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-west-1\",\"winnerId\":\"arizona\",\"confidence\":0.98,\"rationale\":\"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"},\"reasoningStep\":{\"id\":\"r64-west-1-analysis\",\"title\":\"Arizona’s top-3 efficiency profile vs LIU’s low-200s profile with no major availability flags\",\"summary\":\"The matchup is a classic 1/16 quality gap: Arizona grades as an elite national-title caliber team on both offense and defense, while LIU profiles as a below-average tournament team that will struggle to score efficiently or get consistent stops.\",\"evidence\":[\"Ratings: Arizona KenPom #3 (AdjO 127.2, AdjD 89.7, AdjEM +37.56) and Torvik #3 (AdjO 126.2, AdjD 91.1); LIU KenPom #216 (AdjO 105.7, AdjD 109.6, AdjEM -3.95) and Torvik #234 (AdjO 103.6, AdjD 109.7).\",\"Availability/news: a March 13 Big 12 Tournament availability report listed Arizona with no players on the injury report, and no credible recent reporting surfaced indicating a key Arizona absence that would materially narrow the gap.\"]}}"
+    }
+  ]
+}

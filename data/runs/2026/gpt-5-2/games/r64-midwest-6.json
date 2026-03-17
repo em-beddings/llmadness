@@ -1,0 +1,677 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-midwest-6",
+  "generatedAt": "2026-03-17T20:12:17.320Z",
+  "pick": {
+    "gameId": "r64-midwest-6",
+    "winnerId": "virginia",
+    "confidence": 0.9,
+    "rationale": "Virginia has a clear top-tier efficiency profile (KenPom #13, Torvik #14) with a top-30 offense and top-15 defense, which is typically decisive in a 3/14 matchup. Wright State appears more like a mid-major underdog (reported around ~#139 on KenPom in a tournament preview), so its upset path is largely three-point/turnover variance and Virginia having an uncharacteristically poor offensive night. ESPN’s matchup predictor heavily favors Virginia (about 93%), aligning with the underlying quality gap. With no verified, major Virginia availability issue found in the quick news scan, the Cavaliers’ two-way floor makes them the strong advance."
+  },
+  "reasoningStep": {
+    "id": "demo-2026-bracket:r64-midwest-6",
+    "title": "Round of 64 Midwest 3/14 pick based on efficiency gap and upset pathways",
+    "summary": "Virginia’s top-15 two-way efficiency and defensive floor make it the strong favorite over a Wright State team that profiles closer to the ~140 range nationally, leaving the Raiders reliant on high-variance shooting to pull the upset.",
+    "evidence": [
+      "KenPom: Virginia ranked #13 with AdjEM +26.49 (AdjO 122.2, #28; AdjD 95.7).",
+      "Torvik: Virginia ranked #14 (AdjO 121.75, #31; AdjD 95.67, #14).",
+      "Wright State national strength indicator: tournament preview cited Wright State around #139 on KenPom and 0-4 vs higher-rated teams.",
+      "ESPN Analytics matchup predictor on the game page: ~93% Virginia win probability.",
+      "No verified, matchup-flipping Virginia availability/injury news surfaced in the quick scan."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-oidk9307",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "virginia",
+          "wright-state"
+        ]
+      },
+      "startedAt": "2026-03-17T20:11:53.637Z",
+      "completedAt": "2026-03-17T20:11:53.647Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "virginia",
+          "teamName": "Virginia",
+          "torvik": {
+            "rank": 14,
+            "team": "Virginia",
+            "conf": "ACC",
+            "record": "29-4",
+            "adjoe": 121.7500345084046,
+            "oe Rank": 31,
+            "adjde": 95.6707532519653,
+            "de Rank": 14,
+            "barthag": 0.9411527376147542,
+            "rank.1": 14,
+            "proj. W": 29.22736519607453,
+            "Proj. L": 4.77263480392547,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.6677088369119031,
+            "ncsos": 0.4620290177906734,
+            "consos": 0.7926290847637377,
+            "Proj. SOS": 0.6769507100237346,
+            "Proj. Noncon SOS": 0.4620290177906734,
+            "Proj. Con SOS": 0.7926290847637377,
+            "elite SOS": 0.693298488676112,
+            "elite noncon SOS": 0.8333724456846745,
+            "Opp OE": 114.711624593212,
+            "Opp DE": 106.3214750888116,
+            "Opp Proj. OE": 115.10302533596256,
+            "Opp Proj DE": 105.85455141472552,
+            "Con Adj OE": 119.766310427747,
+            "Con Adj DE": 93.99215675044417,
+            "Qual O": 122.31709173375722,
+            "Qual D": 93.6741408117745,
+            "Qual Barthag": 0.9555591700647764,
+            "Qual Games": 13,
+            "FUN": 0.0872411785537577,
+            "ConPF": 1391,
+            "ConPA": 1252,
+            "ConPoss": 1232.3375,
+            "ConOE": 1.1287492265714545,
+            "ConDE": 1.015955450515788,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": 7.827902935672375,
+            "WAB Rk": 8,
+            "Fun Rk": 18,
+            "adjt": 65.60133907077262
+          },
+          "kenpom": {
+            "rank": 13,
+            "team": "Virginia",
+            "conf": "ACC",
+            "record": "29-4",
+            "adj_em": 26.49,
+            "adj_o": 122.2,
+            "adj_o_rank": 28,
+            "adj_d": 95.7,
+            "adj_d_rank": 16,
+            "adj_t": 65.8,
+            "adj_t_rank": 269,
+            "luck": 0.071,
+            "luck_rank": 30,
+            "sos_adj_em": 9.13,
+            "sos_adj_em_rank": 72,
+            "sos_opp_o": 115.2,
+            "sos_opp_o_rank": 55,
+            "sos_opp_d": 106,
+            "sos_opp_d_rank": 83,
+            "ncsos_adj_em": -3.31,
+            "ncsos_adj_em_rank": 274
+          }
+        },
+        {
+          "teamId": "wright-state",
+          "teamName": "Wright State",
+          "torvik": null,
+          "kenpom": null
+        }
+      ]
+    },
+    {
+      "id": "tool-9pj12pr3",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Virginia vs Wright State 2026 NCAA tournament injury report availability",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:11:53.647Z",
+      "completedAt": "2026-03-17T20:11:54.501Z",
+      "summary": "Returned 5 search results for \"Virginia vs Wright State 2026 NCAA tournament injury report availability\".",
+      "result": [
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report ."
+        },
+        {
+          "title": "COLLEGEBASKETBALL Injury Report and Status 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=df57f8830206e81dda0ff15128d95afeeb505a38e15cd0a8964fb73c134f0084",
+          "snippet": "Stay updated with the latest COLLEGEBASKETBALL injuries and player statuses on CBS Sports."
+        },
+        {
+          "title": "NCAAB Injuries 2026 - Find the Latest NCAAB Player Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.vegasinsider.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=ae72fffb5e2c8aaa5efb300f52e81403fdb74b5afaf311589406527e1780674b",
+          "snippet": "Find NCAAB Injury reports for the 2026 season provided by VegasInsider, along with more NCAAB betting information to assist your sports handicapping."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "Virginia basketball&#x27;s March Madness opponent is Wright State",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsleader.com%2Fstory%2Fsports%2F2026%2F03%2F15%2Fvirginia%2Dwright%2Dstate%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2D2026%2F89168911007%2F&rut=97946a14949753ab3b7aef1772516a70511d334a73cddc213710413e8371546a",
+          "snippet": "It&#x27;s Virginia basketball vs . Wright State in March Madness to open its 2026 NCAA tournament men&#x27;s bracket. Here&#x27;s what to know about the game."
+        }
+      ]
+    },
+    {
+      "id": "tool-za6i2mfa",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Virginia Wright State injury availability March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:11:54.501Z",
+      "completedAt": "2026-03-17T20:11:55.220Z",
+      "summary": "Returned 5 search results for \"Virginia Wright State injury availability March 2026\".",
+      "result": [
+        {
+          "title": "Wright State vs. Virginia (20 Mar, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856526%2Fwright%2Dst%2Dvirginia&rut=6fd5ad616af3159e042b63f235b302ca1967a2030b3c48bc15694d391d7aca1f",
+          "snippet": "Live coverage of the Wright State Raiders vs. Virginia Cavaliers NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=e320c0f76f951d39ae78cd7c77866b1b3dcd2f222c10e26aa8b4fe6732f56db2",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "After missing the ACC tournament with a lower back injury , Louisville star freshman Mikel Brown Jr. should be ready to go for March Madness. A presumptive lottery draft pick, Brown is averaging 18 ..."
+        },
+        {
+          "title": "Wright State Raiders Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2750%2Fwright%2Dstate%2Draiders&rut=54c9959f9998f97f2ebacac57c6e52e22b29a70197716399039d8ea6ab3e05fc",
+          "snippet": "Visit ESPN for Wright State Raiders live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Instant men&#x27;s March Madness bracket: Predicting every game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48217204%2Fmarch%2Dmadness%2Dbracket%2Dpredictions%2Dpicks%2Dncaa%2Dtournament%2Dfinal%2Dfour%2D2026&rut=3f2ce12c4d013dce86a04956e385c64a6a0c1a965f90a010fcbb721266e70323",
+          "snippet": "Jeff Borzello makes his picks for the 2026 NCAA tournament, from the First Four through the Final Four."
+        }
+      ]
+    },
+    {
+      "id": "tool-ycdsbcns",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://africa.espn.com/mens-college-basketball/game/_/gameId/401856526/wright-st-virginia",
+        "maxChars": 8000
+      },
+      "startedAt": "2026-03-17T20:11:58.111Z",
+      "completedAt": "2026-03-17T20:11:58.433Z",
+      "summary": "Fetched https://africa.espn.com/mens-college-basketball/game/_/gameId/401856526/wright-st-virginia and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://africa.espn.com/mens-college-basketball/game/_/gameId/401856526/wright-st-virginia",
+        "text": "Wright State vs. Virginia (20 Mar, 2026) Live Score - ESPN Skip to main content Skip to navigation ESPN Football Football NBA NBA NFL NFL MLB MLB Cricket Cricket Boxing Boxing Rugby Rugby NCAAM NCAAM More Sports More Sports Fantasy Fantasy Search Virginia Cavaliers vs Wright State Raiders NCAA Men&#x27;s Basketball Championship - Midwest Region - 1st Round 14 Wright State Raiders Wright St WRST 23-11 3 Virginia Cavaliers Virginia UVA 29-5 Gamecast Videos Bracket Tickets External Link Matchup Predictor 7.0 % WRST 93.0 % UVA According to ESPN Analytics Facebook Twitter Game Information Philadelphia , PA 14 ° Video Highlights View All Videos Season Leaders WRST Avg. Per Game UVA 13.4 M. Cooper #55 44.9 FG%, 80.5 FT% 13.4 Points 15.5 T. De Ridder #28 50.8 FG%, 71.3 FT% 15.5 7.0 M. Imariagbe #33 4.3 DRPG, 2.7 ORPG 7.0 Rebounds 6.2 T. De Ridder #28 3.8 DRPG, 2.4 ORPG 6.2 3.5 T. Burch #22 2.0 TOPG, 24.5 MPG 3.5 Assists 4.3 D. Hall #30 1.3 TOPG, 28.4 MPG 4.3 Full Player Stats Team Stats WRST UVA 80.7 Points 80.6 73.4 Points Against 68.4 49% Field Goal % 46% 35.4 Rebounds 40.2 13.8 Assists 16.6 4.4 Blocks 6.5 7.4 Steals 6.4 LAST FIVE GAMES Wright St DATE OPP RESULT 3/10/26 vs DETM W 66-63 3/9/26 vs NKU W 103-90 3/5/26 vs CLE W 90-61 3/1/26 @ NKU W 92-91 2/26/26 @ PFW W 74-70 Full Schedule Virginia DATE OPP RESULT 3/15/26 vs DUKE L 74-70 3/13/26 vs MIA W 84-62 3/12/26 vs NCSU W 81-74 3/7/26 vs VT W 76-72 3/4/26 vs WAKE W 75-70 Full Schedule Data is currently unavailable. 2025-26 Standings NCAA Division I Horizon League Horizon League CONF GB OVR Wright State 15-5 - 23-11 Robert Morris 13-7 2 22-11 Green Bay 12-8 3 18-15 Detroit Mercy 12-8 3 17-15 Oakland 12-8 3 16-16 Purdue Fort Wayne 11-9 4 17-15 Northern Kentucky 10-10 5 20-14 Youngstown State 8-12 7 15-17 Milwaukee 8-12 7 12-20 Cleveland State 6-14 9 11-22 IU Indianapolis 3-17 12 7-25 Atlantic Coast Conference Atlantic Coast Conference CONF GB OVR Duke 17-1 - 32-2 Virginia 15-3 2 29-5 Miami 13-5 4 25-8 North Carolina 12-6 5 24-8 Clemson 12-6 5 24-10 Louisville 11-7 6 23-10 NC State 10-8 7 20-13 Florida State 10-8 7 18-15 California 9-9 8 21-11 Stanford 9-9 8 20-12 SMU 8-10 9 20-13 Virginia Tech 8-10 9 19-13 Wake Forest 7-11 10 17-16 Syracuse 6-12 11 15-17 Pittsburgh 5-13 12 13-20 Notre Dame 4-14 13 13-18 Boston College 4-14 13 11-20 Georgia Tech 2-16 15 11-20 Full Standings Men&#x27;s College Basketball News No. 15 Tennessee State vs. No. 2 Iowa State game preview Check out some stats on Tennessee State&#x27;s matchup vs. Iowa State in the NCAA tournament. 2h Why Jay Bilas doesn&#x27;t have Michigan or Duke in his Final Four Jay Bilas joins &quot;The Rich Eisen Show&quot; to break down why he didn&#x27;t select Michigan or Duke to reach the Final Four. 2h Coach Aaron Fearne fired after Charlotte ends 17-17 season After going 47-51 in three seasons and losing in the American conference semifinals, Charlotte fired coach Aaron Fearne on Tuesday. 3h All NCAAM News Terms of Use Privacy Policy EU Privacy Righ"
+      }
+    },
+    {
+      "id": "tool-ng5j1z1k",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.cbssports.com/college-basketball/injuries/",
+        "maxChars": 8000
+      },
+      "startedAt": "2026-03-17T20:11:58.433Z",
+      "completedAt": "2026-03-17T20:11:58.612Z",
+      "summary": "Fetched https://www.cbssports.com/college-basketball/injuries/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.cbssports.com/college-basketball/injuries/",
+        "text": "COLLEGEBASKETBALL Injury Report and Status 2025-26 - CBS Sports site: media | arena: collegebasketball | pageType: | section: | slug: | sport: collegebasketball | route: player_injuries_by_team | 6-keys: media/spln/collegebasketball/reg/free/injury Skip to Main Content EyePartInner EyePartCorner Close Menu All Sports Menu Sports Watch Fantasy Betting Featured NFL Bracket Brackets NCAA BB NCAA WBB NBA Golf UFC SportsSoccer Soccer MLB Explore More NCAA FB NHL Champions League SportsWwe WWE WNBA Boxing NASCAR Motor Sports NWSL UFL Horse Racing Northeast Tennis BIG3 High School Olympics Podcasts Shop Northeast Promotions PBR Northeast MLV Northeast 3ICE Northeast Play Golf NFL Explore NFL NFL News Free Agency Tracker Scores Schedule Standings Super Bowl Playoff Bracket Teams Stats NFL Draft Prospect Rankings Mock Drafts Power Rankings Video Players Injuries Transactions NFL Betting Fantasy Paramount + NFL Shop NFL Teams See All ArrowForward AFC East Bills Dolphins Jets Patriots AFC North Bengals Browns Ravens Steelers AFC South Colts Jaguars Texans Titans AFC West Broncos Chargers Chiefs Raiders NFC East Commanders Cowboys Eagles Giants NFC North Bears Lions Packers Vikings NFC South Buccaneers Falcons Panthers Saints NFC West 49ers Cardinals Rams Seahawks Brackets NCAA BB Explore NCAA BB College Basketball News Scores NCAA Tournament Bracket Games Live Bracket Printable Bracket March Madness Live Expert Brackets Expert Picks Schedule NIT Bracket Standings Rankings Expert Picks Odds Stats Teams Players College Basketball Betting Women's BB NBA Draft Prospect Rankings 2026 Top Recruits 2026 Top Classes CBS Sports Classic College Shop Shows & Podcasts See All ArrowForward NCAA WBB Explore NCAA WBB Women's College Basketball News Scores NCAA Tournament Live Bracket Printable Bracket Women's Bracket Games Schedule Expert Brackets WNIT WBIT Standings Rankings Teams Video College Shop Northeast NBA Explore NBA NBA News Scores Schedule Standings Stats Teams Expert Picks Odds Picks Props Prospect Rankings Mock Drafts Video Injuries Transactions Players Power Rankings NBA Betting NBA Shop Northeast NBA Teams See All ArrowForward Atlantic 76ers Celtics Knicks Nets Raptors Central Bucks Bulls Cavaliers Pacers Pistons Southeast Hawks Heat Hornets Magic Wizards Northwest Jazz Nuggets Thunder Timberwolves Trail Blazers Pacific Clippers Kings Lakers Suns Warriors Southwest Grizzlies Mavericks Pelicans Rockets Spurs Golf Explore Golf Golf News Leaderboard Schedule Stats Rankings Watch Live Golf Betting Masters Play Golf Northeast Golf Shop Northeast Shows & Podcasts See All ArrowForward UFC Explore UFC UFC News UFC on Paramount+ UFC Fight Night Schedule Rankings UFC Betting Soccer Explore Soccer Soccer News Champions League Serie A Europa League Premier League NWSL MLS Watch NWSL Watch EFL La Liga World Cup Women's World Cup CBS Sports Golazo Network Video Soccer Betting UCL Bracket Games Shop Northeast Live Channels Live Live Shows & Podcasts See All ArrowForward M"
+      }
+    },
+    {
+      "id": "tool-nkl16vrr",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "maxChars": 8000
+      },
+      "startedAt": "2026-03-17T20:11:58.612Z",
+      "completedAt": "2026-03-17T20:11:59.034Z",
+      "summary": "Fetched https://www.rotowire.com/cbasketball/injury-report.php and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "text": "2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injury Report - Latest NCAAB Injuries Up-to-date college basketball injuries By Conference ALL AAC ACC Big Ten Big 12 Big East MVC Mtn West Pac-12 SEC WCC By Position ALL G F C Daily Site All Teams FanDuel DraftKings Loading College Basketball Injury Report Unlock the Full Injury Report Today Subscribe Now RotoWire Facebook RotoWire Instagram RotoWire Twitter RotoWire YouTube RotoWire BlueS"
+      }
+    },
+    {
+      "id": "tool-e6oajpmi",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Wright State KenPom 2026 rank AdjEM",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:12:00.053Z",
+      "completedAt": "2026-03-17T20:12:00.954Z",
+      "summary": "Returned 5 search results for \"Wright State KenPom 2026 rank AdjEM\".",
+      "result": [
+        {
+          "title": "2026 Pomeroy College Basketball Ratings",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php&rut=95016b9f26fa3d9742c09fb2e1d9a825520b43bceb3381cad58fe7b0ccba0467",
+          "snippet": "02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26"
+        },
+        {
+          "title": "Latest KenPom Rankings for the 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcleatz.com%2Flatest%2Dkenpom%2Drankings%2F&rut=9d0196c4060462849f6df52bef75f6a1bb37e3697a77a506c9e761c845fe2b2f",
+          "snippet": "Understand KenPom Rankings: how teams are rated by adjusted offensive and defensive efficiencies for college basketball."
+        },
+        {
+          "title": "Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dwright%2Dstate%2Draiders%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=bba208d1d9738addca027512692db23fc76e89d43a9ab7f769be9ffced103f45",
+          "snippet": "No wins over higher-ranked teams. Wright State enters the NCAA Tournament ranked at No. 139 on KenPom , yet has not beaten a single team rated higher than itself this season: 23-7 against lower-rated teams and 0-4 against higher-rated teams."
+        },
+        {
+          "title": "March Madness 2026: Ranking every men&#x27;s NCAA ... - Yahoo Sports UK",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuk.sports.yahoo.com%2Fnews%2Fmarch%2Dmadness%2D2026%2Dranking%2Devery%2Dmens%2Dncaa%2Dtournament%2Dfirst%2Dfour%2Dand%2Dfirst%2Dround%2Dgame%2Dfrom%2Dmost%2Dcompetitive%2Dto%2Dleast%2D060130968.html&rut=473590e57d76bdbb20e46e7e40406905836242da70259e1516e865cab9e0e7dc",
+          "snippet": "The 2026 men&#x27;s NCAA tournament begins Tuesday with the First Four. The tourney&#x27;s first round officially begins two days later after the field shrinks to 64 teams. That&#x27;s a lot of games. Need ..."
+        },
+        {
+          "title": "Bracketologists :: NCAA Tournament Resumes with NET Rankings.",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbracketologists.com%2F&rut=ae96588ae2041cc44cf81a6425a5f2300ebe5d7f329f36e954a3ba57a64d987d",
+          "snippet": "Welcome to Bracketologists by CollegePollTracker. We are dedicated to making the NCAA NET Rankings more accessible and NCAA Tournament Resumes more easily viewable. Our comprehensive database includes a history of full NET rankings for the season along with game results organized into quadrants."
+        }
+      ]
+    },
+    {
+      "id": "tool-bblmilzn",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.basketunderreview.com/ticket-punched-previewing-the-wright-state-raiders-for-the-2026-ncaa-tournament/",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T20:12:02.057Z",
+      "completedAt": "2026-03-17T20:12:02.175Z",
+      "summary": "Fetched https://www.basketunderreview.com/ticket-punched-previewing-the-wright-state-raiders-for-the-2026-ncaa-tournament/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.basketunderreview.com/ticket-punched-previewing-the-wright-state-raiders-for-the-2026-ncaa-tournament/",
+        "text": "Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA Tournament Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Search Sign Up Sign Up Create Your Account Get access to exclusive features and stay updated. Sign Up Sign Up Already have an account? Log In Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Become a member Become a member Home Articles & Editorials Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA Tournament Articles & Editorials Articles & Editorials Bracketology Bracketology Free Content Free Content Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA Tournament Featured Mar 12, 2026 by Lukas Harkins Despite trailing by five in the second half of the semifinals and by 11 in the second half of the title game, top-seeded Wright State is headed to the NCAA Tournament as the Horizon League representative... Wright State earned the No. 1 seed at the Horizon League Tournament after a 15-5 intra-league record meant winning the regular-season conference title by two games. After dominating Cleveland State by 29 in the Nutter Center in the quarterfinals, the Raiders made the trip to Indianapolis for the semifinals — less than a month from when the city will host the national semifinals just a few miles down the road. It marked the program's first trip to the neutral-site portion of the Horizon League Tournament since it won the event in 2022. The Raiders did not waste the opportunity, rising to the occasion in second-half comebacks of both games en route to winning the league's automatic bid. First, freshman guard Michael Cooper played hero by scoring 23 of his 25 points after halftime in the semifinal win over Northern Kentucky. Against Detroit Mercy in the title game, it was Logan Woods who capped a 11-point second-half comeback with back-to-back 3-pointers in the final 2:11 to turn a tie game into a six-point lead: Wright State LEADS for the first time all second half! The Raiders trailed by as many as 11. 2:08 left in the Horizon League title game. Wright State up 59-56. pic.twitter.com/iX0sTKe1VO — Lukas Harkins (@hardwiredsports) March 11, 2026 Freshman forward Kellen Pickett swatted three shots in the final 2:29, including two game-sealers in the last 13 seconds. Over the course of the whole event, Wright State's most consistent performer was sophomore guard TJ Burch, who won Tournament MVP honors for averaging 19.0 points, 3.3 rebounds, 3.0 assists, 1.3 steals, and 1.0 blocks per contest. Now heading to the Big Dance for the first time since 2022, let's dive deeper into this iteration of the Raiders and how they could attempt to threaten a top seed. Wright State puts pressure on the rim but has counters. Wright State attempted 43.1% of its total shots at the rim this season, a mark which rates in the 100th percentile by CBB Analytics. While they only rat"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-midwest-6-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T20:11:51.640Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-midwest-6\nCurrent game label: Midwest 3/14\nRound: Round of 64\nResolved teams: Virginia (virginia) vs Wright State (wright-state)\nPrior committed picks: 33"
+    },
+    {
+      "id": "r64-midwest-6-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T20:11:51.640Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-midwest-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"virginia\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"wright-state\"\n      }\n    },\n    \"slotAName\": \"Virginia\",\n    \"slotBName\": \"Wright State\",\n    \"slotATeamId\": \"virginia\",\n    \"slotBTeamId\": \"wright-state\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.61,\n        \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.84,\n        \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.64,\n        \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.99,\n        \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Nebraska is the clear pick based on a major efficiency gap: the Huskers rate top-20 nationally (KenPom #14, Torvik #19) with an elite defense, while Troy sits around the mid-140s on both systems with a below-average two-way profile. That defensive floor should travel well in a one-game setting and make it hard for Troy to generate enough efficient offense to keep pace. Troy’s upset path is mostly shooting/turnover variance, but Nebraska’s overall quality and stop-making ability make the favorite the much more likely advancer.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.64,\n        \"rationale\": \"North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.94,\n        \"rationale\": \"Illinois is a top-10 caliber team by both KenPom and Torvik (elite #1/#2-level offense with a top-25 defense), while Penn profiles around the mid-150s with a below-average offense, which is a massive baseline gap for a 3/14 game. ESPN Analytics and the betting market also imply a near-certain Illini advance (about 97% win probability and a spread in the mid-20s). Penn’s credible upset path is mostly three-point variance plus Illinois turnovers, but Penn’s limited offensive efficiency makes it hard to sustain enough scoring to capitalize over 40 minutes.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.6,\n        \"rationale\": \"Saint Mary’s gets the nod because the efficiency metrics show a meaningful overall edge: KenPom has the Gaels #24 vs. Texas A&M #39 (better AdjEM and notably stronger defense), and Torvik similarly favors Saint Mary’s (#25 vs. #39). In a likely slower, half-court game, Saint Mary’s defensive consistency and ability to control tempo are a good fit for March, while A&M’s upset path is real if it turns this into a more physical, chaotic game and wins the offensive-rebounding/turnover margins. I didn’t find a clear, confirmed availability issue for either side that would override the ratings edge, so I’m siding with the higher two-way baseline.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Houston is a top-5 team in both KenPom and Torvik with an elite defense and a top-20 offense, while Idaho profiles closer to the ~140–150 range with middling efficiency on both ends. That gap in physicality, depth, and shot-quality creation should be decisive over 40 minutes, especially because Houston’s defensive pressure can choke off Idaho’s already-average offense. Idaho’s only credible upset path is extreme three-point variance plus Houston having an unusually poor turnover/shooting game, but the baseline efficiency mismatch makes Houston the overwhelming advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Michigan is the clear advance based on a massive two-way efficiency gap: they’re rated #2 nationally in both KenPom (AdjEM +38.4) and Torvik, while UMBC sits around #185 with a negative adjusted margin. Michigan’s elite defense should choke off UMBC’s middling offense, and Michigan’s top-10 caliber offense gives them multiple ways to create separation even if the pace slows. UMBC’s only credible upset path is extreme three-point variance plus Michigan turnovers, but the baseline talent/athleticism and efficiency mismatch makes that outcome very unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 0.57,\n        \"rationale\": \"Georgia gets a slight nod on overall ceiling and offensive punch: both KenPom and Torvik rate the Bulldogs a bit higher overall (KP #31 vs #41; Torvik #37 vs #44) with a notably stronger adjusted offense. Saint Louis is very live because its defense grades better on both systems (top-60 level) and it’s been consistent all year, so this is close to a coin flip. With no clear, matchup-flipping availability news surfaced in the quick scan, I’ll side with Georgia’s higher-end shot creation, but keep confidence modest given the narrow efficiency gap.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.69,\n        \"rationale\": \"Even with Texas Tech missing star forward JT Toppin for the season, the Red Raiders still hold a clear efficiency edge over Akron in both KenPom (No. 19 vs. No. 64) and Torvik (No. 12 vs. No. 68), driven by a top-15 caliber offense and a much stronger defensive baseline. Importantly, Texas Tech’s All-American point guard Christian Anderson is reported available for the tournament, which stabilizes their shot creation and late-game execution. Akron is a credible upset threat as a veteran, high-win MAC champ with a top-60 offense, but its weaker defense makes it harder to string together enough stops if Texas Tech plays to its ratings.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Alabama has a substantial baseline edge in both major efficiency sets (KenPom #16 / Torvik #17) driven by an elite, top-3 caliber offense, while Hofstra profiles more like a solid but clearly lower-ceiling top-90 team. Hofstra’s path to the upset is real if it can turn this into a high-variance three-point game and avoid getting sped up, but Alabama’s shot-creation, pace control, and overall athleticism advantage should generate enough efficient looks to separate over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way quality and scoring ceiling.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 0.76,\n        \"rationale\": \"Tennessee is the better overall team on both major efficiency sets (KenPom #15 / Torvik #15) and, most importantly in a 6/11, brings a much stronger defensive profile (top-15 AdjD) that should travel and make it harder for SMU’s offense to stay efficient for 40 minutes. SMU can absolutely win if its top-30 offense gets hot from three and it avoids live-ball turnovers, but its defense (around top-95) is the more exploitable unit in this matchup. With no clearly verified, matchup-flipping availability news found in the quick scan, I’m siding with Tennessee’s higher two-way floor and stop-making edge.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-south-2\",\n      \"winnerId\": \"iowa\",\n      \"confidence\": 0.56,\n      \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n    },\n    {\n      \"gameId\": \"r64-south-3\",\n      \"winnerId\": \"vanderbilt\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n    },\n    {\n      \"gameId\": \"r64-south-4\",\n      \"winnerId\": \"nebraska\",\n      \"confidence\": 0.88,\n      \"rationale\": \"Nebraska is the clear pick based on a major efficiency gap: the Huskers rate top-20 nationally (KenPom #14, Torvik #19) with an elite defense, while Troy sits around the mid-140s on both systems with a below-average two-way profile. That defensive floor should travel well in a one-game setting and make it hard for Troy to generate enough efficient offense to keep pace. Troy’s upset path is mostly shooting/turnover variance, but Nebraska’s overall quality and stop-making ability make the favorite the much more likely advancer.\"\n    },\n    {\n      \"gameId\": \"r64-south-5\",\n      \"winnerId\": \"north-carolina\",\n      \"confidence\": 0.64,\n      \"rationale\": \"North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high.\"\n    },\n    {\n      \"gameId\": \"r64-south-6\",\n      \"winnerId\": \"illinois\",\n      \"confidence\": 0.94,\n      \"rationale\": \"Illinois is a top-10 caliber team by both KenPom and Torvik (elite #1/#2-level offense with a top-25 defense), while Penn profiles around the mid-150s with a below-average offense, which is a massive baseline gap for a 3/14 game. ESPN Analytics and the betting market also imply a near-certain Illini advance (about 97% win probability and a spread in the mid-20s). Penn’s credible upset path is mostly three-point variance plus Illinois turnovers, but Penn’s limited offensive efficiency makes it hard to sustain enough scoring to capitalize over 40 minutes.\"\n    },\n    {\n      \"gameId\": \"r64-south-7\",\n      \"winnerId\": \"saint-mary-s\",\n      \"confidence\": 0.6,\n      \"rationale\": \"Saint Mary’s gets the nod because the efficiency metrics show a meaningful overall edge: KenPom has the Gaels #24 vs. Texas A&M #39 (better AdjEM and notably stronger defense), and Torvik similarly favors Saint Mary’s (#25 vs. #39). In a likely slower, half-court game, Saint Mary’s defensive consistency and ability to control tempo are a good fit for March, while A&M’s upset path is real if it turns this into a more physical, chaotic game and wins the offensive-rebounding/turnover margins. I didn’t find a clear, confirmed availability issue for either side that would override the ratings edge, so I’m siding with the higher two-way baseline.\"\n    },\n    {\n      \"gameId\": \"r64-south-8\",\n      \"winnerId\": \"houston\",\n      \"confidence\": 0.97,\n      \"rationale\": \"Houston is a top-5 team in both KenPom and Torvik with an elite defense and a top-20 offense, while Idaho profiles closer to the ~140–150 range with middling efficiency on both ends. That gap in physicality, depth, and shot-quality creation should be decisive over 40 minutes, especially because Houston’s defensive pressure can choke off Idaho’s already-average offense. Idaho’s only credible upset path is extreme three-point variance plus Houston having an unusually poor turnover/shooting game, but the baseline efficiency mismatch makes Houston the overwhelming advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-1\",\n      \"winnerId\": \"michigan\",\n      \"confidence\": 0.97,\n      \"rationale\": \"Michigan is the clear advance based on a massive two-way efficiency gap: they’re rated #2 nationally in both KenPom (AdjEM +38.4) and Torvik, while UMBC sits around #185 with a negative adjusted margin. Michigan’s elite defense should choke off UMBC’s middling offense, and Michigan’s top-10 caliber offense gives them multiple ways to create separation even if the pace slows. UMBC’s only credible upset path is extreme three-point variance plus Michigan turnovers, but the baseline talent/athleticism and efficiency mismatch makes that outcome very unlikely.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-2\",\n      \"winnerId\": \"georgia\",\n      \"confidence\": 0.57,\n      \"rationale\": \"Georgia gets a slight nod on overall ceiling and offensive punch: both KenPom and Torvik rate the Bulldogs a bit higher overall (KP #31 vs #41; Torvik #37 vs #44) with a notably stronger adjusted offense. Saint Louis is very live because its defense grades better on both systems (top-60 level) and it’s been consistent all year, so this is close to a coin flip. With no clear, matchup-flipping availability news surfaced in the quick scan, I’ll side with Georgia’s higher-end shot creation, but keep confidence modest given the narrow efficiency gap.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-3\",\n      \"winnerId\": \"texas-tech\",\n      \"confidence\": 0.69,\n      \"rationale\": \"Even with Texas Tech missing star forward JT Toppin for the season, the Red Raiders still hold a clear efficiency edge over Akron in both KenPom (No. 19 vs. No. 64) and Torvik (No. 12 vs. No. 68), driven by a top-15 caliber offense and a much stronger defensive baseline. Importantly, Texas Tech’s All-American point guard Christian Anderson is reported available for the tournament, which stabilizes their shot creation and late-game execution. Akron is a credible upset threat as a veteran, high-win MAC champ with a top-60 offense, but its weaker defense makes it harder to string together enough stops if Texas Tech plays to its ratings.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-4\",\n      \"winnerId\": \"alabama\",\n      \"confidence\": 0.86,\n      \"rationale\": \"Alabama has a substantial baseline edge in both major efficiency sets (KenPom #16 / Torvik #17) driven by an elite, top-3 caliber offense, while Hofstra profiles more like a solid but clearly lower-ceiling top-90 team. Hofstra’s path to the upset is real if it can turn this into a high-variance three-point game and avoid getting sped up, but Alabama’s shot-creation, pace control, and overall athleticism advantage should generate enough efficient looks to separate over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way quality and scoring ceiling.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-5\",\n      \"winnerId\": \"tennessee\",\n      \"confidence\": 0.76,\n      \"rationale\": \"Tennessee is the better overall team on both major efficiency sets (KenPom #15 / Torvik #15) and, most importantly in a 6/11, brings a much stronger defensive profile (top-15 AdjD) that should travel and make it harder for SMU’s offense to stay efficient for 40 minutes. SMU can absolutely win if its top-30 offense gets hot from three and it avoids live-ball turnovers, but its defense (around top-95) is the more exploitable unit in this matchup. With no clearly verified, matchup-flipping availability news found in the quick scan, I’m siding with Tennessee’s higher two-way floor and stop-making edge.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-midwest-6-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:11:53.637Z",
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:11:53.637Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "virginia",
+          "wright-state"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:11:53.647Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "virginia",
+          "teamName": "Virginia",
+          "torvik": {
+            "rank": 14,
+            "team": "Virginia",
+            "conf": "ACC",
+            "record": "29-4",
+            "adjoe": 121.7500345084046,
+            "oe Rank": 31,
+            "adjde": 95.6707532519653,
+            "de Rank": 14,
+            "barthag": 0.9411527376147542,
+            "rank.1": 14,
+            "proj. W": 29.22736519607453,
+            "Proj. L": 4.77263480392547,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.6677088369119031,
+            "ncsos": 0.4620290177906734,
+            "consos": 0.7926290847637377,
+            "Proj. SOS": 0.6769507100237346,
+            "Proj. Noncon SOS": 0.4620290177906734,
+            "Proj. Con SOS": 0.7926290847637377,
+            "elite SOS": 0.693298488676112,
+            "elite noncon SOS": 0.8333724456846745,
+            "Opp OE": 114.711624593212,
+            "Opp DE": 106.3214750888116,
+            "Opp Proj. OE": 115.10302533596256,
+            "Opp Proj DE": 105.85455141472552,
+            "Con Adj OE": 119.766310427747,
+            "Con Adj DE": 93.99215675044417,
+            "Qual O": 122.31709173375722,
+            "Qual D": 93.6741408117745,
+            "Qual Barthag": 0.9555591700647764,
+            "Qual Games": 13,
+            "FUN": 0.0872411785537577,
+            "ConPF": 1391,
+            "ConPA": 1252,
+            "ConPoss": 1232.3375,
+            "ConOE": 1.1287492265714545,
+            "ConDE": 1.015955450515788,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": 7.827902935672375,
+            "WAB Rk": 8,
+            "Fun Rk": 18,
+            "adjt": 65.60133907077262
+          },
+          "kenpom": {
+            "rank": 13,
+            "team": "Virginia",
+            "conf": "ACC",
+            "record": "29-4",
+            "adj_em": 26.49,
+            "adj_o": 122.2,
+            "adj_o_rank": 28,
+            "adj_d": 95.7,
+            "adj_d_rank": 16,
+            "adj_t": 65.8,
+            "adj_t_rank": 269,
+            "luck": 0.071,
+            "luck_rank": 30,
+            "sos_adj_em": 9.13,
+            "sos_adj_em_rank": 72,
+            "sos_opp_o": 115.2,
+            "sos_opp_o_rank": 55,
+            "sos_opp_d": 106,
+            "sos_opp_d_rank": 83,
+            "ncsos_adj_em": -3.31,
+            "ncsos_adj_em_rank": 274
+          }
+        },
+        {
+          "teamId": "wright-state",
+          "teamName": "Wright State",
+          "torvik": null,
+          "kenpom": null
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"virginia\",\n      \"teamName\": \"Virginia\",\n      \"torvik\": {\n        \"rank\": 14,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adjoe\": 121.7500345084046,\n        \"oe Rank\": 31,\n        \"adjde\": 95.6707532519653,\n        \"de Rank\": 14\n      },\n      \"kenpom\": {\n        \"rank\": 13,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adj_em\": 26.49,\n        \"adj_o\": 122.2,\n        \"adj_o_rank\": 28,\n        \"adj_d\": 95.7\n      }\n    },\n    {\n      \"teamId\": \"wright-state\",\n      \"teamName\": \"Wright State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-midwest-6-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:11:53.647Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Virginia vs Wright State 2026 NCAA tournament injury report availability",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:11:54.501Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report ."
+        },
+        {
+          "title": "COLLEGEBASKETBALL Injury Report and Status 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=df57f8830206e81dda0ff15128d95afeeb505a38e15cd0a8964fb73c134f0084",
+          "snippet": "Stay updated with the latest COLLEGEBASKETBALL injuries and player statuses on CBS Sports."
+        },
+        {
+          "title": "NCAAB Injuries 2026 - Find the Latest NCAAB Player Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.vegasinsider.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=ae72fffb5e2c8aaa5efb300f52e81403fdb74b5afaf311589406527e1780674b",
+          "snippet": "Find NCAAB Injury reports for the 2026 season provided by VegasInsider, along with more NCAAB betting information to assist your sports handicapping."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "Virginia basketball&#x27;s March Madness opponent is Wright State",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsleader.com%2Fstory%2Fsports%2F2026%2F03%2F15%2Fvirginia%2Dwright%2Dstate%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2D2026%2F89168911007%2F&rut=97946a14949753ab3b7aef1772516a70511d334a73cddc213710413e8371546a",
+          "snippet": "It&#x27;s Virginia basketball vs . Wright State in March Madness to open its 2026 NCAA tournament men&#x27;s bracket. Here&#x27;s what to know about the game."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report .\"\n    },\n    {\n      \"title\": \"COLLEGEBASKETBALL Injury Report and Status 2025-26\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=df57f8830206e81dda0ff15128d95afeeb505a38e15cd0a8964fb73c134f0084\",\n      \"snippet\": \"Stay updated with the latest COLLEGEBASKETBALL injuries and player statuses on CBS Sports.\"\n    },\n    {\n      \"title\": \"NCAAB Injuries 2026 - Find the Latest NCAAB Player Injuries\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.vegasinsider.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=ae72fffb5e2c8aaa5efb300f52e81403fdb74b5afaf311589406527e1780674b\",\n      \"snippet\": \"Find NCAAB Injury reports for the 2026 season provided by VegasInsider, along with more NCAAB betting information to assist your sports handicapping.\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA .\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-midwest-6-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:11:54.501Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Virginia Wright State injury availability March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:11:55.220Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Wright State vs. Virginia (20 Mar, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856526%2Fwright%2Dst%2Dvirginia&rut=6fd5ad616af3159e042b63f235b302ca1967a2030b3c48bc15694d391d7aca1f",
+          "snippet": "Live coverage of the Wright State Raiders vs. Virginia Cavaliers NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=e320c0f76f951d39ae78cd7c77866b1b3dcd2f222c10e26aa8b4fe6732f56db2",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "After missing the ACC tournament with a lower back injury , Louisville star freshman Mikel Brown Jr. should be ready to go for March Madness. A presumptive lottery draft pick, Brown is averaging 18 ..."
+        },
+        {
+          "title": "Wright State Raiders Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2750%2Fwright%2Dstate%2Draiders&rut=54c9959f9998f97f2ebacac57c6e52e22b29a70197716399039d8ea6ab3e05fc",
+          "snippet": "Visit ESPN for Wright State Raiders live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Instant men&#x27;s March Madness bracket: Predicting every game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48217204%2Fmarch%2Dmadness%2Dbracket%2Dpredictions%2Dpicks%2Dncaa%2Dtournament%2Dfinal%2Dfour%2D2026&rut=3f2ce12c4d013dce86a04956e385c64a6a0c1a965f90a010fcbb721266e70323",
+          "snippet": "Jeff Borzello makes his picks for the 2026 NCAA tournament, from the First Four through the Final Four."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Wright State vs. Virginia (20 Mar, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856526%2Fwright%2Dst%2Dvirginia&rut=6fd5ad616af3159e042b63f235b302ca1967a2030b3c48bc15694d391d7aca1f\",\n      \"snippet\": \"Live coverage of the Wright State Raiders vs. Virginia Cavaliers NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=e320c0f76f951d39ae78cd7c77866b1b3dcd2f222c10e26aa8b4fe6732f56db2\",\n      \"snippet\": \"The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title.\"\n    },\n    {\n      \"title\": \"Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce\",\n      \"snippet\": \"After missing the ACC tournament with a lower back injury , Louisville star freshman Mikel Brown Jr. should be ready to go for March Madness. A presumptive lottery draft pick, Brown is averaging 18 ...\"\n    },\n    {\n      \"title\": \"Wright State Raiders Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2750%2Fwright%2Dstate%2Draiders&rut=54c9959f9998f97f2ebacac57c6e52e22b29a70197716399039d8ea6ab3e05fc\",\n      \"snippet\": \"Visit ESPN for Wright State Raiders live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-midwest-6-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:11:58.111Z",
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:11:58.111Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://africa.espn.com/mens-college-basketball/game/_/gameId/401856526/wright-st-virginia",
+        "maxChars": 8000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:11:58.433Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://africa.espn.com/mens-college-basketball/game/_/gameId/401856526/wright-st-virginia",
+        "text": "Wright State vs. Virginia (20 Mar, 2026) Live Score - ESPN Skip to main content Skip to navigation ESPN Football Football NBA NBA NFL NFL MLB MLB Cricket Cricket Boxing Boxing Rugby Rugby NCAAM NCAAM More Sports More Sports Fantasy Fantasy Search Virginia Cavaliers vs Wright State Raiders NCAA Men&#x27;s Basketball Championship - Midwest Region - 1st Round 14 Wright State Raiders Wright St WRST 23-11 3 Virginia Cavaliers Virginia UVA 29-5 Gamecast Videos Bracket Tickets External Link Matchup Predictor 7.0 % WRST 93.0 % UVA According to ESPN Analytics Facebook Twitter Game Information Philadelphia , PA 14 ° Video Highlights View All Videos Season Leaders WRST Avg. Per Game UVA 13.4 M. Cooper #55 44.9 FG%, 80.5 FT% 13.4 Points 15.5 T. De Ridder #28 50.8 FG%, 71.3 FT% 15.5 7.0 M. Imariagbe #33 4.3 DRPG, 2.7 ORPG 7.0 Rebounds 6.2 T. De Ridder #28 3.8 DRPG, 2.4 ORPG 6.2 3.5 T. Burch #22 2.0 TOPG, 24.5 MPG 3.5 Assists 4.3 D. Hall #30 1.3 TOPG, 28.4 MPG 4.3 Full Player Stats Team Stats WRST UVA 80.7 Points 80.6 73.4 Points Against 68.4 49% Field Goal % 46% 35.4 Rebounds 40.2 13.8 Assists 16.6 4.4 Blocks 6.5 7.4 Steals 6.4 LAST FIVE GAMES Wright St DATE OPP RESULT 3/10/26 vs DETM W 66-63 3/9/26 vs NKU W 103-90 3/5/26 vs CLE W 90-61 3/1/26 @ NKU W 92-91 2/26/26 @ PFW W 74-70 Full Schedule Virginia DATE OPP RESULT 3/15/26 vs DUKE L 74-70 3/13/26 vs MIA W 84-62 3/12/26 vs NCSU W 81-74 3/7/26 vs VT W 76-72 3/4/26 vs WAKE W 75-70 Full Schedule Data is currently unavailable. 2025-26 Standings NCAA Division I Horizon League Horizon League CONF GB OVR Wright State 15-5 - 23-11 Robert Morris 13-7 2 22-11 Green Bay 12-8 3 18-15 Detroit Mercy 12-8 3 17-15 Oakland 12-8 3 16-16 Purdue Fort Wayne 11-9 4 17-15 Northern Kentucky 10-10 5 20-14 Youngstown State 8-12 7 15-17 Milwaukee 8-12 7 12-20 Cleveland State 6-14 9 11-22 IU Indianapolis 3-17 12 7-25 Atlantic Coast Conference Atlantic Coast Conference CONF GB OVR Duke 17-1 - 32-2 Virginia 15-3 2 29-5 Miami 13-5 4 25-8 North Carolina 12-6 5 24-8 Clemson 12-6 5 24-10 Louisville 11-7 6 23-10 NC State 10-8 7 20-13 Florida State 10-8 7 18-15 California 9-9 8 21-11 Stanford 9-9 8 20-12 SMU 8-10 9 20-13 Virginia Tech 8-10 9 19-13 Wake Forest 7-11 10 17-16 Syracuse 6-12 11 15-17 Pittsburgh 5-13 12 13-20 Notre Dame 4-14 13 13-18 Boston College 4-14 13 11-20 Georgia Tech 2-16 15 11-20 Full Standings Men&#x27;s College Basketball News No. 15 Tennessee State vs. No. 2 Iowa State game preview Check out some stats on Tennessee State&#x27;s matchup vs. Iowa State in the NCAA tournament. 2h Why Jay Bilas doesn&#x27;t have Michigan or Duke in his Final Four Jay Bilas joins &quot;The Rich Eisen Show&quot; to break down why he didn&#x27;t select Michigan or Duke to reach the Final Four. 2h Coach Aaron Fearne fired after Charlotte ends 17-17 season After going 47-51 in three seasons and losing in the American conference semifinals, Charlotte fired coach Aaron Fearne on Tuesday. 3h All NCAAM News Terms of Use Privacy Policy EU Privacy Righ"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://africa.espn.com/mens-college-basketball/game/_/gameId/401856526/wright-st-virginia\",\n    \"text\": \"Wright State vs. Virginia (20 Mar, 2026) Live Score - ESPN Skip to main content Skip to navigation ESPN Football Football NBA NBA NFL NFL MLB MLB Cricket Cricket Boxing Boxing Rugby Rugby NCAAM NCAAM More Sports More Sports Fantasy Fantasy Search Virginia Cavaliers vs Wright State Raiders NCAA Men&#x27;s Basketball Championship - Midwest Region - 1st Round 14 Wright State Raiders Wright St WRST 23-11 3 Virginia Cavaliers Virginia UVA 29-5 Gamecast Videos Bracket Tickets External Link Matchup Predictor 7.0 % WRST 93.0 % UVA According to ESPN Analytics Facebook Twitter Game Information Philadelphia , PA 14 ° Video Highlights View All Videos Season Leaders WRST Avg. Per Game UVA 13.4 M. Cooper #55 44.9 FG%, 80.5 FT% 13.4 Points 15.5 T. De Ridder #28 50.8 FG%, 71.3 FT% 15.5 7.0 M. Imariagbe #33 4.3 DRPG, 2.7 ORPG 7.0 Rebounds 6.2 T. De Ridder #28 3.8 DRPG, 2.4 ORPG 6.2 3.5 T. Burch #22 2.0 TOPG, 24.5 MPG 3.5 Assists 4.3 D. Hall #30 1.3 TOPG, 28.4 MPG 4.3 Full Player Stats Team Stats WRST UVA 80.7 Points 80.6 73.4 Points Against 68.4 49% Field Goal % 46% 35.4 Rebounds 40.2 13.8 Assists 16.6 4.4 Blocks 6.5 7.4 Steals 6.4 LAST FIVE GAMES Wright St DATE OPP RESULT 3/10/26 vs DETM W 66-63 3... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-6-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:11:58.433Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.cbssports.com/college-basketball/injuries/",
+        "maxChars": 8000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:11:58.612Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.cbssports.com/college-basketball/injuries/",
+        "text": "COLLEGEBASKETBALL Injury Report and Status 2025-26 - CBS Sports site: media | arena: collegebasketball | pageType: | section: | slug: | sport: collegebasketball | route: player_injuries_by_team | 6-keys: media/spln/collegebasketball/reg/free/injury Skip to Main Content EyePartInner EyePartCorner Close Menu All Sports Menu Sports Watch Fantasy Betting Featured NFL Bracket Brackets NCAA BB NCAA WBB NBA Golf UFC SportsSoccer Soccer MLB Explore More NCAA FB NHL Champions League SportsWwe WWE WNBA Boxing NASCAR Motor Sports NWSL UFL Horse Racing Northeast Tennis BIG3 High School Olympics Podcasts Shop Northeast Promotions PBR Northeast MLV Northeast 3ICE Northeast Play Golf NFL Explore NFL NFL News Free Agency Tracker Scores Schedule Standings Super Bowl Playoff Bracket Teams Stats NFL Draft Prospect Rankings Mock Drafts Power Rankings Video Players Injuries Transactions NFL Betting Fantasy Paramount + NFL Shop NFL Teams See All ArrowForward AFC East Bills Dolphins Jets Patriots AFC North Bengals Browns Ravens Steelers AFC South Colts Jaguars Texans Titans AFC West Broncos Chargers Chiefs Raiders NFC East Commanders Cowboys Eagles Giants NFC North Bears Lions Packers Vikings NFC South Buccaneers Falcons Panthers Saints NFC West 49ers Cardinals Rams Seahawks Brackets NCAA BB Explore NCAA BB College Basketball News Scores NCAA Tournament Bracket Games Live Bracket Printable Bracket March Madness Live Expert Brackets Expert Picks Schedule NIT Bracket Standings Rankings Expert Picks Odds Stats Teams Players College Basketball Betting Women's BB NBA Draft Prospect Rankings 2026 Top Recruits 2026 Top Classes CBS Sports Classic College Shop Shows & Podcasts See All ArrowForward NCAA WBB Explore NCAA WBB Women's College Basketball News Scores NCAA Tournament Live Bracket Printable Bracket Women's Bracket Games Schedule Expert Brackets WNIT WBIT Standings Rankings Teams Video College Shop Northeast NBA Explore NBA NBA News Scores Schedule Standings Stats Teams Expert Picks Odds Picks Props Prospect Rankings Mock Drafts Video Injuries Transactions Players Power Rankings NBA Betting NBA Shop Northeast NBA Teams See All ArrowForward Atlantic 76ers Celtics Knicks Nets Raptors Central Bucks Bulls Cavaliers Pacers Pistons Southeast Hawks Heat Hornets Magic Wizards Northwest Jazz Nuggets Thunder Timberwolves Trail Blazers Pacific Clippers Kings Lakers Suns Warriors Southwest Grizzlies Mavericks Pelicans Rockets Spurs Golf Explore Golf Golf News Leaderboard Schedule Stats Rankings Watch Live Golf Betting Masters Play Golf Northeast Golf Shop Northeast Shows & Podcasts See All ArrowForward UFC Explore UFC UFC News UFC on Paramount+ UFC Fight Night Schedule Rankings UFC Betting Soccer Explore Soccer Soccer News Champions League Serie A Europa League Premier League NWSL MLS Watch NWSL Watch EFL La Liga World Cup Women's World Cup CBS Sports Golazo Network Video Soccer Betting UCL Bracket Games Shop Northeast Live Channels Live Live Shows & Podcasts See All ArrowForward M"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.cbssports.com/college-basketball/injuries/\",\n    \"text\": \"COLLEGEBASKETBALL Injury Report and Status 2025-26 - CBS Sports site: media | arena: collegebasketball | pageType: | section: | slug: | sport: collegebasketball | route: player_injuries_by_team | 6-keys: media/spln/collegebasketball/reg/free/injury Skip to Main Content EyePartInner EyePartCorner Close Menu All Sports Menu Sports Watch Fantasy Betting Featured NFL Bracket Brackets NCAA BB NCAA WBB NBA Golf UFC SportsSoccer Soccer MLB Explore More NCAA FB NHL Champions League SportsWwe WWE WNBA Boxing NASCAR Motor Sports NWSL UFL Horse Racing Northeast Tennis BIG3 High School Olympics Podcasts Shop Northeast Promotions PBR Northeast MLV Northeast 3ICE Northeast Play Golf NFL Explore NFL NFL News Free Agency Tracker Scores Schedule Standings Super Bowl Playoff Bracket Teams Stats NFL Draft Prospect Rankings Mock Drafts Power Rankings Video Players Injuries Transactions NFL Betting Fantasy Paramount + NFL Shop NFL Teams See All ArrowForward AFC East Bills Dolphins Jets Patriots AFC North Bengals Browns Ravens Steelers AFC South Colts Jaguars Texans Titans AFC West Broncos Chargers Chiefs Raiders NFC East Commanders Cowboys Eagles Giants NFC North Bears Lions Packers Vikings NFC South B... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-6-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:11:58.612Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "maxChars": 8000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:11:59.034Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "text": "2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injury Report - Latest NCAAB Injuries Up-to-date college basketball injuries By Conference ALL AAC ACC Big Ten Big 12 Big East MVC Mtn West Pac-12 SEC WCC By Position ALL G F C Daily Site All Teams FanDuel DraftKings Loading College Basketball Injury Report Unlock the Full Injury Report Today Subscribe Now RotoWire Facebook RotoWire Instagram RotoWire Twitter RotoWire YouTube RotoWire BlueS"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.rotowire.com/cbasketball/injury-report.php\",\n    \"text\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-6-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:12:00.053Z",
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:12:00.053Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Wright State KenPom 2026 rank AdjEM",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:12:00.955Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 Pomeroy College Basketball Ratings",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php&rut=95016b9f26fa3d9742c09fb2e1d9a825520b43bceb3381cad58fe7b0ccba0467",
+          "snippet": "02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26"
+        },
+        {
+          "title": "Latest KenPom Rankings for the 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcleatz.com%2Flatest%2Dkenpom%2Drankings%2F&rut=9d0196c4060462849f6df52bef75f6a1bb37e3697a77a506c9e761c845fe2b2f",
+          "snippet": "Understand KenPom Rankings: how teams are rated by adjusted offensive and defensive efficiencies for college basketball."
+        },
+        {
+          "title": "Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dwright%2Dstate%2Draiders%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=bba208d1d9738addca027512692db23fc76e89d43a9ab7f769be9ffced103f45",
+          "snippet": "No wins over higher-ranked teams. Wright State enters the NCAA Tournament ranked at No. 139 on KenPom , yet has not beaten a single team rated higher than itself this season: 23-7 against lower-rated teams and 0-4 against higher-rated teams."
+        },
+        {
+          "title": "March Madness 2026: Ranking every men&#x27;s NCAA ... - Yahoo Sports UK",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuk.sports.yahoo.com%2Fnews%2Fmarch%2Dmadness%2D2026%2Dranking%2Devery%2Dmens%2Dncaa%2Dtournament%2Dfirst%2Dfour%2Dand%2Dfirst%2Dround%2Dgame%2Dfrom%2Dmost%2Dcompetitive%2Dto%2Dleast%2D060130968.html&rut=473590e57d76bdbb20e46e7e40406905836242da70259e1516e865cab9e0e7dc",
+          "snippet": "The 2026 men&#x27;s NCAA tournament begins Tuesday with the First Four. The tourney&#x27;s first round officially begins two days later after the field shrinks to 64 teams. That&#x27;s a lot of games. Need ..."
+        },
+        {
+          "title": "Bracketologists :: NCAA Tournament Resumes with NET Rankings.",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbracketologists.com%2F&rut=ae96588ae2041cc44cf81a6425a5f2300ebe5d7f329f36e954a3ba57a64d987d",
+          "snippet": "Welcome to Bracketologists by CollegePollTracker. We are dedicated to making the NCAA NET Rankings more accessible and NCAA Tournament Resumes more easily viewable. Our comprehensive database includes a history of full NET rankings for the season along with game results organized into quadrants."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php&rut=95016b9f26fa3d9742c09fb2e1d9a825520b43bceb3381cad58fe7b0ccba0467\",\n      \"snippet\": \"02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26\"\n    },\n    {\n      \"title\": \"Latest KenPom Rankings for the 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcleatz.com%2Flatest%2Dkenpom%2Drankings%2F&rut=9d0196c4060462849f6df52bef75f6a1bb37e3697a77a506c9e761c845fe2b2f\",\n      \"snippet\": \"Understand KenPom Rankings: how teams are rated by adjusted offensive and defensive efficiencies for college basketball.\"\n    },\n    {\n      \"title\": \"Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dwright%2Dstate%2Draiders%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=bba208d1d9738addca027512692db23fc76e89d43a9ab7f769be9ffced103f45\",\n      \"snippet\": \"No wins over higher-ranked teams. Wright State enters the NCAA Tournament ranked at No. 139 on KenPom , yet has not beaten a single team rated higher than itself this season: 23-7 against lower-rated teams and 0-4 against higher-rated teams.\"\n    },\n    {\n      \"title\": \"March Madness 2026: Ranking every men&#x27;s NCAA ... - Yahoo Sports UK\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fuk.sports.yahoo.com%2Fnews%2Fmarch%2Dmadness%2D2026%2Dranking%2Devery%2Dmens%2Dncaa%2Dtournament%2Dfirst%2Dfour%2Dand%2Dfirst%2Dround%2Dgame%2Dfrom%2Dmost%2Dcompetitive%2Dto%2Dleast%2D060130968.html&rut=473590e57d76bdbb20e46e7e40406905836242da70259e1516e865cab9e0e7dc\",\n      \"snippet\": \"The 2026 men&#x27;s NCAA tournament begins Tuesday with the First Four. The tourney&#x27;s first round officially begins two days later after the field shrinks to 64 teams. That&#x27;s a lot of games. Need ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-midwest-6-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:12:02.057Z",
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:12:02.057Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.basketunderreview.com/ticket-punched-previewing-the-wright-state-raiders-for-the-2026-ncaa-tournament/",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-midwest-6-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:12:02.175Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.basketunderreview.com/ticket-punched-previewing-the-wright-state-raiders-for-the-2026-ncaa-tournament/",
+        "text": "Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA Tournament Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Search Sign Up Sign Up Create Your Account Get access to exclusive features and stay updated. Sign Up Sign Up Already have an account? Log In Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Become a member Become a member Home Articles & Editorials Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA Tournament Articles & Editorials Articles & Editorials Bracketology Bracketology Free Content Free Content Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA Tournament Featured Mar 12, 2026 by Lukas Harkins Despite trailing by five in the second half of the semifinals and by 11 in the second half of the title game, top-seeded Wright State is headed to the NCAA Tournament as the Horizon League representative... Wright State earned the No. 1 seed at the Horizon League Tournament after a 15-5 intra-league record meant winning the regular-season conference title by two games. After dominating Cleveland State by 29 in the Nutter Center in the quarterfinals, the Raiders made the trip to Indianapolis for the semifinals — less than a month from when the city will host the national semifinals just a few miles down the road. It marked the program's first trip to the neutral-site portion of the Horizon League Tournament since it won the event in 2022. The Raiders did not waste the opportunity, rising to the occasion in second-half comebacks of both games en route to winning the league's automatic bid. First, freshman guard Michael Cooper played hero by scoring 23 of his 25 points after halftime in the semifinal win over Northern Kentucky. Against Detroit Mercy in the title game, it was Logan Woods who capped a 11-point second-half comeback with back-to-back 3-pointers in the final 2:11 to turn a tie game into a six-point lead: Wright State LEADS for the first time all second half! The Raiders trailed by as many as 11. 2:08 left in the Horizon League title game. Wright State up 59-56. pic.twitter.com/iX0sTKe1VO — Lukas Harkins (@hardwiredsports) March 11, 2026 Freshman forward Kellen Pickett swatted three shots in the final 2:29, including two game-sealers in the last 13 seconds. Over the course of the whole event, Wright State's most consistent performer was sophomore guard TJ Burch, who won Tournament MVP honors for averaging 19.0 points, 3.3 rebounds, 3.0 assists, 1.3 steals, and 1.0 blocks per contest. Now heading to the Big Dance for the first time since 2022, let's dive deeper into this iteration of the Raiders and how they could attempt to threaten a top seed. Wright State puts pressure on the rim but has counters. Wright State attempted 43.1% of its total shots at the rim this season, a mark which rates in the 100th percentile by CBB Analytics. While they only rat"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.basketunderreview.com/ticket-punched-previewing-the-wright-state-raiders-for-the-2026-ncaa-tournament/\",\n    \"text\": \"Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA Tournament Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Search Sign Up Sign Up Create Your Account Get access to exclusive features and stay updated. Sign Up Sign Up Already have an account? Log In Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Become a member Become a member Home Articles & Editorials Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA Tournament Articles & Editorials Articles & Editorials Bracketology Bracketology Free Content Free Content Ticket Punched: Previewing the Wright State Raiders for the 2026 NCAA Tournament Featured Mar 12, 2026 by Lukas Harkins Despite trailing by five in the second half of the semifinals and by 11 in the second half of the title game, top-seeded Wright State is headed to the NCAA Tournament as the Horizon League representative... Wright State earned the No. 1 seed at the Horizon League Tournament after a 15-5 intra-league record meant winning the regular-season conference title by two games. After dominating Clevel... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-6-assistant-final-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:12:11.151Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-midwest-6\",\n    \"winnerId\": \"virginia\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Virginia has a clear top-tier efficiency profile (KenPom #13, Torvik #14) with a top-30 offense and top-15 defense, which is typically decisive in a 3/14 matchup. Wright State’s profile looks much more like a mid-major underdog (reported around ~#139 on KenPom in a tournament preview) that hasn’t consistently proven it can beat teams rated above it, making its upset path heavily dependent on shooting variance and Virginia having an uncharacteristically poor offensive night. ESPN’s matchup predictor also heavily favors Virginia (about 93%), aligning with the underlying quality gap. Absent any verified, major Virginia availability issue in the pregame news scan, the Cavaliers’ two-way floor makes them the strong advance.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"demo-2026-bracket:r64-midwest-6\",\n    \"title\": \"Round of 64 Midwest 3/14 pick based on efficiency gap and upset pathways\",\n    \"summary\": \"Virginia’s top-15 two-way efficiency and defensive floor make it the strong favorite over a Wright State team that profiles closer to the ~140 range nationally, leaving the Raiders reliant on high-variance shooting to pull the upset.\",\n    \"evidence\": {\n      \"ratings\": {\n        \"virginia\": {\n          \"kenpomRank\": 13,\n          \"kenpomAdjEM\": 26.49,\n          \"kenpomAdjO\": 122.2,\n          \"kenpomAdjORank\": 28,\n          \"kenpomAdjD\": 95.7,\n          \"torvikRank\": 14,\n          \"torvikAdjO\": 121.75,\n          \"torvikAdjORank\": 31,\n          \"torvikAdjD\": 95.67,\n          \"torvikAdjDRank\": 14\n        },\n        \"wright-state\": {\n          \"kenpomRank\": 139,\n          \"sourceNote\": \"Tournament preview article citing Wright State at No. 139 on KenPom\"\n        }\n      },\n      \"matchupIndicators\": {\n        \"espnMatchupPredictor\": {\n          \"virginiaWinProb\": 0.93,\n          \"wrightStateWinProb\": 0.07,\n          \"source\": \"ESPN game page\"\n        }\n      },\n      \"availabilityNews\": {\n        \"note\": \"No specific, verified injury/availability red flag surfaced in the quick ESPN/web scan that would materially change the baseline projection.\"\n      }\n    }\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-6-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T20:12:17.320Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-midwest-6\",\"winnerId\":\"virginia\",\"confidence\":0.9,\"rationale\":\"Virginia has a clear top-tier efficiency profile (KenPom #13, Torvik #14) with a top-30 offense and top-15 defense, which is typically decisive in a 3/14 matchup. Wright State appears more like a mid-major underdog (reported around ~#139 on KenPom in a tournament preview), so its upset path is largely three-point/turnover variance and Virginia having an uncharacteristically poor offensive night. ESPN’s matchup predictor heavily favors Virginia (about 93%), aligning with the underlying quality gap. With no verified, major Virginia availability issue found in the quick news scan, the Cavaliers’ two-way floor makes them the strong advance.\"},\"reasoningStep\":{\"id\":\"demo-2026-bracket:r64-midwest-6\",\"title\":\"Round of 64 Midwest 3/14 pick based on efficiency gap and upset pathways\",\"summary\":\"Virginia’s top-15 two-way efficiency and defensive floor make it the strong favorite over a Wright State team that profiles closer to the ~140 range nationally, leaving the Raiders reliant on high-variance shooting to pull the upset.\",\"evidence\":[\"KenPom: Virginia ranked #13 with AdjEM +26.49 (AdjO 122.2, #28; AdjD 95.7).\",\"Torvik: Virginia ranked #14 (AdjO 121.75, #31; AdjD 95.67, #14).\",\"Wright State national strength indicator: tournament preview cited Wright State around #139 on KenPom and 0-4 vs higher-rated teams.\",\"ESPN Analytics matchup predictor on the game page: ~93% Virginia win probability.\",\"No verified, matchup-flipping Virginia availability/injury news surfaced in the quick scan.\"]}}"
+    }
+  ]
+}

@@ -1,0 +1,637 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-south-8",
+  "generatedAt": "2026-03-17T20:08:05.086Z",
+  "pick": {
+    "gameId": "r64-south-8",
+    "winnerId": "houston",
+    "confidence": 0.97,
+    "rationale": "Houston is a top-5 team in both KenPom and Torvik with an elite defense and a top-20 offense, while Idaho profiles closer to the ~140–150 range with middling efficiency on both ends. That gap in physicality, depth, and shot-quality creation should be decisive over 40 minutes, especially because Houston’s defensive pressure can choke off Idaho’s already-average offense. Idaho’s only credible upset path is extreme three-point variance plus Houston having an unusually poor turnover/shooting game, but the baseline efficiency mismatch makes Houston the overwhelming advance."
+  },
+  "reasoningStep": {
+    "id": "demo-2026-bracket:r64-south-8",
+    "title": "Round of 64 South 2/15 pick based on efficiency gap and upset pathways",
+    "summary": "Houston’s top-5 two-way profile and elite defense create an overwhelming baseline advantage over Idaho’s ~top-150 profile, making a 15-seed upset highly unlikely without extreme variance.",
+    "evidence": [
+      "KenPom: Houston #5 (AdjO #16, AdjD 91.0) vs Idaho #145 (AdjO #176, AdjD 107.4).",
+      "Torvik: Houston #5 (OE rank #13, DE rank #4) vs Idaho #136 (OE rank #166, DE rank #122).",
+      "Quick news scan did not surface a clear, matchup-flipping availability issue for either team.",
+      "Underdog path considered: Idaho would need hot 3-point shooting plus Houston turnover/shooting variance to overcome the large efficiency and athleticism gap."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-mc9dpk9b",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "houston",
+          "idaho"
+        ]
+      },
+      "startedAt": "2026-03-17T20:05:27.575Z",
+      "completedAt": "2026-03-17T20:05:27.581Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "houston",
+          "teamName": "Houston",
+          "torvik": {
+            "rank": 5,
+            "team": "Houston",
+            "conf": "B12",
+            "record": "28-5",
+            "adjoe": 125.0975167715807,
+            "oe Rank": 13,
+            "adjde": 91.8530836031741,
+            "de Rank": 4,
+            "barthag": 0.9721421329914924,
+            "rank.1": 5,
+            "proj. W": 28.451512204962764,
+            "Proj. L": 5.548487795037236,
+            "Pro Con W": 14,
+            "Pro Con L": 4,
+            "Con Rec.": "14-4",
+            "sos": 0.7234356164310016,
+            "ncsos": 0.536556524973016,
+            "consos": 0.8379056201105163,
+            "Proj. SOS": 0.7308920407299491,
+            "Proj. Noncon SOS": 0.536556524973016,
+            "Proj. Con SOS": 0.8379056201105163,
+            "elite SOS": 0.6317400313710136,
+            "elite noncon SOS": 0.7923649040442717,
+            "Opp OE": 116.1174907836186,
+            "Opp DE": 104.0376269811524,
+            "Opp Proj. OE": 116.4147653528213,
+            "Opp Proj DE": 103.65787274782504,
+            "Con Adj OE": 127.27031138842572,
+            "Con Adj DE": 93.15229119421956,
+            "Qual O": 127.22619024373626,
+            "Qual D": 94.05360043861518,
+            "Qual Barthag": 0.969943807972222,
+            "Qual Games": 16,
+            "FUN": 0.009050451042042,
+            "ConPF": 1384,
+            "ConPA": 1165,
+            "ConPoss": 1162.3625000000002,
+            "ConOE": 1.1906784673456,
+            "ConDE": 1.0022690855907683,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.7777777777777778,
+            "WAB": 9.056959670548608,
+            "WAB Rk": 4,
+            "Fun Rk": 147,
+            "adjt": 63.34001963276259
+          },
+          "kenpom": {
+            "rank": 5,
+            "team": "Houston",
+            "conf": "B12",
+            "record": "28-5",
+            "adj_em": 33.55,
+            "adj_o": 124.6,
+            "adj_o_rank": 16,
+            "adj_d": 91,
+            "adj_d_rank": 4,
+            "adj_t": 63.4,
+            "adj_t_rank": 352,
+            "luck": 0.006,
+            "luck_rank": 176,
+            "sos_adj_em": 12.77,
+            "sos_adj_em_rank": 28,
+            "sos_opp_o": 116.6,
+            "sos_opp_o_rank": 28,
+            "sos_opp_d": 103.8,
+            "sos_opp_d_rank": 33,
+            "ncsos_adj_em": 0.8,
+            "ncsos_adj_em_rank": 156
+          }
+        },
+        {
+          "teamId": "idaho",
+          "teamName": "Idaho",
+          "torvik": {
+            "rank": 136,
+            "team": "Idaho",
+            "conf": "BSky",
+            "record": "21-14",
+            "adjoe": 108.80755053232986,
+            "oe Rank": 166,
+            "adjde": 106.16513499233696,
+            "de Rank": 122,
+            "barthag": 0.5702146982859652,
+            "rank.1": 136,
+            "proj. W": 21,
+            "Proj. L": 14,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.4256368240820138,
+            "ncsos": 0.3933238030429239,
+            "consos": 0.4371402730709215,
+            "Proj. SOS": 0.4256368240820138,
+            "Proj. Noncon SOS": 0.3933238030429239,
+            "Proj. Con SOS": 0.4371402730709215,
+            "elite SOS": 0.8965453385013459,
+            "elite noncon SOS": 0.8864278871870651,
+            "Opp OE": 109.12730257188431,
+            "Opp DE": 110.72516041650272,
+            "Opp Proj. OE": 109.12730257188431,
+            "Opp Proj DE": 110.72516041650272,
+            "Con Adj OE": 109.08349489507732,
+            "Con Adj DE": 109.43511581048293,
+            "Qual O": 0,
+            "Qual D": 0,
+            "Qual Barthag": 0,
+            "Qual Games": 0,
+            "FUN": -0.0166304403544279,
+            "ConPF": 1394,
+            "ConPA": 1360,
+            "ConPoss": 1249.6125000000002,
+            "ConOE": 1.1155458192039531,
+            "ConDE": 1.0883373845892226,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": -8.898942928617824,
+            "WAB Rk": 178,
+            "Fun Rk": 222,
+            "adjt": 67.40625137537245
+          },
+          "kenpom": {
+            "rank": 145,
+            "team": "Idaho",
+            "conf": "BSky",
+            "record": "21-14",
+            "adj_em": 1.54,
+            "adj_o": 108.9,
+            "adj_o_rank": 176,
+            "adj_d": 107.4,
+            "adj_d_rank": 136,
+            "adj_t": 67.8,
+            "adj_t_rank": 157,
+            "luck": -0.012,
+            "luck_rank": 218,
+            "sos_adj_em": -1.71,
+            "sos_adj_em_rank": 195,
+            "sos_opp_o": 109.4,
+            "sos_opp_o_rank": 145,
+            "sos_opp_d": 111.1,
+            "sos_opp_d_rank": 232,
+            "ncsos_adj_em": 0.7,
+            "ncsos_adj_em_rank": 162
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-j86mkjlg",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Houston vs Idaho March Madness 2026 injury report availability",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:05:27.581Z",
+      "completedAt": "2026-03-17T20:05:28.821Z",
+      "summary": "Returned 5 search results for \"Houston vs Idaho March Madness 2026 injury report availability\".",
+      "result": [
+        {
+          "title": "NCAA Mandates Injury Reporting For March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fncaa%2Dmandates%2Dinjury%2Dreporting%2Dmarch%2D144530563.html&rut=ba56bb8c2a02b8fa52427b53624a2bf82809c5f429621e1adf157858d9cdf14a",
+          "snippet": "March Madness follows the crowd HD Intelligence will serve as the player- availability reporting service provider for the 2026 Division I Men&#x27;s and Women&#x27;s Basketball Championships."
+        },
+        {
+          "title": "NCAA announces implementation of player availability reporting for 2026 ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.org%2Fnews%2F2025%2F10%2F30%2Fmedia%2Dcenter%2Dncaa%2Dannounces%2Dimplementation%2Dof%2Dplayer%2Davailability%2Dreporting%2Dfor%2D2026%2Ddi%2Dmens%2Dand%2Dwomens%2Dbasketball%2Dchampionships.aspx%3Fprint%3Dtrue&rut=9d9278961db36a48b7739872c78aa8b547d010f4c4771b1cc07c78fcc39dcc85",
+          "snippet": "At the direction of the NCAA Men&#x27;s and Women&#x27;s Basketball Committees, the national office will implement player availability reports for the 2026 Division I Men&#x27;s and Women&#x27;s Basketball Championships."
+        },
+        {
+          "title": "Injury Report: Injuries to Monitor before Filling Out Your March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegebasketballeyetest.com%2F2026%2F02%2F16%2Finjury%2Dreport%2Dinjuries%2Dto%2Dmonitor%2Dbefore%2Dfilling%2Dout%2Dyour%2Dmarch%2Dmadness%2D2026%2Dbracket%2F&rut=5f3477a12c3b282a39f9050cb474e28f02d769065fcfc708568dd8b7033a0145",
+          "snippet": "Here are some injuries for you to monitor before filling out your bracket for March Madness 2026 . The end of the regular season is seeing its share of season ending injuries to stars, but there are plenty more injury statuses to keep an eye on."
+        },
+        {
+          "title": "March Madness Tournaments to have pregame injury reports starting in 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmarch%2Dmadness%2Dtournaments%2Dto%2Dhave%2Dpregame%2Dinjury%2Dreports%2Dstarting%2Din%2D2026%2Far%2DAA1Pxtgr&rut=60449155e298769e887e42b61bee660003de4f840e37dcd7ed56a0743c610c21",
+          "snippet": "The NCAA will require availability reports from schools in March Madness , starting in 2026 in an effort to stop athlete harassment."
+        },
+        {
+          "title": "NCAA Announces March Madness 2026 Will Feature Team Injury Reports ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Farticles%2F25273019%2Dncaa%2Dannounces%2Dmarch%2Dmadness%2D2026%2Dwill%2Dfeature%2Dteam%2Dinjury%2Dreports%2Dafter%2Drule%2Dchange&rut=fa3674175bc0d03979ea272c6bb6ebd362aa3fd7879d7ebdb27cf4e0a6e2a78d",
+          "snippet": "The NCAA announced Thursday that it will implement player availability reports during the 2026 men&#x27;s and women&#x27;s tournaments."
+        }
+      ]
+    },
+    {
+      "id": "tool-pnrh0klg",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Houston Cougars injury update March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:05:28.821Z",
+      "completedAt": "2026-03-17T20:05:29.481Z",
+      "summary": "Returned 5 search results for \"Houston Cougars injury update March 2026 NCAA tournament\".",
+      "result": [
+        {
+          "title": "Houston Cougars Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F248%2Fhouston%2Dcougars&rut=6455f8ee2df6128b9bf8c229a5f5bf387afdb2c9d0c5d3802b71b97a138906cc",
+          "snippet": "Visit ESPN for Houston Cougars live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Houston 69-47 Kansas (Mar 13, 2026) Game Recap - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%3FgameId%3D401851305&rut=4d00745ef6a7ecae13ccae2790b008a3f31665e3f4951dafc89c47b11e2c5a1c",
+          "snippet": "Expert recap and game analysis of the Houston Cougars vs. Kansas Jayhawks NCAAM game from March 13, 2026 on ESPN."
+        },
+        {
+          "title": "Houston 73-66 BYU (Mar 12, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851300&rut=2c4fc30245f8a347e477ce5d943e3d12c6cdd2d8440309e5de334fab6be21bb6",
+          "snippet": "Game summary of the Houston Cougars vs. BYU Cougars NCAAM game, final score 73-66, from March 12, 2026 on ESPN."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=8e03b6e11ebef4125ca9d73e7b992caf68038f23922f1dbce13a6445bedbb76f",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news. Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Houston 69-47 Kansas (Mar 13, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851305%2Fkansas%2Dhouston&rut=b2100e063b2014d7e9eefe7b0cb1efa08b5dfb4ac102af1adbeadfbf6b5a7721",
+          "snippet": "Game summary of the Houston Cougars vs. Kansas Jayhawks NCAAM game, final score 69-47, from March 13, 2026 on ESPN."
+        }
+      ]
+    },
+    {
+      "id": "tool-o9phfrm4",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Idaho Vandals injury update March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:05:29.481Z",
+      "completedAt": "2026-03-17T20:05:29.533Z",
+      "summary": "Returned 0 search results for \"Idaho Vandals injury update March 2026 NCAA tournament\".",
+      "result": []
+    },
+    {
+      "id": "tool-bxqceu5q",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://collegebasketballeyetest.com/2026/02/16/injury-report-injuries-to-monitor-before-filling-out-your-march-madness-2026-bracket/",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T20:07:46.104Z",
+      "completedAt": "2026-03-17T20:07:46.226Z",
+      "summary": "Fetched https://collegebasketballeyetest.com/2026/02/16/injury-report-injuries-to-monitor-before-filling-out-your-march-madness-2026-bracket/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://collegebasketballeyetest.com/2026/02/16/injury-report-injuries-to-monitor-before-filling-out-your-march-madness-2026-bracket/",
+        "text": "Injury Report: Injuries to Monitor before Filling Out Your March Madness 2026 Bracket | College Basketball Eye Test Skip to primary content College Basketball Eye Test Hoops insight from witnesses Search Main menu Home About Eye Test Author Matty D. Post navigation &larr; Previous Next &rarr; Injury Report: Injuries to Monitor before Filling Out Your March Madness 2026 Bracket Posted on February 16, 2026 by College Basketball Eye Test Here are some injuries for you to monitor before filling out your bracket for March Madness 2026. The end of the regular season is seeing its share of season ending injuries to stars, but there are plenty more injury statuses to keep an eye on. Even if these players have returned, its worth noting how they and their team have performed in the closing month of the season before the Madness begins. However, before we get into the biggest two injuries in college basketball, we need to look at two injuries at one of the blue blood programs! Duke Blue Devils Get Double-Whammy of Bad Injury News on Championship Week When you think of Duke championships, you think of steady point guards. That&#8217;s the look of Caleb Foster with this current Blue Devils team. That is, that was the look of the Duke team before Championship Week. On that week, we learned that Foster is out indefinitely with a broken foot. The loss of Caleb Foster removes a steady ball-handler who contributes 8.5 points and nearly three assists per game. His assist-to-turnover ratio was roughly 3:1. Foster’s perimeter shooting and ability to initiate offense help stabilize tempo late in games, making Duke more dependent on primary scorers to generate quality looks. Historically, Duke’s deepest March runs have almost always coincided with steady primary guard orchestration — whether through Hurley’s distribution, Wojciechowski’s defensive tone-setting, Scheyer’s decision-making, or Jones’ clutch scoring. So far this season, it&#8217;s another familiar family name for Duke that has grabbed all of the headlines: Boozer. Cameron Boozer&#8217;s banner freshman season has been widely celebrated, but now his brother (fellow freshman) Cayden Boozer is jumping into the spotlight in lieu of Foster&#8217;s injury. Cayden had not got much run earlier this season. However, now that Foster is out, Cayden Boozer has stepped up to the challenge and started at point guard while helping lead Duke to an ACC Championship. On the heels of leading his team to an ACC Championship and asked by ESPN’s sideline reporter about two key injuries, Duke freshman Cayden Boozer says the Blue Devils can still win it all. Of course, the Boozer boys are the sons of longtime NBA player and Duke champion, Carlos Boozer. Click here to see more sons of NBA players currently hooping in the NCAA. Duke Loses Interior Efficiency and Rim Protection Without Patrick Ngongba II Duke’s frontcourt rotation takes a measurable hit with Patrick Ngongba II sidelined. The center averages 10.7 points, 6.0 rebound"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-south-8-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T20:05:25.213Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-south-8\nCurrent game label: South 2/15\nRound: Round of 64\nResolved teams: Houston (houston) vs Idaho (idaho)\nPrior committed picks: 27"
+    },
+    {
+      "id": "r64-south-8-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T20:05:25.213Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-south-8\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 2/15\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"houston\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"idaho\"\n      }\n    },\n    \"slotAName\": \"Houston\",\n    \"slotBName\": \"Idaho\",\n    \"slotATeamId\": \"houston\",\n    \"slotBTeamId\": \"idaho\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.61,\n        \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.84,\n        \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.64,\n        \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.99,\n        \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Nebraska is the clear pick based on a major efficiency gap: the Huskers rate top-20 nationally (KenPom #14, Torvik #19) with an elite defense, while Troy sits around the mid-140s on both systems with a below-average two-way profile. That defensive floor should travel well in a one-game setting and make it hard for Troy to generate enough efficient offense to keep pace. Troy’s upset path is mostly shooting/turnover variance, but Nebraska’s overall quality and stop-making ability make the favorite the much more likely advancer.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.64,\n        \"rationale\": \"North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.94,\n        \"rationale\": \"Illinois is a top-10 caliber team by both KenPom and Torvik (elite #1/#2-level offense with a top-25 defense), while Penn profiles around the mid-150s with a below-average offense, which is a massive baseline gap for a 3/14 game. ESPN Analytics and the betting market also imply a near-certain Illini advance (about 97% win probability and a spread in the mid-20s). Penn’s credible upset path is mostly three-point variance plus Illinois turnovers, but Penn’s limited offensive efficiency makes it hard to sustain enough scoring to capitalize over 40 minutes.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.6,\n        \"rationale\": \"Saint Mary’s gets the nod because the efficiency metrics show a meaningful overall edge: KenPom has the Gaels #24 vs. Texas A&M #39 (better AdjEM and notably stronger defense), and Torvik similarly favors Saint Mary’s (#25 vs. #39). In a likely slower, half-court game, Saint Mary’s defensive consistency and ability to control tempo are a good fit for March, while A&M’s upset path is real if it turns this into a more physical, chaotic game and wins the offensive-rebounding/turnover margins. I didn’t find a clear, confirmed availability issue for either side that would override the ratings edge, so I’m siding with the higher two-way baseline.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-west-4\",\n      \"winnerId\": \"arkansas\",\n      \"confidence\": 0.84,\n      \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n    },\n    {\n      \"gameId\": \"r64-west-5\",\n      \"winnerId\": \"byu\",\n      \"confidence\": 0.64,\n      \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n    },\n    {\n      \"gameId\": \"r64-west-6\",\n      \"winnerId\": \"gonzaga\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n    },\n    {\n      \"gameId\": \"r64-west-7\",\n      \"winnerId\": \"miami-fl\",\n      \"confidence\": 0.64,\n      \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n    },\n    {\n      \"gameId\": \"r64-west-8\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.96,\n      \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n    },\n    {\n      \"gameId\": \"r64-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.99,\n      \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n    },\n    {\n      \"gameId\": \"r64-south-2\",\n      \"winnerId\": \"iowa\",\n      \"confidence\": 0.56,\n      \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n    },\n    {\n      \"gameId\": \"r64-south-3\",\n      \"winnerId\": \"vanderbilt\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n    },\n    {\n      \"gameId\": \"r64-south-4\",\n      \"winnerId\": \"nebraska\",\n      \"confidence\": 0.88,\n      \"rationale\": \"Nebraska is the clear pick based on a major efficiency gap: the Huskers rate top-20 nationally (KenPom #14, Torvik #19) with an elite defense, while Troy sits around the mid-140s on both systems with a below-average two-way profile. That defensive floor should travel well in a one-game setting and make it hard for Troy to generate enough efficient offense to keep pace. Troy’s upset path is mostly shooting/turnover variance, but Nebraska’s overall quality and stop-making ability make the favorite the much more likely advancer.\"\n    },\n    {\n      \"gameId\": \"r64-south-5\",\n      \"winnerId\": \"north-carolina\",\n      \"confidence\": 0.64,\n      \"rationale\": \"North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high.\"\n    },\n    {\n      \"gameId\": \"r64-south-6\",\n      \"winnerId\": \"illinois\",\n      \"confidence\": 0.94,\n      \"rationale\": \"Illinois is a top-10 caliber team by both KenPom and Torvik (elite #1/#2-level offense with a top-25 defense), while Penn profiles around the mid-150s with a below-average offense, which is a massive baseline gap for a 3/14 game. ESPN Analytics and the betting market also imply a near-certain Illini advance (about 97% win probability and a spread in the mid-20s). Penn’s credible upset path is mostly three-point variance plus Illinois turnovers, but Penn’s limited offensive efficiency makes it hard to sustain enough scoring to capitalize over 40 minutes.\"\n    },\n    {\n      \"gameId\": \"r64-south-7\",\n      \"winnerId\": \"saint-mary-s\",\n      \"confidence\": 0.6,\n      \"rationale\": \"Saint Mary’s gets the nod because the efficiency metrics show a meaningful overall edge: KenPom has the Gaels #24 vs. Texas A&M #39 (better AdjEM and notably stronger defense), and Torvik similarly favors Saint Mary’s (#25 vs. #39). In a likely slower, half-court game, Saint Mary’s defensive consistency and ability to control tempo are a good fit for March, while A&M’s upset path is real if it turns this into a more physical, chaotic game and wins the offensive-rebounding/turnover margins. I didn’t find a clear, confirmed availability issue for either side that would override the ratings edge, so I’m siding with the higher two-way baseline.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-south-8-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:05:27.575Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-8-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:27.575Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "houston",
+          "idaho"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-8-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:27.581Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "houston",
+          "teamName": "Houston",
+          "torvik": {
+            "rank": 5,
+            "team": "Houston",
+            "conf": "B12",
+            "record": "28-5",
+            "adjoe": 125.0975167715807,
+            "oe Rank": 13,
+            "adjde": 91.8530836031741,
+            "de Rank": 4,
+            "barthag": 0.9721421329914924,
+            "rank.1": 5,
+            "proj. W": 28.451512204962764,
+            "Proj. L": 5.548487795037236,
+            "Pro Con W": 14,
+            "Pro Con L": 4,
+            "Con Rec.": "14-4",
+            "sos": 0.7234356164310016,
+            "ncsos": 0.536556524973016,
+            "consos": 0.8379056201105163,
+            "Proj. SOS": 0.7308920407299491,
+            "Proj. Noncon SOS": 0.536556524973016,
+            "Proj. Con SOS": 0.8379056201105163,
+            "elite SOS": 0.6317400313710136,
+            "elite noncon SOS": 0.7923649040442717,
+            "Opp OE": 116.1174907836186,
+            "Opp DE": 104.0376269811524,
+            "Opp Proj. OE": 116.4147653528213,
+            "Opp Proj DE": 103.65787274782504,
+            "Con Adj OE": 127.27031138842572,
+            "Con Adj DE": 93.15229119421956,
+            "Qual O": 127.22619024373626,
+            "Qual D": 94.05360043861518,
+            "Qual Barthag": 0.969943807972222,
+            "Qual Games": 16,
+            "FUN": 0.009050451042042,
+            "ConPF": 1384,
+            "ConPA": 1165,
+            "ConPoss": 1162.3625000000002,
+            "ConOE": 1.1906784673456,
+            "ConDE": 1.0022690855907683,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.7777777777777778,
+            "WAB": 9.056959670548608,
+            "WAB Rk": 4,
+            "Fun Rk": 147,
+            "adjt": 63.34001963276259
+          },
+          "kenpom": {
+            "rank": 5,
+            "team": "Houston",
+            "conf": "B12",
+            "record": "28-5",
+            "adj_em": 33.55,
+            "adj_o": 124.6,
+            "adj_o_rank": 16,
+            "adj_d": 91,
+            "adj_d_rank": 4,
+            "adj_t": 63.4,
+            "adj_t_rank": 352,
+            "luck": 0.006,
+            "luck_rank": 176,
+            "sos_adj_em": 12.77,
+            "sos_adj_em_rank": 28,
+            "sos_opp_o": 116.6,
+            "sos_opp_o_rank": 28,
+            "sos_opp_d": 103.8,
+            "sos_opp_d_rank": 33,
+            "ncsos_adj_em": 0.8,
+            "ncsos_adj_em_rank": 156
+          }
+        },
+        {
+          "teamId": "idaho",
+          "teamName": "Idaho",
+          "torvik": {
+            "rank": 136,
+            "team": "Idaho",
+            "conf": "BSky",
+            "record": "21-14",
+            "adjoe": 108.80755053232986,
+            "oe Rank": 166,
+            "adjde": 106.16513499233696,
+            "de Rank": 122,
+            "barthag": 0.5702146982859652,
+            "rank.1": 136,
+            "proj. W": 21,
+            "Proj. L": 14,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.4256368240820138,
+            "ncsos": 0.3933238030429239,
+            "consos": 0.4371402730709215,
+            "Proj. SOS": 0.4256368240820138,
+            "Proj. Noncon SOS": 0.3933238030429239,
+            "Proj. Con SOS": 0.4371402730709215,
+            "elite SOS": 0.8965453385013459,
+            "elite noncon SOS": 0.8864278871870651,
+            "Opp OE": 109.12730257188431,
+            "Opp DE": 110.72516041650272,
+            "Opp Proj. OE": 109.12730257188431,
+            "Opp Proj DE": 110.72516041650272,
+            "Con Adj OE": 109.08349489507732,
+            "Con Adj DE": 109.43511581048293,
+            "Qual O": 0,
+            "Qual D": 0,
+            "Qual Barthag": 0,
+            "Qual Games": 0,
+            "FUN": -0.0166304403544279,
+            "ConPF": 1394,
+            "ConPA": 1360,
+            "ConPoss": 1249.6125000000002,
+            "ConOE": 1.1155458192039531,
+            "ConDE": 1.0883373845892226,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": -8.898942928617824,
+            "WAB Rk": 178,
+            "Fun Rk": 222,
+            "adjt": 67.40625137537245
+          },
+          "kenpom": {
+            "rank": 145,
+            "team": "Idaho",
+            "conf": "BSky",
+            "record": "21-14",
+            "adj_em": 1.54,
+            "adj_o": 108.9,
+            "adj_o_rank": 176,
+            "adj_d": 107.4,
+            "adj_d_rank": 136,
+            "adj_t": 67.8,
+            "adj_t_rank": 157,
+            "luck": -0.012,
+            "luck_rank": 218,
+            "sos_adj_em": -1.71,
+            "sos_adj_em_rank": 195,
+            "sos_opp_o": 109.4,
+            "sos_opp_o_rank": 145,
+            "sos_opp_d": 111.1,
+            "sos_opp_d_rank": 232,
+            "ncsos_adj_em": 0.7,
+            "ncsos_adj_em_rank": 162
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"houston\",\n      \"teamName\": \"Houston\",\n      \"torvik\": {\n        \"rank\": 5,\n        \"team\": \"Houston\",\n        \"conf\": \"B12\",\n        \"record\": \"28-5\",\n        \"adjoe\": 125.0975167715807,\n        \"oe Rank\": 13,\n        \"adjde\": 91.8530836031741,\n        \"de Rank\": 4\n      },\n      \"kenpom\": {\n        \"rank\": 5,\n        \"team\": \"Houston\",\n        \"conf\": \"B12\",\n        \"record\": \"28-5\",\n        \"adj_em\": 33.55,\n        \"adj_o\": 124.6,\n        \"adj_o_rank\": 16,\n        \"adj_d\": 91\n      }\n    },\n    {\n      \"teamId\": \"idaho\",\n      \"teamName\": \"Idaho\",\n      \"torvik\": {\n        \"rank\": 136,\n        \"team\": \"Idaho\",\n        \"conf\": \"BSky\",\n        \"record\": \"21-14\",\n        \"adjoe\": 108.80755053232986,\n        \"oe Rank\": 166,\n        \"adjde\": 106.16513499233696,\n        \"de Rank\": 122\n      },\n      \"kenpom\": {\n        \"rank\": 145,\n        \"team\": \"Idaho\",\n        \"conf\": \"BSky\",\n        \"record\": \"21-14\",\n        \"adj_em\": 1.54,\n        \"adj_o\": 108.9,\n        \"adj_o_rank\": 176,\n        \"adj_d\": 107.4\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-8-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:27.581Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Houston vs Idaho March Madness 2026 injury report availability",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-8-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:28.821Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "NCAA Mandates Injury Reporting For March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fncaa%2Dmandates%2Dinjury%2Dreporting%2Dmarch%2D144530563.html&rut=ba56bb8c2a02b8fa52427b53624a2bf82809c5f429621e1adf157858d9cdf14a",
+          "snippet": "March Madness follows the crowd HD Intelligence will serve as the player- availability reporting service provider for the 2026 Division I Men&#x27;s and Women&#x27;s Basketball Championships."
+        },
+        {
+          "title": "NCAA announces implementation of player availability reporting for 2026 ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.org%2Fnews%2F2025%2F10%2F30%2Fmedia%2Dcenter%2Dncaa%2Dannounces%2Dimplementation%2Dof%2Dplayer%2Davailability%2Dreporting%2Dfor%2D2026%2Ddi%2Dmens%2Dand%2Dwomens%2Dbasketball%2Dchampionships.aspx%3Fprint%3Dtrue&rut=9d9278961db36a48b7739872c78aa8b547d010f4c4771b1cc07c78fcc39dcc85",
+          "snippet": "At the direction of the NCAA Men&#x27;s and Women&#x27;s Basketball Committees, the national office will implement player availability reports for the 2026 Division I Men&#x27;s and Women&#x27;s Basketball Championships."
+        },
+        {
+          "title": "Injury Report: Injuries to Monitor before Filling Out Your March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegebasketballeyetest.com%2F2026%2F02%2F16%2Finjury%2Dreport%2Dinjuries%2Dto%2Dmonitor%2Dbefore%2Dfilling%2Dout%2Dyour%2Dmarch%2Dmadness%2D2026%2Dbracket%2F&rut=5f3477a12c3b282a39f9050cb474e28f02d769065fcfc708568dd8b7033a0145",
+          "snippet": "Here are some injuries for you to monitor before filling out your bracket for March Madness 2026 . The end of the regular season is seeing its share of season ending injuries to stars, but there are plenty more injury statuses to keep an eye on."
+        },
+        {
+          "title": "March Madness Tournaments to have pregame injury reports starting in 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmarch%2Dmadness%2Dtournaments%2Dto%2Dhave%2Dpregame%2Dinjury%2Dreports%2Dstarting%2Din%2D2026%2Far%2DAA1Pxtgr&rut=60449155e298769e887e42b61bee660003de4f840e37dcd7ed56a0743c610c21",
+          "snippet": "The NCAA will require availability reports from schools in March Madness , starting in 2026 in an effort to stop athlete harassment."
+        },
+        {
+          "title": "NCAA Announces March Madness 2026 Will Feature Team Injury Reports ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Farticles%2F25273019%2Dncaa%2Dannounces%2Dmarch%2Dmadness%2D2026%2Dwill%2Dfeature%2Dteam%2Dinjury%2Dreports%2Dafter%2Drule%2Dchange&rut=fa3674175bc0d03979ea272c6bb6ebd362aa3fd7879d7ebdb27cf4e0a6e2a78d",
+          "snippet": "The NCAA announced Thursday that it will implement player availability reports during the 2026 men&#x27;s and women&#x27;s tournaments."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"NCAA Mandates Injury Reporting For March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fncaa%2Dmandates%2Dinjury%2Dreporting%2Dmarch%2D144530563.html&rut=ba56bb8c2a02b8fa52427b53624a2bf82809c5f429621e1adf157858d9cdf14a\",\n      \"snippet\": \"March Madness follows the crowd HD Intelligence will serve as the player- availability reporting service provider for the 2026 Division I Men&#x27;s and Women&#x27;s Basketball Championships.\"\n    },\n    {\n      \"title\": \"NCAA announces implementation of player availability reporting for 2026 ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.org%2Fnews%2F2025%2F10%2F30%2Fmedia%2Dcenter%2Dncaa%2Dannounces%2Dimplementation%2Dof%2Dplayer%2Davailability%2Dreporting%2Dfor%2D2026%2Ddi%2Dmens%2Dand%2Dwomens%2Dbasketball%2Dchampionships.aspx%3Fprint%3Dtrue&rut=9d9278961db36a48b7739872c78aa8b547d010f4c4771b1cc07c78fcc39dcc85\",\n      \"snippet\": \"At the direction of the NCAA Men&#x27;s and Women&#x27;s Basketball Committees, the national office will implement player availability reports for the 2026 Division I Men&#x27;s and Women&#x27;s Basketball Championships.\"\n    },\n    {\n      \"title\": \"Injury Report: Injuries to Monitor before Filling Out Your March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegebasketballeyetest.com%2F2026%2F02%2F16%2Finjury%2Dreport%2Dinjuries%2Dto%2Dmonitor%2Dbefore%2Dfilling%2Dout%2Dyour%2Dmarch%2Dmadness%2D2026%2Dbracket%2F&rut=5f3477a12c3b282a39f9050cb474e28f02d769065fcfc708568dd8b7033a0145\",\n      \"snippet\": \"Here are some injuries for you to monitor before filling out your bracket for March Madness 2026 . The end of the regular season is seeing its share of season ending injuries to stars, but there are plenty more injury statuses to keep an eye on.\"\n    },\n    {\n      \"title\": \"March Madness Tournaments to have pregame injury reports starting in 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmarch%2Dmadness%2Dtournaments%2Dto%2Dhave%2Dpregame%2Dinjury%2Dreports%2Dstarting%2Din%2D2026%2Far%2DAA1Pxtgr&rut=60449155e298769e887e42b61bee660003de4f840e37dcd7ed56a0743c610c21\",\n      \"snippet\": \"The NCAA will require availability reports from schools in March Madness , starting in 2026 in an effort to stop athlete harassment.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-8-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:28.821Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Houston Cougars injury update March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-8-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:29.481Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Houston Cougars Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F248%2Fhouston%2Dcougars&rut=6455f8ee2df6128b9bf8c229a5f5bf387afdb2c9d0c5d3802b71b97a138906cc",
+          "snippet": "Visit ESPN for Houston Cougars live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Houston 69-47 Kansas (Mar 13, 2026) Game Recap - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%3FgameId%3D401851305&rut=4d00745ef6a7ecae13ccae2790b008a3f31665e3f4951dafc89c47b11e2c5a1c",
+          "snippet": "Expert recap and game analysis of the Houston Cougars vs. Kansas Jayhawks NCAAM game from March 13, 2026 on ESPN."
+        },
+        {
+          "title": "Houston 73-66 BYU (Mar 12, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851300&rut=2c4fc30245f8a347e477ce5d943e3d12c6cdd2d8440309e5de334fab6be21bb6",
+          "snippet": "Game summary of the Houston Cougars vs. BYU Cougars NCAAM game, final score 73-66, from March 12, 2026 on ESPN."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=8e03b6e11ebef4125ca9d73e7b992caf68038f23922f1dbce13a6445bedbb76f",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news. Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Houston 69-47 Kansas (Mar 13, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851305%2Fkansas%2Dhouston&rut=b2100e063b2014d7e9eefe7b0cb1efa08b5dfb4ac102af1adbeadfbf6b5a7721",
+          "snippet": "Game summary of the Houston Cougars vs. Kansas Jayhawks NCAAM game, final score 69-47, from March 13, 2026 on ESPN."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Houston Cougars Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F248%2Fhouston%2Dcougars&rut=6455f8ee2df6128b9bf8c229a5f5bf387afdb2c9d0c5d3802b71b97a138906cc\",\n      \"snippet\": \"Visit ESPN for Houston Cougars live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Houston 69-47 Kansas (Mar 13, 2026) Game Recap - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%3FgameId%3D401851305&rut=4d00745ef6a7ecae13ccae2790b008a3f31665e3f4951dafc89c47b11e2c5a1c\",\n      \"snippet\": \"Expert recap and game analysis of the Houston Cougars vs. Kansas Jayhawks NCAAM game from March 13, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"Houston 73-66 BYU (Mar 12, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851300&rut=2c4fc30245f8a347e477ce5d943e3d12c6cdd2d8440309e5de334fab6be21bb6\",\n      \"snippet\": \"Game summary of the Houston Cougars vs. BYU Cougars NCAAM game, final score 73-66, from March 12, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=8e03b6e11ebef4125ca9d73e7b992caf68038f23922f1dbce13a6445bedbb76f\",\n      \"snippet\": \"Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news. Get the latest NCAAM standings and game analysis.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-8-tool-call-0-3",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:29.481Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Idaho Vandals injury update March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-8-tool-result-0-3",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:29.533Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-south-8-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:07:46.104Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-8-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:07:46.104Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://collegebasketballeyetest.com/2026/02/16/injury-report-injuries-to-monitor-before-filling-out-your-march-madness-2026-bracket/",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-8-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:07:46.226Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://collegebasketballeyetest.com/2026/02/16/injury-report-injuries-to-monitor-before-filling-out-your-march-madness-2026-bracket/",
+        "text": "Injury Report: Injuries to Monitor before Filling Out Your March Madness 2026 Bracket | College Basketball Eye Test Skip to primary content College Basketball Eye Test Hoops insight from witnesses Search Main menu Home About Eye Test Author Matty D. Post navigation &larr; Previous Next &rarr; Injury Report: Injuries to Monitor before Filling Out Your March Madness 2026 Bracket Posted on February 16, 2026 by College Basketball Eye Test Here are some injuries for you to monitor before filling out your bracket for March Madness 2026. The end of the regular season is seeing its share of season ending injuries to stars, but there are plenty more injury statuses to keep an eye on. Even if these players have returned, its worth noting how they and their team have performed in the closing month of the season before the Madness begins. However, before we get into the biggest two injuries in college basketball, we need to look at two injuries at one of the blue blood programs! Duke Blue Devils Get Double-Whammy of Bad Injury News on Championship Week When you think of Duke championships, you think of steady point guards. That&#8217;s the look of Caleb Foster with this current Blue Devils team. That is, that was the look of the Duke team before Championship Week. On that week, we learned that Foster is out indefinitely with a broken foot. The loss of Caleb Foster removes a steady ball-handler who contributes 8.5 points and nearly three assists per game. His assist-to-turnover ratio was roughly 3:1. Foster’s perimeter shooting and ability to initiate offense help stabilize tempo late in games, making Duke more dependent on primary scorers to generate quality looks. Historically, Duke’s deepest March runs have almost always coincided with steady primary guard orchestration — whether through Hurley’s distribution, Wojciechowski’s defensive tone-setting, Scheyer’s decision-making, or Jones’ clutch scoring. So far this season, it&#8217;s another familiar family name for Duke that has grabbed all of the headlines: Boozer. Cameron Boozer&#8217;s banner freshman season has been widely celebrated, but now his brother (fellow freshman) Cayden Boozer is jumping into the spotlight in lieu of Foster&#8217;s injury. Cayden had not got much run earlier this season. However, now that Foster is out, Cayden Boozer has stepped up to the challenge and started at point guard while helping lead Duke to an ACC Championship. On the heels of leading his team to an ACC Championship and asked by ESPN’s sideline reporter about two key injuries, Duke freshman Cayden Boozer says the Blue Devils can still win it all. Of course, the Boozer boys are the sons of longtime NBA player and Duke champion, Carlos Boozer. Click here to see more sons of NBA players currently hooping in the NCAA. Duke Loses Interior Efficiency and Rim Protection Without Patrick Ngongba II Duke’s frontcourt rotation takes a measurable hit with Patrick Ngongba II sidelined. The center averages 10.7 points, 6.0 rebound"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://collegebasketballeyetest.com/2026/02/16/injury-report-injuries-to-monitor-before-filling-out-your-march-madness-2026-bracket/\",\n    \"text\": \"Injury Report: Injuries to Monitor before Filling Out Your March Madness 2026 Bracket | College Basketball Eye Test Skip to primary content College Basketball Eye Test Hoops insight from witnesses Search Main menu Home About Eye Test Author Matty D. Post navigation &larr; Previous Next &rarr; Injury Report: Injuries to Monitor before Filling Out Your March Madness 2026 Bracket Posted on February 16, 2026 by College Basketball Eye Test Here are some injuries for you to monitor before filling out your bracket for March Madness 2026. The end of the regular season is seeing its share of season ending injuries to stars, but there are plenty more injury statuses to keep an eye on. Even if these players have returned, its worth noting how they and their team have performed in the closing month of the season before the Madness begins. However, before we get into the biggest two injuries in college basketball, we need to look at two injuries at one of the blue blood programs! Duke Blue Devils Get Double-Whammy of Bad Injury News on Championship Week When you think of Duke championships, you think of steady point guards. That&#8217;s the look of Caleb Foster with this current Blue Devils tea... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-8-assistant-final-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:07:57.059Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-south-8\",\n    \"winnerId\": \"houston\",\n    \"confidence\": 0.97,\n    \"rationale\": \"Houston is a top-5 team in both KenPom and Torvik with an elite defense (top-5) and a top-20 offense, while Idaho profiles closer to the ~140–150 range with middling efficiency on both ends. That gap in physicality, depth, and shot-quality creation should be decisive over 40 minutes, especially because Houston’s defensive pressure can choke off Idaho’s already-average offense. Idaho’s only credible upset path is extreme three-point variance plus Houston having an unusually poor turnover/shooting game, but the baseline efficiency mismatch makes Houston the overwhelming advance.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"demo-2026-bracket:r64-south-8\",\n    \"title\": \"Round of 64 South 2/15 pick based on efficiency gap and upset pathways\",\n    \"summary\": \"Houston’s top-5 two-way profile and elite defense create an overwhelming baseline advantage over Idaho’s ~top-150 profile, making a 15-seed upset highly unlikely without extreme variance.\",\n    \"evidence\": {\n      \"ratings\": {\n        \"houston\": {\n          \"kenpom_rank\": 5,\n          \"kenpom_adj_o_rank\": 16,\n          \"kenpom_adj_d\": 91,\n          \"torvik_rank\": 5,\n          \"torvik_oe_rank\": 13,\n          \"torvik_de_rank\": 4\n        },\n        \"idaho\": {\n          \"kenpom_rank\": 145,\n          \"kenpom_adj_o_rank\": 176,\n          \"kenpom_adj_d\": 107.4,\n          \"torvik_rank\": 136,\n          \"torvik_oe_rank\": 166,\n          \"torvik_de_rank\": 122\n        }\n      },\n      \"news_check\": {\n        \"houston\": \"No specific, matchup-flipping injury/availability item surfaced in the quick ESPN/news search results used here.\",\n        \"idaho\": \"No specific injury/availability item surfaced in the quick ESPN/news search results used here.\"\n      },\n      \"upset_path_considered\": \"Idaho would likely need hot three-point shooting and Houston mistakes (turnovers/poor shooting) to create enough extra possessions and variance to offset the large efficiency and athleticism gap.\"\n    }\n  }\n}"
+    },
+    {
+      "id": "r64-south-8-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T20:08:05.086Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-south-8\",\"winnerId\":\"houston\",\"confidence\":0.97,\"rationale\":\"Houston is a top-5 team in both KenPom and Torvik with an elite defense and a top-20 offense, while Idaho profiles closer to the ~140–150 range with middling efficiency on both ends. That gap in physicality, depth, and shot-quality creation should be decisive over 40 minutes, especially because Houston’s defensive pressure can choke off Idaho’s already-average offense. Idaho’s only credible upset path is extreme three-point variance plus Houston having an unusually poor turnover/shooting game, but the baseline efficiency mismatch makes Houston the overwhelming advance.\"},\"reasoningStep\":{\"id\":\"demo-2026-bracket:r64-south-8\",\"title\":\"Round of 64 South 2/15 pick based on efficiency gap and upset pathways\",\"summary\":\"Houston’s top-5 two-way profile and elite defense create an overwhelming baseline advantage over Idaho’s ~top-150 profile, making a 15-seed upset highly unlikely without extreme variance.\",\"evidence\":[\"KenPom: Houston #5 (AdjO #16, AdjD 91.0) vs Idaho #145 (AdjO #176, AdjD 107.4).\",\"Torvik: Houston #5 (OE rank #13, DE rank #4) vs Idaho #136 (OE rank #166, DE rank #122).\",\"Quick news scan did not surface a clear, matchup-flipping availability issue for either team.\",\"Underdog path considered: Idaho would need hot 3-point shooting plus Houston turnover/shooting variance to overcome the large efficiency and athleticism gap.\"]}}"
+    }
+  ]
+}

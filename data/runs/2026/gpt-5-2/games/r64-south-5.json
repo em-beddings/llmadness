@@ -1,0 +1,837 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-south-5",
+  "generatedAt": "2026-03-17T20:04:38.316Z",
+  "pick": {
+    "gameId": "r64-south-5",
+    "winnerId": "north-carolina",
+    "confidence": 0.64,
+    "rationale": "North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high."
+  },
+  "reasoningStep": {
+    "id": "r64-south-5-analysis",
+    "title": "South 6/11: North Carolina vs VCU",
+    "summary": "Pick North Carolina based on a clear (though not massive) efficiency edge and higher high-major scoring/athleticism baseline, while acknowledging VCU’s pressure creates real upset volatility and UNC’s injury situation lowers confidence.",
+    "evidence": [
+      "KenPom: North Carolina #29 (AdjEM 20.86; AdjO 121.5 #33; AdjD 100.6) vs VCU #46 (AdjEM 16.96; AdjO 120.0 #45; AdjD 103.0).",
+      "Torvik: North Carolina #27 (AdjO 121.52 #32; AdjD 100.05 #34) vs VCU #51 (AdjO 118.86 #49; AdjD 103.78 #82).",
+      "Injury context from public reporting: UNC freshman forward Caleb Wilson reportedly suffered a season-ending thumb injury in early March 2026, lowering UNC’s margin for error.",
+      "Matchup dynamic: VCU’s upset route is turnover/tempo pressure and variance; UNC’s edge is steadier half-court scoring and a better two-way baseline if it protects the ball."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-i08dykwp",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "north-carolina",
+          "vcu"
+        ]
+      },
+      "startedAt": "2026-03-17T20:04:13.110Z",
+      "completedAt": "2026-03-17T20:04:13.118Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "north-carolina",
+          "teamName": "North Carolina",
+          "torvik": {
+            "rank": 27,
+            "team": "North Carolina",
+            "conf": "ACC",
+            "record": "24-8",
+            "adjoe": 121.51548156694172,
+            "oe Rank": 32,
+            "adjde": 100.0466013429838,
+            "de Rank": 34,
+            "barthag": 0.9034067661597543,
+            "rank.1": 27,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 12,
+            "Pro Con L": 6,
+            "Con Rec.": "12-6",
+            "sos": 0.7030515873839742,
+            "ncsos": 0.5336496022136061,
+            "consos": 0.8148332127774081,
+            "Proj. SOS": 0.7030515873839742,
+            "Proj. Noncon SOS": 0.5336496022136061,
+            "Proj. Con SOS": 0.8148332127774081,
+            "elite SOS": 0.6650502084048928,
+            "elite noncon SOS": 0.7853591158892972,
+            "Opp OE": 115.2717099471416,
+            "Opp DE": 103.97156037036872,
+            "Opp Proj. OE": 115.2717099471416,
+            "Opp Proj DE": 103.97156037036872,
+            "Con Adj OE": 123.08536132281272,
+            "Con Adj DE": 102.25960970040924,
+            "Qual O": 121.34303851221192,
+            "Qual D": 102.2986209970086,
+            "Qual Barthag": 0.8768941529281491,
+            "Qual Games": 14,
+            "FUN": 0.0789698688462062,
+            "ConPF": 1416,
+            "ConPA": 1376,
+            "ConPoss": 1232,
+            "ConOE": 1.1493506493506491,
+            "ConDE": 1.1168831168831168,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6666666666666666,
+            "WAB": 4.889821360936529,
+            "WAB Rk": 21,
+            "Fun Rk": 28,
+            "adjt": 67.96717619133527
+          },
+          "kenpom": {
+            "rank": 29,
+            "team": "North Carolina",
+            "conf": "ACC",
+            "record": "24-8",
+            "adj_em": 20.86,
+            "adj_o": 121.5,
+            "adj_o_rank": 33,
+            "adj_d": 100.6,
+            "adj_d_rank": 37,
+            "adj_t": 68,
+            "adj_t_rank": 144,
+            "luck": 0.057,
+            "luck_rank": 52,
+            "sos_adj_em": 11.43,
+            "sos_adj_em_rank": 43,
+            "sos_opp_o": 115.4,
+            "sos_opp_o_rank": 49,
+            "sos_opp_d": 104,
+            "sos_opp_d_rank": 38,
+            "ncsos_adj_em": 1.29,
+            "ncsos_adj_em_rank": 141
+          }
+        },
+        {
+          "teamId": "vcu",
+          "teamName": "VCU",
+          "torvik": {
+            "rank": 51,
+            "team": "VCU",
+            "conf": "A10",
+            "record": "26-7",
+            "adjoe": 118.86397929382704,
+            "oe Rank": 49,
+            "adjde": 103.78250139250362,
+            "de Rank": 82,
+            "barthag": 0.8264032779946672,
+            "rank.1": 51,
+            "proj. W": 26.603754225137585,
+            "Proj. L": 7.396245774862414,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.5601186784402568,
+            "ncsos": 0.4860598667547696,
+            "consos": 0.6033878988850964,
+            "Proj. SOS": 0.5659250573220107,
+            "Proj. Noncon SOS": 0.4860598667547696,
+            "Proj. Con SOS": 0.6033878988850964,
+            "elite SOS": 0.8029167099532022,
+            "elite noncon SOS": 0.7876251305039348,
+            "Opp OE": 109.8111591987741,
+            "Opp DE": 107.31775420363743,
+            "Opp Proj. OE": 109.82988755997002,
+            "Opp Proj DE": 107.10344314216816,
+            "Con Adj OE": 119.79927971834029,
+            "Con Adj DE": 105.22796023529956,
+            "Qual O": 109.55259348235498,
+            "Qual D": 96.5619015041104,
+            "Qual Barthag": 0.8102346230142845,
+            "Qual Games": 5,
+            "FUN": 0.0730012398020133,
+            "ConPF": 1429,
+            "ConPA": 1299,
+            "ConPoss": 1230.9250000000002,
+            "ConOE": 1.1609155716229662,
+            "ConDE": 1.0553039380953346,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": 1.342842446243555,
+            "WAB Rk": 41,
+            "Fun Rk": 35,
+            "adjt": 68.79462418758388
+          },
+          "kenpom": {
+            "rank": 46,
+            "team": "VCU",
+            "conf": "A10",
+            "record": "26-7",
+            "adj_em": 16.96,
+            "adj_o": 120,
+            "adj_o_rank": 45,
+            "adj_d": 103,
+            "adj_d_rank": 63,
+            "adj_t": 68.7,
+            "adj_t_rank": 110,
+            "luck": -0.011,
+            "luck_rank": 212,
+            "sos_adj_em": 3.13,
+            "sos_adj_em_rank": 102,
+            "sos_opp_o": 110.4,
+            "sos_opp_o_rank": 111,
+            "sos_opp_d": 107.3,
+            "sos_opp_d_rank": 100,
+            "ncsos_adj_em": -1.38,
+            "ncsos_adj_em_rank": 222
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-zmneqqrw",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Carolina vs VCU March 2026 injury report availability",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:04:13.118Z",
+      "completedAt": "2026-03-17T20:04:14.024Z",
+      "summary": "Returned 5 search results for \"North Carolina vs VCU March 2026 injury report availability\".",
+      "result": [
+        {
+          "title": "2025-2026 NCAA BB Games: Rams Tar Heels Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Frams%2Dtar%2Dheels%2D2026%2D03%2D19%2Finjuries&rut=24feb8cae997697ff6dcbd1570edaf32e3764fd34ae3338eebe7344f6786ffe5",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between VCU and North Carolina . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "VCU Rams vs North Carolina Tar Heels Game Overview, Stats, Injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376840&rut=eb495cd7711672d6df68ab930ae05e4ec4f63c1d4e091b7229ad510a67defb8b",
+          "snippet": "Get key insights for VCU Rams vs North Carolina Tar Heels on March 19, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "North Carolina or VCU? How to pick 6 vs. 11 matchup in 2026 March ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnorth%2Dcarolina%2Dor%2Dvcu%2Dhow%2Dto%2Dpick%2D6%2Dvs%2D11%2Dmatchup%2Din%2D2026%2Dmarch%2Dmadness%2Dbracket%2Far%2DAA1YGNS8&rut=a9e521ac49cfb5728653dc9e8c7564e22d967394f1e27aca1e3ecadd7a0f5091",
+          "snippet": "Here is a complete guide to picking No. 6 North Carolina and No. 11 VCU in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game."
+        },
+        {
+          "title": "VCU vs. North Carolina (19 Mar, 2026) Live Score - ESPN (UK)",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856490%2Fvcu%2Dnorth%2Dcarolina&rut=d347aa24208d79b87083d07cb76f49ee689ff60c9191525b71b4d8a3003bd07b",
+          "snippet": "Live coverage of the VCU Rams vs . North Carolina Tar Heels NCAAM game on ESPN (UK), including live score, highlights and updated stats."
+        },
+        {
+          "title": "VCU Rams Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fvcu%2Drams%2Finjuries&rut=030c29a98a22b191a6ad017d1e621cca4052b6c8c8ed1d91e9b1113c60262b62",
+          "snippet": "Stay In the Know: Check Out VCU Rams Injuries Impacting The 2025- 2026 NCAAB Season."
+        }
+      ]
+    },
+    {
+      "id": "tool-co20gkva",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "North Carolina VCU injury availability March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:04:14.025Z",
+      "completedAt": "2026-03-17T20:04:14.089Z",
+      "summary": "Returned 0 search results for \"North Carolina VCU injury availability March 2026\".",
+      "result": []
+    },
+    {
+      "id": "tool-86sbmd12",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "VCU Rams key injuries March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:04:14.090Z",
+      "completedAt": "2026-03-17T20:04:14.921Z",
+      "summary": "Returned 5 search results for \"VCU Rams key injuries March 2026\".",
+      "result": [
+        {
+          "title": "2025-2026 NCAA BB Games: Rams Tar Heels Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Frams%2Dtar%2Dheels%2D2026%2D03%2D19%2Finjuries&rut=24feb8cae997697ff6dcbd1570edaf32e3764fd34ae3338eebe7344f6786ffe5",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between VCU and North Carolina. Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "VCU Rams vs North Carolina Tar Heels Game Overview, Stats, Injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376840&rut=eb495cd7711672d6df68ab930ae05e4ec4f63c1d4e091b7229ad510a67defb8b",
+          "snippet": "Get key insights for VCU Rams vs North Carolina Tar Heels on March 19, 2026 , including season records, injuries , and essential stats to help you make informed bets."
+        },
+        {
+          "title": "2026 VCU Rams Injury Report | Lines.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lines.com%2Fncaab%2Fteams%2Fvcu%2Finjuries&rut=a0d2c655c99c3cae5788d19bd9b4cb0d3cfce3c7066783221079595f1ca9d431",
+          "snippet": "Get the latest VCU Rams injury news. See up to the minute injury reports of the Rams roster and timelines of player returns."
+        },
+        {
+          "title": "North Carolina Tar Heels Favored Over VCU Rams in March Madness 2026 ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fnc%2Fcharlotte%2Fnews%2F2026%2F03%2F16%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Dfavored%2Dover%2Dvcu%2Drams%2Din%2Dmarch%2Dmadness%2D2026%2Dfirst%2Dround%2F&rut=248e53fa4cc11af4f5220b0b7239cfa73f1e7c3d99949eb7b915d83bbb349ae0",
+          "snippet": "This matchup between the Tar Heels and Rams showcases the contrasting fortunes of the two teams heading into the tournament. While North Carolina has dealt with key injuries , VCU is riding a hot streak and looking to make a deep run in March Madness."
+        },
+        {
+          "title": "VCU Rams News, Schedule, Stats and Roster - USA TODAY Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fvcu%2Drams%2F1672&rut=f7c4064d3e2ab9ccba584e369c69fb8fabb0bd351781252495e661266dffef42",
+          "snippet": "Latest VCU Rams news, schedule, stats, depth chart, roster, injuries , transactions and more from USA TODAY Sports."
+        }
+      ]
+    },
+    {
+      "id": "tool-lv28gtpc",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Carolina Tar Heels key injuries March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:04:14.921Z",
+      "completedAt": "2026-03-17T20:04:15.859Z",
+      "summary": "Returned 5 search results for \"North Carolina Tar Heels key injuries March 2026\".",
+      "result": [
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=f1393f83883e23d89f0c7431172ad574e6a6a0326a61053f9f0a1037e0dda756",
+          "snippet": "North Carolina Tar Heels Injuries (South #6): Caleb Wilson No team has suffered a bigger single injury than UNC, which lost soon-to-be top-five pick Caleb Wilson to a season-ending thumb injury during practice on March 5."
+        },
+        {
+          "title": "UNC Basketball Faces Tough March Madness Path - Chapel Hill Today",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fnc%2Fchapel%2Dhill%2Fnews%2F2026%2F03%2F16%2Func%2Dbasketball%2Dfaces%2Dtough%2Dmarch%2Dmadness%2Dpath%2F&rut=824824cda4df56257cbcf93ad3868c30c41c16967a61269bb710a8271ee05117",
+          "snippet": "The University of North Carolina men&#x27;s basketball team enters the 2026 NCAA Tournament as a No. 6 seed in the Midwest Region, having adjusted to the loss of star player Caleb Wilson to a season-ending injury. The Tar Heels will face a challenging path to make a deep run in March Madness this year."
+        },
+        {
+          "title": "Key injury forces Seth Trimble into UNC spotlight - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fkey%2Dinjury%2Dforces%2Dseth%2Dtrimble%2Dinto%2Dunc%2Dspotlight%2Far%2DAA1YOF0R&rut=4c0cb4392f0255d0b41fb9afae162eea2c6026b97adda1146db84a4d46019a39",
+          "snippet": "The news hit like a thunderclap in Chapel Hill. On March 6, 2026 , North Carolina announced that star freshman forward Caleb Wilson—the Tar Heels&#x27; leading scorer and rebounder, a projected top ..."
+        },
+        {
+          "title": "UNC Players and Coaches Facing Most Pressure in NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Func%2Ftar%2Dheels%2Dplayers%2Dcoaches%2Dfacing%2Dmost%2Dpressure%2Dncaa%2Dtournament&rut=8fa7e83b593f5cb0fefaa0d4597c32c5672a1b85e516d4eaeb139c26ebf48b1a",
+          "snippet": "The North Carolina Tar Heels&#x27; path in the 2026 NCAA Tournament has officially been revealed, as they open their March Madness experience this season with a first-round matchup against the VCU Rams ..."
+        },
+        {
+          "title": "UNC basketball gets good news regarding key starters - Tar Heels Wire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ftarheelswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Ftarheels%2Fmens%2Dbasketball%2F2026%2F02%2F26%2Func%2Dbasketball%2Dlatest%2Dinjury%2Dnews%2Don%2Dcaleb%2Dwilson%2Dand%2Dhenri%2Dveesaar%2F88882841007%2F&rut=23f9399d44ba8d85398fb45b8bf213ade25f08bf729820d13d20f5f0ec8c3999",
+          "snippet": "And they could be getting some more good news regarding injuries . North Carolina has been without star freshman Caleb Wilson for a few weeks after he suffered a left wrist injury in the loss to Miami. Wilson has been wearing a brace and has been targeting the season finale at Duke on March 7 for a return."
+        }
+      ]
+    },
+    {
+      "id": "tool-mjggqbgv",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/rams-tar-heels-2026-03-19/injuries",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T20:04:18.474Z",
+      "completedAt": "2026-03-17T20:04:18.972Z",
+      "summary": "Fetched https://www.teamrankings.com/ncaa-basketball/matchup/rams-tar-heels-2026-03-19/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/rams-tar-heels-2026-03-19/injuries",
+        "text": "2025-2026 NCAA BB Games: Rams Tar Heels Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius 🏆 2026 NCAA Bracket Picks » You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu TeamRankings.com Get Smart About Sports Log In Subscribe Home Sports Betting NCAA Bracket Picks 2026 NCAA Survivor Picks Golf One And Done Picks Golf Majors & Masters Picks NFL NBA MLB NCAAF NCAAB Main Menu NFL Super Bowl SB Home Game Picks Model predictions Prop Picks Betting Analysis Super Bowl Squares Betting Promo Offers Betting & Pool Picks Picks Pick'em Picks Survivor Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Seattle vs. New England Rankings Predictive Rankings More Rankings Rankings Comparison Stats All Stats Team Stats Player Stats Teams Arizona Cardinals Atlanta Falcons Baltimore Ravens Buffalo Bills Carolina Panthers Chicago Bears Cincinnati Bengals Cleveland Browns Dallas Cowboys Denver Broncos Detroit Lions Green Bay Packers Houston Texans Indianapolis Colts Jacksonville Jaguars Kansas City Chiefs Miami Dolphins Las Vegas Raiders Los Angeles Chargers Los Angeles Rams Minnesota Vikings New England Patriots New Orleans Saints New York Giants New York Jets Philadelphia Eagles Pittsburgh Steelers San Francisco 49ers Seattle Seahawks Tampa Bay Buccaneers Tennessee Titans Washington Commanders NFL Home NCAAF Bowl Games Bowl Pick'em Picks Bowl Betting Picks Bowl Odds Bowl Schedule Bowls Home Betting & Pool Picks Picks Pick'em Picks Bowl Pick'em Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Boise St vs. Washington Troy vs. Jacksonville St Old Dominion vs. S Florida Louisiana vs. Delaware Missouri St vs. Arkansas St Kennesaw St vs. W Michigan Memphis vs. NC State Alabama @ Oklahoma Miami @ Texas A&M Tulane @ Mississippi J Madison @ Oregon Washington St vs. Utah St Toledo vs. Louisville W Kentucky vs. Southern Miss UNLV vs. Ohio More... Rankings & Polls Rankings Predictive Rankings More Rankin"
+      }
+    },
+    {
+      "id": "tool-vb8w3wdy",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376840",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T20:04:18.972Z",
+      "completedAt": "2026-03-17T20:04:19.949Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/matchup/376840 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376840",
+        "text": "VCU Rams vs North Carolina Tar Heels Game Overview, Stats, Injuries, Records - NCAAB Game on March 19, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Pro"
+      }
+    },
+    {
+      "id": "tool-108m9mfz",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T20:04:19.949Z",
+      "completedAt": "2026-03-17T20:04:20.060Z",
+      "summary": "Fetched https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Underdog Fantasy Canada Canada Canada Sports Betting Alberta Betting Apps Ontario Betting Apps Brazil Promos Promos Sports Betting Promo Codes DraftKings Promo Code BetMGM Promo Code bet365 Bonus Code theScore Bet Promo Code ESPN BET Promo Code FanDuel Promo Code Fanatics Sportsbook Promo Code Caesars Sportsbook Promo Code Hard Rock Bet Promo Code BetRivers Promo Code Boosted Odds NFL Betting Promos Odds Odds NFL NBA MLB NHL NCAAF NCAAB Sports Sports NFL NFL NFL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Super Bowl MVP DPOY OROY DROY All NFL Futures NBA NBA NBA Betting Odds Props Public Betting Starting Lineups ATS Records News Playoff Bracket Scores Futures Futures Championship MVP DPOY ROY All NBA Futures MLB MLB MLB Betting Odds Props Public Betting Lineups & Starting Pitchers ATS Records News Playoff Bracket Scores Futures Futures World Series MVP Cy Young Odds AL & NL ROY All MLB Futures NHL NHL NHL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Stanley Cup Hart Trophy Vezina Trophy All NHL Futures NCAAF NCAAF NCAAF Betting Odds Props Public Betting ATS Records Strength-of-Schedule CFP Bracket News Scores Futures Futures National Championship CFP Odds Heisman Trophy All NCAAF Futures NCAAB NCAAB NCAAB Betting Odds Props Public Betting ATS Records News Bracket Scores Futures Futures Championship Conference Wooden POY All NCAAB Futures College Baseball College Baseball College Baseball Betting News College World Series Odds More More Golf Tennis Boxing Mixed Martial Arts Politics Entertainment World Cup Soccer Horse Racing Racing WNBA News Picks Prediction Markets Prediction Markets &mdash; All Kalshi Referral Code Novig Promo Code ProphetX Promo Code Popular Prediction Market State"
+      }
+    },
+    {
+      "id": "tool-3eff3wb9",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.si.com/college/unc/tar-heels-players-coaches-facing-most-pressure-ncaa-tournament",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T20:04:21.492Z",
+      "completedAt": "2026-03-17T20:04:22.518Z",
+      "summary": "Fetched https://www.si.com/college/unc/tar-heels-players-coaches-facing-most-pressure-ncaa-tournament and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.si.com/college/unc/tar-heels-players-coaches-facing-most-pressure-ncaa-tournament",
+        "text": "UNC Players and Coaches Facing Most Pressure in NCAA Tournament Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW BASKETBALL FOOTBALL OTHER SPORTS SI.COM Basketball Football Other Sports Basketball Scores SI.com BASKETBALL BASKETBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES SI.COM HEELS FB FOOTBALL FOOTBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES SI.COM HEELS BB More from North Carolina Tar Heels On SI OTHER SPORTS SI.COM UNC Players and Coaches Facing Most Pressure in NCAA Tournament Despite being a No. 6 seed, the Tar Heels are facing an immense amount of pressure heading into the 2026 NCAA Tournament. Logan Lazarczyk | Share on Facebook Share on X Add us as a preferred source Mar 12, 2026; Charlotte, NC, USA; North Carolina Tar Heels head coach Hubert Davis in the huddle with his team during the first half against the Clemson Tigers at Spectrum Center. Mandatory Credit: Jim Dedmon-Imagn Images | Jim Dedmon-Imagn Images In this story: North Carolina Tar Heels The North Carolina Tar Heels&#39; path in the 2026 NCAA Tournament has officially been revealed, as they open their March Madness experience this season with a first-round matchup against the VCU Rams on Thursday at 6:50 P.M. ET. --> The North Carolina Tar Heels&#39; path in the 2026 NCAA Tournament has officially been revealed, as they open their March Madness experience this season with a first-round matchup against the VCU Rams on Thursday at 6:50 P.M. ET. It has been an erratic season for the Tar Heels, who at various points have been without their top three players: Caleb Wilson , Henri Veesaar, and Seth Trimble . The senior guard missed a little over a month with a fractured forearm, Veesaar missed two games late in the season with an undisclosed lower extremity injury, and Wilson suffered a fractured left wrist, which caused him to miss multiple games. --> It has been an erratic season for the Tar Heels, who at various points have been without their top three players: Caleb Wilson , Henri Veesaar, and Seth Trimble . The senior guard missed a little over a month with a fractured forearm, Veesaar missed two games late in the season with an undisclosed lower extremity injury, and Wilson suffered a fractured left wrist, which caused him to miss multiple games. Feb 23, 2026; Chapel Hill, North Carolina, USA; North Carolina Tar Heels forward Caleb Wilson (8) and the bench react in the second half at Dean E. Smith Center. Mandatory Credit: Bob Donnan-Imagn Images | Bob Donnan-Imagn Images The freshman was on track to return to the lineup against Duke, but suffered a broken thumb that required season-ending surgery. Considering the circumstances, which members of North Carolina are facing the most pressure heading into the NCAA Tournament? --> The freshman was on track to return to the lineup against Duke, but suffered a broken thumb that required season-ending surgery. Considering the circumstances, which members of North Carolina ar"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-south-5-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T20:04:10.537Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-south-5\nCurrent game label: South 6/11\nRound: Round of 64\nResolved teams: North Carolina (north-carolina) vs VCU (vcu)\nPrior committed picks: 24"
+    },
+    {
+      "id": "r64-south-5-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T20:04:10.537Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-south-5\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 6/11\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"north-carolina\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"vcu\"\n      }\n    },\n    \"slotAName\": \"North Carolina\",\n    \"slotBName\": \"VCU\",\n    \"slotATeamId\": \"north-carolina\",\n    \"slotBTeamId\": \"vcu\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.61,\n        \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.84,\n        \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.64,\n        \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.99,\n        \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Nebraska is the clear pick based on a major efficiency gap: the Huskers rate top-20 nationally (KenPom #14, Torvik #19) with an elite defense, while Troy sits around the mid-140s on both systems with a below-average two-way profile. That defensive floor should travel well in a one-game setting and make it hard for Troy to generate enough efficient offense to keep pace. Troy’s upset path is mostly shooting/turnover variance, but Nebraska’s overall quality and stop-making ability make the favorite the much more likely advancer.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.98,\n      \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n    },\n    {\n      \"gameId\": \"r64-west-2\",\n      \"winnerId\": \"villanova\",\n      \"confidence\": 0.61,\n      \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n    },\n    {\n      \"gameId\": \"r64-west-3\",\n      \"winnerId\": \"wisconsin\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n    },\n    {\n      \"gameId\": \"r64-west-4\",\n      \"winnerId\": \"arkansas\",\n      \"confidence\": 0.84,\n      \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n    },\n    {\n      \"gameId\": \"r64-west-5\",\n      \"winnerId\": \"byu\",\n      \"confidence\": 0.64,\n      \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n    },\n    {\n      \"gameId\": \"r64-west-6\",\n      \"winnerId\": \"gonzaga\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n    },\n    {\n      \"gameId\": \"r64-west-7\",\n      \"winnerId\": \"miami-fl\",\n      \"confidence\": 0.64,\n      \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n    },\n    {\n      \"gameId\": \"r64-west-8\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.96,\n      \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n    },\n    {\n      \"gameId\": \"r64-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.99,\n      \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n    },\n    {\n      \"gameId\": \"r64-south-2\",\n      \"winnerId\": \"iowa\",\n      \"confidence\": 0.56,\n      \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n    },\n    {\n      \"gameId\": \"r64-south-3\",\n      \"winnerId\": \"vanderbilt\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n    },\n    {\n      \"gameId\": \"r64-south-4\",\n      \"winnerId\": \"nebraska\",\n      \"confidence\": 0.88,\n      \"rationale\": \"Nebraska is the clear pick based on a major efficiency gap: the Huskers rate top-20 nationally (KenPom #14, Torvik #19) with an elite defense, while Troy sits around the mid-140s on both systems with a below-average two-way profile. That defensive floor should travel well in a one-game setting and make it hard for Troy to generate enough efficient offense to keep pace. Troy’s upset path is mostly shooting/turnover variance, but Nebraska’s overall quality and stop-making ability make the favorite the much more likely advancer.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-south-5-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:04:13.110Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:04:13.110Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "north-carolina",
+          "vcu"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:04:13.118Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "north-carolina",
+          "teamName": "North Carolina",
+          "torvik": {
+            "rank": 27,
+            "team": "North Carolina",
+            "conf": "ACC",
+            "record": "24-8",
+            "adjoe": 121.51548156694172,
+            "oe Rank": 32,
+            "adjde": 100.0466013429838,
+            "de Rank": 34,
+            "barthag": 0.9034067661597543,
+            "rank.1": 27,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 12,
+            "Pro Con L": 6,
+            "Con Rec.": "12-6",
+            "sos": 0.7030515873839742,
+            "ncsos": 0.5336496022136061,
+            "consos": 0.8148332127774081,
+            "Proj. SOS": 0.7030515873839742,
+            "Proj. Noncon SOS": 0.5336496022136061,
+            "Proj. Con SOS": 0.8148332127774081,
+            "elite SOS": 0.6650502084048928,
+            "elite noncon SOS": 0.7853591158892972,
+            "Opp OE": 115.2717099471416,
+            "Opp DE": 103.97156037036872,
+            "Opp Proj. OE": 115.2717099471416,
+            "Opp Proj DE": 103.97156037036872,
+            "Con Adj OE": 123.08536132281272,
+            "Con Adj DE": 102.25960970040924,
+            "Qual O": 121.34303851221192,
+            "Qual D": 102.2986209970086,
+            "Qual Barthag": 0.8768941529281491,
+            "Qual Games": 14,
+            "FUN": 0.0789698688462062,
+            "ConPF": 1416,
+            "ConPA": 1376,
+            "ConPoss": 1232,
+            "ConOE": 1.1493506493506491,
+            "ConDE": 1.1168831168831168,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6666666666666666,
+            "WAB": 4.889821360936529,
+            "WAB Rk": 21,
+            "Fun Rk": 28,
+            "adjt": 67.96717619133527
+          },
+          "kenpom": {
+            "rank": 29,
+            "team": "North Carolina",
+            "conf": "ACC",
+            "record": "24-8",
+            "adj_em": 20.86,
+            "adj_o": 121.5,
+            "adj_o_rank": 33,
+            "adj_d": 100.6,
+            "adj_d_rank": 37,
+            "adj_t": 68,
+            "adj_t_rank": 144,
+            "luck": 0.057,
+            "luck_rank": 52,
+            "sos_adj_em": 11.43,
+            "sos_adj_em_rank": 43,
+            "sos_opp_o": 115.4,
+            "sos_opp_o_rank": 49,
+            "sos_opp_d": 104,
+            "sos_opp_d_rank": 38,
+            "ncsos_adj_em": 1.29,
+            "ncsos_adj_em_rank": 141
+          }
+        },
+        {
+          "teamId": "vcu",
+          "teamName": "VCU",
+          "torvik": {
+            "rank": 51,
+            "team": "VCU",
+            "conf": "A10",
+            "record": "26-7",
+            "adjoe": 118.86397929382704,
+            "oe Rank": 49,
+            "adjde": 103.78250139250362,
+            "de Rank": 82,
+            "barthag": 0.8264032779946672,
+            "rank.1": 51,
+            "proj. W": 26.603754225137585,
+            "Proj. L": 7.396245774862414,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.5601186784402568,
+            "ncsos": 0.4860598667547696,
+            "consos": 0.6033878988850964,
+            "Proj. SOS": 0.5659250573220107,
+            "Proj. Noncon SOS": 0.4860598667547696,
+            "Proj. Con SOS": 0.6033878988850964,
+            "elite SOS": 0.8029167099532022,
+            "elite noncon SOS": 0.7876251305039348,
+            "Opp OE": 109.8111591987741,
+            "Opp DE": 107.31775420363743,
+            "Opp Proj. OE": 109.82988755997002,
+            "Opp Proj DE": 107.10344314216816,
+            "Con Adj OE": 119.79927971834029,
+            "Con Adj DE": 105.22796023529956,
+            "Qual O": 109.55259348235498,
+            "Qual D": 96.5619015041104,
+            "Qual Barthag": 0.8102346230142845,
+            "Qual Games": 5,
+            "FUN": 0.0730012398020133,
+            "ConPF": 1429,
+            "ConPA": 1299,
+            "ConPoss": 1230.9250000000002,
+            "ConOE": 1.1609155716229662,
+            "ConDE": 1.0553039380953346,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": 1.342842446243555,
+            "WAB Rk": 41,
+            "Fun Rk": 35,
+            "adjt": 68.79462418758388
+          },
+          "kenpom": {
+            "rank": 46,
+            "team": "VCU",
+            "conf": "A10",
+            "record": "26-7",
+            "adj_em": 16.96,
+            "adj_o": 120,
+            "adj_o_rank": 45,
+            "adj_d": 103,
+            "adj_d_rank": 63,
+            "adj_t": 68.7,
+            "adj_t_rank": 110,
+            "luck": -0.011,
+            "luck_rank": 212,
+            "sos_adj_em": 3.13,
+            "sos_adj_em_rank": 102,
+            "sos_opp_o": 110.4,
+            "sos_opp_o_rank": 111,
+            "sos_opp_d": 107.3,
+            "sos_opp_d_rank": 100,
+            "ncsos_adj_em": -1.38,
+            "ncsos_adj_em_rank": 222
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"north-carolina\",\n      \"teamName\": \"North Carolina\",\n      \"torvik\": {\n        \"rank\": 27,\n        \"team\": \"North Carolina\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-8\",\n        \"adjoe\": 121.51548156694172,\n        \"oe Rank\": 32,\n        \"adjde\": 100.0466013429838,\n        \"de Rank\": 34\n      },\n      \"kenpom\": {\n        \"rank\": 29,\n        \"team\": \"North Carolina\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-8\",\n        \"adj_em\": 20.86,\n        \"adj_o\": 121.5,\n        \"adj_o_rank\": 33,\n        \"adj_d\": 100.6\n      }\n    },\n    {\n      \"teamId\": \"vcu\",\n      \"teamName\": \"VCU\",\n      \"torvik\": {\n        \"rank\": 51,\n        \"team\": \"VCU\",\n        \"conf\": \"A10\",\n        \"record\": \"26-7\",\n        \"adjoe\": 118.86397929382704,\n        \"oe Rank\": 49,\n        \"adjde\": 103.78250139250362,\n        \"de Rank\": 82\n      },\n      \"kenpom\": {\n        \"rank\": 46,\n        \"team\": \"VCU\",\n        \"conf\": \"A10\",\n        \"record\": \"26-7\",\n        \"adj_em\": 16.96,\n        \"adj_o\": 120,\n        \"adj_o_rank\": 45,\n        \"adj_d\": 103\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-5-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:04:13.118Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Carolina vs VCU March 2026 injury report availability",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:04:14.024Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2025-2026 NCAA BB Games: Rams Tar Heels Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Frams%2Dtar%2Dheels%2D2026%2D03%2D19%2Finjuries&rut=24feb8cae997697ff6dcbd1570edaf32e3764fd34ae3338eebe7344f6786ffe5",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between VCU and North Carolina . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "VCU Rams vs North Carolina Tar Heels Game Overview, Stats, Injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376840&rut=eb495cd7711672d6df68ab930ae05e4ec4f63c1d4e091b7229ad510a67defb8b",
+          "snippet": "Get key insights for VCU Rams vs North Carolina Tar Heels on March 19, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "North Carolina or VCU? How to pick 6 vs. 11 matchup in 2026 March ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnorth%2Dcarolina%2Dor%2Dvcu%2Dhow%2Dto%2Dpick%2D6%2Dvs%2D11%2Dmatchup%2Din%2D2026%2Dmarch%2Dmadness%2Dbracket%2Far%2DAA1YGNS8&rut=a9e521ac49cfb5728653dc9e8c7564e22d967394f1e27aca1e3ecadd7a0f5091",
+          "snippet": "Here is a complete guide to picking No. 6 North Carolina and No. 11 VCU in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game."
+        },
+        {
+          "title": "VCU vs. North Carolina (19 Mar, 2026) Live Score - ESPN (UK)",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856490%2Fvcu%2Dnorth%2Dcarolina&rut=d347aa24208d79b87083d07cb76f49ee689ff60c9191525b71b4d8a3003bd07b",
+          "snippet": "Live coverage of the VCU Rams vs . North Carolina Tar Heels NCAAM game on ESPN (UK), including live score, highlights and updated stats."
+        },
+        {
+          "title": "VCU Rams Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fvcu%2Drams%2Finjuries&rut=030c29a98a22b191a6ad017d1e621cca4052b6c8c8ed1d91e9b1113c60262b62",
+          "snippet": "Stay In the Know: Check Out VCU Rams Injuries Impacting The 2025- 2026 NCAAB Season."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025-2026 NCAA BB Games: Rams Tar Heels Injury Report -\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Frams%2Dtar%2Dheels%2D2026%2D03%2D19%2Finjuries&rut=24feb8cae997697ff6dcbd1570edaf32e3764fd34ae3338eebe7344f6786ffe5\",\n      \"snippet\": \"Betting analysis for the 2025- 2026 NCAA Basketball season matchup between VCU and North Carolina . Includes ats, over/under and straight up odds analysis.\"\n    },\n    {\n      \"title\": \"VCU Rams vs North Carolina Tar Heels Game Overview, Stats, Injuries ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376840&rut=eb495cd7711672d6df68ab930ae05e4ec4f63c1d4e091b7229ad510a67defb8b\",\n      \"snippet\": \"Get key insights for VCU Rams vs North Carolina Tar Heels on March 19, 2026 , including season records, injuries, and essential stats to help you make informed bets.\"\n    },\n    {\n      \"title\": \"North Carolina or VCU? How to pick 6 vs. 11 matchup in 2026 March ... - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnorth%2Dcarolina%2Dor%2Dvcu%2Dhow%2Dto%2Dpick%2D6%2Dvs%2D11%2Dmatchup%2Din%2D2026%2Dmarch%2Dmadness%2Dbracket%2Far%2DAA1YGNS8&rut=a9e521ac49cfb5728653dc9e8c7564e22d967394f1e27aca1e3ecadd7a0f5091\",\n      \"snippet\": \"Here is a complete guide to picking No. 6 North Carolina and No. 11 VCU in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game.\"\n    },\n    {\n      \"title\": \"VCU vs. North Carolina (19 Mar, 2026) Live Score - ESPN (UK)\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856490%2Fvcu%2Dnorth%2Dcarolina&rut=d347aa24208d79b87083d07cb76f49ee689ff60c9191525b71b4d8a3003bd07b\",\n      \"snippet\": \"Live coverage of the VCU Rams vs . North Carolina Tar Heels NCAAM game on ESPN (UK), including live score, highlights and updated stats.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-5-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:04:14.025Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "North Carolina VCU injury availability March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:04:14.090Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-south-5-tool-call-0-3",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:04:14.090Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "VCU Rams key injuries March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-result-0-3",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:04:14.921Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2025-2026 NCAA BB Games: Rams Tar Heels Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Frams%2Dtar%2Dheels%2D2026%2D03%2D19%2Finjuries&rut=24feb8cae997697ff6dcbd1570edaf32e3764fd34ae3338eebe7344f6786ffe5",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between VCU and North Carolina. Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "VCU Rams vs North Carolina Tar Heels Game Overview, Stats, Injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376840&rut=eb495cd7711672d6df68ab930ae05e4ec4f63c1d4e091b7229ad510a67defb8b",
+          "snippet": "Get key insights for VCU Rams vs North Carolina Tar Heels on March 19, 2026 , including season records, injuries , and essential stats to help you make informed bets."
+        },
+        {
+          "title": "2026 VCU Rams Injury Report | Lines.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lines.com%2Fncaab%2Fteams%2Fvcu%2Finjuries&rut=a0d2c655c99c3cae5788d19bd9b4cb0d3cfce3c7066783221079595f1ca9d431",
+          "snippet": "Get the latest VCU Rams injury news. See up to the minute injury reports of the Rams roster and timelines of player returns."
+        },
+        {
+          "title": "North Carolina Tar Heels Favored Over VCU Rams in March Madness 2026 ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fnc%2Fcharlotte%2Fnews%2F2026%2F03%2F16%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Dfavored%2Dover%2Dvcu%2Drams%2Din%2Dmarch%2Dmadness%2D2026%2Dfirst%2Dround%2F&rut=248e53fa4cc11af4f5220b0b7239cfa73f1e7c3d99949eb7b915d83bbb349ae0",
+          "snippet": "This matchup between the Tar Heels and Rams showcases the contrasting fortunes of the two teams heading into the tournament. While North Carolina has dealt with key injuries , VCU is riding a hot streak and looking to make a deep run in March Madness."
+        },
+        {
+          "title": "VCU Rams News, Schedule, Stats and Roster - USA TODAY Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fvcu%2Drams%2F1672&rut=f7c4064d3e2ab9ccba584e369c69fb8fabb0bd351781252495e661266dffef42",
+          "snippet": "Latest VCU Rams news, schedule, stats, depth chart, roster, injuries , transactions and more from USA TODAY Sports."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025-2026 NCAA BB Games: Rams Tar Heels Injury Report -\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Frams%2Dtar%2Dheels%2D2026%2D03%2D19%2Finjuries&rut=24feb8cae997697ff6dcbd1570edaf32e3764fd34ae3338eebe7344f6786ffe5\",\n      \"snippet\": \"Betting analysis for the 2025- 2026 NCAA Basketball season matchup between VCU and North Carolina. Includes ats, over/under and straight up odds analysis.\"\n    },\n    {\n      \"title\": \"VCU Rams vs North Carolina Tar Heels Game Overview, Stats, Injuries ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376840&rut=eb495cd7711672d6df68ab930ae05e4ec4f63c1d4e091b7229ad510a67defb8b\",\n      \"snippet\": \"Get key insights for VCU Rams vs North Carolina Tar Heels on March 19, 2026 , including season records, injuries , and essential stats to help you make informed bets.\"\n    },\n    {\n      \"title\": \"2026 VCU Rams Injury Report | Lines.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lines.com%2Fncaab%2Fteams%2Fvcu%2Finjuries&rut=a0d2c655c99c3cae5788d19bd9b4cb0d3cfce3c7066783221079595f1ca9d431\",\n      \"snippet\": \"Get the latest VCU Rams injury news. See up to the minute injury reports of the Rams roster and timelines of player returns.\"\n    },\n    {\n      \"title\": \"North Carolina Tar Heels Favored Over VCU Rams in March Madness 2026 ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fnc%2Fcharlotte%2Fnews%2F2026%2F03%2F16%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Dfavored%2Dover%2Dvcu%2Drams%2Din%2Dmarch%2Dmadness%2D2026%2Dfirst%2Dround%2F&rut=248e53fa4cc11af4f5220b0b7239cfa73f1e7c3d99949eb7b915d83bbb349ae0\",\n      \"snippet\": \"This matchup between the Tar Heels and Rams showcases the contrasting fortunes of the two teams heading into the tournament. While North Carolina has dealt with key injuries , VCU is riding a hot streak and looking to make a deep run in March Madness.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-5-tool-call-0-4",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:04:14.921Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Carolina Tar Heels key injuries March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-result-0-4",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:04:15.859Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=f1393f83883e23d89f0c7431172ad574e6a6a0326a61053f9f0a1037e0dda756",
+          "snippet": "North Carolina Tar Heels Injuries (South #6): Caleb Wilson No team has suffered a bigger single injury than UNC, which lost soon-to-be top-five pick Caleb Wilson to a season-ending thumb injury during practice on March 5."
+        },
+        {
+          "title": "UNC Basketball Faces Tough March Madness Path - Chapel Hill Today",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fnc%2Fchapel%2Dhill%2Fnews%2F2026%2F03%2F16%2Func%2Dbasketball%2Dfaces%2Dtough%2Dmarch%2Dmadness%2Dpath%2F&rut=824824cda4df56257cbcf93ad3868c30c41c16967a61269bb710a8271ee05117",
+          "snippet": "The University of North Carolina men&#x27;s basketball team enters the 2026 NCAA Tournament as a No. 6 seed in the Midwest Region, having adjusted to the loss of star player Caleb Wilson to a season-ending injury. The Tar Heels will face a challenging path to make a deep run in March Madness this year."
+        },
+        {
+          "title": "Key injury forces Seth Trimble into UNC spotlight - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fkey%2Dinjury%2Dforces%2Dseth%2Dtrimble%2Dinto%2Dunc%2Dspotlight%2Far%2DAA1YOF0R&rut=4c0cb4392f0255d0b41fb9afae162eea2c6026b97adda1146db84a4d46019a39",
+          "snippet": "The news hit like a thunderclap in Chapel Hill. On March 6, 2026 , North Carolina announced that star freshman forward Caleb Wilson—the Tar Heels&#x27; leading scorer and rebounder, a projected top ..."
+        },
+        {
+          "title": "UNC Players and Coaches Facing Most Pressure in NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Func%2Ftar%2Dheels%2Dplayers%2Dcoaches%2Dfacing%2Dmost%2Dpressure%2Dncaa%2Dtournament&rut=8fa7e83b593f5cb0fefaa0d4597c32c5672a1b85e516d4eaeb139c26ebf48b1a",
+          "snippet": "The North Carolina Tar Heels&#x27; path in the 2026 NCAA Tournament has officially been revealed, as they open their March Madness experience this season with a first-round matchup against the VCU Rams ..."
+        },
+        {
+          "title": "UNC basketball gets good news regarding key starters - Tar Heels Wire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ftarheelswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Ftarheels%2Fmens%2Dbasketball%2F2026%2F02%2F26%2Func%2Dbasketball%2Dlatest%2Dinjury%2Dnews%2Don%2Dcaleb%2Dwilson%2Dand%2Dhenri%2Dveesaar%2F88882841007%2F&rut=23f9399d44ba8d85398fb45b8bf213ade25f08bf729820d13d20f5f0ec8c3999",
+          "snippet": "And they could be getting some more good news regarding injuries . North Carolina has been without star freshman Caleb Wilson for a few weeks after he suffered a left wrist injury in the loss to Miami. Wilson has been wearing a brace and has been targeting the season finale at Duke on March 7 for a return."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=f1393f83883e23d89f0c7431172ad574e6a6a0326a61053f9f0a1037e0dda756\",\n      \"snippet\": \"North Carolina Tar Heels Injuries (South #6): Caleb Wilson No team has suffered a bigger single injury than UNC, which lost soon-to-be top-five pick Caleb Wilson to a season-ending thumb injury during practice on March 5.\"\n    },\n    {\n      \"title\": \"UNC Basketball Faces Tough March Madness Path - Chapel Hill Today\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fnc%2Fchapel%2Dhill%2Fnews%2F2026%2F03%2F16%2Func%2Dbasketball%2Dfaces%2Dtough%2Dmarch%2Dmadness%2Dpath%2F&rut=824824cda4df56257cbcf93ad3868c30c41c16967a61269bb710a8271ee05117\",\n      \"snippet\": \"The University of North Carolina men&#x27;s basketball team enters the 2026 NCAA Tournament as a No. 6 seed in the Midwest Region, having adjusted to the loss of star player Caleb Wilson to a season-ending injury. The Tar Heels will face a challenging path to make a deep run in March Madness this year.\"\n    },\n    {\n      \"title\": \"Key injury forces Seth Trimble into UNC spotlight - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fkey%2Dinjury%2Dforces%2Dseth%2Dtrimble%2Dinto%2Dunc%2Dspotlight%2Far%2DAA1YOF0R&rut=4c0cb4392f0255d0b41fb9afae162eea2c6026b97adda1146db84a4d46019a39\",\n      \"snippet\": \"The news hit like a thunderclap in Chapel Hill. On March 6, 2026 , North Carolina announced that star freshman forward Caleb Wilson—the Tar Heels&#x27; leading scorer and rebounder, a projected top ...\"\n    },\n    {\n      \"title\": \"UNC Players and Coaches Facing Most Pressure in NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Func%2Ftar%2Dheels%2Dplayers%2Dcoaches%2Dfacing%2Dmost%2Dpressure%2Dncaa%2Dtournament&rut=8fa7e83b593f5cb0fefaa0d4597c32c5672a1b85e516d4eaeb139c26ebf48b1a\",\n      \"snippet\": \"The North Carolina Tar Heels&#x27; path in the 2026 NCAA Tournament has officially been revealed, as they open their March Madness experience this season with a first-round matchup against the VCU Rams ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-5-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:04:18.474Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:04:18.474Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/rams-tar-heels-2026-03-19/injuries",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:04:18.972Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/rams-tar-heels-2026-03-19/injuries",
+        "text": "2025-2026 NCAA BB Games: Rams Tar Heels Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius 🏆 2026 NCAA Bracket Picks » You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu TeamRankings.com Get Smart About Sports Log In Subscribe Home Sports Betting NCAA Bracket Picks 2026 NCAA Survivor Picks Golf One And Done Picks Golf Majors & Masters Picks NFL NBA MLB NCAAF NCAAB Main Menu NFL Super Bowl SB Home Game Picks Model predictions Prop Picks Betting Analysis Super Bowl Squares Betting Promo Offers Betting & Pool Picks Picks Pick'em Picks Survivor Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Seattle vs. New England Rankings Predictive Rankings More Rankings Rankings Comparison Stats All Stats Team Stats Player Stats Teams Arizona Cardinals Atlanta Falcons Baltimore Ravens Buffalo Bills Carolina Panthers Chicago Bears Cincinnati Bengals Cleveland Browns Dallas Cowboys Denver Broncos Detroit Lions Green Bay Packers Houston Texans Indianapolis Colts Jacksonville Jaguars Kansas City Chiefs Miami Dolphins Las Vegas Raiders Los Angeles Chargers Los Angeles Rams Minnesota Vikings New England Patriots New Orleans Saints New York Giants New York Jets Philadelphia Eagles Pittsburgh Steelers San Francisco 49ers Seattle Seahawks Tampa Bay Buccaneers Tennessee Titans Washington Commanders NFL Home NCAAF Bowl Games Bowl Pick'em Picks Bowl Betting Picks Bowl Odds Bowl Schedule Bowls Home Betting & Pool Picks Picks Pick'em Picks Bowl Pick'em Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Boise St vs. Washington Troy vs. Jacksonville St Old Dominion vs. S Florida Louisiana vs. Delaware Missouri St vs. Arkansas St Kennesaw St vs. W Michigan Memphis vs. NC State Alabama @ Oklahoma Miami @ Texas A&M Tulane @ Mississippi J Madison @ Oregon Washington St vs. Utah St Toledo vs. Louisville W Kentucky vs. Southern Miss UNLV vs. Ohio More... Rankings & Polls Rankings Predictive Rankings More Rankin"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.teamrankings.com/ncaa-basketball/matchup/rams-tar-heels-2026-03-19/injuries\",\n    \"text\": \"2025-2026 NCAA BB Games: Rams Tar Heels Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius 🏆 2026 NCAA Bracket Picks » You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu TeamRankings.com Get Smart About Sports Log In Subscribe Home Sports Betting NCAA Bracket Picks 2026 NCAA Survivor Picks Golf One And Done Picks Golf Majors & Masters Picks NFL NBA MLB NCAAF NCAAB Main Menu NFL Super Bowl SB Home Game Picks Model predictions Prop Picks Betting Analysis Super Bowl Squares Betting Promo Offers Betting & Pool Picks Picks Pick'em Picks Survivor Picks Betting Picks Grid Game Winner Picks Poin... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-5-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:04:18.972Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376840",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:04:19.949Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376840",
+        "text": "VCU Rams vs North Carolina Tar Heels Game Overview, Stats, Injuries, Records - NCAAB Game on March 19, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Pro"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/matchup/376840\",\n    \"text\": \"VCU Rams vs North Carolina Tar Heels Game Overview, Stats, Injuries, Records - NCAAB Game on March 19, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sport... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-5-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:04:19.949Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:04:20.060Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Underdog Fantasy Canada Canada Canada Sports Betting Alberta Betting Apps Ontario Betting Apps Brazil Promos Promos Sports Betting Promo Codes DraftKings Promo Code BetMGM Promo Code bet365 Bonus Code theScore Bet Promo Code ESPN BET Promo Code FanDuel Promo Code Fanatics Sportsbook Promo Code Caesars Sportsbook Promo Code Hard Rock Bet Promo Code BetRivers Promo Code Boosted Odds NFL Betting Promos Odds Odds NFL NBA MLB NHL NCAAF NCAAB Sports Sports NFL NFL NFL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Super Bowl MVP DPOY OROY DROY All NFL Futures NBA NBA NBA Betting Odds Props Public Betting Starting Lineups ATS Records News Playoff Bracket Scores Futures Futures Championship MVP DPOY ROY All NBA Futures MLB MLB MLB Betting Odds Props Public Betting Lineups & Starting Pitchers ATS Records News Playoff Bracket Scores Futures Futures World Series MVP Cy Young Odds AL & NL ROY All MLB Futures NHL NHL NHL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Stanley Cup Hart Trophy Vezina Trophy All NHL Futures NCAAF NCAAF NCAAF Betting Odds Props Public Betting ATS Records Strength-of-Schedule CFP Bracket News Scores Futures Futures National Championship CFP Odds Heisman Trophy All NCAAF Futures NCAAB NCAAB NCAAB Betting Odds Props Public Betting ATS Records News Bracket Scores Futures Futures Championship Conference Wooden POY All NCAAB Futures College Baseball College Baseball College Baseball Betting News College World Series Odds More More Golf Tennis Boxing Mixed Martial Arts Politics Entertainment World Cup Soccer Horse Racing Racing WNBA News Picks Prediction Markets Prediction Markets &mdash; All Kalshi Referral Code Novig Promo Code ProphetX Promo Code Popular Prediction Market State"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/\",\n    \"text\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Unde... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-5-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:04:21.492Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:04:21.492Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.si.com/college/unc/tar-heels-players-coaches-facing-most-pressure-ncaa-tournament",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-5-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:04:22.518Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.si.com/college/unc/tar-heels-players-coaches-facing-most-pressure-ncaa-tournament",
+        "text": "UNC Players and Coaches Facing Most Pressure in NCAA Tournament Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW BASKETBALL FOOTBALL OTHER SPORTS SI.COM Basketball Football Other Sports Basketball Scores SI.com BASKETBALL BASKETBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES SI.COM HEELS FB FOOTBALL FOOTBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES SI.COM HEELS BB More from North Carolina Tar Heels On SI OTHER SPORTS SI.COM UNC Players and Coaches Facing Most Pressure in NCAA Tournament Despite being a No. 6 seed, the Tar Heels are facing an immense amount of pressure heading into the 2026 NCAA Tournament. Logan Lazarczyk | Share on Facebook Share on X Add us as a preferred source Mar 12, 2026; Charlotte, NC, USA; North Carolina Tar Heels head coach Hubert Davis in the huddle with his team during the first half against the Clemson Tigers at Spectrum Center. Mandatory Credit: Jim Dedmon-Imagn Images | Jim Dedmon-Imagn Images In this story: North Carolina Tar Heels The North Carolina Tar Heels&#39; path in the 2026 NCAA Tournament has officially been revealed, as they open their March Madness experience this season with a first-round matchup against the VCU Rams on Thursday at 6:50 P.M. ET. --> The North Carolina Tar Heels&#39; path in the 2026 NCAA Tournament has officially been revealed, as they open their March Madness experience this season with a first-round matchup against the VCU Rams on Thursday at 6:50 P.M. ET. It has been an erratic season for the Tar Heels, who at various points have been without their top three players: Caleb Wilson , Henri Veesaar, and Seth Trimble . The senior guard missed a little over a month with a fractured forearm, Veesaar missed two games late in the season with an undisclosed lower extremity injury, and Wilson suffered a fractured left wrist, which caused him to miss multiple games. --> It has been an erratic season for the Tar Heels, who at various points have been without their top three players: Caleb Wilson , Henri Veesaar, and Seth Trimble . The senior guard missed a little over a month with a fractured forearm, Veesaar missed two games late in the season with an undisclosed lower extremity injury, and Wilson suffered a fractured left wrist, which caused him to miss multiple games. Feb 23, 2026; Chapel Hill, North Carolina, USA; North Carolina Tar Heels forward Caleb Wilson (8) and the bench react in the second half at Dean E. Smith Center. Mandatory Credit: Bob Donnan-Imagn Images | Bob Donnan-Imagn Images The freshman was on track to return to the lineup against Duke, but suffered a broken thumb that required season-ending surgery. Considering the circumstances, which members of North Carolina are facing the most pressure heading into the NCAA Tournament? --> The freshman was on track to return to the lineup against Duke, but suffered a broken thumb that required season-ending surgery. Considering the circumstances, which members of North Carolina ar"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.si.com/college/unc/tar-heels-players-coaches-facing-most-pressure-ncaa-tournament\",\n    \"text\": \"UNC Players and Coaches Facing Most Pressure in NCAA Tournament Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW BASKETBALL FOOTBALL OTHER SPORTS SI.COM Basketball Football Other Sports Basketball Scores SI.com BASKETBALL BASKETBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES SI.COM HEELS FB FOOTBALL FOOTBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES SI.COM HEELS BB More from North Carolina Tar Heels On SI OTHER SPORTS SI.COM UNC Players and Coaches Facing Most Pressure in NCAA Tournament Despite being a No. 6 seed, the Tar Heels are facing an immense amount of pressure heading into the 2026 NCAA Tournament. Logan Lazarczyk | Share on Facebook Share on X Add us as a preferred source Mar 12, 2026; Charlotte, NC, USA; North Carolina Tar Heels head coach Hubert Davis in the huddle with his team during the first half against the Clemson Tigers at Spectrum Center. Mandatory Credit: Jim Dedmon-Imagn Images | Jim Dedmon-Imagn Images In this story: North Carolina Tar Heels The North Carolina Tar Heels&#39; path in the 2026 NCAA Tournament has officially been revealed, as they open their March Madness experience this season with a first-r... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-5-assistant-final-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:04:32.879Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-south-5\",\n    \"winnerId\": \"north-carolina\",\n    \"confidence\": 0.64,\n    \"rationale\": \"North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"r64-south-5-analysis\",\n    \"title\": \"South 6/11: North Carolina vs VCU\",\n    \"summary\": \"Pick North Carolina based on a clear (though not massive) efficiency edge and higher high-major scoring/athleticism baseline, while acknowledging VCU’s pressure creates real upset volatility and UNC’s injury situation lowers confidence.\",\n    \"evidence\": {\n      \"ratings\": {\n        \"north-carolina\": {\n          \"kenpom_rank\": 29,\n          \"kenpom_adj_em\": 20.86,\n          \"kenpom_adj_o\": 121.5,\n          \"kenpom_adj_o_rank\": 33,\n          \"kenpom_adj_d\": 100.6,\n          \"torvik_rank\": 27,\n          \"torvik_adjoe\": 121.52,\n          \"torvik_oe_rank\": 32,\n          \"torvik_adjde\": 100.05,\n          \"torvik_de_rank\": 34\n        },\n        \"vcu\": {\n          \"kenpom_rank\": 46,\n          \"kenpom_adj_em\": 16.96,\n          \"kenpom_adj_o\": 120.0,\n          \"kenpom_adj_o_rank\": 45,\n          \"kenpom_adj_d\": 103.0,\n          \"torvik_rank\": 51,\n          \"torvik_adjoe\": 118.86,\n          \"torvik_oe_rank\": 49,\n          \"torvik_adjde\": 103.78,\n          \"torvik_de_rank\": 82\n        }\n      },\n      \"news\": [\n        {\n          \"source\": \"SportsBettingDime (web search snippet)\",\n          \"note\": \"Reported UNC injury context: freshman forward Caleb Wilson season-ending thumb injury (March 2026), which is a meaningful downside risk and keeps confidence moderate.\"\n        }\n      ],\n      \"matchup_notes\": [\n        \"VCU’s most credible win condition is creating extra possessions via pressure/turnovers and turning the game into a higher-variance contest.\",\n        \"UNC’s edge is a better two-way efficiency baseline and more reliable half-court scoring if it avoids live-ball turnovers.\"\n      ]\n    }\n  }\n}"
+    },
+    {
+      "id": "r64-south-5-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T20:04:38.316Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-south-5\",\"winnerId\":\"north-carolina\",\"confidence\":0.64,\"rationale\":\"North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high.\"},\"reasoningStep\":{\"id\":\"r64-south-5-analysis\",\"title\":\"South 6/11: North Carolina vs VCU\",\"summary\":\"Pick North Carolina based on a clear (though not massive) efficiency edge and higher high-major scoring/athleticism baseline, while acknowledging VCU’s pressure creates real upset volatility and UNC’s injury situation lowers confidence.\",\"evidence\":[\"KenPom: North Carolina #29 (AdjEM 20.86; AdjO 121.5 #33; AdjD 100.6) vs VCU #46 (AdjEM 16.96; AdjO 120.0 #45; AdjD 103.0).\",\"Torvik: North Carolina #27 (AdjO 121.52 #32; AdjD 100.05 #34) vs VCU #51 (AdjO 118.86 #49; AdjD 103.78 #82).\",\"Injury context from public reporting: UNC freshman forward Caleb Wilson reportedly suffered a season-ending thumb injury in early March 2026, lowering UNC’s margin for error.\",\"Matchup dynamic: VCU’s upset route is turnover/tempo pressure and variance; UNC’s edge is steadier half-court scoring and a better two-way baseline if it protects the ball.\"]}}"
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-south-2",
+  "generatedAt": "2026-03-17T20:03:24.773Z",
+  "pick": {
+    "gameId": "r64-south-2",
+    "winnerId": "iowa",
+    "confidence": 0.56,
+    "rationale": "Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip."
+  },
+  "reasoningStep": {
+    "id": "demo-2026-bracket:r64-south-2:pick",
+    "title": "Lean Iowa in a near coin-flip based on offensive edge and overall efficiency",
+    "summary": "Both teams rate similarly, but Iowa’s stronger offense and slightly better overall efficiency margin tip the pick, with Clemson’s defense keeping upset risk high.",
+    "evidence": [
+      "KenPom: Iowa #25 (AdjEM +22.41; AdjO 121.8 #31; AdjD 99.4) vs Clemson #36 (AdjEM +19.26; AdjO 116.6 #71; AdjD 97.3).",
+      "Torvik: Iowa #26 (AdjO rank #29; AdjD rank #35) vs Clemson #29 (AdjO rank #69; AdjD rank #20).",
+      "No clear, matchup-flipping availability news surfaced in quick scans, so the small efficiency/offense edge drives the lean."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-iolyxkra",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "clemson",
+          "iowa"
+        ]
+      },
+      "startedAt": "2026-03-17T20:03:07.258Z",
+      "completedAt": "2026-03-17T20:03:07.265Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "clemson",
+          "teamName": "Clemson",
+          "torvik": {
+            "rank": 29,
+            "team": "Clemson",
+            "conf": "ACC",
+            "record": "24-10",
+            "adjoe": 116.53682445813897,
+            "oe Rank": 69,
+            "adjde": 96.88425906626,
+            "de Rank": 20,
+            "barthag": 0.8932081375403701,
+            "rank.1": 29,
+            "proj. W": 24,
+            "Proj. L": 10,
+            "Pro Con W": 12,
+            "Pro Con L": 6,
+            "Con Rec.": "12-6",
+            "sos": 0.6825636832986084,
+            "ncsos": 0.5180373950448774,
+            "consos": 0.7670824071148779,
+            "Proj. SOS": 0.6825636832986084,
+            "Proj. Noncon SOS": 0.5180373950448774,
+            "Proj. Con SOS": 0.7670824071148779,
+            "elite SOS": 0.683824276761196,
+            "elite noncon SOS": 0.7675421616081634,
+            "Opp OE": 114.66963931458444,
+            "Opp DE": 105.11957580625509,
+            "Opp Proj. OE": 114.66963931458444,
+            "Opp Proj DE": 105.11957580625509,
+            "Con Adj OE": 114.86334489357404,
+            "Con Adj DE": 95.8516880081619,
+            "Qual O": 117.1875671564937,
+            "Qual D": 94.72331477922762,
+            "Qual Barthag": 0.9203696195859876,
+            "Qual Games": 12,
+            "FUN": 0.0339030568808443,
+            "ConPF": 1273,
+            "ConPA": 1199,
+            "ConPoss": 1169.5374999999997,
+            "ConOE": 1.08846445710377,
+            "ConDE": 1.025191582142514,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6666666666666666,
+            "WAB": 3.138124746076201,
+            "WAB Rk": 31,
+            "Fun Rk": 97,
+            "adjt": 64.25496366610506
+          },
+          "kenpom": {
+            "rank": 36,
+            "team": "Clemson",
+            "conf": "ACC",
+            "record": "24-10",
+            "adj_em": 19.26,
+            "adj_o": 116.6,
+            "adj_o_rank": 71,
+            "adj_d": 97.3,
+            "adj_d_rank": 20,
+            "adj_t": 64.3,
+            "adj_t_rank": 333,
+            "luck": 0.011,
+            "luck_rank": 154,
+            "sos_adj_em": 10.5,
+            "sos_adj_em_rank": 65,
+            "sos_opp_o": 115.2,
+            "sos_opp_o_rank": 52,
+            "sos_opp_d": 104.7,
+            "sos_opp_d_rank": 60,
+            "ncsos_adj_em": 0.59,
+            "ncsos_adj_em_rank": 167
+          }
+        },
+        {
+          "teamId": "iowa",
+          "teamName": "Iowa",
+          "torvik": {
+            "rank": 26,
+            "team": "Iowa",
+            "conf": "B10",
+            "record": "21-12",
+            "adjoe": 122.12492091053804,
+            "oe Rank": 29,
+            "adjde": 100.16491106112171,
+            "de Rank": 35,
+            "barthag": 0.907173792095596,
+            "rank.1": 26,
+            "proj. W": 21,
+            "Proj. L": 12,
+            "Pro Con W": 10,
+            "Pro Con L": 10,
+            "Con Rec.": "10-10",
+            "sos": 0.6917503164745915,
+            "ncsos": 0.4123744606885529,
+            "consos": 0.8362327275521553,
+            "Proj. SOS": 0.6917503164745915,
+            "Proj. Noncon SOS": 0.4123744606885529,
+            "Proj. Con SOS": 0.8362327275521553,
+            "elite SOS": 0.644635942295042,
+            "elite noncon SOS": 0.8404740855956927,
+            "Opp OE": 115.4637686932806,
+            "Opp DE": 104.43551864488424,
+            "Opp Proj. OE": 115.4637686932806,
+            "Opp Proj DE": 104.43551864488424,
+            "Con Adj OE": 120.91665911112791,
+            "Con Adj DE": 100.57505827145886,
+            "Qual O": 121.08364202954796,
+            "Qual D": 98.38085914041682,
+            "Qual Barthag": 0.9158927065755802,
+            "Qual Games": 15,
+            "FUN": -0.0208696646834668,
+            "ConPF": 1417,
+            "ConPA": 1395,
+            "ConPoss": 1263.6374999999998,
+            "ConOE": 1.12136589805225,
+            "ConDE": 1.1039558417663295,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 1.901412713817363,
+            "WAB Rk": 38,
+            "Fun Rk": 230,
+            "adjt": 62.99887953290322
+          },
+          "kenpom": {
+            "rank": 25,
+            "team": "Iowa",
+            "conf": "B10",
+            "record": "21-12",
+            "adj_em": 22.41,
+            "adj_o": 121.8,
+            "adj_o_rank": 31,
+            "adj_d": 99.4,
+            "adj_d_rank": 31,
+            "adj_t": 63.1,
+            "adj_t_rank": 357,
+            "luck": -0.061,
+            "luck_rank": 328,
+            "sos_adj_em": 11.31,
+            "sos_adj_em_rank": 46,
+            "sos_opp_o": 115.6,
+            "sos_opp_o_rank": 47,
+            "sos_opp_d": 104.3,
+            "sos_opp_d_rank": 49,
+            "ncsos_adj_em": -7.22,
+            "ncsos_adj_em_rank": 336
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-a6gitdj3",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Clemson vs Iowa 8 9 matchup injury update March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:03:07.265Z",
+      "completedAt": "2026-03-17T20:03:08.275Z",
+      "summary": "Returned 5 search results for \"Clemson vs Iowa 8 9 matchup injury update March 2026 NCAA tournament\".",
+      "result": [
+        {
+          "title": "In-depth scout of Clemson, Iowa basketball&#x27;s NCAA Tournament opponent",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hawkcentral.com%2Fstory%2Fsports%2Fcollege%2Fiowa%2Fbasketball%2Dmen%2F2026%2F03%2F17%2Fiowa%2Dmens%2Dbasketball%2Dclemson%2Dncaa%2Dtournament%2Dhawkeyes%2F89180445007%2F&rut=5c90040b5670a604f146468ccf9f0b801be4131b2c1d39384aca534baa95ae36",
+          "snippet": "IOWA CITY — Iowa men&#x27;s basketball is back in the NCAA Tournament for the first time since 2023. The Hawkeyes earned a 9-seed and drew 8-seed Clemson in the round of 64 (5:50 p.m. CT Friday, TNT). The Tigers went 12-6 in ACC play this season and hold a 24-10 overall record entering the NCAA Tournament ."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "Iowa vs. Clemson (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856522&rut=0724781a604c7fa5468806480576ad980d62ab6a471d36b9c34893f3424d1b66",
+          "snippet": "Live coverage of the Iowa Hawkeyes vs . Clemson Tigers NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Clemson vs Iowa prediction, pick, odds March Madness first round",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fdukewire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fclemson%2F2026%2F03%2F15%2Fclemson%2Diowa%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2F89069817007%2F&rut=7eb5bcafda5a57c08419441a03a9969ea3f7ac009d49e632a1a7889c66a89e9a",
+          "snippet": "It&#x27;s Clemson Tigers vs Iowa Hawkeyes in March Madness bracket. Here&#x27;s our prediction for the 2026 NCAA tournament basketball game."
+        },
+        {
+          "title": "Clemson March Madness opponent is Iowa in 2026 NCAA bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.greenvilleonline.com%2Fstory%2Fsports%2Fcollege%2Fclemson%2F2026%2F03%2F15%2Fclemson%2Diowa%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2D2026%2F89069818007%2F&rut=92b9f5dbb525baf4a218582e803a248c2bb1bffd02e9cb390b8cb46b5d898d5c",
+          "snippet": "It&#x27;s Clemson basketball vs . Iowa in March Madness to open its 2026 NCAA tournament men&#x27;s bracket. Here&#x27;s what to know about the first-round game in Tampa, Florida."
+        }
+      ]
+    },
+    {
+      "id": "tool-6xf7l3zb",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Clemson Iowa injury availability March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:03:08.275Z",
+      "completedAt": "2026-03-17T20:03:08.957Z",
+      "summary": "Returned 5 search results for \"Clemson Iowa injury availability March 2026\".",
+      "result": [
+        {
+          "title": "Iowa vs. Clemson (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856522&rut=0724781a604c7fa5468806480576ad980d62ab6a471d36b9c34893f3424d1b66",
+          "snippet": "Live coverage of the Iowa Hawkeyes vs. Clemson Tigers NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=d65ffe3f61c8894e9e6ce97eaf8af84da720fe2bb826926988eabed15f7bab00",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        },
+        {
+          "title": "Clemson Tigers 2025-26 Postseason NCAAM Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F228&rut=6e94aab67207cba304b76def371f1af7e47efd463b6e4ac0cf01e18005377079",
+          "snippet": "ESPN has the full 2025-26 Clemson Tigers Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Tigers games."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "Clemson is the only power-conference school that currently has its all-time winningest coaches leading both its football and men&#x27;s basketball programs in Dabo Swinney and Brownell, respectively."
+        },
+        {
+          "title": "NCAA Bracketology: 2026 March Madness men&#x27;s field predictions - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fespn%2Ffeature%2Fstory%2F_%2Fpage%2Fbracketology%2Fncaa%2Dbracketology%2D2026%2Dmarch%2Dmadness%2Dmen%2Dfield%2Dpredictions&rut=0a7a2a28da892c6ec89e326e584c92edf88d9db19de2551a77eb0ebc39cab250",
+          "snippet": "The selection show is almost here! Here&#x27;s the latest look at what we&#x27;re expecting when it starts."
+        }
+      ]
+    },
+    {
+      "id": "tool-uw0xen0t",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T20:03:11.164Z",
+      "completedAt": "2026-03-17T20:03:11.787Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      }
+    },
+    {
+      "id": "tool-5cyn0nwp",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://dukewire.usatoday.com/story/sports/college/clemson/2026/03/15/clemson-iowa-march-madness-prediction-ncaa-bracket/89069817007/",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T20:03:11.787Z",
+      "completedAt": "2026-03-17T20:03:12.476Z",
+      "summary": "Fetched https://dukewire.usatoday.com/story/sports/college/clemson/2026/03/15/clemson-iowa-march-madness-prediction-ncaa-bracket/89069817007/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://dukewire.usatoday.com/story/sports/college/clemson/2026/03/15/clemson-iowa-march-madness-prediction-ncaa-bracket/89069817007/",
+        "text": "Clemson vs Iowa prediction, pick, odds March Madness first round Skip to main content Home Schedule Football Basketball Recruiting Odds Newsletter College Sports Wire USA TODAY Sports Clemson basketball vs Iowa prediction, our pick for 2026 NCAA bracket first round Derrian Carter Greenville News CLEMSON — Clemson basketball enters March Madness as a No. 8 seed in the South region. The Tigers (24-10) will face No. 9 Iowa (21-12) on March 20 (6:50 p.m. ET, TNT) in Tampa, Florida, at Benchmark International Arena. The winner will face the winner between No. 1 seed Florida and No. 16 Prairie View/Lehigh in the second round on March 22. Buy Clemson NCAA Tournament tickets vs. Iowa Clemson has made March Madness in three straight seasons despite having its largest roster turnover under coach Brad Brownell . The Tigers added four freshmen and six transfers to join three returning players to help the team finish tied for fourth in the ACC standings and make the conference tournament semifinals. The Hawkeyes (21-12) made the NCAA Tournament in their first season under coach Ben McCollum. Iowa finished ninth in the Big Ten standings and made the third round of its conference tournament. Here's what to know about this first-round March Madness matchup and a score prediction. Can Clemson basketball avoid another first-round exit? Clemson made the NCAA Tournament as a No. 5 seed after losing in the ACC Tournament semifinals last season, but No. 12 McNeese State upset the Tigers. Clemson is in a similar situation after entering March Madness after a conference tournament semifinals appearance. Brownell isn't concerned though because the Tigers will have more time to prepare and no one on this season's roster played in that game. Dillon Hunter was out with a hand injury. Ace Buckner and Dallas Thomas both redshirted. \"Every year is different. Every situation is different,\" Brownell said March 15. \"It's a little disappointing, bad luck, we've gone into the ACC Tournament and had (a) starter get hurt the last two years and not be able to play. That's not easy.\" What to know about Iowa basketball in March Madness Iowa won 20 games for the first time since 2021-22 to make its first NCAA Tournament in two seasons. MORE: Think you can beat our expert? Join USA TODAY’s Bracket Challenge today! The Hawkeyes are led by senior guard Bennett Stirtz, a projected first-round pick in the 2026 NBA Draft who averages 20 points (sixth in the Big Ten). Iowa is a defensive-focused team like Clemson, allowing just 66.0 points per game (17th nationally). The Hawkeyes average 75.2 points (193rd nationally). Iowa has struggled late in the season, losing seven of its last 10 games, and has not made it out of the first round of March Madness since 2021. Can Clemson overcome Carter Welling's injury? Clemson lost starting center Carter Welling to a torn ACL in the ACC Tournament. He was the team's second-leading scorer (10.2 per game), top rebounder (5.4) and best shot blocker (24 total)"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-south-2-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T20:03:04.714Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-south-2\nCurrent game label: South 8/9\nRound: Round of 64\nResolved teams: Clemson (clemson) vs Iowa (iowa)\nPrior committed picks: 21"
+    },
+    {
+      "id": "r64-south-2-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T20:03:04.714Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-south-2\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 8/9\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"clemson\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"iowa\"\n      }\n    },\n    \"slotAName\": \"Clemson\",\n    \"slotBName\": \"Iowa\",\n    \"slotATeamId\": \"clemson\",\n    \"slotBTeamId\": \"iowa\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.61,\n        \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.84,\n        \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.64,\n        \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.99,\n        \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-east-6\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n    },\n    {\n      \"gameId\": \"r64-east-7\",\n      \"winnerId\": \"ucla\",\n      \"confidence\": 0.67,\n      \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n    },\n    {\n      \"gameId\": \"r64-east-8\",\n      \"winnerId\": \"uconn\",\n      \"confidence\": 0.93,\n      \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n    },\n    {\n      \"gameId\": \"r64-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.98,\n      \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n    },\n    {\n      \"gameId\": \"r64-west-2\",\n      \"winnerId\": \"villanova\",\n      \"confidence\": 0.61,\n      \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n    },\n    {\n      \"gameId\": \"r64-west-3\",\n      \"winnerId\": \"wisconsin\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n    },\n    {\n      \"gameId\": \"r64-west-4\",\n      \"winnerId\": \"arkansas\",\n      \"confidence\": 0.84,\n      \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n    },\n    {\n      \"gameId\": \"r64-west-5\",\n      \"winnerId\": \"byu\",\n      \"confidence\": 0.64,\n      \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n    },\n    {\n      \"gameId\": \"r64-west-6\",\n      \"winnerId\": \"gonzaga\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n    },\n    {\n      \"gameId\": \"r64-west-7\",\n      \"winnerId\": \"miami-fl\",\n      \"confidence\": 0.64,\n      \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n    },\n    {\n      \"gameId\": \"r64-west-8\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.96,\n      \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n    },\n    {\n      \"gameId\": \"r64-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.99,\n      \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-south-2-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:03:07.258Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-2-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:07.258Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "clemson",
+          "iowa"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-2-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:07.265Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "clemson",
+          "teamName": "Clemson",
+          "torvik": {
+            "rank": 29,
+            "team": "Clemson",
+            "conf": "ACC",
+            "record": "24-10",
+            "adjoe": 116.53682445813897,
+            "oe Rank": 69,
+            "adjde": 96.88425906626,
+            "de Rank": 20,
+            "barthag": 0.8932081375403701,
+            "rank.1": 29,
+            "proj. W": 24,
+            "Proj. L": 10,
+            "Pro Con W": 12,
+            "Pro Con L": 6,
+            "Con Rec.": "12-6",
+            "sos": 0.6825636832986084,
+            "ncsos": 0.5180373950448774,
+            "consos": 0.7670824071148779,
+            "Proj. SOS": 0.6825636832986084,
+            "Proj. Noncon SOS": 0.5180373950448774,
+            "Proj. Con SOS": 0.7670824071148779,
+            "elite SOS": 0.683824276761196,
+            "elite noncon SOS": 0.7675421616081634,
+            "Opp OE": 114.66963931458444,
+            "Opp DE": 105.11957580625509,
+            "Opp Proj. OE": 114.66963931458444,
+            "Opp Proj DE": 105.11957580625509,
+            "Con Adj OE": 114.86334489357404,
+            "Con Adj DE": 95.8516880081619,
+            "Qual O": 117.1875671564937,
+            "Qual D": 94.72331477922762,
+            "Qual Barthag": 0.9203696195859876,
+            "Qual Games": 12,
+            "FUN": 0.0339030568808443,
+            "ConPF": 1273,
+            "ConPA": 1199,
+            "ConPoss": 1169.5374999999997,
+            "ConOE": 1.08846445710377,
+            "ConDE": 1.025191582142514,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6666666666666666,
+            "WAB": 3.138124746076201,
+            "WAB Rk": 31,
+            "Fun Rk": 97,
+            "adjt": 64.25496366610506
+          },
+          "kenpom": {
+            "rank": 36,
+            "team": "Clemson",
+            "conf": "ACC",
+            "record": "24-10",
+            "adj_em": 19.26,
+            "adj_o": 116.6,
+            "adj_o_rank": 71,
+            "adj_d": 97.3,
+            "adj_d_rank": 20,
+            "adj_t": 64.3,
+            "adj_t_rank": 333,
+            "luck": 0.011,
+            "luck_rank": 154,
+            "sos_adj_em": 10.5,
+            "sos_adj_em_rank": 65,
+            "sos_opp_o": 115.2,
+            "sos_opp_o_rank": 52,
+            "sos_opp_d": 104.7,
+            "sos_opp_d_rank": 60,
+            "ncsos_adj_em": 0.59,
+            "ncsos_adj_em_rank": 167
+          }
+        },
+        {
+          "teamId": "iowa",
+          "teamName": "Iowa",
+          "torvik": {
+            "rank": 26,
+            "team": "Iowa",
+            "conf": "B10",
+            "record": "21-12",
+            "adjoe": 122.12492091053804,
+            "oe Rank": 29,
+            "adjde": 100.16491106112171,
+            "de Rank": 35,
+            "barthag": 0.907173792095596,
+            "rank.1": 26,
+            "proj. W": 21,
+            "Proj. L": 12,
+            "Pro Con W": 10,
+            "Pro Con L": 10,
+            "Con Rec.": "10-10",
+            "sos": 0.6917503164745915,
+            "ncsos": 0.4123744606885529,
+            "consos": 0.8362327275521553,
+            "Proj. SOS": 0.6917503164745915,
+            "Proj. Noncon SOS": 0.4123744606885529,
+            "Proj. Con SOS": 0.8362327275521553,
+            "elite SOS": 0.644635942295042,
+            "elite noncon SOS": 0.8404740855956927,
+            "Opp OE": 115.4637686932806,
+            "Opp DE": 104.43551864488424,
+            "Opp Proj. OE": 115.4637686932806,
+            "Opp Proj DE": 104.43551864488424,
+            "Con Adj OE": 120.91665911112791,
+            "Con Adj DE": 100.57505827145886,
+            "Qual O": 121.08364202954796,
+            "Qual D": 98.38085914041682,
+            "Qual Barthag": 0.9158927065755802,
+            "Qual Games": 15,
+            "FUN": -0.0208696646834668,
+            "ConPF": 1417,
+            "ConPA": 1395,
+            "ConPoss": 1263.6374999999998,
+            "ConOE": 1.12136589805225,
+            "ConDE": 1.1039558417663295,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 1.901412713817363,
+            "WAB Rk": 38,
+            "Fun Rk": 230,
+            "adjt": 62.99887953290322
+          },
+          "kenpom": {
+            "rank": 25,
+            "team": "Iowa",
+            "conf": "B10",
+            "record": "21-12",
+            "adj_em": 22.41,
+            "adj_o": 121.8,
+            "adj_o_rank": 31,
+            "adj_d": 99.4,
+            "adj_d_rank": 31,
+            "adj_t": 63.1,
+            "adj_t_rank": 357,
+            "luck": -0.061,
+            "luck_rank": 328,
+            "sos_adj_em": 11.31,
+            "sos_adj_em_rank": 46,
+            "sos_opp_o": 115.6,
+            "sos_opp_o_rank": 47,
+            "sos_opp_d": 104.3,
+            "sos_opp_d_rank": 49,
+            "ncsos_adj_em": -7.22,
+            "ncsos_adj_em_rank": 336
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"clemson\",\n      \"teamName\": \"Clemson\",\n      \"torvik\": {\n        \"rank\": 29,\n        \"team\": \"Clemson\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-10\",\n        \"adjoe\": 116.53682445813897,\n        \"oe Rank\": 69,\n        \"adjde\": 96.88425906626,\n        \"de Rank\": 20\n      },\n      \"kenpom\": {\n        \"rank\": 36,\n        \"team\": \"Clemson\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-10\",\n        \"adj_em\": 19.26,\n        \"adj_o\": 116.6,\n        \"adj_o_rank\": 71,\n        \"adj_d\": 97.3\n      }\n    },\n    {\n      \"teamId\": \"iowa\",\n      \"teamName\": \"Iowa\",\n      \"torvik\": {\n        \"rank\": 26,\n        \"team\": \"Iowa\",\n        \"conf\": \"B10\",\n        \"record\": \"21-12\",\n        \"adjoe\": 122.12492091053804,\n        \"oe Rank\": 29,\n        \"adjde\": 100.16491106112171,\n        \"de Rank\": 35\n      },\n      \"kenpom\": {\n        \"rank\": 25,\n        \"team\": \"Iowa\",\n        \"conf\": \"B10\",\n        \"record\": \"21-12\",\n        \"adj_em\": 22.41,\n        \"adj_o\": 121.8,\n        \"adj_o_rank\": 31,\n        \"adj_d\": 99.4\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-2-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:07.265Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Clemson vs Iowa 8 9 matchup injury update March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-2-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:08.275Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "In-depth scout of Clemson, Iowa basketball&#x27;s NCAA Tournament opponent",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hawkcentral.com%2Fstory%2Fsports%2Fcollege%2Fiowa%2Fbasketball%2Dmen%2F2026%2F03%2F17%2Fiowa%2Dmens%2Dbasketball%2Dclemson%2Dncaa%2Dtournament%2Dhawkeyes%2F89180445007%2F&rut=5c90040b5670a604f146468ccf9f0b801be4131b2c1d39384aca534baa95ae36",
+          "snippet": "IOWA CITY — Iowa men&#x27;s basketball is back in the NCAA Tournament for the first time since 2023. The Hawkeyes earned a 9-seed and drew 8-seed Clemson in the round of 64 (5:50 p.m. CT Friday, TNT). The Tigers went 12-6 in ACC play this season and hold a 24-10 overall record entering the NCAA Tournament ."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "Iowa vs. Clemson (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856522&rut=0724781a604c7fa5468806480576ad980d62ab6a471d36b9c34893f3424d1b66",
+          "snippet": "Live coverage of the Iowa Hawkeyes vs . Clemson Tigers NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Clemson vs Iowa prediction, pick, odds March Madness first round",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fdukewire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fclemson%2F2026%2F03%2F15%2Fclemson%2Diowa%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2F89069817007%2F&rut=7eb5bcafda5a57c08419441a03a9969ea3f7ac009d49e632a1a7889c66a89e9a",
+          "snippet": "It&#x27;s Clemson Tigers vs Iowa Hawkeyes in March Madness bracket. Here&#x27;s our prediction for the 2026 NCAA tournament basketball game."
+        },
+        {
+          "title": "Clemson March Madness opponent is Iowa in 2026 NCAA bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.greenvilleonline.com%2Fstory%2Fsports%2Fcollege%2Fclemson%2F2026%2F03%2F15%2Fclemson%2Diowa%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2D2026%2F89069818007%2F&rut=92b9f5dbb525baf4a218582e803a248c2bb1bffd02e9cb390b8cb46b5d898d5c",
+          "snippet": "It&#x27;s Clemson basketball vs . Iowa in March Madness to open its 2026 NCAA tournament men&#x27;s bracket. Here&#x27;s what to know about the first-round game in Tampa, Florida."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"In-depth scout of Clemson, Iowa basketball&#x27;s NCAA Tournament opponent\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hawkcentral.com%2Fstory%2Fsports%2Fcollege%2Fiowa%2Fbasketball%2Dmen%2F2026%2F03%2F17%2Fiowa%2Dmens%2Dbasketball%2Dclemson%2Dncaa%2Dtournament%2Dhawkeyes%2F89180445007%2F&rut=5c90040b5670a604f146468ccf9f0b801be4131b2c1d39384aca534baa95ae36\",\n      \"snippet\": \"IOWA CITY — Iowa men&#x27;s basketball is back in the NCAA Tournament for the first time since 2023. The Hawkeyes earned a 9-seed and drew 8-seed Clemson in the round of 64 (5:50 p.m. CT Friday, TNT). The Tigers went 12-6 in ACC play this season and hold a 24-10 overall record entering the NCAA Tournament .\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA .\"\n    },\n    {\n      \"title\": \"Iowa vs. Clemson (Mar 20, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856522&rut=0724781a604c7fa5468806480576ad980d62ab6a471d36b9c34893f3424d1b66\",\n      \"snippet\": \"Live coverage of the Iowa Hawkeyes vs . Clemson Tigers NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"Clemson vs Iowa prediction, pick, odds March Madness first round\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fdukewire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fclemson%2F2026%2F03%2F15%2Fclemson%2Diowa%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2F89069817007%2F&rut=7eb5bcafda5a57c08419441a03a9969ea3f7ac009d49e632a1a7889c66a89e9a\",\n      \"snippet\": \"It&#x27;s Clemson Tigers vs Iowa Hawkeyes in March Madness bracket. Here&#x27;s our prediction for the 2026 NCAA tournament basketball game.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-2-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:08.275Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Clemson Iowa injury availability March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-2-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:08.957Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Iowa vs. Clemson (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856522&rut=0724781a604c7fa5468806480576ad980d62ab6a471d36b9c34893f3424d1b66",
+          "snippet": "Live coverage of the Iowa Hawkeyes vs. Clemson Tigers NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=d65ffe3f61c8894e9e6ce97eaf8af84da720fe2bb826926988eabed15f7bab00",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        },
+        {
+          "title": "Clemson Tigers 2025-26 Postseason NCAAM Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F228&rut=6e94aab67207cba304b76def371f1af7e47efd463b6e4ac0cf01e18005377079",
+          "snippet": "ESPN has the full 2025-26 Clemson Tigers Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Tigers games."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "Clemson is the only power-conference school that currently has its all-time winningest coaches leading both its football and men&#x27;s basketball programs in Dabo Swinney and Brownell, respectively."
+        },
+        {
+          "title": "NCAA Bracketology: 2026 March Madness men&#x27;s field predictions - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fespn%2Ffeature%2Fstory%2F_%2Fpage%2Fbracketology%2Fncaa%2Dbracketology%2D2026%2Dmarch%2Dmadness%2Dmen%2Dfield%2Dpredictions&rut=0a7a2a28da892c6ec89e326e584c92edf88d9db19de2551a77eb0ebc39cab250",
+          "snippet": "The selection show is almost here! Here&#x27;s the latest look at what we&#x27;re expecting when it starts."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Iowa vs. Clemson (Mar 20, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856522&rut=0724781a604c7fa5468806480576ad980d62ab6a471d36b9c34893f3424d1b66\",\n      \"snippet\": \"Live coverage of the Iowa Hawkeyes vs. Clemson Tigers NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=d65ffe3f61c8894e9e6ce97eaf8af84da720fe2bb826926988eabed15f7bab00\",\n      \"snippet\": \"The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title.\"\n    },\n    {\n      \"title\": \"Clemson Tigers 2025-26 Postseason NCAAM Schedule - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F228&rut=6e94aab67207cba304b76def371f1af7e47efd463b6e4ac0cf01e18005377079\",\n      \"snippet\": \"ESPN has the full 2025-26 Clemson Tigers Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Tigers games.\"\n    },\n    {\n      \"title\": \"Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce\",\n      \"snippet\": \"Clemson is the only power-conference school that currently has its all-time winningest coaches leading both its football and men&#x27;s basketball programs in Dabo Swinney and Brownell, respectively.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-2-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:03:11.164Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-2-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:11.164Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-2-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:11.787Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/injuries\",\n    \"text\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker R... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-2-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:11.787Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://dukewire.usatoday.com/story/sports/college/clemson/2026/03/15/clemson-iowa-march-madness-prediction-ncaa-bracket/89069817007/",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-2-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:12.476Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://dukewire.usatoday.com/story/sports/college/clemson/2026/03/15/clemson-iowa-march-madness-prediction-ncaa-bracket/89069817007/",
+        "text": "Clemson vs Iowa prediction, pick, odds March Madness first round Skip to main content Home Schedule Football Basketball Recruiting Odds Newsletter College Sports Wire USA TODAY Sports Clemson basketball vs Iowa prediction, our pick for 2026 NCAA bracket first round Derrian Carter Greenville News CLEMSON — Clemson basketball enters March Madness as a No. 8 seed in the South region. The Tigers (24-10) will face No. 9 Iowa (21-12) on March 20 (6:50 p.m. ET, TNT) in Tampa, Florida, at Benchmark International Arena. The winner will face the winner between No. 1 seed Florida and No. 16 Prairie View/Lehigh in the second round on March 22. Buy Clemson NCAA Tournament tickets vs. Iowa Clemson has made March Madness in three straight seasons despite having its largest roster turnover under coach Brad Brownell . The Tigers added four freshmen and six transfers to join three returning players to help the team finish tied for fourth in the ACC standings and make the conference tournament semifinals. The Hawkeyes (21-12) made the NCAA Tournament in their first season under coach Ben McCollum. Iowa finished ninth in the Big Ten standings and made the third round of its conference tournament. Here's what to know about this first-round March Madness matchup and a score prediction. Can Clemson basketball avoid another first-round exit? Clemson made the NCAA Tournament as a No. 5 seed after losing in the ACC Tournament semifinals last season, but No. 12 McNeese State upset the Tigers. Clemson is in a similar situation after entering March Madness after a conference tournament semifinals appearance. Brownell isn't concerned though because the Tigers will have more time to prepare and no one on this season's roster played in that game. Dillon Hunter was out with a hand injury. Ace Buckner and Dallas Thomas both redshirted. \"Every year is different. Every situation is different,\" Brownell said March 15. \"It's a little disappointing, bad luck, we've gone into the ACC Tournament and had (a) starter get hurt the last two years and not be able to play. That's not easy.\" What to know about Iowa basketball in March Madness Iowa won 20 games for the first time since 2021-22 to make its first NCAA Tournament in two seasons. MORE: Think you can beat our expert? Join USA TODAY’s Bracket Challenge today! The Hawkeyes are led by senior guard Bennett Stirtz, a projected first-round pick in the 2026 NBA Draft who averages 20 points (sixth in the Big Ten). Iowa is a defensive-focused team like Clemson, allowing just 66.0 points per game (17th nationally). The Hawkeyes average 75.2 points (193rd nationally). Iowa has struggled late in the season, losing seven of its last 10 games, and has not made it out of the first round of March Madness since 2021. Can Clemson overcome Carter Welling's injury? Clemson lost starting center Carter Welling to a torn ACL in the ACC Tournament. He was the team's second-leading scorer (10.2 per game), top rebounder (5.4) and best shot blocker (24 total)"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://dukewire.usatoday.com/story/sports/college/clemson/2026/03/15/clemson-iowa-march-madness-prediction-ncaa-bracket/89069817007/\",\n    \"text\": \"Clemson vs Iowa prediction, pick, odds March Madness first round Skip to main content Home Schedule Football Basketball Recruiting Odds Newsletter College Sports Wire USA TODAY Sports Clemson basketball vs Iowa prediction, our pick for 2026 NCAA bracket first round Derrian Carter Greenville News CLEMSON — Clemson basketball enters March Madness as a No. 8 seed in the South region. The Tigers (24-10) will face No. 9 Iowa (21-12) on March 20 (6:50 p.m. ET, TNT) in Tampa, Florida, at Benchmark International Arena. The winner will face the winner between No. 1 seed Florida and No. 16 Prairie View/Lehigh in the second round on March 22. Buy Clemson NCAA Tournament tickets vs. Iowa Clemson has made March Madness in three straight seasons despite having its largest roster turnover under coach Brad Brownell . The Tigers added four freshmen and six transfers to join three returning players to help the team finish tied for fourth in the ACC standings and make the conference tournament semifinals. The Hawkeyes (21-12) made the NCAA Tournament in their first season under coach Ben McCollum. Iowa finished ninth in the Big Ten standings and made the third round of its conference tournament. Here... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-2-assistant-final-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:03:19.365Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-south-2\",\n    \"winnerId\": \"iowa\",\n    \"confidence\": 0.56,\n    \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger at the top end, with a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent (Torvik AdjD rank #20) and gives the Tigers a very real path if they can turn this into a lower-scoring, half-court game, but Iowa’s scoring punch and overall rating advantage make them the marginally safer pick in what looks like a true 8/9 coin flip.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"demo-2026-bracket:r64-south-2:pick\",\n    \"title\": \"Lean Iowa in a near coin-flip based on offensive edge and overall efficiency\",\n    \"summary\": \"Both teams rate similarly, but Iowa’s stronger offense and slightly better overall efficiency margin tip the pick, with Clemson’s defense keeping upset risk high.\",\n    \"evidence\": \"Ratings: Iowa (KenPom #25, AdjEM +22.41; AdjO 121.8 #31; AdjD 99.4) vs Clemson (KenPom #36, AdjEM +19.26; AdjO 116.6 #71; AdjD 97.3). Torvik: Iowa #26 (AdjO rank #29, AdjD rank #35) vs Clemson #29 (AdjO rank #69, AdjD rank #20). Context: 8/9 matchup with no clearly surfaced availability red flags in quick news checks, so the small efficiency/offense edge drives the lean.\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-2-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T20:03:24.773Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-south-2\",\"winnerId\":\"iowa\",\"confidence\":0.56,\"rationale\":\"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"},\"reasoningStep\":{\"id\":\"demo-2026-bracket:r64-south-2:pick\",\"title\":\"Lean Iowa in a near coin-flip based on offensive edge and overall efficiency\",\"summary\":\"Both teams rate similarly, but Iowa’s stronger offense and slightly better overall efficiency margin tip the pick, with Clemson’s defense keeping upset risk high.\",\"evidence\":[\"KenPom: Iowa #25 (AdjEM +22.41; AdjO 121.8 #31; AdjD 99.4) vs Clemson #36 (AdjEM +19.26; AdjO 116.6 #71; AdjD 97.3).\",\"Torvik: Iowa #26 (AdjO rank #29; AdjD rank #35) vs Clemson #29 (AdjO rank #69; AdjD rank #20).\",\"No clear, matchup-flipping availability news surfaced in quick scans, so the small efficiency/offense edge drives the lean.\"]}}"
+    }
+  ]
+}

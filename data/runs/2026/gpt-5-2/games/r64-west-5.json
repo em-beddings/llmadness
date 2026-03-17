@@ -1,0 +1,723 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-west-5",
+  "generatedAt": "2026-03-17T19:59:41.544Z",
+  "pick": {
+    "gameId": "r64-west-5",
+    "winnerId": "byu",
+    "confidence": 0.64,
+    "rationale": "BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU."
+  },
+  "reasoningStep": {
+    "id": "r64-west-5-analysis",
+    "title": "West 6/11: BYU vs Texas",
+    "summary": "BYU is the pick because it rates better in both major efficiency systems and has the stronger defensive baseline, while Texas’ path relies more on offensive variance in a near-even scoring matchup.",
+    "evidence": [
+      "KenPom: BYU #23 (AdjO 125.5, AdjD 102.3) vs Texas #37 (AdjO 125.0, AdjD 106.0).",
+      "Torvik: BYU #33 (AdjO rank 16, AdjD rank 88) vs Texas #45 (AdjO rank 21, AdjD rank 125).",
+      "Injury/availability context from web reporting: BYU has notable season-ending injuries including Richie Saunders (torn ACL) and Dawson Baker, which reduces depth and slightly increases upset risk.",
+      "Matchup logic: with similar offensive ceilings, BYU’s better defensive efficiency and higher overall adjusted margin provide a more reliable path to winning if shooting variance normalizes."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-76wcmaat",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "byu",
+          "texas"
+        ]
+      },
+      "startedAt": "2026-03-17T19:59:18.492Z",
+      "completedAt": "2026-03-17T19:59:18.500Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "byu",
+          "teamName": "BYU",
+          "torvik": {
+            "rank": 33,
+            "team": "BYU",
+            "conf": "B12",
+            "record": "23-11",
+            "adjoe": 124.78766507254886,
+            "oe Rank": 16,
+            "adjde": 104.28867912262888,
+            "de Rank": 88,
+            "barthag": 0.8873230440607387,
+            "rank.1": 33,
+            "proj. W": 23,
+            "Proj. L": 11,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.748834367916737,
+            "ncsos": 0.6052210827564047,
+            "consos": 0.8416495413693037,
+            "Proj. SOS": 0.748834367916737,
+            "Proj. Noncon SOS": 0.6052210827564047,
+            "Proj. Con SOS": 0.8416495413693037,
+            "elite SOS": 0.6159025438017878,
+            "elite noncon SOS": 0.737287914178802,
+            "Opp OE": 115.9634283595156,
+            "Opp DE": 101.95512787467284,
+            "Opp Proj. OE": 115.9634283595156,
+            "Opp Proj DE": 101.95512787467284,
+            "Con Adj OE": 125.05317918466297,
+            "Con Adj DE": 107.72404912671124,
+            "Qual O": 125.80517276153634,
+            "Qual D": 102.93570248854076,
+            "Qual Barthag": 0.909475213078614,
+            "Qual Games": 16,
+            "FUN": 0.0833908482027433,
+            "ConPF": 1478,
+            "ConPA": 1483,
+            "ConPoss": 1277.65,
+            "ConOE": 1.1568113333072438,
+            "ConDE": 1.160724768128987,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 4.531676518582039,
+            "WAB Rk": 22,
+            "Fun Rk": 22,
+            "adjt": 69.74869264389596
+          },
+          "kenpom": {
+            "rank": 23,
+            "team": "BYU",
+            "conf": "B12",
+            "record": "23-11",
+            "adj_em": 23.28,
+            "adj_o": 125.5,
+            "adj_o_rank": 10,
+            "adj_d": 102.3,
+            "adj_d_rank": 56,
+            "adj_t": 70,
+            "adj_t_rank": 47,
+            "luck": -0.017,
+            "luck_rank": 232,
+            "sos_adj_em": 14.26,
+            "sos_adj_em_rank": 14,
+            "sos_opp_o": 116.3,
+            "sos_opp_o_rank": 33,
+            "sos_opp_d": 102,
+            "sos_opp_d_rank": 3,
+            "ncsos_adj_em": 4.87,
+            "ncsos_adj_em_rank": 73
+          }
+        },
+        {
+          "teamId": "texas",
+          "teamName": "Texas",
+          "torvik": {
+            "rank": 45,
+            "team": "Texas",
+            "conf": "SEC",
+            "record": "18-14",
+            "adjoe": 124.07462361953156,
+            "oe Rank": 21,
+            "adjde": 106.33467387240466,
+            "de Rank": 125,
+            "barthag": 0.8549984619424512,
+            "rank.1": 45,
+            "proj. W": 18,
+            "Proj. L": 14,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.6720865157151653,
+            "ncsos": 0.412277676911223,
+            "consos": 0.8531351325806701,
+            "Proj. SOS": 0.6720865157151653,
+            "Proj. Noncon SOS": 0.412277676911223,
+            "Proj. Con SOS": 0.8531351325806701,
+            "elite SOS": 0.6341347383139722,
+            "elite noncon SOS": 0.7694719637451559,
+            "Opp OE": 116.19011000954512,
+            "Opp DE": 105.0861491332151,
+            "Opp Proj. OE": 116.19011000954512,
+            "Opp Proj DE": 105.0861491332151,
+            "Con Adj OE": 126.40616016051996,
+            "Con Adj DE": 106.73610405157712,
+            "Qual O": 125.2919635105071,
+            "Qual D": 105.59265782448207,
+            "Qual Barthag": 0.8773063483327939,
+            "Qual Games": 18,
+            "FUN": -0.0072864331866986,
+            "ConPF": 1472,
+            "ConPA": 1455,
+            "ConPoss": 1231.5875,
+            "ConOE": 1.1952053751763478,
+            "ConDE": 1.1814020522293385,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": -0.2348223832620721,
+            "WAB Rk": 48,
+            "Fun Rk": 193,
+            "adjt": 67.0608431124123
+          },
+          "kenpom": {
+            "rank": 37,
+            "team": "Texas",
+            "conf": "SEC",
+            "record": "18-14",
+            "adj_em": 19.06,
+            "adj_o": 125,
+            "adj_o_rank": 13,
+            "adj_d": 106,
+            "adj_d_rank": 111,
+            "adj_t": 66.9,
+            "adj_t_rank": 206,
+            "luck": -0.083,
+            "luck_rank": 345,
+            "sos_adj_em": 13.67,
+            "sos_adj_em_rank": 20,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 17,
+            "sos_opp_d": 103.7,
+            "sos_opp_d_rank": 31,
+            "ncsos_adj_em": -6.34,
+            "ncsos_adj_em_rank": 320
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-4jhyh4of",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU vs Texas March 2026 injury report availability key players",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:59:18.500Z",
+      "completedAt": "2026-03-17T19:59:19.368Z",
+      "summary": "Returned 5 search results for \"BYU vs Texas March 2026 injury report availability key players\".",
+      "result": [
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report ."
+        },
+        {
+          "title": "Texas Tech vs BYU Men&#x27;s Basketball Injury Report: Latest on JT Toppin ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Ftexas%2Dtech%2Dvs%2Dbyu%2Dinjury%2Dreport%2F&rut=15f1acb8acbccfa15d9606be93f624513c3a169b2fcf855330e9660274eed95f",
+          "snippet": "In Article Audio Player Texas Tech vs BYU Men&#x27;s Basketball Injury Report Texas Red Raiders JT Toppin: Out LaTrell Hoover: Out BYU Cougars Brody Kozlowski: Out KJ Perry: Out Nate Pickens: Out for the season Richie Saunders: Out for the season Dawson Baker: Out for the season Xavion Staton: Out Abdullah Ahmed: Probable Red Raiders junior forward JT Toppin will be out for the rest of the season ..."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "BYU&#x27;s Initial Injury Report for TCU is Relatively Clean - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fbyus%2Dinitial%2Dinjury%2Dreport%2Dfor%2Dtcu%2Dis%2Drelatively%2Dclean%2Far%2DAA1Ql6bl&rut=18ff218ffbf290d9cd657b7dbd629c1b348defd057c318b73988f2e6b6bf16ec",
+          "snippet": "On Wednesday night, BYU released the initial injury report for the TCU game. Fortunately for the Cougars, they came out of the Texas Tech game relatively healthy and should have most of their key ..."
+        },
+        {
+          "title": "Texas Tech injury report vs BYU: Who is ready to play vs. the No. 11 ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwreckemred.com%2Ftexas%2Dtech%2Dred%2Draiders%2Dmens%2Dbasketball%2Dinjury%2Dreport%2Dbyu%2Dcougars%2Dtop%2D15%2Dmatchup%2D011726&rut=7fb0a8dcf1159c58cc31f19b166888221bc1c5e6943506da646c934d39dae4e3",
+          "snippet": "Texas Tech vs BYU availability update: Who won&#x27;t play in the top 15 matchup between the Red Raiders and Cougars? Here&#x27;s the BYU players who are listed as out this weekend: No. 4 Brody Koslowski"
+        }
+      ]
+    },
+    {
+      "id": "tool-c317qogz",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "BYU Texas injury availability March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:59:19.368Z",
+      "completedAt": "2026-03-17T19:59:19.427Z",
+      "summary": "Returned 0 search results for \"BYU Texas injury availability March 2026 NCAA tournament\".",
+      "result": []
+    },
+    {
+      "id": "tool-n30zh4lh",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T19:59:20.941Z",
+      "completedAt": "2026-03-17T19:59:21.377Z",
+      "summary": "Fetched https://www.rotowire.com/cbasketball/injury-report.php and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "text": "2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injury Report - Latest NCAAB Injuries Up-to-date college basketball injuries By Conference ALL AAC ACC Big Ten Big 12 Big East MVC Mtn West Pac-12 SEC WCC By Position ALL G F C Daily Site All Teams FanDuel DraftKings Loading College Basketball Injury Report Unlock the Full Injury Report Today Subscribe Now RotoWire Facebook RotoWire Instagram RotoWire Twitter RotoWire YouTube RotoWire BlueS"
+      }
+    },
+    {
+      "id": "tool-y1izshty",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T19:59:21.377Z",
+      "completedAt": "2026-03-17T19:59:21.785Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      }
+    },
+    {
+      "id": "tool-7l1rlnof",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Cougars Richie Saunders out for season Dawson Baker out for season March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:59:22.945Z",
+      "completedAt": "2026-03-17T19:59:23.735Z",
+      "summary": "Returned 5 search results for \"BYU Cougars Richie Saunders out for season Dawson Baker out for season March 2026\".",
+      "result": [
+        {
+          "title": "Who will step up in Richie Saunders&#x27; absence? - Yahoo Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fstep%2Drichie%2Dsaunders%2Dabsence%2D173000842.html&rut=1895cce70bcdf8843408f40f4849fbce8734c27a4e2fac75ee592c40d8747b0b",
+          "snippet": "Meanwhile, BYU may be one of the only teams in the country that has experienced six of 17 rostered players out for the season in Saunders , Dawson Baker , Nate Pickens, KJ Perry, Brody Kozlowski and ..."
+        },
+        {
+          "title": "Is No. 22 BYU prepared for life without Richie Saunders?",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.deseret.com%2Fsports%2F2026%2F02%2F15%2Fbyu%2Dbasketball%2Drichie%2Dsaunders%2Dinjury%2Dresponse%2F&rut=4dec64d07160b30d5cd0d3858239871fd36c8a9df0fd335e765dcdd7737dded7",
+          "snippet": "Young is right — BYU&#x27;s bench contributions have been limited this season , with the Cougars ranking No. 351 nationally in team bench scoring out of 365 teams. BYU should have been much deeper — similar to how last year&#x27;s Cougars operated — but season -ending injuries to Dawson Baker , Nate Pickens and Brody Kozlowski prevented that."
+        },
+        {
+          "title": "What Happened to Richie Saunders? Breaking Down Why the BYU Star Is ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Frichie%2Dsaunders%2Dbyu%2Dsenior%2Dnight%2Dtorn%2Dacl%2F&rut=51524b1d1894427b80743b715e33fc9ba0a0e378ce1d86963103bc6e18ee938e",
+          "snippet": "Why Richie Saunders Won&#x27;t Feature in the NCAA Tournament Saunders will miss the 2026 NCAA Tournament after suffering a season -ending torn ACL. The 2025 Big 12 Most Improved Player of the Year will instead be recognized during BYU&#x27;s regular- season finale against Texas Tech on Saturday."
+        },
+        {
+          "title": "BYU loses Richie Saunders for season after torn ACL: What this means ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7048696%2F2026%2F02%2F15%2Frichie%2Dsaunders%2Dinjury%2Dbyu%2F&rut=72d0d1ad22427d4c4979a719783aa58b4c20b9ae43ffa912de020ff6622dc249",
+          "snippet": "BYU lost veteran Dawson Baker six games into the season , another prolific shooter and a returner from last season . The Cougars were 16-1 at one point and in the top 10 of the rankings, but have ..."
+        },
+        {
+          "title": "Will Richie Saunders Come Back? All We Know About BYU Star&#x27;s Status ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fwill%2Drichie%2Dsaunders%2Dcome%2Dback%2F&rut=407e01fa8a77d5890741b97b01233ce3ab3a40e4d2e39c269824d32200a66429",
+          "snippet": "This means that the Cougars will need Richie Saunders back as soon as possible, but will he, though? As it turns out , he tore his ACL during that 90-86 win over the Buffaloes, and this would require surgery. ACL tears often take months to heal, even with surgery, thus effectively ending his season entirely."
+        }
+      ]
+    },
+    {
+      "id": "tool-n1tafuml",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.profootballnetwork.com/mens-cbb/richie-saunders-byu-senior-night-torn-acl/",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T19:59:25.097Z",
+      "completedAt": "2026-03-17T19:59:26.751Z",
+      "summary": "Fetched https://www.profootballnetwork.com/mens-cbb/richie-saunders-byu-senior-night-torn-acl/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.profootballnetwork.com/mens-cbb/richie-saunders-byu-senior-night-torn-acl/",
+        "text": "What Happened to Richie Saunders? Breaking Down Why the BYU Star Is Sidelined for the NCAA Tournament Facebook Flipboard Instagram Mail RSS TikTok Twitter Youtube Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Where The Game Never Ends PFSN Where The Game Never Ends Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Search Get Started in PFSN's Free CBB Bracket Predictor! Set Bracket Now! Jan 24, 2026; Provo, Utah, USA; BYU Cougars guard Richie Saunders (15) looks on during the first half against the Utah Utes at Marriott Center. Mandatory Credit: Aaron Baker-Imagn Images Men&#x27;s CBB What Happened to Richie Saunders? Breaking Down Why the BYU Star Is Sidelined for the NCAA Tournament As Richie Saunders is sidelined for the NCAA tournament, let's know the real reasons behind the BYU Cougars star's absence in the game. March 7, 2026 | 8:16 AM EST Richie Saunders excelled last season under head coach Kevin Young, earning first-team All-Big 12 recognition. His strong form carried into this season as well, when he played, helping create what many consider one of the best big-three combinations in the country alongside Dybantsa and Rob Wright. Fill out your bracket and predict every game of the NCAA Tournament with PFSN&#8217;s FREE College Basketball Bracket Predictor ! Why Richie Saunders Won&#8217;t Feature in the NCAA Tournament Saunders will miss the 2026 NCAA Tournament after suffering a season-ending torn ACL. The 2025 Big 12 Most Improved Player of the Year will instead be recognized during BYU&#8217;s regular-season finale against Texas Tech on Saturday. Saunders sustained the injury in the opening minute of BYU&#8217;s 90-86 overtime win over "
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-west-5-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T19:59:16.243Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-west-5\nCurrent game label: West 6/11\nRound: Round of 64\nResolved teams: BYU (byu) vs Texas (texas)\nPrior committed picks: 16"
+    },
+    {
+      "id": "r64-west-5-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T19:59:16.243Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-west-5\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 6/11\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"byu\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"ff-west-11\"\n      }\n    },\n    \"slotAName\": \"BYU\",\n    \"slotBName\": \"Texas\",\n    \"slotATeamId\": \"byu\",\n    \"slotBTeamId\": \"texas\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.61,\n        \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.84,\n        \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.97,\n      \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n    },\n    {\n      \"gameId\": \"r64-east-2\",\n      \"winnerId\": \"tcu\",\n      \"confidence\": 0.6,\n      \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n    },\n    {\n      \"gameId\": \"r64-east-3\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 0.74,\n      \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n    },\n    {\n      \"gameId\": \"r64-east-4\",\n      \"winnerId\": \"kansas\",\n      \"confidence\": 0.86,\n      \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n    },\n    {\n      \"gameId\": \"r64-east-5\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.73,\n      \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n    },\n    {\n      \"gameId\": \"r64-east-6\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n    },\n    {\n      \"gameId\": \"r64-east-7\",\n      \"winnerId\": \"ucla\",\n      \"confidence\": 0.67,\n      \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n    },\n    {\n      \"gameId\": \"r64-east-8\",\n      \"winnerId\": \"uconn\",\n      \"confidence\": 0.93,\n      \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n    },\n    {\n      \"gameId\": \"r64-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.98,\n      \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n    },\n    {\n      \"gameId\": \"r64-west-2\",\n      \"winnerId\": \"villanova\",\n      \"confidence\": 0.61,\n      \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n    },\n    {\n      \"gameId\": \"r64-west-3\",\n      \"winnerId\": \"wisconsin\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n    },\n    {\n      \"gameId\": \"r64-west-4\",\n      \"winnerId\": \"arkansas\",\n      \"confidence\": 0.84,\n      \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-west-5-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:59:18.492Z",
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:59:18.492Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "byu",
+          "texas"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:59:18.500Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "byu",
+          "teamName": "BYU",
+          "torvik": {
+            "rank": 33,
+            "team": "BYU",
+            "conf": "B12",
+            "record": "23-11",
+            "adjoe": 124.78766507254886,
+            "oe Rank": 16,
+            "adjde": 104.28867912262888,
+            "de Rank": 88,
+            "barthag": 0.8873230440607387,
+            "rank.1": 33,
+            "proj. W": 23,
+            "Proj. L": 11,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.748834367916737,
+            "ncsos": 0.6052210827564047,
+            "consos": 0.8416495413693037,
+            "Proj. SOS": 0.748834367916737,
+            "Proj. Noncon SOS": 0.6052210827564047,
+            "Proj. Con SOS": 0.8416495413693037,
+            "elite SOS": 0.6159025438017878,
+            "elite noncon SOS": 0.737287914178802,
+            "Opp OE": 115.9634283595156,
+            "Opp DE": 101.95512787467284,
+            "Opp Proj. OE": 115.9634283595156,
+            "Opp Proj DE": 101.95512787467284,
+            "Con Adj OE": 125.05317918466297,
+            "Con Adj DE": 107.72404912671124,
+            "Qual O": 125.80517276153634,
+            "Qual D": 102.93570248854076,
+            "Qual Barthag": 0.909475213078614,
+            "Qual Games": 16,
+            "FUN": 0.0833908482027433,
+            "ConPF": 1478,
+            "ConPA": 1483,
+            "ConPoss": 1277.65,
+            "ConOE": 1.1568113333072438,
+            "ConDE": 1.160724768128987,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 4.531676518582039,
+            "WAB Rk": 22,
+            "Fun Rk": 22,
+            "adjt": 69.74869264389596
+          },
+          "kenpom": {
+            "rank": 23,
+            "team": "BYU",
+            "conf": "B12",
+            "record": "23-11",
+            "adj_em": 23.28,
+            "adj_o": 125.5,
+            "adj_o_rank": 10,
+            "adj_d": 102.3,
+            "adj_d_rank": 56,
+            "adj_t": 70,
+            "adj_t_rank": 47,
+            "luck": -0.017,
+            "luck_rank": 232,
+            "sos_adj_em": 14.26,
+            "sos_adj_em_rank": 14,
+            "sos_opp_o": 116.3,
+            "sos_opp_o_rank": 33,
+            "sos_opp_d": 102,
+            "sos_opp_d_rank": 3,
+            "ncsos_adj_em": 4.87,
+            "ncsos_adj_em_rank": 73
+          }
+        },
+        {
+          "teamId": "texas",
+          "teamName": "Texas",
+          "torvik": {
+            "rank": 45,
+            "team": "Texas",
+            "conf": "SEC",
+            "record": "18-14",
+            "adjoe": 124.07462361953156,
+            "oe Rank": 21,
+            "adjde": 106.33467387240466,
+            "de Rank": 125,
+            "barthag": 0.8549984619424512,
+            "rank.1": 45,
+            "proj. W": 18,
+            "Proj. L": 14,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.6720865157151653,
+            "ncsos": 0.412277676911223,
+            "consos": 0.8531351325806701,
+            "Proj. SOS": 0.6720865157151653,
+            "Proj. Noncon SOS": 0.412277676911223,
+            "Proj. Con SOS": 0.8531351325806701,
+            "elite SOS": 0.6341347383139722,
+            "elite noncon SOS": 0.7694719637451559,
+            "Opp OE": 116.19011000954512,
+            "Opp DE": 105.0861491332151,
+            "Opp Proj. OE": 116.19011000954512,
+            "Opp Proj DE": 105.0861491332151,
+            "Con Adj OE": 126.40616016051996,
+            "Con Adj DE": 106.73610405157712,
+            "Qual O": 125.2919635105071,
+            "Qual D": 105.59265782448207,
+            "Qual Barthag": 0.8773063483327939,
+            "Qual Games": 18,
+            "FUN": -0.0072864331866986,
+            "ConPF": 1472,
+            "ConPA": 1455,
+            "ConPoss": 1231.5875,
+            "ConOE": 1.1952053751763478,
+            "ConDE": 1.1814020522293385,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": -0.2348223832620721,
+            "WAB Rk": 48,
+            "Fun Rk": 193,
+            "adjt": 67.0608431124123
+          },
+          "kenpom": {
+            "rank": 37,
+            "team": "Texas",
+            "conf": "SEC",
+            "record": "18-14",
+            "adj_em": 19.06,
+            "adj_o": 125,
+            "adj_o_rank": 13,
+            "adj_d": 106,
+            "adj_d_rank": 111,
+            "adj_t": 66.9,
+            "adj_t_rank": 206,
+            "luck": -0.083,
+            "luck_rank": 345,
+            "sos_adj_em": 13.67,
+            "sos_adj_em_rank": 20,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 17,
+            "sos_opp_d": 103.7,
+            "sos_opp_d_rank": 31,
+            "ncsos_adj_em": -6.34,
+            "ncsos_adj_em_rank": 320
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"byu\",\n      \"teamName\": \"BYU\",\n      \"torvik\": {\n        \"rank\": 33,\n        \"team\": \"BYU\",\n        \"conf\": \"B12\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.78766507254886,\n        \"oe Rank\": 16,\n        \"adjde\": 104.28867912262888,\n        \"de Rank\": 88\n      },\n      \"kenpom\": {\n        \"rank\": 23,\n        \"team\": \"BYU\",\n        \"conf\": \"B12\",\n        \"record\": \"23-11\",\n        \"adj_em\": 23.28,\n        \"adj_o\": 125.5,\n        \"adj_o_rank\": 10,\n        \"adj_d\": 102.3\n      }\n    },\n    {\n      \"teamId\": \"texas\",\n      \"teamName\": \"Texas\",\n      \"torvik\": {\n        \"rank\": 45,\n        \"team\": \"Texas\",\n        \"conf\": \"SEC\",\n        \"record\": \"18-14\",\n        \"adjoe\": 124.07462361953156,\n        \"oe Rank\": 21,\n        \"adjde\": 106.33467387240466,\n        \"de Rank\": 125\n      },\n      \"kenpom\": {\n        \"rank\": 37,\n        \"team\": \"Texas\",\n        \"conf\": \"SEC\",\n        \"record\": \"18-14\",\n        \"adj_em\": 19.06,\n        \"adj_o\": 125,\n        \"adj_o_rank\": 13,\n        \"adj_d\": 106\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-5-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:59:18.500Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU vs Texas March 2026 injury report availability key players",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:59:19.368Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report ."
+        },
+        {
+          "title": "Texas Tech vs BYU Men&#x27;s Basketball Injury Report: Latest on JT Toppin ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Ftexas%2Dtech%2Dvs%2Dbyu%2Dinjury%2Dreport%2F&rut=15f1acb8acbccfa15d9606be93f624513c3a169b2fcf855330e9660274eed95f",
+          "snippet": "In Article Audio Player Texas Tech vs BYU Men&#x27;s Basketball Injury Report Texas Red Raiders JT Toppin: Out LaTrell Hoover: Out BYU Cougars Brody Kozlowski: Out KJ Perry: Out Nate Pickens: Out for the season Richie Saunders: Out for the season Dawson Baker: Out for the season Xavion Staton: Out Abdullah Ahmed: Probable Red Raiders junior forward JT Toppin will be out for the rest of the season ..."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "BYU&#x27;s Initial Injury Report for TCU is Relatively Clean - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fbyus%2Dinitial%2Dinjury%2Dreport%2Dfor%2Dtcu%2Dis%2Drelatively%2Dclean%2Far%2DAA1Ql6bl&rut=18ff218ffbf290d9cd657b7dbd629c1b348defd057c318b73988f2e6b6bf16ec",
+          "snippet": "On Wednesday night, BYU released the initial injury report for the TCU game. Fortunately for the Cougars, they came out of the Texas Tech game relatively healthy and should have most of their key ..."
+        },
+        {
+          "title": "Texas Tech injury report vs BYU: Who is ready to play vs. the No. 11 ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwreckemred.com%2Ftexas%2Dtech%2Dred%2Draiders%2Dmens%2Dbasketball%2Dinjury%2Dreport%2Dbyu%2Dcougars%2Dtop%2D15%2Dmatchup%2D011726&rut=7fb0a8dcf1159c58cc31f19b166888221bc1c5e6943506da646c934d39dae4e3",
+          "snippet": "Texas Tech vs BYU availability update: Who won&#x27;t play in the top 15 matchup between the Red Raiders and Cougars? Here&#x27;s the BYU players who are listed as out this weekend: No. 4 Brody Koslowski"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report .\"\n    },\n    {\n      \"title\": \"Texas Tech vs BYU Men&#x27;s Basketball Injury Report: Latest on JT Toppin ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Ftexas%2Dtech%2Dvs%2Dbyu%2Dinjury%2Dreport%2F&rut=15f1acb8acbccfa15d9606be93f624513c3a169b2fcf855330e9660274eed95f\",\n      \"snippet\": \"In Article Audio Player Texas Tech vs BYU Men&#x27;s Basketball Injury Report Texas Red Raiders JT Toppin: Out LaTrell Hoover: Out BYU Cougars Brody Kozlowski: Out KJ Perry: Out Nate Pickens: Out for the season Richie Saunders: Out for the season Dawson Baker: Out for the season Xavion Staton: Out Abdullah Ahmed: Probable Red Raiders junior forward JT Toppin will be out for the rest of the season ...\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA.\"\n    },\n    {\n      \"title\": \"BYU&#x27;s Initial Injury Report for TCU is Relatively Clean - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fbyus%2Dinitial%2Dinjury%2Dreport%2Dfor%2Dtcu%2Dis%2Drelatively%2Dclean%2Far%2DAA1Ql6bl&rut=18ff218ffbf290d9cd657b7dbd629c1b348defd057c318b73988f2e6b6bf16ec\",\n      \"snippet\": \"On Wednesday night, BYU released the initial injury report for the TCU game. Fortunately for the Cougars, they came out of the Texas Tech game relatively healthy and should have most of their key ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-5-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:59:19.368Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "BYU Texas injury availability March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:59:19.427Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-west-5-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:59:20.941Z",
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:59:20.941Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:59:21.377Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "text": "2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injury Report - Latest NCAAB Injuries Up-to-date college basketball injuries By Conference ALL AAC ACC Big Ten Big 12 Big East MVC Mtn West Pac-12 SEC WCC By Position ALL G F C Daily Site All Teams FanDuel DraftKings Loading College Basketball Injury Report Unlock the Full Injury Report Today Subscribe Now RotoWire Facebook RotoWire Instagram RotoWire Twitter RotoWire YouTube RotoWire BlueS"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.rotowire.com/cbasketball/injury-report.php\",\n    \"text\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-5-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:59:21.377Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:59:21.785Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/injuries\",\n    \"text\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker R... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-5-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:59:22.945Z",
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:59:22.945Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Cougars Richie Saunders out for season Dawson Baker out for season March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:59:23.735Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Who will step up in Richie Saunders&#x27; absence? - Yahoo Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fstep%2Drichie%2Dsaunders%2Dabsence%2D173000842.html&rut=1895cce70bcdf8843408f40f4849fbce8734c27a4e2fac75ee592c40d8747b0b",
+          "snippet": "Meanwhile, BYU may be one of the only teams in the country that has experienced six of 17 rostered players out for the season in Saunders , Dawson Baker , Nate Pickens, KJ Perry, Brody Kozlowski and ..."
+        },
+        {
+          "title": "Is No. 22 BYU prepared for life without Richie Saunders?",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.deseret.com%2Fsports%2F2026%2F02%2F15%2Fbyu%2Dbasketball%2Drichie%2Dsaunders%2Dinjury%2Dresponse%2F&rut=4dec64d07160b30d5cd0d3858239871fd36c8a9df0fd335e765dcdd7737dded7",
+          "snippet": "Young is right — BYU&#x27;s bench contributions have been limited this season , with the Cougars ranking No. 351 nationally in team bench scoring out of 365 teams. BYU should have been much deeper — similar to how last year&#x27;s Cougars operated — but season -ending injuries to Dawson Baker , Nate Pickens and Brody Kozlowski prevented that."
+        },
+        {
+          "title": "What Happened to Richie Saunders? Breaking Down Why the BYU Star Is ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Frichie%2Dsaunders%2Dbyu%2Dsenior%2Dnight%2Dtorn%2Dacl%2F&rut=51524b1d1894427b80743b715e33fc9ba0a0e378ce1d86963103bc6e18ee938e",
+          "snippet": "Why Richie Saunders Won&#x27;t Feature in the NCAA Tournament Saunders will miss the 2026 NCAA Tournament after suffering a season -ending torn ACL. The 2025 Big 12 Most Improved Player of the Year will instead be recognized during BYU&#x27;s regular- season finale against Texas Tech on Saturday."
+        },
+        {
+          "title": "BYU loses Richie Saunders for season after torn ACL: What this means ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7048696%2F2026%2F02%2F15%2Frichie%2Dsaunders%2Dinjury%2Dbyu%2F&rut=72d0d1ad22427d4c4979a719783aa58b4c20b9ae43ffa912de020ff6622dc249",
+          "snippet": "BYU lost veteran Dawson Baker six games into the season , another prolific shooter and a returner from last season . The Cougars were 16-1 at one point and in the top 10 of the rankings, but have ..."
+        },
+        {
+          "title": "Will Richie Saunders Come Back? All We Know About BYU Star&#x27;s Status ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fwill%2Drichie%2Dsaunders%2Dcome%2Dback%2F&rut=407e01fa8a77d5890741b97b01233ce3ab3a40e4d2e39c269824d32200a66429",
+          "snippet": "This means that the Cougars will need Richie Saunders back as soon as possible, but will he, though? As it turns out , he tore his ACL during that 90-86 win over the Buffaloes, and this would require surgery. ACL tears often take months to heal, even with surgery, thus effectively ending his season entirely."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Who will step up in Richie Saunders&#x27; absence? - Yahoo Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fstep%2Drichie%2Dsaunders%2Dabsence%2D173000842.html&rut=1895cce70bcdf8843408f40f4849fbce8734c27a4e2fac75ee592c40d8747b0b\",\n      \"snippet\": \"Meanwhile, BYU may be one of the only teams in the country that has experienced six of 17 rostered players out for the season in Saunders , Dawson Baker , Nate Pickens, KJ Perry, Brody Kozlowski and ...\"\n    },\n    {\n      \"title\": \"Is No. 22 BYU prepared for life without Richie Saunders?\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.deseret.com%2Fsports%2F2026%2F02%2F15%2Fbyu%2Dbasketball%2Drichie%2Dsaunders%2Dinjury%2Dresponse%2F&rut=4dec64d07160b30d5cd0d3858239871fd36c8a9df0fd335e765dcdd7737dded7\",\n      \"snippet\": \"Young is right — BYU&#x27;s bench contributions have been limited this season , with the Cougars ranking No. 351 nationally in team bench scoring out of 365 teams. BYU should have been much deeper — similar to how last year&#x27;s Cougars operated — but season -ending injuries to Dawson Baker , Nate Pickens and Brody Kozlowski prevented that.\"\n    },\n    {\n      \"title\": \"What Happened to Richie Saunders? Breaking Down Why the BYU Star Is ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Frichie%2Dsaunders%2Dbyu%2Dsenior%2Dnight%2Dtorn%2Dacl%2F&rut=51524b1d1894427b80743b715e33fc9ba0a0e378ce1d86963103bc6e18ee938e\",\n      \"snippet\": \"Why Richie Saunders Won&#x27;t Feature in the NCAA Tournament Saunders will miss the 2026 NCAA Tournament after suffering a season -ending torn ACL. The 2025 Big 12 Most Improved Player of the Year will instead be recognized during BYU&#x27;s regular- season finale against Texas Tech on Saturday.\"\n    },\n    {\n      \"title\": \"BYU loses Richie Saunders for season after torn ACL: What this means ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7048696%2F2026%2F02%2F15%2Frichie%2Dsaunders%2Dinjury%2Dbyu%2F&rut=72d0d1ad22427d4c4979a719783aa58b4c20b9ae43ffa912de020ff6622dc249\",\n      \"snippet\": \"BYU lost veteran Dawson Baker six games into the season , another prolific shooter and a returner from last season . The Cougars were 16-1 at one point and in the top 10 of the rankings, but have ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-5-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:59:25.097Z",
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:59:25.097Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.profootballnetwork.com/mens-cbb/richie-saunders-byu-senior-night-torn-acl/",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-west-5-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:59:26.751Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.profootballnetwork.com/mens-cbb/richie-saunders-byu-senior-night-torn-acl/",
+        "text": "What Happened to Richie Saunders? Breaking Down Why the BYU Star Is Sidelined for the NCAA Tournament Facebook Flipboard Instagram Mail RSS TikTok Twitter Youtube Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Where The Game Never Ends PFSN Where The Game Never Ends Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Search Get Started in PFSN's Free CBB Bracket Predictor! Set Bracket Now! Jan 24, 2026; Provo, Utah, USA; BYU Cougars guard Richie Saunders (15) looks on during the first half against the Utah Utes at Marriott Center. Mandatory Credit: Aaron Baker-Imagn Images Men&#x27;s CBB What Happened to Richie Saunders? Breaking Down Why the BYU Star Is Sidelined for the NCAA Tournament As Richie Saunders is sidelined for the NCAA tournament, let's know the real reasons behind the BYU Cougars star's absence in the game. March 7, 2026 | 8:16 AM EST Richie Saunders excelled last season under head coach Kevin Young, earning first-team All-Big 12 recognition. His strong form carried into this season as well, when he played, helping create what many consider one of the best big-three combinations in the country alongside Dybantsa and Rob Wright. Fill out your bracket and predict every game of the NCAA Tournament with PFSN&#8217;s FREE College Basketball Bracket Predictor ! Why Richie Saunders Won&#8217;t Feature in the NCAA Tournament Saunders will miss the 2026 NCAA Tournament after suffering a season-ending torn ACL. The 2025 Big 12 Most Improved Player of the Year will instead be recognized during BYU&#8217;s regular-season finale against Texas Tech on Saturday. Saunders sustained the injury in the opening minute of BYU&#8217;s 90-86 overtime win over "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.profootballnetwork.com/mens-cbb/richie-saunders-byu-senior-night-torn-acl/\",\n    \"text\": \"What Happened to Richie Saunders? Breaking Down Why the BYU Star Is Sidelined for the NCAA Tournament Facebook Flipboard Instagram Mail RSS TikTok Twitter Youtube Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Where The Game Never Ends PFSN Where The Game Never Ends Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-5-assistant-final-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:59:36.472Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-west-5\",\n    \"winnerId\": \"byu\",\n    \"confidence\": 0.64,\n    \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas absolutely has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"r64-west-5-analysis\",\n    \"title\": \"West 6/11: BYU vs Texas\",\n    \"summary\": \"I picked BYU because the Cougars rate better in both major efficiency systems and have the stronger defensive baseline, while Texas’ path relies more on offensive variance in a near-even scoring matchup.\",\n    \"evidence\": {\n      \"ratings\": {\n        \"BYU\": {\n          \"kenpomRank\": 23,\n          \"kenpomAdjO\": 125.5,\n          \"kenpomAdjD\": 102.3,\n          \"torvikRank\": 33,\n          \"torvikAdjO_rank\": 16,\n          \"torvikAdjD_rank\": 88\n        },\n        \"Texas\": {\n          \"kenpomRank\": 37,\n          \"kenpomAdjO\": 125.0,\n          \"kenpomAdjD\": 106.0,\n          \"torvikRank\": 45,\n          \"torvikAdjO_rank\": 21,\n          \"torvikAdjD_rank\": 125\n        }\n      },\n      \"availabilityNotes\": {\n        \"BYU\": \"Web reporting indicates significant season-ending injuries including Richie Saunders (torn ACL) and Dawson Baker, which is a real downside for depth/shot-making.\",\n        \"Texas\": \"No specific, matchup-flipping injury/availability item surfaced in the quick searches used here.\"\n      },\n      \"matchupLogic\": \"With both teams projecting as elite offensively, BYU’s better defensive efficiency and higher overall adjusted margin provide a more reliable path to winning if shooting regresses toward average.\"\n    }\n  }\n}"
+    },
+    {
+      "id": "r64-west-5-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T19:59:41.544Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-west-5\",\"winnerId\":\"byu\",\"confidence\":0.64,\"rationale\":\"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"},\"reasoningStep\":{\"id\":\"r64-west-5-analysis\",\"title\":\"West 6/11: BYU vs Texas\",\"summary\":\"BYU is the pick because it rates better in both major efficiency systems and has the stronger defensive baseline, while Texas’ path relies more on offensive variance in a near-even scoring matchup.\",\"evidence\":[\"KenPom: BYU #23 (AdjO 125.5, AdjD 102.3) vs Texas #37 (AdjO 125.0, AdjD 106.0).\",\"Torvik: BYU #33 (AdjO rank 16, AdjD rank 88) vs Texas #45 (AdjO rank 21, AdjD rank 125).\",\"Injury/availability context from web reporting: BYU has notable season-ending injuries including Richie Saunders (torn ACL) and Dawson Baker, which reduces depth and slightly increases upset risk.\",\"Matchup logic: with similar offensive ceilings, BYU’s better defensive efficiency and higher overall adjusted margin provide a more reliable path to winning if shooting variance normalizes.\"]}}"
+    }
+  ]
+}

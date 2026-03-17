@@ -1,0 +1,685 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-east-7",
+  "generatedAt": "2026-03-17T19:57:12.943Z",
+  "pick": {
+    "gameId": "r64-east-7",
+    "winnerId": "ucla",
+    "confidence": 0.67,
+    "rationale": "UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form."
+  },
+  "reasoningStep": {
+    "id": "demo-2026-bracket:r64-east-7:pick",
+    "title": "East 7/10 — UCLA over UCF",
+    "summary": "Back UCLA’s higher two-way efficiency profile, with Bilodeau expected to be available, while acknowledging UCF’s offensive-variance upset path.",
+    "evidence": [
+      "Ratings: UCLA KenPom #27 (AdjEM +21.64; AdjO 123.8 #22; AdjD 102.1) vs UCF KenPom #54 (AdjEM +15.05; AdjO 120.5 #40; AdjD 105.5).",
+      "Torvik: UCLA #24 (AdjO rank 17; AdjD rank 49) vs UCF #58 (AdjO rank 39; AdjD rank 114).",
+      "Availability: ESPN reported UCLA leading scorer Tyler Bilodeau has a mild knee strain but is expected to be available for the NCAA tournament."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-6hpqh74i",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "ucla",
+          "ucf"
+        ]
+      },
+      "startedAt": "2026-03-17T19:56:52.934Z",
+      "completedAt": "2026-03-17T19:56:52.940Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "ucla",
+          "teamName": "UCLA",
+          "torvik": {
+            "rank": 24,
+            "team": "UCLA",
+            "conf": "B10",
+            "record": "23-11",
+            "adjoe": 124.49524577151492,
+            "oe Rank": 17,
+            "adjde": 101.73772797460148,
+            "de Rank": 49,
+            "barthag": 0.9106418470962409,
+            "rank.1": 24,
+            "proj. W": 23,
+            "Proj. L": 11,
+            "Pro Con W": 13,
+            "Pro Con L": 7,
+            "Con Rec.": "13-7",
+            "sos": 0.7136274946784696,
+            "ncsos": 0.4861583808845608,
+            "consos": 0.8189877975933623,
+            "Proj. SOS": 0.7136274946784696,
+            "Proj. Noncon SOS": 0.4861583808845608,
+            "Proj. Con SOS": 0.8189877975933623,
+            "elite SOS": 0.6374601353204021,
+            "elite noncon SOS": 0.8026907471475476,
+            "Opp OE": 116.28354697121708,
+            "Opp DE": 103.51479281044573,
+            "Opp Proj. OE": 116.28354697121708,
+            "Opp Proj DE": 103.51479281044573,
+            "Con Adj OE": 124.99041984498136,
+            "Con Adj DE": 102.56497367571004,
+            "Qual O": 126.79653021878352,
+            "Qual D": 105.2530362812684,
+            "Qual Barthag": 0.8948706894697158,
+            "Qual Games": 16,
+            "FUN": 0.0201417511235171,
+            "ConPF": 1511,
+            "ConPA": 1445,
+            "ConPoss": 1295.3625000000002,
+            "ConOE": 1.166468845593415,
+            "ConDE": 1.115517856970539,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.65,
+            "WAB": 3.555697316105933,
+            "WAB Rk": 28,
+            "Fun Rk": 126,
+            "adjt": 64.65847946120198
+          },
+          "kenpom": {
+            "rank": 27,
+            "team": "UCLA",
+            "conf": "B10",
+            "record": "23-11",
+            "adj_em": 21.64,
+            "adj_o": 123.8,
+            "adj_o_rank": 22,
+            "adj_d": 102.1,
+            "adj_d_rank": 53,
+            "adj_t": 64.7,
+            "adj_t_rank": 318,
+            "luck": 0.017,
+            "luck_rank": 136,
+            "sos_adj_em": 12.14,
+            "sos_adj_em_rank": 33,
+            "sos_opp_o": 116.1,
+            "sos_opp_o_rank": 35,
+            "sos_opp_d": 103.9,
+            "sos_opp_d_rank": 37,
+            "ncsos_adj_em": -2.22,
+            "ncsos_adj_em_rank": 248
+          }
+        },
+        {
+          "teamId": "ucf",
+          "teamName": "UCF",
+          "torvik": {
+            "rank": 58,
+            "team": "UCF",
+            "conf": "B12",
+            "record": "21-11",
+            "adjoe": 120.01879737593126,
+            "oe Rank": 39,
+            "adjde": 105.6510714134995,
+            "de Rank": 114,
+            "barthag": 0.8124981060339062,
+            "rank.1": 58,
+            "proj. W": 21,
+            "Proj. L": 11,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.7097951595483944,
+            "ncsos": 0.4774584426604157,
+            "consos": 0.8398383868136458,
+            "Proj. SOS": 0.7097951595483944,
+            "Proj. Noncon SOS": 0.4774584426604157,
+            "Proj. Con SOS": 0.8398383868136458,
+            "elite SOS": 0.6601889876932714,
+            "elite noncon SOS": 0.8492918998586623,
+            "Opp OE": 114.58970583222283,
+            "Opp DE": 103.06443482025227,
+            "Opp Proj. OE": 114.58970583222283,
+            "Opp Proj DE": 103.06443482025227,
+            "Con Adj OE": 121.41826893860296,
+            "Con Adj DE": 105.87117937605584,
+            "Qual O": 119.86069975248174,
+            "Qual D": 104.52550795493195,
+            "Qual Barthag": 0.828401373765229,
+            "Qual Games": 13,
+            "FUN": 0.1167573423663077,
+            "ConPF": 1406,
+            "ConPA": 1466,
+            "ConPoss": 1271.6,
+            "ConOE": 1.1056936143441332,
+            "ConDE": 1.152878263604907,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 2.0775601242147856,
+            "WAB Rk": 37,
+            "Fun Rk": 7,
+            "adjt": 69.09602430540978
+          },
+          "kenpom": {
+            "rank": 54,
+            "team": "UCF",
+            "conf": "B12",
+            "record": "21-11",
+            "adj_em": 15.05,
+            "adj_o": 120.5,
+            "adj_o_rank": 40,
+            "adj_d": 105.5,
+            "adj_d_rank": 101,
+            "adj_t": 69.3,
+            "adj_t_rank": 78,
+            "luck": 0.097,
+            "luck_rank": 17,
+            "sos_adj_em": 11.89,
+            "sos_adj_em_rank": 38,
+            "sos_opp_o": 115,
+            "sos_opp_o_rank": 60,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 16,
+            "ncsos_adj_em": -2.59,
+            "ncsos_adj_em_rank": 257
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-ifdepxga",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UCLA vs UCF March 2026 injury report availability UCLA UCF",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:56:52.940Z",
+      "completedAt": "2026-03-17T19:56:53.736Z",
+      "summary": "Returned 5 search results for \"UCLA vs UCF March 2026 injury report availability UCLA UCF\".",
+      "result": [
+        {
+          "title": "UCLA vs UCF Injury Report: Latest Intel on Donovan Dent and Tyler ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fucla%2Dvs%2Ducf%2Dinjury%2Dreport%2Ddonovan%2Ddent%2F&rut=5ae3e23118d0b2b248aed26e7c33918283109394d3d0b4ee2e5d0eac8f118e1e",
+          "snippet": "Here&#x27;s a major update on UCLA star&#x27;s Donovan Dent and Tyler Bilodeau ahead of the Bruins&#x27; clash against UCF in the first round of the 2026 NCAA Tournament."
+        },
+        {
+          "title": "2025-2026 NCAA BB Games: Knights Bruins Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fknights%2Dbruins%2D2026%2D03%2D20%2Finjuries&rut=47a70d524d1c4c286c3efd2d63f58b59d956ad9aca433c13b8ddd7bd48cb6cb0",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between UCF and UCLA . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "UCLA vs. UCF - March 20, 2026 - Bleacher Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Fucf%2Dbasketball%2Dvs%2Ducla%2Dbasketball%2D2026%2D3%2D20%2D18%2D25&rut=64a4b3ac75b7ac272eb6e1649e4f29e915b0682a03df44d1fec7be1a7cfa73dd",
+          "snippet": "Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports , and betting odds, all in one place"
+        },
+        {
+          "title": "UCF Knights vs UCLA Bruins Game Overview, Stats, Injuries, Records ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376827&rut=04aa6cd13b27ea865518c8b6079a5816ce5f51189dbd8aa9f6acbac9393abc5e",
+          "snippet": "Get key insights for UCF Knights vs UCLA Bruins on March 20, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "Central Florida Knights vs UCLA Bruins Odds - Friday March 20 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.oddsshark.com%2Fncaab%2Fcentral%2Dflorida%2Ducla%2Dodds%2Dmarch%2D20%2D2026%2D2518401&rut=b8366b6f2bba713266251c1ca6db15d7c324e0bd3bd6d35292cf0253101dc50c",
+          "snippet": "Central Florida Knights vs UCLA Bruins Odds - Friday March 20 2026 . Live betting odds and lines, betting trends, against the spread and over/under trends, injury reports and matchup stats for bettors."
+        }
+      ]
+    },
+    {
+      "id": "tool-7howj9li",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UCLA UCF injury update March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:56:53.736Z",
+      "completedAt": "2026-03-17T19:56:54.374Z",
+      "summary": "Returned 5 search results for \"UCLA UCF injury update March 2026\".",
+      "result": [
+        {
+          "title": "UCF vs. UCLA (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856496&rut=1b8cc084cef327b33ec05e9bf96ab7e37e1f64da746a3aee22827b96d5e95ab2",
+          "snippet": "Live coverage of the UCF Knights vs. UCLA Bruins NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "UCLA loses Bilodeau but ousts Michigan St. in Big Ten quarters",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48201354%2Fucla%2Dloses%2Dbilodeau%2Dousts%2Dmichigan%2Dst%2Dbig%2Dten%2Dquarters&rut=b3850e92bf08ee48628b481b1215cda99ea54ead6b8ffbfdc402974d782036cf",
+          "snippet": "UCLA star Tyler Bilodeau suffered a right leg injury that will likely sideline him for at least one game, but the Bruins held off No. 8 Michigan State 88-84 to advance to the Big Ten tournament ..."
+        },
+        {
+          "title": "UCLA&#x27;s Tyler Bilodeau (knee strain) expected for NCAA tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48206390%2Fucla%2Dtyler%2Dbilodeau%2Dknee%2Dstrain%2Dexpected%2Dncaa%2Dtournament&rut=06a1f2390afcb06dfe47d196e3667164b94d17be28fa6595ff3aa83c64ec705b",
+          "snippet": "UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament."
+        },
+        {
+          "title": "UCLA Bruins Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F26%2Fucla%2Dbruins&rut=d50a1947f0a3aab263c0e63a353aa6fcb72ebed73176a6f77aa0528ce4625020",
+          "snippet": "Visit ESPN for UCLA Bruins live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "Those two imperfections will cost them eventually -- but not in Philadelphia. UCLA knocks off both UCF and UConn to advance to the second weekend. Final field rank: 15"
+        }
+      ]
+    },
+    {
+      "id": "tool-gl4gdvu4",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-17T19:56:56.369Z",
+      "completedAt": "2026-03-17T19:56:56.610Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament",
+        "text": "UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament - ESPN UCLA's Bilodeau set to return for NCAA tourney --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates UCLA's Bilodeau set to return for NCAA tourney 3d Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 7h Keith Lipscomb Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 3h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 4h Duke heads into March Madness No. 1 in AP poll Duke Blue Devils 1d Charlotte fires coach Fearne after three seasons Charlotte 49ers 3h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 1d Jeff Borzello Duke top men's seed as Miami (OH) sneaks in Duke Blue Devils 2d Oddsmakers again pick Duke as king of NCAA field Duke Blue Devils 1d David Purdum Sources: Memphis retaining coach Hardaway Memphis Tigers 1d Pete Thamel Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 6h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 1d Jay Bilas Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 2d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 1d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 22h Sach Chandan Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 3h Mark Zinno Six tips on how to bet the men's tournament like a veteran 2d Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 11h Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 1d Jeff Borzello UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament play UCLA Bruins vs. Michigan State Spartans: Game Highlights (1:19) UCLA Bruins vs. Michigan State Spartans: Game Highlights (1:19) ESPN News Services Multiple Authors Mar 14, 2026, 03:31 PM ET Email Print Open Extended Reactions UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament, a school spokesman said Saturday. Bilodeau was ruled out for the Bruins' Big Ten tournament semifinal against Purdue -- and likely for a po"
+      }
+    },
+    {
+      "id": "tool-z67oeltz",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/knights-bruins-2026-03-20/injuries",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-17T19:56:56.610Z",
+      "completedAt": "2026-03-17T19:56:57.223Z",
+      "summary": "Fetched https://www.teamrankings.com/ncaa-basketball/matchup/knights-bruins-2026-03-20/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/knights-bruins-2026-03-20/injuries",
+        "text": "2025-2026 NCAA BB Games: Knights Bruins Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius 🏆 2026 NCAA Bracket Picks » You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu TeamRankings.com Get Smart About Sports Log In Subscribe Home Sports Betting NCAA Bracket Picks 2026 NCAA Survivor Picks Golf One And Done Picks Golf Majors & Masters Picks NFL NBA MLB NCAAF NCAAB Main Menu NFL Super Bowl SB Home Game Picks Model predictions Prop Picks Betting Analysis Super Bowl Squares Betting Promo Offers Betting & Pool Picks Picks Pick'em Picks Survivor Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Seattle vs. New England Rankings Predictive Rankings More Rankings Rankings Comparison Stats All Stats Team Stats Player Stats Teams Arizona Cardinals Atlanta Falcons Baltimore Ravens Buffalo Bills Carolina Panthers Chicago Bears Cincinnati Bengals Cleveland Browns Dallas Cowboys Denver Broncos Detroit Lions Green Bay Packers Houston Texans Indianapolis Colts Jacksonville Jaguars Kansas City Chiefs Miami Dolphins Las Vegas Raiders Los Angeles Chargers Los Angeles Rams Minnesota Vikings New England Patriots New Orleans Saints New York Giants New York Jets Philadelphia Eagles Pittsburgh Steelers San Francisco 49ers Seattle Seahawks Tampa Bay Buccaneers Tennessee Titans Washington Commanders NFL Home NCAAF Bowl Games Bowl Pick'em Picks Bowl Betting Picks Bowl Odds Bowl Schedule Bowls Home Betting & Pool Picks Picks Pick'em Picks Bowl Pick'em Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Boise St vs. Washington Troy vs. Jacksonville St Old Dominion vs. S Florida Louisiana vs. Delaware Missouri St vs. Arkansas St Kennesaw St vs. W Michigan Memphis vs. NC State Alabama @ Oklahoma Miami @ Texas A&M Tulane @ Mississippi J Madison @ Oregon Washington St vs. Utah St Toledo vs. Louisville W Kentucky vs. Southern Miss UNLV vs. Ohio More... Rankings & Polls Rankings Predictive Rankings More Rankin"
+      }
+    },
+    {
+      "id": "tool-nnwyi03i",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://collegefootballnetwork.com/mens-college-basketball/ucla-vs-ucf-injury-report-donovan-dent/",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-17T19:56:58.441Z",
+      "completedAt": "2026-03-17T19:56:58.793Z",
+      "summary": "Fetched https://collegefootballnetwork.com/mens-college-basketball/ucla-vs-ucf-injury-report-donovan-dent/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://collegefootballnetwork.com/mens-college-basketball/ucla-vs-ucf-injury-report-donovan-dent/",
+        "text": "UCLA vs UCF Injury Report: Latest Intel on Donovan Dent and Tyler Bilodeau’s Availability | College Sports Network Discord RSS Twitter Home CFB College Teams AAC Army Black Knights Charlotte 49ers East Carolina Pirates Florida Atlantic Owls Memphis Tigers Navy Midshipmen North Texas Mean Green Rice Owls South Florida Bulls Temple Owls Tulane Green Wave Tulsa Golden Hurricane UAB Blazers UTSA Roadrunners ACC Boston College Eagles California Golden Bears Clemson Tigers Duke Blue Devils Florida State Seminoles Georgia Tech Yellow Jackets Louisville Cardinals Miami (FL) Hurricanes North Carolina State Wolfpack North Carolina Tar Heels Pittsburgh Panthers SMU Mustangs Stanford Cardinal Syracuse Orange Virginia Cavaliers Virginia Tech Hokies Wake Forest Demon Deacons Big 12 Arizona State Sun Devils Arizona Wildcats Baylor Bears BYU Cougars Cincinnati Bearcats Colorado Buffaloes Houston Cougars Iowa State Cyclones Kansas Jayhawks Kansas State Wildcats Oklahoma State Cowboys TCU Horned Frogs Texas Tech Red Raiders UCF Knights Utah Utes West Virginia Mountaineers Big Ten Illinois Fighting Illini Indiana Hoosiers Iowa Hawkeyes Maryland Terrapins Michigan State Spartans Michigan Wolverines Minnesota Golden Gophers Nebraska Cornhuskers Northwestern Wildcats Ohio State Buckeyes Oregon Ducks Penn State Nittany Lions Purdue Boilermakers Rutgers Scarlet Knights UCLA Bruins USC Trojans Washington Huskies Wisconsin Badgers SEC Alabama Crimson Tide Arkansas Razorbacks Auburn Tigers Florida Gators Georgia Bulldogs Kentucky Wildcats LSU Tigers Mississippi State Bulldogs Missouri Tigers Oklahoma Sooners Ole Miss Rebels South Carolina Gamecocks Tennessee Volunteers Texas A&#038;M Aggies Texas Longhorns Vanderbilt Commodores Conference USA FIU Golden Panthers Jacksonville State Gamecocks Liberty Flames Louisiana Tech Bulldogs Middle Tennessee Blue Raiders New Mexico State Aggies Sam Houston Bearkats UTEP Miners Western Kentucky Hilltoppers MAC Akron Zips Ball State Cardinals Bowling Green Falcons Buffalo Bulls Central Michigan Chippewas Eastern Michigan Eagles Kent State Golden Flashes Miami (OH) RedHawks Northern Illinois Huskies Ohio Bobcats Toledo Rockets Western Michigan Broncos Mountain West Air Force Falcons Boise State Broncos Colorado State Rams Fresno State Bulldogs Hawaii Rainbow Warriors Nevada Wolf Pack New Mexico Lobos San Diego State Aztecs San Jose State Spartans UNLV Rebels Utah State Aggies Wyoming Cowboys Pac-12 Oregon State Beavers Washington State Cougars Sun Belt Appalachian State Mountaineers Arkansas State Red Wolves Coastal Carolina Chanticleers Georgia Southern Eagles Georgia State Panthers James Madison Dukes Louisiana-Monroe Warhawks Louisiana Rajin&#8217; Cajuns Marshall Thundering Herd Old Dominion Monarchs South Alabama Jaguars Southern Miss Golden Eagles Texas State Bobcats Troy Trojans FBS Independents Notre Dame Fighting Irish UConn Huskies UMass Minutemen Olympics Nascar NBA NFL Men&#8217;s CBB Tennis Baseball Women&#8217;s CBB Formula "
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-east-7-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T19:56:50.688Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-east-7\nCurrent game label: East 7/10\nRound: Round of 64\nResolved teams: UCLA (ucla) vs UCF (ucf)\nPrior committed picks: 10"
+    },
+    {
+      "id": "r64-east-7-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T19:56:50.688Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-east-7\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 7/10\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"ucla\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"ucf\"\n      }\n    },\n    \"slotAName\": \"UCLA\",\n    \"slotBName\": \"UCF\",\n    \"slotATeamId\": \"ucla\",\n    \"slotBTeamId\": \"ucf\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": 0.62,\n      \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": 0.66,\n      \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-16\",\n      \"winnerId\": \"umbc\",\n      \"confidence\": 0.58,\n      \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n    },\n    {\n      \"gameId\": \"ff-south-16\",\n      \"winnerId\": \"lehigh\",\n      \"confidence\": 0.56,\n      \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n    },\n    {\n      \"gameId\": \"r64-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.97,\n      \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n    },\n    {\n      \"gameId\": \"r64-east-2\",\n      \"winnerId\": \"tcu\",\n      \"confidence\": 0.6,\n      \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n    },\n    {\n      \"gameId\": \"r64-east-3\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 0.74,\n      \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n    },\n    {\n      \"gameId\": \"r64-east-4\",\n      \"winnerId\": \"kansas\",\n      \"confidence\": 0.86,\n      \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n    },\n    {\n      \"gameId\": \"r64-east-5\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.73,\n      \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n    },\n    {\n      \"gameId\": \"r64-east-6\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:56:52.934Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-7-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:52.934Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "ucla",
+          "ucf"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-7-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:52.940Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "ucla",
+          "teamName": "UCLA",
+          "torvik": {
+            "rank": 24,
+            "team": "UCLA",
+            "conf": "B10",
+            "record": "23-11",
+            "adjoe": 124.49524577151492,
+            "oe Rank": 17,
+            "adjde": 101.73772797460148,
+            "de Rank": 49,
+            "barthag": 0.9106418470962409,
+            "rank.1": 24,
+            "proj. W": 23,
+            "Proj. L": 11,
+            "Pro Con W": 13,
+            "Pro Con L": 7,
+            "Con Rec.": "13-7",
+            "sos": 0.7136274946784696,
+            "ncsos": 0.4861583808845608,
+            "consos": 0.8189877975933623,
+            "Proj. SOS": 0.7136274946784696,
+            "Proj. Noncon SOS": 0.4861583808845608,
+            "Proj. Con SOS": 0.8189877975933623,
+            "elite SOS": 0.6374601353204021,
+            "elite noncon SOS": 0.8026907471475476,
+            "Opp OE": 116.28354697121708,
+            "Opp DE": 103.51479281044573,
+            "Opp Proj. OE": 116.28354697121708,
+            "Opp Proj DE": 103.51479281044573,
+            "Con Adj OE": 124.99041984498136,
+            "Con Adj DE": 102.56497367571004,
+            "Qual O": 126.79653021878352,
+            "Qual D": 105.2530362812684,
+            "Qual Barthag": 0.8948706894697158,
+            "Qual Games": 16,
+            "FUN": 0.0201417511235171,
+            "ConPF": 1511,
+            "ConPA": 1445,
+            "ConPoss": 1295.3625000000002,
+            "ConOE": 1.166468845593415,
+            "ConDE": 1.115517856970539,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.65,
+            "WAB": 3.555697316105933,
+            "WAB Rk": 28,
+            "Fun Rk": 126,
+            "adjt": 64.65847946120198
+          },
+          "kenpom": {
+            "rank": 27,
+            "team": "UCLA",
+            "conf": "B10",
+            "record": "23-11",
+            "adj_em": 21.64,
+            "adj_o": 123.8,
+            "adj_o_rank": 22,
+            "adj_d": 102.1,
+            "adj_d_rank": 53,
+            "adj_t": 64.7,
+            "adj_t_rank": 318,
+            "luck": 0.017,
+            "luck_rank": 136,
+            "sos_adj_em": 12.14,
+            "sos_adj_em_rank": 33,
+            "sos_opp_o": 116.1,
+            "sos_opp_o_rank": 35,
+            "sos_opp_d": 103.9,
+            "sos_opp_d_rank": 37,
+            "ncsos_adj_em": -2.22,
+            "ncsos_adj_em_rank": 248
+          }
+        },
+        {
+          "teamId": "ucf",
+          "teamName": "UCF",
+          "torvik": {
+            "rank": 58,
+            "team": "UCF",
+            "conf": "B12",
+            "record": "21-11",
+            "adjoe": 120.01879737593126,
+            "oe Rank": 39,
+            "adjde": 105.6510714134995,
+            "de Rank": 114,
+            "barthag": 0.8124981060339062,
+            "rank.1": 58,
+            "proj. W": 21,
+            "Proj. L": 11,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.7097951595483944,
+            "ncsos": 0.4774584426604157,
+            "consos": 0.8398383868136458,
+            "Proj. SOS": 0.7097951595483944,
+            "Proj. Noncon SOS": 0.4774584426604157,
+            "Proj. Con SOS": 0.8398383868136458,
+            "elite SOS": 0.6601889876932714,
+            "elite noncon SOS": 0.8492918998586623,
+            "Opp OE": 114.58970583222283,
+            "Opp DE": 103.06443482025227,
+            "Opp Proj. OE": 114.58970583222283,
+            "Opp Proj DE": 103.06443482025227,
+            "Con Adj OE": 121.41826893860296,
+            "Con Adj DE": 105.87117937605584,
+            "Qual O": 119.86069975248174,
+            "Qual D": 104.52550795493195,
+            "Qual Barthag": 0.828401373765229,
+            "Qual Games": 13,
+            "FUN": 0.1167573423663077,
+            "ConPF": 1406,
+            "ConPA": 1466,
+            "ConPoss": 1271.6,
+            "ConOE": 1.1056936143441332,
+            "ConDE": 1.152878263604907,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 2.0775601242147856,
+            "WAB Rk": 37,
+            "Fun Rk": 7,
+            "adjt": 69.09602430540978
+          },
+          "kenpom": {
+            "rank": 54,
+            "team": "UCF",
+            "conf": "B12",
+            "record": "21-11",
+            "adj_em": 15.05,
+            "adj_o": 120.5,
+            "adj_o_rank": 40,
+            "adj_d": 105.5,
+            "adj_d_rank": 101,
+            "adj_t": 69.3,
+            "adj_t_rank": 78,
+            "luck": 0.097,
+            "luck_rank": 17,
+            "sos_adj_em": 11.89,
+            "sos_adj_em_rank": 38,
+            "sos_opp_o": 115,
+            "sos_opp_o_rank": 60,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 16,
+            "ncsos_adj_em": -2.59,
+            "ncsos_adj_em_rank": 257
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"ucla\",\n      \"teamName\": \"UCLA\",\n      \"torvik\": {\n        \"rank\": 24,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.49524577151492,\n        \"oe Rank\": 17,\n        \"adjde\": 101.73772797460148,\n        \"de Rank\": 49\n      },\n      \"kenpom\": {\n        \"rank\": 27,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adj_em\": 21.64,\n        \"adj_o\": 123.8,\n        \"adj_o_rank\": 22,\n        \"adj_d\": 102.1\n      }\n    },\n    {\n      \"teamId\": \"ucf\",\n      \"teamName\": \"UCF\",\n      \"torvik\": {\n        \"rank\": 58,\n        \"team\": \"UCF\",\n        \"conf\": \"B12\",\n        \"record\": \"21-11\",\n        \"adjoe\": 120.01879737593126,\n        \"oe Rank\": 39,\n        \"adjde\": 105.6510714134995,\n        \"de Rank\": 114\n      },\n      \"kenpom\": {\n        \"rank\": 54,\n        \"team\": \"UCF\",\n        \"conf\": \"B12\",\n        \"record\": \"21-11\",\n        \"adj_em\": 15.05,\n        \"adj_o\": 120.5,\n        \"adj_o_rank\": 40,\n        \"adj_d\": 105.5\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-7-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:52.940Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UCLA vs UCF March 2026 injury report availability UCLA UCF",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-7-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:53.736Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "UCLA vs UCF Injury Report: Latest Intel on Donovan Dent and Tyler ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fucla%2Dvs%2Ducf%2Dinjury%2Dreport%2Ddonovan%2Ddent%2F&rut=5ae3e23118d0b2b248aed26e7c33918283109394d3d0b4ee2e5d0eac8f118e1e",
+          "snippet": "Here&#x27;s a major update on UCLA star&#x27;s Donovan Dent and Tyler Bilodeau ahead of the Bruins&#x27; clash against UCF in the first round of the 2026 NCAA Tournament."
+        },
+        {
+          "title": "2025-2026 NCAA BB Games: Knights Bruins Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fknights%2Dbruins%2D2026%2D03%2D20%2Finjuries&rut=47a70d524d1c4c286c3efd2d63f58b59d956ad9aca433c13b8ddd7bd48cb6cb0",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between UCF and UCLA . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "UCLA vs. UCF - March 20, 2026 - Bleacher Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Fucf%2Dbasketball%2Dvs%2Ducla%2Dbasketball%2D2026%2D3%2D20%2D18%2D25&rut=64a4b3ac75b7ac272eb6e1649e4f29e915b0682a03df44d1fec7be1a7cfa73dd",
+          "snippet": "Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports , and betting odds, all in one place"
+        },
+        {
+          "title": "UCF Knights vs UCLA Bruins Game Overview, Stats, Injuries, Records ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376827&rut=04aa6cd13b27ea865518c8b6079a5816ce5f51189dbd8aa9f6acbac9393abc5e",
+          "snippet": "Get key insights for UCF Knights vs UCLA Bruins on March 20, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "Central Florida Knights vs UCLA Bruins Odds - Friday March 20 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.oddsshark.com%2Fncaab%2Fcentral%2Dflorida%2Ducla%2Dodds%2Dmarch%2D20%2D2026%2D2518401&rut=b8366b6f2bba713266251c1ca6db15d7c324e0bd3bd6d35292cf0253101dc50c",
+          "snippet": "Central Florida Knights vs UCLA Bruins Odds - Friday March 20 2026 . Live betting odds and lines, betting trends, against the spread and over/under trends, injury reports and matchup stats for bettors."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"UCLA vs UCF Injury Report: Latest Intel on Donovan Dent and Tyler ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fucla%2Dvs%2Ducf%2Dinjury%2Dreport%2Ddonovan%2Ddent%2F&rut=5ae3e23118d0b2b248aed26e7c33918283109394d3d0b4ee2e5d0eac8f118e1e\",\n      \"snippet\": \"Here&#x27;s a major update on UCLA star&#x27;s Donovan Dent and Tyler Bilodeau ahead of the Bruins&#x27; clash against UCF in the first round of the 2026 NCAA Tournament.\"\n    },\n    {\n      \"title\": \"2025-2026 NCAA BB Games: Knights Bruins Injury Report -\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fknights%2Dbruins%2D2026%2D03%2D20%2Finjuries&rut=47a70d524d1c4c286c3efd2d63f58b59d956ad9aca433c13b8ddd7bd48cb6cb0\",\n      \"snippet\": \"Betting analysis for the 2025- 2026 NCAA Basketball season matchup between UCF and UCLA . Includes ats, over/under and straight up odds analysis.\"\n    },\n    {\n      \"title\": \"UCLA vs. UCF - March 20, 2026 - Bleacher Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Fucf%2Dbasketball%2Dvs%2Ducla%2Dbasketball%2D2026%2D3%2D20%2D18%2D25&rut=64a4b3ac75b7ac272eb6e1649e4f29e915b0682a03df44d1fec7be1a7cfa73dd\",\n      \"snippet\": \"Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports , and betting odds, all in one place\"\n    },\n    {\n      \"title\": \"UCF Knights vs UCLA Bruins Game Overview, Stats, Injuries, Records ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376827&rut=04aa6cd13b27ea865518c8b6079a5816ce5f51189dbd8aa9f6acbac9393abc5e\",\n      \"snippet\": \"Get key insights for UCF Knights vs UCLA Bruins on March 20, 2026 , including season records, injuries, and essential stats to help you make informed bets.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-7-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:53.736Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UCLA UCF injury update March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-7-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:54.374Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "UCF vs. UCLA (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856496&rut=1b8cc084cef327b33ec05e9bf96ab7e37e1f64da746a3aee22827b96d5e95ab2",
+          "snippet": "Live coverage of the UCF Knights vs. UCLA Bruins NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "UCLA loses Bilodeau but ousts Michigan St. in Big Ten quarters",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48201354%2Fucla%2Dloses%2Dbilodeau%2Dousts%2Dmichigan%2Dst%2Dbig%2Dten%2Dquarters&rut=b3850e92bf08ee48628b481b1215cda99ea54ead6b8ffbfdc402974d782036cf",
+          "snippet": "UCLA star Tyler Bilodeau suffered a right leg injury that will likely sideline him for at least one game, but the Bruins held off No. 8 Michigan State 88-84 to advance to the Big Ten tournament ..."
+        },
+        {
+          "title": "UCLA&#x27;s Tyler Bilodeau (knee strain) expected for NCAA tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48206390%2Fucla%2Dtyler%2Dbilodeau%2Dknee%2Dstrain%2Dexpected%2Dncaa%2Dtournament&rut=06a1f2390afcb06dfe47d196e3667164b94d17be28fa6595ff3aa83c64ec705b",
+          "snippet": "UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament."
+        },
+        {
+          "title": "UCLA Bruins Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F26%2Fucla%2Dbruins&rut=d50a1947f0a3aab263c0e63a353aa6fcb72ebed73176a6f77aa0528ce4625020",
+          "snippet": "Visit ESPN for UCLA Bruins live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "Those two imperfections will cost them eventually -- but not in Philadelphia. UCLA knocks off both UCF and UConn to advance to the second weekend. Final field rank: 15"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"UCF vs. UCLA (Mar 20, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856496&rut=1b8cc084cef327b33ec05e9bf96ab7e37e1f64da746a3aee22827b96d5e95ab2\",\n      \"snippet\": \"Live coverage of the UCF Knights vs. UCLA Bruins NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"UCLA loses Bilodeau but ousts Michigan St. in Big Ten quarters\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48201354%2Fucla%2Dloses%2Dbilodeau%2Dousts%2Dmichigan%2Dst%2Dbig%2Dten%2Dquarters&rut=b3850e92bf08ee48628b481b1215cda99ea54ead6b8ffbfdc402974d782036cf\",\n      \"snippet\": \"UCLA star Tyler Bilodeau suffered a right leg injury that will likely sideline him for at least one game, but the Bruins held off No. 8 Michigan State 88-84 to advance to the Big Ten tournament ...\"\n    },\n    {\n      \"title\": \"UCLA&#x27;s Tyler Bilodeau (knee strain) expected for NCAA tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48206390%2Fucla%2Dtyler%2Dbilodeau%2Dknee%2Dstrain%2Dexpected%2Dncaa%2Dtournament&rut=06a1f2390afcb06dfe47d196e3667164b94d17be28fa6595ff3aa83c64ec705b\",\n      \"snippet\": \"UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament.\"\n    },\n    {\n      \"title\": \"UCLA Bruins Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F26%2Fucla%2Dbruins&rut=d50a1947f0a3aab263c0e63a353aa6fcb72ebed73176a6f77aa0528ce4625020\",\n      \"snippet\": \"Visit ESPN for UCLA Bruins live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:56:56.369Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-7-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:56.369Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament",
+        "maxChars": 4000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-7-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:56.610Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament",
+        "text": "UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament - ESPN UCLA's Bilodeau set to return for NCAA tourney --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates UCLA's Bilodeau set to return for NCAA tourney 3d Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 7h Keith Lipscomb Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 3h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 4h Duke heads into March Madness No. 1 in AP poll Duke Blue Devils 1d Charlotte fires coach Fearne after three seasons Charlotte 49ers 3h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 1d Jeff Borzello Duke top men's seed as Miami (OH) sneaks in Duke Blue Devils 2d Oddsmakers again pick Duke as king of NCAA field Duke Blue Devils 1d David Purdum Sources: Memphis retaining coach Hardaway Memphis Tigers 1d Pete Thamel Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 6h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 1d Jay Bilas Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 2d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 1d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 22h Sach Chandan Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 3h Mark Zinno Six tips on how to bet the men's tournament like a veteran 2d Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 11h Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 1d Jeff Borzello UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament play UCLA Bruins vs. Michigan State Spartans: Game Highlights (1:19) UCLA Bruins vs. Michigan State Spartans: Game Highlights (1:19) ESPN News Services Multiple Authors Mar 14, 2026, 03:31 PM ET Email Print Open Extended Reactions UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament, a school spokesman said Saturday. Bilodeau was ruled out for the Bruins' Big Ten tournament semifinal against Purdue -- and likely for a po"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament\",\n    \"text\": \"UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament - ESPN UCLA's Bilodeau set to return for NCAA tourney --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates UCLA's Bilodeau set to return for NCAA tourney 3d Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 7h Keith Lipscomb Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 3h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 4h Duke heads into March Madness No. 1 in AP poll Duke Blue Devils 1d Charlotte fires coach Fearne after three seasons Charlotte 49ers 3h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 1d Jeff Borzello Duke top men's seed as Mi... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-7-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:56.610Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/knights-bruins-2026-03-20/injuries",
+        "maxChars": 4000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-7-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:57.223Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/knights-bruins-2026-03-20/injuries",
+        "text": "2025-2026 NCAA BB Games: Knights Bruins Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius 🏆 2026 NCAA Bracket Picks » You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu TeamRankings.com Get Smart About Sports Log In Subscribe Home Sports Betting NCAA Bracket Picks 2026 NCAA Survivor Picks Golf One And Done Picks Golf Majors & Masters Picks NFL NBA MLB NCAAF NCAAB Main Menu NFL Super Bowl SB Home Game Picks Model predictions Prop Picks Betting Analysis Super Bowl Squares Betting Promo Offers Betting & Pool Picks Picks Pick'em Picks Survivor Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Seattle vs. New England Rankings Predictive Rankings More Rankings Rankings Comparison Stats All Stats Team Stats Player Stats Teams Arizona Cardinals Atlanta Falcons Baltimore Ravens Buffalo Bills Carolina Panthers Chicago Bears Cincinnati Bengals Cleveland Browns Dallas Cowboys Denver Broncos Detroit Lions Green Bay Packers Houston Texans Indianapolis Colts Jacksonville Jaguars Kansas City Chiefs Miami Dolphins Las Vegas Raiders Los Angeles Chargers Los Angeles Rams Minnesota Vikings New England Patriots New Orleans Saints New York Giants New York Jets Philadelphia Eagles Pittsburgh Steelers San Francisco 49ers Seattle Seahawks Tampa Bay Buccaneers Tennessee Titans Washington Commanders NFL Home NCAAF Bowl Games Bowl Pick'em Picks Bowl Betting Picks Bowl Odds Bowl Schedule Bowls Home Betting & Pool Picks Picks Pick'em Picks Bowl Pick'em Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Boise St vs. Washington Troy vs. Jacksonville St Old Dominion vs. S Florida Louisiana vs. Delaware Missouri St vs. Arkansas St Kennesaw St vs. W Michigan Memphis vs. NC State Alabama @ Oklahoma Miami @ Texas A&M Tulane @ Mississippi J Madison @ Oregon Washington St vs. Utah St Toledo vs. Louisville W Kentucky vs. Southern Miss UNLV vs. Ohio More... Rankings & Polls Rankings Predictive Rankings More Rankin"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.teamrankings.com/ncaa-basketball/matchup/knights-bruins-2026-03-20/injuries\",\n    \"text\": \"2025-2026 NCAA BB Games: Knights Bruins Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius 🏆 2026 NCAA Bracket Picks » You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu TeamRankings.com Get Smart About Sports Log In Subscribe Home Sports Betting NCAA Bracket Picks 2026 NCAA Survivor Picks Golf One And Done Picks Golf Majors & Masters Picks NFL NBA MLB NCAAF NCAAB Main Menu NFL Super Bowl SB Home Game Picks Model predictions Prop Picks Betting Analysis Super Bowl Squares Betting Promo Offers Betting & Pool Picks Picks Pick'em Picks Survivor Picks Betting Picks Grid Game Winner Picks Poin... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:56:58.441Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-7-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:58.441Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://collegefootballnetwork.com/mens-college-basketball/ucla-vs-ucf-injury-report-donovan-dent/",
+        "maxChars": 4000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-7-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:58.794Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://collegefootballnetwork.com/mens-college-basketball/ucla-vs-ucf-injury-report-donovan-dent/",
+        "text": "UCLA vs UCF Injury Report: Latest Intel on Donovan Dent and Tyler Bilodeau’s Availability | College Sports Network Discord RSS Twitter Home CFB College Teams AAC Army Black Knights Charlotte 49ers East Carolina Pirates Florida Atlantic Owls Memphis Tigers Navy Midshipmen North Texas Mean Green Rice Owls South Florida Bulls Temple Owls Tulane Green Wave Tulsa Golden Hurricane UAB Blazers UTSA Roadrunners ACC Boston College Eagles California Golden Bears Clemson Tigers Duke Blue Devils Florida State Seminoles Georgia Tech Yellow Jackets Louisville Cardinals Miami (FL) Hurricanes North Carolina State Wolfpack North Carolina Tar Heels Pittsburgh Panthers SMU Mustangs Stanford Cardinal Syracuse Orange Virginia Cavaliers Virginia Tech Hokies Wake Forest Demon Deacons Big 12 Arizona State Sun Devils Arizona Wildcats Baylor Bears BYU Cougars Cincinnati Bearcats Colorado Buffaloes Houston Cougars Iowa State Cyclones Kansas Jayhawks Kansas State Wildcats Oklahoma State Cowboys TCU Horned Frogs Texas Tech Red Raiders UCF Knights Utah Utes West Virginia Mountaineers Big Ten Illinois Fighting Illini Indiana Hoosiers Iowa Hawkeyes Maryland Terrapins Michigan State Spartans Michigan Wolverines Minnesota Golden Gophers Nebraska Cornhuskers Northwestern Wildcats Ohio State Buckeyes Oregon Ducks Penn State Nittany Lions Purdue Boilermakers Rutgers Scarlet Knights UCLA Bruins USC Trojans Washington Huskies Wisconsin Badgers SEC Alabama Crimson Tide Arkansas Razorbacks Auburn Tigers Florida Gators Georgia Bulldogs Kentucky Wildcats LSU Tigers Mississippi State Bulldogs Missouri Tigers Oklahoma Sooners Ole Miss Rebels South Carolina Gamecocks Tennessee Volunteers Texas A&#038;M Aggies Texas Longhorns Vanderbilt Commodores Conference USA FIU Golden Panthers Jacksonville State Gamecocks Liberty Flames Louisiana Tech Bulldogs Middle Tennessee Blue Raiders New Mexico State Aggies Sam Houston Bearkats UTEP Miners Western Kentucky Hilltoppers MAC Akron Zips Ball State Cardinals Bowling Green Falcons Buffalo Bulls Central Michigan Chippewas Eastern Michigan Eagles Kent State Golden Flashes Miami (OH) RedHawks Northern Illinois Huskies Ohio Bobcats Toledo Rockets Western Michigan Broncos Mountain West Air Force Falcons Boise State Broncos Colorado State Rams Fresno State Bulldogs Hawaii Rainbow Warriors Nevada Wolf Pack New Mexico Lobos San Diego State Aztecs San Jose State Spartans UNLV Rebels Utah State Aggies Wyoming Cowboys Pac-12 Oregon State Beavers Washington State Cougars Sun Belt Appalachian State Mountaineers Arkansas State Red Wolves Coastal Carolina Chanticleers Georgia Southern Eagles Georgia State Panthers James Madison Dukes Louisiana-Monroe Warhawks Louisiana Rajin&#8217; Cajuns Marshall Thundering Herd Old Dominion Monarchs South Alabama Jaguars Southern Miss Golden Eagles Texas State Bobcats Troy Trojans FBS Independents Notre Dame Fighting Irish UConn Huskies UMass Minutemen Olympics Nascar NBA NFL Men&#8217;s CBB Tennis Baseball Women&#8217;s CBB Formula "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://collegefootballnetwork.com/mens-college-basketball/ucla-vs-ucf-injury-report-donovan-dent/\",\n    \"text\": \"UCLA vs UCF Injury Report: Latest Intel on Donovan Dent and Tyler Bilodeau’s Availability | College Sports Network Discord RSS Twitter Home CFB College Teams AAC Army Black Knights Charlotte 49ers East Carolina Pirates Florida Atlantic Owls Memphis Tigers Navy Midshipmen North Texas Mean Green Rice Owls South Florida Bulls Temple Owls Tulane Green Wave Tulsa Golden Hurricane UAB Blazers UTSA Roadrunners ACC Boston College Eagles California Golden Bears Clemson Tigers Duke Blue Devils Florida State Seminoles Georgia Tech Yellow Jackets Louisville Cardinals Miami (FL) Hurricanes North Carolina State Wolfpack North Carolina Tar Heels Pittsburgh Panthers SMU Mustangs Stanford Cardinal Syracuse Orange Virginia Cavaliers Virginia Tech Hokies Wake Forest Demon Deacons Big 12 Arizona State Sun Devils Arizona Wildcats Baylor Bears BYU Cougars Cincinnati Bearcats Colorado Buffaloes Houston Cougars Iowa State Cyclones Kansas Jayhawks Kansas State Wildcats Oklahoma State Cowboys TCU Horned Frogs Texas Tech Red Raiders UCF Knights Utah Utes West Virginia Mountaineers Big Ten Illinois Fighting Illini Indiana Hoosiers Iowa Hawkeyes Maryland Terrapins Michigan State Spartans Michigan Wolverines Mi... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-final-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:06.047Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-east-7\",\n    \"winnerId\": \"ucla\",\n    \"confidence\": 0.67,\n    \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency (top-40 AdjO), but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"demo-2026-bracket:r64-east-7:pick\",\n    \"title\": \"East 7/10 — UCLA over UCF\",\n    \"summary\": \"Back UCLA’s higher two-way efficiency profile, with Bilodeau expected to be available, while acknowledging UCF’s offensive-variance upset path.\",\n    \"evidence\": \"Ratings: UCLA KenPom #27 (AdjEM +21.64; AdjO 123.8 #22; AdjD 102.1) vs UCF KenPom #54 (AdjEM +15.05; AdjO 120.5 #40; AdjD 105.5). Torvik: UCLA #24 (AdjO rank 17; AdjD rank 49) vs UCF #58 (AdjO rank 39; AdjD rank 114). Availability: ESPN reported UCLA leading scorer Tyler Bilodeau has a mild knee strain but is expected to be available for the NCAA tournament.\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-7-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T19:57:12.943Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-east-7\",\"winnerId\":\"ucla\",\"confidence\":0.67,\"rationale\":\"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"},\"reasoningStep\":{\"id\":\"demo-2026-bracket:r64-east-7:pick\",\"title\":\"East 7/10 — UCLA over UCF\",\"summary\":\"Back UCLA’s higher two-way efficiency profile, with Bilodeau expected to be available, while acknowledging UCF’s offensive-variance upset path.\",\"evidence\":[\"Ratings: UCLA KenPom #27 (AdjEM +21.64; AdjO 123.8 #22; AdjD 102.1) vs UCF KenPom #54 (AdjEM +15.05; AdjO 120.5 #40; AdjD 105.5).\",\"Torvik: UCLA #24 (AdjO rank 17; AdjD rank 49) vs UCF #58 (AdjO rank 39; AdjD rank 114).\",\"Availability: ESPN reported UCLA leading scorer Tyler Bilodeau has a mild knee strain but is expected to be available for the NCAA tournament.\"]}}"
+    }
+  ]
+}

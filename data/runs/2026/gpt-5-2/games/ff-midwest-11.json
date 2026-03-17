@@ -1,0 +1,844 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "ff-midwest-11",
+  "generatedAt": "2026-03-17T19:53:24.993Z",
+  "pick": {
+    "gameId": "ff-midwest-11",
+    "winnerId": "smu",
+    "confidence": 0.66,
+    "rationale": "SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling."
+  },
+  "reasoningStep": {
+    "id": "ff-midwest-11-analysis",
+    "title": "Lean to SMU on efficiency edge and higher baseline quality",
+    "summary": "Both major predictive ratings favor SMU by a meaningful margin, suggesting SMU’s offense should be the best unit on the floor and enough to survive Miami (OH)’s upset variance.",
+    "evidence": [
+      "Ratings: SMU KenPom #42 (AdjEM 18.11; AdjO 123 #27; AdjD 104.8) and Torvik #42 (OE rank 26, DE rank 95) vs Miami (OH) KenPom #93 (AdjEM 8.25; AdjO 116.8 #70; AdjD 108.6) and Torvik #87 (OE rank 68, DE rank 149).",
+      "News/injuries: no specific major availability issues were identified in quick ESPN/web checks for the matchup."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-0hqa8o54",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "smu",
+          "miami-oh"
+        ]
+      },
+      "startedAt": "2026-03-17T19:53:06.927Z",
+      "completedAt": "2026-03-17T19:53:06.933Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "smu",
+          "teamName": "SMU",
+          "torvik": {
+            "rank": 42,
+            "team": "SMU",
+            "conf": "ACC",
+            "record": "20-13",
+            "adjoe": 123.05789628875004,
+            "oe Rank": 26,
+            "adjde": 104.92005426722466,
+            "de Rank": 95,
+            "barthag": 0.8622075142248369,
+            "rank.1": 42,
+            "proj. W": 20,
+            "Proj. L": 13,
+            "Pro Con W": 8,
+            "Pro Con L": 10,
+            "Con Rec.": "8-10",
+            "sos": 0.7136795196692461,
+            "ncsos": 0.5406265536344851,
+            "consos": 0.8241969278921899,
+            "Proj. SOS": 0.7136795196692461,
+            "Proj. Noncon SOS": 0.5406265536344851,
+            "Proj. Con SOS": 0.8241969278921899,
+            "elite SOS": 0.6794115124133151,
+            "elite noncon SOS": 0.8182940139013426,
+            "Opp OE": 115.73218801752948,
+            "Opp DE": 104.18467910175706,
+            "Opp Proj. OE": 115.73218801752948,
+            "Opp Proj DE": 104.18467910175706,
+            "Con Adj OE": 124.83208245371084,
+            "Con Adj DE": 106.97518884956202,
+            "Qual O": 121.3384216921116,
+            "Qual D": 104.25991082582892,
+            "Qual Barthag": 0.8512591146769442,
+            "Qual Games": 13,
+            "FUN": -0.0122256489363794,
+            "ConPF": 1451,
+            "ConPA": 1436,
+            "ConPoss": 1243.9375,
+            "ConOE": 1.1664573179922624,
+            "ConDE": 1.154398834346581,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.4444444444444444,
+            "WAB": -0.0665060607190208,
+            "WAB Rk": 47,
+            "Fun Rk": 212,
+            "adjt": 68.6006643233093
+          },
+          "kenpom": {
+            "rank": 42,
+            "team": "SMU",
+            "conf": "ACC",
+            "record": "20-13",
+            "adj_em": 18.11,
+            "adj_o": 123,
+            "adj_o_rank": 27,
+            "adj_d": 104.8,
+            "adj_d_rank": 91,
+            "adj_t": 68.6,
+            "adj_t_rank": 116,
+            "luck": -0.043,
+            "luck_rank": 297,
+            "sos_adj_em": 11.11,
+            "sos_adj_em_rank": 50,
+            "sos_opp_o": 115.7,
+            "sos_opp_o_rank": 43,
+            "sos_opp_d": 104.6,
+            "sos_opp_d_rank": 59,
+            "ncsos_adj_em": 1.2,
+            "ncsos_adj_em_rank": 144
+          }
+        },
+        {
+          "teamId": "miami-oh",
+          "teamName": "Miami (OH)",
+          "torvik": {
+            "rank": 87,
+            "team": "Miami OH",
+            "conf": "MAC",
+            "record": "31-1",
+            "adjoe": 116.64668208678331,
+            "oe Rank": 68,
+            "adjde": 107.5736149275928,
+            "de Rank": 149,
+            "barthag": 0.7173192321312432,
+            "rank.1": 87,
+            "proj. W": 31,
+            "Proj. L": 1,
+            "Pro Con W": 18,
+            "Pro Con L": 0,
+            "Con Rec.": "18-0",
+            "sos": 0.3443607644176513,
+            "ncsos": 0.2254072826930002,
+            "consos": 0.4227119654971394,
+            "Proj. SOS": 0.3443607644176513,
+            "Proj. Noncon SOS": 0.2254072826930002,
+            "Proj. Con SOS": 0.4227119654971394,
+            "elite SOS": 0.9253475572667736,
+            "elite noncon SOS": 0.9523814339565744,
+            "Opp OE": 106.90462438702352,
+            "Opp DE": 112.27004722572066,
+            "Opp Proj. OE": 106.90462438702352,
+            "Opp Proj DE": 112.27004722572066,
+            "Con Adj OE": 117.45010453883177,
+            "Con Adj DE": 107.4944935261387,
+            "Qual O": 0,
+            "Qual D": 0,
+            "Qual Barthag": 0,
+            "Qual Games": 0,
+            "FUN": 0.1706765509859499,
+            "ConPF": 1579,
+            "ConPA": 1401,
+            "ConPoss": 1313.3874999999998,
+            "ConOE": 1.202234679407258,
+            "ConDE": 1.0667072741289223,
+            "ConSOSRemain": 0,
+            "Conf Win%": 1,
+            "WAB": 2.41596096447752,
+            "WAB Rk": 34,
+            "Fun Rk": 1,
+            "adjt": 69.9175801445737
+          },
+          "kenpom": {
+            "rank": 93,
+            "team": "Miami OH",
+            "conf": "MAC",
+            "record": "31-1",
+            "adj_em": 8.25,
+            "adj_o": 116.8,
+            "adj_o_rank": 70,
+            "adj_d": 108.6,
+            "adj_d_rank": 157,
+            "adj_t": 70,
+            "adj_t_rank": 45,
+            "luck": 0.099,
+            "luck_rank": 15,
+            "sos_adj_em": -5.42,
+            "sos_adj_em_rank": 269,
+            "sos_opp_o": 107.2,
+            "sos_opp_o_rank": 262,
+            "sos_opp_d": 112.7,
+            "sos_opp_d_rank": 305,
+            "ncsos_adj_em": -9.96,
+            "ncsos_adj_em_rank": 361
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-qbqyl0kt",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "SMU vs Miami (OH) First Four 2026 injury availability",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:53:06.933Z",
+      "completedAt": "2026-03-17T19:53:07.758Z",
+      "summary": "Returned 5 search results for \"SMU vs Miami (OH) First Four 2026 injury availability\".",
+      "result": [
+        {
+          "title": "Miami (OH) vs. SMU (Mar 18, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856436%2Fsmu%2Dmiami%2Doh&rut=a541ef986828bbe933cb014ad4e023943cf71670c5c107a5f1287517a0ad1549",
+          "snippet": "Live coverage of the Miami (OH) RedHawks vs . SMU Mustangs NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "NCAA First Four: No. 11 SMU vs No. 11 Miami (OH) | Wednesday 8:10pm CT",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsmumustangs.com%2Fnews%2F2026%2F3%2F16%2Fmens%2Dbasketball%2Dncaa%2Dfirst%2Dfour%2Dno%2D11%2Dsmu%2Dvs%2Dno%2D11%2Dmiami%2Doh%2Dwednesday%2D8%2D10pm%2Dct.aspx&rut=1cf066815e454feb2ed383f398245d9d64f8838a3e395d42f4387ab3ca99469d",
+          "snippet": "SMU earned a No. 11 seed in the Midwest Region when the pairings for this season&#x27;s NCAA Tournament were announced on Sunday. The Mustangs will play Miami (OH) (31-1) in the First Four on Wednesday at UD Arena in Dayton, Ohio. SMU (20-13) is making its 13th appearance in the tournament and first ..."
+        },
+        {
+          "title": "Miami (OH) RedHawks vs SMU Mustangs Game Overview, Stats, Injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F374230&rut=c913b4248281a733456e03b17d6d35f67f2a89af7b359e8f405d59d2731227f6",
+          "snippet": "Get key insights for Miami (OH) RedHawks vs SMU Mustangs on March 18, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "Why Miami (Ohio) has to play in First Four for 2026 March Madness ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fwhy%2Dmiami%2Dohio%2Dplay%2Dfirst%2Dfour%2D2026%2Dmarch%2Dmadness%2F72156903bb66ee2a80919d0a&rut=183bedb5590c4aa49b0f48b616da3daaf88534f38355d5ba6b1bc22ff7320d1a",
+          "snippet": "Here&#x27;s why the 31-1 Miami (Ohio) RedHawks have to play an additional game before potentially appearing in the Round of 64."
+        },
+        {
+          "title": "Miami-Ohio RedHawks vs SMU Mustangs Odds - Wednesday March 18 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.oddsshark.com%2Fncaab%2Fmiami%2Dohio%2Dsmu%2Dodds%2Dmarch%2D18%2D2026%2D2518329&rut=1a6d38f784a2243b0e25709226228013ceb521920ff7b751b7d1e8e301193e85",
+          "snippet": "Miami -Ohio RedHawks vs SMU Mustangs Odds - Wednesday March 18 2026 . Live betting odds and lines, betting trends, against the spread and over/under trends, injury reports and matchup stats for bettors."
+        }
+      ]
+    },
+    {
+      "id": "tool-ccx45049",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "SMU Miami (OH) injury update March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:53:07.758Z",
+      "completedAt": "2026-03-17T19:53:08.458Z",
+      "summary": "Returned 5 search results for \"SMU Miami (OH) injury update March 2026\".",
+      "result": [
+        {
+          "title": "Miami (OH) vs. SMU (Mar 18, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856436%2Fsmu%2Dmiami%2Doh&rut=a541ef986828bbe933cb014ad4e023943cf71670c5c107a5f1287517a0ad1549",
+          "snippet": "Live coverage of the Miami (OH) RedHawks vs. SMU Mustangs NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "SMU vs. Miami (OH) (18 Mar, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856436%2Fsmu%2Dmiami%2Doh&rut=76f54471f0557a8c9867a831a7c349dc635a4166c193dbb75c15e49f6c80e4b9",
+          "snippet": "Live coverage of the SMU Mustangs vs. Miami (OH) RedHawks NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Miami (OH) RedHawks Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F193%2Fmiami%2Doh%2Dredhawks&rut=732b00050dee7cb48033544ab05daf5f912f4816051be0a58882539e29c4838b",
+          "snippet": "Visit ESPN for Miami (OH) RedHawks live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "SMU Mustangs Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2567%2Fsmu%2Dmustangs&rut=0abd6f0003a2b10bbf555fd92ad9510403390564b988bb680587ad2c491b349c",
+          "snippet": "Visit ESPN for SMU Mustangs live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "SMU Mustangs 2026 Regular Season NCAAF Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Fschedule%2F_%2Fid%2F2567&rut=edeaa8203ef1319259ba50a577e593cb5d6f609cae20a2ea2484ec5310dfa8c2",
+          "snippet": "ESPN has the full 2026 SMU Mustangs Regular Season NCAAF schedule. Includes game times, TV listings and ticket information for all Mustangs games."
+        }
+      ]
+    },
+    {
+      "id": "tool-hcyj8m0q",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "SMU Mustangs 2026 kenpom torvik profile offense defense",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:53:08.459Z",
+      "completedAt": "2026-03-17T19:53:09.147Z",
+      "summary": "Returned 5 search results for \"SMU Mustangs 2026 kenpom torvik profile offense defense\".",
+      "result": [
+        {
+          "title": "team - kenpom",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Fteam.php%3Fteam%3DSMU&rut=22311add7ff32fc3ee8390c18e3a19e2d31fe68adb0752f7258a93db2ff61cd8",
+          "snippet": "We would like to show you a description here but the site won&#x27;t allow us."
+        },
+        {
+          "title": "SMU Mustangs 2026 College Football Players Stats - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Fstats%2F_%2Fid%2F2567%2Fseason%2F2026&rut=801f9d1e6cc676cc394c1ccf03d53ddb07ab2c31cf4285d91f9daefd7ca60f49",
+          "snippet": "Get the full Players stats for the 2026 SMU Mustangs on ESPN. Includes team statistics for scoring, passing rushing and offense ."
+        },
+        {
+          "title": "2026 SMU Mustangs Football Depth Chart | Ourlads.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ourlads.com%2Fncaa%2Dfootball%2Ddepth%2Dcharts%2Fdepth%2Dchart%2Fsmu%2F91809&rut=1c63bcca569f7fe720994cc2d639767f39e18ac7fb49f6087634ccdc446abd32",
+          "snippet": "SMU Mustangs Depth Chart (Overall) (Conf.) Standing: 20 Active NFL Players Head Coach: Rhett Lashlee | ACC | University Park, TX | Stadium: Gerald J. Ford Stadium (32,000) | Surface: Shaw Sports Turf -- Select Colleges --"
+        },
+        {
+          "title": "2026 SMU Mustangs football team - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_SMU_Mustangs_football_team&rut=9ab49b8e6e471918855c0643b5e4594ccf860330abd1948308fd6eafd360e05c",
+          "snippet": "The 2026 SMU Mustangs football team will represent Southern Methodist University ( SMU ) as a member of the Atlantic Coast Conference (ACC) during the 2026 NCAA Division I FBS football season."
+        },
+        {
+          "title": "2026-27 SMU Mustangs Football Roster | Latest Players Updates",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportskeeda.com%2Fcollege%2Dfootball%2Fsmu%2Dmustangs%2Dfootball%2Froster&rut=8133e8239da7e31555a773200084a8a126dd52a57ad2c7d01739a002fbc2fc49",
+          "snippet": "2026 -27 SMU Mustangs Football roster for NCAA College Football playing positions - Quarterback, Running Back, Wide Receiver, Tight Ends, Offensive, Defensive Line, Linebackers, Defensive Back ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-idvdeug4",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Miami (OH) RedHawks 2026 kenpom torvik profile offense defense",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:53:09.148Z",
+      "completedAt": "2026-03-17T19:53:09.880Z",
+      "summary": "Returned 5 search results for \"Miami (OH) RedHawks 2026 kenpom torvik profile offense defense\".",
+      "result": [
+        {
+          "title": "Bart Torvik - Verifying Browser...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.barttorvik.com%2F&rut=c7dca4b3c0ff168cb7b6dcf97e019a17aaf1875fa77b1e7f3cdbc4729a20a85f",
+          "snippet": "Explore college basketball ratings, rankings, and statistics with Bart Torvik&#x27;s innovative tools and insights."
+        },
+        {
+          "title": "2026 Pomeroy College Basketball Ratings",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2F&rut=b489c147d49035c2c3fe8d39627f7e85f59539822652487675b5726e088b04c8",
+          "snippet": "02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26"
+        },
+        {
+          "title": "Miami (OH) Rosters - RealGM",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbasketball.realgm.com%2Fncaa%2Fconferences%2FMid%2DAmerican%2DConference%2F25%2FMiami%2DOH%2F178%2FRosters%2F2026&rut=e8b4ecc2189791659cd5ac9e5515137c0ad4e1e7c91c6c1ac4ae50a01e5d9284",
+          "snippet": "Miami (OH) basketball scores, news, schedule, players, stats, photos, rumors, depth charts on RealGM.com"
+        },
+        {
+          "title": "NCAA bracketology 2026: March Madness metrics unsure of eight men&#x27;s teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.jsonline.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F14%2Fmarch%2Dmadness%2Dbracketology%2Dauburn%2Dmiami%2Dohio%2Dnet%2Dkenpom%2F89116763007%2F&rut=f1b400ee6d8da067131024a96a6eda2c96d6940ed9acdb10206419d0316be3d5",
+          "snippet": "The NCAA Evaluation Tool (NET), KenPom , ESPN&#x27;s BPI and the Torvik rankings are the predictive rankings that measure a team&#x27;s strength on its offensive and defensive efficiency, adjusting for ..."
+        },
+        {
+          "title": "Miami (OH)&#x27;s Schedule Predictions for 2026 - puntandrally.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.puntandrally.com%2Fscheduleoutlook.php%3Fgetteam%3DMiami%2520(OH)%26theyear%3D2026&rut=d0c5ba7c8eb56a3c8665df2af9435c8c5d81fa613bed8cfc342f760ac4c100a6",
+          "snippet": "Miami (OH) RedHawks 2026 Schedule (0 - 0) Power Rating: -4.1 (#73) Offense : 6.4 (#91) Defense : 15.5 (#59) Wk Date Game Click on game to view matchup"
+        }
+      ]
+    },
+    {
+      "id": "tool-jpeq1zsx",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://smumustangs.com/news/2026/3/16/mens-basketball-ncaa-first-four-no-11-smu-vs-no-11-miami-oh-wednesday-8-10pm-ct.aspx",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T19:53:12.470Z",
+      "completedAt": "2026-03-17T19:53:13.333Z",
+      "summary": "Fetched https://smumustangs.com/news/2026/3/16/mens-basketball-ncaa-first-four-no-11-smu-vs-no-11-miami-oh-wednesday-8-10pm-ct.aspx and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://smumustangs.com/news/2026/3/16/mens-basketball-ncaa-first-four-no-11-smu-vs-no-11-miami-oh-wednesday-8-10pm-ct.aspx",
+        "text": "NCAA First Four: No. 11 SMU vs No. 11 Miami (OH) | Wednesday 8:10pm CT - SMU Athletics and tags, as close as possible to the opening tag. Creation Date: 09/14/2023 --> Skip To Main Content Pause All Rotators SMU Athletics Skip Ad NIL Main Basketball-M Basketball-M: Facebook Basketball-M: X Basketball-M: Instagram Basketball-M: Tickets Basketball-M: Schedule Basketball-M: Roster Basketball-M: News Basketball-W Basketball-W: Facebook Basketball-W: X Basketball-W: Instagram Basketball-W: Tickets Basketball-W: Schedule Basketball-W: Roster Basketball-W: News Cross Country Cross Country: Facebook Cross Country: X Cross Country: Instagram Cross Country: Schedule Cross Country: Roster Cross Country: News Equestrian Equestrian: Facebook Equestrian: X Equestrian: Instagram Equestrian: Schedule Equestrian: Roster Equestrian: News Football Football: Facebook Football: X Football: Instagram Football: Tickets Football: Schedule Football: Roster Football: News Golf-M Golf-M: Facebook Golf-M: X Golf-M: Instagram Golf-M: Schedule Golf-M: Roster Golf-M: News Golf-W Golf-W: Facebook Golf-W: X Golf-W: Instagram Golf-W: Schedule Golf-W: Roster Golf-W: News Rowing Rowing: Facebook Rowing: X Rowing: Instagram Rowing: Schedule Rowing: Roster Rowing: News Soccer-M Soccer-M: Facebook Soccer-M: X Soccer-M: Instagram Soccer-M: Schedule Soccer-M: Roster Soccer-M: News Soccer-W Soccer-W: Facebook Soccer-W: X Soccer-W: Instagram Soccer-W: Schedule Soccer-W: Roster Soccer-W: News Swimming & Diving-M Swimming & Diving-M: Facebook Swimming & Diving-M: X Swimming & Diving-M: Instagram Swimming & Diving-M: Schedule Swimming & Diving-M: Roster Swimming & Diving-M: News Swimming & Diving-W Swimming & Diving-W: Facebook Swimming & Diving-W: X Swimming & Diving-W: Instagram Swimming & Diving-W: Schedule Swimming & Diving-W: Roster Swimming & Diving-W: News Tennis-M Tennis-M: Facebook Tennis-M: X Tennis-M: Instagram Tennis-M: Schedule Tennis-M: Roster Tennis-M: News Tennis-W Tennis-W: Facebook Tennis-W: X Tennis-W: Instagram Tennis-W: Schedule Tennis-W: Roster Tennis-W: News Track & Field Track & Field: Facebook Track & Field: X Track & Field: Instagram Track & Field: Schedule Track & Field: Roster Track & Field: News Volleyball Volleyball: Facebook Volleyball: X Volleyball: Instagram Volleyball: Tickets Volleyball: Schedule Volleyball: Roster Volleyball: News Buy Tickets Renewal Applications My Account Student Tickets Faculty/Staff Tickets Group Tickets & Experiences SeatGeek - Official Secondary Market Premium Seating Seats for Service Flex Pass Information Season Ticket Holder Benefits Seat Maps & Pricing Facilities & Directions Digital Ticketing Instructions - Downloads & Transfers Parking Info The Boulevard - Tailgating Campus Map Ticket Policies/Will Call Gameday Policies Clear Bag Policy Contact/Hours Ticketing Questions? Official Online Spirit Shop Nike BreakingT - Apparel Shop SMU Collection Commemorative Items Videoboard Messages Panoramic Photos Peruna&#39;s Pals - Kids Club"
+      }
+    },
+    {
+      "id": "tool-sra8uu3q",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/why-miami-ohio-play-first-four-2026-march-madness/72156903bb66ee2a80919d0a",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T19:53:13.333Z",
+      "completedAt": "2026-03-17T19:53:13.661Z",
+      "summary": "Fetched https://www.sportingnews.com/us/ncaa-basketball/news/why-miami-ohio-play-first-four-2026-march-madness/72156903bb66ee2a80919d0a and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/why-miami-ohio-play-first-four-2026-march-madness/72156903bb66ee2a80919d0a",
+        "text": "Why Miami (Ohio) has to play in First Four for 2026 March Madness despite 31-1 record | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch St"
+      }
+    },
+    {
+      "id": "tool-g8ha6wcg",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/374230",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T19:53:13.661Z",
+      "completedAt": "2026-03-17T19:53:14.087Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/matchup/374230 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/374230",
+        "text": "Miami (OH) RedHawks vs SMU Mustangs Game Overview, Stats, Injuries, Records - NCAAB Game on March 18, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Prom"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "ff-midwest-11-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T19:53:03.740Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: ff-midwest-11\nCurrent game label: Midwest 11 play-in\nRound: First Four\nResolved teams: SMU (smu) vs Miami (OH) (miami-oh)\nPrior committed picks: 1"
+    },
+    {
+      "id": "ff-midwest-11-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T19:53:03.740Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"ff-midwest-11\",\n      \"round\": \"First Four\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 11 play-in\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"smu\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"miami-oh\"\n      }\n    },\n    \"slotAName\": \"SMU\",\n    \"slotBName\": \"Miami (OH)\",\n    \"slotATeamId\": \"smu\",\n    \"slotBTeamId\": \"miami-oh\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": 0.62,\n      \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "ff-midwest-11-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:53:06.927Z",
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:06.927Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "smu",
+          "miami-oh"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:06.933Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "smu",
+          "teamName": "SMU",
+          "torvik": {
+            "rank": 42,
+            "team": "SMU",
+            "conf": "ACC",
+            "record": "20-13",
+            "adjoe": 123.05789628875004,
+            "oe Rank": 26,
+            "adjde": 104.92005426722466,
+            "de Rank": 95,
+            "barthag": 0.8622075142248369,
+            "rank.1": 42,
+            "proj. W": 20,
+            "Proj. L": 13,
+            "Pro Con W": 8,
+            "Pro Con L": 10,
+            "Con Rec.": "8-10",
+            "sos": 0.7136795196692461,
+            "ncsos": 0.5406265536344851,
+            "consos": 0.8241969278921899,
+            "Proj. SOS": 0.7136795196692461,
+            "Proj. Noncon SOS": 0.5406265536344851,
+            "Proj. Con SOS": 0.8241969278921899,
+            "elite SOS": 0.6794115124133151,
+            "elite noncon SOS": 0.8182940139013426,
+            "Opp OE": 115.73218801752948,
+            "Opp DE": 104.18467910175706,
+            "Opp Proj. OE": 115.73218801752948,
+            "Opp Proj DE": 104.18467910175706,
+            "Con Adj OE": 124.83208245371084,
+            "Con Adj DE": 106.97518884956202,
+            "Qual O": 121.3384216921116,
+            "Qual D": 104.25991082582892,
+            "Qual Barthag": 0.8512591146769442,
+            "Qual Games": 13,
+            "FUN": -0.0122256489363794,
+            "ConPF": 1451,
+            "ConPA": 1436,
+            "ConPoss": 1243.9375,
+            "ConOE": 1.1664573179922624,
+            "ConDE": 1.154398834346581,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.4444444444444444,
+            "WAB": -0.0665060607190208,
+            "WAB Rk": 47,
+            "Fun Rk": 212,
+            "adjt": 68.6006643233093
+          },
+          "kenpom": {
+            "rank": 42,
+            "team": "SMU",
+            "conf": "ACC",
+            "record": "20-13",
+            "adj_em": 18.11,
+            "adj_o": 123,
+            "adj_o_rank": 27,
+            "adj_d": 104.8,
+            "adj_d_rank": 91,
+            "adj_t": 68.6,
+            "adj_t_rank": 116,
+            "luck": -0.043,
+            "luck_rank": 297,
+            "sos_adj_em": 11.11,
+            "sos_adj_em_rank": 50,
+            "sos_opp_o": 115.7,
+            "sos_opp_o_rank": 43,
+            "sos_opp_d": 104.6,
+            "sos_opp_d_rank": 59,
+            "ncsos_adj_em": 1.2,
+            "ncsos_adj_em_rank": 144
+          }
+        },
+        {
+          "teamId": "miami-oh",
+          "teamName": "Miami (OH)",
+          "torvik": {
+            "rank": 87,
+            "team": "Miami OH",
+            "conf": "MAC",
+            "record": "31-1",
+            "adjoe": 116.64668208678331,
+            "oe Rank": 68,
+            "adjde": 107.5736149275928,
+            "de Rank": 149,
+            "barthag": 0.7173192321312432,
+            "rank.1": 87,
+            "proj. W": 31,
+            "Proj. L": 1,
+            "Pro Con W": 18,
+            "Pro Con L": 0,
+            "Con Rec.": "18-0",
+            "sos": 0.3443607644176513,
+            "ncsos": 0.2254072826930002,
+            "consos": 0.4227119654971394,
+            "Proj. SOS": 0.3443607644176513,
+            "Proj. Noncon SOS": 0.2254072826930002,
+            "Proj. Con SOS": 0.4227119654971394,
+            "elite SOS": 0.9253475572667736,
+            "elite noncon SOS": 0.9523814339565744,
+            "Opp OE": 106.90462438702352,
+            "Opp DE": 112.27004722572066,
+            "Opp Proj. OE": 106.90462438702352,
+            "Opp Proj DE": 112.27004722572066,
+            "Con Adj OE": 117.45010453883177,
+            "Con Adj DE": 107.4944935261387,
+            "Qual O": 0,
+            "Qual D": 0,
+            "Qual Barthag": 0,
+            "Qual Games": 0,
+            "FUN": 0.1706765509859499,
+            "ConPF": 1579,
+            "ConPA": 1401,
+            "ConPoss": 1313.3874999999998,
+            "ConOE": 1.202234679407258,
+            "ConDE": 1.0667072741289223,
+            "ConSOSRemain": 0,
+            "Conf Win%": 1,
+            "WAB": 2.41596096447752,
+            "WAB Rk": 34,
+            "Fun Rk": 1,
+            "adjt": 69.9175801445737
+          },
+          "kenpom": {
+            "rank": 93,
+            "team": "Miami OH",
+            "conf": "MAC",
+            "record": "31-1",
+            "adj_em": 8.25,
+            "adj_o": 116.8,
+            "adj_o_rank": 70,
+            "adj_d": 108.6,
+            "adj_d_rank": 157,
+            "adj_t": 70,
+            "adj_t_rank": 45,
+            "luck": 0.099,
+            "luck_rank": 15,
+            "sos_adj_em": -5.42,
+            "sos_adj_em_rank": 269,
+            "sos_opp_o": 107.2,
+            "sos_opp_o_rank": 262,
+            "sos_opp_d": 112.7,
+            "sos_opp_d_rank": 305,
+            "ncsos_adj_em": -9.96,
+            "ncsos_adj_em_rank": 361
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"smu\",\n      \"teamName\": \"SMU\",\n      \"torvik\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adjoe\": 123.05789628875004,\n        \"oe Rank\": 26,\n        \"adjde\": 104.92005426722466,\n        \"de Rank\": 95\n      },\n      \"kenpom\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adj_em\": 18.11,\n        \"adj_o\": 123,\n        \"adj_o_rank\": 27,\n        \"adj_d\": 104.8\n      }\n    },\n    {\n      \"teamId\": \"miami-oh\",\n      \"teamName\": \"Miami (OH)\",\n      \"torvik\": {\n        \"rank\": 87,\n        \"team\": \"Miami OH\",\n        \"conf\": \"MAC\",\n        \"record\": \"31-1\",\n        \"adjoe\": 116.64668208678331,\n        \"oe Rank\": 68,\n        \"adjde\": 107.5736149275928,\n        \"de Rank\": 149\n      },\n      \"kenpom\": {\n        \"rank\": 93,\n        \"team\": \"Miami OH\",\n        \"conf\": \"MAC\",\n        \"record\": \"31-1\",\n        \"adj_em\": 8.25,\n        \"adj_o\": 116.8,\n        \"adj_o_rank\": 70,\n        \"adj_d\": 108.6\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-11-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:06.933Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "SMU vs Miami (OH) First Four 2026 injury availability",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:07.758Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Miami (OH) vs. SMU (Mar 18, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856436%2Fsmu%2Dmiami%2Doh&rut=a541ef986828bbe933cb014ad4e023943cf71670c5c107a5f1287517a0ad1549",
+          "snippet": "Live coverage of the Miami (OH) RedHawks vs . SMU Mustangs NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "NCAA First Four: No. 11 SMU vs No. 11 Miami (OH) | Wednesday 8:10pm CT",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsmumustangs.com%2Fnews%2F2026%2F3%2F16%2Fmens%2Dbasketball%2Dncaa%2Dfirst%2Dfour%2Dno%2D11%2Dsmu%2Dvs%2Dno%2D11%2Dmiami%2Doh%2Dwednesday%2D8%2D10pm%2Dct.aspx&rut=1cf066815e454feb2ed383f398245d9d64f8838a3e395d42f4387ab3ca99469d",
+          "snippet": "SMU earned a No. 11 seed in the Midwest Region when the pairings for this season&#x27;s NCAA Tournament were announced on Sunday. The Mustangs will play Miami (OH) (31-1) in the First Four on Wednesday at UD Arena in Dayton, Ohio. SMU (20-13) is making its 13th appearance in the tournament and first ..."
+        },
+        {
+          "title": "Miami (OH) RedHawks vs SMU Mustangs Game Overview, Stats, Injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F374230&rut=c913b4248281a733456e03b17d6d35f67f2a89af7b359e8f405d59d2731227f6",
+          "snippet": "Get key insights for Miami (OH) RedHawks vs SMU Mustangs on March 18, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "Why Miami (Ohio) has to play in First Four for 2026 March Madness ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fwhy%2Dmiami%2Dohio%2Dplay%2Dfirst%2Dfour%2D2026%2Dmarch%2Dmadness%2F72156903bb66ee2a80919d0a&rut=183bedb5590c4aa49b0f48b616da3daaf88534f38355d5ba6b1bc22ff7320d1a",
+          "snippet": "Here&#x27;s why the 31-1 Miami (Ohio) RedHawks have to play an additional game before potentially appearing in the Round of 64."
+        },
+        {
+          "title": "Miami-Ohio RedHawks vs SMU Mustangs Odds - Wednesday March 18 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.oddsshark.com%2Fncaab%2Fmiami%2Dohio%2Dsmu%2Dodds%2Dmarch%2D18%2D2026%2D2518329&rut=1a6d38f784a2243b0e25709226228013ceb521920ff7b751b7d1e8e301193e85",
+          "snippet": "Miami -Ohio RedHawks vs SMU Mustangs Odds - Wednesday March 18 2026 . Live betting odds and lines, betting trends, against the spread and over/under trends, injury reports and matchup stats for bettors."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Miami (OH) vs. SMU (Mar 18, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856436%2Fsmu%2Dmiami%2Doh&rut=a541ef986828bbe933cb014ad4e023943cf71670c5c107a5f1287517a0ad1549\",\n      \"snippet\": \"Live coverage of the Miami (OH) RedHawks vs . SMU Mustangs NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"NCAA First Four: No. 11 SMU vs No. 11 Miami (OH) | Wednesday 8:10pm CT\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsmumustangs.com%2Fnews%2F2026%2F3%2F16%2Fmens%2Dbasketball%2Dncaa%2Dfirst%2Dfour%2Dno%2D11%2Dsmu%2Dvs%2Dno%2D11%2Dmiami%2Doh%2Dwednesday%2D8%2D10pm%2Dct.aspx&rut=1cf066815e454feb2ed383f398245d9d64f8838a3e395d42f4387ab3ca99469d\",\n      \"snippet\": \"SMU earned a No. 11 seed in the Midwest Region when the pairings for this season&#x27;s NCAA Tournament were announced on Sunday. The Mustangs will play Miami (OH) (31-1) in the First Four on Wednesday at UD Arena in Dayton, Ohio. SMU (20-13) is making its 13th appearance in the tournament and first ...\"\n    },\n    {\n      \"title\": \"Miami (OH) RedHawks vs SMU Mustangs Game Overview, Stats, Injuries ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F374230&rut=c913b4248281a733456e03b17d6d35f67f2a89af7b359e8f405d59d2731227f6\",\n      \"snippet\": \"Get key insights for Miami (OH) RedHawks vs SMU Mustangs on March 18, 2026 , including season records, injuries, and essential stats to help you make informed bets.\"\n    },\n    {\n      \"title\": \"Why Miami (Ohio) has to play in First Four for 2026 March Madness ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fwhy%2Dmiami%2Dohio%2Dplay%2Dfirst%2Dfour%2D2026%2Dmarch%2Dmadness%2F72156903bb66ee2a80919d0a&rut=183bedb5590c4aa49b0f48b616da3daaf88534f38355d5ba6b1bc22ff7320d1a\",\n      \"snippet\": \"Here&#x27;s why the 31-1 Miami (Ohio) RedHawks have to play an additional game before potentially appearing in the Round of 64.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-11-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:07.758Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "SMU Miami (OH) injury update March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:08.458Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Miami (OH) vs. SMU (Mar 18, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856436%2Fsmu%2Dmiami%2Doh&rut=a541ef986828bbe933cb014ad4e023943cf71670c5c107a5f1287517a0ad1549",
+          "snippet": "Live coverage of the Miami (OH) RedHawks vs. SMU Mustangs NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "SMU vs. Miami (OH) (18 Mar, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856436%2Fsmu%2Dmiami%2Doh&rut=76f54471f0557a8c9867a831a7c349dc635a4166c193dbb75c15e49f6c80e4b9",
+          "snippet": "Live coverage of the SMU Mustangs vs. Miami (OH) RedHawks NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Miami (OH) RedHawks Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F193%2Fmiami%2Doh%2Dredhawks&rut=732b00050dee7cb48033544ab05daf5f912f4816051be0a58882539e29c4838b",
+          "snippet": "Visit ESPN for Miami (OH) RedHawks live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "SMU Mustangs Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2567%2Fsmu%2Dmustangs&rut=0abd6f0003a2b10bbf555fd92ad9510403390564b988bb680587ad2c491b349c",
+          "snippet": "Visit ESPN for SMU Mustangs live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "SMU Mustangs 2026 Regular Season NCAAF Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Fschedule%2F_%2Fid%2F2567&rut=edeaa8203ef1319259ba50a577e593cb5d6f609cae20a2ea2484ec5310dfa8c2",
+          "snippet": "ESPN has the full 2026 SMU Mustangs Regular Season NCAAF schedule. Includes game times, TV listings and ticket information for all Mustangs games."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Miami (OH) vs. SMU (Mar 18, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856436%2Fsmu%2Dmiami%2Doh&rut=a541ef986828bbe933cb014ad4e023943cf71670c5c107a5f1287517a0ad1549\",\n      \"snippet\": \"Live coverage of the Miami (OH) RedHawks vs. SMU Mustangs NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"SMU vs. Miami (OH) (18 Mar, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856436%2Fsmu%2Dmiami%2Doh&rut=76f54471f0557a8c9867a831a7c349dc635a4166c193dbb75c15e49f6c80e4b9\",\n      \"snippet\": \"Live coverage of the SMU Mustangs vs. Miami (OH) RedHawks NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"Miami (OH) RedHawks Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F193%2Fmiami%2Doh%2Dredhawks&rut=732b00050dee7cb48033544ab05daf5f912f4816051be0a58882539e29c4838b\",\n      \"snippet\": \"Visit ESPN for Miami (OH) RedHawks live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"SMU Mustangs Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2567%2Fsmu%2Dmustangs&rut=0abd6f0003a2b10bbf555fd92ad9510403390564b988bb680587ad2c491b349c\",\n      \"snippet\": \"Visit ESPN for SMU Mustangs live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-11-tool-call-0-3",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:08.459Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "SMU Mustangs 2026 kenpom torvik profile offense defense",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-result-0-3",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:09.147Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "team - kenpom",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Fteam.php%3Fteam%3DSMU&rut=22311add7ff32fc3ee8390c18e3a19e2d31fe68adb0752f7258a93db2ff61cd8",
+          "snippet": "We would like to show you a description here but the site won&#x27;t allow us."
+        },
+        {
+          "title": "SMU Mustangs 2026 College Football Players Stats - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Fstats%2F_%2Fid%2F2567%2Fseason%2F2026&rut=801f9d1e6cc676cc394c1ccf03d53ddb07ab2c31cf4285d91f9daefd7ca60f49",
+          "snippet": "Get the full Players stats for the 2026 SMU Mustangs on ESPN. Includes team statistics for scoring, passing rushing and offense ."
+        },
+        {
+          "title": "2026 SMU Mustangs Football Depth Chart | Ourlads.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ourlads.com%2Fncaa%2Dfootball%2Ddepth%2Dcharts%2Fdepth%2Dchart%2Fsmu%2F91809&rut=1c63bcca569f7fe720994cc2d639767f39e18ac7fb49f6087634ccdc446abd32",
+          "snippet": "SMU Mustangs Depth Chart (Overall) (Conf.) Standing: 20 Active NFL Players Head Coach: Rhett Lashlee | ACC | University Park, TX | Stadium: Gerald J. Ford Stadium (32,000) | Surface: Shaw Sports Turf -- Select Colleges --"
+        },
+        {
+          "title": "2026 SMU Mustangs football team - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_SMU_Mustangs_football_team&rut=9ab49b8e6e471918855c0643b5e4594ccf860330abd1948308fd6eafd360e05c",
+          "snippet": "The 2026 SMU Mustangs football team will represent Southern Methodist University ( SMU ) as a member of the Atlantic Coast Conference (ACC) during the 2026 NCAA Division I FBS football season."
+        },
+        {
+          "title": "2026-27 SMU Mustangs Football Roster | Latest Players Updates",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportskeeda.com%2Fcollege%2Dfootball%2Fsmu%2Dmustangs%2Dfootball%2Froster&rut=8133e8239da7e31555a773200084a8a126dd52a57ad2c7d01739a002fbc2fc49",
+          "snippet": "2026 -27 SMU Mustangs Football roster for NCAA College Football playing positions - Quarterback, Running Back, Wide Receiver, Tight Ends, Offensive, Defensive Line, Linebackers, Defensive Back ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"team - kenpom\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Fteam.php%3Fteam%3DSMU&rut=22311add7ff32fc3ee8390c18e3a19e2d31fe68adb0752f7258a93db2ff61cd8\",\n      \"snippet\": \"We would like to show you a description here but the site won&#x27;t allow us.\"\n    },\n    {\n      \"title\": \"SMU Mustangs 2026 College Football Players Stats - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Fstats%2F_%2Fid%2F2567%2Fseason%2F2026&rut=801f9d1e6cc676cc394c1ccf03d53ddb07ab2c31cf4285d91f9daefd7ca60f49\",\n      \"snippet\": \"Get the full Players stats for the 2026 SMU Mustangs on ESPN. Includes team statistics for scoring, passing rushing and offense .\"\n    },\n    {\n      \"title\": \"2026 SMU Mustangs Football Depth Chart | Ourlads.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ourlads.com%2Fncaa%2Dfootball%2Ddepth%2Dcharts%2Fdepth%2Dchart%2Fsmu%2F91809&rut=1c63bcca569f7fe720994cc2d639767f39e18ac7fb49f6087634ccdc446abd32\",\n      \"snippet\": \"SMU Mustangs Depth Chart (Overall) (Conf.) Standing: 20 Active NFL Players Head Coach: Rhett Lashlee | ACC | University Park, TX | Stadium: Gerald J. Ford Stadium (32,000) | Surface: Shaw Sports Turf -- Select Colleges --\"\n    },\n    {\n      \"title\": \"2026 SMU Mustangs football team - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_SMU_Mustangs_football_team&rut=9ab49b8e6e471918855c0643b5e4594ccf860330abd1948308fd6eafd360e05c\",\n      \"snippet\": \"The 2026 SMU Mustangs football team will represent Southern Methodist University ( SMU ) as a member of the Atlantic Coast Conference (ACC) during the 2026 NCAA Division I FBS football season.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-11-tool-call-0-4",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:09.148Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Miami (OH) RedHawks 2026 kenpom torvik profile offense defense",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-result-0-4",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:09.880Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Bart Torvik - Verifying Browser...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.barttorvik.com%2F&rut=c7dca4b3c0ff168cb7b6dcf97e019a17aaf1875fa77b1e7f3cdbc4729a20a85f",
+          "snippet": "Explore college basketball ratings, rankings, and statistics with Bart Torvik&#x27;s innovative tools and insights."
+        },
+        {
+          "title": "2026 Pomeroy College Basketball Ratings",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2F&rut=b489c147d49035c2c3fe8d39627f7e85f59539822652487675b5726e088b04c8",
+          "snippet": "02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26"
+        },
+        {
+          "title": "Miami (OH) Rosters - RealGM",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbasketball.realgm.com%2Fncaa%2Fconferences%2FMid%2DAmerican%2DConference%2F25%2FMiami%2DOH%2F178%2FRosters%2F2026&rut=e8b4ecc2189791659cd5ac9e5515137c0ad4e1e7c91c6c1ac4ae50a01e5d9284",
+          "snippet": "Miami (OH) basketball scores, news, schedule, players, stats, photos, rumors, depth charts on RealGM.com"
+        },
+        {
+          "title": "NCAA bracketology 2026: March Madness metrics unsure of eight men&#x27;s teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.jsonline.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F14%2Fmarch%2Dmadness%2Dbracketology%2Dauburn%2Dmiami%2Dohio%2Dnet%2Dkenpom%2F89116763007%2F&rut=f1b400ee6d8da067131024a96a6eda2c96d6940ed9acdb10206419d0316be3d5",
+          "snippet": "The NCAA Evaluation Tool (NET), KenPom , ESPN&#x27;s BPI and the Torvik rankings are the predictive rankings that measure a team&#x27;s strength on its offensive and defensive efficiency, adjusting for ..."
+        },
+        {
+          "title": "Miami (OH)&#x27;s Schedule Predictions for 2026 - puntandrally.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.puntandrally.com%2Fscheduleoutlook.php%3Fgetteam%3DMiami%2520(OH)%26theyear%3D2026&rut=d0c5ba7c8eb56a3c8665df2af9435c8c5d81fa613bed8cfc342f760ac4c100a6",
+          "snippet": "Miami (OH) RedHawks 2026 Schedule (0 - 0) Power Rating: -4.1 (#73) Offense : 6.4 (#91) Defense : 15.5 (#59) Wk Date Game Click on game to view matchup"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Bart Torvik - Verifying Browser...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.barttorvik.com%2F&rut=c7dca4b3c0ff168cb7b6dcf97e019a17aaf1875fa77b1e7f3cdbc4729a20a85f\",\n      \"snippet\": \"Explore college basketball ratings, rankings, and statistics with Bart Torvik&#x27;s innovative tools and insights.\"\n    },\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2F&rut=b489c147d49035c2c3fe8d39627f7e85f59539822652487675b5726e088b04c8\",\n      \"snippet\": \"02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26\"\n    },\n    {\n      \"title\": \"Miami (OH) Rosters - RealGM\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbasketball.realgm.com%2Fncaa%2Fconferences%2FMid%2DAmerican%2DConference%2F25%2FMiami%2DOH%2F178%2FRosters%2F2026&rut=e8b4ecc2189791659cd5ac9e5515137c0ad4e1e7c91c6c1ac4ae50a01e5d9284\",\n      \"snippet\": \"Miami (OH) basketball scores, news, schedule, players, stats, photos, rumors, depth charts on RealGM.com\"\n    },\n    {\n      \"title\": \"NCAA bracketology 2026: March Madness metrics unsure of eight men&#x27;s teams\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.jsonline.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F14%2Fmarch%2Dmadness%2Dbracketology%2Dauburn%2Dmiami%2Dohio%2Dnet%2Dkenpom%2F89116763007%2F&rut=f1b400ee6d8da067131024a96a6eda2c96d6940ed9acdb10206419d0316be3d5\",\n      \"snippet\": \"The NCAA Evaluation Tool (NET), KenPom , ESPN&#x27;s BPI and the Torvik rankings are the predictive rankings that measure a team&#x27;s strength on its offensive and defensive efficiency, adjusting for ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "ff-midwest-11-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:53:12.470Z",
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:12.470Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://smumustangs.com/news/2026/3/16/mens-basketball-ncaa-first-four-no-11-smu-vs-no-11-miami-oh-wednesday-8-10pm-ct.aspx",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:13.333Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://smumustangs.com/news/2026/3/16/mens-basketball-ncaa-first-four-no-11-smu-vs-no-11-miami-oh-wednesday-8-10pm-ct.aspx",
+        "text": "NCAA First Four: No. 11 SMU vs No. 11 Miami (OH) | Wednesday 8:10pm CT - SMU Athletics and tags, as close as possible to the opening tag. Creation Date: 09/14/2023 --> Skip To Main Content Pause All Rotators SMU Athletics Skip Ad NIL Main Basketball-M Basketball-M: Facebook Basketball-M: X Basketball-M: Instagram Basketball-M: Tickets Basketball-M: Schedule Basketball-M: Roster Basketball-M: News Basketball-W Basketball-W: Facebook Basketball-W: X Basketball-W: Instagram Basketball-W: Tickets Basketball-W: Schedule Basketball-W: Roster Basketball-W: News Cross Country Cross Country: Facebook Cross Country: X Cross Country: Instagram Cross Country: Schedule Cross Country: Roster Cross Country: News Equestrian Equestrian: Facebook Equestrian: X Equestrian: Instagram Equestrian: Schedule Equestrian: Roster Equestrian: News Football Football: Facebook Football: X Football: Instagram Football: Tickets Football: Schedule Football: Roster Football: News Golf-M Golf-M: Facebook Golf-M: X Golf-M: Instagram Golf-M: Schedule Golf-M: Roster Golf-M: News Golf-W Golf-W: Facebook Golf-W: X Golf-W: Instagram Golf-W: Schedule Golf-W: Roster Golf-W: News Rowing Rowing: Facebook Rowing: X Rowing: Instagram Rowing: Schedule Rowing: Roster Rowing: News Soccer-M Soccer-M: Facebook Soccer-M: X Soccer-M: Instagram Soccer-M: Schedule Soccer-M: Roster Soccer-M: News Soccer-W Soccer-W: Facebook Soccer-W: X Soccer-W: Instagram Soccer-W: Schedule Soccer-W: Roster Soccer-W: News Swimming & Diving-M Swimming & Diving-M: Facebook Swimming & Diving-M: X Swimming & Diving-M: Instagram Swimming & Diving-M: Schedule Swimming & Diving-M: Roster Swimming & Diving-M: News Swimming & Diving-W Swimming & Diving-W: Facebook Swimming & Diving-W: X Swimming & Diving-W: Instagram Swimming & Diving-W: Schedule Swimming & Diving-W: Roster Swimming & Diving-W: News Tennis-M Tennis-M: Facebook Tennis-M: X Tennis-M: Instagram Tennis-M: Schedule Tennis-M: Roster Tennis-M: News Tennis-W Tennis-W: Facebook Tennis-W: X Tennis-W: Instagram Tennis-W: Schedule Tennis-W: Roster Tennis-W: News Track & Field Track & Field: Facebook Track & Field: X Track & Field: Instagram Track & Field: Schedule Track & Field: Roster Track & Field: News Volleyball Volleyball: Facebook Volleyball: X Volleyball: Instagram Volleyball: Tickets Volleyball: Schedule Volleyball: Roster Volleyball: News Buy Tickets Renewal Applications My Account Student Tickets Faculty/Staff Tickets Group Tickets & Experiences SeatGeek - Official Secondary Market Premium Seating Seats for Service Flex Pass Information Season Ticket Holder Benefits Seat Maps & Pricing Facilities & Directions Digital Ticketing Instructions - Downloads & Transfers Parking Info The Boulevard - Tailgating Campus Map Ticket Policies/Will Call Gameday Policies Clear Bag Policy Contact/Hours Ticketing Questions? Official Online Spirit Shop Nike BreakingT - Apparel Shop SMU Collection Commemorative Items Videoboard Messages Panoramic Photos Peruna&#39;s Pals - Kids Club"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://smumustangs.com/news/2026/3/16/mens-basketball-ncaa-first-four-no-11-smu-vs-no-11-miami-oh-wednesday-8-10pm-ct.aspx\",\n    \"text\": \"NCAA First Four: No. 11 SMU vs No. 11 Miami (OH) | Wednesday 8:10pm CT - SMU Athletics and tags, as close as possible to the opening tag. Creation Date: 09/14/2023 --> Skip To Main Content Pause All Rotators SMU Athletics Skip Ad NIL Main Basketball-M Basketball-M: Facebook Basketball-M: X Basketball-M: Instagram Basketball-M: Tickets Basketball-M: Schedule Basketball-M: Roster Basketball-M: News Basketball-W Basketball-W: Facebook Basketball-W: X Basketball-W: Instagram Basketball-W: Tickets Basketball-W: Schedule Basketball-W: Roster Basketball-W: News Cross Country Cross Country: Facebook Cross Country: X Cross Country: Instagram Cross Country: Schedule Cross Country: Roster Cross Country: News Equestrian Equestrian: Facebook Equestrian: X Equestrian: Instagram Equestrian: Schedule Equestrian: Roster Equestrian: News Football Football: Facebook Football: X Football: Instagram Football: Tickets Football: Schedule Football: Roster Football: News Golf-M Golf-M: Facebook Golf-M: X Golf-M: Instagram Golf-M: Schedule Golf-M: Roster Golf-M: News Golf-W Golf-W: Facebook Golf-W: X Golf-W: Instagram Golf-W: Schedule Golf-W: Roster Golf-W: News Rowing Rowing: Facebook Rowing: X Rowing: Ins... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-11-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:13.333Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/why-miami-ohio-play-first-four-2026-march-madness/72156903bb66ee2a80919d0a",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:13.661Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/why-miami-ohio-play-first-four-2026-march-madness/72156903bb66ee2a80919d0a",
+        "text": "Why Miami (Ohio) has to play in First Four for 2026 March Madness despite 31-1 record | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch St"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/why-miami-ohio-play-first-four-2026-march-madness/72156903bb66ee2a80919d0a\",\n    \"text\": \"Why Miami (Ohio) has to play in First Four for 2026 March Madness despite 31-1 record | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charl... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-11-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:53:13.661Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/374230",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "ff-midwest-11-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:53:14.087Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/374230",
+        "text": "Miami (OH) RedHawks vs SMU Mustangs Game Overview, Stats, Injuries, Records - NCAAB Game on March 18, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Prom"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/matchup/374230\",\n    \"text\": \"Miami (OH) RedHawks vs SMU Mustangs Game Overview, Stats, Injuries, Records - NCAAB Game on March 18, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sports... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-11-assistant-final-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:53:20.970Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"ff-midwest-11\",\n    \"winnerId\": \"smu\",\n    \"confidence\": 0.66,\n    \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"ff-midwest-11-analysis\",\n    \"title\": \"Lean to SMU on efficiency edge and higher baseline quality\",\n    \"summary\": \"Both major predictive ratings favor SMU by a meaningful margin, suggesting SMU’s offense should be the best unit on the floor and enough to survive Miami (OH)’s upset variance.\",\n    \"evidence\": \"Ratings: SMU KenPom #42 (AdjEM 18.11; AdjO 123 #27; AdjD 104.8) and Torvik #42 (OE rank 26, DE rank 95) vs Miami (OH) KenPom #93 (AdjEM 8.25; AdjO 116.8 #70; AdjD 108.6) and Torvik #87 (OE rank 68, DE rank 149). News/injuries: no specific major availability issues were identified in quick ESPN/web checks for the matchup.\"\n  }\n}"
+    },
+    {
+      "id": "ff-midwest-11-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T19:53:24.993Z",
+      "content": "{\"pick\":{\"gameId\":\"ff-midwest-11\",\"winnerId\":\"smu\",\"confidence\":0.66,\"rationale\":\"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"},\"reasoningStep\":{\"id\":\"ff-midwest-11-analysis\",\"title\":\"Lean to SMU on efficiency edge and higher baseline quality\",\"summary\":\"Both major predictive ratings favor SMU by a meaningful margin, suggesting SMU’s offense should be the best unit on the floor and enough to survive Miami (OH)’s upset variance.\",\"evidence\":[\"Ratings: SMU KenPom #42 (AdjEM 18.11; AdjO 123 #27; AdjD 104.8) and Torvik #42 (OE rank 26, DE rank 95) vs Miami (OH) KenPom #93 (AdjEM 8.25; AdjO 116.8 #70; AdjD 108.6) and Torvik #87 (OE rank 68, DE rank 149).\",\"News/injuries: no specific major availability issues were identified in quick ESPN/web checks for the matchup.\"]}}"
+    }
+  ]
+}

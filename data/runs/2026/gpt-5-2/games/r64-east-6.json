@@ -1,0 +1,642 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-east-6",
+  "generatedAt": "2026-03-17T19:56:50.686Z",
+  "pick": {
+    "gameId": "r64-east-6",
+    "winnerId": "michigan-state",
+    "confidence": 0.9,
+    "rationale": "Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average."
+  },
+  "reasoningStep": {
+    "id": "r64-east-6-analysis",
+    "title": "East 3/14: Michigan State over North Dakota State",
+    "summary": "Back the 3-seed’s two-way floor and depth; NDSU needs a hot-shooting, low-turnover game to spring the upset.",
+    "evidence": [
+      "Local combined KenPom/Torvik lookup returned null for both teams in the available file, so the pick leans on seed-quality priors and matchup dynamics rather than a specific rating edge.",
+      "Web/ESPN quick scans did not surface a concrete Michigan State injury/availability issue that would materially change the baseline expectation.",
+      "Upset risk is acknowledged via NDSU’s plausible variance-based path (3-point shooting + turnover margin), but Michigan State’s physicality, rebounding, and defensive consistency provide more stable win conditions."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-x3ol1wvl",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "michigan-state",
+          "north-dakota-state"
+        ]
+      },
+      "startedAt": "2026-03-17T19:56:27.363Z",
+      "completedAt": "2026-03-17T19:56:27.370Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "michigan-state",
+          "teamName": "Michigan State",
+          "torvik": null,
+          "kenpom": null
+        },
+        {
+          "teamId": "north-dakota-state",
+          "teamName": "North Dakota State",
+          "torvik": null,
+          "kenpom": null
+        }
+      ]
+    },
+    {
+      "id": "tool-o29zucvo",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Michigan State vs North Dakota State injury report availability March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:56:27.370Z",
+      "completedAt": "2026-03-17T19:56:28.268Z",
+      "summary": "Returned 5 search results for \"Michigan State vs North Dakota State injury report availability March 2026 NCAA tournament\".",
+      "result": [
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "MSU&#x27;s Izzo on right March Madness ingredients, North Dakota State",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmsus%2Dizzo%2Don%2Dright%2Dmarch%2Dmadness%2Dingredients%2Dnorth%2Ddakota%2Dstate%2Far%2DAA1YKOk1&rut=788897754f796b6c71aa8323ef4f69250018b73001284e69605a6df5bdf92d4d",
+          "snippet": "The third-seeded Spartans (25-7) are set to do battle against No. 14 seed North Dakota State (27-7) on Thursday evening (4:05 p.m. ET, TNT) during the first round of the NCAA Tournament ."
+        },
+        {
+          "title": "First look at North Dakota State, Michigan State&#x27;s opening NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mlive.com%2Fspartans%2Fbasketball%2F2026%2F03%2Ffirst%2Dlook%2Dat%2Dnorth%2Ddakota%2Dstate%2Dmichigan%2Dstates%2Dopening%2Dncaa%2Dtournament%2Dopponent.html&rut=7bf4fa1d50c68bc5592a2218640c88b7f47ac92a35ebb40b7b263704884e896a",
+          "snippet": "Michigan State men&#x27;s basketball will start its NCAA Tournament experience going up against a team having a program-best season. After their early exit in the Big Ten Tournament , the Spartans ..."
+        },
+        {
+          "title": "North Dakota State Bison vs Michigan State Spartans Game Overview ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829&rut=58a2949e1a30f746e763f7423b190dd4c11e9e700a633135cb3f536a93886952",
+          "snippet": "Get key insights for North Dakota State Bison vs Michigan State Spartans on March 19, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "March Madness Picks: Michigan State vs. North Dakota State Prediction",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fvsin.com%2Fcollege%2Dbasketball%2Fmichigan%2Dstate%2Dvs%2Dnorth%2Ddakota%2Dstate%2Dncaa%2Dtournament%2Deast%2Dregion%2Dno%2D3%2Dvs%2Dno%2D14%2Dmarch%2Dmadness%2Dpreview%2F&rut=3d6712750e3fd93ae0a8454740a887c025983c4eb8a28c61d680a9fe4e76d750",
+          "snippet": "College basketball betting odds, March Madness preview and NCAA Tournament prediction for Michigan State vs . North Dakota State on Thursday, March 19th."
+        }
+      ]
+    },
+    {
+      "id": "tool-q1d0rgu7",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Dakota State Bison key players 2025-26 season efficiency 3-point rate turnover",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:56:28.268Z",
+      "completedAt": "2026-03-17T19:56:28.967Z",
+      "summary": "Returned 5 search results for \"North Dakota State Bison key players 2025-26 season efficiency 3-point rate turnover\".",
+      "result": [
+        {
+          "title": "2025 Football Cumulative Statistics - NDSU",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgobison.com%2Fsports%2Ffootball%2Fstats%2F2025&rut=ff166125d42d46306acac74ed474d2f4f28161c8fa2f635fb3ee674aafe6d3a6",
+          "snippet": "The official 2025 Football cumulative statistics for the North Dakota State Bison"
+        },
+        {
+          "title": "North Dakota State Bison 2025 College Football Players Stats - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fcollege%2Dfootball%2Fteam%2Fstats%2F_%2Fname%2Fndsu%2Fsort%2FfieldGoalPct&rut=4ba533d0d1a5192a894ceeb70b6acef6455abd17dbcd7dbe2e05625bf30671cf",
+          "snippet": "Get the full Players stats for the 2025 North Dakota State Bison on ESPN (UK). Includes team statistics for scoring, passing rushing and offense."
+        },
+        {
+          "title": "2025 North Dakota State Bison football team - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025_North_Dakota_State_Bison_football_team&rut=d5bfda87938b471e12ad9442d8c05422a85e74808f631e77a4826a60e78ffce1",
+          "snippet": "The 2025 North Dakota State Bison football team represented North Dakota State University as a member of the Missouri Valley Football Conference (MVFC) during the 2025 NCAA Division I FCS football season . The Bison were led by second-year head coach Tim Polasek and played home games at the Fargodome in Fargo, North Dakota ."
+        },
+        {
+          "title": "North Dakota State Bison Stats and Team Leaders 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dfootball%2Fteams%2FNDST%2Fnorth%2Ddakota%2Dstate%2Dbison%2Fstats%2F&rut=0ba0330bc61441e1cb846f112038acd10bd9797cbd33e1b8c965083ba3b67fb6",
+          "snippet": "Find official stats for the North Dakota State Bison and view team stat leaders for the 2025 College Football season on CBS Sports."
+        },
+        {
+          "title": "North Dakota State Bison Football Depth Chart, Transfers and Commits ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Flogic.nextgenprospect.com%2Fteams%2Fnorth%2Ddakota%2Dstate%2Fdepth_chart&rut=a4722539b41d1e7f2b86d048ad58616cdf78f20105c99468c6ff197e7500f235",
+          "snippet": "Unlock the North Dakota State Bison college football depth chart at NextGen, including position groups and player stacks, transfers, high school commits & participation metrics."
+        }
+      ]
+    },
+    {
+      "id": "tool-vfd4b327",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Michigan State injuries availability March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:56:28.967Z",
+      "completedAt": "2026-03-17T19:56:29.017Z",
+      "summary": "Returned 0 search results for \"Michigan State injuries availability March 2026\".",
+      "result": []
+    },
+    {
+      "id": "tool-e4otrn1a",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.mlive.com/spartans/basketball/2026/03/first-look-at-north-dakota-state-michigan-states-opening-ncaa-tournament-opponent.html",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T19:56:32.690Z",
+      "completedAt": "2026-03-17T19:56:33.010Z",
+      "summary": "fetch_webpage failed: 403 <html lang=\"en\"><head><title>mlive.com</title><style>#cmsg{animation: A 1.5s;}@keyframes A{0%{opacity:0;}99%{opacity:0;}100%{opacity:1;}}</style></head><body style=\"margin:0\"><p id=\"cmsg\">Please enable JS and disable any ad blocker</p><script data-cfasync=\"false\">var dd={'rt':'i','cid':'AHrlqAAAAAMAcchrjRRFDr4A8vEOhQ==','hsh':'1008AE3795DD2B2EA48B1645AD17E2','b':2070527,'s':58364,'e':'72bfcc8f84cfdb561884171f0674dd92a74a9690b16379afc336438fae6ed2d477d6f334c708495cddb15520a5af97e6','qp':'','host':'geo.captcha-delivery.com','cookie':'nFcxvAH9X2rfvj0kIPRLDYOt2BSVQ_nVqr3b0PIaO8_qfIWrgPO0s3cyLJ31NspPw3j0YyXpgIYSVP9aAkAoJh4BGDW77qjKQUnCE7G0uuJbpdSdaSCy14XKrTRbUw~I'}</script><script data-cfasync=\"false\" src=\"https://ct.captcha-delivery.com/i.js\"></script></body></html>",
+      "result": {
+        "error": "fetch_webpage failed: 403 <html lang=\"en\"><head><title>mlive.com</title><style>#cmsg{animation: A 1.5s;}@keyframes A{0%{opacity:0;}99%{opacity:0;}100%{opacity:1;}}</style></head><body style=\"margin:0\"><p id=\"cmsg\">Please enable JS and disable any ad blocker</p><script data-cfasync=\"false\">var dd={'rt':'i','cid':'AHrlqAAAAAMAcchrjRRFDr4A8vEOhQ==','hsh':'1008AE3795DD2B2EA48B1645AD17E2','b':2070527,'s':58364,'e':'72bfcc8f84cfdb561884171f0674dd92a74a9690b16379afc336438fae6ed2d477d6f334c708495cddb15520a5af97e6','qp':'','host':'geo.captcha-delivery.com','cookie':'nFcxvAH9X2rfvj0kIPRLDYOt2BSVQ_nVqr3b0PIaO8_qfIWrgPO0s3cyLJ31NspPw3j0YyXpgIYSVP9aAkAoJh4BGDW77qjKQUnCE7G0uuJbpdSdaSCy14XKrTRbUw~I'}</script><script data-cfasync=\"false\" src=\"https://ct.captcha-delivery.com/i.js\"></script></body></html>"
+      }
+    },
+    {
+      "id": "tool-a9wga8sz",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T19:56:33.010Z",
+      "completedAt": "2026-03-17T19:56:33.797Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/matchup/376829 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829",
+        "text": "North Dakota State Bison vs Michigan State Spartans Game Overview, Stats, Injuries, Records - NCAAB Game on March 19, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo C"
+      }
+    },
+    {
+      "id": "tool-3ec8o3nk",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T19:56:33.797Z",
+      "completedAt": "2026-03-17T19:56:33.938Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      }
+    },
+    {
+      "id": "tool-pwdn9m3o",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.msn.com/en-us/sports/other/msus-izzo-on-right-march-madness-ingredients-north-dakota-state/ar-AA1YKOk1",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T19:56:33.938Z",
+      "completedAt": "2026-03-17T19:56:34.060Z",
+      "summary": "Fetched https://www.msn.com/en-us/sports/other/msus-izzo-on-right-march-madness-ingredients-north-dakota-state/ar-AA1YKOk1 and extracted 3 characters of text.",
+      "result": {
+        "url": "https://www.msn.com/en-us/sports/other/msus-izzo-on-right-march-madness-ingredients-north-dakota-state/ar-AA1YKOk1",
+        "text": "MSN"
+      }
+    },
+    {
+      "id": "tool-2qqoh0x9",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Covers matchup 376829 Michigan State North Dakota State spread total",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:56:35.252Z",
+      "completedAt": "2026-03-17T19:56:36.071Z",
+      "summary": "Returned 5 search results for \"Covers matchup 376829 Michigan State North Dakota State spread total\".",
+      "result": [
+        {
+          "title": "North Dakota State @ Michigan State Odds - Covers.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829%2Fodds&rut=235356fbe72cb5dbec8754b31545bf94edc44aa9480e19ced5c9280fcd50fc53",
+          "snippet": "North Dakota State Bison vs Michigan State Spartans NCAAB Odds For March 19, 2026: Check The Latest Betting Lines On Spread , Total , And Moneyline!"
+        },
+        {
+          "title": "North Dakota State @ Michigan State Game Overview - Covers.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829&rut=58a2949e1a30f746e763f7423b190dd4c11e9e700a633135cb3f536a93886952",
+          "snippet": "Get key insights for North Dakota State Bison vs Michigan State Spartans on March 19, 2026, including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "North Dakota State Bison vs Michigan State Spartans Prediction, Picks ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829%2Fpicks&rut=ecca28a5e87131a9b7a7acc19ebd541aa38a505b4008efe6dfaf8eceb2c08652",
+          "snippet": "North Dakota State Bison vs Michigan State Spartans Prediction, Picks And Prop Bets : Get expert insights, best bets, and key stats for the NCAAB matchup on March 19, 2026."
+        },
+        {
+          "title": "North Dakota State vs North Dakota Prediction, Picks & Odds for Today&#x27;s ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fncaab%2Fnorth%2Ddakota%2Dstate%2Dvs%2Dnorth%2Ddakota%2Dpredictions%2Dpicks%2Dodds%2Dsunday%2D3%2D8%2D2026&rut=03db7a35aa1d8c1be66efa3fa9148fc0270f8a4ab22a11e726a8bc4b61b6d424",
+          "snippet": "Our North Dakota State vs. North Dakota predictions side with the streaking underdog Fighting Hawks against their state rivals."
+        },
+        {
+          "title": "North Dakota State vs Michigan State odds for March Madness betting",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.azcentral.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F15%2Fnorth%2Ddakota%2Dstate%2Dmichigan%2Dstate%2Dodds%2Dncaa%2Dtournament%2Dbracket%2Dbetting%2F88440405007%2F&rut=8e0943b2c3f1a7fd12907ab68958fdf991ac997d42dd4d47a12646e38a4bb1b6",
+          "snippet": "March Madness odds for Michigan State vs North Dakota State NCAA Tournament first-round game, with point spread , moneyline, over/under on March 19."
+        }
+      ]
+    },
+    {
+      "id": "tool-zjk1ms5g",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829/odds",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T19:56:37.682Z",
+      "completedAt": "2026-03-17T19:56:39.039Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/matchup/376829/odds and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829/odds",
+        "text": "North Dakota State Bison vs Michigan State Spartans Odds & Betting Lines For March 19, 2026 - NCAAB Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code "
+      }
+    },
+    {
+      "id": "tool-ko2lq9ww",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829/picks",
+        "maxChars": 12000
+      },
+      "startedAt": "2026-03-17T19:56:39.039Z",
+      "completedAt": "2026-03-17T19:56:39.611Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/matchup/376829/picks and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829/picks",
+        "text": "North Dakota State Bison vs Michigan State Spartans Prediction, Picks, Prop Bets For March 19, 2026 - NCAAB Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Pro"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-east-6-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T19:56:24.761Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-east-6\nCurrent game label: East 3/14\nRound: Round of 64\nResolved teams: Michigan State (michigan-state) vs North Dakota State (north-dakota-state)\nPrior committed picks: 9"
+    },
+    {
+      "id": "r64-east-6-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T19:56:24.761Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-east-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"michigan-state\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"north-dakota-state\"\n      }\n    },\n    \"slotAName\": \"Michigan State\",\n    \"slotBName\": \"North Dakota State\",\n    \"slotATeamId\": \"michigan-state\",\n    \"slotBTeamId\": \"north-dakota-state\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": 0.62,\n      \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": 0.66,\n      \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-16\",\n      \"winnerId\": \"umbc\",\n      \"confidence\": 0.58,\n      \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n    },\n    {\n      \"gameId\": \"ff-south-16\",\n      \"winnerId\": \"lehigh\",\n      \"confidence\": 0.56,\n      \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n    },\n    {\n      \"gameId\": \"r64-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.97,\n      \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n    },\n    {\n      \"gameId\": \"r64-east-2\",\n      \"winnerId\": \"tcu\",\n      \"confidence\": 0.6,\n      \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n    },\n    {\n      \"gameId\": \"r64-east-3\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 0.74,\n      \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n    },\n    {\n      \"gameId\": \"r64-east-4\",\n      \"winnerId\": \"kansas\",\n      \"confidence\": 0.86,\n      \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n    },\n    {\n      \"gameId\": \"r64-east-5\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.73,\n      \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-east-6-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:56:27.363Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:27.363Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "michigan-state",
+          "north-dakota-state"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:27.370Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "michigan-state",
+          "teamName": "Michigan State",
+          "torvik": null,
+          "kenpom": null
+        },
+        {
+          "teamId": "north-dakota-state",
+          "teamName": "North Dakota State",
+          "torvik": null,
+          "kenpom": null
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"michigan-state\",\n      \"teamName\": \"Michigan State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"north-dakota-state\",\n      \"teamName\": \"North Dakota State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-6-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:27.370Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Michigan State vs North Dakota State injury report availability March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:28.268Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "MSU&#x27;s Izzo on right March Madness ingredients, North Dakota State",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmsus%2Dizzo%2Don%2Dright%2Dmarch%2Dmadness%2Dingredients%2Dnorth%2Ddakota%2Dstate%2Far%2DAA1YKOk1&rut=788897754f796b6c71aa8323ef4f69250018b73001284e69605a6df5bdf92d4d",
+          "snippet": "The third-seeded Spartans (25-7) are set to do battle against No. 14 seed North Dakota State (27-7) on Thursday evening (4:05 p.m. ET, TNT) during the first round of the NCAA Tournament ."
+        },
+        {
+          "title": "First look at North Dakota State, Michigan State&#x27;s opening NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mlive.com%2Fspartans%2Fbasketball%2F2026%2F03%2Ffirst%2Dlook%2Dat%2Dnorth%2Ddakota%2Dstate%2Dmichigan%2Dstates%2Dopening%2Dncaa%2Dtournament%2Dopponent.html&rut=7bf4fa1d50c68bc5592a2218640c88b7f47ac92a35ebb40b7b263704884e896a",
+          "snippet": "Michigan State men&#x27;s basketball will start its NCAA Tournament experience going up against a team having a program-best season. After their early exit in the Big Ten Tournament , the Spartans ..."
+        },
+        {
+          "title": "North Dakota State Bison vs Michigan State Spartans Game Overview ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829&rut=58a2949e1a30f746e763f7423b190dd4c11e9e700a633135cb3f536a93886952",
+          "snippet": "Get key insights for North Dakota State Bison vs Michigan State Spartans on March 19, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "March Madness Picks: Michigan State vs. North Dakota State Prediction",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fvsin.com%2Fcollege%2Dbasketball%2Fmichigan%2Dstate%2Dvs%2Dnorth%2Ddakota%2Dstate%2Dncaa%2Dtournament%2Deast%2Dregion%2Dno%2D3%2Dvs%2Dno%2D14%2Dmarch%2Dmadness%2Dpreview%2F&rut=3d6712750e3fd93ae0a8454740a887c025983c4eb8a28c61d680a9fe4e76d750",
+          "snippet": "College basketball betting odds, March Madness preview and NCAA Tournament prediction for Michigan State vs . North Dakota State on Thursday, March 19th."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA .\"\n    },\n    {\n      \"title\": \"MSU&#x27;s Izzo on right March Madness ingredients, North Dakota State\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmsus%2Dizzo%2Don%2Dright%2Dmarch%2Dmadness%2Dingredients%2Dnorth%2Ddakota%2Dstate%2Far%2DAA1YKOk1&rut=788897754f796b6c71aa8323ef4f69250018b73001284e69605a6df5bdf92d4d\",\n      \"snippet\": \"The third-seeded Spartans (25-7) are set to do battle against No. 14 seed North Dakota State (27-7) on Thursday evening (4:05 p.m. ET, TNT) during the first round of the NCAA Tournament .\"\n    },\n    {\n      \"title\": \"First look at North Dakota State, Michigan State&#x27;s opening NCAA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mlive.com%2Fspartans%2Fbasketball%2F2026%2F03%2Ffirst%2Dlook%2Dat%2Dnorth%2Ddakota%2Dstate%2Dmichigan%2Dstates%2Dopening%2Dncaa%2Dtournament%2Dopponent.html&rut=7bf4fa1d50c68bc5592a2218640c88b7f47ac92a35ebb40b7b263704884e896a\",\n      \"snippet\": \"Michigan State men&#x27;s basketball will start its NCAA Tournament experience going up against a team having a program-best season. After their early exit in the Big Ten Tournament , the Spartans ...\"\n    },\n    {\n      \"title\": \"North Dakota State Bison vs Michigan State Spartans Game Overview ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829&rut=58a2949e1a30f746e763f7423b190dd4c11e9e700a633135cb3f536a93886952\",\n      \"snippet\": \"Get key insights for North Dakota State Bison vs Michigan State Spartans on March 19, 2026 , including season records, injuries, and essential stats to help you make informed bets.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-6-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:28.268Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Dakota State Bison key players 2025-26 season efficiency 3-point rate turnover",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:28.967Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2025 Football Cumulative Statistics - NDSU",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgobison.com%2Fsports%2Ffootball%2Fstats%2F2025&rut=ff166125d42d46306acac74ed474d2f4f28161c8fa2f635fb3ee674aafe6d3a6",
+          "snippet": "The official 2025 Football cumulative statistics for the North Dakota State Bison"
+        },
+        {
+          "title": "North Dakota State Bison 2025 College Football Players Stats - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fcollege%2Dfootball%2Fteam%2Fstats%2F_%2Fname%2Fndsu%2Fsort%2FfieldGoalPct&rut=4ba533d0d1a5192a894ceeb70b6acef6455abd17dbcd7dbe2e05625bf30671cf",
+          "snippet": "Get the full Players stats for the 2025 North Dakota State Bison on ESPN (UK). Includes team statistics for scoring, passing rushing and offense."
+        },
+        {
+          "title": "2025 North Dakota State Bison football team - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025_North_Dakota_State_Bison_football_team&rut=d5bfda87938b471e12ad9442d8c05422a85e74808f631e77a4826a60e78ffce1",
+          "snippet": "The 2025 North Dakota State Bison football team represented North Dakota State University as a member of the Missouri Valley Football Conference (MVFC) during the 2025 NCAA Division I FCS football season . The Bison were led by second-year head coach Tim Polasek and played home games at the Fargodome in Fargo, North Dakota ."
+        },
+        {
+          "title": "North Dakota State Bison Stats and Team Leaders 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dfootball%2Fteams%2FNDST%2Fnorth%2Ddakota%2Dstate%2Dbison%2Fstats%2F&rut=0ba0330bc61441e1cb846f112038acd10bd9797cbd33e1b8c965083ba3b67fb6",
+          "snippet": "Find official stats for the North Dakota State Bison and view team stat leaders for the 2025 College Football season on CBS Sports."
+        },
+        {
+          "title": "North Dakota State Bison Football Depth Chart, Transfers and Commits ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Flogic.nextgenprospect.com%2Fteams%2Fnorth%2Ddakota%2Dstate%2Fdepth_chart&rut=a4722539b41d1e7f2b86d048ad58616cdf78f20105c99468c6ff197e7500f235",
+          "snippet": "Unlock the North Dakota State Bison college football depth chart at NextGen, including position groups and player stacks, transfers, high school commits & participation metrics."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025 Football Cumulative Statistics - NDSU\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgobison.com%2Fsports%2Ffootball%2Fstats%2F2025&rut=ff166125d42d46306acac74ed474d2f4f28161c8fa2f635fb3ee674aafe6d3a6\",\n      \"snippet\": \"The official 2025 Football cumulative statistics for the North Dakota State Bison\"\n    },\n    {\n      \"title\": \"North Dakota State Bison 2025 College Football Players Stats - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fcollege%2Dfootball%2Fteam%2Fstats%2F_%2Fname%2Fndsu%2Fsort%2FfieldGoalPct&rut=4ba533d0d1a5192a894ceeb70b6acef6455abd17dbcd7dbe2e05625bf30671cf\",\n      \"snippet\": \"Get the full Players stats for the 2025 North Dakota State Bison on ESPN (UK). Includes team statistics for scoring, passing rushing and offense.\"\n    },\n    {\n      \"title\": \"2025 North Dakota State Bison football team - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025_North_Dakota_State_Bison_football_team&rut=d5bfda87938b471e12ad9442d8c05422a85e74808f631e77a4826a60e78ffce1\",\n      \"snippet\": \"The 2025 North Dakota State Bison football team represented North Dakota State University as a member of the Missouri Valley Football Conference (MVFC) during the 2025 NCAA Division I FCS football season . The Bison were led by second-year head coach Tim Polasek and played home games at the Fargodome in Fargo, North Dakota .\"\n    },\n    {\n      \"title\": \"North Dakota State Bison Stats and Team Leaders 2025-26\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dfootball%2Fteams%2FNDST%2Fnorth%2Ddakota%2Dstate%2Dbison%2Fstats%2F&rut=0ba0330bc61441e1cb846f112038acd10bd9797cbd33e1b8c965083ba3b67fb6\",\n      \"snippet\": \"Find official stats for the North Dakota State Bison and view team stat leaders for the 2025 College Football season on CBS Sports.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-6-tool-call-0-3",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:28.967Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Michigan State injuries availability March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-0-3",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:29.017Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-east-6-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:56:32.690Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:32.690Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.mlive.com/spartans/basketball/2026/03/first-look-at-north-dakota-state-michigan-states-opening-ncaa-tournament-opponent.html",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:33.010Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "error": "fetch_webpage failed: 403 <html lang=\"en\"><head><title>mlive.com</title><style>#cmsg{animation: A 1.5s;}@keyframes A{0%{opacity:0;}99%{opacity:0;}100%{opacity:1;}}</style></head><body style=\"margin:0\"><p id=\"cmsg\">Please enable JS and disable any ad blocker</p><script data-cfasync=\"false\">var dd={'rt':'i','cid':'AHrlqAAAAAMAcchrjRRFDr4A8vEOhQ==','hsh':'1008AE3795DD2B2EA48B1645AD17E2','b':2070527,'s':58364,'e':'72bfcc8f84cfdb561884171f0674dd92a74a9690b16379afc336438fae6ed2d477d6f334c708495cddb15520a5af97e6','qp':'','host':'geo.captcha-delivery.com','cookie':'nFcxvAH9X2rfvj0kIPRLDYOt2BSVQ_nVqr3b0PIaO8_qfIWrgPO0s3cyLJ31NspPw3j0YyXpgIYSVP9aAkAoJh4BGDW77qjKQUnCE7G0uuJbpdSdaSCy14XKrTRbUw~I'}</script><script data-cfasync=\"false\" src=\"https://ct.captcha-delivery.com/i.js\"></script></body></html>"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"error\": \"fetch_webpage failed: 403 <html lang=\\\"en\\\"><head><title>mlive.com</title><style>#cmsg{animation: A 1.5s;}@keyframes A{0%{opacity:0;}99%{opacity:0;}100%{opacity:1;}}</style></head><body style=\\\"margin:0\\\"><p id=\\\"cmsg\\\">Please enable JS and disable any ad blocker</p><script data-cfasync=\\\"false\\\">var dd={'rt':'i','cid':'AHrlqAAAAAMAcchrjRRFDr4A8vEOhQ==','hsh':'1008AE3795DD2B2EA48B1645AD17E2','b':2070527,'s':58364,'e':'72bfcc8f84cfdb561884171f0674dd92a74a9690b16379afc336438fae6ed2d477d6f334c708495cddb15520a5af97e6','qp':'','host':'geo.captcha-delivery.com','cookie':'nFcxvAH9X2rfvj0kIPRLDYOt2BSVQ_nVqr3b0PIaO8_qfIWrgPO0s3cyLJ31NspPw3j0YyXpgIYSVP9aAkAoJh4BGDW77qjKQUnCE7G0uuJbpdSdaSCy14XKrTRbUw~I'}</script><script data-cfasync=\\\"false\\\" src=\\\"https://ct.captcha-delivery.com/i.js\\\"></script></body></html>\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-6-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:33.010Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:33.797Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829",
+        "text": "North Dakota State Bison vs Michigan State Spartans Game Overview, Stats, Injuries, Records - NCAAB Game on March 19, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo C"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/matchup/376829\",\n    \"text\": \"North Dakota State Bison vs Michigan State Spartans Game Overview, Stats, Injuries, Records - NCAAB Game on March 19, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Bett... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-6-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:33.797Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:33.938Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/injuries\",\n    \"text\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker R... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-6-tool-call-1-3",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:33.938Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.msn.com/en-us/sports/other/msus-izzo-on-right-march-madness-ingredients-north-dakota-state/ar-AA1YKOk1",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-1-3",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:34.060Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.msn.com/en-us/sports/other/msus-izzo-on-right-march-madness-ingredients-north-dakota-state/ar-AA1YKOk1",
+        "text": "MSN"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.msn.com/en-us/sports/other/msus-izzo-on-right-march-madness-ingredients-north-dakota-state/ar-AA1YKOk1\",\n    \"text\": \"MSN\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-6-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:56:35.252Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:35.252Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Covers matchup 376829 Michigan State North Dakota State spread total",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:36.071Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "North Dakota State @ Michigan State Odds - Covers.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829%2Fodds&rut=235356fbe72cb5dbec8754b31545bf94edc44aa9480e19ced5c9280fcd50fc53",
+          "snippet": "North Dakota State Bison vs Michigan State Spartans NCAAB Odds For March 19, 2026: Check The Latest Betting Lines On Spread , Total , And Moneyline!"
+        },
+        {
+          "title": "North Dakota State @ Michigan State Game Overview - Covers.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829&rut=58a2949e1a30f746e763f7423b190dd4c11e9e700a633135cb3f536a93886952",
+          "snippet": "Get key insights for North Dakota State Bison vs Michigan State Spartans on March 19, 2026, including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "North Dakota State Bison vs Michigan State Spartans Prediction, Picks ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829%2Fpicks&rut=ecca28a5e87131a9b7a7acc19ebd541aa38a505b4008efe6dfaf8eceb2c08652",
+          "snippet": "North Dakota State Bison vs Michigan State Spartans Prediction, Picks And Prop Bets : Get expert insights, best bets, and key stats for the NCAAB matchup on March 19, 2026."
+        },
+        {
+          "title": "North Dakota State vs North Dakota Prediction, Picks & Odds for Today&#x27;s ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fncaab%2Fnorth%2Ddakota%2Dstate%2Dvs%2Dnorth%2Ddakota%2Dpredictions%2Dpicks%2Dodds%2Dsunday%2D3%2D8%2D2026&rut=03db7a35aa1d8c1be66efa3fa9148fc0270f8a4ab22a11e726a8bc4b61b6d424",
+          "snippet": "Our North Dakota State vs. North Dakota predictions side with the streaking underdog Fighting Hawks against their state rivals."
+        },
+        {
+          "title": "North Dakota State vs Michigan State odds for March Madness betting",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.azcentral.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F15%2Fnorth%2Ddakota%2Dstate%2Dmichigan%2Dstate%2Dodds%2Dncaa%2Dtournament%2Dbracket%2Dbetting%2F88440405007%2F&rut=8e0943b2c3f1a7fd12907ab68958fdf991ac997d42dd4d47a12646e38a4bb1b6",
+          "snippet": "March Madness odds for Michigan State vs North Dakota State NCAA Tournament first-round game, with point spread , moneyline, over/under on March 19."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"North Dakota State @ Michigan State Odds - Covers.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829%2Fodds&rut=235356fbe72cb5dbec8754b31545bf94edc44aa9480e19ced5c9280fcd50fc53\",\n      \"snippet\": \"North Dakota State Bison vs Michigan State Spartans NCAAB Odds For March 19, 2026: Check The Latest Betting Lines On Spread , Total , And Moneyline!\"\n    },\n    {\n      \"title\": \"North Dakota State @ Michigan State Game Overview - Covers.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829&rut=58a2949e1a30f746e763f7423b190dd4c11e9e700a633135cb3f536a93886952\",\n      \"snippet\": \"Get key insights for North Dakota State Bison vs Michigan State Spartans on March 19, 2026, including season records, injuries, and essential stats to help you make informed bets.\"\n    },\n    {\n      \"title\": \"North Dakota State Bison vs Michigan State Spartans Prediction, Picks ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376829%2Fpicks&rut=ecca28a5e87131a9b7a7acc19ebd541aa38a505b4008efe6dfaf8eceb2c08652\",\n      \"snippet\": \"North Dakota State Bison vs Michigan State Spartans Prediction, Picks And Prop Bets : Get expert insights, best bets, and key stats for the NCAAB matchup on March 19, 2026.\"\n    },\n    {\n      \"title\": \"North Dakota State vs North Dakota Prediction, Picks & Odds for Today&#x27;s ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fncaab%2Fnorth%2Ddakota%2Dstate%2Dvs%2Dnorth%2Ddakota%2Dpredictions%2Dpicks%2Dodds%2Dsunday%2D3%2D8%2D2026&rut=03db7a35aa1d8c1be66efa3fa9148fc0270f8a4ab22a11e726a8bc4b61b6d424\",\n      \"snippet\": \"Our North Dakota State vs. North Dakota predictions side with the streaking underdog Fighting Hawks against their state rivals.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-6-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:56:37.682Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:37.682Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829/odds",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:39.039Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829/odds",
+        "text": "North Dakota State Bison vs Michigan State Spartans Odds & Betting Lines For March 19, 2026 - NCAAB Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/matchup/376829/odds\",\n    \"text\": \"North Dakota State Bison vs Michigan State Spartans Odds & Betting Lines For March 19, 2026 - NCAAB Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Re... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-6-tool-call-3-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:56:39.039Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829/picks",
+        "maxChars": 12000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-6-tool-result-3-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:56:39.611Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/matchup/376829/picks",
+        "text": "North Dakota State Bison vs Michigan State Spartans Prediction, Picks, Prop Bets For March 19, 2026 - NCAAB Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Pro"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/matchup/376829/picks\",\n    \"text\": \"North Dakota State Bison vs Michigan State Spartans Prediction, Picks, Prop Bets For March 19, 2026 - NCAAB Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sport... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-6-assistant-final-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:56:46.515Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-east-6\",\n    \"winnerId\": \"michigan-state\",\n    \"confidence\": 0.9,\n    \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"r64-east-6-analysis\",\n    \"title\": \"East 3/14: Michigan State over North Dakota State\",\n    \"summary\": \"Back the 3-seed’s two-way floor and depth; NDSU needs a hot-shooting, low-turnover game to spring the upset.\",\n    \"evidence\": \"Local combined KenPom/Torvik lookup returned null for both teams in the available file, so the pick leans on seed-quality priors and matchup dynamics rather than a specific rating edge. Web/ESPN quick scans did not surface a concrete Michigan State injury/availability issue that would materially change the baseline expectation. Upset risk is acknowledged via NDSU’s plausible variance-based path (3-point shooting + turnover margin), but Michigan State’s physicality, rebounding, and defensive consistency provide more stable win conditions.\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-6-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T19:56:50.686Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-east-6\",\"winnerId\":\"michigan-state\",\"confidence\":0.9,\"rationale\":\"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"},\"reasoningStep\":{\"id\":\"r64-east-6-analysis\",\"title\":\"East 3/14: Michigan State over North Dakota State\",\"summary\":\"Back the 3-seed’s two-way floor and depth; NDSU needs a hot-shooting, low-turnover game to spring the upset.\",\"evidence\":[\"Local combined KenPom/Torvik lookup returned null for both teams in the available file, so the pick leans on seed-quality priors and matchup dynamics rather than a specific rating edge.\",\"Web/ESPN quick scans did not surface a concrete Michigan State injury/availability issue that would materially change the baseline expectation.\",\"Upset risk is acknowledged via NDSU’s plausible variance-based path (3-point shooting + turnover margin), but Michigan State’s physicality, rebounding, and defensive consistency provide more stable win conditions.\"]}}"
+    }
+  ]
+}

@@ -1,0 +1,671 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-south-3",
+  "generatedAt": "2026-03-17T20:03:50.046Z",
+  "pick": {
+    "gameId": "r64-south-3",
+    "winnerId": "vanderbilt",
+    "confidence": 0.82,
+    "rationale": "Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance."
+  },
+  "reasoningStep": {
+    "id": "demo-2026-bracket:r64-south-3:pick",
+    "title": "Use efficiency gap + upset-path check to select favorite",
+    "summary": "Vanderbilt’s top-12 efficiency profile and elite offense create a large baseline edge over McNeese, and no clear availability red flags surfaced to narrow that gap enough to justify the 12-seed.",
+    "evidence": [
+      "KenPom: Vanderbilt #12 (AdjEM +28.12; AdjO 127.3, #6; AdjD 99.2) vs McNeese #67 (AdjEM +12.52; AdjO 114.3, #91; AdjD 101.8).",
+      "Torvik: Vanderbilt #10 with elite offense (AdjOE rank #6) and strong defense (AdjDE rank #28); McNeese Torvik data not available in the tool output, increasing reliance on KenPom gap.",
+      "Quick ESPN/web scan did not surface a verified, major injury/availability issue for Vanderbilt that would materially reduce its baseline edge.",
+      "Underdog path assessment: McNeese can win with turnover creation and hot 3-point shooting, but Vanderbilt’s half-court scoring efficiency provides a higher floor over 40 minutes."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-zkkj8w9r",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "vanderbilt",
+          "mcneese"
+        ]
+      },
+      "startedAt": "2026-03-17T20:03:27.266Z",
+      "completedAt": "2026-03-17T20:03:27.273Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "vanderbilt",
+          "teamName": "Vanderbilt",
+          "torvik": {
+            "rank": 10,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adjoe": 127.7662830868969,
+            "oe Rank": 6,
+            "adjde": 99.1821315162276,
+            "de Rank": 28,
+            "barthag": 0.9484518796077428,
+            "rank.1": 10,
+            "proj. W": 26.579287375551324,
+            "Proj. L": 7.420712624448677,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7314138659881364,
+            "ncsos": 0.5219085819619156,
+            "consos": 0.8576258536635891,
+            "Proj. SOS": 0.7372656689780072,
+            "Proj. Noncon SOS": 0.5219085819619156,
+            "Proj. Con SOS": 0.8576258536635891,
+            "elite SOS": 0.6297896175251544,
+            "elite noncon SOS": 0.8064822607060758,
+            "Opp OE": 116.90316363547312,
+            "Opp DE": 104.25404808761049,
+            "Opp Proj. OE": 117.22276673224675,
+            "Opp Proj DE": 104.18722606613916,
+            "Con Adj OE": 125.19516938866136,
+            "Con Adj DE": 100.7462475550942,
+            "Qual O": 130.56151343136426,
+            "Qual D": 102.58545871939936,
+            "Qual Barthag": 0.9412105978774796,
+            "Qual Games": 18,
+            "FUN": 0.0325592467209266,
+            "ConPF": 1470,
+            "ConPA": 1410,
+            "ConPoss": 1259.2750000000003,
+            "ConOE": 1.167338349447102,
+            "ConDE": 1.1196918862043634,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 7.5029767018986995,
+            "WAB Rk": 9,
+            "Fun Rk": 99,
+            "adjt": 69.06865817579379
+          },
+          "kenpom": {
+            "rank": 12,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adj_em": 28.12,
+            "adj_o": 127.3,
+            "adj_o_rank": 6,
+            "adj_d": 99.2,
+            "adj_d_rank": 29,
+            "adj_t": 69,
+            "adj_t_rank": 92,
+            "luck": 0.025,
+            "luck_rank": 122,
+            "sos_adj_em": 14.04,
+            "sos_adj_em_rank": 16,
+            "sos_opp_o": 117.6,
+            "sos_opp_o_rank": 13,
+            "sos_opp_d": 103.6,
+            "sos_opp_d_rank": 28,
+            "ncsos_adj_em": 1.1,
+            "ncsos_adj_em_rank": 149
+          }
+        },
+        {
+          "teamId": "mcneese",
+          "teamName": "McNeese",
+          "torvik": null,
+          "kenpom": {
+            "rank": 67,
+            "team": "McNeese",
+            "conf": "Slnd",
+            "record": "28-5",
+            "adj_em": 12.52,
+            "adj_o": 114.3,
+            "adj_o_rank": 91,
+            "adj_d": 101.8,
+            "adj_d_rank": 47,
+            "adj_t": 66.2,
+            "adj_t_rank": 246,
+            "luck": 0.084,
+            "luck_rank": 20,
+            "sos_adj_em": -1.88,
+            "sos_adj_em_rank": 201,
+            "sos_opp_o": 107.6,
+            "sos_opp_o_rank": 250,
+            "sos_opp_d": 109.4,
+            "sos_opp_d_rank": 170,
+            "ncsos_adj_em": 9.12,
+            "ncsos_adj_em_rank": 22
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-swl6h4lw",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Vanderbilt vs McNeese injury report availability March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:03:27.273Z",
+      "completedAt": "2026-03-17T20:03:28.062Z",
+      "summary": "Returned 5 search results for \"Vanderbilt vs McNeese injury report availability March 2026 NCAA tournament\".",
+      "result": [
+        {
+          "title": "Vanderbilt or McNeese? How to pick 5 vs. 12 matchup in 2026 March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fvanderbilt%2Dmcneese%2Dmarch%2Dmadness%2Dbracket%2Dpick%2Fc0488d29f7c67e95ec6c6b9c&rut=2d05355015ca1ac072aa087b6045059fad913142c741c3ce2ec1d8baea4b5a04",
+          "snippet": "Here is a complete guide to picking No. 5 Vanderbilt and No. 12 McNeese in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game."
+        },
+        {
+          "title": "Vanderbilt vs. McNeese - March 19, 2026 - Bleacher Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Fmcneese%2Dstate%2Dbasketball%2Dvs%2Dvanderbilt%2Dbasketball%2D2026%2D3%2D19%2D13%2D15&rut=155fada67ca3238e7bfb760872e222235a71ea36d1b4ddeeb75c8400c95ac027",
+          "snippet": "Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports , and betting odds, all in one place"
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "McNeese vs. Vanderbilt (19 Mar, 2026) Live Score - ESPN (UK)",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856488%2Fmcneese%2Dvanderbilt&rut=890ba3206d671d57936c3befc1778a6899c180e9192c1eed2623083637a3f2de",
+          "snippet": "Live coverage of the McNeese Cowboys vs . Vanderbilt Commodores NCAAM game on ESPN (UK), including live score, highlights and updated stats."
+        },
+        {
+          "title": "Vanderbilt vs. McNeese: NCAA Tournament Predictions & Preview",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fvanderbilt%2Dvs%2Dmcneese%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=5931f490443554f925b949fcac859f664c0374bbddfe9fae511dc6cb0718d020",
+          "snippet": "The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#x27;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament !"
+        }
+      ]
+    },
+    {
+      "id": "tool-wfe66iqx",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Vanderbilt McNeese preview injury",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:03:28.062Z",
+      "completedAt": "2026-03-17T20:03:28.728Z",
+      "summary": "Returned 5 search results for \"Vanderbilt McNeese preview injury\".",
+      "result": [
+        {
+          "title": "McNeese Cowboys Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fmcn&rut=11046c03c539f4d94dc1f3378fff6894b8cc89cca147e39e0b0aa9040c3f5c76",
+          "snippet": "Visit ESPN for the current injury situation of the 2026 McNeese Cowboys. Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "McNeese vs. Vanderbilt (Mar 19, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856488&rut=be0db5bd21454ba8eba07f7c505e2cf0ce220bbbcdca73ead180d3bea56aaea5",
+          "snippet": "Live coverage of the McNeese Cowboys vs. Vanderbilt Commodores NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "McNeese Cowboys Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2377%2Fmcneese%2Dcowboys&rut=c3bd4e7472e16fef54decfe44fea1b4137d1254cdffc76bca2e21d6306e2d7b0",
+          "snippet": "Visit ESPN for McNeese Cowboys live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Vanderbilt Commodores Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F238%2Fvanderbilt%2Dcommodores&rut=3ca54227d04593ec7afdb8c6bf335100030bc7b20797cfcb03985b38d197d759",
+          "snippet": "Visit ESPN for Vanderbilt Commodores live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Vanderbilt Commodores 2025-26 Postseason NCAAM Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F238&rut=cf6977d9f62395f7f0abbbdc153e146a6dbe3a0ec67496b1a22523dfc576c92b",
+          "snippet": "ESPN has the full 2025-26 Vanderbilt Commodores Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Commodores games."
+        }
+      ]
+    },
+    {
+      "id": "tool-shvbipfu",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "McNeese Cowboys key player injury suspension 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:03:28.728Z",
+      "completedAt": "2026-03-17T20:03:29.603Z",
+      "summary": "Returned 5 search results for \"McNeese Cowboys key player injury suspension 2026\".",
+      "result": [
+        {
+          "title": "McNeese Cowboys Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fmcneese%2Dcowboys%2Finjuries&rut=85f4632aa0c47d84151c21e496eb40a0e19054e96bbd4f80a1e21e4738b07393",
+          "snippet": "Stay In the Know: Check Out McNeese Cowboys Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "McNeese Cowboys Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fmcn&rut=11046c03c539f4d94dc1f3378fff6894b8cc89cca147e39e0b0aa9040c3f5c76",
+          "snippet": "Visit ESPN for the current injury situation of the 2026 McNeese Cowboys . Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Football - McNeese State University Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fmcneesesports.com%2Fsports%2Ffootball&rut=47becb7ced20e955dc1b18a5418efd3a08cae7208118d742ac9d441dd4bfbace",
+          "snippet": "The official Football page for the McNeese State University Cowboys & Cowgirls"
+        },
+        {
+          "title": "McNeese Star Garcia Battles Through Injuries, Remains Consistent",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fla%2Flake%2Dcharles%2Fnews%2F2026%2F02%2F12%2Fmcneese%2Dstar%2Dgarcia%2Dbattles%2Dthrough%2Dinjuries%2Dremains%2Dconsistent%2F&rut=4fd71c8bcaa2502d6866f7e0e8d9c3c4e38fee5a9bacf70dd58a911d296d0b07",
+          "snippet": "Despite battling a flu bug and suffering through some heavy legs, McNeese State senior guard Javohn Garcia has continued to play at a high level this season. While his scoring numbers are slightly down from last year&#x27;s Southland Conference Player of the Year campaign, Garcia&#x27;s overall production remains consistent as he helps lead the Cowboys to another strong season."
+        },
+        {
+          "title": "McNeese State University Athletics - Official Athletics Website",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fmcneesesports.com%2F&rut=8774c002b1710f03bac4a748f7dfc3e98c284cd47b36b4a7160858dfdc2e582f",
+          "snippet": "The official athletics website for the McNeese State University Cowboys & Cowgirls"
+        }
+      ]
+    },
+    {
+      "id": "tool-0uayj264",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/vanderbilt-mcneese-march-madness-bracket-pick/c0488d29f7c67e95ec6c6b9c",
+        "maxChars": 8000
+      },
+      "startedAt": "2026-03-17T20:03:34.418Z",
+      "completedAt": "2026-03-17T20:03:34.556Z",
+      "summary": "Fetched https://www.sportingnews.com/us/ncaa-basketball/news/vanderbilt-mcneese-march-madness-bracket-pick/c0488d29f7c67e95ec6c6b9c and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/vanderbilt-mcneese-march-madness-bracket-pick/c0488d29f7c67e95ec6c6b9c",
+        "text": "Vanderbilt or McNeese? How to pick 5 vs. 12 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Stream"
+      }
+    },
+    {
+      "id": "tool-gtd2f54t",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/mcneese-cowboys/injuries",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-17T20:03:34.556Z",
+      "completedAt": "2026-03-17T20:03:34.876Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/teams/main/mcneese-cowboys/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/mcneese-cowboys/injuries",
+        "text": "McNeese Cowboys Injuries 2025-2026 - Updated NCAAB Injury Report Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Promos A"
+      }
+    },
+    {
+      "id": "tool-63gt9r2h",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-17T20:03:34.876Z",
+      "completedAt": "2026-03-17T20:03:35.084Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-south-3-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T20:03:24.776Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-south-3\nCurrent game label: South 5/12\nRound: Round of 64\nResolved teams: Vanderbilt (vanderbilt) vs McNeese (mcneese)\nPrior committed picks: 22"
+    },
+    {
+      "id": "r64-south-3-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T20:03:24.776Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-south-3\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 5/12\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"vanderbilt\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"mcneese\"\n      }\n    },\n    \"slotAName\": \"Vanderbilt\",\n    \"slotBName\": \"McNeese\",\n    \"slotATeamId\": \"vanderbilt\",\n    \"slotBTeamId\": \"mcneese\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.61,\n        \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.84,\n        \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.64,\n        \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.99,\n        \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-east-7\",\n      \"winnerId\": \"ucla\",\n      \"confidence\": 0.67,\n      \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n    },\n    {\n      \"gameId\": \"r64-east-8\",\n      \"winnerId\": \"uconn\",\n      \"confidence\": 0.93,\n      \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n    },\n    {\n      \"gameId\": \"r64-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.98,\n      \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n    },\n    {\n      \"gameId\": \"r64-west-2\",\n      \"winnerId\": \"villanova\",\n      \"confidence\": 0.61,\n      \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n    },\n    {\n      \"gameId\": \"r64-west-3\",\n      \"winnerId\": \"wisconsin\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n    },\n    {\n      \"gameId\": \"r64-west-4\",\n      \"winnerId\": \"arkansas\",\n      \"confidence\": 0.84,\n      \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n    },\n    {\n      \"gameId\": \"r64-west-5\",\n      \"winnerId\": \"byu\",\n      \"confidence\": 0.64,\n      \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n    },\n    {\n      \"gameId\": \"r64-west-6\",\n      \"winnerId\": \"gonzaga\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n    },\n    {\n      \"gameId\": \"r64-west-7\",\n      \"winnerId\": \"miami-fl\",\n      \"confidence\": 0.64,\n      \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n    },\n    {\n      \"gameId\": \"r64-west-8\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.96,\n      \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n    },\n    {\n      \"gameId\": \"r64-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.99,\n      \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n    },\n    {\n      \"gameId\": \"r64-south-2\",\n      \"winnerId\": \"iowa\",\n      \"confidence\": 0.56,\n      \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-south-3-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:03:27.266Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-3-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:27.266Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "vanderbilt",
+          "mcneese"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-3-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:27.273Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "vanderbilt",
+          "teamName": "Vanderbilt",
+          "torvik": {
+            "rank": 10,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adjoe": 127.7662830868969,
+            "oe Rank": 6,
+            "adjde": 99.1821315162276,
+            "de Rank": 28,
+            "barthag": 0.9484518796077428,
+            "rank.1": 10,
+            "proj. W": 26.579287375551324,
+            "Proj. L": 7.420712624448677,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7314138659881364,
+            "ncsos": 0.5219085819619156,
+            "consos": 0.8576258536635891,
+            "Proj. SOS": 0.7372656689780072,
+            "Proj. Noncon SOS": 0.5219085819619156,
+            "Proj. Con SOS": 0.8576258536635891,
+            "elite SOS": 0.6297896175251544,
+            "elite noncon SOS": 0.8064822607060758,
+            "Opp OE": 116.90316363547312,
+            "Opp DE": 104.25404808761049,
+            "Opp Proj. OE": 117.22276673224675,
+            "Opp Proj DE": 104.18722606613916,
+            "Con Adj OE": 125.19516938866136,
+            "Con Adj DE": 100.7462475550942,
+            "Qual O": 130.56151343136426,
+            "Qual D": 102.58545871939936,
+            "Qual Barthag": 0.9412105978774796,
+            "Qual Games": 18,
+            "FUN": 0.0325592467209266,
+            "ConPF": 1470,
+            "ConPA": 1410,
+            "ConPoss": 1259.2750000000003,
+            "ConOE": 1.167338349447102,
+            "ConDE": 1.1196918862043634,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 7.5029767018986995,
+            "WAB Rk": 9,
+            "Fun Rk": 99,
+            "adjt": 69.06865817579379
+          },
+          "kenpom": {
+            "rank": 12,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adj_em": 28.12,
+            "adj_o": 127.3,
+            "adj_o_rank": 6,
+            "adj_d": 99.2,
+            "adj_d_rank": 29,
+            "adj_t": 69,
+            "adj_t_rank": 92,
+            "luck": 0.025,
+            "luck_rank": 122,
+            "sos_adj_em": 14.04,
+            "sos_adj_em_rank": 16,
+            "sos_opp_o": 117.6,
+            "sos_opp_o_rank": 13,
+            "sos_opp_d": 103.6,
+            "sos_opp_d_rank": 28,
+            "ncsos_adj_em": 1.1,
+            "ncsos_adj_em_rank": 149
+          }
+        },
+        {
+          "teamId": "mcneese",
+          "teamName": "McNeese",
+          "torvik": null,
+          "kenpom": {
+            "rank": 67,
+            "team": "McNeese",
+            "conf": "Slnd",
+            "record": "28-5",
+            "adj_em": 12.52,
+            "adj_o": 114.3,
+            "adj_o_rank": 91,
+            "adj_d": 101.8,
+            "adj_d_rank": 47,
+            "adj_t": 66.2,
+            "adj_t_rank": 246,
+            "luck": 0.084,
+            "luck_rank": 20,
+            "sos_adj_em": -1.88,
+            "sos_adj_em_rank": 201,
+            "sos_opp_o": 107.6,
+            "sos_opp_o_rank": 250,
+            "sos_opp_d": 109.4,
+            "sos_opp_d_rank": 170,
+            "ncsos_adj_em": 9.12,
+            "ncsos_adj_em_rank": 22
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"vanderbilt\",\n      \"teamName\": \"Vanderbilt\",\n      \"torvik\": {\n        \"rank\": 10,\n        \"team\": \"Vanderbilt\",\n        \"conf\": \"SEC\",\n        \"record\": \"26-7\",\n        \"adjoe\": 127.7662830868969,\n        \"oe Rank\": 6,\n        \"adjde\": 99.1821315162276,\n        \"de Rank\": 28\n      },\n      \"kenpom\": {\n        \"rank\": 12,\n        \"team\": \"Vanderbilt\",\n        \"conf\": \"SEC\",\n        \"record\": \"26-7\",\n        \"adj_em\": 28.12,\n        \"adj_o\": 127.3,\n        \"adj_o_rank\": 6,\n        \"adj_d\": 99.2\n      }\n    },\n    {\n      \"teamId\": \"mcneese\",\n      \"teamName\": \"McNeese\",\n      \"torvik\": null,\n      \"kenpom\": {\n        \"rank\": 67,\n        \"team\": \"McNeese\",\n        \"conf\": \"Slnd\",\n        \"record\": \"28-5\",\n        \"adj_em\": 12.52,\n        \"adj_o\": 114.3,\n        \"adj_o_rank\": 91,\n        \"adj_d\": 101.8\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-3-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:27.273Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Vanderbilt vs McNeese injury report availability March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-3-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:28.062Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Vanderbilt or McNeese? How to pick 5 vs. 12 matchup in 2026 March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fvanderbilt%2Dmcneese%2Dmarch%2Dmadness%2Dbracket%2Dpick%2Fc0488d29f7c67e95ec6c6b9c&rut=2d05355015ca1ac072aa087b6045059fad913142c741c3ce2ec1d8baea4b5a04",
+          "snippet": "Here is a complete guide to picking No. 5 Vanderbilt and No. 12 McNeese in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game."
+        },
+        {
+          "title": "Vanderbilt vs. McNeese - March 19, 2026 - Bleacher Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Fmcneese%2Dstate%2Dbasketball%2Dvs%2Dvanderbilt%2Dbasketball%2D2026%2D3%2D19%2D13%2D15&rut=155fada67ca3238e7bfb760872e222235a71ea36d1b4ddeeb75c8400c95ac027",
+          "snippet": "Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports , and betting odds, all in one place"
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "McNeese vs. Vanderbilt (19 Mar, 2026) Live Score - ESPN (UK)",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856488%2Fmcneese%2Dvanderbilt&rut=890ba3206d671d57936c3befc1778a6899c180e9192c1eed2623083637a3f2de",
+          "snippet": "Live coverage of the McNeese Cowboys vs . Vanderbilt Commodores NCAAM game on ESPN (UK), including live score, highlights and updated stats."
+        },
+        {
+          "title": "Vanderbilt vs. McNeese: NCAA Tournament Predictions & Preview",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fvanderbilt%2Dvs%2Dmcneese%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=5931f490443554f925b949fcac859f664c0374bbddfe9fae511dc6cb0718d020",
+          "snippet": "The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#x27;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament !"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Vanderbilt or McNeese? How to pick 5 vs. 12 matchup in 2026 March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fvanderbilt%2Dmcneese%2Dmarch%2Dmadness%2Dbracket%2Dpick%2Fc0488d29f7c67e95ec6c6b9c&rut=2d05355015ca1ac072aa087b6045059fad913142c741c3ce2ec1d8baea4b5a04\",\n      \"snippet\": \"Here is a complete guide to picking No. 5 Vanderbilt and No. 12 McNeese in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game.\"\n    },\n    {\n      \"title\": \"Vanderbilt vs. McNeese - March 19, 2026 - Bleacher Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Fmcneese%2Dstate%2Dbasketball%2Dvs%2Dvanderbilt%2Dbasketball%2D2026%2D3%2D19%2D13%2D15&rut=155fada67ca3238e7bfb760872e222235a71ea36d1b4ddeeb75c8400c95ac027\",\n      \"snippet\": \"Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports , and betting odds, all in one place\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA .\"\n    },\n    {\n      \"title\": \"McNeese vs. Vanderbilt (19 Mar, 2026) Live Score - ESPN (UK)\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856488%2Fmcneese%2Dvanderbilt&rut=890ba3206d671d57936c3befc1778a6899c180e9192c1eed2623083637a3f2de\",\n      \"snippet\": \"Live coverage of the McNeese Cowboys vs . Vanderbilt Commodores NCAAM game on ESPN (UK), including live score, highlights and updated stats.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-3-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:28.062Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Vanderbilt McNeese preview injury",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-3-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:28.728Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "McNeese Cowboys Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fmcn&rut=11046c03c539f4d94dc1f3378fff6894b8cc89cca147e39e0b0aa9040c3f5c76",
+          "snippet": "Visit ESPN for the current injury situation of the 2026 McNeese Cowboys. Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "McNeese vs. Vanderbilt (Mar 19, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856488&rut=be0db5bd21454ba8eba07f7c505e2cf0ce220bbbcdca73ead180d3bea56aaea5",
+          "snippet": "Live coverage of the McNeese Cowboys vs. Vanderbilt Commodores NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "McNeese Cowboys Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2377%2Fmcneese%2Dcowboys&rut=c3bd4e7472e16fef54decfe44fea1b4137d1254cdffc76bca2e21d6306e2d7b0",
+          "snippet": "Visit ESPN for McNeese Cowboys live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Vanderbilt Commodores Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F238%2Fvanderbilt%2Dcommodores&rut=3ca54227d04593ec7afdb8c6bf335100030bc7b20797cfcb03985b38d197d759",
+          "snippet": "Visit ESPN for Vanderbilt Commodores live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Vanderbilt Commodores 2025-26 Postseason NCAAM Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F238&rut=cf6977d9f62395f7f0abbbdc153e146a6dbe3a0ec67496b1a22523dfc576c92b",
+          "snippet": "ESPN has the full 2025-26 Vanderbilt Commodores Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Commodores games."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"McNeese Cowboys Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fmcn&rut=11046c03c539f4d94dc1f3378fff6894b8cc89cca147e39e0b0aa9040c3f5c76\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2026 McNeese Cowboys. Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"McNeese vs. Vanderbilt (Mar 19, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856488&rut=be0db5bd21454ba8eba07f7c505e2cf0ce220bbbcdca73ead180d3bea56aaea5\",\n      \"snippet\": \"Live coverage of the McNeese Cowboys vs. Vanderbilt Commodores NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"McNeese Cowboys Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2377%2Fmcneese%2Dcowboys&rut=c3bd4e7472e16fef54decfe44fea1b4137d1254cdffc76bca2e21d6306e2d7b0\",\n      \"snippet\": \"Visit ESPN for McNeese Cowboys live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Vanderbilt Commodores Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F238%2Fvanderbilt%2Dcommodores&rut=3ca54227d04593ec7afdb8c6bf335100030bc7b20797cfcb03985b38d197d759\",\n      \"snippet\": \"Visit ESPN for Vanderbilt Commodores live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-3-tool-call-0-3",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:28.728Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "McNeese Cowboys key player injury suspension 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-3-tool-result-0-3",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:29.603Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "McNeese Cowboys Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fmcneese%2Dcowboys%2Finjuries&rut=85f4632aa0c47d84151c21e496eb40a0e19054e96bbd4f80a1e21e4738b07393",
+          "snippet": "Stay In the Know: Check Out McNeese Cowboys Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "McNeese Cowboys Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fmcn&rut=11046c03c539f4d94dc1f3378fff6894b8cc89cca147e39e0b0aa9040c3f5c76",
+          "snippet": "Visit ESPN for the current injury situation of the 2026 McNeese Cowboys . Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Football - McNeese State University Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fmcneesesports.com%2Fsports%2Ffootball&rut=47becb7ced20e955dc1b18a5418efd3a08cae7208118d742ac9d441dd4bfbace",
+          "snippet": "The official Football page for the McNeese State University Cowboys & Cowgirls"
+        },
+        {
+          "title": "McNeese Star Garcia Battles Through Injuries, Remains Consistent",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fla%2Flake%2Dcharles%2Fnews%2F2026%2F02%2F12%2Fmcneese%2Dstar%2Dgarcia%2Dbattles%2Dthrough%2Dinjuries%2Dremains%2Dconsistent%2F&rut=4fd71c8bcaa2502d6866f7e0e8d9c3c4e38fee5a9bacf70dd58a911d296d0b07",
+          "snippet": "Despite battling a flu bug and suffering through some heavy legs, McNeese State senior guard Javohn Garcia has continued to play at a high level this season. While his scoring numbers are slightly down from last year&#x27;s Southland Conference Player of the Year campaign, Garcia&#x27;s overall production remains consistent as he helps lead the Cowboys to another strong season."
+        },
+        {
+          "title": "McNeese State University Athletics - Official Athletics Website",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fmcneesesports.com%2F&rut=8774c002b1710f03bac4a748f7dfc3e98c284cd47b36b4a7160858dfdc2e582f",
+          "snippet": "The official athletics website for the McNeese State University Cowboys & Cowgirls"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"McNeese Cowboys Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fmcneese%2Dcowboys%2Finjuries&rut=85f4632aa0c47d84151c21e496eb40a0e19054e96bbd4f80a1e21e4738b07393\",\n      \"snippet\": \"Stay In the Know: Check Out McNeese Cowboys Injuries Impacting The 2025- 2026 NCAAB Season.\"\n    },\n    {\n      \"title\": \"McNeese Cowboys Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fmcn&rut=11046c03c539f4d94dc1f3378fff6894b8cc89cca147e39e0b0aa9040c3f5c76\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2026 McNeese Cowboys . Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Football - McNeese State University Athletics\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fmcneesesports.com%2Fsports%2Ffootball&rut=47becb7ced20e955dc1b18a5418efd3a08cae7208118d742ac9d441dd4bfbace\",\n      \"snippet\": \"The official Football page for the McNeese State University Cowboys & Cowgirls\"\n    },\n    {\n      \"title\": \"McNeese Star Garcia Battles Through Injuries, Remains Consistent\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fla%2Flake%2Dcharles%2Fnews%2F2026%2F02%2F12%2Fmcneese%2Dstar%2Dgarcia%2Dbattles%2Dthrough%2Dinjuries%2Dremains%2Dconsistent%2F&rut=4fd71c8bcaa2502d6866f7e0e8d9c3c4e38fee5a9bacf70dd58a911d296d0b07\",\n      \"snippet\": \"Despite battling a flu bug and suffering through some heavy legs, McNeese State senior guard Javohn Garcia has continued to play at a high level this season. While his scoring numbers are slightly down from last year&#x27;s Southland Conference Player of the Year campaign, Garcia&#x27;s overall production remains consistent as he helps lead the Cowboys to another strong season.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-3-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:03:34.418Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-3-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:34.418Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/vanderbilt-mcneese-march-madness-bracket-pick/c0488d29f7c67e95ec6c6b9c",
+        "maxChars": 8000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-3-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:34.556Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/vanderbilt-mcneese-march-madness-bracket-pick/c0488d29f7c67e95ec6c6b9c",
+        "text": "Vanderbilt or McNeese? How to pick 5 vs. 12 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Stream"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/vanderbilt-mcneese-march-madness-bracket-pick/c0488d29f7c67e95ec6c6b9c\",\n    \"text\": \"Vanderbilt or McNeese? How to pick 5 vs. 12 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-3-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:34.556Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/mcneese-cowboys/injuries",
+        "maxChars": 4000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-3-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:34.876Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/mcneese-cowboys/injuries",
+        "text": "McNeese Cowboys Injuries 2025-2026 - Updated NCAAB Injury Report Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Promos A"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/teams/main/mcneese-cowboys/injuries\",\n    \"text\": \"McNeese Cowboys Injuries 2025-2026 - Updated NCAAB Injury Report Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Reven... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-3-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:03:34.876Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "maxChars": 4000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-3-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:03:35.084Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/injuries",
+        "text": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Prom"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/injuries\",\n    \"text\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026 Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker R... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-3-assistant-final-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:03:43.831Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-south-3\",\n    \"winnerId\": \"vanderbilt\",\n    \"confidence\": 0.82,\n    \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"demo-2026-bracket:r64-south-3:pick\",\n    \"title\": \"Use efficiency gap + upset-path check to select favorite\",\n    \"summary\": \"Vanderbilt’s top-12 efficiency profile and elite offense create a large baseline edge over McNeese, and no clear availability red flags surfaced to narrow that gap enough to justify the 12-seed.\",\n    \"evidence\": {\n      \"ratings\": {\n        \"vanderbilt\": {\n          \"kenpom_rank\": 12,\n          \"kenpom_adj_em\": 28.12,\n          \"kenpom_adj_o_rank\": 6,\n          \"kenpom_adj_o\": 127.3,\n          \"kenpom_adj_d\": 99.2,\n          \"torvik_rank\": 10,\n          \"torvik_adjoe_rank\": 6,\n          \"torvik_adjde_rank\": 28\n        },\n        \"mcneese\": {\n          \"kenpom_rank\": 67,\n          \"kenpom_adj_em\": 12.52,\n          \"kenpom_adj_o_rank\": 91,\n          \"kenpom_adj_o\": 114.3,\n          \"kenpom_adj_d\": 101.8\n        }\n      },\n      \"contextChecks\": {\n        \"injury_news_scan\": \"No specific, verified major injury/availability item for either team was identified in the quick ESPN/web search results that would materially change the baseline ratings gap.\"\n      },\n      \"matchupNote\": \"McNeese can still win via high-variance outcomes (turnovers/3-point shooting), but Vanderbilt’s offensive efficiency and overall two-way margin provide more stable win paths.\"\n    }\n  }\n}"
+    },
+    {
+      "id": "r64-south-3-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T20:03:50.046Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-south-3\",\"winnerId\":\"vanderbilt\",\"confidence\":0.82,\"rationale\":\"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"},\"reasoningStep\":{\"id\":\"demo-2026-bracket:r64-south-3:pick\",\"title\":\"Use efficiency gap + upset-path check to select favorite\",\"summary\":\"Vanderbilt’s top-12 efficiency profile and elite offense create a large baseline edge over McNeese, and no clear availability red flags surfaced to narrow that gap enough to justify the 12-seed.\",\"evidence\":[\"KenPom: Vanderbilt #12 (AdjEM +28.12; AdjO 127.3, #6; AdjD 99.2) vs McNeese #67 (AdjEM +12.52; AdjO 114.3, #91; AdjD 101.8).\",\"Torvik: Vanderbilt #10 with elite offense (AdjOE rank #6) and strong defense (AdjDE rank #28); McNeese Torvik data not available in the tool output, increasing reliance on KenPom gap.\",\"Quick ESPN/web scan did not surface a verified, major injury/availability issue for Vanderbilt that would materially reduce its baseline edge.\",\"Underdog path assessment: McNeese can win with turnover creation and hot 3-point shooting, but Vanderbilt’s half-court scoring efficiency provides a higher floor over 40 minutes.\"]}}"
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-east-8",
+  "generatedAt": "2026-03-17T19:57:36.288Z",
+  "pick": {
+    "gameId": "r64-east-8",
+    "winnerId": "uconn",
+    "confidence": 0.93,
+    "rationale": "Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite."
+  },
+  "reasoningStep": {
+    "id": "demo-2026-bracket:r64-east-8",
+    "title": "East R64 (2/15): UConn vs Furman",
+    "summary": "UConn advances based on a large underlying team-quality gap; Furman needs extreme shooting/turnover variance to threaten.",
+    "evidence": [
+      "Furman ratings: KenPom #191 (AdjEM -1.99; AdjO 107.5 #200; AdjD 109.5), Torvik #195 (AdjO 106.84; AdjD 108.98).",
+      "Injury context: local reporting (CT Insider) noted UConn had injury updates on Jaylin Stewart and Silas Demary Jr. entering the Furman matchup, with indications at least one situation was improving.",
+      "Matchup logic: 15-seed upset path is primarily 3-point/turnover variance; Furman’s below-average national efficiency on both ends makes sustaining an upset difficult if UConn plays to form."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-tlpjofks",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "uconn",
+          "furman"
+        ]
+      },
+      "startedAt": "2026-03-17T19:57:14.720Z",
+      "completedAt": "2026-03-17T19:57:14.726Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "uconn",
+          "teamName": "UConn",
+          "torvik": null,
+          "kenpom": null
+        },
+        {
+          "teamId": "furman",
+          "teamName": "Furman",
+          "torvik": {
+            "rank": 195,
+            "team": "Furman",
+            "conf": "SC",
+            "record": "22-12",
+            "adjoe": 106.84229880131988,
+            "oe Rank": 206,
+            "adjde": 108.98101752722744,
+            "de Rank": 177,
+            "barthag": 0.4432634562977022,
+            "rank.1": 195,
+            "proj. W": 22,
+            "Proj. L": 12,
+            "Pro Con W": 10,
+            "Pro Con L": 8,
+            "Con Rec.": "10-8",
+            "sos": 0.3170982047861336,
+            "ncsos": 0.3633473643309509,
+            "consos": 0.2794010155670878,
+            "Proj. SOS": 0.3170982047861336,
+            "Proj. Noncon SOS": 0.3633473643309509,
+            "Proj. Con SOS": 0.2794010155670878,
+            "elite SOS": 0.9329088662382212,
+            "elite noncon SOS": 0.9083105120786672,
+            "Opp OE": 107.23498417390064,
+            "Opp DE": 114.47476472829152,
+            "Opp Proj. OE": 107.23498417390064,
+            "Opp Proj DE": 114.47476472829152,
+            "Con Adj OE": 104.4108482309232,
+            "Con Adj DE": 107.66877807756627,
+            "Qual O": 0,
+            "Qual D": 0,
+            "Qual Barthag": 0,
+            "Qual Games": 0,
+            "FUN": 0.0060789343475925,
+            "ConPF": 1335,
+            "ConPA": 1265,
+            "ConPoss": 1199.7875,
+            "ConOE": 1.1126970401008511,
+            "ConDE": 1.0543533750768364,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5555555555555556,
+            "WAB": -8.76844213952515,
+            "WAB Rk": 175,
+            "Fun Rk": 158,
+            "adjt": 65.8243741128575
+          },
+          "kenpom": {
+            "rank": 191,
+            "team": "Furman",
+            "conf": "SC",
+            "record": "22-12",
+            "adj_em": -1.99,
+            "adj_o": 107.5,
+            "adj_o_rank": 200,
+            "adj_d": 109.5,
+            "adj_d_rank": 183,
+            "adj_t": 65.9,
+            "adj_t_rank": 263,
+            "luck": 0.01,
+            "luck_rank": 157,
+            "sos_adj_em": -6.35,
+            "sos_adj_em_rank": 290,
+            "sos_opp_o": 108.1,
+            "sos_opp_o_rank": 218,
+            "sos_opp_d": 114.5,
+            "sos_opp_d_rank": 356,
+            "ncsos_adj_em": -0.76,
+            "ncsos_adj_em_rank": 203
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-hcr80wmn",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UConn Furman injury update March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:57:14.726Z",
+      "completedAt": "2026-03-17T19:57:16.066Z",
+      "summary": "Returned 5 search results for \"UConn Furman injury update March 2026 NCAA tournament\".",
+      "result": [
+        {
+          "title": "UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fpa%2Fphiladelphia%2Fnews%2F2026%2F03%2F16%2Fuconn%2Dbasketball%2Dfaces%2Dinjury%2Dconcerns%2Dahead%2Dof%2Dncaa%2Dtournament%2F&rut=cfacd2fc51386376be434d099ceca961f8b58d8ae1a28a274183da0c937d7b1e",
+          "snippet": "UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart&#x27;s status for the first round is uncertain, while Demary is reported to be &#x27;in pretty good shape&#x27;. The Huskies are the No. 2 seed and will face the No. 15 Furman Paladins on Friday ..."
+        },
+        {
+          "title": "UConn basketball&#x27;s Dan Hurley gives positive injury updates before NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fuconn%2Dbasketball%2Ds%2Ddan%2Dhurley%2Dgives%2Dpositive%2Dinjury%2Dupdates%2Dbefore%2Dncaa%2Dtournament%2Far%2DAA1YIlp3&rut=5f89561121d4277e127728b22b080f3df55d1c5825d0c6081bbc9cc1189b903e",
+          "snippet": "UConn basketball head coach Dan Hurley shares updates on two of his players heading into the first round of the 2026 NCAA Tournament ."
+        },
+        {
+          "title": "UConn&#x27;s Dan Hurley gives injury updates before NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ctinsider.com%2Fsports%2Fuconn%2Dmens%2Dbasketball%2Farticle%2Finjury%2Dnews%2Ddan%2Dhurley%2Dsilas%2Ddemary%2Djaylin%2Dstewart%2D22080303.php&rut=3bd8a36d8722f47ea7d3a4fc604cae87005ec9e54274816352c512f10ff1cbb2",
+          "snippet": "The UConn men&#x27;s basketball team prepares for the upcoming NCAA Tournament potentially low on manpower with the injury statuses of two key contributors still in question ahead of Friday&#x27;s opener against Furman ."
+        },
+        {
+          "title": "The UConn Rotation Adjustment That Could Define March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fuconn%2Fbasketball%2Fuconn%2Dhuskies%2Dmens%2Drotation%2Dadjustment%2Dcould%2Ddefine%2Dmarch%2Dmadness%2D2026&rut=586ce0b75c464080c7e5157c3f6f10d4efdd9238d3908b9e72b57a8aee9eacd1",
+          "snippet": "Head coach Dan Hurley and the UConn Huskies are getting set to take on the Furman Paladins in the first round of the March Madness NCAA Tournament . The Huskies received the No. 2 seed in the East ..."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA Tournament ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=ae54b7054cb4b58a73d9ef82652224844dbcaf29dcce16a0a8ead6d9430d19e2",
+          "snippet": "NCAA Tournament injuries to consider are reviewed. Discover which player are in, out or uncertain before filling out your brackets for March Madness 2026 ."
+        }
+      ]
+    },
+    {
+      "id": "tool-6oae53zk",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UConn Furman preview injury",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T19:57:16.066Z",
+      "completedAt": "2026-03-17T19:57:16.829Z",
+      "summary": "Returned 5 search results for \"UConn Furman preview injury\".",
+      "result": [
+        {
+          "title": "Furman vs. UConn (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856497%2Ffurman%2Duconn&rut=101ef9811024fe141ba66e1eb8476e9b5c802df057abf42cc47ddff4e648b30e",
+          "snippet": "Live coverage of the Furman Paladins vs. UConn Huskies NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "UConn Huskies Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F41%2Fuconn%2Dhuskies&rut=d998461bc47b90b276be5f7a830437f08963572f850976b2d7e8a67103d871ca",
+          "snippet": "Visit ESPN for UConn Huskies live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "UConn plays aggressive man-to-man defense, funneling drivers to Tarris Reed Jr. protecting the rim, with every other player ready and able to rebound and kick-start an offensive scoring opportunity."
+        },
+        {
+          "title": "Furman Paladins Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F231%2Ffurman%2Dpaladins&rut=b9429fb8b525a1c3c1330f9ae008e5f2774a0f22292997c127e83c998d57a488",
+          "snippet": "Visit ESPN for Furman Paladins live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=e320c0f76f951d39ae78cd7c77866b1b3dcd2f222c10e26aa8b4fe6732f56db2",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        }
+      ]
+    },
+    {
+      "id": "tool-o9r3dsl7",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.ctinsider.com/sports/uconn-mens-basketball/article/injury-news-dan-hurley-silas-demary-jaylin-stewart-22080303.php",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T19:57:18.407Z",
+      "completedAt": "2026-03-17T19:57:19.621Z",
+      "summary": "Fetched https://www.ctinsider.com/sports/uconn-mens-basketball/article/injury-news-dan-hurley-silas-demary-jaylin-stewart-22080303.php and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.ctinsider.com/sports/uconn-mens-basketball/article/injury-news-dan-hurley-silas-demary-jaylin-stewart-22080303.php",
+        "text": "UConn&#x27;s Dan Hurley gives injury updates before NCAA Tournament Ct Insider Logo Hearst Newspapers Logo Skip to main content Subscribe Home Contact Us Advertise With Us Newsletters FAQ Privacy Notice Terms of Use E-Edition Our Brands Cheshire Herald Connecticut Magazine County Times Fairfield Citizen Journal Inquirer New Milford Spectrum Record-Journal Shoreline Times West Hartford News Westport News Waterbury Republican-American News Education Politics Election Health Latino News Sports GametimeCT UConn UConn Women&#x27;s Basketball UConn Men&#x27;s Basketball College Connecticut Sun WNBA NFL NBA MLB Hockey Business Entertainment Horoscopes Advice Puzzles Comics Real Estate Living Food Weather Opinion We Asked, You Answered Obits Best Of Education Home Services Legal Services Senior Living Entertainment Food & Drink Health Advertising Features Events Jobs Classifieds Ct Insider Logo Subscribe Trending: Speed cameras on highways? | Gusty winds for St Patrick&#x27;s Day | CT power outages | CT pension spending | Horoscopes Sports // UConn Men&#x27;s Basketball Dan Hurley gives injury updates on UConn&#x27;s Jaylin Stewart, Silas Demary Jr. ahead of NCAA Tournament By Declan Walsh , Staff Writer March 16, 2026 STORRS, CONNECTICUT - NOVEMBER 19: Silas Demary Jr. #2 and Jaylin Stewart #3 of the Connecticut Huskies dive for the loose ball against Brayden Burries #5 of the Arizona Wildcats during the first half of an NCAA men's basketball game. Joe Buglewicz/Getty Images The UConn men&#x27;s basketball team prepares for the upcoming NCAA Tournament potentially low on manpower with the injury statuses of two key contributors still in question ahead of Friday&#x27;s opener against Furman. Jaylin Stewart has not played since Feb. 21, as the junior wing continues to recover from an unspecified knee injury, while Silas Demary Jr. was forced to exit Saturday&#x27;s Big East Tournament final with a left ankle sprain . Dan Hurley provided updates on both players while speaking with the media Sunday evening. Advertisement Article continues below this ad &quot;Health-wise, it will be close with Jaylin,&quot; Hurley said. The UConn coach provided a more promising update on his star point guard: &quot;I think Silas is in pretty good shape.&quot; Jaylin Stewart has faced a mercurial junior season, starting UConn&#x27;s first 10 games this season as freshman wing Braylon Mullins battled a pre-season injury — the Seattle native delivered double-digit scoring performances against Arizona and Texas. Stewart returned to an off-the-bench role once Mullins hit his stride around the New Year, but he stepped up with a crucial pair of 3-pointers against Villanova in his final game before the ongoing injury saga. More For You UConn stars Sarah Strong, Azzi Fudd named to USBWA All-America team The team is selected by members of the United States Basketball Writers Association. Rebecca Lobo’s March Madness pick? An elite takeout order UConn icon Rebecca Lobo picks her go-to "
+      }
+    },
+    {
+      "id": "tool-plvwl7yz",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-17T19:57:20.932Z",
+      "completedAt": "2026-03-17T19:57:21.299Z",
+      "summary": "Fetched https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/",
+        "text": "UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament - Philadelphia Today Skip to content National Today Menu National Today Today Holidays Animals Arts & Entertainment Cause Cultural Federal Food & Beverage Health Relationships Religious Special Interest Birthdays January February March April May June July August September October November December Reminders Cities Atlanta Austin Baltimore Berwyn Beverly Hills Birmingham Boston Brooklyn Buffalo Charlotte Chicago Cincinnati Cleveland Columbus Dallas Denver Detroit Fort Worth Houston Indianapolis Knoxville Las Vegas Los Angeles Louisville Madison Memphis Miami Milwaukee Minneapolis Nashville New Orleans New York Omaha Orlando Philadelphia Phoenix Pittsburgh Portland Raleigh Richmond Rutherford Sacramento Salt Lake City San Antonio San Diego San Francisco San Jose Seattle Tampa Tucson Washington Log in Sign up Search Search Cancel Search National Today Submit Philadelphia Today By the People, for the People News Sports Basketball Baseball Body Building Boxing Cycling Equestrian eSports Extreme Sports Football Golf Gymnastics Hockey Ice Skating Mixed Martial Arts Motorsports Olympics Other Sports Rodeo Running Skiing Soccer Softball Surfing Swimming Tennis Track & Field Volleyball Wrestling More UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament Head coach Dan Hurley provides updates on key players' status for the first round Mar. 16, 2026 at 3:52am Got story updates? Submit your updates here. › UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart's status for the first round is uncertain, while Demary is reported to be 'in pretty good shape'. The Huskies are the No. 2 seed and will face the No. 15 Furman Paladins on Friday in Philadelphia. Why it matters UConn is looking to reclaim the national title after missing out on a three-peat in 2025. The health of Stewart and Demary could be crucial to the Huskies' chances of making a deep tournament run. Demary in particular is a key contributor, leading the team in assists and steals. The details Forward Jaylin Stewart has not played since a Feb. 21 game against Villanova and missed the entire Big East tournament. Coach Hurley said it 'will be close' on whether Stewart can play in the first round. Meanwhile, junior guard Silas Demary Jr. is reported to be 'in pretty good shape'. Demary is second on the team in usage and leads the Huskies in assists and steals. Stewart has not played since a Feb. 21 game against Villanova. UConn will face Furman in the first round on Friday, March 21, 2026. The players Dan Hurley The head coach of the UConn Huskies men's basketball team. Jaylin Stewart A junior forward for the UConn Huskies who has been sidelined with an injury. Silas Demary Jr. A junior guard for the UConn Huskies who is reported to be in 'pretty good shape' heading into "
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-east-8-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T19:57:12.945Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-east-8\nCurrent game label: East 2/15\nRound: Round of 64\nResolved teams: UConn (uconn) vs Furman (furman)\nPrior committed picks: 11"
+    },
+    {
+      "id": "r64-east-8-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T19:57:12.945Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-east-8\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 2/15\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"uconn\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"furman\"\n      }\n    },\n    \"slotAName\": \"UConn\",\n    \"slotBName\": \"Furman\",\n    \"slotATeamId\": \"uconn\",\n    \"slotBTeamId\": \"furman\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": 0.62,\n      \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": 0.66,\n      \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-16\",\n      \"winnerId\": \"umbc\",\n      \"confidence\": 0.58,\n      \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n    },\n    {\n      \"gameId\": \"ff-south-16\",\n      \"winnerId\": \"lehigh\",\n      \"confidence\": 0.56,\n      \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n    },\n    {\n      \"gameId\": \"r64-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.97,\n      \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n    },\n    {\n      \"gameId\": \"r64-east-2\",\n      \"winnerId\": \"tcu\",\n      \"confidence\": 0.6,\n      \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n    },\n    {\n      \"gameId\": \"r64-east-3\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 0.74,\n      \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n    },\n    {\n      \"gameId\": \"r64-east-4\",\n      \"winnerId\": \"kansas\",\n      \"confidence\": 0.86,\n      \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n    },\n    {\n      \"gameId\": \"r64-east-5\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.73,\n      \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n    },\n    {\n      \"gameId\": \"r64-east-6\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n    },\n    {\n      \"gameId\": \"r64-east-7\",\n      \"winnerId\": \"ucla\",\n      \"confidence\": 0.67,\n      \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:14.720Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-8-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:14.720Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "uconn",
+          "furman"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-8-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:14.726Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "uconn",
+          "teamName": "UConn",
+          "torvik": null,
+          "kenpom": null
+        },
+        {
+          "teamId": "furman",
+          "teamName": "Furman",
+          "torvik": {
+            "rank": 195,
+            "team": "Furman",
+            "conf": "SC",
+            "record": "22-12",
+            "adjoe": 106.84229880131988,
+            "oe Rank": 206,
+            "adjde": 108.98101752722744,
+            "de Rank": 177,
+            "barthag": 0.4432634562977022,
+            "rank.1": 195,
+            "proj. W": 22,
+            "Proj. L": 12,
+            "Pro Con W": 10,
+            "Pro Con L": 8,
+            "Con Rec.": "10-8",
+            "sos": 0.3170982047861336,
+            "ncsos": 0.3633473643309509,
+            "consos": 0.2794010155670878,
+            "Proj. SOS": 0.3170982047861336,
+            "Proj. Noncon SOS": 0.3633473643309509,
+            "Proj. Con SOS": 0.2794010155670878,
+            "elite SOS": 0.9329088662382212,
+            "elite noncon SOS": 0.9083105120786672,
+            "Opp OE": 107.23498417390064,
+            "Opp DE": 114.47476472829152,
+            "Opp Proj. OE": 107.23498417390064,
+            "Opp Proj DE": 114.47476472829152,
+            "Con Adj OE": 104.4108482309232,
+            "Con Adj DE": 107.66877807756627,
+            "Qual O": 0,
+            "Qual D": 0,
+            "Qual Barthag": 0,
+            "Qual Games": 0,
+            "FUN": 0.0060789343475925,
+            "ConPF": 1335,
+            "ConPA": 1265,
+            "ConPoss": 1199.7875,
+            "ConOE": 1.1126970401008511,
+            "ConDE": 1.0543533750768364,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5555555555555556,
+            "WAB": -8.76844213952515,
+            "WAB Rk": 175,
+            "Fun Rk": 158,
+            "adjt": 65.8243741128575
+          },
+          "kenpom": {
+            "rank": 191,
+            "team": "Furman",
+            "conf": "SC",
+            "record": "22-12",
+            "adj_em": -1.99,
+            "adj_o": 107.5,
+            "adj_o_rank": 200,
+            "adj_d": 109.5,
+            "adj_d_rank": 183,
+            "adj_t": 65.9,
+            "adj_t_rank": 263,
+            "luck": 0.01,
+            "luck_rank": 157,
+            "sos_adj_em": -6.35,
+            "sos_adj_em_rank": 290,
+            "sos_opp_o": 108.1,
+            "sos_opp_o_rank": 218,
+            "sos_opp_d": 114.5,
+            "sos_opp_d_rank": 356,
+            "ncsos_adj_em": -0.76,
+            "ncsos_adj_em_rank": 203
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"uconn\",\n      \"teamName\": \"UConn\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"furman\",\n      \"teamName\": \"Furman\",\n      \"torvik\": {\n        \"rank\": 195,\n        \"team\": \"Furman\",\n        \"conf\": \"SC\",\n        \"record\": \"22-12\",\n        \"adjoe\": 106.84229880131988,\n        \"oe Rank\": 206,\n        \"adjde\": 108.98101752722744,\n        \"de Rank\": 177\n      },\n      \"kenpom\": {\n        \"rank\": 191,\n        \"team\": \"Furman\",\n        \"conf\": \"SC\",\n        \"record\": \"22-12\",\n        \"adj_em\": -1.99,\n        \"adj_o\": 107.5,\n        \"adj_o_rank\": 200,\n        \"adj_d\": 109.5\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-8-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:14.726Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UConn Furman injury update March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-8-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:16.066Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fpa%2Fphiladelphia%2Fnews%2F2026%2F03%2F16%2Fuconn%2Dbasketball%2Dfaces%2Dinjury%2Dconcerns%2Dahead%2Dof%2Dncaa%2Dtournament%2F&rut=cfacd2fc51386376be434d099ceca961f8b58d8ae1a28a274183da0c937d7b1e",
+          "snippet": "UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart&#x27;s status for the first round is uncertain, while Demary is reported to be &#x27;in pretty good shape&#x27;. The Huskies are the No. 2 seed and will face the No. 15 Furman Paladins on Friday ..."
+        },
+        {
+          "title": "UConn basketball&#x27;s Dan Hurley gives positive injury updates before NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fuconn%2Dbasketball%2Ds%2Ddan%2Dhurley%2Dgives%2Dpositive%2Dinjury%2Dupdates%2Dbefore%2Dncaa%2Dtournament%2Far%2DAA1YIlp3&rut=5f89561121d4277e127728b22b080f3df55d1c5825d0c6081bbc9cc1189b903e",
+          "snippet": "UConn basketball head coach Dan Hurley shares updates on two of his players heading into the first round of the 2026 NCAA Tournament ."
+        },
+        {
+          "title": "UConn&#x27;s Dan Hurley gives injury updates before NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ctinsider.com%2Fsports%2Fuconn%2Dmens%2Dbasketball%2Farticle%2Finjury%2Dnews%2Ddan%2Dhurley%2Dsilas%2Ddemary%2Djaylin%2Dstewart%2D22080303.php&rut=3bd8a36d8722f47ea7d3a4fc604cae87005ec9e54274816352c512f10ff1cbb2",
+          "snippet": "The UConn men&#x27;s basketball team prepares for the upcoming NCAA Tournament potentially low on manpower with the injury statuses of two key contributors still in question ahead of Friday&#x27;s opener against Furman ."
+        },
+        {
+          "title": "The UConn Rotation Adjustment That Could Define March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fuconn%2Fbasketball%2Fuconn%2Dhuskies%2Dmens%2Drotation%2Dadjustment%2Dcould%2Ddefine%2Dmarch%2Dmadness%2D2026&rut=586ce0b75c464080c7e5157c3f6f10d4efdd9238d3908b9e72b57a8aee9eacd1",
+          "snippet": "Head coach Dan Hurley and the UConn Huskies are getting set to take on the Furman Paladins in the first round of the March Madness NCAA Tournament . The Huskies received the No. 2 seed in the East ..."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA Tournament ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=ae54b7054cb4b58a73d9ef82652224844dbcaf29dcce16a0a8ead6d9430d19e2",
+          "snippet": "NCAA Tournament injuries to consider are reviewed. Discover which player are in, out or uncertain before filling out your brackets for March Madness 2026 ."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fpa%2Fphiladelphia%2Fnews%2F2026%2F03%2F16%2Fuconn%2Dbasketball%2Dfaces%2Dinjury%2Dconcerns%2Dahead%2Dof%2Dncaa%2Dtournament%2F&rut=cfacd2fc51386376be434d099ceca961f8b58d8ae1a28a274183da0c937d7b1e\",\n      \"snippet\": \"UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart&#x27;s status for the first round is uncertain, while Demary is reported to be &#x27;in pretty good shape&#x27;. The Huskies are the No. 2 seed and will face the No. 15 Furman Paladins on Friday ...\"\n    },\n    {\n      \"title\": \"UConn basketball&#x27;s Dan Hurley gives positive injury updates before NCAA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fuconn%2Dbasketball%2Ds%2Ddan%2Dhurley%2Dgives%2Dpositive%2Dinjury%2Dupdates%2Dbefore%2Dncaa%2Dtournament%2Far%2DAA1YIlp3&rut=5f89561121d4277e127728b22b080f3df55d1c5825d0c6081bbc9cc1189b903e\",\n      \"snippet\": \"UConn basketball head coach Dan Hurley shares updates on two of his players heading into the first round of the 2026 NCAA Tournament .\"\n    },\n    {\n      \"title\": \"UConn&#x27;s Dan Hurley gives injury updates before NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ctinsider.com%2Fsports%2Fuconn%2Dmens%2Dbasketball%2Farticle%2Finjury%2Dnews%2Ddan%2Dhurley%2Dsilas%2Ddemary%2Djaylin%2Dstewart%2D22080303.php&rut=3bd8a36d8722f47ea7d3a4fc604cae87005ec9e54274816352c512f10ff1cbb2\",\n      \"snippet\": \"The UConn men&#x27;s basketball team prepares for the upcoming NCAA Tournament potentially low on manpower with the injury statuses of two key contributors still in question ahead of Friday&#x27;s opener against Furman .\"\n    },\n    {\n      \"title\": \"The UConn Rotation Adjustment That Could Define March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fuconn%2Fbasketball%2Fuconn%2Dhuskies%2Dmens%2Drotation%2Dadjustment%2Dcould%2Ddefine%2Dmarch%2Dmadness%2D2026&rut=586ce0b75c464080c7e5157c3f6f10d4efdd9238d3908b9e72b57a8aee9eacd1\",\n      \"snippet\": \"Head coach Dan Hurley and the UConn Huskies are getting set to take on the Furman Paladins in the first round of the March Madness NCAA Tournament . The Huskies received the No. 2 seed in the East ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-8-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:16.066Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UConn Furman preview injury",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-8-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:16.829Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Furman vs. UConn (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856497%2Ffurman%2Duconn&rut=101ef9811024fe141ba66e1eb8476e9b5c802df057abf42cc47ddff4e648b30e",
+          "snippet": "Live coverage of the Furman Paladins vs. UConn Huskies NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "UConn Huskies Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F41%2Fuconn%2Dhuskies&rut=d998461bc47b90b276be5f7a830437f08963572f850976b2d7e8a67103d871ca",
+          "snippet": "Visit ESPN for UConn Huskies live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce",
+          "snippet": "UConn plays aggressive man-to-man defense, funneling drivers to Tarris Reed Jr. protecting the rim, with every other player ready and able to rebound and kick-start an offensive scoring opportunity."
+        },
+        {
+          "title": "Furman Paladins Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F231%2Ffurman%2Dpaladins&rut=b9429fb8b525a1c3c1330f9ae008e5f2774a0f22292997c127e83c998d57a488",
+          "snippet": "Visit ESPN for Furman Paladins live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=e320c0f76f951d39ae78cd7c77866b1b3dcd2f222c10e26aa8b4fe6732f56db2",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Furman vs. UConn (Mar 20, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856497%2Ffurman%2Duconn&rut=101ef9811024fe141ba66e1eb8476e9b5c802df057abf42cc47ddff4e648b30e\",\n      \"snippet\": \"Live coverage of the Furman Paladins vs. UConn Huskies NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"UConn Huskies Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F41%2Fuconn%2Dhuskies&rut=d998461bc47b90b276be5f7a830437f08963572f850976b2d7e8a67103d871ca\",\n      \"snippet\": \"Visit ESPN for UConn Huskies live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=049e464e4c8cf71b63c82b2a12ee388f8811a3acf92384acc21ef2bc63cb2dce\",\n      \"snippet\": \"UConn plays aggressive man-to-man defense, funneling drivers to Tarris Reed Jr. protecting the rim, with every other player ready and able to rebound and kick-start an offensive scoring opportunity.\"\n    },\n    {\n      \"title\": \"Furman Paladins Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F231%2Ffurman%2Dpaladins&rut=b9429fb8b525a1c3c1330f9ae008e5f2774a0f22292997c127e83c998d57a488\",\n      \"snippet\": \"Visit ESPN for Furman Paladins live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:18.407Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-8-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:18.407Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.ctinsider.com/sports/uconn-mens-basketball/article/injury-news-dan-hurley-silas-demary-jaylin-stewart-22080303.php",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-8-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:19.622Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.ctinsider.com/sports/uconn-mens-basketball/article/injury-news-dan-hurley-silas-demary-jaylin-stewart-22080303.php",
+        "text": "UConn&#x27;s Dan Hurley gives injury updates before NCAA Tournament Ct Insider Logo Hearst Newspapers Logo Skip to main content Subscribe Home Contact Us Advertise With Us Newsletters FAQ Privacy Notice Terms of Use E-Edition Our Brands Cheshire Herald Connecticut Magazine County Times Fairfield Citizen Journal Inquirer New Milford Spectrum Record-Journal Shoreline Times West Hartford News Westport News Waterbury Republican-American News Education Politics Election Health Latino News Sports GametimeCT UConn UConn Women&#x27;s Basketball UConn Men&#x27;s Basketball College Connecticut Sun WNBA NFL NBA MLB Hockey Business Entertainment Horoscopes Advice Puzzles Comics Real Estate Living Food Weather Opinion We Asked, You Answered Obits Best Of Education Home Services Legal Services Senior Living Entertainment Food & Drink Health Advertising Features Events Jobs Classifieds Ct Insider Logo Subscribe Trending: Speed cameras on highways? | Gusty winds for St Patrick&#x27;s Day | CT power outages | CT pension spending | Horoscopes Sports // UConn Men&#x27;s Basketball Dan Hurley gives injury updates on UConn&#x27;s Jaylin Stewart, Silas Demary Jr. ahead of NCAA Tournament By Declan Walsh , Staff Writer March 16, 2026 STORRS, CONNECTICUT - NOVEMBER 19: Silas Demary Jr. #2 and Jaylin Stewart #3 of the Connecticut Huskies dive for the loose ball against Brayden Burries #5 of the Arizona Wildcats during the first half of an NCAA men's basketball game. Joe Buglewicz/Getty Images The UConn men&#x27;s basketball team prepares for the upcoming NCAA Tournament potentially low on manpower with the injury statuses of two key contributors still in question ahead of Friday&#x27;s opener against Furman. Jaylin Stewart has not played since Feb. 21, as the junior wing continues to recover from an unspecified knee injury, while Silas Demary Jr. was forced to exit Saturday&#x27;s Big East Tournament final with a left ankle sprain . Dan Hurley provided updates on both players while speaking with the media Sunday evening. Advertisement Article continues below this ad &quot;Health-wise, it will be close with Jaylin,&quot; Hurley said. The UConn coach provided a more promising update on his star point guard: &quot;I think Silas is in pretty good shape.&quot; Jaylin Stewart has faced a mercurial junior season, starting UConn&#x27;s first 10 games this season as freshman wing Braylon Mullins battled a pre-season injury — the Seattle native delivered double-digit scoring performances against Arizona and Texas. Stewart returned to an off-the-bench role once Mullins hit his stride around the New Year, but he stepped up with a crucial pair of 3-pointers against Villanova in his final game before the ongoing injury saga. More For You UConn stars Sarah Strong, Azzi Fudd named to USBWA All-America team The team is selected by members of the United States Basketball Writers Association. Rebecca Lobo’s March Madness pick? An elite takeout order UConn icon Rebecca Lobo picks her go-to "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.ctinsider.com/sports/uconn-mens-basketball/article/injury-news-dan-hurley-silas-demary-jaylin-stewart-22080303.php\",\n    \"text\": \"UConn&#x27;s Dan Hurley gives injury updates before NCAA Tournament Ct Insider Logo Hearst Newspapers Logo Skip to main content Subscribe Home Contact Us Advertise With Us Newsletters FAQ Privacy Notice Terms of Use E-Edition Our Brands Cheshire Herald Connecticut Magazine County Times Fairfield Citizen Journal Inquirer New Milford Spectrum Record-Journal Shoreline Times West Hartford News Westport News Waterbury Republican-American News Education Politics Election Health Latino News Sports GametimeCT UConn UConn Women&#x27;s Basketball UConn Men&#x27;s Basketball College Connecticut Sun WNBA NFL NBA MLB Hockey Business Entertainment Horoscopes Advice Puzzles Comics Real Estate Living Food Weather Opinion We Asked, You Answered Obits Best Of Education Home Services Legal Services Senior Living Entertainment Food & Drink Health Advertising Features Events Jobs Classifieds Ct Insider Logo Subscribe Trending: Speed cameras on highways? | Gusty winds for St Patrick&#x27;s Day | CT power outages | CT pension spending | Horoscopes Sports // UConn Men&#x27;s Basketball Dan Hurley gives injury updates on UConn&#x27;s Jaylin Stewart, Silas Demary Jr. ahead of NCAA Tournament By Declan Walsh... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:20.931Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-8-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T19:57:20.931Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/",
+        "maxChars": 4000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-8-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T19:57:21.299Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/",
+        "text": "UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament - Philadelphia Today Skip to content National Today Menu National Today Today Holidays Animals Arts & Entertainment Cause Cultural Federal Food & Beverage Health Relationships Religious Special Interest Birthdays January February March April May June July August September October November December Reminders Cities Atlanta Austin Baltimore Berwyn Beverly Hills Birmingham Boston Brooklyn Buffalo Charlotte Chicago Cincinnati Cleveland Columbus Dallas Denver Detroit Fort Worth Houston Indianapolis Knoxville Las Vegas Los Angeles Louisville Madison Memphis Miami Milwaukee Minneapolis Nashville New Orleans New York Omaha Orlando Philadelphia Phoenix Pittsburgh Portland Raleigh Richmond Rutherford Sacramento Salt Lake City San Antonio San Diego San Francisco San Jose Seattle Tampa Tucson Washington Log in Sign up Search Search Cancel Search National Today Submit Philadelphia Today By the People, for the People News Sports Basketball Baseball Body Building Boxing Cycling Equestrian eSports Extreme Sports Football Golf Gymnastics Hockey Ice Skating Mixed Martial Arts Motorsports Olympics Other Sports Rodeo Running Skiing Soccer Softball Surfing Swimming Tennis Track & Field Volleyball Wrestling More UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament Head coach Dan Hurley provides updates on key players' status for the first round Mar. 16, 2026 at 3:52am Got story updates? Submit your updates here. › UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart's status for the first round is uncertain, while Demary is reported to be 'in pretty good shape'. The Huskies are the No. 2 seed and will face the No. 15 Furman Paladins on Friday in Philadelphia. Why it matters UConn is looking to reclaim the national title after missing out on a three-peat in 2025. The health of Stewart and Demary could be crucial to the Huskies' chances of making a deep tournament run. Demary in particular is a key contributor, leading the team in assists and steals. The details Forward Jaylin Stewart has not played since a Feb. 21 game against Villanova and missed the entire Big East tournament. Coach Hurley said it 'will be close' on whether Stewart can play in the first round. Meanwhile, junior guard Silas Demary Jr. is reported to be 'in pretty good shape'. Demary is second on the team in usage and leads the Huskies in assists and steals. Stewart has not played since a Feb. 21 game against Villanova. UConn will face Furman in the first round on Friday, March 21, 2026. The players Dan Hurley The head coach of the UConn Huskies men's basketball team. Jaylin Stewart A junior forward for the UConn Huskies who has been sidelined with an injury. Silas Demary Jr. A junior guard for the UConn Huskies who is reported to be in 'pretty good shape' heading into "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/\",\n    \"text\": \"UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament - Philadelphia Today Skip to content National Today Menu National Today Today Holidays Animals Arts & Entertainment Cause Cultural Federal Food & Beverage Health Relationships Religious Special Interest Birthdays January February March April May June July August September October November December Reminders Cities Atlanta Austin Baltimore Berwyn Beverly Hills Birmingham Boston Brooklyn Buffalo Charlotte Chicago Cincinnati Cleveland Columbus Dallas Denver Detroit Fort Worth Houston Indianapolis Knoxville Las Vegas Los Angeles Louisville Madison Memphis Miami Milwaukee Minneapolis Nashville New Orleans New York Omaha Orlando Philadelphia Phoenix Pittsburgh Portland Raleigh Richmond Rutherford Sacramento Salt Lake City San Antonio San Diego San Francisco San Jose Seattle Tampa Tucson Washington Log in Sign up Search Search Cancel Search National Today Submit Philadelphia Today By the People, for the People News Sports Basketball Baseball Body Building Boxing Cycling Equestrian eSports Extreme Sports Football Golf Gymnastics Hockey Ice Skating Mixed Martial Arts Motorsports Olympics Other Sports Rodeo Running Skiing Soccer... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-final-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T19:57:30.653Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-east-8\",\n    \"winnerId\": \"uconn\",\n    \"confidence\": 0.93,\n    \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"demo-2026-bracket:r64-east-8\",\n    \"title\": \"East R64 (2/15): UConn vs Furman\",\n    \"summary\": \"UConn advances based on a large underlying team-quality gap; Furman needs extreme shooting/turnover variance to threaten.\",\n    \"evidence\": {\n      \"ratings\": {\n        \"furman\": {\n          \"kenpom_rank\": 191,\n          \"kenpom_adj_em\": -1.99,\n          \"kenpom_adj_o\": 107.5,\n          \"kenpom_adj_o_rank\": 200,\n          \"kenpom_adj_d\": 109.5,\n          \"torvik_rank\": 195,\n          \"torvik_adjoe\": 106.84,\n          \"torvik_adjde\": 108.98\n        },\n        \"uconn\": {\n          \"kenpom_rank\": null,\n          \"torvik_rank\": null\n        }\n      },\n      \"news\": [\n        {\n          \"source\": \"CT Insider\",\n          \"topic\": \"UConn injury updates (Jaylin Stewart, Silas Demary Jr.) ahead of Furman game\",\n          \"url\": \"https://www.ctinsider.com/sports/uconn-mens-basketball/article/injury-news-dan-hurley-silas-demary-jaylin-stewart-22080303.php\"\n        }\n      ],\n      \"matchup_notes\": [\n        \"15-seed upset path: hot 3-point shooting + turnover edge; otherwise talent/size gap usually decides.\",\n        \"Furman’s efficiency profile is below-average nationally on both offense and defense, making it harder to sustain a full-game upset without high variance.\"\n      ]\n    }\n  }\n}"
+    },
+    {
+      "id": "r64-east-8-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T19:57:36.288Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-east-8\",\"winnerId\":\"uconn\",\"confidence\":0.93,\"rationale\":\"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"},\"reasoningStep\":{\"id\":\"demo-2026-bracket:r64-east-8\",\"title\":\"East R64 (2/15): UConn vs Furman\",\"summary\":\"UConn advances based on a large underlying team-quality gap; Furman needs extreme shooting/turnover variance to threaten.\",\"evidence\":[\"Furman ratings: KenPom #191 (AdjEM -1.99; AdjO 107.5 #200; AdjD 109.5), Torvik #195 (AdjO 106.84; AdjD 108.98).\",\"Injury context: local reporting (CT Insider) noted UConn had injury updates on Jaylin Stewart and Silas Demary Jr. entering the Furman matchup, with indications at least one situation was improving.\",\"Matchup logic: 15-seed upset path is primarily 3-point/turnover variance; Furman’s below-average national efficiency on both ends makes sustaining an upset difficult if UConn plays to form.\"]}}"
+    }
+  ]
+}

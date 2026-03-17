@@ -1,0 +1,888 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gpt-5-2",
+    "label": "GPT-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "description": "OpenAI • Smaller GPT frontier model tuned for fast, cost-efficient reasoning and tool use."
+  },
+  "gameId": "r64-south-7",
+  "generatedAt": "2026-03-17T20:05:25.211Z",
+  "pick": {
+    "gameId": "r64-south-7",
+    "winnerId": "saint-mary-s",
+    "confidence": 0.6,
+    "rationale": "Saint Mary’s gets the nod because the efficiency metrics show a meaningful overall edge: KenPom has the Gaels #24 vs. Texas A&M #39 (better AdjEM and notably stronger defense), and Torvik similarly favors Saint Mary’s (#25 vs. #39). In a likely slower, half-court game, Saint Mary’s defensive consistency and ability to control tempo are a good fit for March, while A&M’s upset path is real if it turns this into a more physical, chaotic game and wins the offensive-rebounding/turnover margins. I didn’t find a clear, confirmed availability issue for either side that would override the ratings edge, so I’m siding with the higher two-way baseline."
+  },
+  "reasoningStep": {
+    "id": "demo-2026-bracket:r64-south-7",
+    "title": "South 7/10: Saint Mary's vs Texas A&M pick",
+    "summary": "Saint Mary’s projects as the slightly better team on both KenPom and Torvik, driven by a stronger defensive profile, so they’re the safer advance in a close 7/10 matchup.",
+    "evidence": [
+      "KenPom: Saint Mary’s #24 (AdjEM 23.11; AdjD 97.2) vs Texas A&M #39 (AdjEM 18.65; AdjD 101.1).",
+      "Torvik: Saint Mary’s #25 (Def rank 22) vs Texas A&M #39 (Def rank 43).",
+      "No confirmed, matchup-flipping injury/availability news surfaced in the quick scans used; upset risk remains via Texas A&M’s ability to create extra possessions and disrupt tempo."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-bm88woy2",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "saint-mary-s",
+          "texas-a-m"
+        ]
+      },
+      "startedAt": "2026-03-17T20:05:01.065Z",
+      "completedAt": "2026-03-17T20:05:01.074Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "saint-mary-s",
+          "teamName": "Saint Mary's",
+          "torvik": {
+            "rank": 25,
+            "team": "Saint Mary's",
+            "conf": "WCC",
+            "record": "27-5",
+            "adjoe": 119.3629745884241,
+            "oe Rank": 48,
+            "adjde": 97.55224731330834,
+            "de Rank": 22,
+            "barthag": 0.9105591182672548,
+            "rank.1": 25,
+            "proj. W": 27,
+            "Proj. L": 5,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.5999085785844714,
+            "ncsos": 0.559334274108613,
+            "consos": 0.6127754187028833,
+            "Proj. SOS": 0.5999085785844714,
+            "Proj. Noncon SOS": 0.559334274108613,
+            "Proj. Con SOS": 0.6127754187028833,
+            "elite SOS": 0.7794917312609408,
+            "elite noncon SOS": 0.8156576702319633,
+            "Opp OE": 111.93622718595908,
+            "Opp DE": 105.7463204410936,
+            "Opp Proj. OE": 111.93622718595908,
+            "Opp Proj DE": 105.7463204410936,
+            "Con Adj OE": 121.03482379839892,
+            "Con Adj DE": 98.3201416212232,
+            "Qual O": 113.81173504716236,
+            "Qual D": 95.99528529086116,
+            "Qual Barthag": 0.8762985034038723,
+            "Qual Games": 6,
+            "FUN": 0.0484628285866537,
+            "ConPF": 1403,
+            "ConPA": 1154,
+            "ConPoss": 1178.2625,
+            "ConOE": 1.190736359682159,
+            "ConDE": 0.9794082388262376,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 3.962499571330139,
+            "WAB Rk": 24,
+            "Fun Rk": 69,
+            "adjt": 65.27467930324623
+          },
+          "kenpom": {
+            "rank": 24,
+            "team": "Saint Mary's",
+            "conf": "WCC",
+            "record": "27-5",
+            "adj_em": 23.11,
+            "adj_o": 120.3,
+            "adj_o_rank": 43,
+            "adj_d": 97.2,
+            "adj_d_rank": 19,
+            "adj_t": 65.2,
+            "adj_t_rank": 297,
+            "luck": 0.011,
+            "luck_rank": 153,
+            "sos_adj_em": 4.95,
+            "sos_adj_em_rank": 93,
+            "sos_opp_o": 111.6,
+            "sos_opp_o_rank": 96,
+            "sos_opp_d": 106.6,
+            "sos_opp_d_rank": 92,
+            "ncsos_adj_em": 3.84,
+            "ncsos_adj_em_rank": 89
+          }
+        },
+        {
+          "teamId": "texas-a-m",
+          "teamName": "Texas A&M",
+          "torvik": {
+            "rank": 39,
+            "team": "Texas A&M",
+            "conf": "SEC",
+            "record": "21-11",
+            "adjoe": 119.85550632264425,
+            "oe Rank": 41,
+            "adjde": 101.3340859502246,
+            "de Rank": 43,
+            "barthag": 0.8732977513349521,
+            "rank.1": 39,
+            "proj. W": 21,
+            "Proj. L": 11,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.6731642278070978,
+            "ncsos": 0.4211487248207805,
+            "consos": 0.8441105330644582,
+            "Proj. SOS": 0.6731642278070978,
+            "Proj. Noncon SOS": 0.4211487248207805,
+            "Proj. Con SOS": 0.8441105330644582,
+            "elite SOS": 0.6751175060563831,
+            "elite noncon SOS": 0.8597349034507304,
+            "Opp OE": 116.08911890092584,
+            "Opp DE": 106.60994891557688,
+            "Opp Proj. OE": 116.08911890092584,
+            "Opp Proj DE": 106.60994891557688,
+            "Con Adj OE": 121.22136425185052,
+            "Con Adj DE": 99.87746566883963,
+            "Qual O": 119.929629950729,
+            "Qual D": 98.02694776267434,
+            "Qual Barthag": 0.910448337226246,
+            "Qual Games": 14,
+            "FUN": 0.0232412409067956,
+            "ConPF": 1493,
+            "ConPA": 1460,
+            "ConPoss": 1308.0375,
+            "ConOE": 1.1414045851131944,
+            "ConDE": 1.1161759506130369,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 1.5420298139895858,
+            "WAB Rk": 40,
+            "Fun Rk": 116,
+            "adjt": 70.98801448556942
+          },
+          "kenpom": {
+            "rank": 39,
+            "team": "Texas A&M",
+            "conf": "SEC",
+            "record": "21-11",
+            "adj_em": 18.65,
+            "adj_o": 119.7,
+            "adj_o_rank": 49,
+            "adj_d": 101.1,
+            "adj_d_rank": 40,
+            "adj_t": 70.5,
+            "adj_t_rank": 29,
+            "luck": -0.002,
+            "luck_rank": 193,
+            "sos_adj_em": 11.08,
+            "sos_adj_em_rank": 51,
+            "sos_opp_o": 117,
+            "sos_opp_o_rank": 23,
+            "sos_opp_d": 105.9,
+            "sos_opp_d_rank": 79,
+            "ncsos_adj_em": -5.96,
+            "ncsos_adj_em_rank": 317
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-2txaqjx9",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Saint Mary's vs Texas A&M 2026 injury report availability March Madness",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:05:01.074Z",
+      "completedAt": "2026-03-17T20:05:02.084Z",
+      "summary": "Returned 5 search results for \"Saint Mary's vs Texas A&M 2026 injury report availability March Madness\".",
+      "result": [
+        {
+          "title": "Texas A&M @ Saint Mary&#x27;s Game Overview - Covers.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376841&rut=0b145ede1486947b2f7a722f1ed0f18ce4f81955551f5a44daa3839f91bb45c4",
+          "snippet": "Get key insights for Texas A&M Aggies vs Saint Mary&#x27;s Gaels on March 19, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "2025-2026 NCAA BB Games: Aggies Gaels Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Faggies%2Dgaels%2D2026%2D03%2D19%2Finjuries&rut=ed9c390708977aed44284acb3aca240c7bfbba1e5fd284493fbaa437e91a668f",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Texas A&M and Saint Mary&#x27;s . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "ESPN&#x27;s Jay Bilas predicts Texas A&M vs. Saint Mary&#x27;s in March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Faggieswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Faggies%2Fmens%2Dbasketball%2F2026%2F03%2F17%2Ftexas%2Daggies%2Dbasketball%2Dsaint%2Dmarys%2Djay%2Dbilas%2Dmarch%2Dmadness%2F89190225007%2F&rut=fa8e9f216be818157a3569b72f7f4932685eb1fee46ee9d42538b98584f360cc",
+          "snippet": "Bilas feels that Saint Mary&#x27;s efficient half-court offense, which looks to thrive in the paint and hit free throws, provides the Gaels a stark advantage against Texas A&M&#x27;s pesky press defense and somewhat erratic offense. Need a news break? Check out the all new PLAY hub with puzzles, games and more! \"Talk about a contrast in styles."
+        },
+        {
+          "title": "Saint Mary&#x27;s vs. Texas A&M - March 19, 2026 - Bleacher Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Ftexas%2Dam%2Dbasketball%2Dvs%2Dsaint%2Dmarys%2Dbasketball%2D2026%2D3%2D19%2D17%2D35&rut=6bfd28fb4b852c5c89d846b2e7fda30a084c5077473651d7acd37dbefb5b9b00",
+          "snippet": "Download the BR App for the latest game updates, scores, sports highlights, & recaps from your favorite teams!"
+        }
+      ]
+    },
+    {
+      "id": "tool-wehj7nwf",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Saint Mary's Texas A&M injury availability",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:05:02.084Z",
+      "completedAt": "2026-03-17T20:05:02.913Z",
+      "summary": "Returned 5 search results for \"Saint Mary's Texas A&M injury availability\".",
+      "result": [
+        {
+          "title": "Texas A&M vs. Saint Mary&#x27;s (Mar 19, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856492%2Ftexas%2Dam%2Dsaint%2Dmarys&rut=41bab215c95814eb896e27bc049f3ba067d6c42365526956cb78a2b99e473dba",
+          "snippet": "Live coverage of the Texas A&M Aggies vs. Saint Mary&#x27;s Gaels NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Saint Mary&#x27;s Gaels 2025-26 Postseason NCAAM Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F2608&rut=06f9b69707e3a131581216c297067260c4760058bdb1eaadc64eca87163c6d0c",
+          "snippet": "ESPN has the full 2025-26 Saint Mary&#x27;s Gaels Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Gaels games."
+        },
+        {
+          "title": "ESPN.com - Men&#x27;s College Basketball Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fncb%2Finjuries%2Findex.html&rut=1a5a94f745da371bc015d1d810f5f3d717156827f2673cb273adf6d41a24e58f",
+          "snippet": "St Josephs C Dwayne Jones Academics Expected to miss entire season. 11/15 F Jamal Nichols Academics Out indefinetely 11/14 St Louis No significant injuries St Marys CA No significant injuries St ..."
+        },
+        {
+          "title": "NBA Injury Status - 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=16983922c6f72a3bcbcca0f572278882e22341b208ebde06312eb54ac68646e8",
+          "snippet": "Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve."
+        },
+        {
+          "title": "St. Mary&#x27;s (TX) Rattlers Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2610%2Fst%2Dmary%2Dtx%2Drattlers&rut=133b0cdf1a40c7bb1f32dc7df07f7a4f83e138dc43aac70a1bb036dd23578a0c",
+          "snippet": "Visit ESPN for St. Mary&#x27;s (TX) Rattlers live scores, video highlights, and latest news. Find standings and the full % {year} season schedule."
+        }
+      ]
+    },
+    {
+      "id": "tool-s8ac6jqb",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Texas A&M Aggies key injuries suspension March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:05:02.913Z",
+      "completedAt": "2026-03-17T20:05:03.903Z",
+      "summary": "Returned 5 search results for \"Texas A&M Aggies key injuries suspension March 2026\".",
+      "result": [
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=f1393f83883e23d89f0c7431172ad574e6a6a0326a61053f9f0a1037e0dda756",
+          "snippet": "The 68-team field is set and the printable March Madness bracket is posted. Before you fill out your picks, it&#x27;s imperative to know which teams are battling key injuries . The table below lists all the March Madness injuries to know for 2026 . The list is ordered alphabetically by team, and then by player (last name)."
+        },
+        {
+          "title": "Three Key Texas A&M Returning From Significant Injuries Ahead of 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Ftamu%2Ffootball%2Fthree%2Dkey%2Dtexas%2Dam%2Dreturning%2Dfrom%2Dsignificant%2Dinjuries%2Dahead%2Dof%2D2026&rut=3deea5a93766250783953d529da405a43c20fb59ecd1be114c6e89911e762d9a",
+          "snippet": "The Texas A&M Aggies were fairly lucky in the injury category, but they will get three key players returning in 2026 who spent majority or all of 2025 injured."
+        },
+        {
+          "title": "March Madness injuries to know: Updates for key players ahead of ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmarch%2Dmadness%2Dinjuries%2Dto%2Dknow%2Dupdates%2Dfor%2Dkey%2Dplayers%2Dahead%2Dof%2Dthe%2Dmens%2Dncaa%2Dtournament%2Far%2DAA1YR1Tv&rut=cc47759deae4cf24e2d8907835696575053ea7b933671b0740785010b1101bc3",
+          "snippet": "Drew Dinsick and Vaughn Dalzell break down which No. 2 seed teams you should consider betting on to reach the national championship of the men&#x27;s tournament, including Houston and Iowa State."
+        },
+        {
+          "title": "Texas A&M Aggies Injuries 2025-2026 - Updated NCAAF Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Ffootball%2Fncaaf%2Fteams%2Fmain%2Ftexas%2Da%2Dm%2Daggies%2Finjuries&rut=9ab053c658fbd92151b7a12c6b4c800e863ac46ffe0f60f392a2aa04ba559f88",
+          "snippet": "Stay In the Know: Check Out Texas A&M Aggies Injuries Impacting The 2025- 2026 NCAAF Season."
+        },
+        {
+          "title": "Report: Denver Harris, Chris Marshall, PJ Williams among Texas A&M true ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fcollege%2Ftexas%2Dam%2Daggies%2Fnews%2Ftexas%2Dam%2Dsuspended%2Dfreshmen%2Djimbo%2Dfisher%2Dnames%2Drevealed%2Ddetails%2Ddenver%2Dharris%2Dpj%2Dwilliams%2Dchris%2Dmarshall%2Daggies%2F&rut=f88e8c629463a0d511511bc686ea8877c7f83d868feb8ea4ea0d79166d6a17d1",
+          "snippet": "Late Monday night, news broke that four Texas A&M players have been suspended indefinitely by head coach Jimbo Fisher. More specific details, including the names of the players, have emerged. This marks the second time this year Harris and Marshall have been suspended. They also missed the Aggies ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-e6qomfb5",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Saint Mary's Gaels key injuries March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T20:05:03.903Z",
+      "completedAt": "2026-03-17T20:05:04.788Z",
+      "summary": "Returned 5 search results for \"Saint Mary's Gaels key injuries March 2026\".",
+      "result": [
+        {
+          "title": "Texas A&M Aggies vs Saint Mary&#x27;s Gaels Game Overview, Stats, Injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376841&rut=0b145ede1486947b2f7a722f1ed0f18ce4f81955551f5a44daa3839f91bb45c4",
+          "snippet": "Get key insights for Texas A&M Aggies vs Saint Mary&#x27;s Gaels on March 19, 2026 , including season records, injuries , and essential stats to help you make informed bets."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=06c6eb9f632ce722feb3d90942368ad1186f9f671e22ffd99e6b129a27764235",
+          "snippet": "Harry Wessels, Saint Mary&#x27;s The Gaels&#x27; starting center rolled his ankle in warmups before the WCC semifinals and managed just nine minutes in the loss to Santa Clara."
+        },
+        {
+          "title": "Saint Mary&#x27;s Gaels News, Schedule, Stats and Roster - USA TODAY Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fsaint%2Dmarys%2Dgaels%2F1622&rut=8f917f9c5fc6778b41ba56ecd779af12de29f4f57e616d1cf15f1925c0da0151",
+          "snippet": "Latest Saint Mary&#x27;s Gaels news, schedule, stats, depth chart, roster, injuries , transactions and more from USA TODAY Sports."
+        },
+        {
+          "title": "Saint Mary&#x27;s Gaels Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fsaint%2Dmary%2Ds%2Dgaels%2Finjuries&rut=7b785a009cdc52fa524019007bc97d119f5b1d7fa5d5cbe38efa5d8fe442a528",
+          "snippet": "Stay In the Know: Check Out Saint Mary&#x27;s Gaels Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "Saint Mary&#x27;s Gaels - News, Schedule, Scores, Roster, and Stats - The ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Fcollege%2Dbasketball%2Fteam%2Fsaint%2Dmary%2Ds%2Dgaels%2Dcollege%2Dbasketball%2F&rut=09a219c96da39d196b801f9fda72e34a4495727556051ec0874af22f79281354",
+          "snippet": "Breaking Saint Mary&#x27;s Gaels news and in-depth analysis from the best newsroom in sports. Follow your favorite clubs. Get the latest injury updates, player news and more from around the league."
+        }
+      ]
+    },
+    {
+      "id": "tool-hhw3oyi2",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/aggies-gaels-2026-03-19/injuries",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T20:05:07.649Z",
+      "completedAt": "2026-03-17T20:05:08.239Z",
+      "summary": "Fetched https://www.teamrankings.com/ncaa-basketball/matchup/aggies-gaels-2026-03-19/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/aggies-gaels-2026-03-19/injuries",
+        "text": "2025-2026 NCAA BB Games: Aggies Gaels Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius 🏆 2026 NCAA Bracket Picks » You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu TeamRankings.com Get Smart About Sports Log In Subscribe Home Sports Betting NCAA Bracket Picks 2026 NCAA Survivor Picks Golf One And Done Picks Golf Majors & Masters Picks NFL NBA MLB NCAAF NCAAB Main Menu NFL Super Bowl SB Home Game Picks Model predictions Prop Picks Betting Analysis Super Bowl Squares Betting Promo Offers Betting & Pool Picks Picks Pick'em Picks Survivor Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Seattle vs. New England Rankings Predictive Rankings More Rankings Rankings Comparison Stats All Stats Team Stats Player Stats Teams Arizona Cardinals Atlanta Falcons Baltimore Ravens Buffalo Bills Carolina Panthers Chicago Bears Cincinnati Bengals Cleveland Browns Dallas Cowboys Denver Broncos Detroit Lions Green Bay Packers Houston Texans Indianapolis Colts Jacksonville Jaguars Kansas City Chiefs Miami Dolphins Las Vegas Raiders Los Angeles Chargers Los Angeles Rams Minnesota Vikings New England Patriots New Orleans Saints New York Giants New York Jets Philadelphia Eagles Pittsburgh Steelers San Francisco 49ers Seattle Seahawks Tampa Bay Buccaneers Tennessee Titans Washington Commanders NFL Home NCAAF Bowl Games Bowl Pick'em Picks Bowl Betting Picks Bowl Odds Bowl Schedule Bowls Home Betting & Pool Picks Picks Pick'em Picks Bowl Pick'em Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Boise St vs. Washington Troy vs. Jacksonville St Old Dominion vs. S Florida Louisiana vs. Delaware Missouri St vs. Arkansas St Kennesaw St vs. W Michigan Memphis vs. NC State Alabama @ Oklahoma Miami @ Texas A&M Tulane @ Mississippi J Madison @ Oregon Washington St vs. Utah St Toledo vs. Louisville W Kentucky vs. Southern Miss UNLV vs. Ohio More... Rankings & Polls Rankings Predictive Rankings More Rankings"
+      }
+    },
+    {
+      "id": "tool-56kld4rh",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://aggieswire.usatoday.com/story/sports/college/aggies/mens-basketball/2026/03/17/texas-aggies-basketball-saint-marys-jay-bilas-march-madness/89190225007/",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T20:05:08.239Z",
+      "completedAt": "2026-03-17T20:05:08.425Z",
+      "summary": "Fetched https://aggieswire.usatoday.com/story/sports/college/aggies/mens-basketball/2026/03/17/texas-aggies-basketball-saint-marys-jay-bilas-march-madness/89190225007/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://aggieswire.usatoday.com/story/sports/college/aggies/mens-basketball/2026/03/17/texas-aggies-basketball-saint-marys-jay-bilas-march-madness/89190225007/",
+        "text": "ESPN's Jay Bilas predicts Texas A&M vs. Saint Mary's in March Madness Skip to main content Home Schedule Football Basketball Recruiting SEC Sports Odds Newsletter College Sports Wire USA TODAY Sports ESPN's Jay Bilas predicts Texas A&M vs. Saint Mary's in March Madness Cameron Ohnysty Aggies Wire Texas A&M (21-11) ended the regular season on a high note after defeating Kentucky and LSU to finish the year with 21 wins, including 11 in SEC play. This success, despite the inconsistencies, led to first-year head coach Bucky McMillan and his veteran roster, made up of transfer-portal additions, earning an unlikely bid to the NCAA Tournament. After finishing the regular season, losing to Oklahoma by 20 points in the second round of the SEC Tournament was actually beneficial for the Aggies, who went on to earn a 10-seed in the NCAA Tournament and are set to face 7-seed Saint Mary's in Oklahoma City. For those who don't remember, which seems impossible for every Aggie reading this, Texas A&M's historic comeback win over Northern Iowa during the Aggies' 2016 March Madness took place in OKC, and for Bucky McMillan , this is just his second career trip to the big dance after leading Samford to the tournament during the 2023-2024 season, nearly upsetting the Kansas Jayhawks. On paper, Texas A&M is one of the smallest teams in the tourney, which has been the case all season, and will now face a Saint Mary's roster that includes three players who are listed at 7'0\", which will cause an issue in the paint if the Aggies can't find success from three-point range. On Tuesday, ESPN analyst Jay Bilas released his prediction for every game in the NCAA Tournament, and for those who feel the media is behind the Aggies in the first round, think again. Bilas feels that Saint Mary's efficient half-court offense, which looks to thrive in the paint and hit free throws, provides the Gaels a stark advantage against Texas A&M's pesky press defense and somewhat erratic offense. \"Talk about a contrast in styles. Texas A&M under Bucky McMillan wants to get up and down the floor; the Aggies want to press, they want to be annoying. But Saint Mary's is going to be a problem to play against. It seems different to take Saint Mary's here and call it chalk, but the Gaels will slow the game down.\" For the Aggies to have a chance at moving to the Round of 32, they will need a similar performance that led to the 96-85 win over Kentucky: force turnovers early and often, hit outside shots, and force the Gaels out of their comfort zone by forcing bad shots. Texas A&M vs. Saint Mary's will take place on Thursday at 6:45 p.m. and will air on TBS. Contact/Follow us @AggiesWire on X (formerly Twitter) and like our page on Facebook to follow ongoing coverage of Texas A&M news, notes and opinions. Follow Cameron on X: @CameronOhnysty . Facebook Twitter Email Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your"
+      }
+    },
+    {
+      "id": "tool-3pc3yc5p",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T20:05:08.425Z",
+      "completedAt": "2026-03-17T20:05:08.535Z",
+      "summary": "Fetched https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Underdog Fantasy Canada Canada Canada Sports Betting Alberta Betting Apps Ontario Betting Apps Brazil Promos Promos Sports Betting Promo Codes DraftKings Promo Code BetMGM Promo Code bet365 Bonus Code theScore Bet Promo Code ESPN BET Promo Code FanDuel Promo Code Fanatics Sportsbook Promo Code Caesars Sportsbook Promo Code Hard Rock Bet Promo Code BetRivers Promo Code Boosted Odds NFL Betting Promos Odds Odds NFL NBA MLB NHL NCAAF NCAAB Sports Sports NFL NFL NFL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Super Bowl MVP DPOY OROY DROY All NFL Futures NBA NBA NBA Betting Odds Props Public Betting Starting Lineups ATS Records News Playoff Bracket Scores Futures Futures Championship MVP DPOY ROY All NBA Futures MLB MLB MLB Betting Odds Props Public Betting Lineups & Starting Pitchers ATS Records News Playoff Bracket Scores Futures Futures World Series MVP Cy Young Odds AL & NL ROY All MLB Futures NHL NHL NHL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Stanley Cup Hart Trophy Vezina Trophy All NHL Futures NCAAF NCAAF NCAAF Betting Odds Props Public Betting ATS Records Strength-of-Schedule CFP Bracket News Scores Futures Futures National Championship CFP Odds Heisman Trophy All NCAAF Futures NCAAB NCAAB NCAAB Betting Odds Props Public Betting ATS Records News Bracket Scores Futures Futures Championship Conference Wooden POY All NCAAB Futures College Baseball College Baseball College Baseball Betting News College World Series Odds More More Golf Tennis Boxing Mixed Martial Arts Politics Entertainment World Cup Soccer Horse Racing Racing WNBA News Picks Prediction Markets Prediction Markets &mdash; All Kalshi Referral Code Novig Promo Code ProphetX Promo Code Popular Prediction Market State"
+      }
+    },
+    {
+      "id": "tool-zf9sgea6",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/ncb/injuries/index.html",
+        "maxChars": 6000
+      },
+      "startedAt": "2026-03-17T20:05:09.697Z",
+      "completedAt": "2026-03-17T20:05:10.103Z",
+      "summary": "Fetched https://www.espn.com/ncb/injuries/index.html and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/ncb/injuries/index.html",
+        "text": "ESPN.com - Men's College Basketball Injuries \" border=0 width=1 height=1> Keyword Search Search ESPN.com Search The Web ESPN Network: ESPN.com | RPM | NFL.com | NBA.com | NHL.com | WNBA.com | ABCSports | EXPN | FANTASY | INSIDER Men's College Basketball Scores/Schedules Rankings Standings Statistics Transactions Injuries Message board Players Teams Recruiting NCAA StatSearch Slants Dick Vitale Andy Katz Broadcast TV Schedule Video Highlights Audio Highlights SportsMall NikeTown TeamStore Sport Sections NBA Scores M College BB Scores Baseball Scores NHL Scores Golf Online Scores W College BB Scores NFL Col.FB | Recruiting Other Football College Sports Tennis RPM.ESPN.com Boxing Horse Racing Extreme Sports Soccer Soccernet.com ESPNdeportes More Sports Friday, Nov. 16 9:25am ET Injuries Air Force No significant injuries Akron F Byron Thompson Knee Out 3-4 weeks. 11/1 Alabama *G Travis Stinnet Shoulder Questionable vs Utah. 11/16 American No significant injuries Appalachian St No significant injuries Arizona G Travis Hanour Personal Quit the team. 10/26 Arizona St No significant injuries Arkansas No significant injuries Arkansas Lr No significant injuries Arkansas St No significant injuries Auburn C Marin Bota Personal Quit the team. 10/26 G Lincoln Glass Suspension Out indefinitely. 10/17 Austin Peay No significant injuries Ala Birmingham No significant injuries Anderson Ind No significant injuries ARK MONTICELLO (AK*) No significant injuries Ball St No significant injuries Belmont No significant injuries Baylor No significant injuries Boise St No significant injuries Boston College G Troy Bell Knee (surgery) Out 2-6 weeks. 10/31 Boston U No significant injuries Bowling Green No significant injuries Bradley No significant injuries Brown No significant injuries Butler No significant injuries BYU G Michael Vranes Foot Out for the season. 9/21 Buffalo No significant injuries U-C UC Irvine No significant injuries Cal Poly No significant injuries California No significant injuries Canisius No significant injuries Centenary No significant injuries Ucf No significant injuries Central Mich No significant injuries Chaminade No significant injuries Coll Of Charltn No significant injuries Charleston Sou No significant injuries Chicago St No significant injuries Cincinnati F Derek Hollman Shoulder (surgery) Out 3-6 months. 11/2 C B.J. Grove Personal Left the team. 10/02 Clemson *F Dwon Clifton Heart Condition Out indefinitely. 11/16 Cleveland St No significant injuries Colgate No significant injuries Colorado *F Jason Carter Suspension Out indefinitely. 11/16 Colorado St *F Philip Ricci Suspension Out Sat. vs N. Colorado. 11/16 *G Jonathan Sanders Personal Left team. 11/13 Columbia No significant injuries Connecticut No significant injuries Coppin St No significant injuries Cornell No significant injuries Creighton No significant injuries The Citadel No significant injuries Tennessee Chat No significant injuries Dartmouth No significant injuries Davidson No sig"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-south-7-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T20:04:58.346Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-south-7\nCurrent game label: South 7/10\nRound: Round of 64\nResolved teams: Saint Mary's (saint-mary-s) vs Texas A&M (texas-a-m)\nPrior committed picks: 26"
+    },
+    {
+      "id": "r64-south-7-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T20:04:58.346Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-south-7\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 7/10\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"saint-mary-s\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"texas-a-m\"\n      }\n    },\n    \"slotAName\": \"Saint Mary's\",\n    \"slotBName\": \"Texas A&M\",\n    \"slotATeamId\": \"saint-mary-s\",\n    \"slotBTeamId\": \"texas-a-m\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Texas rates as the stronger team on the efficiency metrics available (top-40 KenPom with an elite offense), which is a meaningful edge in a one-game play-in where shot-making often decides it. Market movement and preview consensus also lean slightly toward Texas, suggesting the matchup is close but the Longhorns have the higher baseline quality. NC State has a credible upset path if it controls tempo and wins the turnover/3-point margins, but Texas’ offensive ceiling and overall profile make it the safer pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.66,\n        \"rationale\": \"SMU has the stronger underlying efficiency profile in both KenPom and Torvik (around #42 vs. Miami (OH) closer to the #90 range), driven by a notably better offense and a less exploitable defense. Miami (OH) has a credible upset path if its shooting carries over and it can keep SMU out of rhythm, but the step up in athleticism/size and overall schedule strength typically shows up in a one-off play-in. With no clear injury/availability red flags surfaced in the pregame coverage, I’m siding with the higher baseline quality and offensive ceiling.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.58,\n        \"rationale\": \"UMBC has the stronger baseline efficiency profile in both KenPom and Torvik, driven by a meaningfully better offense (KenPom AdjO ~184 vs. Howard ~283) and a slightly better overall margin, which matters in a one-game play-in where shot-making and half-court execution often decide it. Howard’s defense grades a bit better, giving the Bison a real upset path if they can turn it into a lower-possession game and win the turnover/3-point variance, but UMBC’s higher offensive ceiling and overall rating edge make them the safer pick. I didn’t find any clear, widely reported availability red flags that would flip the matchup.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Lehigh gets a slight nod because the efficiency profiles are marginally better across both KenPom and Torvik (small edge in overall adjusted margin and offense), and the betting market also leans Lehigh as a modest favorite. Prairie View A&M’s path is credible—its defense grades a bit better and a one-game play-in can swing on turnovers and shot variance—but Lehigh’s slightly higher baseline shot-making/efficiency makes it the safer side. With no clear availability red flags surfaced in the quick news scan, I’m sticking with the small but consistent rating/market edge.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Duke is the clear choice given the massive gap in underlying quality: Duke is #1 in both KenPom and Torvik with an elite offense and the nation’s best defense, while Siena sits around the ~190 range with a negative adjusted efficiency margin. The market reflects that mismatch as well (Duke favored by roughly 30 points), and even with Duke dealing with a rotation loss (Caleb Foster out), their depth and two-way dominance should overwhelm Siena’s ability to score efficiently. Siena’s only credible path is extreme shooting/turnover variance plus Duke playing flat, but the baseline matchup strongly points to a comfortable Duke win.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.6,\n        \"rationale\": \"TCU gets the nod because the available efficiency data paints them as the slightly stronger, more reliable two-way team (KenPom #43 with a top-30 caliber defense, and Torvik in the same range), which tends to matter in an 8/9 game where possessions are tight. Ohio State’s upset path is very real if it wins the shot-variance battle (especially from three) and keeps TCU out of transition, but without a clear ratings edge or a specific matchup advantage surfacing in the quick news scan, I’ll side with the team that grades better defensively and overall.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.74,\n        \"rationale\": \"St. John’s has a clear overall quality edge in the efficiency metrics (KenPom #20 / Torvik #18) and is meaningfully better offensively than Northern Iowa, which matters if UNI’s strong defense can’t fully dictate tempo. Northern Iowa is a live 12-seed because it defends at a high level (top-30 AdjD) and can keep the game in the half court, but its offense grades well below St. John’s and leaves a thinner margin if it falls behind. With no specific, verified availability red flags surfaced in the quick scan, I’m siding with St. John’s higher two-way ceiling and better scoring reliability.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.86,\n        \"rationale\": \"Kansas has a large baseline quality edge in the efficiency data available (KenPom #21 / Torvik #22 with a top-10 caliber defense), and that defensive floor is usually what prevents 4/13 upsets from materializing. California Baptist’s path is real—CBU has a high-end scorer (D. Daniels Jr. at 23.2 PPG per ESPN) and can swing a single game with shooting variance—but Kansas’ athleticism and ability to string together stops should limit clean looks and create separation over 40 minutes. With no clear, verified availability red flags surfaced in the quick scan, I’m siding with the higher two-way profile and tournament-tested roster.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.73,\n        \"rationale\": \"Louisville has a clear baseline edge in both KenPom and Torvik (roughly top-20 vs. South Florida around #50), with a stronger two-way profile that should translate against tournament-level athleticism. The main swing factor is Louisville’s starting PG Mikel Brown Jr. (back) being uncertain after missing recent games, but even if he’s limited, Louisville’s overall efficiency margin and defensive ceiling give them more ways to win. South Florida’s upset path is real if it turns this into a high-variance shooting game and Louisville’s ball-handling suffers without Brown, but the Cardinals’ underlying quality makes them the safer pick.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State is the safer pick because the typical 3/14 gap in high-major athleticism, depth, and defensive physicality tends to show up over 40 minutes, especially against a Summit League opponent stepping up in competition. North Dakota State has a credible upset path if it shoots well from three and keeps Michigan State out of transition while avoiding live-ball turnovers, but that’s a narrower, higher-variance route. With no clear, verified availability red flags surfaced in the quick news scan, I’m siding with Michigan State’s higher baseline quality and ability to win even if the shooting is merely average.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.67,\n        \"rationale\": \"UCLA is the better team by the core efficiency indicators, with a clear edge in both KenPom (No. 27 vs. No. 54; +21.6 AdjEM vs. +15.1) and Torvik (No. 24 vs. No. 58), driven by a stronger defense that should travel in a one-game setting. The main concern is UCLA’s health, but recent reporting indicates leading scorer Tyler Bilodeau is expected to be available, which stabilizes their offensive floor. UCF’s upset path is real if it turns this into a shot-making game and exploits its offensive efficiency, but its weaker defense makes it harder to sustain stops if UCLA plays to form.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Even allowing for some rotation uncertainty, UConn’s baseline quality as a 2-seed and its typical two-way profile (size, rim protection, and physical defense translating well in a one-off) should overwhelm a Furman team that rates around the ~190 range in both KenPom and Torvik. Furman’s upset path is mostly three-point variance and forcing UConn into a sloppy, high-turnover game, but its own defensive efficiency numbers suggest it may struggle to string together enough stops if UConn plays to form. With recent reporting indicating at least one of UConn’s key injury situations is trending more positive, I’m sticking with the heavy favorite.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Arizona is an overwhelming favorite on every baseline indicator: both KenPom and Torvik rate the Wildcats #3 nationally with elite two-way efficiency, while LIU sits in the low-200s with a negative adjusted margin and a bottom-tier offense. Arizona also had no players listed on its most recent Big 12 availability report, reducing the main upset-risk variable. LIU’s only credible path is extreme three-point/turnover variance plus Arizona playing unusually sloppy, but the talent and efficiency gap is so large that Arizona should advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.61,\n        \"rationale\": \"Villanova gets the edge on baseline team quality: the available efficiency ratings have the Wildcats in the low-to-mid 30s nationally with a balanced profile (top-45 offense and top-40 defense), which is typically enough to survive an 8/9 coin-flip. Utah State has a credible upset path if it can win the three-point/tempo variance and keep Villanova out of rhythm, but without a clear ratings case in the data I could access (and no definitive, matchup-flipping availability news found), I’m siding with Villanova’s steadier two-way floor.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.84,\n        \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.64,\n        \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.64,\n        \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.99,\n        \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.56,\n        \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Nebraska is the clear pick based on a major efficiency gap: the Huskers rate top-20 nationally (KenPom #14, Torvik #19) with an elite defense, while Troy sits around the mid-140s on both systems with a below-average two-way profile. That defensive floor should travel well in a one-game setting and make it hard for Troy to generate enough efficient offense to keep pace. Troy’s upset path is mostly shooting/turnover variance, but Nebraska’s overall quality and stop-making ability make the favorite the much more likely advancer.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.64,\n        \"rationale\": \"North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.94,\n        \"rationale\": \"Illinois is a top-10 caliber team by both KenPom and Torvik (elite #1/#2-level offense with a top-25 defense), while Penn profiles around the mid-150s with a below-average offense, which is a massive baseline gap for a 3/14 game. ESPN Analytics and the betting market also imply a near-certain Illini advance (about 97% win probability and a spread in the mid-20s). Penn’s credible upset path is mostly three-point variance plus Illinois turnovers, but Penn’s limited offensive efficiency makes it hard to sustain enough scoring to capitalize over 40 minutes.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-west-3\",\n      \"winnerId\": \"wisconsin\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Wisconsin has a sizable baseline quality edge in the efficiency ratings (KenPom #22 / Torvik #21) driven by an elite offense, while High Point profiles more like a fringe top-100 team with a defense that grades well below Wisconsin’s level. That gap matters in a one-game setting because Wisconsin can score efficiently even if the pace slows, and High Point’s most credible upset path requires hot three-point shooting plus forcing Wisconsin into an unusually sloppy turnover game. I didn’t find any clear, verified availability news that would meaningfully narrow the talent/efficiency gap, so I’m sticking with the higher-floor, higher-ceiling Badgers.\"\n    },\n    {\n      \"gameId\": \"r64-west-4\",\n      \"winnerId\": \"arkansas\",\n      \"confidence\": 0.84,\n      \"rationale\": \"Arkansas is the pick because its underlying efficiency profile is that of a clear top-20 team (KenPom #17, Torvik #20) with an elite offense (top-5 AdjO) and a solid defensive baseline, which is typically enough to avoid most 4/13 upsets. Hawai'i has a credible path if it can slow the game, win the three-point variance, and keep Arkansas out of transition, but without a comparable ratings case or a clear Arkansas availability red flag surfacing in the quick scan, the Razorbacks’ talent/athleticism and scoring reliability should carry them.\"\n    },\n    {\n      \"gameId\": \"r64-west-5\",\n      \"winnerId\": \"byu\",\n      \"confidence\": 0.64,\n      \"rationale\": \"BYU gets the nod on baseline quality: both KenPom and Torvik rate the Cougars higher overall (KenPom #23 vs. Texas #37; Torvik #33 vs. #45), and BYU’s defense grades meaningfully better than Texas’ while both offenses are high-end. Texas has a credible upset path because its offense can match BYU shot-for-shot, but over 40 minutes BYU’s stronger two-way profile and slightly higher efficiency margin make it the safer advance. The main caveat is BYU’s documented injury attrition (including Richie Saunders out for the season), which lowers confidence, but the remaining team-level metrics still favor BYU.\"\n    },\n    {\n      \"gameId\": \"r64-west-6\",\n      \"winnerId\": \"gonzaga\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Gonzaga is a clear top-tier team by the available efficiency data (KenPom #11 with an elite defense and top-30 offense; Torvik also #11), and that two-way profile plus depth is usually decisive in a 3/14 matchup. Kennesaw State’s credible upset path is the usual one for a 14-seed—turnover creation and hot three-point shooting—but its overall baseline ratings (KenPom around the ~170 range per bracketology aggregates) suggest it will struggle to generate enough quality offense and stops over 40 minutes. The only caution flag I found is Gonzaga big Braden Huff managing a knee issue, but absent a late scratch, the talent/efficiency gap still strongly favors the Zags.\"\n    },\n    {\n      \"gameId\": \"r64-west-7\",\n      \"winnerId\": \"miami-fl\",\n      \"confidence\": 0.64,\n      \"rationale\": \"Miami (FL) has the stronger overall efficiency profile in both KenPom and Torvik, with a better defensive baseline than Missouri and a comparable offense, which gives the Hurricanes a slightly higher floor in a close 7/10-type game. Missouri’s upset path is credible if it turns this into a shot-making contest and wins the three-point/tempo variance, but its weaker defensive numbers make it harder to string together stops if Miami plays to its baseline. With no clear, matchup-flipping availability news surfaced in the quick scan, I’m siding with the team that rates better on both ends.\"\n    },\n    {\n      \"gameId\": \"r64-west-8\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.96,\n      \"rationale\": \"Purdue is a top-10 team in both KenPom and Torvik with an elite offense (top-2 nationally) and a solid defensive baseline, while Queens profiles as a ~180–200-level team whose defense grades very poorly (KenPom AdjD ~117; Torvik defensive rank outside the top 300). That mismatch should show up in shot quality and efficiency over 40 minutes, and the market/ESPN analytics also imply a near-certain Purdue advance (Purdue -25.5; ~98% win probability). Queens’ credible upset path is almost entirely extreme three-point variance plus Purdue turnovers, but Queens’ defensive profile makes it hard to generate enough stops to capitalize.\"\n    },\n    {\n      \"gameId\": \"r64-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.99,\n      \"rationale\": \"Florida is an elite top-5 team in both KenPom and Torvik with a dominant two-way profile (top-10 offense and top-5 defense), while Lehigh grades in the high-200s with a negative efficiency margin and a bottom-tier offense. That gap in athleticism, depth, and shot-quality creation should be overwhelming over 40 minutes, even if Florida is coming off a poor SEC tournament result. Lehigh’s only realistic upset path is extreme three-point variance plus Florida turnovers, but Lehigh’s defensive baseline makes it hard to generate enough stops to sustain that kind of run.\"\n    },\n    {\n      \"gameId\": \"r64-south-2\",\n      \"winnerId\": \"iowa\",\n      \"confidence\": 0.56,\n      \"rationale\": \"Iowa gets a slight edge because its efficiency profile is a bit stronger, led by a notably better offense (KenPom AdjO 121.8, #31; Torvik AdjO 122.1, #29) and a higher overall adjusted margin than Clemson. Clemson’s defense is excellent and gives the Tigers a very real path if they can keep it in the half court and drag the scoring down, but Iowa’s scoring punch and small overall ratings advantage make them the marginally safer pick in a true 8/9 coin flip.\"\n    },\n    {\n      \"gameId\": \"r64-south-3\",\n      \"winnerId\": \"vanderbilt\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Vanderbilt is the clear choice on underlying quality: it rates as an elite top-12 team in KenPom (AdjEM +28.1) with a top-6 offense, while McNeese profiles more like a solid but beatable top-70 team (KenPom #67, AdjEM +12.5). That efficiency gap—especially Vanderbilt’s ability to score efficiently in the half court—usually holds up in a 5/12 game unless the favorite has a major availability issue, and I didn’t find a verified, matchup-flipping injury concern in the quick scan. McNeese’s upset path is real if it can speed Vanderbilt up and win the turnover/3-point variance, but Vanderbilt’s two-way ceiling and SEC-tested profile make it the safer advance.\"\n    },\n    {\n      \"gameId\": \"r64-south-4\",\n      \"winnerId\": \"nebraska\",\n      \"confidence\": 0.88,\n      \"rationale\": \"Nebraska is the clear pick based on a major efficiency gap: the Huskers rate top-20 nationally (KenPom #14, Torvik #19) with an elite defense, while Troy sits around the mid-140s on both systems with a below-average two-way profile. That defensive floor should travel well in a one-game setting and make it hard for Troy to generate enough efficient offense to keep pace. Troy’s upset path is mostly shooting/turnover variance, but Nebraska’s overall quality and stop-making ability make the favorite the much more likely advancer.\"\n    },\n    {\n      \"gameId\": \"r64-south-5\",\n      \"winnerId\": \"north-carolina\",\n      \"confidence\": 0.64,\n      \"rationale\": \"North Carolina has the stronger overall efficiency profile in both KenPom and Torvik (roughly top-30 vs. VCU in the mid-40s/50s), with a small but meaningful edge on both offense and defense that raises its baseline in a one-game setting. VCU’s upset path is credible—its pressure/tempo can create turnover-driven runs and it’s good enough offensively to punish mistakes—but UNC’s higher-end shot creation and comparable defensive level make it more likely to control the game if it handles the ball. The main risk is UNC’s reported injury/attrition (notably the season-ending loss of Caleb Wilson), which keeps confidence moderate rather than high.\"\n    },\n    {\n      \"gameId\": \"r64-south-6\",\n      \"winnerId\": \"illinois\",\n      \"confidence\": 0.94,\n      \"rationale\": \"Illinois is a top-10 caliber team by both KenPom and Torvik (elite #1/#2-level offense with a top-25 defense), while Penn profiles around the mid-150s with a below-average offense, which is a massive baseline gap for a 3/14 game. ESPN Analytics and the betting market also imply a near-certain Illini advance (about 97% win probability and a spread in the mid-20s). Penn’s credible upset path is mostly three-point variance plus Illinois turnovers, but Penn’s limited offensive efficiency makes it hard to sustain enough scoring to capitalize over 40 minutes.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-south-7-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:05:01.065Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:01.065Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "saint-mary-s",
+          "texas-a-m"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:01.074Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "saint-mary-s",
+          "teamName": "Saint Mary's",
+          "torvik": {
+            "rank": 25,
+            "team": "Saint Mary's",
+            "conf": "WCC",
+            "record": "27-5",
+            "adjoe": 119.3629745884241,
+            "oe Rank": 48,
+            "adjde": 97.55224731330834,
+            "de Rank": 22,
+            "barthag": 0.9105591182672548,
+            "rank.1": 25,
+            "proj. W": 27,
+            "Proj. L": 5,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.5999085785844714,
+            "ncsos": 0.559334274108613,
+            "consos": 0.6127754187028833,
+            "Proj. SOS": 0.5999085785844714,
+            "Proj. Noncon SOS": 0.559334274108613,
+            "Proj. Con SOS": 0.6127754187028833,
+            "elite SOS": 0.7794917312609408,
+            "elite noncon SOS": 0.8156576702319633,
+            "Opp OE": 111.93622718595908,
+            "Opp DE": 105.7463204410936,
+            "Opp Proj. OE": 111.93622718595908,
+            "Opp Proj DE": 105.7463204410936,
+            "Con Adj OE": 121.03482379839892,
+            "Con Adj DE": 98.3201416212232,
+            "Qual O": 113.81173504716236,
+            "Qual D": 95.99528529086116,
+            "Qual Barthag": 0.8762985034038723,
+            "Qual Games": 6,
+            "FUN": 0.0484628285866537,
+            "ConPF": 1403,
+            "ConPA": 1154,
+            "ConPoss": 1178.2625,
+            "ConOE": 1.190736359682159,
+            "ConDE": 0.9794082388262376,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 3.962499571330139,
+            "WAB Rk": 24,
+            "Fun Rk": 69,
+            "adjt": 65.27467930324623
+          },
+          "kenpom": {
+            "rank": 24,
+            "team": "Saint Mary's",
+            "conf": "WCC",
+            "record": "27-5",
+            "adj_em": 23.11,
+            "adj_o": 120.3,
+            "adj_o_rank": 43,
+            "adj_d": 97.2,
+            "adj_d_rank": 19,
+            "adj_t": 65.2,
+            "adj_t_rank": 297,
+            "luck": 0.011,
+            "luck_rank": 153,
+            "sos_adj_em": 4.95,
+            "sos_adj_em_rank": 93,
+            "sos_opp_o": 111.6,
+            "sos_opp_o_rank": 96,
+            "sos_opp_d": 106.6,
+            "sos_opp_d_rank": 92,
+            "ncsos_adj_em": 3.84,
+            "ncsos_adj_em_rank": 89
+          }
+        },
+        {
+          "teamId": "texas-a-m",
+          "teamName": "Texas A&M",
+          "torvik": {
+            "rank": 39,
+            "team": "Texas A&M",
+            "conf": "SEC",
+            "record": "21-11",
+            "adjoe": 119.85550632264425,
+            "oe Rank": 41,
+            "adjde": 101.3340859502246,
+            "de Rank": 43,
+            "barthag": 0.8732977513349521,
+            "rank.1": 39,
+            "proj. W": 21,
+            "Proj. L": 11,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.6731642278070978,
+            "ncsos": 0.4211487248207805,
+            "consos": 0.8441105330644582,
+            "Proj. SOS": 0.6731642278070978,
+            "Proj. Noncon SOS": 0.4211487248207805,
+            "Proj. Con SOS": 0.8441105330644582,
+            "elite SOS": 0.6751175060563831,
+            "elite noncon SOS": 0.8597349034507304,
+            "Opp OE": 116.08911890092584,
+            "Opp DE": 106.60994891557688,
+            "Opp Proj. OE": 116.08911890092584,
+            "Opp Proj DE": 106.60994891557688,
+            "Con Adj OE": 121.22136425185052,
+            "Con Adj DE": 99.87746566883963,
+            "Qual O": 119.929629950729,
+            "Qual D": 98.02694776267434,
+            "Qual Barthag": 0.910448337226246,
+            "Qual Games": 14,
+            "FUN": 0.0232412409067956,
+            "ConPF": 1493,
+            "ConPA": 1460,
+            "ConPoss": 1308.0375,
+            "ConOE": 1.1414045851131944,
+            "ConDE": 1.1161759506130369,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 1.5420298139895858,
+            "WAB Rk": 40,
+            "Fun Rk": 116,
+            "adjt": 70.98801448556942
+          },
+          "kenpom": {
+            "rank": 39,
+            "team": "Texas A&M",
+            "conf": "SEC",
+            "record": "21-11",
+            "adj_em": 18.65,
+            "adj_o": 119.7,
+            "adj_o_rank": 49,
+            "adj_d": 101.1,
+            "adj_d_rank": 40,
+            "adj_t": 70.5,
+            "adj_t_rank": 29,
+            "luck": -0.002,
+            "luck_rank": 193,
+            "sos_adj_em": 11.08,
+            "sos_adj_em_rank": 51,
+            "sos_opp_o": 117,
+            "sos_opp_o_rank": 23,
+            "sos_opp_d": 105.9,
+            "sos_opp_d_rank": 79,
+            "ncsos_adj_em": -5.96,
+            "ncsos_adj_em_rank": 317
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"saint-mary-s\",\n      \"teamName\": \"Saint Mary's\",\n      \"torvik\": {\n        \"rank\": 25,\n        \"team\": \"Saint Mary's\",\n        \"conf\": \"WCC\",\n        \"record\": \"27-5\",\n        \"adjoe\": 119.3629745884241,\n        \"oe Rank\": 48,\n        \"adjde\": 97.55224731330834,\n        \"de Rank\": 22\n      },\n      \"kenpom\": {\n        \"rank\": 24,\n        \"team\": \"Saint Mary's\",\n        \"conf\": \"WCC\",\n        \"record\": \"27-5\",\n        \"adj_em\": 23.11,\n        \"adj_o\": 120.3,\n        \"adj_o_rank\": 43,\n        \"adj_d\": 97.2\n      }\n    },\n    {\n      \"teamId\": \"texas-a-m\",\n      \"teamName\": \"Texas A&M\",\n      \"torvik\": {\n        \"rank\": 39,\n        \"team\": \"Texas A&M\",\n        \"conf\": \"SEC\",\n        \"record\": \"21-11\",\n        \"adjoe\": 119.85550632264425,\n        \"oe Rank\": 41,\n        \"adjde\": 101.3340859502246,\n        \"de Rank\": 43\n      },\n      \"kenpom\": {\n        \"rank\": 39,\n        \"team\": \"Texas A&M\",\n        \"conf\": \"SEC\",\n        \"record\": \"21-11\",\n        \"adj_em\": 18.65,\n        \"adj_o\": 119.7,\n        \"adj_o_rank\": 49,\n        \"adj_d\": 101.1\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-7-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:01.074Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Saint Mary's vs Texas A&M 2026 injury report availability March Madness",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:02.084Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Texas A&M @ Saint Mary&#x27;s Game Overview - Covers.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376841&rut=0b145ede1486947b2f7a722f1ed0f18ce4f81955551f5a44daa3839f91bb45c4",
+          "snippet": "Get key insights for Texas A&M Aggies vs Saint Mary&#x27;s Gaels on March 19, 2026 , including season records, injuries, and essential stats to help you make informed bets."
+        },
+        {
+          "title": "2025-2026 NCAA BB Games: Aggies Gaels Injury Report -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Faggies%2Dgaels%2D2026%2D03%2D19%2Finjuries&rut=ed9c390708977aed44284acb3aca240c7bfbba1e5fd284493fbaa437e91a668f",
+          "snippet": "Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Texas A&M and Saint Mary&#x27;s . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        },
+        {
+          "title": "ESPN&#x27;s Jay Bilas predicts Texas A&M vs. Saint Mary&#x27;s in March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Faggieswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Faggies%2Fmens%2Dbasketball%2F2026%2F03%2F17%2Ftexas%2Daggies%2Dbasketball%2Dsaint%2Dmarys%2Djay%2Dbilas%2Dmarch%2Dmadness%2F89190225007%2F&rut=fa8e9f216be818157a3569b72f7f4932685eb1fee46ee9d42538b98584f360cc",
+          "snippet": "Bilas feels that Saint Mary&#x27;s efficient half-court offense, which looks to thrive in the paint and hit free throws, provides the Gaels a stark advantage against Texas A&M&#x27;s pesky press defense and somewhat erratic offense. Need a news break? Check out the all new PLAY hub with puzzles, games and more! \"Talk about a contrast in styles."
+        },
+        {
+          "title": "Saint Mary&#x27;s vs. Texas A&M - March 19, 2026 - Bleacher Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Ftexas%2Dam%2Dbasketball%2Dvs%2Dsaint%2Dmarys%2Dbasketball%2D2026%2D3%2D19%2D17%2D35&rut=6bfd28fb4b852c5c89d846b2e7fda30a084c5077473651d7acd37dbefb5b9b00",
+          "snippet": "Download the BR App for the latest game updates, scores, sports highlights, & recaps from your favorite teams!"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Texas A&M @ Saint Mary&#x27;s Game Overview - Covers.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376841&rut=0b145ede1486947b2f7a722f1ed0f18ce4f81955551f5a44daa3839f91bb45c4\",\n      \"snippet\": \"Get key insights for Texas A&M Aggies vs Saint Mary&#x27;s Gaels on March 19, 2026 , including season records, injuries, and essential stats to help you make informed bets.\"\n    },\n    {\n      \"title\": \"2025-2026 NCAA BB Games: Aggies Gaels Injury Report -\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Faggies%2Dgaels%2D2026%2D03%2D19%2Finjuries&rut=ed9c390708977aed44284acb3aca240c7bfbba1e5fd284493fbaa437e91a668f\",\n      \"snippet\": \"Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Texas A&M and Saint Mary&#x27;s . Includes ats, over/under and straight up odds analysis.\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA.\"\n    },\n    {\n      \"title\": \"ESPN&#x27;s Jay Bilas predicts Texas A&M vs. Saint Mary&#x27;s in March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Faggieswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Faggies%2Fmens%2Dbasketball%2F2026%2F03%2F17%2Ftexas%2Daggies%2Dbasketball%2Dsaint%2Dmarys%2Djay%2Dbilas%2Dmarch%2Dmadness%2F89190225007%2F&rut=fa8e9f216be818157a3569b72f7f4932685eb1fee46ee9d42538b98584f360cc\",\n      \"snippet\": \"Bilas feels that Saint Mary&#x27;s efficient half-court offense, which looks to thrive in the paint and hit free throws, provides the Gaels a stark advantage against Texas A&M&#x27;s pesky press defense and somewhat erratic offense. Need a news break? Check out the all new PLAY hub with puzzles, games and more! \\\"Talk about a contrast in styles.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-7-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:02.084Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Saint Mary's Texas A&M injury availability",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:02.913Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Texas A&M vs. Saint Mary&#x27;s (Mar 19, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856492%2Ftexas%2Dam%2Dsaint%2Dmarys&rut=41bab215c95814eb896e27bc049f3ba067d6c42365526956cb78a2b99e473dba",
+          "snippet": "Live coverage of the Texas A&M Aggies vs. Saint Mary&#x27;s Gaels NCAAM game on ESPN, including live score, highlights and updated stats."
+        },
+        {
+          "title": "Saint Mary&#x27;s Gaels 2025-26 Postseason NCAAM Schedule - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F2608&rut=06f9b69707e3a131581216c297067260c4760058bdb1eaadc64eca87163c6d0c",
+          "snippet": "ESPN has the full 2025-26 Saint Mary&#x27;s Gaels Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Gaels games."
+        },
+        {
+          "title": "ESPN.com - Men&#x27;s College Basketball Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fncb%2Finjuries%2Findex.html&rut=1a5a94f745da371bc015d1d810f5f3d717156827f2673cb273adf6d41a24e58f",
+          "snippet": "St Josephs C Dwayne Jones Academics Expected to miss entire season. 11/15 F Jamal Nichols Academics Out indefinetely 11/14 St Louis No significant injuries St Marys CA No significant injuries St ..."
+        },
+        {
+          "title": "NBA Injury Status - 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=16983922c6f72a3bcbcca0f572278882e22341b208ebde06312eb54ac68646e8",
+          "snippet": "Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve."
+        },
+        {
+          "title": "St. Mary&#x27;s (TX) Rattlers Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2610%2Fst%2Dmary%2Dtx%2Drattlers&rut=133b0cdf1a40c7bb1f32dc7df07f7a4f83e138dc43aac70a1bb036dd23578a0c",
+          "snippet": "Visit ESPN for St. Mary&#x27;s (TX) Rattlers live scores, video highlights, and latest news. Find standings and the full % {year} season schedule."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Texas A&M vs. Saint Mary&#x27;s (Mar 19, 2026) Live Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856492%2Ftexas%2Dam%2Dsaint%2Dmarys&rut=41bab215c95814eb896e27bc049f3ba067d6c42365526956cb78a2b99e473dba\",\n      \"snippet\": \"Live coverage of the Texas A&M Aggies vs. Saint Mary&#x27;s Gaels NCAAM game on ESPN, including live score, highlights and updated stats.\"\n    },\n    {\n      \"title\": \"Saint Mary&#x27;s Gaels 2025-26 Postseason NCAAM Schedule - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F2608&rut=06f9b69707e3a131581216c297067260c4760058bdb1eaadc64eca87163c6d0c\",\n      \"snippet\": \"ESPN has the full 2025-26 Saint Mary&#x27;s Gaels Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Gaels games.\"\n    },\n    {\n      \"title\": \"ESPN.com - Men&#x27;s College Basketball Injuries\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fncb%2Finjuries%2Findex.html&rut=1a5a94f745da371bc015d1d810f5f3d717156827f2673cb273adf6d41a24e58f\",\n      \"snippet\": \"St Josephs C Dwayne Jones Academics Expected to miss entire season. 11/15 F Jamal Nichols Academics Out indefinetely 11/14 St Louis No significant injuries St Marys CA No significant injuries St ...\"\n    },\n    {\n      \"title\": \"NBA Injury Status - 2025-26 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=16983922c6f72a3bcbcca0f572278882e22341b208ebde06312eb54ac68646e8\",\n      \"snippet\": \"Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-7-tool-call-0-3",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:02.913Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Texas A&M Aggies key injuries suspension March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-result-0-3",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:03.903Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=f1393f83883e23d89f0c7431172ad574e6a6a0326a61053f9f0a1037e0dda756",
+          "snippet": "The 68-team field is set and the printable March Madness bracket is posted. Before you fill out your picks, it&#x27;s imperative to know which teams are battling key injuries . The table below lists all the March Madness injuries to know for 2026 . The list is ordered alphabetically by team, and then by player (last name)."
+        },
+        {
+          "title": "Three Key Texas A&M Returning From Significant Injuries Ahead of 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Ftamu%2Ffootball%2Fthree%2Dkey%2Dtexas%2Dam%2Dreturning%2Dfrom%2Dsignificant%2Dinjuries%2Dahead%2Dof%2D2026&rut=3deea5a93766250783953d529da405a43c20fb59ecd1be114c6e89911e762d9a",
+          "snippet": "The Texas A&M Aggies were fairly lucky in the injury category, but they will get three key players returning in 2026 who spent majority or all of 2025 injured."
+        },
+        {
+          "title": "March Madness injuries to know: Updates for key players ahead of ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmarch%2Dmadness%2Dinjuries%2Dto%2Dknow%2Dupdates%2Dfor%2Dkey%2Dplayers%2Dahead%2Dof%2Dthe%2Dmens%2Dncaa%2Dtournament%2Far%2DAA1YR1Tv&rut=cc47759deae4cf24e2d8907835696575053ea7b933671b0740785010b1101bc3",
+          "snippet": "Drew Dinsick and Vaughn Dalzell break down which No. 2 seed teams you should consider betting on to reach the national championship of the men&#x27;s tournament, including Houston and Iowa State."
+        },
+        {
+          "title": "Texas A&M Aggies Injuries 2025-2026 - Updated NCAAF Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Ffootball%2Fncaaf%2Fteams%2Fmain%2Ftexas%2Da%2Dm%2Daggies%2Finjuries&rut=9ab053c658fbd92151b7a12c6b4c800e863ac46ffe0f60f392a2aa04ba559f88",
+          "snippet": "Stay In the Know: Check Out Texas A&M Aggies Injuries Impacting The 2025- 2026 NCAAF Season."
+        },
+        {
+          "title": "Report: Denver Harris, Chris Marshall, PJ Williams among Texas A&M true ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fcollege%2Ftexas%2Dam%2Daggies%2Fnews%2Ftexas%2Dam%2Dsuspended%2Dfreshmen%2Djimbo%2Dfisher%2Dnames%2Drevealed%2Ddetails%2Ddenver%2Dharris%2Dpj%2Dwilliams%2Dchris%2Dmarshall%2Daggies%2F&rut=f88e8c629463a0d511511bc686ea8877c7f83d868feb8ea4ea0d79166d6a17d1",
+          "snippet": "Late Monday night, news broke that four Texas A&M players have been suspended indefinitely by head coach Jimbo Fisher. More specific details, including the names of the players, have emerged. This marks the second time this year Harris and Marshall have been suspended. They also missed the Aggies ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=f1393f83883e23d89f0c7431172ad574e6a6a0326a61053f9f0a1037e0dda756\",\n      \"snippet\": \"The 68-team field is set and the printable March Madness bracket is posted. Before you fill out your picks, it&#x27;s imperative to know which teams are battling key injuries . The table below lists all the March Madness injuries to know for 2026 . The list is ordered alphabetically by team, and then by player (last name).\"\n    },\n    {\n      \"title\": \"Three Key Texas A&M Returning From Significant Injuries Ahead of 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Ftamu%2Ffootball%2Fthree%2Dkey%2Dtexas%2Dam%2Dreturning%2Dfrom%2Dsignificant%2Dinjuries%2Dahead%2Dof%2D2026&rut=3deea5a93766250783953d529da405a43c20fb59ecd1be114c6e89911e762d9a\",\n      \"snippet\": \"The Texas A&M Aggies were fairly lucky in the injury category, but they will get three key players returning in 2026 who spent majority or all of 2025 injured.\"\n    },\n    {\n      \"title\": \"March Madness injuries to know: Updates for key players ahead of ... - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fmarch%2Dmadness%2Dinjuries%2Dto%2Dknow%2Dupdates%2Dfor%2Dkey%2Dplayers%2Dahead%2Dof%2Dthe%2Dmens%2Dncaa%2Dtournament%2Far%2DAA1YR1Tv&rut=cc47759deae4cf24e2d8907835696575053ea7b933671b0740785010b1101bc3\",\n      \"snippet\": \"Drew Dinsick and Vaughn Dalzell break down which No. 2 seed teams you should consider betting on to reach the national championship of the men&#x27;s tournament, including Houston and Iowa State.\"\n    },\n    {\n      \"title\": \"Texas A&M Aggies Injuries 2025-2026 - Updated NCAAF Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Ffootball%2Fncaaf%2Fteams%2Fmain%2Ftexas%2Da%2Dm%2Daggies%2Finjuries&rut=9ab053c658fbd92151b7a12c6b4c800e863ac46ffe0f60f392a2aa04ba559f88\",\n      \"snippet\": \"Stay In the Know: Check Out Texas A&M Aggies Injuries Impacting The 2025- 2026 NCAAF Season.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-7-tool-call-0-4",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:03.903Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Saint Mary's Gaels key injuries March 2026",
+        "maxResults": 5
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-result-0-4",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:04.788Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Texas A&M Aggies vs Saint Mary&#x27;s Gaels Game Overview, Stats, Injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376841&rut=0b145ede1486947b2f7a722f1ed0f18ce4f81955551f5a44daa3839f91bb45c4",
+          "snippet": "Get key insights for Texas A&M Aggies vs Saint Mary&#x27;s Gaels on March 19, 2026 , including season records, injuries , and essential stats to help you make informed bets."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=06c6eb9f632ce722feb3d90942368ad1186f9f671e22ffd99e6b129a27764235",
+          "snippet": "Harry Wessels, Saint Mary&#x27;s The Gaels&#x27; starting center rolled his ankle in warmups before the WCC semifinals and managed just nine minutes in the loss to Santa Clara."
+        },
+        {
+          "title": "Saint Mary&#x27;s Gaels News, Schedule, Stats and Roster - USA TODAY Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fsaint%2Dmarys%2Dgaels%2F1622&rut=8f917f9c5fc6778b41ba56ecd779af12de29f4f57e616d1cf15f1925c0da0151",
+          "snippet": "Latest Saint Mary&#x27;s Gaels news, schedule, stats, depth chart, roster, injuries , transactions and more from USA TODAY Sports."
+        },
+        {
+          "title": "Saint Mary&#x27;s Gaels Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fsaint%2Dmary%2Ds%2Dgaels%2Finjuries&rut=7b785a009cdc52fa524019007bc97d119f5b1d7fa5d5cbe38efa5d8fe442a528",
+          "snippet": "Stay In the Know: Check Out Saint Mary&#x27;s Gaels Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "Saint Mary&#x27;s Gaels - News, Schedule, Scores, Roster, and Stats - The ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Fcollege%2Dbasketball%2Fteam%2Fsaint%2Dmary%2Ds%2Dgaels%2Dcollege%2Dbasketball%2F&rut=09a219c96da39d196b801f9fda72e34a4495727556051ec0874af22f79281354",
+          "snippet": "Breaking Saint Mary&#x27;s Gaels news and in-depth analysis from the best newsroom in sports. Follow your favorite clubs. Get the latest injury updates, player news and more from around the league."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Texas A&M Aggies vs Saint Mary&#x27;s Gaels Game Overview, Stats, Injuries ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376841&rut=0b145ede1486947b2f7a722f1ed0f18ce4f81955551f5a44daa3839f91bb45c4\",\n      \"snippet\": \"Get key insights for Texas A&M Aggies vs Saint Mary&#x27;s Gaels on March 19, 2026 , including season records, injuries , and essential stats to help you make informed bets.\"\n    },\n    {\n      \"title\": \"Key March Madness injuries to know while filling out your men&#x27;s ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=06c6eb9f632ce722feb3d90942368ad1186f9f671e22ffd99e6b129a27764235\",\n      \"snippet\": \"Harry Wessels, Saint Mary&#x27;s The Gaels&#x27; starting center rolled his ankle in warmups before the WCC semifinals and managed just nine minutes in the loss to Santa Clara.\"\n    },\n    {\n      \"title\": \"Saint Mary&#x27;s Gaels News, Schedule, Stats and Roster - USA TODAY Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fsaint%2Dmarys%2Dgaels%2F1622&rut=8f917f9c5fc6778b41ba56ecd779af12de29f4f57e616d1cf15f1925c0da0151\",\n      \"snippet\": \"Latest Saint Mary&#x27;s Gaels news, schedule, stats, depth chart, roster, injuries , transactions and more from USA TODAY Sports.\"\n    },\n    {\n      \"title\": \"Saint Mary&#x27;s Gaels Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fsaint%2Dmary%2Ds%2Dgaels%2Finjuries&rut=7b785a009cdc52fa524019007bc97d119f5b1d7fa5d5cbe38efa5d8fe442a528\",\n      \"snippet\": \"Stay In the Know: Check Out Saint Mary&#x27;s Gaels Injuries Impacting The 2025- 2026 NCAAB Season.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-south-7-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:05:07.649Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:07.649Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/aggies-gaels-2026-03-19/injuries",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:08.239Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.teamrankings.com/ncaa-basketball/matchup/aggies-gaels-2026-03-19/injuries",
+        "text": "2025-2026 NCAA BB Games: Aggies Gaels Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius 🏆 2026 NCAA Bracket Picks » You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu TeamRankings.com Get Smart About Sports Log In Subscribe Home Sports Betting NCAA Bracket Picks 2026 NCAA Survivor Picks Golf One And Done Picks Golf Majors & Masters Picks NFL NBA MLB NCAAF NCAAB Main Menu NFL Super Bowl SB Home Game Picks Model predictions Prop Picks Betting Analysis Super Bowl Squares Betting Promo Offers Betting & Pool Picks Picks Pick'em Picks Survivor Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Seattle vs. New England Rankings Predictive Rankings More Rankings Rankings Comparison Stats All Stats Team Stats Player Stats Teams Arizona Cardinals Atlanta Falcons Baltimore Ravens Buffalo Bills Carolina Panthers Chicago Bears Cincinnati Bengals Cleveland Browns Dallas Cowboys Denver Broncos Detroit Lions Green Bay Packers Houston Texans Indianapolis Colts Jacksonville Jaguars Kansas City Chiefs Miami Dolphins Las Vegas Raiders Los Angeles Chargers Los Angeles Rams Minnesota Vikings New England Patriots New Orleans Saints New York Giants New York Jets Philadelphia Eagles Pittsburgh Steelers San Francisco 49ers Seattle Seahawks Tampa Bay Buccaneers Tennessee Titans Washington Commanders NFL Home NCAAF Bowl Games Bowl Pick'em Picks Bowl Betting Picks Bowl Odds Bowl Schedule Bowls Home Betting & Pool Picks Picks Pick'em Picks Bowl Pick'em Picks Betting Picks Grid Game Winner Picks Point Spread Picks Over Under Picks Money Line Picks Most Likely Upsets Prediction Accuracy Odds & Trends Betting Odds Team Trends Projections & Standings Projections Current Standings Projected Standings Matchups & Schedules Matchups Season Schedule Boise St vs. Washington Troy vs. Jacksonville St Old Dominion vs. S Florida Louisiana vs. Delaware Missouri St vs. Arkansas St Kennesaw St vs. W Michigan Memphis vs. NC State Alabama @ Oklahoma Miami @ Texas A&M Tulane @ Mississippi J Madison @ Oregon Washington St vs. Utah St Toledo vs. Louisville W Kentucky vs. Southern Miss UNLV vs. Ohio More... Rankings & Polls Rankings Predictive Rankings More Rankings"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.teamrankings.com/ncaa-basketball/matchup/aggies-gaels-2026-03-19/injuries\",\n    \"text\": \"2025-2026 NCAA BB Games: Aggies Gaels Injury Report - us alabama alaska arizona arkansas california colorado connecticut delaware florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland massachusetts michigan minnesota mississippi missouri montana nebraska nevada new hampshire new jersey new mexico new york north carolina north dakota ohio oklahoma oregon pennsylvania rhode island south carolina south dakota tennessee texas utah vermont virginia washington washington dc west virginia wisconsin wyoming TeamRankings BetIQ PoolGenius 🏆 2026 NCAA Bracket Picks » You are using an outdated browser that is no longer supported. Please upgrade your browser to improve your experience and security. TeamRankings BetIQ PoolGenius Show Menu TeamRankings.com Get Smart About Sports Log In Subscribe Home Sports Betting NCAA Bracket Picks 2026 NCAA Survivor Picks Golf One And Done Picks Golf Majors & Masters Picks NFL NBA MLB NCAAF NCAAB Main Menu NFL Super Bowl SB Home Game Picks Model predictions Prop Picks Betting Analysis Super Bowl Squares Betting Promo Offers Betting & Pool Picks Picks Pick'em Picks Survivor Picks Betting Picks Grid Game Winner Picks Point ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-7-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:08.239Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://aggieswire.usatoday.com/story/sports/college/aggies/mens-basketball/2026/03/17/texas-aggies-basketball-saint-marys-jay-bilas-march-madness/89190225007/",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:08.425Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://aggieswire.usatoday.com/story/sports/college/aggies/mens-basketball/2026/03/17/texas-aggies-basketball-saint-marys-jay-bilas-march-madness/89190225007/",
+        "text": "ESPN's Jay Bilas predicts Texas A&M vs. Saint Mary's in March Madness Skip to main content Home Schedule Football Basketball Recruiting SEC Sports Odds Newsletter College Sports Wire USA TODAY Sports ESPN's Jay Bilas predicts Texas A&M vs. Saint Mary's in March Madness Cameron Ohnysty Aggies Wire Texas A&M (21-11) ended the regular season on a high note after defeating Kentucky and LSU to finish the year with 21 wins, including 11 in SEC play. This success, despite the inconsistencies, led to first-year head coach Bucky McMillan and his veteran roster, made up of transfer-portal additions, earning an unlikely bid to the NCAA Tournament. After finishing the regular season, losing to Oklahoma by 20 points in the second round of the SEC Tournament was actually beneficial for the Aggies, who went on to earn a 10-seed in the NCAA Tournament and are set to face 7-seed Saint Mary's in Oklahoma City. For those who don't remember, which seems impossible for every Aggie reading this, Texas A&M's historic comeback win over Northern Iowa during the Aggies' 2016 March Madness took place in OKC, and for Bucky McMillan , this is just his second career trip to the big dance after leading Samford to the tournament during the 2023-2024 season, nearly upsetting the Kansas Jayhawks. On paper, Texas A&M is one of the smallest teams in the tourney, which has been the case all season, and will now face a Saint Mary's roster that includes three players who are listed at 7'0\", which will cause an issue in the paint if the Aggies can't find success from three-point range. On Tuesday, ESPN analyst Jay Bilas released his prediction for every game in the NCAA Tournament, and for those who feel the media is behind the Aggies in the first round, think again. Bilas feels that Saint Mary's efficient half-court offense, which looks to thrive in the paint and hit free throws, provides the Gaels a stark advantage against Texas A&M's pesky press defense and somewhat erratic offense. \"Talk about a contrast in styles. Texas A&M under Bucky McMillan wants to get up and down the floor; the Aggies want to press, they want to be annoying. But Saint Mary's is going to be a problem to play against. It seems different to take Saint Mary's here and call it chalk, but the Gaels will slow the game down.\" For the Aggies to have a chance at moving to the Round of 32, they will need a similar performance that led to the 96-85 win over Kentucky: force turnovers early and often, hit outside shots, and force the Gaels out of their comfort zone by forcing bad shots. Texas A&M vs. Saint Mary's will take place on Thursday at 6:45 p.m. and will air on TBS. Contact/Follow us @AggiesWire on X (formerly Twitter) and like our page on Facebook to follow ongoing coverage of Texas A&M news, notes and opinions. Follow Cameron on X: @CameronOhnysty . Facebook Twitter Email Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://aggieswire.usatoday.com/story/sports/college/aggies/mens-basketball/2026/03/17/texas-aggies-basketball-saint-marys-jay-bilas-march-madness/89190225007/\",\n    \"text\": \"ESPN's Jay Bilas predicts Texas A&M vs. Saint Mary's in March Madness Skip to main content Home Schedule Football Basketball Recruiting SEC Sports Odds Newsletter College Sports Wire USA TODAY Sports ESPN's Jay Bilas predicts Texas A&M vs. Saint Mary's in March Madness Cameron Ohnysty Aggies Wire Texas A&M (21-11) ended the regular season on a high note after defeating Kentucky and LSU to finish the year with 21 wins, including 11 in SEC play. This success, despite the inconsistencies, led to first-year head coach Bucky McMillan and his veteran roster, made up of transfer-portal additions, earning an unlikely bid to the NCAA Tournament. After finishing the regular season, losing to Oklahoma by 20 points in the second round of the SEC Tournament was actually beneficial for the Aggies, who went on to earn a 10-seed in the NCAA Tournament and are set to face 7-seed Saint Mary's in Oklahoma City. For those who don't remember, which seems impossible for every Aggie reading this, Texas A&M's historic comeback win over Northern Iowa during the Aggies' 2016 March Madness took place in OKC, and for Bucky McMillan , this is just his second career trip to the big dance after leading Samford t... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-7-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:08.425Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:08.535Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Underdog Fantasy Canada Canada Canada Sports Betting Alberta Betting Apps Ontario Betting Apps Brazil Promos Promos Sports Betting Promo Codes DraftKings Promo Code BetMGM Promo Code bet365 Bonus Code theScore Bet Promo Code ESPN BET Promo Code FanDuel Promo Code Fanatics Sportsbook Promo Code Caesars Sportsbook Promo Code Hard Rock Bet Promo Code BetRivers Promo Code Boosted Odds NFL Betting Promos Odds Odds NFL NBA MLB NHL NCAAF NCAAB Sports Sports NFL NFL NFL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Super Bowl MVP DPOY OROY DROY All NFL Futures NBA NBA NBA Betting Odds Props Public Betting Starting Lineups ATS Records News Playoff Bracket Scores Futures Futures Championship MVP DPOY ROY All NBA Futures MLB MLB MLB Betting Odds Props Public Betting Lineups & Starting Pitchers ATS Records News Playoff Bracket Scores Futures Futures World Series MVP Cy Young Odds AL & NL ROY All MLB Futures NHL NHL NHL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Stanley Cup Hart Trophy Vezina Trophy All NHL Futures NCAAF NCAAF NCAAF Betting Odds Props Public Betting ATS Records Strength-of-Schedule CFP Bracket News Scores Futures Futures National Championship CFP Odds Heisman Trophy All NCAAF Futures NCAAB NCAAB NCAAB Betting Odds Props Public Betting ATS Records News Bracket Scores Futures Futures Championship Conference Wooden POY All NCAAB Futures College Baseball College Baseball College Baseball Betting News College World Series Odds More More Golf Tennis Boxing Mixed Martial Arts Politics Entertainment World Cup Soccer Horse Racing Racing WNBA News Picks Prediction Markets Prediction Markets &mdash; All Kalshi Referral Code Novig Promo Code ProphetX Promo Code Popular Prediction Market State"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/\",\n    \"text\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Unde... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-7-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:05:09.697Z",
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T20:05:09.697Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/ncb/injuries/index.html",
+        "maxChars": 6000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-south-7-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T20:05:10.103Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/ncb/injuries/index.html",
+        "text": "ESPN.com - Men's College Basketball Injuries \" border=0 width=1 height=1> Keyword Search Search ESPN.com Search The Web ESPN Network: ESPN.com | RPM | NFL.com | NBA.com | NHL.com | WNBA.com | ABCSports | EXPN | FANTASY | INSIDER Men's College Basketball Scores/Schedules Rankings Standings Statistics Transactions Injuries Message board Players Teams Recruiting NCAA StatSearch Slants Dick Vitale Andy Katz Broadcast TV Schedule Video Highlights Audio Highlights SportsMall NikeTown TeamStore Sport Sections NBA Scores M College BB Scores Baseball Scores NHL Scores Golf Online Scores W College BB Scores NFL Col.FB | Recruiting Other Football College Sports Tennis RPM.ESPN.com Boxing Horse Racing Extreme Sports Soccer Soccernet.com ESPNdeportes More Sports Friday, Nov. 16 9:25am ET Injuries Air Force No significant injuries Akron F Byron Thompson Knee Out 3-4 weeks. 11/1 Alabama *G Travis Stinnet Shoulder Questionable vs Utah. 11/16 American No significant injuries Appalachian St No significant injuries Arizona G Travis Hanour Personal Quit the team. 10/26 Arizona St No significant injuries Arkansas No significant injuries Arkansas Lr No significant injuries Arkansas St No significant injuries Auburn C Marin Bota Personal Quit the team. 10/26 G Lincoln Glass Suspension Out indefinitely. 10/17 Austin Peay No significant injuries Ala Birmingham No significant injuries Anderson Ind No significant injuries ARK MONTICELLO (AK*) No significant injuries Ball St No significant injuries Belmont No significant injuries Baylor No significant injuries Boise St No significant injuries Boston College G Troy Bell Knee (surgery) Out 2-6 weeks. 10/31 Boston U No significant injuries Bowling Green No significant injuries Bradley No significant injuries Brown No significant injuries Butler No significant injuries BYU G Michael Vranes Foot Out for the season. 9/21 Buffalo No significant injuries U-C UC Irvine No significant injuries Cal Poly No significant injuries California No significant injuries Canisius No significant injuries Centenary No significant injuries Ucf No significant injuries Central Mich No significant injuries Chaminade No significant injuries Coll Of Charltn No significant injuries Charleston Sou No significant injuries Chicago St No significant injuries Cincinnati F Derek Hollman Shoulder (surgery) Out 3-6 months. 11/2 C B.J. Grove Personal Left the team. 10/02 Clemson *F Dwon Clifton Heart Condition Out indefinitely. 11/16 Cleveland St No significant injuries Colgate No significant injuries Colorado *F Jason Carter Suspension Out indefinitely. 11/16 Colorado St *F Philip Ricci Suspension Out Sat. vs N. Colorado. 11/16 *G Jonathan Sanders Personal Left team. 11/13 Columbia No significant injuries Connecticut No significant injuries Coppin St No significant injuries Cornell No significant injuries Creighton No significant injuries The Citadel No significant injuries Tennessee Chat No significant injuries Dartmouth No significant injuries Davidson No sig"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/ncb/injuries/index.html\",\n    \"text\": \"ESPN.com - Men's College Basketball Injuries \\\" border=0 width=1 height=1> Keyword Search Search ESPN.com Search The Web ESPN Network: ESPN.com | RPM | NFL.com | NBA.com | NHL.com | WNBA.com | ABCSports | EXPN | FANTASY | INSIDER Men's College Basketball Scores/Schedules Rankings Standings Statistics Transactions Injuries Message board Players Teams Recruiting NCAA StatSearch Slants Dick Vitale Andy Katz Broadcast TV Schedule Video Highlights Audio Highlights SportsMall NikeTown TeamStore Sport Sections NBA Scores M College BB Scores Baseball Scores NHL Scores Golf Online Scores W College BB Scores NFL Col.FB | Recruiting Other Football College Sports Tennis RPM.ESPN.com Boxing Horse Racing Extreme Sports Soccer Soccernet.com ESPNdeportes More Sports Friday, Nov. 16 9:25am ET Injuries Air Force No significant injuries Akron F Byron Thompson Knee Out 3-4 weeks. 11/1 Alabama *G Travis Stinnet Shoulder Questionable vs Utah. 11/16 American No significant injuries Appalachian St No significant injuries Arizona G Travis Hanour Personal Quit the team. 10/26 Arizona St No significant injuries Arkansas No significant injuries Arkansas Lr No significant injuries Arkansas St No significant inj... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-south-7-assistant-final-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T20:05:19.938Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-south-7\",\n    \"winnerId\": \"saint-mary-s\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Saint Mary’s gets the nod because the efficiency metrics show a meaningful overall edge: KenPom has the Gaels #24 vs. Texas A&M #39 (better AdjEM and notably stronger defense), and Torvik similarly favors Saint Mary’s (#25 vs. #39). In a likely slower, half-court game, Saint Mary’s defensive consistency and ability to control tempo are a good fit for March, while A&M’s upset path is real if it turns this into a more physical, chaotic game and wins the offensive-rebounding/turnover margins. I didn’t find a clear, confirmed availability issue for either side that would override the ratings edge, so I’m siding with the higher two-way baseline.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"demo-2026-bracket:r64-south-7\",\n    \"title\": \"South 7/10: Saint Mary's vs Texas A&M pick\",\n    \"summary\": \"Saint Mary’s projects as the slightly better team on both KenPom and Torvik, driven by a stronger defensive profile, so they’re the safer advance in a close 7/10 matchup.\",\n    \"evidence\": {\n      \"ratings\": {\n        \"kenpom\": {\n          \"saint-mary-s\": {\n            \"rank\": 24,\n            \"adj_em\": 23.11,\n            \"adj_o\": 120.3,\n            \"adj_o_rank\": 43,\n            \"adj_d\": 97.2\n          },\n          \"texas-a-m\": {\n            \"rank\": 39,\n            \"adj_em\": 18.65,\n            \"adj_o\": 119.7,\n            \"adj_o_rank\": 49,\n            \"adj_d\": 101.1\n          }\n        },\n        \"torvik\": {\n          \"saint-mary-s\": {\n            \"rank\": 25,\n            \"adjoe\": 119.36,\n            \"oe_rank\": 48,\n            \"adjde\": 97.55,\n            \"de_rank\": 22\n          },\n          \"texas-a-m\": {\n            \"rank\": 39,\n            \"adjoe\": 119.86,\n            \"oe_rank\": 41,\n            \"adjde\": 101.33,\n            \"de_rank\": 43\n          }\n        }\n      },\n      \"news\": {\n        \"espnInjuriesPage\": \"ESPN injuries index did not surface a clear, matchup-flipping absence for either Saint Mary's or Texas A&M in the captured snippet; no definitive availability red flag was confirmed via the quick scans used.\"\n      },\n      \"matchupNotes\": [\n        \"Saint Mary’s defensive edge (KenPom AdjD 97.2 vs 101.1; Torvik defensive rank 22 vs 43) is the clearest separator.\",\n        \"Texas A&M’s credible upset path is via physicality/extra possessions (turnovers and offensive boards) and disrupting Saint Mary’s half-court rhythm.\"\n      ]\n    }\n  }\n}"
+    },
+    {
+      "id": "r64-south-7-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T20:05:25.210Z",
+      "content": "{\"pick\":{\"gameId\":\"r64-south-7\",\"winnerId\":\"saint-mary-s\",\"confidence\":0.6,\"rationale\":\"Saint Mary’s gets the nod because the efficiency metrics show a meaningful overall edge: KenPom has the Gaels #24 vs. Texas A&M #39 (better AdjEM and notably stronger defense), and Torvik similarly favors Saint Mary’s (#25 vs. #39). In a likely slower, half-court game, Saint Mary’s defensive consistency and ability to control tempo are a good fit for March, while A&M’s upset path is real if it turns this into a more physical, chaotic game and wins the offensive-rebounding/turnover margins. I didn’t find a clear, confirmed availability issue for either side that would override the ratings edge, so I’m siding with the higher two-way baseline.\"},\"reasoningStep\":{\"id\":\"demo-2026-bracket:r64-south-7\",\"title\":\"South 7/10: Saint Mary's vs Texas A&M pick\",\"summary\":\"Saint Mary’s projects as the slightly better team on both KenPom and Torvik, driven by a stronger defensive profile, so they’re the safer advance in a close 7/10 matchup.\",\"evidence\":[\"KenPom: Saint Mary’s #24 (AdjEM 23.11; AdjD 97.2) vs Texas A&M #39 (AdjEM 18.65; AdjD 101.1).\",\"Torvik: Saint Mary’s #25 (Def rank 22) vs Texas A&M #39 (Def rank 43).\",\"No confirmed, matchup-flipping injury/availability news surfaced in the quick scans used; upset risk remains via Texas A&M’s ability to create extra possessions and disrupt tempo.\"]}}"
+    }
+  ]
+}
