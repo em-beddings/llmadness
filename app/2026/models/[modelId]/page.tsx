@@ -1,9 +1,17 @@
 import Link from "next/link";
 import { BracketBoard } from "@/components/bracket-board";
-import { loadSubmissionView } from "@/lib/repository";
+import { loadRunManifest, loadSubmissionView } from "@/lib/repository";
 import { notFound } from "next/navigation";
 
 const RUN_ID = "demo-2026";
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const manifest = await loadRunManifest(RUN_ID);
+  return manifest.submissions.map((submission) => ({
+    modelId: submission.modelId
+  }));
+}
 
 export default async function ModelPage({
   params,
