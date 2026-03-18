@@ -1,3 +1,4 @@
+import { normalizeConfidenceValue } from "@/lib/confidence";
 import path from "node:path";
 import { readJsonFile, writeJsonFile } from "@/lib/fs";
 import { loadRunManifest } from "@/lib/repository";
@@ -15,10 +16,7 @@ function normalizeSubmission(submission: BracketSubmission): BracketSubmission {
     ...submission,
     picks: submission.picks.map((pick) => ({
       ...pick,
-      confidence:
-        typeof pick.confidence === "number" && pick.confidence > 1 && pick.confidence <= 100
-          ? pick.confidence / 100
-          : pick.confidence
+      confidence: normalizeConfidenceValue(pick.confidence) as number
     })),
     reasoning: submission.reasoning.map((step) => ({
       ...step,
@@ -32,10 +30,7 @@ function normalizeSubmission(submission: BracketSubmission): BracketSubmission {
       ...gameRun,
       pick: {
         ...gameRun.pick,
-        confidence:
-          typeof gameRun.pick.confidence === "number" && gameRun.pick.confidence > 1 && gameRun.pick.confidence <= 100
-            ? gameRun.pick.confidence / 100
-            : gameRun.pick.confidence
+        confidence: normalizeConfidenceValue(gameRun.pick.confidence) as number
       },
       reasoningStep: gameRun.reasoningStep
         ? {

@@ -1,0 +1,996 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "kimi-k2-5",
+    "label": "Kimi K2.5",
+    "provider": "moonshot",
+    "model": "kimi-k2.5",
+    "description": "Moonshot AI • Reasoning model from the Kimi family built for complex thinking tasks."
+  },
+  "gameId": "r64-east-8",
+  "generatedAt": "2026-03-18T10:31:48.918Z",
+  "pick": {
+    "gameId": "r64-east-8",
+    "winnerId": "uconn",
+    "confidence": 92,
+    "rationale": "UConn enters as a dominant 2-seed with an elite SRS of 22.92 ranking 12th nationally and the 24th-ranked defense, having navigated the 41st-toughest schedule while compiling a 29-5 record. Furman's SRS of -3.24 ranks 198th with a KenPom rating of 191 against the 289th-ranked schedule, revealing a team significantly overmatched at this level. While the Paladins captured the SoCon tournament championship as a 6-seed behind Cooper Bowser's heroics, the 186-position gap in SRS and massive strength-of-schedule disparity make a 15-over-2 upset virtually impossible against a UConn squad with championship pedigree under Dan Hurley."
+  },
+  "reasoningStep": {
+    "id": "step-1",
+    "title": "UConn vs Furman Comprehensive Analysis",
+    "summary": "Evaluated advanced metrics showing UConn as an elite 2-seed (12th SRS, 24th defense) against Furman's below-average profile (198th SRS, 191 KenPom). The 186-position SRS gap and massive schedule strength disparity (41st vs 289th SOS) with Furman's negative efficiency margin reveal a prohibitive mismatch. Minor UConn injury concerns (Jaylin Stewart uncertain) do not meaningfully alter the calculus given the structural advantages.",
+    "evidence": [
+      "UConn: 29-5 record, SRS 22.92 (12th), DRtg 97.9 (24th), SOS 10.53 (41st), 6th AP Poll",
+      "Furman: 22-12 record, SRS -3.24 (198th), KenPom rank 191, SOS -6.14 (289th), Adj EM -1.99",
+      "Injury report: Jaylin Stewart (UConn) uncertain for first round, Silas Demary Jr. in good shape",
+      "Historical context: 2 seeds win approximately 92% vs 15 seeds"
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-fx818de0",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "uconn",
+          "furman"
+        ]
+      },
+      "startedAt": "2026-03-18T10:30:15.534Z",
+      "completedAt": "2026-03-18T10:30:15.540Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "uconn",
+          "teamName": "UConn",
+          "torvik": null,
+          "kenpom": null
+        },
+        {
+          "teamId": "furman",
+          "teamName": "Furman",
+          "torvik": {
+            "rank": 195,
+            "team": "Furman",
+            "conf": "SC",
+            "record": "22-12",
+            "adjoe": 106.84229880131988,
+            "oe Rank": 206,
+            "adjde": 108.98101752722744,
+            "de Rank": 177,
+            "barthag": 0.4432634562977022,
+            "rank.1": 195,
+            "proj. W": 22,
+            "Proj. L": 12,
+            "Pro Con W": 10,
+            "Pro Con L": 8,
+            "Con Rec.": "10-8",
+            "sos": 0.3170982047861336,
+            "ncsos": 0.3633473643309509,
+            "consos": 0.2794010155670878,
+            "Proj. SOS": 0.3170982047861336,
+            "Proj. Noncon SOS": 0.3633473643309509,
+            "Proj. Con SOS": 0.2794010155670878,
+            "elite SOS": 0.9329088662382212,
+            "elite noncon SOS": 0.9083105120786672,
+            "Opp OE": 107.23498417390064,
+            "Opp DE": 114.47476472829152,
+            "Opp Proj. OE": 107.23498417390064,
+            "Opp Proj DE": 114.47476472829152,
+            "Con Adj OE": 104.4108482309232,
+            "Con Adj DE": 107.66877807756627,
+            "Qual O": 0,
+            "Qual D": 0,
+            "Qual Barthag": 0,
+            "Qual Games": 0,
+            "FUN": 0.0060789343475925,
+            "ConPF": 1335,
+            "ConPA": 1265,
+            "ConPoss": 1199.7875,
+            "ConOE": 1.1126970401008511,
+            "ConDE": 1.0543533750768364,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5555555555555556,
+            "WAB": -8.76844213952515,
+            "WAB Rk": 175,
+            "Fun Rk": 158,
+            "adjt": 65.8243741128575
+          },
+          "kenpom": {
+            "rank": 191,
+            "team": "Furman",
+            "conf": "SC",
+            "record": "22-12",
+            "adj_em": -1.99,
+            "adj_o": 107.5,
+            "adj_o_rank": 200,
+            "adj_d": 109.5,
+            "adj_d_rank": 183,
+            "adj_t": 65.9,
+            "adj_t_rank": 263,
+            "luck": 0.01,
+            "luck_rank": 157,
+            "sos_adj_em": -6.35,
+            "sos_adj_em_rank": 290,
+            "sos_opp_o": 108.1,
+            "sos_opp_o_rank": 218,
+            "sos_opp_d": 114.5,
+            "sos_opp_d_rank": 356,
+            "ncsos_adj_em": -0.76,
+            "ncsos_adj_em_rank": 203
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-opadowev",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UConn basketball March Madness 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:15.540Z",
+      "completedAt": "2026-03-18T10:30:15.688Z",
+      "summary": "Returned 0 search results for \"UConn basketball March Madness 2026\".",
+      "result": []
+    },
+    {
+      "id": "tool-7xm12fid",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Furman basketball March Madness 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:15.688Z",
+      "completedAt": "2026-03-18T10:30:15.821Z",
+      "summary": "Returned 0 search results for \"Furman basketball March Madness 2026\".",
+      "result": []
+    },
+    {
+      "id": "tool-v0g7t0sv",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UConn Huskies basketball 2026 March Madness seeding",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:22.190Z",
+      "completedAt": "2026-03-18T10:30:23.098Z",
+      "summary": "Returned 5 search results for \"UConn Huskies basketball 2026 March Madness seeding\".",
+      "result": [
+        {
+          "title": "Huskies Earn No. 2 Seed In NCAA East Region",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuconnhuskies.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dhuskies%2Dearn%2Dno%2D2%2Dseed%2Din%2Dncaa%2Deast%2Dregion&rut=785384f7319e64552fd149396ff719c11829ab135f994aacc33d8da14352ec7a",
+          "snippet": "The Huskies have earned the No. 2 seed the East region and will take on No. 15 seed Furman in the First Round in Philadelphia on Friday, March 20."
+        },
+        {
+          "title": "2026 March Madness: Full bracket, seed list revealed",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegesportswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fcollege%2Dbasketball%2F2026%2F03%2F15%2F2026%2Dmarch%2Dmadness%2Dfull%2Dbracket%2Dreveal%2Dseed%2Dlist%2F89171848007%2F&rut=2782dbde68a6b5efe2f8afa69b4042b1cd513b605f81c1337189f509b8ac3405",
+          "snippet": "The final one seed, which was the subject of some debate, ultimately went to the Florida Gators, as expected. UF&#x27;s loss to Vanderbilt in the SEC tournament semifinal on Saturday opened the door for UConn or Houston, but both suffered losses in their respective conference championship games."
+        },
+        {
+          "title": "2026 March Madness Bracketology Updated: Dan Hurley&#x27;s UConn Loses Top ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2F2026%2Dmarch%2Dmadness%2Dbracketology%2Dupdated%2F&rut=de26f504cf15ba68af5b1e0d0be719a5ade7894264883e02e9e16acd330fbeb1",
+          "snippet": "The UConn Huskies fall in ESPN&#x27;s bracketology for March Madness and paves way for the Florida Gators to grab the No.1 seed projection."
+        },
+        {
+          "title": "UConn Basketball Earns No. 2 Seed in East Region for March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fpa%2Fphiladelphia%2Fnews%2F2026%2F03%2F15%2Fuconn%2Dbasketball%2Dearns%2Dno%2D2%2Dseed%2Din%2Deast%2Dregion%2Dfor%2Dmarch%2Dmadness%2F&rut=ba4c8489e7ff8f077ba90b8662d8aa3c38b34c844bbd0b77b4d6048c6eb59424",
+          "snippet": "The UConn men&#x27;s basketball team (29-5) has been selected as the No. 2 seed in the East Region of the 2026 NCAA Tournament. The Huskies will take on No. 15 seed Furman (22-12) in the first round on Friday in Philadelphia."
+        },
+        {
+          "title": "NCAA Bracketology (3/8/26): UConn drops from No. 1 seed after loss ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nj.com%2Fsports%2F2026%2F03%2Fncaa%2Dbracketology%2D3826%2Duconn%2Ddrops%2Dfrom%2Dno%2D1%2Dseed%2Dafter%2Dloss%2Dput%2Dmiami%2Dohio%2Dat%2Da%2Ddecent%2Dseed%2Dwhere%2Dtheyve%2Dgot%2Da%2Dchance.html&rut=bc4416e60114c50097d3c61e489cee27187d25d26900a473767edcd0d1c7d19a",
+          "snippet": "After No. 4 UConn was stunned at Marquette on Saturday, and coach Dan Hurley imploded in the final seconds, the Huskies are no longer a projected No. 1 seed in March Madness . Defending national ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-jkuk6ntd",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Furman Paladins basketball 2026 NCAA tournament Southern Conference",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:23.098Z",
+      "completedAt": "2026-03-18T10:30:24.026Z",
+      "summary": "Returned 5 search results for \"Furman Paladins basketball 2026 NCAA tournament Southern Conference\".",
+      "result": [
+        {
+          "title": "Furman Set For 2026 Ingles Southern Conference Men&#x27;s Basketball ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ffurmanpaladins.com%2Fnews%2F2026%2F3%2F6%2Ffurman%2Dset%2Dfor%2D2026%2Dingles%2Dsouthern%2Dconference%2Dmens%2Dbasketball%2Dchampionship.aspx&rut=52ee01b1541f6a7e1a1ea3b2ba0bb70c3f695f41c586ef7cc099c0386b2fae8b",
+          "snippet": "Paladins Face Samford In 6 P.M. Quarterfinal On Saturday Furman vs. Samford Game Notes Greenville, S.C. - No. 6 seed Furman opens its quest for a league title and NCAA Tournament berth when it faces No. 3 seed Samford in the quarterfinal round of the Ingles Southern Conference Men&#x27;s Basketball Championship Saturday evening in Asheville, N.C."
+        },
+        {
+          "title": "2026 Southern Conference men&#x27;s basketball tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_Southern_Conference_men%2527s_basketball_tournament&rut=a96613473ba96b82d70e4d9fa7e7fa3f1255b0b6b3c4a2dccd630489ea17205d",
+          "snippet": "The 2026 Southern Conference Men&#x27;s Basketball Tournament was the postseason men&#x27;s basketball tournament for the Southern Conference for the 2025-26 season. All tournament games were played at the Harrah&#x27;s Cherokee Center in Asheville, North Carolina, from March 6-9, 2026 . [2][3] The winner of the tournament , Furman , received the conference&#x27;s automatic bid to the 2026 NCAA Division I Men&#x27;s ..."
+        },
+        {
+          "title": "Furman men&#x27;s basketball headed to 2026 NCAA Tournament | The State",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.thestate.com%2Fsports%2Fcollege%2Fmens%2Dbasketball%2Farticle314983405.html&rut=a1d18bb16dbf6c00ec0a6f6d3fd678a63e0467bb7755a6adfd65082ece937785",
+          "snippet": "The Furman men&#x27;s basketball team celebrates after winning the SoCon tournament championship game on March 9, 2026 in Asheville. With the win, the Paladins advance to their second NCAA Tournament ..."
+        },
+        {
+          "title": "How Cooper Bowser led Furman basketball back to March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.greenvilleonline.com%2Fstory%2Fsports%2Fcollege%2Ffurman%2F2026%2F03%2F10%2Fmarch%2Dmadness%2Dfurman%2Dbasketball%2Dsouthern%2Dconference%2Dtournament%2Dcooper%2Dbowser%2F89067306007%2F&rut=960ca7ea8d7babe02387886bbfa38cc6b21755acb0cdf2deb0e3951bc8359ab0",
+          "snippet": "Furman defeated East Tennessee State to win the 2026 Southern Conference Tournament championship. Cooper Bowser led the Paladins with a game-high 21 points and 11 rebounds."
+        },
+        {
+          "title": "Furman will face UConn in NCAA Men&#x27;s Tournament opener Friday at 10PM ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Ffurman%2Dface%2Duconn%2Dncaa%2Dmen%2D033956059.html&rut=c81205e329f7c94cc367808414d4b786405afa88b302433a3499acd812e3e0fc",
+          "snippet": "Greenville, S.C. ( Furman SID) - The No. 15 seed Furman Paladins will face No. 2 seed UConn in the opening round of the 2026 NCAA Men&#x27;s Basketball Championship on Friday at 10PM at the Xfinity ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-77elgip1",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://uconnhuskies.com/news/2026/3/15/mens-basketball-huskies-earn-no-2-seed-in-ncaa-east-region",
+        "maxChars": 3000
+      },
+      "startedAt": "2026-03-18T10:30:31.091Z",
+      "completedAt": "2026-03-18T10:30:31.892Z",
+      "summary": "Fetched https://uconnhuskies.com/news/2026/3/15/mens-basketball-huskies-earn-no-2-seed-in-ncaa-east-region and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://uconnhuskies.com/news/2026/3/15/mens-basketball-huskies-earn-no-2-seed-in-ncaa-east-region",
+        "text": "Huskies Earn No. 2 Seed In NCAA East Region - University of Connecticut Athletics Skip to main content Skip Ad Close Ad Menu Sports Men&#39;s Sports Baseball Basketball Football Golf Ice Hockey Soccer Track & Field Women&#39;s Sports Basketball Cross Country Field Hockey Ice Hockey Lacrosse Rowing Soccer Softball Swimming & Diving Tennis Track & Field Volleyball Tickets Buy Tickets UConntickets.com Ticket Info Contact Us Group Tickets Mobile Tickets Premium Seating Season Tickets Student Tickets F.I.T. Fee Ticket Tools My Account Seat Selection Terms and Conditions Season Ticket Renewals SeatGeek Buy or Sell Football Tickets Buy or Sell Men&#39;s Basketball Tickets Buy or Sell Women&#39;s Basketball Tickets Buy or Sell Men&#39;s Ice Hockey Tickets Donate Quick Links Donate Now Husky Athletic Fund Staff / Contact Us Husky Athletic Fund Husky Athletic Fund Home Login to My Account Donor Guidebook Ways to Donate Benefits Chart Priority Points Areas to Support Fight On Fund Funding Excellence Future Success Scholarships Capital Enhancements Fans Gameday Info Composite Schedule Bag Policy Men&#39;s Basketball Women&#39;s Basketball Football Men&#39;s Hockey Scoreboard Messages National Anthem Performer Interest Form Events & Promotions Game Watch Events Junior Husky Club High School Days Youth Group Branding Support Huskymania Fan Shop NIL Marketplace Digital Wallpapers Restaurant Partners Athletics About Us Staff Directory Facilities Mission Statement University of Connecticut Recruits Info for Recruits Name, Image, Likeness Walk-On Procedure Department Academic Progress Rate Compliance EADA Graduation Success Rate Husky Advantage Center of Athletic Leadership & Enrichment Job Opportunities National C Club NCAA COI Findings NCAA Subpoena SAAC Sponsorship Opportunities Sports Medicine Sports Performance Student Jobs & Internships Student-Athlete Success Program Title IX Resources Student-Athlete Handbook Trademark Licensing & Branding UConn Health-Official Team Doctors Visiting Team Info Discontinued Sports History & Traditions History of UConn Athletics Conference Championships National Championships Huskies of Honor Husky Heritage Sports Museum Fight Song / Alma Mater Marching Band Spirit, Pride & Tradition Jonathan the Husky Connect Follow Composite Schedule Email Sign-Up Live Stats & Coverage Social Media Directory UConn Huskies App Watch UConn+ BIG EAST Digital Network SNY Listen Live Audio UConn Sports Network From Learfield Coaches Corner Podcast Husky HQ Instagram , Opens in new window Twitter , Opens in new window TikTok , Opens in new window Facebook , Opens in new window Youtube , Opens in new window Skip Ad Schedule Tickets , Opens in new window Shop , Opens in new window Donate , Opens in new window Search Search I&#39;m looking for... Search Now Men&#39;s Basketball Skip Ad More Roster Coaches Schedule News XML Stats Additional Links Media/Scout Credential Application Record Book (updated for 2025-26) 2025-26 Media Supplement Season Stat"
+      }
+    },
+    {
+      "id": "tool-qzaq6h8w",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://en.wikipedia.org/wiki/2026_Southern_Conference_men%27s_basketball_tournament",
+        "maxChars": 3000
+      },
+      "startedAt": "2026-03-18T10:30:31.892Z",
+      "completedAt": "2026-03-18T10:30:32.513Z",
+      "summary": "Fetched https://en.wikipedia.org/wiki/2026_Southern_Conference_men%27s_basketball_tournament and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/2026_Southern_Conference_men%27s_basketball_tournament",
+        "text": "2026 Southern Conference men's basketball tournament - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide (Top) 1 Seeds 2 Schedule and results 3 Bracket 4 Awards and honors 5 See also 6 References Toggle the table of contents 2026 Southern Conference men's basketball tournament Add languages Add links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Print/export Download as PDF Printable version In other projects Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia American college basketball postseason tournament Not to be confused with 2026 Southland Conference men's basketball tournament . 2026 Southern Conference men's basketball&#160;tournament Classification Division I Season 2025&#8211;26 Teams 10 Site Harrah's Cherokee Center Asheville, North Carolina Champions Furman (8th title) Winning coach Bob Richey (2nd title) MVP Alex Wilkins (Furman) Television ESPN+ Southern Conference men's basketball&#160;tournaments &#8592;&#160; 2025 2027 &#160;&#8594; 2025–26 Southern Conference men's basketball standings v t e Conf. Overall Team W &#160; L &#160; PCT W &#160; L &#160; PCT East Tennessee State 13 &#8211; 5 &#160; .722 23 &#8211; 11 &#160; .676 Wofford 11 &#8211; 7 &#160; .611 19 &#8211; 13 &#160; .594 Samford 11 &#8211; 7 &#160; .611 18 &#8211; 14 &#160; .563 Mercer 11 &#8211; 7 &#160; .611 19 &#8211; 13 &#160; .594 Western Carolina 10 &#8211; 8 &#160; .556 15 &#8211; 16 &#160; .484 Furman † 10 &#8211; 8 &#160; .556 22 &#8211; 12 &#160; .647 UNC Greensboro 9 &#8211; 9 &#160; .500 15 &#8211; 19 &#160; .441 Chattanooga 7 &#8211; 11 &#160; .389 13 &#8211; 19 &#160; .406 The Citadel 7 &#8211; 11 &#160; .389 11 &#8211; 22 &#160; .333 VMI 1 &#8211; 17 &#160; .056 6 &#8211; 26 &#160; .188 † 2026 SoCon tournament winner As of March 9, 2026 &#91; 1 &#93; The 2026 Southern Conference Men's Basketball Tournament was the postseason men's basketball tournament for the Southern Conference for the 2025–26 season . All tournament games were played at the Harrah's Cherokee Center in Asheville, North Carolina , from March 6–9, 2026. &#91; 2 &#93; &#91; 3 &#93; The winner of the tournament, Furman , received the conference's automatic bid to the 2026 NCAA Division I Men's Basketball Tournament . Seeds [ edit ] All ten teams in the Southern Conference were eligible to compete in the conference tournament. Teams were seeded by record within the conference, with a tiebreaker system to seed teams with identical conference records. &#91; 1 &#93; &#9"
+      }
+    },
+    {
+      "id": "tool-a8sxfzds",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UConn Huskies 2025-26 season stats record Big East",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:36.524Z",
+      "completedAt": "2026-03-18T10:30:37.244Z",
+      "summary": "Returned 5 search results for \"UConn Huskies 2025-26 season stats record Big East\".",
+      "result": [
+        {
+          "title": "UConn Huskies 2025-26 Men&#x27;s College Basketball Stats - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fstats%2F_%2Fid%2F41&rut=542aecdc73f72940598bde0ce268466aac950f00d80ecbdc4fadd05f2dcfbfb6",
+          "snippet": "Visit ESPN for UConn Huskies live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "2025-26 UConn Huskies Men&#x27;s Roster and Stats | College Basketball at ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fconnecticut%2Fmen%2F2026.html&rut=a02240d86baecd23003677459e9cdc73a9d7f11b79517cbbfefdc853511b1dbb",
+          "snippet": "Check out the detailed 2025-26 UConn Huskies Roster and Stats for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "2025-2026 Men&#x27;s Basketball - Overall Statistics - Big East Conference",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bigeast.com%2Fstats.aspx%3Fpath%3Dmbball%26year%3D2025&rut=f4a12c07ff3cb15679933233b2ce1e68c2a9120852c795bf297253601ebcd180",
+          "snippet": "The official 2025 -2026 Men&#x27;s Basketball cumulative statistics for Big East Conference"
+        },
+        {
+          "title": "2025-26 UConn Huskies men&#x27;s basketball team - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025%25E2%2580%259326_UConn_Huskies_men%2527s_basketball_team&rut=5a7c5027814fa9c5417747f3a519ca3bfc239bf316331c90e3c67ace5a135c2b",
+          "snippet": "The 2025-26 UConn Huskies men&#x27;s basketball team represents the University of Connecticut in the 2025-26 NCAA Division I men&#x27;s basketball season . The Huskies are led by eighth-year head coach Dan Hurley in the team&#x27;s sixth season since their return to the Big East Conference. The Huskies play their home games at the Harry A. Gampel Pavilion on-campus in Storrs, Connecticut and the ..."
+        },
+        {
+          "title": "UConn Huskies Team and Player Stats - 2025-26 NCAAM Season - The Athletic",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Fcollege%2Dbasketball%2Fteam%2Fconnecticut%2Dhuskies%2Dcollege%2Dbasketball%2Fstats%2F&rut=b45d05660b1f8a1ee53c6a1cd4c5497792195822eddd6687ddb56d768ca020ad",
+          "snippet": "Get the latest UConn Huskies stats for the 2025-26 NCAAM season ."
+        }
+      ]
+    },
+    {
+      "id": "tool-fow4mzk7",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UConn basketball injuries 2026 March Madness",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:37.244Z",
+      "completedAt": "2026-03-18T10:30:37.991Z",
+      "summary": "Returned 5 search results for \"UConn basketball injuries 2026 March Madness\".",
+      "result": [
+        {
+          "title": "UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fpa%2Fphiladelphia%2Fnews%2F2026%2F03%2F16%2Fuconn%2Dbasketball%2Dfaces%2Dinjury%2Dconcerns%2Dahead%2Dof%2Dncaa%2Dtournament%2F&rut=11e8065d5766cd086ac0f4193c55ea2d348735cd25d7b0362ab6bdd36828efe8",
+          "snippet": "UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart&#x27;s status for the first round is uncertain, while Demary is reported to be &#x27;in pretty good shape&#x27;."
+        },
+        {
+          "title": "UConn basketball&#x27;s nightmare 2026 March Madness bracket scenarios",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fuconn%2Dbasketball%2Dnightmare%2D2026%2Dmarch%2D203422814.html&rut=297c26960bc2066d90e41c0e3ded98fb1dba616a7f533d643c7ad73da5db2adb",
+          "snippet": "UConn basketball&#x27;s nightmare 2026 March Madness bracket scenarios appeared first on ClutchPoints. Add ClutchPoints as a Preferred Source by clicking here."
+        },
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Every key injury to know while making your 2026 March Madness bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dcaleb%2Dfoster%2Djt%2Dtoppin%2D2026%2Dbrackets%2F310f01ec055e579a2f819984&rut=4930c52a30981b049a2902a5ccc59c491e7868223b2dc012e028231da748647f",
+          "snippet": "March Madness key injuries to know 2026 Caleb Foster, Duke The tournament&#x27;s No. 1 overall seed, Duke, cruised through the regular season at 32-2."
+        },
+        {
+          "title": "The UConn Rotation Adjustment That Could Define March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fuconn%2Fbasketball%2Fuconn%2Dhuskies%2Dmens%2Drotation%2Dadjustment%2Dcould%2Ddefine%2Dmarch%2Dmadness%2D2026&rut=8e4b2ff749638787bae66eadbe4170b3908ff2dbd3f178c6bdffb8f7772e921f",
+          "snippet": "If the UConn Huskies want to win the March Madness tournament, coach Dan Hurley needs to make this adjustment in his player rotation."
+        }
+      ]
+    },
+    {
+      "id": "tool-yhnvc6dm",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/",
+        "maxChars": 3000
+      },
+      "startedAt": "2026-03-18T10:30:43.502Z",
+      "completedAt": "2026-03-18T10:30:44.089Z",
+      "summary": "Fetched https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/",
+        "text": "UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament - Philadelphia Today Skip to content National Today Menu National Today Today Holidays Animals Arts & Entertainment Cause Cultural Federal Food & Beverage Health Relationships Religious Special Interest Birthdays January February March April May June July August September October November December Reminders Cities Atlanta Austin Baltimore Berwyn Beverly Hills Birmingham Boston Brooklyn Buffalo Charlotte Chicago Cincinnati Cleveland Columbus Dallas Denver Detroit Fort Worth Houston Indianapolis Knoxville Las Vegas Los Angeles Louisville Madison Memphis Miami Milwaukee Minneapolis Nashville New Orleans New York Omaha Orlando Philadelphia Phoenix Pittsburgh Portland Raleigh Richmond Rutherford Sacramento Salt Lake City San Antonio San Diego San Francisco San Jose Seattle Tampa Tucson Washington Log in Sign up Search Search Cancel Search National Today Submit Philadelphia Today By the People, for the People News Sports Basketball Baseball Body Building Boxing Cycling Equestrian eSports Extreme Sports Football Golf Gymnastics Hockey Ice Skating Mixed Martial Arts Motorsports Olympics Other Sports Rodeo Running Skiing Soccer Softball Surfing Swimming Tennis Track & Field Volleyball Wrestling More UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament Head coach Dan Hurley provides updates on key players' status for the first round Mar. 16, 2026 at 3:52am Got story updates? Submit your updates here. › UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart's status for the first round is uncertain, while Demary is reported to be 'in pretty good shape'. The Huskies are the No. 2 seed and will face the No. 15 Furman Paladins on Friday in Philadelphia. Why it matters UConn is looking to reclaim the national title after missing out on a three-peat in 2025. The health of Stewart and Demary could be crucial to the Huskies' chances of making a deep tournament run. Demary in particular is a key contributor, leading the team in assists and steals. The details Forward Jaylin Stewart has not played since a Feb. 21 game against Villanova and missed the entire Big East tournament. Coach Hurley said it 'will be close' on whether Stewart can play in the first round. Meanwhile, junior guard Silas Demary Jr. is reported to be 'in pretty good shape'. Demary is second on the team in usage and leads the Huskies in assists and steals. Stewart has not played since a Feb. 21 game against Villanova. UConn will face Furman in the first round on Friday, March 21, 2026. The players Dan Hurley The head coach of the UConn Huskies men's basketball team. Jaylin Stewart A junior forward for the UConn Huskies who has been sidelined with an injury. Silas Demary Jr. A junior guard for the UConn Huskies who is reported to be in 'pretty good shape' heading into "
+      }
+    },
+    {
+      "id": "tool-3j146rd8",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sports-reference.com/cbb/schools/connecticut/men/2026.html",
+        "maxChars": 3000
+      },
+      "startedAt": "2026-03-18T10:30:44.089Z",
+      "completedAt": "2026-03-18T10:30:44.347Z",
+      "summary": "Fetched https://www.sports-reference.com/cbb/schools/connecticut/men/2026.html and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sports-reference.com/cbb/schools/connecticut/men/2026.html",
+        "text": "2025-26 UConn Huskies Men's Roster and Stats | College Basketball at Sports-Reference.com Sports Reference&#8239;&reg; Baseball Football (college) Basketball (college) Hockey Soccer Blog Stathead&#8239;&reg; Immaculate Grid&#8239;&reg; Questions or Comments? Welcome &#183; Your Account Logout Ad-Free Login Create Account MENU Players Schools Seasons Leaders Scores NCAA Tournaments Stathead Newsletter Full Site Menu Below You are here: CBB Home Page &gt; Schools &gt; UConn Huskies &gt; Men's Basketball &gt; 2025-26 Welcome &#183; Your Account Logout Ad-Free Login Create Account via Sports Logos.net About logos 2025-26 UConn Huskies Men's Roster and Stats Previous Season Record: 29-5 (17-3, 2nd in Big East MBB ) Rank: 6th in the Mar 9th AP Poll Coach: Dan Hurley PS/G: 77.5 (138th of 365) PA/G: 65.1 (11th of 365) SRS : 22.92 (12th of 365) SOS : 10.53 (41st of 365) ORtg: 116.5 (54th of 365) DRtg: 97.9 (24th of 365) Preseason Odds: Championship +1400 More School Info Become a Stathead & surf this site ad-free. 2025-26 UConn Huskies Men Menu 2025-26 UConn Stats UConn (Men) History Polls, Schedule & Results Game Log Starters More 2025-26 UConn (Men's) Pages 2025-26 UConn (Men's) Season Roster & Stats Polls, Schedule & Results Game Log Starters On this page Roster Per Game Team and Opponent Stats Total Team and Opponent Stats Per Game Totals Per 40 Minutes Per 100 Poss Advanced Full Site Menu Keyboard Shortcuts \\ to toggle sidebar navigation / to toggle search input More about this update Recent Game Results Height of bar is margin of victory &bull; Mouseover bar for details &bull; Click for box score &bull; Grouped by Month 1. Nov 3, Connecticut (1-0) Win vs. New Haven, 79-55 2. Nov 7, Connecticut (2-0) Win vs. Massachusetts-Lowell, 110-47 3. Nov 10, Connecticut (3-0) Win vs. Columbia, 89-62 4. Nov 15 (Neutral), Connecticut (4-0) Win vs. Brigham Young, 86-84 5. Nov 19, Connecticut (4-1) Loss vs. Arizona, 67-71 6. Nov 23, Connecticut (5-1) Win vs. Bryant, 72-49 7. Nov 28 (Neutral), Connecticut (6-1) Win vs. Illinois, 74-61 8. Dec 2 @ Kansas, Connecticut (7-1) Win vs. Kansas, 61-56 9. Dec 5, Connecticut (8-1) Win vs. East Texas A&M, 83-59 10. Dec 9 (Neutral), Connecticut (9-1) Win vs. Florida, 77-73 11. Dec 12, Connecticut (10-1) Win vs. Texas, 71-63 12. Dec 16, Connecticut (11-1) Win vs. Butler, 79-60 13. Dec 21 @ DePaul, Connecticut (12-1) Win vs. DePaul, 72-54 14. Dec 31 @ Xavier, Connecticut (13-1) Win vs. Xavier, 90-67 15. Jan 4, Connecticut (14-1) Win vs. Marquette, 73-57 16. Jan 7 @ Providence, Connecticut (15-1) Win vs. Providence, 103-98 17. Jan 10, Connecticut (16-1) Win vs. DePaul, 72-60 18. Jan 13 @ Seton Hall, Connecticut (17-1) Win vs. Seton Hall, 69-64 19. Jan 17 @ Georgetown, Connecticut (18-1) Win vs. Georgetown, 64-62 20. Jan 24, Connecticut (19-1) Win vs. Villanova, 75-67 21. Jan 27, Connecticut (20-1) Win vs. Providence, 87-81 22. Jan 31 @ Creighton, Connecticut (21-1) Win vs. Creighton, 85-58 23. Feb 3, Connecticut (22-1) Win vs. Xavi"
+      }
+    },
+    {
+      "id": "tool-1eug3p12",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.greenvilleonline.com/story/sports/college/furman/2026/03/10/march-madness-furman-basketball-southern-conference-tournament-cooper-bowser/89067306007/",
+        "maxChars": 3000
+      },
+      "startedAt": "2026-03-18T10:30:55.167Z",
+      "completedAt": "2026-03-18T10:30:55.311Z",
+      "summary": "Fetched https://www.greenvilleonline.com/story/sports/college/furman/2026/03/10/march-madness-furman-basketball-southern-conference-tournament-cooper-bowser/89067306007/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.greenvilleonline.com/story/sports/college/furman/2026/03/10/march-madness-furman-basketball-southern-conference-tournament-cooper-bowser/89067306007/",
+        "text": "How Cooper Bowser led Furman basketball back to March Madness Skip to main content Home Sports High Schools Clemson USC Furman Paladins Greenville Drive Swamp Rabbits Fantasy Sports SAIL Swimming USA TODAY Sports How Cooper Bowser led Furman basketball back to March Madness Zachary Huber Hendersonville Times-News Show Caption Hide Caption Furman Paladins ribbon cutting and open house a home sweet home event at Timmons Arena Furman basketball teams played last season on the road, and now enjoy their $40 million renovated Timmons Arena Furman defeated East Tennessee State to win the 2026 Southern Conference Tournament championship. Cooper Bowser led the Paladins with a game-high 21 points and 11 rebounds. The victory secures Furman's first appearance in the NCAA Tournament since 2023. ASHEVILLE, NC — Tears fell from Cooper Bowser's eyes as Furman basketball made the trip from the hotel to the arena for its Southern Conference quarterfinal matchup against Samford on March 7. He teared up because the last memory he had of playing in Asheville was a bad one — the 2025 SoCon championship game, where Furman lost to Wofford. \"That was the motivation all offseason for me,\" Bowser said. \"A lot of people went home. I stayed here for the whole month of May, just trying to get stronger and better.\" His hard work paid off as the No. 6-seeded Paladins reached the 2026 SoCon Tournament title game, where they beat top-seeded East Tennessee State 76-61 at Harrah's Cherokee Center on March 9. With the victory — in which he had a game-high 21 points and 11 rebounds, his first double-double of the season — Furman (22-12) guaranteed its spot in March Madness for the first time since 2023. The 6-foot-11 forward started the game strong against the Buccaneers (23-11), scoring 14 first-half points on 6-for-6 shooting from the field. He kept his hot shooting going in the second half, knocking down two more shots and didn't miss until there were 10 minutes left in the game. Furman coach Bob Richey said Bowser had volunteered to come out of the starting lineup ahead of the quarterfinal, believing the Paladins needed to play smaller with four guards instead of three. The junior wanted to come out instead of one of the senior starters. \"That's how life works,\" Richey said. \"When you give, you get. He gave away his starting opportunity in that Samford game, then started the last two games due to matchups. He was rewarded tonight with that performance.\" Bowser said he isn't an emotional person. \"I don't cry that much,\" he said. \"A wave of emotions hit me. I started tearing up and started crying, trying to make sure no one saw me.\" Bowser was all smiles walking off the court, through a 20-minute news conference and to the bus after the championship game. He now has a positive memory of playing at Harrah's Cherokee Center — one where he led the team to its eighth SoCon Tournament championship and a place in the 2026 NCAA Tournament. Zachary Huber is a high school sports reporter f"
+      }
+    },
+    {
+      "id": "tool-2e5vqyug",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Furman basketball players stats 2026 Cooper Bowser JP Pegues",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:55.311Z",
+      "completedAt": "2026-03-18T10:30:56.043Z",
+      "summary": "Returned 5 search results for \"Furman basketball players stats 2026 Cooper Bowser JP Pegues\".",
+      "result": [
+        {
+          "title": "Cooper Bowser - 2025-26 - Men&#x27;s Basketball - Furman University",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ffurmanpaladins.com%2Fsports%2Fmens%2Dbasketball%2Froster%2Fcooper%2Dbowser%2F6693&rut=f378c62fa37cf9c65faff56c7a9d4b0b9689d9d08f49205217fa782ad8002bdd",
+          "snippet": "Cooper Bowser (21) Forward - 2024-25: Named to the SoCon All-Defensive Team...Appeared in all 35 games and earned 34 starts as a sophomore while helping Furman"
+        },
+        {
+          "title": "Cooper Bowser - Furman Paladins Forward - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fplayer%2F_%2Fid%2F5176136%2Fcooper%2Dbowser&rut=0e892e01992a0b09de0cbe8fe9f924904742ca1c617698b4a6f6d7a09f2ba45d",
+          "snippet": "View the profile of Furman Paladins Forward Cooper Bowser on ESPN. Get the latest news, live stats and game highlights."
+        },
+        {
+          "title": "2025-26 Furman Paladins Men&#x27;s Roster and Stats | College Basketball at ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Ffurman%2Fmen%2F2026.html&rut=90e1940ef46ad87a54d9e2c9f01a4b15e8d8962d3d5f09691381c72cb12ec915",
+          "snippet": "Check out the detailed 2025-26 Furman Paladins Roster and Stats for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "Cooper Bowser Player Profile, Furman - RealGM",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbasketball.realgm.com%2Fplayer%2FCooper%2DBowser%2FSummary%2F207944&rut=7b9ed92a8ef6ec8e2576f7dcc3327efd7991fa5dc8ef4fc326a3d63ef07cf1c6",
+          "snippet": "Get the latest news, stats and more about Cooper Bowser on RealGM.com"
+        },
+        {
+          "title": "Cooper Bowser game by game at NCAA 2025-2026 | Scoutbasketball",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fscoutbasketball.com%2Fcompetition%2FNcaa%2F2025%2D2026%2Fplayer%2FCooper%2DBowser&rut=afcc4a99d8ba7e356603a8d5c6cac46741e9896d5c639666a8dd2865d45b74f6",
+          "snippet": "Game by game statistics for Cooper Bowser at NCAA 2025- 2026 . View detailed performance in 17 games including points, rebounds, assists and more."
+        }
+      ]
+    },
+    {
+      "id": "tool-w54blf1y",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sports-reference.com/cbb/schools/furman/men/2026.html",
+        "maxChars": 3000
+      },
+      "startedAt": "2026-03-18T10:30:58.541Z",
+      "completedAt": "2026-03-18T10:30:58.751Z",
+      "summary": "Fetched https://www.sports-reference.com/cbb/schools/furman/men/2026.html and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sports-reference.com/cbb/schools/furman/men/2026.html",
+        "text": "2025-26 Furman Paladins Men's Roster and Stats | College Basketball at Sports-Reference.com Sports Reference&#8239;&reg; Baseball Football (college) Basketball (college) Hockey Soccer Blog Stathead&#8239;&reg; Immaculate Grid&#8239;&reg; Questions or Comments? Welcome &#183; Your Account Logout Ad-Free Login Create Account MENU Players Schools Seasons Leaders Scores NCAA Tournaments Stathead Newsletter Full Site Menu Below You are here: CBB Home Page &gt; Schools &gt; Furman Paladins &gt; Men's Basketball &gt; 2025-26 Welcome &#183; Your Account Logout Ad-Free Login Create Account via Sports Logos.net About logos 2025-26 Furman Paladins Men's Roster and Stats Previous Season Record: 22-12 (10-8, 5th in Southern MBB ) Coach: Bob Richey PS/G: 76.5 (159th of 365) PA/G: 70.5 (89th of 365) SRS : -3.24 (198th of 365) SOS : -6.14 (289th of 365) ORtg: 113.4 (96th of 365) DRtg: 104.6 (120th of 365) Preseason Odds: Championship +200000 More School Info Southern Tourney Champ Become a Stathead & surf this site ad-free. 2025-26 Furman Paladins Men Menu 2025-26 Furman Stats Furman (Men) History Polls, Schedule & Results Game Log Starters More 2025-26 Furman (Men's) Pages 2025-26 Furman (Men's) Season Roster & Stats Polls, Schedule & Results Game Log Starters On this page Roster Per Game Team and Opponent Stats Total Team and Opponent Stats Per Game Totals Per 40 Minutes Per 100 Poss Advanced Full Site Menu Keyboard Shortcuts \\ to toggle sidebar navigation / to toggle search input More about this update Recent Game Results Height of bar is margin of victory &bull; Mouseover bar for details &bull; Click for box score &bull; Grouped by Month 1. Nov 3 (Neutral), Furman (0-1) Loss vs. High Point, 71-97 2. Nov 7, Furman (0-2) Loss vs. Troy, 61-64 3. Nov 10, Furman (1-2) Win vs. Columbia International, 89-59 4. Nov 14 @ Northern Iowa, Furman (1-3) Loss vs. Northern Iowa, 54-70 5. Nov 19, Furman (2-3) Win vs. Ohio Christian, 79-44 6. Nov 23, Furman (3-3) Win vs. Queens (NC), 90-79 7. Nov 27 (Neutral), Furman (4-3) Win vs. Richmond, 73-72 8. Nov 28 (Neutral), Furman (4-4) Loss vs. Illinois State, 65-72 9. Dec 3 @ Elon, Furman (5-4) Win vs. Elon, 97-88 10. Dec 6, Furman (6-4) Win vs. Harvard, 79-69 11. Dec 9, Furman (7-4) Win vs. Bob Jones University, 105-57 12. Dec 18 @ Manhattan, Furman (8-4) Win vs. Manhattan, 75-68 13. Dec 21, Furman (9-4) Win vs. Charleston Southern, 84-76 14. Dec 31, Furman (10-4) Win vs. Mercer, 74-72 15. Jan 3, Furman (10-5) Loss vs. Western Carolina, 77-80 16. Jan 7 @ Chattanooga, Furman (11-5) Win vs. Chattanooga, 78-67 17. Jan 10, Furman (12-5) Win vs. Virginia Military Institute, 69-48 18. Jan 14 @ Samford, Furman (13-5) Win vs. Samford, 77-73 19. Jan 17, Furman (13-6) Loss vs. Wofford, 70-74 20. Jan 21 @ The Citadel, Furman (13-7) Loss vs. The Citadel, 75-77 21. Jan 23 @ UNC Greensboro, Furman (14-7) Win vs. UNC Greensboro, 89-66 22. Jan 29, Furman (15-7) Win vs. Samford, 78-73 23. Feb 1, Furman (16-7) Win vs. Chattanooga, 75-70 24. Feb 4 "
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-east-8-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T10:30:07.547Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-east-8\nCurrent game label: East 2/15\nRound: Round of 64\nResolved teams: UConn (uconn) vs Furman (furman)\nPrior committed picks: 11"
+    },
+    {
+      "id": "r64-east-8-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T10:30:07.547Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-east-8\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 2/15\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"uconn\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"furman\"\n      }\n    },\n    \"slotAName\": \"UConn\",\n    \"slotBName\": \"Furman\",\n    \"slotATeamId\": \"uconn\",\n    \"slotBTeamId\": \"furman\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 72,\n        \"rationale\": \"Texas holds decisive advantages in verified advanced metrics with a KenPom ranking of 37 and an elite offense ranked 13th in adjusted efficiency. While NC State lacks available ratings data suggesting a weaker statistical profile, the Longhorns' SEC-tested roster and superior offensive firepower provide a reliable path to victory despite their defensive limitations.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 76,\n        \"rationale\": \"SMU holds a decisive advantage in advanced metrics with a KenPom ranking of 42 compared to Miami (OH)'s 93, driven by an elite offense ranked 27th nationally in adjusted efficiency. While Miami's 31-1 record is eye-catching, their early exit from the MAC tournament after a cupcake-filled schedule raises serious concerns about their ability to handle quality opposition. SMU's ACC-tested roster, superior offensive firepower, and stronger defensive profile provide a reliable path to victory in Dayton.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 68,\n        \"rationale\": \"UMBC holds a decisive 20-spot advantage in KenPom rankings (185 vs 207) driven by a significantly superior offense ranked 184th nationally in adjusted efficiency compared to Howard's anemic 283rd-ranked attack. The Retrievers enter on elite form behind America East Tournament Most Outstanding Player DJ Armstrong Jr., who scored a career-high 33 points in the championship victory over Vermont. While Howard's defense provides a slight edge on that end, UMBC's offensive firepower, superior metrics, and momentum from their first NCAA bid since the historic 2018 Virginia upset create a reliable path to victory in Dayton.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 54,\n        \"rationale\": \"Lehigh holds a narrow but consistent statistical edge across advanced metrics, ranking approximately 7-10 spots higher than Prairie View A&M in both KenPom and Torvik ratings with a superior adjusted efficiency margin (-10.38 vs -11.1). The Mountain Hawks' offense ranks 21 spots higher nationally than the Panthers' attack, and their 18-16 record edges PVAMU's 17-17 mark. While Prairie View A&M owns a slight defensive advantage, the combination of Lehigh's marginally better overall quality and superior offensive capability provides a thin path to victory in what projects as a very evenly matched First Four contest.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 97,\n        \"rationale\": \"Duke enters as the #1 overall seed with a 31-2 record and a historic +39.17 efficiency margin, featuring the nation's top defense and fourth-ranked offense. While the Blue Devils are missing starters Caleb Foster and Patrick Ngongba II, they dominated the ACC Tournament without them, demonstrating overwhelming depth. Siena's MAAC championship credentials and negative efficiency margin place them approximately 190 ranking spots below Duke, leaving the Saints without a credible statistical or tactical path to mount a historic 16-over-1 upset.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 58,\n        \"rationale\": \"TCU holds verified advanced metrics with a KenPom ranking of 43 and a top-30 defense, while Ohio State lacks any available statistical ratings suggesting a weaker underlying profile. Though 8/9 games are typically coin flips, TCU's Big 12-tested resume with elite defensive numbers provides a narrow but tangible edge over an unverified Ohio State squad.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 74,\n        \"rationale\": \"St. John's holds a commanding ~50-spot advantage in both KenPom and Torvik rankings with an elite +24.8 adjusted efficiency margin, driven by a top-50 offense and the 12th-ranked defense nationally. Northern Iowa's defense is legitimately strong at 26th, providing a foundation for the classic 5/12 upset bid, but the Panthers' 153rd-ranked offense faces a severe mismatch against St. John's elite defense. While 5/12 upsets occur roughly one-third of the time historically, the statistical profile here favors the Red Storm more decisively than typical contests at this seed line.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 85,\n        \"rationale\": \"Kansas holds a commanding statistical advantage with top-25 rankings in both KenPom and Torvik, featuring an elite defense ranked 10th nationally and a +24.48 adjusted efficiency margin. California Baptist lacks any available advanced metrics, indicating a statistical profile likely 150+ spots below the Jayhawks. While 13 seeds upset 4 seeds roughly 20% of the time historically, Kansas' Big 12-tested resume and elite defense provide minimal vulnerability, making this a reliable pick for the favorite despite the perennial upset risk at this seed line.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 72,\n        \"rationale\": \"Louisville holds a commanding statistical advantage with top-20 rankings in both KenPom and Torvik, driven by an elite +25.42 adjusted efficiency margin with both offense and defense ranking in the top 25 nationally. South Florida's respectable 24-8 record and top-50 metrics make this a live upset threat at the dangerous 6/11 seed line, but the Bulls' +15.77 efficiency margin and significantly weaker offensive profile face a severe mismatch against Louisville's balanced attack and ACC-tested resume. While 11 seeds upset 6 seeds frequently in March, Louisville's 32-spot ranking advantage and elite two-way efficiency provide a reliable path to survive and advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 84,\n        \"rationale\": \"This 3/14 matchup follows historical patterns where 3 seeds win approximately 85% of the time. Michigan State's Big Ten pedigree provides significant structural advantages in athleticism, depth, and tournament experience against North Dakota State's mid-major profile. Without available advanced metrics suggesting any unusual circumstances that would elevate the Bison beyond typical 14-seed expectations, the Spartans' power conference background and historical March success under Tom Izzo provide a reliable path to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 70,\n        \"rationale\": \"UCLA holds a significant ~30-spot advantage in both KenPom and Torvik rankings with a +21.64 adjusted efficiency margin that exceeds UCF's +15.05 by nearly 7 points. The Bruins' elite offense, ranked 17th-22nd nationally, presents a severe mismatch against UCF's porous defense ranked 114th, while UCLA's solid 49th-ranked defense can contain the Knights' capable but not explosive attack. While 7/10 games are historically competitive and UCF brings Big 12 tournament experience, the statistical profile clearly favors UCLA's superior two-way efficiency and power conference pedigree.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": 72,\n      \"rationale\": \"Texas holds decisive advantages in verified advanced metrics with a KenPom ranking of 37 and an elite offense ranked 13th in adjusted efficiency. While NC State lacks available ratings data suggesting a weaker statistical profile, the Longhorns' SEC-tested roster and superior offensive firepower provide a reliable path to victory despite their defensive limitations.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": 76,\n      \"rationale\": \"SMU holds a decisive advantage in advanced metrics with a KenPom ranking of 42 compared to Miami (OH)'s 93, driven by an elite offense ranked 27th nationally in adjusted efficiency. While Miami's 31-1 record is eye-catching, their early exit from the MAC tournament after a cupcake-filled schedule raises serious concerns about their ability to handle quality opposition. SMU's ACC-tested roster, superior offensive firepower, and stronger defensive profile provide a reliable path to victory in Dayton.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-16\",\n      \"winnerId\": \"umbc\",\n      \"confidence\": 68,\n      \"rationale\": \"UMBC holds a decisive 20-spot advantage in KenPom rankings (185 vs 207) driven by a significantly superior offense ranked 184th nationally in adjusted efficiency compared to Howard's anemic 283rd-ranked attack. The Retrievers enter on elite form behind America East Tournament Most Outstanding Player DJ Armstrong Jr., who scored a career-high 33 points in the championship victory over Vermont. While Howard's defense provides a slight edge on that end, UMBC's offensive firepower, superior metrics, and momentum from their first NCAA bid since the historic 2018 Virginia upset create a reliable path to victory in Dayton.\"\n    },\n    {\n      \"gameId\": \"ff-south-16\",\n      \"winnerId\": \"lehigh\",\n      \"confidence\": 54,\n      \"rationale\": \"Lehigh holds a narrow but consistent statistical edge across advanced metrics, ranking approximately 7-10 spots higher than Prairie View A&M in both KenPom and Torvik ratings with a superior adjusted efficiency margin (-10.38 vs -11.1). The Mountain Hawks' offense ranks 21 spots higher nationally than the Panthers' attack, and their 18-16 record edges PVAMU's 17-17 mark. While Prairie View A&M owns a slight defensive advantage, the combination of Lehigh's marginally better overall quality and superior offensive capability provides a thin path to victory in what projects as a very evenly matched First Four contest.\"\n    },\n    {\n      \"gameId\": \"r64-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 97,\n      \"rationale\": \"Duke enters as the #1 overall seed with a 31-2 record and a historic +39.17 efficiency margin, featuring the nation's top defense and fourth-ranked offense. While the Blue Devils are missing starters Caleb Foster and Patrick Ngongba II, they dominated the ACC Tournament without them, demonstrating overwhelming depth. Siena's MAAC championship credentials and negative efficiency margin place them approximately 190 ranking spots below Duke, leaving the Saints without a credible statistical or tactical path to mount a historic 16-over-1 upset.\"\n    },\n    {\n      \"gameId\": \"r64-east-2\",\n      \"winnerId\": \"tcu\",\n      \"confidence\": 58,\n      \"rationale\": \"TCU holds verified advanced metrics with a KenPom ranking of 43 and a top-30 defense, while Ohio State lacks any available statistical ratings suggesting a weaker underlying profile. Though 8/9 games are typically coin flips, TCU's Big 12-tested resume with elite defensive numbers provides a narrow but tangible edge over an unverified Ohio State squad.\"\n    },\n    {\n      \"gameId\": \"r64-east-3\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 74,\n      \"rationale\": \"St. John's holds a commanding ~50-spot advantage in both KenPom and Torvik rankings with an elite +24.8 adjusted efficiency margin, driven by a top-50 offense and the 12th-ranked defense nationally. Northern Iowa's defense is legitimately strong at 26th, providing a foundation for the classic 5/12 upset bid, but the Panthers' 153rd-ranked offense faces a severe mismatch against St. John's elite defense. While 5/12 upsets occur roughly one-third of the time historically, the statistical profile here favors the Red Storm more decisively than typical contests at this seed line.\"\n    },\n    {\n      \"gameId\": \"r64-east-4\",\n      \"winnerId\": \"kansas\",\n      \"confidence\": 85,\n      \"rationale\": \"Kansas holds a commanding statistical advantage with top-25 rankings in both KenPom and Torvik, featuring an elite defense ranked 10th nationally and a +24.48 adjusted efficiency margin. California Baptist lacks any available advanced metrics, indicating a statistical profile likely 150+ spots below the Jayhawks. While 13 seeds upset 4 seeds roughly 20% of the time historically, Kansas' Big 12-tested resume and elite defense provide minimal vulnerability, making this a reliable pick for the favorite despite the perennial upset risk at this seed line.\"\n    },\n    {\n      \"gameId\": \"r64-east-5\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 72,\n      \"rationale\": \"Louisville holds a commanding statistical advantage with top-20 rankings in both KenPom and Torvik, driven by an elite +25.42 adjusted efficiency margin with both offense and defense ranking in the top 25 nationally. South Florida's respectable 24-8 record and top-50 metrics make this a live upset threat at the dangerous 6/11 seed line, but the Bulls' +15.77 efficiency margin and significantly weaker offensive profile face a severe mismatch against Louisville's balanced attack and ACC-tested resume. While 11 seeds upset 6 seeds frequently in March, Louisville's 32-spot ranking advantage and elite two-way efficiency provide a reliable path to survive and advance.\"\n    },\n    {\n      \"gameId\": \"r64-east-6\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": 84,\n      \"rationale\": \"This 3/14 matchup follows historical patterns where 3 seeds win approximately 85% of the time. Michigan State's Big Ten pedigree provides significant structural advantages in athleticism, depth, and tournament experience against North Dakota State's mid-major profile. Without available advanced metrics suggesting any unusual circumstances that would elevate the Bison beyond typical 14-seed expectations, the Spartans' power conference background and historical March success under Tom Izzo provide a reliable path to advance.\"\n    },\n    {\n      \"gameId\": \"r64-east-7\",\n      \"winnerId\": \"ucla\",\n      \"confidence\": 70,\n      \"rationale\": \"UCLA holds a significant ~30-spot advantage in both KenPom and Torvik rankings with a +21.64 adjusted efficiency margin that exceeds UCF's +15.05 by nearly 7 points. The Bruins' elite offense, ranked 17th-22nd nationally, presents a severe mismatch against UCF's porous defense ranked 114th, while UCLA's solid 49th-ranked defense can contain the Knights' capable but not explosive attack. While 7/10 games are historically competitive and UCF brings Big 12 tournament experience, the statistical profile clearly favors UCLA's superior two-way efficiency and power conference pedigree.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:15.534Z",
+      "content": "The user wants me to predict the winner of the game between UConn and Furman. This is a 2/15 matchup in the East region. Let me start by gathering information about these teams.\n\nI should:\n1. Look up ratings for both teams\n2. Search for any recent news/injuries\n3. Consider the matchup dynamics\n\nLet me start by looking up the ratings and searching for news.\n\nI'll analyze this 2/15 matchup between UConn and Furman by looking up advanced ratings and checking for recent news or injury concerns."
+    },
+    {
+      "id": "r64-east-8-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:15.534Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "uconn",
+          "furman"
+        ]
+      },
+      "content": "I'll analyze this 2/15 matchup between UConn and Furman by looking up advanced ratings and checking for recent news or injury concerns."
+    },
+    {
+      "id": "r64-east-8-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:15.540Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "uconn",
+          "teamName": "UConn",
+          "torvik": null,
+          "kenpom": null
+        },
+        {
+          "teamId": "furman",
+          "teamName": "Furman",
+          "torvik": {
+            "rank": 195,
+            "team": "Furman",
+            "conf": "SC",
+            "record": "22-12",
+            "adjoe": 106.84229880131988,
+            "oe Rank": 206,
+            "adjde": 108.98101752722744,
+            "de Rank": 177,
+            "barthag": 0.4432634562977022,
+            "rank.1": 195,
+            "proj. W": 22,
+            "Proj. L": 12,
+            "Pro Con W": 10,
+            "Pro Con L": 8,
+            "Con Rec.": "10-8",
+            "sos": 0.3170982047861336,
+            "ncsos": 0.3633473643309509,
+            "consos": 0.2794010155670878,
+            "Proj. SOS": 0.3170982047861336,
+            "Proj. Noncon SOS": 0.3633473643309509,
+            "Proj. Con SOS": 0.2794010155670878,
+            "elite SOS": 0.9329088662382212,
+            "elite noncon SOS": 0.9083105120786672,
+            "Opp OE": 107.23498417390064,
+            "Opp DE": 114.47476472829152,
+            "Opp Proj. OE": 107.23498417390064,
+            "Opp Proj DE": 114.47476472829152,
+            "Con Adj OE": 104.4108482309232,
+            "Con Adj DE": 107.66877807756627,
+            "Qual O": 0,
+            "Qual D": 0,
+            "Qual Barthag": 0,
+            "Qual Games": 0,
+            "FUN": 0.0060789343475925,
+            "ConPF": 1335,
+            "ConPA": 1265,
+            "ConPoss": 1199.7875,
+            "ConOE": 1.1126970401008511,
+            "ConDE": 1.0543533750768364,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5555555555555556,
+            "WAB": -8.76844213952515,
+            "WAB Rk": 175,
+            "Fun Rk": 158,
+            "adjt": 65.8243741128575
+          },
+          "kenpom": {
+            "rank": 191,
+            "team": "Furman",
+            "conf": "SC",
+            "record": "22-12",
+            "adj_em": -1.99,
+            "adj_o": 107.5,
+            "adj_o_rank": 200,
+            "adj_d": 109.5,
+            "adj_d_rank": 183,
+            "adj_t": 65.9,
+            "adj_t_rank": 263,
+            "luck": 0.01,
+            "luck_rank": 157,
+            "sos_adj_em": -6.35,
+            "sos_adj_em_rank": 290,
+            "sos_opp_o": 108.1,
+            "sos_opp_o_rank": 218,
+            "sos_opp_d": 114.5,
+            "sos_opp_d_rank": 356,
+            "ncsos_adj_em": -0.76,
+            "ncsos_adj_em_rank": 203
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"uconn\",\n      \"teamName\": \"UConn\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"furman\",\n      \"teamName\": \"Furman\",\n      \"torvik\": {\n        \"rank\": 195,\n        \"team\": \"Furman\",\n        \"conf\": \"SC\",\n        \"record\": \"22-12\",\n        \"adjoe\": 106.84229880131988,\n        \"oe Rank\": 206,\n        \"adjde\": 108.98101752722744,\n        \"de Rank\": 177\n      },\n      \"kenpom\": {\n        \"rank\": 191,\n        \"team\": \"Furman\",\n        \"conf\": \"SC\",\n        \"record\": \"22-12\",\n        \"adj_em\": -1.99,\n        \"adj_o\": 107.5,\n        \"adj_o_rank\": 200,\n        \"adj_d\": 109.5\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-8-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:15.540Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UConn basketball March Madness 2026",
+        "maxResults": 5
+      },
+      "content": "I'll analyze this 2/15 matchup between UConn and Furman by looking up advanced ratings and checking for recent news or injury concerns."
+    },
+    {
+      "id": "r64-east-8-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:15.688Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-east-8-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:15.688Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Furman basketball March Madness 2026",
+        "maxResults": 5
+      },
+      "content": "I'll analyze this 2/15 matchup between UConn and Furman by looking up advanced ratings and checking for recent news or injury concerns."
+    },
+    {
+      "id": "r64-east-8-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:15.821Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:22.190Z",
+      "content": "Interesting. UConn has no ratings data available, while Furman has ratings showing them ranked around 191-195 nationally with a slightly negative efficiency margin (-1.99). This is typical for a 15-seed - they're just outside the top 200.\n\nThe lack of ratings for UConn is concerning for analysis. Let me search for more information about both teams to understand their profiles better. Since UConn is a 2-seed, they should be a top team. Let me do a web search to find more context.\n\nLet me search for more information on both teams since UConn's ratings are unavailable and I need to understand their profile better."
+    },
+    {
+      "id": "r64-east-8-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:22.190Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UConn Huskies basketball 2026 March Madness seeding",
+        "maxResults": 5
+      },
+      "content": "Let me search for more information on both teams since UConn's ratings are unavailable and I need to understand their profile better."
+    },
+    {
+      "id": "r64-east-8-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:23.098Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Huskies Earn No. 2 Seed In NCAA East Region",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuconnhuskies.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dhuskies%2Dearn%2Dno%2D2%2Dseed%2Din%2Dncaa%2Deast%2Dregion&rut=785384f7319e64552fd149396ff719c11829ab135f994aacc33d8da14352ec7a",
+          "snippet": "The Huskies have earned the No. 2 seed the East region and will take on No. 15 seed Furman in the First Round in Philadelphia on Friday, March 20."
+        },
+        {
+          "title": "2026 March Madness: Full bracket, seed list revealed",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegesportswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fcollege%2Dbasketball%2F2026%2F03%2F15%2F2026%2Dmarch%2Dmadness%2Dfull%2Dbracket%2Dreveal%2Dseed%2Dlist%2F89171848007%2F&rut=2782dbde68a6b5efe2f8afa69b4042b1cd513b605f81c1337189f509b8ac3405",
+          "snippet": "The final one seed, which was the subject of some debate, ultimately went to the Florida Gators, as expected. UF&#x27;s loss to Vanderbilt in the SEC tournament semifinal on Saturday opened the door for UConn or Houston, but both suffered losses in their respective conference championship games."
+        },
+        {
+          "title": "2026 March Madness Bracketology Updated: Dan Hurley&#x27;s UConn Loses Top ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2F2026%2Dmarch%2Dmadness%2Dbracketology%2Dupdated%2F&rut=de26f504cf15ba68af5b1e0d0be719a5ade7894264883e02e9e16acd330fbeb1",
+          "snippet": "The UConn Huskies fall in ESPN&#x27;s bracketology for March Madness and paves way for the Florida Gators to grab the No.1 seed projection."
+        },
+        {
+          "title": "UConn Basketball Earns No. 2 Seed in East Region for March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fpa%2Fphiladelphia%2Fnews%2F2026%2F03%2F15%2Fuconn%2Dbasketball%2Dearns%2Dno%2D2%2Dseed%2Din%2Deast%2Dregion%2Dfor%2Dmarch%2Dmadness%2F&rut=ba4c8489e7ff8f077ba90b8662d8aa3c38b34c844bbd0b77b4d6048c6eb59424",
+          "snippet": "The UConn men&#x27;s basketball team (29-5) has been selected as the No. 2 seed in the East Region of the 2026 NCAA Tournament. The Huskies will take on No. 15 seed Furman (22-12) in the first round on Friday in Philadelphia."
+        },
+        {
+          "title": "NCAA Bracketology (3/8/26): UConn drops from No. 1 seed after loss ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nj.com%2Fsports%2F2026%2F03%2Fncaa%2Dbracketology%2D3826%2Duconn%2Ddrops%2Dfrom%2Dno%2D1%2Dseed%2Dafter%2Dloss%2Dput%2Dmiami%2Dohio%2Dat%2Da%2Ddecent%2Dseed%2Dwhere%2Dtheyve%2Dgot%2Da%2Dchance.html&rut=bc4416e60114c50097d3c61e489cee27187d25d26900a473767edcd0d1c7d19a",
+          "snippet": "After No. 4 UConn was stunned at Marquette on Saturday, and coach Dan Hurley imploded in the final seconds, the Huskies are no longer a projected No. 1 seed in March Madness . Defending national ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Huskies Earn No. 2 Seed In NCAA East Region\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fuconnhuskies.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dhuskies%2Dearn%2Dno%2D2%2Dseed%2Din%2Dncaa%2Deast%2Dregion&rut=785384f7319e64552fd149396ff719c11829ab135f994aacc33d8da14352ec7a\",\n      \"snippet\": \"The Huskies have earned the No. 2 seed the East region and will take on No. 15 seed Furman in the First Round in Philadelphia on Friday, March 20.\"\n    },\n    {\n      \"title\": \"2026 March Madness: Full bracket, seed list revealed\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegesportswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fcollege%2Dbasketball%2F2026%2F03%2F15%2F2026%2Dmarch%2Dmadness%2Dfull%2Dbracket%2Dreveal%2Dseed%2Dlist%2F89171848007%2F&rut=2782dbde68a6b5efe2f8afa69b4042b1cd513b605f81c1337189f509b8ac3405\",\n      \"snippet\": \"The final one seed, which was the subject of some debate, ultimately went to the Florida Gators, as expected. UF&#x27;s loss to Vanderbilt in the SEC tournament semifinal on Saturday opened the door for UConn or Houston, but both suffered losses in their respective conference championship games.\"\n    },\n    {\n      \"title\": \"2026 March Madness Bracketology Updated: Dan Hurley&#x27;s UConn Loses Top ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2F2026%2Dmarch%2Dmadness%2Dbracketology%2Dupdated%2F&rut=de26f504cf15ba68af5b1e0d0be719a5ade7894264883e02e9e16acd330fbeb1\",\n      \"snippet\": \"The UConn Huskies fall in ESPN&#x27;s bracketology for March Madness and paves way for the Florida Gators to grab the No.1 seed projection.\"\n    },\n    {\n      \"title\": \"UConn Basketball Earns No. 2 Seed in East Region for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fpa%2Fphiladelphia%2Fnews%2F2026%2F03%2F15%2Fuconn%2Dbasketball%2Dearns%2Dno%2D2%2Dseed%2Din%2Deast%2Dregion%2Dfor%2Dmarch%2Dmadness%2F&rut=ba4c8489e7ff8f077ba90b8662d8aa3c38b34c844bbd0b77b4d6048c6eb59424\",\n      \"snippet\": \"The UConn men&#x27;s basketball team (29-5) has been selected as the No. 2 seed in the East Region of the 2026 NCAA Tournament. The Huskies will take on No. 15 seed Furman (22-12) in the first round on Friday in Philadelphia.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-8-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:23.098Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Furman Paladins basketball 2026 NCAA tournament Southern Conference",
+        "maxResults": 5
+      },
+      "content": "Let me search for more information on both teams since UConn's ratings are unavailable and I need to understand their profile better."
+    },
+    {
+      "id": "r64-east-8-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:24.027Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Furman Set For 2026 Ingles Southern Conference Men&#x27;s Basketball ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ffurmanpaladins.com%2Fnews%2F2026%2F3%2F6%2Ffurman%2Dset%2Dfor%2D2026%2Dingles%2Dsouthern%2Dconference%2Dmens%2Dbasketball%2Dchampionship.aspx&rut=52ee01b1541f6a7e1a1ea3b2ba0bb70c3f695f41c586ef7cc099c0386b2fae8b",
+          "snippet": "Paladins Face Samford In 6 P.M. Quarterfinal On Saturday Furman vs. Samford Game Notes Greenville, S.C. - No. 6 seed Furman opens its quest for a league title and NCAA Tournament berth when it faces No. 3 seed Samford in the quarterfinal round of the Ingles Southern Conference Men&#x27;s Basketball Championship Saturday evening in Asheville, N.C."
+        },
+        {
+          "title": "2026 Southern Conference men&#x27;s basketball tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_Southern_Conference_men%2527s_basketball_tournament&rut=a96613473ba96b82d70e4d9fa7e7fa3f1255b0b6b3c4a2dccd630489ea17205d",
+          "snippet": "The 2026 Southern Conference Men&#x27;s Basketball Tournament was the postseason men&#x27;s basketball tournament for the Southern Conference for the 2025-26 season. All tournament games were played at the Harrah&#x27;s Cherokee Center in Asheville, North Carolina, from March 6-9, 2026 . [2][3] The winner of the tournament , Furman , received the conference&#x27;s automatic bid to the 2026 NCAA Division I Men&#x27;s ..."
+        },
+        {
+          "title": "Furman men&#x27;s basketball headed to 2026 NCAA Tournament | The State",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.thestate.com%2Fsports%2Fcollege%2Fmens%2Dbasketball%2Farticle314983405.html&rut=a1d18bb16dbf6c00ec0a6f6d3fd678a63e0467bb7755a6adfd65082ece937785",
+          "snippet": "The Furman men&#x27;s basketball team celebrates after winning the SoCon tournament championship game on March 9, 2026 in Asheville. With the win, the Paladins advance to their second NCAA Tournament ..."
+        },
+        {
+          "title": "How Cooper Bowser led Furman basketball back to March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.greenvilleonline.com%2Fstory%2Fsports%2Fcollege%2Ffurman%2F2026%2F03%2F10%2Fmarch%2Dmadness%2Dfurman%2Dbasketball%2Dsouthern%2Dconference%2Dtournament%2Dcooper%2Dbowser%2F89067306007%2F&rut=960ca7ea8d7babe02387886bbfa38cc6b21755acb0cdf2deb0e3951bc8359ab0",
+          "snippet": "Furman defeated East Tennessee State to win the 2026 Southern Conference Tournament championship. Cooper Bowser led the Paladins with a game-high 21 points and 11 rebounds."
+        },
+        {
+          "title": "Furman will face UConn in NCAA Men&#x27;s Tournament opener Friday at 10PM ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Ffurman%2Dface%2Duconn%2Dncaa%2Dmen%2D033956059.html&rut=c81205e329f7c94cc367808414d4b786405afa88b302433a3499acd812e3e0fc",
+          "snippet": "Greenville, S.C. ( Furman SID) - The No. 15 seed Furman Paladins will face No. 2 seed UConn in the opening round of the 2026 NCAA Men&#x27;s Basketball Championship on Friday at 10PM at the Xfinity ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Furman Set For 2026 Ingles Southern Conference Men&#x27;s Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Ffurmanpaladins.com%2Fnews%2F2026%2F3%2F6%2Ffurman%2Dset%2Dfor%2D2026%2Dingles%2Dsouthern%2Dconference%2Dmens%2Dbasketball%2Dchampionship.aspx&rut=52ee01b1541f6a7e1a1ea3b2ba0bb70c3f695f41c586ef7cc099c0386b2fae8b\",\n      \"snippet\": \"Paladins Face Samford In 6 P.M. Quarterfinal On Saturday Furman vs. Samford Game Notes Greenville, S.C. - No. 6 seed Furman opens its quest for a league title and NCAA Tournament berth when it faces No. 3 seed Samford in the quarterfinal round of the Ingles Southern Conference Men&#x27;s Basketball Championship Saturday evening in Asheville, N.C.\"\n    },\n    {\n      \"title\": \"2026 Southern Conference men&#x27;s basketball tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_Southern_Conference_men%2527s_basketball_tournament&rut=a96613473ba96b82d70e4d9fa7e7fa3f1255b0b6b3c4a2dccd630489ea17205d\",\n      \"snippet\": \"The 2026 Southern Conference Men&#x27;s Basketball Tournament was the postseason men&#x27;s basketball tournament for the Southern Conference for the 2025-26 season. All tournament games were played at the Harrah&#x27;s Cherokee Center in Asheville, North Carolina, from March 6-9, 2026 . [2][3] The winner of the tournament , Furman , received the conference&#x27;s automatic bid to the 2026 NCAA Division I Men&#x27;s ...\"\n    },\n    {\n      \"title\": \"Furman men&#x27;s basketball headed to 2026 NCAA Tournament | The State\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.thestate.com%2Fsports%2Fcollege%2Fmens%2Dbasketball%2Farticle314983405.html&rut=a1d18bb16dbf6c00ec0a6f6d3fd678a63e0467bb7755a6adfd65082ece937785\",\n      \"snippet\": \"The Furman men&#x27;s basketball team celebrates after winning the SoCon tournament championship game on March 9, 2026 in Asheville. With the win, the Paladins advance to their second NCAA Tournament ...\"\n    },\n    {\n      \"title\": \"How Cooper Bowser led Furman basketball back to March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.greenvilleonline.com%2Fstory%2Fsports%2Fcollege%2Ffurman%2F2026%2F03%2F10%2Fmarch%2Dmadness%2Dfurman%2Dbasketball%2Dsouthern%2Dconference%2Dtournament%2Dcooper%2Dbowser%2F89067306007%2F&rut=960ca7ea8d7babe02387886bbfa38cc6b21755acb0cdf2deb0e3951bc8359ab0\",\n      \"snippet\": \"Furman defeated East Tennessee State to win the 2026 Southern Conference Tournament championship. Cooper Bowser led the Paladins with a game-high 21 points and 11 rebounds.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:31.091Z",
+      "content": "Now I have some context. UConn is a 2-seed with a 29-5 record. They were in contention for a 1-seed but lost in their conference championship game. Furman is a 15-seed, 22-12, that won the Southern Conference tournament as a 6-seed to earn their second-ever NCAA Tournament appearance.\n\nLet me get more details on both teams by fetching some of these pages to understand their profiles better.\n\nLet me fetch more details about both teams to understand their profiles and any injury concerns."
+    },
+    {
+      "id": "r64-east-8-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:31.091Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://uconnhuskies.com/news/2026/3/15/mens-basketball-huskies-earn-no-2-seed-in-ncaa-east-region",
+        "maxChars": 3000
+      },
+      "content": "Let me fetch more details about both teams to understand their profiles and any injury concerns."
+    },
+    {
+      "id": "r64-east-8-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:31.892Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://uconnhuskies.com/news/2026/3/15/mens-basketball-huskies-earn-no-2-seed-in-ncaa-east-region",
+        "text": "Huskies Earn No. 2 Seed In NCAA East Region - University of Connecticut Athletics Skip to main content Skip Ad Close Ad Menu Sports Men&#39;s Sports Baseball Basketball Football Golf Ice Hockey Soccer Track & Field Women&#39;s Sports Basketball Cross Country Field Hockey Ice Hockey Lacrosse Rowing Soccer Softball Swimming & Diving Tennis Track & Field Volleyball Tickets Buy Tickets UConntickets.com Ticket Info Contact Us Group Tickets Mobile Tickets Premium Seating Season Tickets Student Tickets F.I.T. Fee Ticket Tools My Account Seat Selection Terms and Conditions Season Ticket Renewals SeatGeek Buy or Sell Football Tickets Buy or Sell Men&#39;s Basketball Tickets Buy or Sell Women&#39;s Basketball Tickets Buy or Sell Men&#39;s Ice Hockey Tickets Donate Quick Links Donate Now Husky Athletic Fund Staff / Contact Us Husky Athletic Fund Husky Athletic Fund Home Login to My Account Donor Guidebook Ways to Donate Benefits Chart Priority Points Areas to Support Fight On Fund Funding Excellence Future Success Scholarships Capital Enhancements Fans Gameday Info Composite Schedule Bag Policy Men&#39;s Basketball Women&#39;s Basketball Football Men&#39;s Hockey Scoreboard Messages National Anthem Performer Interest Form Events & Promotions Game Watch Events Junior Husky Club High School Days Youth Group Branding Support Huskymania Fan Shop NIL Marketplace Digital Wallpapers Restaurant Partners Athletics About Us Staff Directory Facilities Mission Statement University of Connecticut Recruits Info for Recruits Name, Image, Likeness Walk-On Procedure Department Academic Progress Rate Compliance EADA Graduation Success Rate Husky Advantage Center of Athletic Leadership & Enrichment Job Opportunities National C Club NCAA COI Findings NCAA Subpoena SAAC Sponsorship Opportunities Sports Medicine Sports Performance Student Jobs & Internships Student-Athlete Success Program Title IX Resources Student-Athlete Handbook Trademark Licensing & Branding UConn Health-Official Team Doctors Visiting Team Info Discontinued Sports History & Traditions History of UConn Athletics Conference Championships National Championships Huskies of Honor Husky Heritage Sports Museum Fight Song / Alma Mater Marching Band Spirit, Pride & Tradition Jonathan the Husky Connect Follow Composite Schedule Email Sign-Up Live Stats & Coverage Social Media Directory UConn Huskies App Watch UConn+ BIG EAST Digital Network SNY Listen Live Audio UConn Sports Network From Learfield Coaches Corner Podcast Husky HQ Instagram , Opens in new window Twitter , Opens in new window TikTok , Opens in new window Facebook , Opens in new window Youtube , Opens in new window Skip Ad Schedule Tickets , Opens in new window Shop , Opens in new window Donate , Opens in new window Search Search I&#39;m looking for... Search Now Men&#39;s Basketball Skip Ad More Roster Coaches Schedule News XML Stats Additional Links Media/Scout Credential Application Record Book (updated for 2025-26) 2025-26 Media Supplement Season Stat"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://uconnhuskies.com/news/2026/3/15/mens-basketball-huskies-earn-no-2-seed-in-ncaa-east-region\",\n    \"text\": \"Huskies Earn No. 2 Seed In NCAA East Region - University of Connecticut Athletics Skip to main content Skip Ad Close Ad Menu Sports Men&#39;s Sports Baseball Basketball Football Golf Ice Hockey Soccer Track & Field Women&#39;s Sports Basketball Cross Country Field Hockey Ice Hockey Lacrosse Rowing Soccer Softball Swimming & Diving Tennis Track & Field Volleyball Tickets Buy Tickets UConntickets.com Ticket Info Contact Us Group Tickets Mobile Tickets Premium Seating Season Tickets Student Tickets F.I.T. Fee Ticket Tools My Account Seat Selection Terms and Conditions Season Ticket Renewals SeatGeek Buy or Sell Football Tickets Buy or Sell Men&#39;s Basketball Tickets Buy or Sell Women&#39;s Basketball Tickets Buy or Sell Men&#39;s Ice Hockey Tickets Donate Quick Links Donate Now Husky Athletic Fund Staff / Contact Us Husky Athletic Fund Husky Athletic Fund Home Login to My Account Donor Guidebook Ways to Donate Benefits Chart Priority Points Areas to Support Fight On Fund Funding Excellence Future Success Scholarships Capital Enhancements Fans Gameday Info Composite Schedule Bag Policy Men&#39;s Basketball Women&#39;s Basketball Football Men&#39;s Hockey Scoreboard Messages National ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-8-tool-call-2-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:31.892Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://en.wikipedia.org/wiki/2026_Southern_Conference_men%27s_basketball_tournament",
+        "maxChars": 3000
+      },
+      "content": "Let me fetch more details about both teams to understand their profiles and any injury concerns."
+    },
+    {
+      "id": "r64-east-8-tool-result-2-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:32.513Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/2026_Southern_Conference_men%27s_basketball_tournament",
+        "text": "2026 Southern Conference men's basketball tournament - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide (Top) 1 Seeds 2 Schedule and results 3 Bracket 4 Awards and honors 5 See also 6 References Toggle the table of contents 2026 Southern Conference men's basketball tournament Add languages Add links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Print/export Download as PDF Printable version In other projects Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia American college basketball postseason tournament Not to be confused with 2026 Southland Conference men's basketball tournament . 2026 Southern Conference men's basketball&#160;tournament Classification Division I Season 2025&#8211;26 Teams 10 Site Harrah's Cherokee Center Asheville, North Carolina Champions Furman (8th title) Winning coach Bob Richey (2nd title) MVP Alex Wilkins (Furman) Television ESPN+ Southern Conference men's basketball&#160;tournaments &#8592;&#160; 2025 2027 &#160;&#8594; 2025–26 Southern Conference men's basketball standings v t e Conf. Overall Team W &#160; L &#160; PCT W &#160; L &#160; PCT East Tennessee State 13 &#8211; 5 &#160; .722 23 &#8211; 11 &#160; .676 Wofford 11 &#8211; 7 &#160; .611 19 &#8211; 13 &#160; .594 Samford 11 &#8211; 7 &#160; .611 18 &#8211; 14 &#160; .563 Mercer 11 &#8211; 7 &#160; .611 19 &#8211; 13 &#160; .594 Western Carolina 10 &#8211; 8 &#160; .556 15 &#8211; 16 &#160; .484 Furman † 10 &#8211; 8 &#160; .556 22 &#8211; 12 &#160; .647 UNC Greensboro 9 &#8211; 9 &#160; .500 15 &#8211; 19 &#160; .441 Chattanooga 7 &#8211; 11 &#160; .389 13 &#8211; 19 &#160; .406 The Citadel 7 &#8211; 11 &#160; .389 11 &#8211; 22 &#160; .333 VMI 1 &#8211; 17 &#160; .056 6 &#8211; 26 &#160; .188 † 2026 SoCon tournament winner As of March 9, 2026 &#91; 1 &#93; The 2026 Southern Conference Men's Basketball Tournament was the postseason men's basketball tournament for the Southern Conference for the 2025–26 season . All tournament games were played at the Harrah's Cherokee Center in Asheville, North Carolina , from March 6–9, 2026. &#91; 2 &#93; &#91; 3 &#93; The winner of the tournament, Furman , received the conference's automatic bid to the 2026 NCAA Division I Men's Basketball Tournament . Seeds [ edit ] All ten teams in the Southern Conference were eligible to compete in the conference tournament. Teams were seeded by record within the conference, with a tiebreaker system to seed teams with identical conference records. &#91; 1 &#93; &#9"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://en.wikipedia.org/wiki/2026_Southern_Conference_men%27s_basketball_tournament\",\n    \"text\": \"2026 Southern Conference men's basketball tournament - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide (Top) 1 Seeds 2 Schedule and results 3 Bracket 4 Awards and honors 5 See also 6 References Toggle the table of contents 2026 Southern Conference men's basketball tournament Add languages Add links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Print/export Download as PDF Printable version In other projects Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia American college basketball postseason tournament Not to be confused with 2026 Southland Conference men's basketball tournament . 2026 Southern Conference men's basketball&#160;tournament Classification D... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:36.524Z",
+      "content": "The fetches were truncated. Let me search for more specific information about these teams - particularly looking for UConn's season stats and any injury news.\n\nLet me search for more specific information about UConn's profile and any injury situations."
+    },
+    {
+      "id": "r64-east-8-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:36.524Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UConn Huskies 2025-26 season stats record Big East",
+        "maxResults": 5
+      },
+      "content": "Let me search for more specific information about UConn's profile and any injury situations."
+    },
+    {
+      "id": "r64-east-8-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:37.244Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "UConn Huskies 2025-26 Men&#x27;s College Basketball Stats - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fstats%2F_%2Fid%2F41&rut=542aecdc73f72940598bde0ce268466aac950f00d80ecbdc4fadd05f2dcfbfb6",
+          "snippet": "Visit ESPN for UConn Huskies live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "2025-26 UConn Huskies Men&#x27;s Roster and Stats | College Basketball at ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fconnecticut%2Fmen%2F2026.html&rut=a02240d86baecd23003677459e9cdc73a9d7f11b79517cbbfefdc853511b1dbb",
+          "snippet": "Check out the detailed 2025-26 UConn Huskies Roster and Stats for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "2025-2026 Men&#x27;s Basketball - Overall Statistics - Big East Conference",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bigeast.com%2Fstats.aspx%3Fpath%3Dmbball%26year%3D2025&rut=f4a12c07ff3cb15679933233b2ce1e68c2a9120852c795bf297253601ebcd180",
+          "snippet": "The official 2025 -2026 Men&#x27;s Basketball cumulative statistics for Big East Conference"
+        },
+        {
+          "title": "2025-26 UConn Huskies men&#x27;s basketball team - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025%25E2%2580%259326_UConn_Huskies_men%2527s_basketball_team&rut=5a7c5027814fa9c5417747f3a519ca3bfc239bf316331c90e3c67ace5a135c2b",
+          "snippet": "The 2025-26 UConn Huskies men&#x27;s basketball team represents the University of Connecticut in the 2025-26 NCAA Division I men&#x27;s basketball season . The Huskies are led by eighth-year head coach Dan Hurley in the team&#x27;s sixth season since their return to the Big East Conference. The Huskies play their home games at the Harry A. Gampel Pavilion on-campus in Storrs, Connecticut and the ..."
+        },
+        {
+          "title": "UConn Huskies Team and Player Stats - 2025-26 NCAAM Season - The Athletic",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Fcollege%2Dbasketball%2Fteam%2Fconnecticut%2Dhuskies%2Dcollege%2Dbasketball%2Fstats%2F&rut=b45d05660b1f8a1ee53c6a1cd4c5497792195822eddd6687ddb56d768ca020ad",
+          "snippet": "Get the latest UConn Huskies stats for the 2025-26 NCAAM season ."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"UConn Huskies 2025-26 Men&#x27;s College Basketball Stats - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fstats%2F_%2Fid%2F41&rut=542aecdc73f72940598bde0ce268466aac950f00d80ecbdc4fadd05f2dcfbfb6\",\n      \"snippet\": \"Visit ESPN for UConn Huskies live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"2025-26 UConn Huskies Men&#x27;s Roster and Stats | College Basketball at ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fconnecticut%2Fmen%2F2026.html&rut=a02240d86baecd23003677459e9cdc73a9d7f11b79517cbbfefdc853511b1dbb\",\n      \"snippet\": \"Check out the detailed 2025-26 UConn Huskies Roster and Stats for College Basketball at Sports-Reference.com\"\n    },\n    {\n      \"title\": \"2025-2026 Men&#x27;s Basketball - Overall Statistics - Big East Conference\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bigeast.com%2Fstats.aspx%3Fpath%3Dmbball%26year%3D2025&rut=f4a12c07ff3cb15679933233b2ce1e68c2a9120852c795bf297253601ebcd180\",\n      \"snippet\": \"The official 2025 -2026 Men&#x27;s Basketball cumulative statistics for Big East Conference\"\n    },\n    {\n      \"title\": \"2025-26 UConn Huskies men&#x27;s basketball team - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025%25E2%2580%259326_UConn_Huskies_men%2527s_basketball_team&rut=5a7c5027814fa9c5417747f3a519ca3bfc239bf316331c90e3c67ace5a135c2b\",\n      \"snippet\": \"The 2025-26 UConn Huskies men&#x27;s basketball team represents the University of Connecticut in the 2025-26 NCAA Division I men&#x27;s basketball season . The Huskies are led by eighth-year head coach Dan Hurley in the team&#x27;s sixth season since their return to the Big East Conference. The Huskies play their home games at the Harry A. Gampel Pavilion on-campus in Storrs, Connecticut and the ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-8-tool-call-3-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:37.244Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UConn basketball injuries 2026 March Madness",
+        "maxResults": 5
+      },
+      "content": "Let me search for more specific information about UConn's profile and any injury situations."
+    },
+    {
+      "id": "r64-east-8-tool-result-3-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:37.991Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fpa%2Fphiladelphia%2Fnews%2F2026%2F03%2F16%2Fuconn%2Dbasketball%2Dfaces%2Dinjury%2Dconcerns%2Dahead%2Dof%2Dncaa%2Dtournament%2F&rut=11e8065d5766cd086ac0f4193c55ea2d348735cd25d7b0362ab6bdd36828efe8",
+          "snippet": "UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart&#x27;s status for the first round is uncertain, while Demary is reported to be &#x27;in pretty good shape&#x27;."
+        },
+        {
+          "title": "UConn basketball&#x27;s nightmare 2026 March Madness bracket scenarios",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fuconn%2Dbasketball%2Dnightmare%2D2026%2Dmarch%2D203422814.html&rut=297c26960bc2066d90e41c0e3ded98fb1dba616a7f533d643c7ad73da5db2adb",
+          "snippet": "UConn basketball&#x27;s nightmare 2026 March Madness bracket scenarios appeared first on ClutchPoints. Add ClutchPoints as a Preferred Source by clicking here."
+        },
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Every key injury to know while making your 2026 March Madness bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dcaleb%2Dfoster%2Djt%2Dtoppin%2D2026%2Dbrackets%2F310f01ec055e579a2f819984&rut=4930c52a30981b049a2902a5ccc59c491e7868223b2dc012e028231da748647f",
+          "snippet": "March Madness key injuries to know 2026 Caleb Foster, Duke The tournament&#x27;s No. 1 overall seed, Duke, cruised through the regular season at 32-2."
+        },
+        {
+          "title": "The UConn Rotation Adjustment That Could Define March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fuconn%2Fbasketball%2Fuconn%2Dhuskies%2Dmens%2Drotation%2Dadjustment%2Dcould%2Ddefine%2Dmarch%2Dmadness%2D2026&rut=8e4b2ff749638787bae66eadbe4170b3908ff2dbd3f178c6bdffb8f7772e921f",
+          "snippet": "If the UConn Huskies want to win the March Madness tournament, coach Dan Hurley needs to make this adjustment in his player rotation."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fpa%2Fphiladelphia%2Fnews%2F2026%2F03%2F16%2Fuconn%2Dbasketball%2Dfaces%2Dinjury%2Dconcerns%2Dahead%2Dof%2Dncaa%2Dtournament%2F&rut=11e8065d5766cd086ac0f4193c55ea2d348735cd25d7b0362ab6bdd36828efe8\",\n      \"snippet\": \"UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart&#x27;s status for the first round is uncertain, while Demary is reported to be &#x27;in pretty good shape&#x27;.\"\n    },\n    {\n      \"title\": \"UConn basketball&#x27;s nightmare 2026 March Madness bracket scenarios\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fuconn%2Dbasketball%2Dnightmare%2D2026%2Dmarch%2D203422814.html&rut=297c26960bc2066d90e41c0e3ded98fb1dba616a7f533d643c7ad73da5db2adb\",\n      \"snippet\": \"UConn basketball&#x27;s nightmare 2026 March Madness bracket scenarios appeared first on ClutchPoints. Add ClutchPoints as a Preferred Source by clicking here.\"\n    },\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295\",\n      \"snippet\": \"March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks.\"\n    },\n    {\n      \"title\": \"Every key injury to know while making your 2026 March Madness bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dcaleb%2Dfoster%2Djt%2Dtoppin%2D2026%2Dbrackets%2F310f01ec055e579a2f819984&rut=4930c52a30981b049a2902a5ccc59c491e7868223b2dc012e028231da748647f\",\n      \"snippet\": \"March Madness key injuries to know 2026 Caleb Foster, Duke The tournament&#x27;s No. 1 overall seed, Duke, cruised through the regular season at 32-2.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:43.502Z",
+      "content": "Good - I found that UConn has some injury concerns. Jaylin Stewart's status is uncertain for the first round, while Silas Demary Jr. is in \"pretty good shape.\" Let me fetch that injury article for more details, and also look up UConn's season stats.\n\nLet me get more details on UConn's injury situation and their season profile."
+    },
+    {
+      "id": "r64-east-8-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:43.502Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/",
+        "maxChars": 3000
+      },
+      "content": "Let me get more details on UConn's injury situation and their season profile."
+    },
+    {
+      "id": "r64-east-8-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:44.089Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/",
+        "text": "UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament - Philadelphia Today Skip to content National Today Menu National Today Today Holidays Animals Arts & Entertainment Cause Cultural Federal Food & Beverage Health Relationships Religious Special Interest Birthdays January February March April May June July August September October November December Reminders Cities Atlanta Austin Baltimore Berwyn Beverly Hills Birmingham Boston Brooklyn Buffalo Charlotte Chicago Cincinnati Cleveland Columbus Dallas Denver Detroit Fort Worth Houston Indianapolis Knoxville Las Vegas Los Angeles Louisville Madison Memphis Miami Milwaukee Minneapolis Nashville New Orleans New York Omaha Orlando Philadelphia Phoenix Pittsburgh Portland Raleigh Richmond Rutherford Sacramento Salt Lake City San Antonio San Diego San Francisco San Jose Seattle Tampa Tucson Washington Log in Sign up Search Search Cancel Search National Today Submit Philadelphia Today By the People, for the People News Sports Basketball Baseball Body Building Boxing Cycling Equestrian eSports Extreme Sports Football Golf Gymnastics Hockey Ice Skating Mixed Martial Arts Motorsports Olympics Other Sports Rodeo Running Skiing Soccer Softball Surfing Swimming Tennis Track & Field Volleyball Wrestling More UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament Head coach Dan Hurley provides updates on key players' status for the first round Mar. 16, 2026 at 3:52am Got story updates? Submit your updates here. › UConn basketball is heading into the 2026 NCAA Tournament with some injury concerns. Head coach Dan Hurley shared updates on the status of two key players - forward Jaylin Stewart and guard Silas Demary Jr. Stewart's status for the first round is uncertain, while Demary is reported to be 'in pretty good shape'. The Huskies are the No. 2 seed and will face the No. 15 Furman Paladins on Friday in Philadelphia. Why it matters UConn is looking to reclaim the national title after missing out on a three-peat in 2025. The health of Stewart and Demary could be crucial to the Huskies' chances of making a deep tournament run. Demary in particular is a key contributor, leading the team in assists and steals. The details Forward Jaylin Stewart has not played since a Feb. 21 game against Villanova and missed the entire Big East tournament. Coach Hurley said it 'will be close' on whether Stewart can play in the first round. Meanwhile, junior guard Silas Demary Jr. is reported to be 'in pretty good shape'. Demary is second on the team in usage and leads the Huskies in assists and steals. Stewart has not played since a Feb. 21 game against Villanova. UConn will face Furman in the first round on Friday, March 21, 2026. The players Dan Hurley The head coach of the UConn Huskies men's basketball team. Jaylin Stewart A junior forward for the UConn Huskies who has been sidelined with an injury. Silas Demary Jr. A junior guard for the UConn Huskies who is reported to be in 'pretty good shape' heading into "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://nationaltoday.com/us/pa/philadelphia/news/2026/03/16/uconn-basketball-faces-injury-concerns-ahead-of-ncaa-tournament/\",\n    \"text\": \"UConn Basketball Faces Injury Concerns Ahead of NCAA Tournament - Philadelphia Today Skip to content National Today Menu National Today Today Holidays Animals Arts & Entertainment Cause Cultural Federal Food & Beverage Health Relationships Religious Special Interest Birthdays January February March April May June July August September October November December Reminders Cities Atlanta Austin Baltimore Berwyn Beverly Hills Birmingham Boston Brooklyn Buffalo Charlotte Chicago Cincinnati Cleveland Columbus Dallas Denver Detroit Fort Worth Houston Indianapolis Knoxville Las Vegas Los Angeles Louisville Madison Memphis Miami Milwaukee Minneapolis Nashville New Orleans New York Omaha Orlando Philadelphia Phoenix Pittsburgh Portland Raleigh Richmond Rutherford Sacramento Salt Lake City San Antonio San Diego San Francisco San Jose Seattle Tampa Tucson Washington Log in Sign up Search Search Cancel Search National Today Submit Philadelphia Today By the People, for the People News Sports Basketball Baseball Body Building Boxing Cycling Equestrian eSports Extreme Sports Football Golf Gymnastics Hockey Ice Skating Mixed Martial Arts Motorsports Olympics Other Sports Rodeo Running Skiing Soccer... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-8-tool-call-4-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:44.089Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sports-reference.com/cbb/schools/connecticut/men/2026.html",
+        "maxChars": 3000
+      },
+      "content": "Let me get more details on UConn's injury situation and their season profile."
+    },
+    {
+      "id": "r64-east-8-tool-result-4-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:44.347Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sports-reference.com/cbb/schools/connecticut/men/2026.html",
+        "text": "2025-26 UConn Huskies Men's Roster and Stats | College Basketball at Sports-Reference.com Sports Reference&#8239;&reg; Baseball Football (college) Basketball (college) Hockey Soccer Blog Stathead&#8239;&reg; Immaculate Grid&#8239;&reg; Questions or Comments? Welcome &#183; Your Account Logout Ad-Free Login Create Account MENU Players Schools Seasons Leaders Scores NCAA Tournaments Stathead Newsletter Full Site Menu Below You are here: CBB Home Page &gt; Schools &gt; UConn Huskies &gt; Men's Basketball &gt; 2025-26 Welcome &#183; Your Account Logout Ad-Free Login Create Account via Sports Logos.net About logos 2025-26 UConn Huskies Men's Roster and Stats Previous Season Record: 29-5 (17-3, 2nd in Big East MBB ) Rank: 6th in the Mar 9th AP Poll Coach: Dan Hurley PS/G: 77.5 (138th of 365) PA/G: 65.1 (11th of 365) SRS : 22.92 (12th of 365) SOS : 10.53 (41st of 365) ORtg: 116.5 (54th of 365) DRtg: 97.9 (24th of 365) Preseason Odds: Championship +1400 More School Info Become a Stathead & surf this site ad-free. 2025-26 UConn Huskies Men Menu 2025-26 UConn Stats UConn (Men) History Polls, Schedule & Results Game Log Starters More 2025-26 UConn (Men's) Pages 2025-26 UConn (Men's) Season Roster & Stats Polls, Schedule & Results Game Log Starters On this page Roster Per Game Team and Opponent Stats Total Team and Opponent Stats Per Game Totals Per 40 Minutes Per 100 Poss Advanced Full Site Menu Keyboard Shortcuts \\ to toggle sidebar navigation / to toggle search input More about this update Recent Game Results Height of bar is margin of victory &bull; Mouseover bar for details &bull; Click for box score &bull; Grouped by Month 1. Nov 3, Connecticut (1-0) Win vs. New Haven, 79-55 2. Nov 7, Connecticut (2-0) Win vs. Massachusetts-Lowell, 110-47 3. Nov 10, Connecticut (3-0) Win vs. Columbia, 89-62 4. Nov 15 (Neutral), Connecticut (4-0) Win vs. Brigham Young, 86-84 5. Nov 19, Connecticut (4-1) Loss vs. Arizona, 67-71 6. Nov 23, Connecticut (5-1) Win vs. Bryant, 72-49 7. Nov 28 (Neutral), Connecticut (6-1) Win vs. Illinois, 74-61 8. Dec 2 @ Kansas, Connecticut (7-1) Win vs. Kansas, 61-56 9. Dec 5, Connecticut (8-1) Win vs. East Texas A&M, 83-59 10. Dec 9 (Neutral), Connecticut (9-1) Win vs. Florida, 77-73 11. Dec 12, Connecticut (10-1) Win vs. Texas, 71-63 12. Dec 16, Connecticut (11-1) Win vs. Butler, 79-60 13. Dec 21 @ DePaul, Connecticut (12-1) Win vs. DePaul, 72-54 14. Dec 31 @ Xavier, Connecticut (13-1) Win vs. Xavier, 90-67 15. Jan 4, Connecticut (14-1) Win vs. Marquette, 73-57 16. Jan 7 @ Providence, Connecticut (15-1) Win vs. Providence, 103-98 17. Jan 10, Connecticut (16-1) Win vs. DePaul, 72-60 18. Jan 13 @ Seton Hall, Connecticut (17-1) Win vs. Seton Hall, 69-64 19. Jan 17 @ Georgetown, Connecticut (18-1) Win vs. Georgetown, 64-62 20. Jan 24, Connecticut (19-1) Win vs. Villanova, 75-67 21. Jan 27, Connecticut (20-1) Win vs. Providence, 87-81 22. Jan 31 @ Creighton, Connecticut (21-1) Win vs. Creighton, 85-58 23. Feb 3, Connecticut (22-1) Win vs. Xavi"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sports-reference.com/cbb/schools/connecticut/men/2026.html\",\n    \"text\": \"2025-26 UConn Huskies Men's Roster and Stats | College Basketball at Sports-Reference.com Sports Reference&#8239;&reg; Baseball Football (college) Basketball (college) Hockey Soccer Blog Stathead&#8239;&reg; Immaculate Grid&#8239;&reg; Questions or Comments? Welcome &#183; Your Account Logout Ad-Free Login Create Account MENU Players Schools Seasons Leaders Scores NCAA Tournaments Stathead Newsletter Full Site Menu Below You are here: CBB Home Page &gt; Schools &gt; UConn Huskies &gt; Men's Basketball &gt; 2025-26 Welcome &#183; Your Account Logout Ad-Free Login Create Account via Sports Logos.net About logos 2025-26 UConn Huskies Men's Roster and Stats Previous Season Record: 29-5 (17-3, 2nd in Big East MBB ) Rank: 6th in the Mar 9th AP Poll Coach: Dan Hurley PS/G: 77.5 (138th of 365) PA/G: 65.1 (11th of 365) SRS : 22.92 (12th of 365) SOS : 10.53 (41st of 365) ORtg: 116.5 (54th of 365) DRtg: 97.9 (24th of 365) Preseason Odds: Championship +1400 More School Info Become a Stathead & surf this site ad-free. 2025-26 UConn Huskies Men Menu 2025-26 UConn Stats UConn (Men) History Polls, Schedule & Results Game Log Starters More 2025-26 UConn (Men's) Pages 2025-26 UConn (Men's) Season Ro... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:55.167Z",
+      "content": "Good, I'm getting some data. From the sports-reference page, I can see:\n- UConn: 29-5 record (17-3 in Big East)\n- Ranked 6th in AP Poll on March 9th\n- Coach: Dan Hurley\n- Points scored per game: 77.5 (138th)\n- Points allowed per game: 65.1 (11th - very good defense)\n- SRS: 22.92 (12th - Simple Rating System, a measure of strength)\n- SOS: 10.53 (41st - strength of schedule)\n- ORtg: 116.5 (54th - offensive rating)\n- DRtg: 97.9 (24th - defensive rating)\n\nThis shows UConn is a very solid team with elite defense and good offense. They're a 2-seed for a reason.\n\nFurman's ratings from earlier:\n- KenPom rank: 191\n- Torvik rank: 195\n- Record: 22-12\n- Adj EM: -1.99 (negative efficiency margin)\n\nThis is a huge gap. Furman is a below-average team by KenPom standards, while UConn is a top-10 caliber team.\n\nLet me look for more details on Furman's profile and any other context.\n\nLet me get more context on Furman's tournament run and profile to complete the analysis."
+    },
+    {
+      "id": "r64-east-8-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:55.167Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.greenvilleonline.com/story/sports/college/furman/2026/03/10/march-madness-furman-basketball-southern-conference-tournament-cooper-bowser/89067306007/",
+        "maxChars": 3000
+      },
+      "content": "Let me get more context on Furman's tournament run and profile to complete the analysis."
+    },
+    {
+      "id": "r64-east-8-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:55.311Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.greenvilleonline.com/story/sports/college/furman/2026/03/10/march-madness-furman-basketball-southern-conference-tournament-cooper-bowser/89067306007/",
+        "text": "How Cooper Bowser led Furman basketball back to March Madness Skip to main content Home Sports High Schools Clemson USC Furman Paladins Greenville Drive Swamp Rabbits Fantasy Sports SAIL Swimming USA TODAY Sports How Cooper Bowser led Furman basketball back to March Madness Zachary Huber Hendersonville Times-News Show Caption Hide Caption Furman Paladins ribbon cutting and open house a home sweet home event at Timmons Arena Furman basketball teams played last season on the road, and now enjoy their $40 million renovated Timmons Arena Furman defeated East Tennessee State to win the 2026 Southern Conference Tournament championship. Cooper Bowser led the Paladins with a game-high 21 points and 11 rebounds. The victory secures Furman's first appearance in the NCAA Tournament since 2023. ASHEVILLE, NC — Tears fell from Cooper Bowser's eyes as Furman basketball made the trip from the hotel to the arena for its Southern Conference quarterfinal matchup against Samford on March 7. He teared up because the last memory he had of playing in Asheville was a bad one — the 2025 SoCon championship game, where Furman lost to Wofford. \"That was the motivation all offseason for me,\" Bowser said. \"A lot of people went home. I stayed here for the whole month of May, just trying to get stronger and better.\" His hard work paid off as the No. 6-seeded Paladins reached the 2026 SoCon Tournament title game, where they beat top-seeded East Tennessee State 76-61 at Harrah's Cherokee Center on March 9. With the victory — in which he had a game-high 21 points and 11 rebounds, his first double-double of the season — Furman (22-12) guaranteed its spot in March Madness for the first time since 2023. The 6-foot-11 forward started the game strong against the Buccaneers (23-11), scoring 14 first-half points on 6-for-6 shooting from the field. He kept his hot shooting going in the second half, knocking down two more shots and didn't miss until there were 10 minutes left in the game. Furman coach Bob Richey said Bowser had volunteered to come out of the starting lineup ahead of the quarterfinal, believing the Paladins needed to play smaller with four guards instead of three. The junior wanted to come out instead of one of the senior starters. \"That's how life works,\" Richey said. \"When you give, you get. He gave away his starting opportunity in that Samford game, then started the last two games due to matchups. He was rewarded tonight with that performance.\" Bowser said he isn't an emotional person. \"I don't cry that much,\" he said. \"A wave of emotions hit me. I started tearing up and started crying, trying to make sure no one saw me.\" Bowser was all smiles walking off the court, through a 20-minute news conference and to the bus after the championship game. He now has a positive memory of playing at Harrah's Cherokee Center — one where he led the team to its eighth SoCon Tournament championship and a place in the 2026 NCAA Tournament. Zachary Huber is a high school sports reporter f"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.greenvilleonline.com/story/sports/college/furman/2026/03/10/march-madness-furman-basketball-southern-conference-tournament-cooper-bowser/89067306007/\",\n    \"text\": \"How Cooper Bowser led Furman basketball back to March Madness Skip to main content Home Sports High Schools Clemson USC Furman Paladins Greenville Drive Swamp Rabbits Fantasy Sports SAIL Swimming USA TODAY Sports How Cooper Bowser led Furman basketball back to March Madness Zachary Huber Hendersonville Times-News Show Caption Hide Caption Furman Paladins ribbon cutting and open house a home sweet home event at Timmons Arena Furman basketball teams played last season on the road, and now enjoy their $40 million renovated Timmons Arena Furman defeated East Tennessee State to win the 2026 Southern Conference Tournament championship. Cooper Bowser led the Paladins with a game-high 21 points and 11 rebounds. The victory secures Furman's first appearance in the NCAA Tournament since 2023. ASHEVILLE, NC — Tears fell from Cooper Bowser's eyes as Furman basketball made the trip from the hotel to the arena for its Southern Conference quarterfinal matchup against Samford on March 7. He teared up because the last memory he had of playing in Asheville was a bad one — the 2025 SoCon championship game, where Furman lost to Wofford. \\\"That was the motivation all offseason for me,\\\" Bowser said. \\\"A l... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-8-tool-call-5-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:55.311Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Furman basketball players stats 2026 Cooper Bowser JP Pegues",
+        "maxResults": 5
+      },
+      "content": "Let me get more context on Furman's tournament run and profile to complete the analysis."
+    },
+    {
+      "id": "r64-east-8-tool-result-5-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:56.043Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Cooper Bowser - 2025-26 - Men&#x27;s Basketball - Furman University",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ffurmanpaladins.com%2Fsports%2Fmens%2Dbasketball%2Froster%2Fcooper%2Dbowser%2F6693&rut=f378c62fa37cf9c65faff56c7a9d4b0b9689d9d08f49205217fa782ad8002bdd",
+          "snippet": "Cooper Bowser (21) Forward - 2024-25: Named to the SoCon All-Defensive Team...Appeared in all 35 games and earned 34 starts as a sophomore while helping Furman"
+        },
+        {
+          "title": "Cooper Bowser - Furman Paladins Forward - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fplayer%2F_%2Fid%2F5176136%2Fcooper%2Dbowser&rut=0e892e01992a0b09de0cbe8fe9f924904742ca1c617698b4a6f6d7a09f2ba45d",
+          "snippet": "View the profile of Furman Paladins Forward Cooper Bowser on ESPN. Get the latest news, live stats and game highlights."
+        },
+        {
+          "title": "2025-26 Furman Paladins Men&#x27;s Roster and Stats | College Basketball at ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Ffurman%2Fmen%2F2026.html&rut=90e1940ef46ad87a54d9e2c9f01a4b15e8d8962d3d5f09691381c72cb12ec915",
+          "snippet": "Check out the detailed 2025-26 Furman Paladins Roster and Stats for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "Cooper Bowser Player Profile, Furman - RealGM",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbasketball.realgm.com%2Fplayer%2FCooper%2DBowser%2FSummary%2F207944&rut=7b9ed92a8ef6ec8e2576f7dcc3327efd7991fa5dc8ef4fc326a3d63ef07cf1c6",
+          "snippet": "Get the latest news, stats and more about Cooper Bowser on RealGM.com"
+        },
+        {
+          "title": "Cooper Bowser game by game at NCAA 2025-2026 | Scoutbasketball",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fscoutbasketball.com%2Fcompetition%2FNcaa%2F2025%2D2026%2Fplayer%2FCooper%2DBowser&rut=afcc4a99d8ba7e356603a8d5c6cac46741e9896d5c639666a8dd2865d45b74f6",
+          "snippet": "Game by game statistics for Cooper Bowser at NCAA 2025- 2026 . View detailed performance in 17 games including points, rebounds, assists and more."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Cooper Bowser - 2025-26 - Men&#x27;s Basketball - Furman University\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Ffurmanpaladins.com%2Fsports%2Fmens%2Dbasketball%2Froster%2Fcooper%2Dbowser%2F6693&rut=f378c62fa37cf9c65faff56c7a9d4b0b9689d9d08f49205217fa782ad8002bdd\",\n      \"snippet\": \"Cooper Bowser (21) Forward - 2024-25: Named to the SoCon All-Defensive Team...Appeared in all 35 games and earned 34 starts as a sophomore while helping Furman\"\n    },\n    {\n      \"title\": \"Cooper Bowser - Furman Paladins Forward - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fplayer%2F_%2Fid%2F5176136%2Fcooper%2Dbowser&rut=0e892e01992a0b09de0cbe8fe9f924904742ca1c617698b4a6f6d7a09f2ba45d\",\n      \"snippet\": \"View the profile of Furman Paladins Forward Cooper Bowser on ESPN. Get the latest news, live stats and game highlights.\"\n    },\n    {\n      \"title\": \"2025-26 Furman Paladins Men&#x27;s Roster and Stats | College Basketball at ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Ffurman%2Fmen%2F2026.html&rut=90e1940ef46ad87a54d9e2c9f01a4b15e8d8962d3d5f09691381c72cb12ec915\",\n      \"snippet\": \"Check out the detailed 2025-26 Furman Paladins Roster and Stats for College Basketball at Sports-Reference.com\"\n    },\n    {\n      \"title\": \"Cooper Bowser Player Profile, Furman - RealGM\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbasketball.realgm.com%2Fplayer%2FCooper%2DBowser%2FSummary%2F207944&rut=7b9ed92a8ef6ec8e2576f7dcc3327efd7991fa5dc8ef4fc326a3d63ef07cf1c6\",\n      \"snippet\": \"Get the latest news, stats and more about Cooper Bowser on RealGM.com\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:58.541Z",
+      "content": "Let me fetch the Furman season stats to compare with UConn."
+    },
+    {
+      "id": "r64-east-8-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:58.541Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sports-reference.com/cbb/schools/furman/men/2026.html",
+        "maxChars": 3000
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-8-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:58.751Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sports-reference.com/cbb/schools/furman/men/2026.html",
+        "text": "2025-26 Furman Paladins Men's Roster and Stats | College Basketball at Sports-Reference.com Sports Reference&#8239;&reg; Baseball Football (college) Basketball (college) Hockey Soccer Blog Stathead&#8239;&reg; Immaculate Grid&#8239;&reg; Questions or Comments? Welcome &#183; Your Account Logout Ad-Free Login Create Account MENU Players Schools Seasons Leaders Scores NCAA Tournaments Stathead Newsletter Full Site Menu Below You are here: CBB Home Page &gt; Schools &gt; Furman Paladins &gt; Men's Basketball &gt; 2025-26 Welcome &#183; Your Account Logout Ad-Free Login Create Account via Sports Logos.net About logos 2025-26 Furman Paladins Men's Roster and Stats Previous Season Record: 22-12 (10-8, 5th in Southern MBB ) Coach: Bob Richey PS/G: 76.5 (159th of 365) PA/G: 70.5 (89th of 365) SRS : -3.24 (198th of 365) SOS : -6.14 (289th of 365) ORtg: 113.4 (96th of 365) DRtg: 104.6 (120th of 365) Preseason Odds: Championship +200000 More School Info Southern Tourney Champ Become a Stathead & surf this site ad-free. 2025-26 Furman Paladins Men Menu 2025-26 Furman Stats Furman (Men) History Polls, Schedule & Results Game Log Starters More 2025-26 Furman (Men's) Pages 2025-26 Furman (Men's) Season Roster & Stats Polls, Schedule & Results Game Log Starters On this page Roster Per Game Team and Opponent Stats Total Team and Opponent Stats Per Game Totals Per 40 Minutes Per 100 Poss Advanced Full Site Menu Keyboard Shortcuts \\ to toggle sidebar navigation / to toggle search input More about this update Recent Game Results Height of bar is margin of victory &bull; Mouseover bar for details &bull; Click for box score &bull; Grouped by Month 1. Nov 3 (Neutral), Furman (0-1) Loss vs. High Point, 71-97 2. Nov 7, Furman (0-2) Loss vs. Troy, 61-64 3. Nov 10, Furman (1-2) Win vs. Columbia International, 89-59 4. Nov 14 @ Northern Iowa, Furman (1-3) Loss vs. Northern Iowa, 54-70 5. Nov 19, Furman (2-3) Win vs. Ohio Christian, 79-44 6. Nov 23, Furman (3-3) Win vs. Queens (NC), 90-79 7. Nov 27 (Neutral), Furman (4-3) Win vs. Richmond, 73-72 8. Nov 28 (Neutral), Furman (4-4) Loss vs. Illinois State, 65-72 9. Dec 3 @ Elon, Furman (5-4) Win vs. Elon, 97-88 10. Dec 6, Furman (6-4) Win vs. Harvard, 79-69 11. Dec 9, Furman (7-4) Win vs. Bob Jones University, 105-57 12. Dec 18 @ Manhattan, Furman (8-4) Win vs. Manhattan, 75-68 13. Dec 21, Furman (9-4) Win vs. Charleston Southern, 84-76 14. Dec 31, Furman (10-4) Win vs. Mercer, 74-72 15. Jan 3, Furman (10-5) Loss vs. Western Carolina, 77-80 16. Jan 7 @ Chattanooga, Furman (11-5) Win vs. Chattanooga, 78-67 17. Jan 10, Furman (12-5) Win vs. Virginia Military Institute, 69-48 18. Jan 14 @ Samford, Furman (13-5) Win vs. Samford, 77-73 19. Jan 17, Furman (13-6) Loss vs. Wofford, 70-74 20. Jan 21 @ The Citadel, Furman (13-7) Loss vs. The Citadel, 75-77 21. Jan 23 @ UNC Greensboro, Furman (14-7) Win vs. UNC Greensboro, 89-66 22. Jan 29, Furman (15-7) Win vs. Samford, 78-73 23. Feb 1, Furman (16-7) Win vs. Chattanooga, 75-70 24. Feb 4 "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sports-reference.com/cbb/schools/furman/men/2026.html\",\n    \"text\": \"2025-26 Furman Paladins Men's Roster and Stats | College Basketball at Sports-Reference.com Sports Reference&#8239;&reg; Baseball Football (college) Basketball (college) Hockey Soccer Blog Stathead&#8239;&reg; Immaculate Grid&#8239;&reg; Questions or Comments? Welcome &#183; Your Account Logout Ad-Free Login Create Account MENU Players Schools Seasons Leaders Scores NCAA Tournaments Stathead Newsletter Full Site Menu Below You are here: CBB Home Page &gt; Schools &gt; Furman Paladins &gt; Men's Basketball &gt; 2025-26 Welcome &#183; Your Account Logout Ad-Free Login Create Account via Sports Logos.net About logos 2025-26 Furman Paladins Men's Roster and Stats Previous Season Record: 22-12 (10-8, 5th in Southern MBB ) Coach: Bob Richey PS/G: 76.5 (159th of 365) PA/G: 70.5 (89th of 365) SRS : -3.24 (198th of 365) SOS : -6.14 (289th of 365) ORtg: 113.4 (96th of 365) DRtg: 104.6 (120th of 365) Preseason Odds: Championship +200000 More School Info Southern Tourney Champ Become a Stathead & surf this site ad-free. 2025-26 Furman Paladins Men Menu 2025-26 Furman Stats Furman (Men) History Polls, Schedule & Results Game Log Starters More 2025-26 Furman (Men's) Pages 2025-26 Furman (Men's) ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-8-assistant-final-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:31:29.175Z",
+      "content": "Now I have a complete picture. Let me summarize:\n\n**UConn (2-seed, 29-5):**\n- 17-3 in Big East (2nd place)\n- Ranked 6th in AP Poll\n- Points scored: 77.5 (138th)\n- Points allowed: 65.1 (11th - elite defense)\n- SRS: 22.92 (12th)\n- SOS: 10.53 (41st - tough schedule)\n- ORtg: 116.5 (54th)\n- DRtg: 97.9 (24th - elite defense)\n- Coach: Dan Hurley (defending champion from 2024)\n- Injury: Jaylin Stewart uncertain, Silas Demary Jr. in good shape\n\n**Furman (15-seed, 22-12):**\n- 10-8 in Southern Conference (5th place)\n- Won SoCon Tournament as 6-seed (upset run)\n- Points scored: 76.5 (159th)\n- Points allowed: 70.5 (89th)\n- SRS: -3.24 (198th)\n- SOS: -6.14 (289th - very weak schedule)\n- ORtg: 113.4 (96th)\n- DRtg: 104.6 (120th)\n- KenPom rank: 191\n- Torvik rank: 195\n\nThis is a massive mismatch. UConn is a top-10 caliber team by SRS (12th), while Furman is ranked 198th by SRS. The gap in strength of schedule is enormous - UConn played the 41st toughest schedule while Furman played the 289th.\n\nHistorical context: 15-seeds upset 2-seeds about 8% of the time historically (roughly 1 in 12 or 13 games). But UConn's profile - elite defense, tough schedule, defending champion pedigree - makes them a very strong 2-seed. \n\nUConn has some injury concerns, but the gap here is massive. Even with some key players hurt, UConn should be able to handle Furman relatively comfortably. The 2-seed wins about 92-94% of these matchups historically, and UConn's profile doesn't suggest vulnerability.\n\nConfidence should be high - probably around 90% or so. This is a straightforward pick for the 2-seed.\n\nBased on my analysis, I now have a complete picture of this matchup. Let me compile my findings:\n\n**Key Findings:**\n\n| Metric | UConn (2-seed) | Furman (15-seed) |\n|--------|---------------|------------------|\n| Record | 29-5 (17-3 Big East) | 22-12 (10-8 SoCon) |\n| AP Rank | 6th | Unranked |\n| SRS | 22.92 (12th) | -3.24 (198th) |\n| Strength of Schedule | 10.53 (41st) | -6.14 (289th) |\n| Defense (DRtg) | 97.9 (24th) | 104.6 (120th) |\n| KenPom Rank | Not available (~top 10) | 191 |\n\n**Injury Context:** UConn has minor concerns with Jaylin Stewart's status uncertain, but Silas Demary Jr. is in \"pretty good shape.\" Even with some depth questions, the Huskies' core remains intact.\n\n**The Case:** This is a historically massive mismatch. UConn's SRS of 22.92 ranks 12th nationally, indicating a top-tier team with elite defense (11th in points allowed, 24th in defensive rating) and proven Big East pedigree. Furman's SRS of -3.24 (198th) reflects a below-average team that benefited from a weak schedule (289th in SOS) and a hot tournament run to win the SoCon as a 6-seed. The 186-position gap in SRS and 248-position gap in schedule strength dwarf the typical 2/15 disparity. While 15-seeds pull upsets roughly 8% of the time historically, UConn's elite defensive profile and championship pedigree under Dan Hurley provide minimal vulnerability.\n\n```json\n{\n  \"pick\": {\n    \"gameId\": \"r64-east-8\",\n    \"winnerId\": \"uconn\",\n    \"confidence\": 92,\n    \"rationale\": \"UConn enters as a dominant 2-seed with an elite SRS of 22.92 (12th nationally) and the 11th-ranked defense in points allowed, having navigated the 41st-toughest schedule in the country. Furman's SRS of -3.24 (198th) and negative efficiency margin (-1.99 KenPom) against the 289th-ranked schedule reveal a team significantly overmatched at this level. While the Paladins captured the SoCon tournament as a 6-seed, the 186-position gap in SRS and massive strength-of-schedule disparity make a 15-over-2 upset virtually impossible against a U squad with championship pedigree and elite defensive metrics.\"\n  },\n  \"reasoningStep\": {\n    \"id\": 1,\n    \"title\": \"UConn vs Furman Analysis\",\n    \"summary\": \"Analyzed advanced metrics showing UConn as an elite 2-seed (12th SRS, 24th defense) against Furman's below-average profile (198th SRS, 191 KenPom). The 186-position SRS gap and massive schedule strength disparity (41st vs 289th SOS) make this a prohibitive mismatch. Minor UConn injury concerns do not meaningfully alter the calculus.\",\n    \"evidence\": \"UConn: 29-5 record, SRS 22.92 (12th), DRtg 97.9 (24th), SOS 10.53 (41st). Furman: 22-12 record, SRS -3.24 (198th), KenPom 191, SOS -6.14 (289th). Jaylin Stewart uncertain for UConn but Silas Demary Jr. in good shape.\"\n  }\n}\n```"
+    },
+    {
+      "id": "r64-east-8-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T10:31:48.918Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-east-8\",\n    \"winnerId\": \"uconn\",\n    \"confidence\": 92,\n    \"rationale\": \"UConn enters as a dominant 2-seed with an elite SRS of 22.92 ranking 12th nationally and the 24th-ranked defense, having navigated the 41st-toughest schedule while compiling a 29-5 record. Furman's SRS of -3.24 ranks 198th with a KenPom rating of 191 against the 289th-ranked schedule, revealing a team significantly overmatched at this level. While the Paladins captured the SoCon tournament championship as a 6-seed behind Cooper Bowser's heroics, the 186-position gap in SRS and massive strength-of-schedule disparity make a 15-over-2 upset virtually impossible against a UConn squad with championship pedigree under Dan Hurley.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \t\"step-1\",\n    \"title\": \"UConn vs Furman Comprehensive Analysis\",\n    \"summary\": \"Evaluated advanced metrics showing UConn as an elite 2-seed (12th SRS, 24th defense) against Furman's below-average profile (198th SRS, 191 KenPom). The 186-position SRS gap and massive schedule strength disparity (41st vs 289th SOS) with Furman's negative efficiency margin reveal a prohibitive mismatch. Minor UConn injury concerns (Jaylin Stewart uncertain) do not meaningfully alter the calculus given the structural advantages.\",\n    \"evidence\": [\"UConn: 29-5 record, SRS 22.92 (12th), DRtg 97.9 (24th), SOS 10.53 (41st), 6th AP Poll\", \"Furman: 22-12 record, SRS -3.24 (198th), KenPom rank 191, SOS -6.14 (289th), Adj EM -1.99\", \"Injury report: Jaylin Stewart (UConn) uncertain for first round, Silas Demary Jr. in good shape\", \"Historical context: 2 seeds win approximately 92% vs 15 seeds\"]\n  }\n}"
+    }
+  ]
+}

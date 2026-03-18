@@ -1,0 +1,1003 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mimo",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "r32-west-3",
+  "generatedAt": "2026-03-18T10:31:25.068Z",
+  "pick": {
+    "gameId": "r32-west-3",
+    "winnerId": "gonzaga",
+    "confidence": 0.78,
+    "rationale": "Gonzaga holds a decisive edge in overall efficiency metrics, ranking 11th in both KenPom and Torvik with a top-10 defense that should contain BYU's high-powered offense, which ranks 10th in KenPom but 88th in defense. While BYU's offensive firepower is elite, Gonzaga's defensive prowess, experience in big games, and historical dominance in this rivalry (winning the last four WCC tournament finals) provide a more reliable path to victory. The underdog's path for BYU relies on hot three-point shooting and forcing turnovers, but Gonzaga's balanced attack and superior efficiency make them the more reliable pick to advance."
+  },
+  "reasoningStep": {
+    "id": "1",
+    "title": "Investigate team ratings and matchup dynamics",
+    "summary": "Gonzaga ranks 11th in KenPom and Torvik with elite defense (9th in adjD), while BYU ranks 23rd in KenPom and 33rd in Torvik with a top-10 offense but weaker defense (88th in adjD).",
+    "evidence": "Gonzaga: 30-3 record, adjO 122.1 (30th), adjD 93.9 (9th). BYU: 23-11 record, adjO 125.5 (10th), adjD 102.3 (88th)."
+  },
+  "toolCalls": [
+    {
+      "id": "tool-0h26f5if",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "byu",
+          "gonzaga"
+        ]
+      },
+      "startedAt": "2026-03-18T10:30:15.767Z",
+      "completedAt": "2026-03-18T10:30:15.774Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "gonzaga",
+          "teamName": "Gonzaga",
+          "torvik": {
+            "rank": 11,
+            "team": "Gonzaga",
+            "conf": "WCC",
+            "record": "30-3",
+            "adjoe": 120.26205670050366,
+            "oe Rank": 37,
+            "adjde": 93.97461639541584,
+            "de Rank": 9,
+            "barthag": 0.944614406367745,
+            "rank.1": 11,
+            "proj. W": 30,
+            "Proj. L": 3,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.6273473704194238,
+            "ncsos": 0.6405298429056471,
+            "consos": 0.6095051171051526,
+            "Proj. SOS": 0.6273473704194238,
+            "Proj. Noncon SOS": 0.6405298429056471,
+            "Proj. Con SOS": 0.6095051171051526,
+            "elite SOS": 0.7496614744414817,
+            "elite noncon SOS": 0.7052976449096376,
+            "Opp OE": 113.34280525914096,
+            "Opp DE": 106.37163126659088,
+            "Opp Proj. OE": 113.34280525914096,
+            "Opp Proj DE": 106.37163126659088,
+            "Con Adj OE": 118.37430510043932,
+            "Con Adj DE": 94.74021376431766,
+            "Qual O": 122.04218722117515,
+            "Qual D": 93.2010604404997,
+            "Qual Barthag": 0.9569128842873368,
+            "Qual Games": 11,
+            "FUN": 0.0796448715567429,
+            "ConPF": 1465,
+            "ConPA": 1177,
+            "ConPoss": 1247.2875000000004,
+            "ConOE": 1.1745487708327067,
+            "ConDE": 0.9436477155427274,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 7.32069608856132,
+            "WAB Rk": 12,
+            "Fun Rk": 26,
+            "adjt": 68.9096222872532
+          },
+          "kenpom": {
+            "rank": 11,
+            "team": "Gonzaga",
+            "conf": "WCC",
+            "record": "30-3",
+            "adj_em": 28.16,
+            "adj_o": 122.1,
+            "adj_o_rank": 30,
+            "adj_d": 93.9,
+            "adj_d_rank": 9,
+            "adj_t": 68.7,
+            "adj_t_rank": 112,
+            "luck": 0.072,
+            "luck_rank": 28,
+            "sos_adj_em": 5.85,
+            "sos_adj_em_rank": 87,
+            "sos_opp_o": 113,
+            "sos_opp_o_rank": 82,
+            "sos_opp_d": 107.1,
+            "sos_opp_d_rank": 97,
+            "ncsos_adj_em": 8.27,
+            "ncsos_adj_em_rank": 26
+          }
+        },
+        {
+          "teamId": "byu",
+          "teamName": "BYU",
+          "torvik": {
+            "rank": 33,
+            "team": "BYU",
+            "conf": "B12",
+            "record": "23-11",
+            "adjoe": 124.78766507254886,
+            "oe Rank": 16,
+            "adjde": 104.28867912262888,
+            "de Rank": 88,
+            "barthag": 0.8873230440607387,
+            "rank.1": 33,
+            "proj. W": 23,
+            "Proj. L": 11,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.748834367916737,
+            "ncsos": 0.6052210827564047,
+            "consos": 0.8416495413693037,
+            "Proj. SOS": 0.748834367916737,
+            "Proj. Noncon SOS": 0.6052210827564047,
+            "Proj. Con SOS": 0.8416495413693037,
+            "elite SOS": 0.6159025438017878,
+            "elite noncon SOS": 0.737287914178802,
+            "Opp OE": 115.9634283595156,
+            "Opp DE": 101.95512787467284,
+            "Opp Proj. OE": 115.9634283595156,
+            "Opp Proj DE": 101.95512787467284,
+            "Con Adj OE": 125.05317918466297,
+            "Con Adj DE": 107.72404912671124,
+            "Qual O": 125.80517276153634,
+            "Qual D": 102.93570248854076,
+            "Qual Barthag": 0.909475213078614,
+            "Qual Games": 16,
+            "FUN": 0.0833908482027433,
+            "ConPF": 1478,
+            "ConPA": 1483,
+            "ConPoss": 1277.65,
+            "ConOE": 1.1568113333072438,
+            "ConDE": 1.160724768128987,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 4.531676518582039,
+            "WAB Rk": 22,
+            "Fun Rk": 22,
+            "adjt": 69.74869264389596
+          },
+          "kenpom": {
+            "rank": 23,
+            "team": "BYU",
+            "conf": "B12",
+            "record": "23-11",
+            "adj_em": 23.28,
+            "adj_o": 125.5,
+            "adj_o_rank": 10,
+            "adj_d": 102.3,
+            "adj_d_rank": 56,
+            "adj_t": 70,
+            "adj_t_rank": 47,
+            "luck": -0.017,
+            "luck_rank": 232,
+            "sos_adj_em": 14.26,
+            "sos_adj_em_rank": 14,
+            "sos_opp_o": 116.3,
+            "sos_opp_o_rank": 33,
+            "sos_opp_d": 102,
+            "sos_opp_d_rank": 3,
+            "ncsos_adj_em": 4.87,
+            "ncsos_adj_em_rank": 73
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-6i9fcftw",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "BYU Gonzaga March Madness 2026 injury news",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:18.847Z",
+      "completedAt": "2026-03-18T10:30:19.561Z",
+      "summary": "Returned 5 search results for \"BYU Gonzaga March Madness 2026 injury news\".",
+      "result": [
+        {
+          "title": "Gonzaga Bulldogs Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2250%2Fgonzaga%2Dbulldogs&rut=e03bb76bcc48559639b1db7dadf96fadf8f8fb7378a03c957e14250470c633a3",
+          "snippet": "Visit ESPN for Gonzaga Bulldogs live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Portland, led by injured coach, takes down No. 6 Gonzaga",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47835455%2Fportland%2Dled%2Dinjured%2Dcoach%2Dtakes%2Dno%2D6%2Dgonzaga&rut=bf97326dd57daf085837e6158ba6ac25064988171c7a6547f2968cca3f0fea90",
+          "snippet": "Portland pulled off one of the biggest upsets in school history Wednesday night, an 87-80 stunner over No. 6 Gonzaga that came just days after coach Shantay Legans tore his Achilles in practice."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained%2522&rut=cd7b4c3aeb7ed11a9c0660cf93923a7aecb073683d75e50cd366bb373e801ff2",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 schedule, sites, locations - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F46583333%2Fmens%2Dcollege%2Dbasketball%2Dmarch%2Dmadness%2D2026%2Dschedule%2Dsites%2Dlocations%2Dselection%2Dsunday&rut=3a1021503fe29b694bd56e4971398249ce28335b26a7e626ca4e49a3eda7498b",
+          "snippet": "Everything to know about the 2026 men&#x27;s NCAA tournament, from Selection Sunday to the Final Four and championship game."
+        }
+      ]
+    },
+    {
+      "id": "tool-ckn2xghq",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Gonzaga 2026 March Madness matchup preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:20.822Z",
+      "completedAt": "2026-03-18T10:30:21.608Z",
+      "summary": "Returned 5 search results for \"BYU Gonzaga 2026 March Madness matchup preview\".",
+      "result": [
+        {
+          "title": "2026 NCAA Tournament West Region bracket preview ... - CBS Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Dwest%2Dregion%2Dbracket%2Dpreview%2F&rut=3b8339dd4022e5e253af7657a8a5c9f9254e9bb0b1db6ec79c5237e0692e766d",
+          "snippet": "Breaking down the 2026 NCAA Tournament West Region with predictions, upset picks, sleeper teams, best first-round games and players to watch in March Madness ."
+        },
+        {
+          "title": "March Madness West Region Predictions, Picks & Bracket Preview: 2026 ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Dwest%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=7b231d9f9fc6603ab29cd90f17776a1e57c08d60abd55e65315e36130c44e281",
+          "snippet": "I&#x27;m breaking down my March Madness West Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament."
+        },
+        {
+          "title": "BYU March Madness Hub: Schedule, Seed, Opponent and Path to Final Four",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fbyu%2Fbasketball%2Fbyu%2Dmarch%2Dmadness%2Dhub%2Dschedule%2Dseed%2Dopponent%2Dand%2Dpath%2Dto%2Dfinal%2Dfour&rut=738612faf6c27c8103555698a405ead8ab2be6b11e542c001c426553f934d7b1",
+          "snippet": "On Sunday, the 2026 NCAA Tournament bracket was unveiled. This article will serve as the BYU March Madness hub where we will review BYU&#x27;s seed, schedule, and path to the Final Four."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "West Region 2026 March Madness Bracket Breakdown - Lineups",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lineups.com%2Fbetting%2Fwest%2Dregion%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dbreakdown%2F&rut=0c2c3efa2c53ad284834c1d39727681d70cd098591993f9b9f03f45d19b292ba",
+          "snippet": "Check out the 2026 March Madness bracket breakdown for the West Region of the NCAA Tournament with odds and analysis from Lineups.com."
+        }
+      ]
+    },
+    {
+      "id": "tool-ox2z1ngk",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.si.com/college/byu/basketball/byu-march-madness-hub-schedule-seed-opponent-and-path-to-final-four",
+        "maxChars": 1000
+      },
+      "startedAt": "2026-03-18T10:30:23.098Z",
+      "completedAt": "2026-03-18T10:30:23.644Z",
+      "summary": "Fetched https://www.si.com/college/byu/basketball/byu-march-madness-hub-schedule-seed-opponent-and-path-to-final-four and extracted 1000 characters of text.",
+      "result": {
+        "url": "https://www.si.com/college/byu/basketball/byu-march-madness-hub-schedule-seed-opponent-and-path-to-final-four",
+        "text": "BYU March Madness Hub: Schedule, Seed, Opponent and Path to Final Four Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW FOOTBALL BASKETBALL RECRUITING COUGARS IN THE PROS SI.COM SI.COM COUGARS FB SI.COM COUGARS BB FOOTBALL BASKETBALL RECRUITING COUGS IN THE PROS SI.COM FOOTBALL FOOTBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES BASKETBALL BASKETBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES More from BYU Cougars On SI RECRUITING COUGARS IN THE PROS SI.COM SI.COM COUGARS FB SI.COM COUGARS BB BYU March Madness Hub: Schedule, Seed, Opponent and Path to Final Four The Cougars are going dancing for the third time in as many years Casey Lundquist | Share on Facebook Share on X Add us as a preferred source Mar 11, 2026; Kansas City, MO, USA; BYU Cougars forward Keba Keita (13) drives to the basket around West Virginia Mountaineers center Harlan Obioha (55) during the second half at T-Mobile Center. Mandatory Credit: William Purnell-Imagn "
+      }
+    },
+    {
+      "id": "tool-k9rh7jy4",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Gonzaga 2026 head to head history",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:28.402Z",
+      "completedAt": "2026-03-18T10:30:29.181Z",
+      "summary": "Returned 5 search results for \"BYU Gonzaga 2026 head to head history\".",
+      "result": [
+        {
+          "title": "BYU-Gonzaga men&#x27;s basketball rivalry - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBYU%25E2%2580%2593Gonzaga_men%2527s_basketball_rivalry&rut=70795442c99e0cb8052a94c3e995293efc0a5db583831ab888f6a14e19c82ae2",
+          "snippet": "The BYU-Gonzaga men&#x27;s basketball rivalry is a college basketball rivalry [1][2][3] between the Gonzaga Bulldogs team of Gonzaga University in Spokane, Washington and the BYU Cougars team of Brigham Young University in Provo, Utah. BYU has played Gonzaga in the West Coast Conference tournament final in 2014, 2015, 2018, and 2021 with Gonzaga winning all four of these matchups. Gonzaga leads ..."
+        },
+        {
+          "title": "Gonzaga Men&#x27;s Basketball Head-to-Head Results | College Basketball at ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fgonzaga%2Fmen%2Fhead%2Dto%2Dhead.html&rut=a3e71056d8f0c0595ebb5f2b83d96e419160425aac5e0c0a003bbd8deb431f4f",
+          "snippet": "Check out Gonzaga&#x27;s College Head-to-Head Results and More About College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "Looking back on the history of BYU vs. Gonzaga",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Funiverse.byu.edu%2F2022%2F01%2F12%2Flooking%2Dback%2Don%2Dthe%2Dhistory%2Dof%2Dbyu%2Dvs%2Dgonzaga%2F&rut=468abbf188e2bd73c6bdfc9be89b49046a28f71052e5feada0157c5292759d7b",
+          "snippet": "BYU&#x27;s most recent win against Gonzaga was in February 2020 when the Cougars beat the No. 2-ranked Bulldogs 91-78. It was Mark Pope&#x27;s first season as head coach and the win broke a six-game ..."
+        },
+        {
+          "title": "BYU Basketball NCAA Tournament history: All 33 appearances",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.ksl.com%2Fncaa%2Fbyu%2Dbasketball%2Fncaa%2Dhistory%2D2026%2F572774&rut=ff4de12e7d99a010ae8c26de26c73bd7fe16b68cc3afbdba6dc34e4bf13ebd95",
+          "snippet": "The bid in the 2026 NCAA Tournament marks the 33rd appearance for BYU Basketball in March Madness. Looking back at their history ."
+        },
+        {
+          "title": "Gonzaga, BYU Headline Early 2026 NCAA Projections | Perigon",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.perigon.io%2Fnews%2Fsports%2F2025%2F04%2F29%2Fgonzaga%2Dprojected%2D6%2Dseed%2Dearly%2D2026%2Dncaa%2Dbracketology&rut=dbecd0bfdad62dd6b5b8a7b03ea4279cd7dac3e239f27fbd65ff89971e36c87d",
+          "snippet": "BYU is attracting major preseason attention, projected as a No. 2 seed with the potential for back- to -back second-weekend NCAA Tournament appearances for the first time in program history . Saint Mary&#x27;s, ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-4jzxpzq4",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://en.wikipedia.org/wiki/BYU%E2%80%93Gonzaga_men%27s_basketball_rivalry",
+        "maxChars": 1000
+      },
+      "startedAt": "2026-03-18T10:30:43.787Z",
+      "completedAt": "2026-03-18T10:30:44.245Z",
+      "summary": "Fetched https://en.wikipedia.org/wiki/BYU%E2%80%93Gonzaga_men%27s_basketball_rivalry and extracted 1000 characters of text.",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/BYU%E2%80%93Gonzaga_men%27s_basketball_rivalry",
+        "text": "BYU–Gonzaga men's basketball rivalry - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide (Top) 1 Series overview Toggle Series overview subsection 1.1 First meetings 1.2 Conference foes 2 Rival Accomplishments 3 Game results 4 References Toggle the table of contents BYU–Gonzaga men's basketball rivalry Add languages Add links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Print/export Download as PDF Printable version In other projects Wikidata item Appearance move to sidebar hide From Wikipedia, "
+      }
+    },
+    {
+      "id": "tool-9ixyvprg",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Gonzaga 2026 injury update March Madness",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:30:55.834Z",
+      "completedAt": "2026-03-18T10:30:56.903Z",
+      "summary": "Returned 5 search results for \"BYU Gonzaga 2026 injury update March Madness\".",
+      "result": [
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed",
+          "snippet": "The Athletic has live coverage of the First Four from 2026 Men&#x27;s March Madness . Roster attrition is a factor during the postseason in any sport."
+        },
+        {
+          "title": "BYU Cougars Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fbyu%2Dcougars%2Finjuries&rut=214526f7d4f61d008f2b05639ea1fa94cd04f9a016fec7170424aa028edfeac3",
+          "snippet": "Stay In the Know: Check Out BYU Cougars Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "Gonzaga Bulldogs Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fgonzaga%2Dbulldogs%2Finjuries&rut=8dc2d05238ef47d652dbbb346306778d3e22ed672667162838dbb9a0a88526e6",
+          "snippet": "Stay In the Know: Check Out Gonzaga Bulldogs Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 18, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=439478153c94c35107ea9111a6450bb7416925ca3dee32f7d786dbf831a93518",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        }
+      ]
+    },
+    {
+      "id": "tool-tvlm6g9g",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 1000
+      },
+      "startedAt": "2026-03-18T10:31:03.046Z",
+      "completedAt": "2026-03-18T10:31:03.225Z",
+      "summary": "Fetched https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/ and extracted 1000 characters of text.",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pe"
+      }
+    },
+    {
+      "id": "tool-nmziczn3",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Gonzaga 2026 West Region Round of 32 preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:31:11.703Z",
+      "completedAt": "2026-03-18T10:31:12.544Z",
+      "summary": "Returned 5 search results for \"BYU Gonzaga 2026 West Region Round of 32 preview\".",
+      "result": [
+        {
+          "title": "2026 NCAA Tournament West Region bracket preview ... - CBS Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Dwest%2Dregion%2Dbracket%2Dpreview%2F&rut=3b8339dd4022e5e253af7657a8a5c9f9254e9bb0b1db6ec79c5237e0692e766d",
+          "snippet": "Breaking down the 2026 NCAA Tournament West Region with predictions, upset picks, sleeper teams, best first- round games and players to watch in March Madness."
+        },
+        {
+          "title": "West Preview: Arizona Is Primed to Get Back to the Final Four - Hoops HQ",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hoopshq.com%2Fbracketology%2Fncaa%2Dwest%2Dregional%2Danalysis%2D2026&rut=6c721846cdc6ed06b3b5786953f939390e49feb9dc6c4d46333604651aec57fc",
+          "snippet": "Gonzaga finds itself with a couple of intriguing scenarios, depending on how the bracket works out. The obvious potential matchup is in the Round of 32 against BYU , a former WCC rival."
+        },
+        {
+          "title": "NCAA Tournament by the odds: Vegas picks and preview of the West Region",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Flasvegassun.com%2Fnews%2F2026%2Fmar%2F17%2Fncaa%2Dtournament%2Dodds%2Dvegas%2Dwest%2Dregion%2Dpicks%2Dats%2F&rut=412080cc1e530345ad5b43b80dcec49182404aad1f8ce660afcc88857889c4c1",
+          "snippet": "BYU hasn&#x27;t maintained as high of standing as consistently as its West Region peers, but, fittingly, it owns the record for most NCAA Tournament appearances without a Final Four berth at 32 all-time."
+        },
+        {
+          "title": "March Madness West Region Preview: Final Four Picks And Upsets | OutKick",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.outkick.com%2Fsports%2F2026%2Dncaa%2Dtournament%2Dbreakdown%2Dwest%2Dregion%2Dbest%2Dbets%2Dsleepers%2Dbusts&rut=64f91feedb898d00ea894d0a2833dd2371af2d7796cdf3562f3ff42e0667c674",
+          "snippet": "A guide to the 2026 West bracket, covering Arizona&#x27;s title case, Purdue&#x27;s path, the NC State sleeper angle, and the matchups and stars that could shape March Madness."
+        },
+        {
+          "title": "2026 Anonymously Through The Brackets: West Region",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.anonymouseagle.com%2Fanonymously%2Dthrough%2Dthe%2Dbrackets%2F36112%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dwest%2Dregion%2Dpreview%2Darizona%2Dpurdue%2Dgonzaga%2Dhigh%2Dpoint%2Ddybantsa%2Dacuff%2Djohnson&rut=98e9e5507f1254638ee77accda6d5c9767f1c6985dfd10cac587c4625c0af3e1",
+          "snippet": "2026 Anonymously Through The Brackets: West Region Y&#x27;know, there&#x27;s actually a lot of Western teams in the West Region this year. Arizona, Gonzaga , BYU , Hawaii….."
+        }
+      ]
+    },
+    {
+      "id": "tool-xf7j2u8k",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.hoopshq.com/bracketology/ncaa-west-regional-analysis-2026",
+        "maxChars": 1000
+      },
+      "startedAt": "2026-03-18T10:31:19.709Z",
+      "completedAt": "2026-03-18T10:31:19.807Z",
+      "summary": "Fetched https://www.hoopshq.com/bracketology/ncaa-west-regional-analysis-2026 and extracted 1000 characters of text.",
+      "result": {
+        "url": "https://www.hoopshq.com/bracketology/ncaa-west-regional-analysis-2026",
+        "text": "West Preview: Arizona Is Primed to Get Back to the Final Four - Hoops HQ HoopsHQ Seth Davis Conferences ACC Big East Big Ten Big 12 SEC Mid Majors Women&#039;s Bracketology & Bubble Watch Rankings Login Subscribe Your All-Access Pass to College Basketball HoopsHQ Login Subscribe HoopsHQ Seth Davis Conferences ACC Big East Big Ten Big 12 SEC Mid Majors Women&#039;s Rankings Transfer portal Recruiting Betting & Picks Bracketology & Bubble Watch NBA Draft News Long Reads Advertise Terms & Conditions Privacy Policy Bracketology NCAA Tournament 2026 West Region Preview: Arizona Looks Final Four Ready The Wildcats haven’t been past the Sweet Sixteen since 2014-15 and haven’t been to the Final Four since 2000-01. Is this the year that changes? Tristan Freeman 0 Gift This Article Published: March 16, 2026 1:36 am EDT Big 12 Player of the Year Jaden Bradley celebrating Arizona&#039;s conference tournament championship Getty Images The 2026 NCAA Tournament bracket has arrived, and here’s a break"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r32-west-3-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T10:30:13.383Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r32-west-3\nCurrent game label: West Round of 32 3\nRound: Round of 32\nResolved teams: BYU (byu) vs Gonzaga (gonzaga)\nPrior committed picks: 42"
+    },
+    {
+      "id": "r32-west-3-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T10:30:13.383Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r32-west-3\",\n      \"round\": \"Round of 32\",\n      \"region\": \"West\",\n      \"label\": \"West Round of 32 3\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-west-5\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-west-6\"\n      }\n    },\n    \"slotAName\": \"BYU\",\n    \"slotBName\": \"Gonzaga\",\n    \"slotATeamId\": \"byu\",\n    \"slotBTeamId\": \"gonzaga\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Texas holds a clear edge in advanced metrics, ranking 37th in KenPom and 45th in Torvik compared to NC State's unranked status, and they just defeated the Wolfpack 68-66 in a tight First Four game where Tramon Mark hit a game-winning jumper. While NC State showed resilience and kept the game close, Texas's superior offensive efficiency and proven ability to execute in clutch moments give them the advantage in this rematch. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Texas's experience and recent head-to-head win make them the more reliable pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"SMU holds a significant edge in advanced metrics, ranking 42nd in KenPom and Torvik compared to Miami (OH)'s 87th-93rd range, with a stronger adjusted offensive efficiency (123 vs. 116.8) that should exploit the RedHawks' weaker defense. While Miami (OH) boasts an impressive 31-1 record, their competition level in the MAC is inferior, and SMU's experience in the ACC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but SMU's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"howard\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Howard enters this First Four matchup with a recent head-to-head victory over UMBC, having won 86-83 in the 2026 tournament, which demonstrates their ability to execute in clutch moments. While UMBC holds a slight edge in raw offensive efficiency metrics, Howard's balanced attack and superior defensive rebounding proved decisive in their previous encounter. The underdog's path relies on hot three-point shooting and forcing turnovers, but Howard's proven resilience and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Lehigh holds a slight edge in advanced metrics, ranking 284th in KenPom compared to Prairie View A&M's 291st, with a marginally better adjusted offensive efficiency that should exploit the Panthers' weaker defense. While Prairie View A&M has a balanced record, Lehigh's recent Patriot League championship demonstrates clutch performance and tournament readiness. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Lehigh's proven form and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Duke is the overwhelming favorite as the tournament's top-ranked team in both KenPom and Torvik, boasting a 31-2 record and elite efficiency on both ends of the floor. Siena, the MAAC champion, faces a massive talent gap, ranking 187th in Torvik and 192nd in KenPom, with no credible path to exploit Duke's weaknesses. While Siena's recent form and championship experience provide some intangible value, Duke's superior size, athleticism, and defensive prowess make this a near-certain outcome.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.68,\n        \"rationale\": \"TCU holds a clear edge in advanced metrics, ranking 43rd in KenPom and 48th in Torvik with a strong defensive efficiency (adjde 99.6) that should disrupt Ohio State's offense. While Ohio State is a traditional power, the lack of available ratings suggests they may be unranked or lower-tier this season, making their path to victory reliant on offensive execution against a disciplined Big 12 defense. TCU's experience in a tougher conference and proven defensive prowess give them the advantage in this matchup.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.82,\n        \"rationale\": \"St. John's holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 20th in KenPom and 18th in Torvik compared to Northern Iowa's 71st and 70th, respectively. Their elite defense (adjde 95.1) should effectively contain Northern Iowa's average offense (adjoe 110.1), while their own potent offense can exploit the Panthers' defense. While Northern Iowa has a credible path through disciplined play and rebounding, St. John's superior talent and efficiency make them the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Kansas is a top-25 team in both KenPom and Torvik with an elite defense ranked 10th in adjusted defensive efficiency, while California Baptist lacks any available advanced metrics, indicating they are a low-major automatic qualifier with a significant talent gap. The Jayhawks' experience in the Big 12 and proven ability to dominate defensively make them the overwhelming favorite, and the underdog's only path would require a perfect shooting night and Kansas having an off game, which is highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Louisville holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 18th in KenPom and 16th in Torvik compared to South Florida's 50th in both, with a significantly stronger adjusted offensive efficiency (124.1 vs. 117.7) that should exploit the Bulls' average defense. While South Florida has a solid 24-8 record and a credible path through disciplined play and rebounding, Louisville's superior talent, experience in the ACC, and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's path would require a perfect shooting night and Louisville having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State, a 3-seed from the Big Ten, holds a significant talent and experience advantage over 14-seed North Dakota State, a Summit League automatic qualifier. While specific advanced metrics are unavailable, the Spartans' conference strength and historical tournament pedigree provide a clear edge. North Dakota State's path relies on perimeter shooting and forcing turnovers, but Michigan State's disciplined defense and superior size should control the game. The underdog's upset potential is limited without a major shooting night from the Bison and a poor performance from the Spartans.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.78,\n        \"rationale\": \"UCLA holds a clear edge in advanced metrics, ranking 24th in Torvik and 27th in KenPom compared to UCF's 58th and 54th, with a stronger adjusted offensive efficiency and a defense that should contain the Knights' attack. While UCF has shown resilience in close games and plays in the tough Big 12, UCLA's superior talent, experience, and recent form—including a dominant sweep of USC—make them the more reliable pick. The underdog's path relies on hot three-point shooting and forcing turnovers, but UCLA's balanced attack and defensive prowess should control the tempo and secure the win.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.92,\n        \"rationale\": \"UConn is a top-tier program with a significant talent and efficiency advantage over Furman, which ranks outside the top 190 in both KenPom and Torvik metrics. While Furman has a credible upset path through disciplined play and three-point shooting, UConn's elite defense, physical frontcourt, and tournament experience make them the overwhelming favorite. The Huskies' ability to control the tempo and dominate the paint should neutralize Furman's strengths and secure a comfortable win.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while LIU, a 234th-ranked NEC champion, lacks the offensive firepower to compete. The Wildcats' top-10 adjusted offense and defense should overwhelm LIU's average attack, and there are no significant injury concerns for Arizona. Although LIU has momentum from its conference title, the talent gap is too wide for a credible upset path.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Villanova holds a clear advantage in advanced metrics, ranking 33rd in KenPom and 36th in Torvik with a balanced offensive and defensive efficiency that should exploit Utah State's lack of available ratings, indicating they are likely a lower-tier automatic qualifier. While Utah State's path relies on disciplined play and perimeter shooting, Villanova's experience in the Big East and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Villanova having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Wisconsin holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 21st in Torvik and 22nd in KenPom compared to High Point's 93rd and 92nd, with a top-11 adjusted offense that should overwhelm the Panthers' average defense. While High Point boasts a strong 30-4 record, their competition level in the Big South is inferior, and Wisconsin's experience in the Big Ten provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Wisconsin's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Arkansas holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 17th in KenPom and 20th in Torvik with a top-5 adjusted offense that should overwhelm Hawai'i, which lacks any available advanced ratings and is likely a low-major automatic qualifier. While Hawai'i's path relies on disciplined play and perimeter shooting, Arkansas's experience in the SEC and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Arkansas having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"BYU holds a clear edge in advanced metrics, ranking 23rd in KenPom and 33rd in Torvik with a top-10 adjusted offense that should exploit Texas's 125th-ranked defense. While Texas has a strong offense, their defensive struggles and a weaker 18-14 record suggest inconsistency, whereas BYU's 23-11 record and recent form in the Big 12 provide stability. The underdog's path relies on Texas's perimeter shooting and forcing turnovers, but BYU's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Gonzaga enters as a dominant 3-seed with elite efficiency metrics, ranking 11th in both KenPom and Torvik, while Kennesaw State lacks any available advanced ratings, indicating they are a low-major automatic qualifier with a significant talent gap. The Bulldogs' top-10 adjusted defense and potent offense should overwhelm the Owls, and there are no significant injury concerns for Gonzaga. Although Kennesaw State has momentum from its conference title, the talent gap is too wide for a credible upset path, making Gonzaga the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Miami (FL) holds a clear edge in advanced metrics, ranking 30th in KenPom and 35th in Torvik compared to Missouri's 52nd and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Tigers' attack. While Missouri plays in the tougher SEC, Miami's superior efficiency, balanced attack, and recent form in the ACC provide a more reliable path to victory. The underdog's upset potential is limited without a major shooting night from Missouri and a poor performance from Miami, which is unlikely given the metrics and matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team nationally with elite offensive efficiency (ranked 1st in Torvik offensive rating) and a strong defense, while Queens ranks outside the top 190 and has a significant talent gap as a lower-major automatic qualifier. The Boilermakers' experience in the Big Ten and proven ability to dominate physically should overwhelm Queens' average attack, and there are no reported injury concerns for Purdue. Although Queens has momentum from its conference title, the matchup dynamics and efficiency metrics make a credible upset path highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Florida is a top-5 team nationally with elite efficiency on both ends of the floor, ranking 4th in KenPom and Torvik, while Lehigh, a 284th-ranked Patriot League team, lacks the offensive firepower to compete. The Gators' top-10 adjusted offense and top-5 defense should overwhelm Lehigh's average attack, and there are no significant injury concerns for Florida. Although Lehigh has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Florida the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Iowa holds a slight edge in both offensive and defensive efficiency metrics, ranking 25th in KenPom and 26th in Torvik compared to Clemson's 36th and 29th, with a top-30 adjusted offense that can exploit Clemson's average attack. While Clemson's defense is solid, Iowa's superior offensive firepower and experience in the Big Ten provide a more reliable path to victory in a tight 8/9 matchup. The underdog's path relies on Clemson's defense forcing turnovers and winning the rebounding battle, but Iowa's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Vanderbilt holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 10th in Torvik and 12th in KenPom with a top-6 adjusted offense that should overwhelm McNeese's 91st-ranked attack. While McNeese boasts a strong 28-5 record, their competition level in the Southland Conference is inferior, and Vanderbilt's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Vanderbilt's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Nebraska, a 4-seed from the Big Ten, holds a decisive advantage over 13-seed Troy, ranking 14th in KenPom and 19th in Torvik with a top-7 adjusted defense that should stifle Troy's average offense. While Troy has Sun Belt championship momentum, the talent and efficiency gap is substantial, and Nebraska's recent form—including a 26-6 record and strong defensive metrics—makes them the reliable pick. The underdog's path would require a perfect shooting night and Nebraska having an off game, which is unlikely given the matchup dynamics and prior picks favoring higher-seeded teams in the South region.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.85,\n        \"rationale\": \"North Carolina holds a clear edge in advanced metrics, ranking 27th in Torvik and 29th in KenPom compared to VCU's 51st and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Rams' attack. While VCU has a solid 26-7 record and a credible path through disciplined play and forcing turnovers, North Carolina's superior talent, experience in the ACC, and recent form—including a win over Duke—make them the more reliable pick. The underdog's upset potential is limited without a major shooting night from VCU and a poor performance from the Tar Heels, which is unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Illinois is a top-10 team nationally with elite offensive efficiency, ranking 1st in KenPom adjusted offensive efficiency and 2nd in Torvik offensive rating, while Penn ranks outside the top 150 in both metrics. The Illini's top-25 defense should contain Penn's average attack, and there are no reported injury concerns for Illinois. Although Penn has Ivy League championship experience, the talent and efficiency gap is too wide for a credible upset path, making Illinois the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Saint Mary's holds a slight edge in both offensive and defensive efficiency metrics, ranking 24th in KenPom and 25th in Torvik compared to Texas A&M's 39th in both, with a superior adjusted defensive efficiency that should contain the Aggies' attack. While Texas A&M plays in the tougher SEC, Saint Mary's disciplined style, experience in the WCC, and recent form—including a 27-5 record—provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on Texas A&M's perimeter shooting and forcing turnovers, but Saint Mary's balanced attack and defensive prowess make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Houston is a top-5 team nationally with elite defensive efficiency (4th in KenPom adjD) and a potent offense, while Idaho ranks outside the top 130 and lacks the firepower to compete. The Cougars' experience in the Big 12 and recent form—including a 28-5 record—make them the overwhelming favorite, and there are no reported injury concerns. Idaho's only path would require a perfect shooting night and Houston having an off game, which is highly unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Michigan enters as a dominant 1-seed with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Howard, a 206th-ranked MEAC team, lacks the offensive firepower to compete. The Wolverines' top-2 offense and defense should overwhelm the Bison, and there are no significant injury concerns for Michigan. Although Howard has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Michigan the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Georgia holds a slight edge in advanced metrics, ranking 31st in KenPom and 37th in Torvik compared to Saint Louis's 41st and 44th, with a stronger adjusted offensive efficiency that should exploit the Billikens' average defense. While Saint Louis boasts an impressive 28-5 record, their competition in the A10 is inferior to the SEC's rigor, and Georgia's recent form in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Georgia's balanced attack and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Texas Tech holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 12th in Torvik and 19th in KenPom compared to Akron's 68th and 64th, with a top-10 adjusted offense that should overwhelm the Zips' average defense. While Akron boasts a strong 28-5 record, their competition in the MAC is inferior to the Big 12's rigor, and Texas Tech's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Texas Tech's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Alabama holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 16th in KenPom and 17th in Torvik with a top-3 adjusted offense that should overwhelm Hofstra's 87th-ranked defense. While Hofstra has a solid 24-10 record and CAA championship momentum, their competition level is inferior to the SEC's rigor, and Alabama's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Alabama's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Tennessee holds a decisive edge in overall team quality, ranking 15th in both KenPom and Torvik with a top-15 defense that should disrupt SMU's offense, which has shown recent vulnerability with a late-season slump and an injury to key guard BJ Edwards. While SMU's offense is potent on paper, their defensive rating is significantly weaker (95th in Torvik), and Tennessee's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on SMU's shooting and forcing turnovers, but Tennessee's disciplined defense and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-6\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-7\",\n        \"winnerId\": \"kentucky\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-8\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Iowa State enters as a 2-seed from the Big 12 with a proven track record under coach T.J. Otzelberger, having reached the Sweet 16 twice recently and earning a high seed due to strong conference play and defensive identity. Tennessee State, while riding momentum from an OVC championship and a 23-9 record, faces a significant talent and efficiency gap against a Power 5 opponent that regularly competes at a high level. The Tigers' path relies on hot three-point shooting and forcing turnovers, but Iowa State's disciplined defense, superior rebounding, and experience in high-stakes games make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Duke remains the superior team by a wide margin in efficiency metrics, ranking 1st nationally in both KenPom and Torvik, but the loss of starting point guard Caleb Foster to a foot fracture introduces meaningful uncertainty and could disrupt their offensive rhythm. TCU's defense is solid (30th in Torvik adjD) and could exploit Duke's backcourt vulnerability, but the Horned Frogs' offense is only 83rd in efficiency, making it difficult to fully capitalize. Ultimately, Duke's elite defense, depth, and talent advantage should still prevail, but the injury lowers confidence from the near-certain level of the first round.\"\n      },\n      {\n        \"gameId\": \"r32-east-2\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.68,\n        \"rationale\": \"St. John's holds a slight edge in overall efficiency metrics, ranking 18th in Torvik and 20th in KenPom compared to Kansas's 22nd and 21st, with a more balanced offensive attack and a defense that has proven elite all season. While Kansas boasts a top-10 adjusted defense, their offense is less potent (56th-57th in efficiency) and they have shown vulnerability in close games against top competition, whereas St. John's has won 27 games and the Big East title under Rick Pitino. The underdog's path for Kansas relies on their defense forcing turnovers and winning the rebounding battle, but St. John's superior form, experience in a tougher conference, and recent championship pedigree make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-east-3\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Louisville holds a clear edge in advanced metrics, ranking 18th in KenPom and 16th in Torvik with a top-20 offense and defense, while Michigan State's ratings are unavailable, suggesting they may be lower-tier this season. The Cardinals' recent form, including a 23-10 record and strong ACC play, provides a reliable path to victory, whereas Michigan State's path relies on tournament experience and defensive grit but lacks the statistical backing to overcome Louisville's efficiency. The underdog's upset potential is limited without a major shooting night from the Spartans and a poor performance from Louisville, which is unlikely given the matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r32-east-4\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.65,\n        \"rationale\": \"UCLA holds a clear edge in available advanced metrics, ranking 24th in Torvik and 27th in KenPom with a top-20 offense and solid defense, while UConn's ratings are unavailable, suggesting they may be lower-tier this season. The Bruins' recent form, including a strong finish to the Big Ten schedule and a first-round win over UCF, provides momentum and proven tournament readiness. UConn's path relies on their championship pedigree and defensive grit, but without statistical backing or clear health updates, UCLA's efficiency and balanced attack make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while Villanova ranks 33rd-36th, creating a significant talent gap. The Wildcats' top-10 adjusted offense and defense should overwhelm Villanova's balanced but less potent attack, and there are no reported injury concerns for either side. Villanova's path relies on disciplined play and perimeter shooting, but Arizona's superior efficiency, depth, and recent form—including a 31-2 record and wins over top teams—make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-2\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Arkansas holds a slight edge in overall efficiency metrics, ranking 17th in KenPom and 20th in Torvik compared to Wisconsin's 22nd and 21st, with a top-5 adjusted offense that can exploit the Badgers' defense. While Wisconsin's offense is potent, Arkansas's experience in the tougher SEC and superior defensive rebounding provide a more reliable path to victory in this neutral-site matchup. The underdog's path for Wisconsin relies on hot three-point shooting and forcing turnovers, but Arkansas's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-midwest-3\",\n      \"winnerId\": \"texas-tech\",\n      \"confidence\": 0.85,\n      \"rationale\": \"Texas Tech holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 12th in Torvik and 19th in KenPom compared to Akron's 68th and 64th, with a top-10 adjusted offense that should overwhelm the Zips' average defense. While Akron boasts a strong 28-5 record, their competition in the MAC is inferior to the Big 12's rigor, and Texas Tech's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Texas Tech's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-4\",\n      \"winnerId\": \"alabama\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Alabama holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 16th in KenPom and 17th in Torvik with a top-3 adjusted offense that should overwhelm Hofstra's 87th-ranked defense. While Hofstra has a solid 24-10 record and CAA championship momentum, their competition level is inferior to the SEC's rigor, and Alabama's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Alabama's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-5\",\n      \"winnerId\": \"tennessee\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Tennessee holds a decisive edge in overall team quality, ranking 15th in both KenPom and Torvik with a top-15 defense that should disrupt SMU's offense, which has shown recent vulnerability with a late-season slump and an injury to key guard BJ Edwards. While SMU's offense is potent on paper, their defensive rating is significantly weaker (95th in Torvik), and Tennessee's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on SMU's shooting and forcing turnovers, but Tennessee's disciplined defense and superior efficiency metrics make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-6\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-7\",\n      \"winnerId\": \"kentucky\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-8\",\n      \"winnerId\": \"iowa-state\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Iowa State enters as a 2-seed from the Big 12 with a proven track record under coach T.J. Otzelberger, having reached the Sweet 16 twice recently and earning a high seed due to strong conference play and defensive identity. Tennessee State, while riding momentum from an OVC championship and a 23-9 record, faces a significant talent and efficiency gap against a Power 5 opponent that regularly competes at a high level. The Tigers' path relies on hot three-point shooting and forcing turnovers, but Iowa State's disciplined defense, superior rebounding, and experience in high-stakes games make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.72,\n      \"rationale\": \"Duke remains the superior team by a wide margin in efficiency metrics, ranking 1st nationally in both KenPom and Torvik, but the loss of starting point guard Caleb Foster to a foot fracture introduces meaningful uncertainty and could disrupt their offensive rhythm. TCU's defense is solid (30th in Torvik adjD) and could exploit Duke's backcourt vulnerability, but the Horned Frogs' offense is only 83rd in efficiency, making it difficult to fully capitalize. Ultimately, Duke's elite defense, depth, and talent advantage should still prevail, but the injury lowers confidence from the near-certain level of the first round.\"\n    },\n    {\n      \"gameId\": \"r32-east-2\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 0.68,\n      \"rationale\": \"St. John's holds a slight edge in overall efficiency metrics, ranking 18th in Torvik and 20th in KenPom compared to Kansas's 22nd and 21st, with a more balanced offensive attack and a defense that has proven elite all season. While Kansas boasts a top-10 adjusted defense, their offense is less potent (56th-57th in efficiency) and they have shown vulnerability in close games against top competition, whereas St. John's has won 27 games and the Big East title under Rick Pitino. The underdog's path for Kansas relies on their defense forcing turnovers and winning the rebounding battle, but St. John's superior form, experience in a tougher conference, and recent championship pedigree make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-east-3\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.75,\n      \"rationale\": \"Louisville holds a clear edge in advanced metrics, ranking 18th in KenPom and 16th in Torvik with a top-20 offense and defense, while Michigan State's ratings are unavailable, suggesting they may be lower-tier this season. The Cardinals' recent form, including a 23-10 record and strong ACC play, provides a reliable path to victory, whereas Michigan State's path relies on tournament experience and defensive grit but lacks the statistical backing to overcome Louisville's efficiency. The underdog's upset potential is limited without a major shooting night from the Spartans and a poor performance from Louisville, which is unlikely given the matchup dynamics.\"\n    },\n    {\n      \"gameId\": \"r32-east-4\",\n      \"winnerId\": \"ucla\",\n      \"confidence\": 0.65,\n      \"rationale\": \"UCLA holds a clear edge in available advanced metrics, ranking 24th in Torvik and 27th in KenPom with a top-20 offense and solid defense, while UConn's ratings are unavailable, suggesting they may be lower-tier this season. The Bruins' recent form, including a strong finish to the Big Ten schedule and a first-round win over UCF, provides momentum and proven tournament readiness. UConn's path relies on their championship pedigree and defensive grit, but without statistical backing or clear health updates, UCLA's efficiency and balanced attack make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.88,\n      \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while Villanova ranks 33rd-36th, creating a significant talent gap. The Wildcats' top-10 adjusted offense and defense should overwhelm Villanova's balanced but less potent attack, and there are no reported injury concerns for either side. Villanova's path relies on disciplined play and perimeter shooting, but Arizona's superior efficiency, depth, and recent form—including a 31-2 record and wins over top teams—make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-west-2\",\n      \"winnerId\": \"arkansas\",\n      \"confidence\": 0.72,\n      \"rationale\": \"Arkansas holds a slight edge in overall efficiency metrics, ranking 17th in KenPom and 20th in Torvik compared to Wisconsin's 22nd and 21st, with a top-5 adjusted offense that can exploit the Badgers' defense. While Wisconsin's offense is potent, Arkansas's experience in the tougher SEC and superior defensive rebounding provide a more reliable path to victory in this neutral-site matchup. The underdog's path for Wisconsin relies on hot three-point shooting and forcing turnovers, but Arkansas's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:15.767Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:15.767Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "byu",
+          "gonzaga"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:15.774Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "gonzaga",
+          "teamName": "Gonzaga",
+          "torvik": {
+            "rank": 11,
+            "team": "Gonzaga",
+            "conf": "WCC",
+            "record": "30-3",
+            "adjoe": 120.26205670050366,
+            "oe Rank": 37,
+            "adjde": 93.97461639541584,
+            "de Rank": 9,
+            "barthag": 0.944614406367745,
+            "rank.1": 11,
+            "proj. W": 30,
+            "Proj. L": 3,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.6273473704194238,
+            "ncsos": 0.6405298429056471,
+            "consos": 0.6095051171051526,
+            "Proj. SOS": 0.6273473704194238,
+            "Proj. Noncon SOS": 0.6405298429056471,
+            "Proj. Con SOS": 0.6095051171051526,
+            "elite SOS": 0.7496614744414817,
+            "elite noncon SOS": 0.7052976449096376,
+            "Opp OE": 113.34280525914096,
+            "Opp DE": 106.37163126659088,
+            "Opp Proj. OE": 113.34280525914096,
+            "Opp Proj DE": 106.37163126659088,
+            "Con Adj OE": 118.37430510043932,
+            "Con Adj DE": 94.74021376431766,
+            "Qual O": 122.04218722117515,
+            "Qual D": 93.2010604404997,
+            "Qual Barthag": 0.9569128842873368,
+            "Qual Games": 11,
+            "FUN": 0.0796448715567429,
+            "ConPF": 1465,
+            "ConPA": 1177,
+            "ConPoss": 1247.2875000000004,
+            "ConOE": 1.1745487708327067,
+            "ConDE": 0.9436477155427274,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 7.32069608856132,
+            "WAB Rk": 12,
+            "Fun Rk": 26,
+            "adjt": 68.9096222872532
+          },
+          "kenpom": {
+            "rank": 11,
+            "team": "Gonzaga",
+            "conf": "WCC",
+            "record": "30-3",
+            "adj_em": 28.16,
+            "adj_o": 122.1,
+            "adj_o_rank": 30,
+            "adj_d": 93.9,
+            "adj_d_rank": 9,
+            "adj_t": 68.7,
+            "adj_t_rank": 112,
+            "luck": 0.072,
+            "luck_rank": 28,
+            "sos_adj_em": 5.85,
+            "sos_adj_em_rank": 87,
+            "sos_opp_o": 113,
+            "sos_opp_o_rank": 82,
+            "sos_opp_d": 107.1,
+            "sos_opp_d_rank": 97,
+            "ncsos_adj_em": 8.27,
+            "ncsos_adj_em_rank": 26
+          }
+        },
+        {
+          "teamId": "byu",
+          "teamName": "BYU",
+          "torvik": {
+            "rank": 33,
+            "team": "BYU",
+            "conf": "B12",
+            "record": "23-11",
+            "adjoe": 124.78766507254886,
+            "oe Rank": 16,
+            "adjde": 104.28867912262888,
+            "de Rank": 88,
+            "barthag": 0.8873230440607387,
+            "rank.1": 33,
+            "proj. W": 23,
+            "Proj. L": 11,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.748834367916737,
+            "ncsos": 0.6052210827564047,
+            "consos": 0.8416495413693037,
+            "Proj. SOS": 0.748834367916737,
+            "Proj. Noncon SOS": 0.6052210827564047,
+            "Proj. Con SOS": 0.8416495413693037,
+            "elite SOS": 0.6159025438017878,
+            "elite noncon SOS": 0.737287914178802,
+            "Opp OE": 115.9634283595156,
+            "Opp DE": 101.95512787467284,
+            "Opp Proj. OE": 115.9634283595156,
+            "Opp Proj DE": 101.95512787467284,
+            "Con Adj OE": 125.05317918466297,
+            "Con Adj DE": 107.72404912671124,
+            "Qual O": 125.80517276153634,
+            "Qual D": 102.93570248854076,
+            "Qual Barthag": 0.909475213078614,
+            "Qual Games": 16,
+            "FUN": 0.0833908482027433,
+            "ConPF": 1478,
+            "ConPA": 1483,
+            "ConPoss": 1277.65,
+            "ConOE": 1.1568113333072438,
+            "ConDE": 1.160724768128987,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 4.531676518582039,
+            "WAB Rk": 22,
+            "Fun Rk": 22,
+            "adjt": 69.74869264389596
+          },
+          "kenpom": {
+            "rank": 23,
+            "team": "BYU",
+            "conf": "B12",
+            "record": "23-11",
+            "adj_em": 23.28,
+            "adj_o": 125.5,
+            "adj_o_rank": 10,
+            "adj_d": 102.3,
+            "adj_d_rank": 56,
+            "adj_t": 70,
+            "adj_t_rank": 47,
+            "luck": -0.017,
+            "luck_rank": 232,
+            "sos_adj_em": 14.26,
+            "sos_adj_em_rank": 14,
+            "sos_opp_o": 116.3,
+            "sos_opp_o_rank": 33,
+            "sos_opp_d": 102,
+            "sos_opp_d_rank": 3,
+            "ncsos_adj_em": 4.87,
+            "ncsos_adj_em_rank": 73
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"gonzaga\",\n      \"teamName\": \"Gonzaga\",\n      \"torvik\": {\n        \"rank\": 11,\n        \"team\": \"Gonzaga\",\n        \"conf\": \"WCC\",\n        \"record\": \"30-3\",\n        \"adjoe\": 120.26205670050366,\n        \"oe Rank\": 37,\n        \"adjde\": 93.97461639541584,\n        \"de Rank\": 9\n      },\n      \"kenpom\": {\n        \"rank\": 11,\n        \"team\": \"Gonzaga\",\n        \"conf\": \"WCC\",\n        \"record\": \"30-3\",\n        \"adj_em\": 28.16,\n        \"adj_o\": 122.1,\n        \"adj_o_rank\": 30,\n        \"adj_d\": 93.9\n      }\n    },\n    {\n      \"teamId\": \"byu\",\n      \"teamName\": \"BYU\",\n      \"torvik\": {\n        \"rank\": 33,\n        \"team\": \"BYU\",\n        \"conf\": \"B12\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.78766507254886,\n        \"oe Rank\": 16,\n        \"adjde\": 104.28867912262888,\n        \"de Rank\": 88\n      },\n      \"kenpom\": {\n        \"rank\": 23,\n        \"team\": \"BYU\",\n        \"conf\": \"B12\",\n        \"record\": \"23-11\",\n        \"adj_em\": 23.28,\n        \"adj_o\": 125.5,\n        \"adj_o_rank\": 10,\n        \"adj_d\": 102.3\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:18.847Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:18.847Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "BYU Gonzaga March Madness 2026 injury news",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:19.561Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Gonzaga Bulldogs Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2250%2Fgonzaga%2Dbulldogs&rut=e03bb76bcc48559639b1db7dadf96fadf8f8fb7378a03c957e14250470c633a3",
+          "snippet": "Visit ESPN for Gonzaga Bulldogs live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Portland, led by injured coach, takes down No. 6 Gonzaga",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47835455%2Fportland%2Dled%2Dinjured%2Dcoach%2Dtakes%2Dno%2D6%2Dgonzaga&rut=bf97326dd57daf085837e6158ba6ac25064988171c7a6547f2968cca3f0fea90",
+          "snippet": "Portland pulled off one of the biggest upsets in school history Wednesday night, an 87-80 stunner over No. 6 Gonzaga that came just days after coach Shantay Legans tore his Achilles in practice."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained%2522&rut=cd7b4c3aeb7ed11a9c0660cf93923a7aecb073683d75e50cd366bb373e801ff2",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 schedule, sites, locations - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F46583333%2Fmens%2Dcollege%2Dbasketball%2Dmarch%2Dmadness%2D2026%2Dschedule%2Dsites%2Dlocations%2Dselection%2Dsunday&rut=3a1021503fe29b694bd56e4971398249ce28335b26a7e626ca4e49a3eda7498b",
+          "snippet": "Everything to know about the 2026 men&#x27;s NCAA tournament, from Selection Sunday to the Final Four and championship game."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Gonzaga Bulldogs Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2250%2Fgonzaga%2Dbulldogs&rut=e03bb76bcc48559639b1db7dadf96fadf8f8fb7378a03c957e14250470c633a3\",\n      \"snippet\": \"Visit ESPN for Gonzaga Bulldogs live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Portland, led by injured coach, takes down No. 6 Gonzaga\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47835455%2Fportland%2Dled%2Dinjured%2Dcoach%2Dtakes%2Dno%2D6%2Dgonzaga&rut=bf97326dd57daf085837e6158ba6ac25064988171c7a6547f2968cca3f0fea90\",\n      \"snippet\": \"Portland pulled off one of the biggest upsets in school history Wednesday night, an 87-80 stunner over No. 6 Gonzaga that came just days after coach Shantay Legans tore his Achilles in practice.\"\n    },\n    {\n      \"title\": \"Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained%2522&rut=cd7b4c3aeb7ed11a9c0660cf93923a7aecb073683d75e50cd366bb373e801ff2\",\n      \"snippet\": \"The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title.\"\n    },\n    {\n      \"title\": \"Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa\",\n      \"snippet\": \"Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:20.822Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:20.822Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Gonzaga 2026 March Madness matchup preview",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:21.608Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 NCAA Tournament West Region bracket preview ... - CBS Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Dwest%2Dregion%2Dbracket%2Dpreview%2F&rut=3b8339dd4022e5e253af7657a8a5c9f9254e9bb0b1db6ec79c5237e0692e766d",
+          "snippet": "Breaking down the 2026 NCAA Tournament West Region with predictions, upset picks, sleeper teams, best first-round games and players to watch in March Madness ."
+        },
+        {
+          "title": "March Madness West Region Predictions, Picks & Bracket Preview: 2026 ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Dwest%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=7b231d9f9fc6603ab29cd90f17776a1e57c08d60abd55e65315e36130c44e281",
+          "snippet": "I&#x27;m breaking down my March Madness West Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament."
+        },
+        {
+          "title": "BYU March Madness Hub: Schedule, Seed, Opponent and Path to Final Four",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fbyu%2Fbasketball%2Fbyu%2Dmarch%2Dmadness%2Dhub%2Dschedule%2Dseed%2Dopponent%2Dand%2Dpath%2Dto%2Dfinal%2Dfour&rut=738612faf6c27c8103555698a405ead8ab2be6b11e542c001c426553f934d7b1",
+          "snippet": "On Sunday, the 2026 NCAA Tournament bracket was unveiled. This article will serve as the BYU March Madness hub where we will review BYU&#x27;s seed, schedule, and path to the Final Four."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "West Region 2026 March Madness Bracket Breakdown - Lineups",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.lineups.com%2Fbetting%2Fwest%2Dregion%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dbreakdown%2F&rut=0c2c3efa2c53ad284834c1d39727681d70cd098591993f9b9f03f45d19b292ba",
+          "snippet": "Check out the 2026 March Madness bracket breakdown for the West Region of the NCAA Tournament with odds and analysis from Lineups.com."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 NCAA Tournament West Region bracket preview ... - CBS Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Dwest%2Dregion%2Dbracket%2Dpreview%2F&rut=3b8339dd4022e5e253af7657a8a5c9f9254e9bb0b1db6ec79c5237e0692e766d\",\n      \"snippet\": \"Breaking down the 2026 NCAA Tournament West Region with predictions, upset picks, sleeper teams, best first-round games and players to watch in March Madness .\"\n    },\n    {\n      \"title\": \"March Madness West Region Predictions, Picks & Bracket Preview: 2026 ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Dwest%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=7b231d9f9fc6603ab29cd90f17776a1e57c08d60abd55e65315e36130c44e281\",\n      \"snippet\": \"I&#x27;m breaking down my March Madness West Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament.\"\n    },\n    {\n      \"title\": \"BYU March Madness Hub: Schedule, Seed, Opponent and Path to Final Four\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fbyu%2Fbasketball%2Fbyu%2Dmarch%2Dmadness%2Dhub%2Dschedule%2Dseed%2Dopponent%2Dand%2Dpath%2Dto%2Dfinal%2Dfour&rut=738612faf6c27c8103555698a405ead8ab2be6b11e542c001c426553f934d7b1\",\n      \"snippet\": \"On Sunday, the 2026 NCAA Tournament bracket was unveiled. This article will serve as the BYU March Madness hub where we will review BYU&#x27;s seed, schedule, and path to the Final Four.\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:23.098Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:23.098Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.si.com/college/byu/basketball/byu-march-madness-hub-schedule-seed-opponent-and-path-to-final-four",
+        "maxChars": 1000
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:23.644Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.si.com/college/byu/basketball/byu-march-madness-hub-schedule-seed-opponent-and-path-to-final-four",
+        "text": "BYU March Madness Hub: Schedule, Seed, Opponent and Path to Final Four Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW FOOTBALL BASKETBALL RECRUITING COUGARS IN THE PROS SI.COM SI.COM COUGARS FB SI.COM COUGARS BB FOOTBALL BASKETBALL RECRUITING COUGS IN THE PROS SI.COM FOOTBALL FOOTBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES BASKETBALL BASKETBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES More from BYU Cougars On SI RECRUITING COUGARS IN THE PROS SI.COM SI.COM COUGARS FB SI.COM COUGARS BB BYU March Madness Hub: Schedule, Seed, Opponent and Path to Final Four The Cougars are going dancing for the third time in as many years Casey Lundquist | Share on Facebook Share on X Add us as a preferred source Mar 11, 2026; Kansas City, MO, USA; BYU Cougars forward Keba Keita (13) drives to the basket around West Virginia Mountaineers center Harlan Obioha (55) during the second half at T-Mobile Center. Mandatory Credit: William Purnell-Imagn "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.si.com/college/byu/basketball/byu-march-madness-hub-schedule-seed-opponent-and-path-to-final-four\",\n    \"text\": \"BYU March Madness Hub: Schedule, Seed, Opponent and Path to Final Four Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW FOOTBALL BASKETBALL RECRUITING COUGARS IN THE PROS SI.COM SI.COM COUGARS FB SI.COM COUGARS BB FOOTBALL BASKETBALL RECRUITING COUGS IN THE PROS SI.COM FOOTBALL FOOTBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES BASKETBALL BASKETBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES More from BYU Cougars On SI RECRUITING COUGARS IN THE PROS SI.COM SI.COM COUGARS FB SI.COM COUGARS BB BYU March Madness Hub: Schedule, Seed, Opponent and Path to Final Four The Cougars are going dancing for the third time in as many years Casey Lundquist | Share on Facebook Share on X Add us as a preferred source Mar 11, 2026; Kansas City, MO, USA; BYU Cougars forward Keba Keita (13) drives to the basket around West Virginia Mountaineers center Harlan Obioha (55) during the second half at T-Mobile Center. Mandatory Credit: William Purnell-Imagn \"\n  }\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:28.402Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:28.402Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Gonzaga 2026 head to head history",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:29.181Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "BYU-Gonzaga men&#x27;s basketball rivalry - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBYU%25E2%2580%2593Gonzaga_men%2527s_basketball_rivalry&rut=70795442c99e0cb8052a94c3e995293efc0a5db583831ab888f6a14e19c82ae2",
+          "snippet": "The BYU-Gonzaga men&#x27;s basketball rivalry is a college basketball rivalry [1][2][3] between the Gonzaga Bulldogs team of Gonzaga University in Spokane, Washington and the BYU Cougars team of Brigham Young University in Provo, Utah. BYU has played Gonzaga in the West Coast Conference tournament final in 2014, 2015, 2018, and 2021 with Gonzaga winning all four of these matchups. Gonzaga leads ..."
+        },
+        {
+          "title": "Gonzaga Men&#x27;s Basketball Head-to-Head Results | College Basketball at ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fgonzaga%2Fmen%2Fhead%2Dto%2Dhead.html&rut=a3e71056d8f0c0595ebb5f2b83d96e419160425aac5e0c0a003bbd8deb431f4f",
+          "snippet": "Check out Gonzaga&#x27;s College Head-to-Head Results and More About College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "Looking back on the history of BYU vs. Gonzaga",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Funiverse.byu.edu%2F2022%2F01%2F12%2Flooking%2Dback%2Don%2Dthe%2Dhistory%2Dof%2Dbyu%2Dvs%2Dgonzaga%2F&rut=468abbf188e2bd73c6bdfc9be89b49046a28f71052e5feada0157c5292759d7b",
+          "snippet": "BYU&#x27;s most recent win against Gonzaga was in February 2020 when the Cougars beat the No. 2-ranked Bulldogs 91-78. It was Mark Pope&#x27;s first season as head coach and the win broke a six-game ..."
+        },
+        {
+          "title": "BYU Basketball NCAA Tournament history: All 33 appearances",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.ksl.com%2Fncaa%2Fbyu%2Dbasketball%2Fncaa%2Dhistory%2D2026%2F572774&rut=ff4de12e7d99a010ae8c26de26c73bd7fe16b68cc3afbdba6dc34e4bf13ebd95",
+          "snippet": "The bid in the 2026 NCAA Tournament marks the 33rd appearance for BYU Basketball in March Madness. Looking back at their history ."
+        },
+        {
+          "title": "Gonzaga, BYU Headline Early 2026 NCAA Projections | Perigon",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.perigon.io%2Fnews%2Fsports%2F2025%2F04%2F29%2Fgonzaga%2Dprojected%2D6%2Dseed%2Dearly%2D2026%2Dncaa%2Dbracketology&rut=dbecd0bfdad62dd6b5b8a7b03ea4279cd7dac3e239f27fbd65ff89971e36c87d",
+          "snippet": "BYU is attracting major preseason attention, projected as a No. 2 seed with the potential for back- to -back second-weekend NCAA Tournament appearances for the first time in program history . Saint Mary&#x27;s, ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"BYU-Gonzaga men&#x27;s basketball rivalry - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBYU%25E2%2580%2593Gonzaga_men%2527s_basketball_rivalry&rut=70795442c99e0cb8052a94c3e995293efc0a5db583831ab888f6a14e19c82ae2\",\n      \"snippet\": \"The BYU-Gonzaga men&#x27;s basketball rivalry is a college basketball rivalry [1][2][3] between the Gonzaga Bulldogs team of Gonzaga University in Spokane, Washington and the BYU Cougars team of Brigham Young University in Provo, Utah. BYU has played Gonzaga in the West Coast Conference tournament final in 2014, 2015, 2018, and 2021 with Gonzaga winning all four of these matchups. Gonzaga leads ...\"\n    },\n    {\n      \"title\": \"Gonzaga Men&#x27;s Basketball Head-to-Head Results | College Basketball at ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fgonzaga%2Fmen%2Fhead%2Dto%2Dhead.html&rut=a3e71056d8f0c0595ebb5f2b83d96e419160425aac5e0c0a003bbd8deb431f4f\",\n      \"snippet\": \"Check out Gonzaga&#x27;s College Head-to-Head Results and More About College Basketball at Sports-Reference.com\"\n    },\n    {\n      \"title\": \"Looking back on the history of BYU vs. Gonzaga\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Funiverse.byu.edu%2F2022%2F01%2F12%2Flooking%2Dback%2Don%2Dthe%2Dhistory%2Dof%2Dbyu%2Dvs%2Dgonzaga%2F&rut=468abbf188e2bd73c6bdfc9be89b49046a28f71052e5feada0157c5292759d7b\",\n      \"snippet\": \"BYU&#x27;s most recent win against Gonzaga was in February 2020 when the Cougars beat the No. 2-ranked Bulldogs 91-78. It was Mark Pope&#x27;s first season as head coach and the win broke a six-game ...\"\n    },\n    {\n      \"title\": \"BYU Basketball NCAA Tournament history: All 33 appearances\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.ksl.com%2Fncaa%2Fbyu%2Dbasketball%2Fncaa%2Dhistory%2D2026%2F572774&rut=ff4de12e7d99a010ae8c26de26c73bd7fe16b68cc3afbdba6dc34e4bf13ebd95\",\n      \"snippet\": \"The bid in the 2026 NCAA Tournament marks the 33rd appearance for BYU Basketball in March Madness. Looking back at their history .\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:43.786Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:43.787Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://en.wikipedia.org/wiki/BYU%E2%80%93Gonzaga_men%27s_basketball_rivalry",
+        "maxChars": 1000
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:44.245Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://en.wikipedia.org/wiki/BYU%E2%80%93Gonzaga_men%27s_basketball_rivalry",
+        "text": "BYU–Gonzaga men's basketball rivalry - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide (Top) 1 Series overview Toggle Series overview subsection 1.1 First meetings 1.2 Conference foes 2 Rival Accomplishments 3 Game results 4 References Toggle the table of contents BYU–Gonzaga men's basketball rivalry Add languages Add links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Print/export Download as PDF Printable version In other projects Wikidata item Appearance move to sidebar hide From Wikipedia, "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://en.wikipedia.org/wiki/BYU%E2%80%93Gonzaga_men%27s_basketball_rivalry\",\n    \"text\": \"BYU–Gonzaga men's basketball rivalry - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide (Top) 1 Series overview Toggle Series overview subsection 1.1 First meetings 1.2 Conference foes 2 Rival Accomplishments 3 Game results 4 References Toggle the table of contents BYU–Gonzaga men's basketball rivalry Add languages Add links Article Talk English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Print/export Download as PDF Printable version In other projects Wikidata item Appearance move to sidebar hide From Wikipedia, \"\n  }\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:30:55.834Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:30:55.834Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Gonzaga 2026 injury update March Madness",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:30:56.904Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed",
+          "snippet": "The Athletic has live coverage of the First Four from 2026 Men&#x27;s March Madness . Roster attrition is a factor during the postseason in any sport."
+        },
+        {
+          "title": "BYU Cougars Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fbyu%2Dcougars%2Finjuries&rut=214526f7d4f61d008f2b05639ea1fa94cd04f9a016fec7170424aa028edfeac3",
+          "snippet": "Stay In the Know: Check Out BYU Cougars Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "Gonzaga Bulldogs Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fgonzaga%2Dbulldogs%2Finjuries&rut=8dc2d05238ef47d652dbbb346306778d3e22ed672667162838dbb9a0a88526e6",
+          "snippet": "Stay In the Know: Check Out Gonzaga Bulldogs Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 18, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=439478153c94c35107ea9111a6450bb7416925ca3dee32f7d786dbf831a93518",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295\",\n      \"snippet\": \"March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks.\"\n    },\n    {\n      \"title\": \"Key March Madness injuries to know while filling out your men&#x27;s ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed\",\n      \"snippet\": \"The Athletic has live coverage of the First Four from 2026 Men&#x27;s March Madness . Roster attrition is a factor during the postseason in any sport.\"\n    },\n    {\n      \"title\": \"BYU Cougars Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fbyu%2Dcougars%2Finjuries&rut=214526f7d4f61d008f2b05639ea1fa94cd04f9a016fec7170424aa028edfeac3\",\n      \"snippet\": \"Stay In the Know: Check Out BYU Cougars Injuries Impacting The 2025- 2026 NCAAB Season.\"\n    },\n    {\n      \"title\": \"Gonzaga Bulldogs Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fgonzaga%2Dbulldogs%2Finjuries&rut=8dc2d05238ef47d652dbbb346306778d3e22ed672667162838dbb9a0a88526e6\",\n      \"snippet\": \"Stay In the Know: Check Out Gonzaga Bulldogs Injuries Impacting The 2025- 2026 NCAAB Season.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:31:03.046Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:31:03.046Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 1000
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:31:03.225Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pe"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/\",\n    \"text\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pe\"\n  }\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:31:11.703Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:31:11.703Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "BYU Gonzaga 2026 West Region Round of 32 preview",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:31:12.544Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 NCAA Tournament West Region bracket preview ... - CBS Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Dwest%2Dregion%2Dbracket%2Dpreview%2F&rut=3b8339dd4022e5e253af7657a8a5c9f9254e9bb0b1db6ec79c5237e0692e766d",
+          "snippet": "Breaking down the 2026 NCAA Tournament West Region with predictions, upset picks, sleeper teams, best first- round games and players to watch in March Madness."
+        },
+        {
+          "title": "West Preview: Arizona Is Primed to Get Back to the Final Four - Hoops HQ",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hoopshq.com%2Fbracketology%2Fncaa%2Dwest%2Dregional%2Danalysis%2D2026&rut=6c721846cdc6ed06b3b5786953f939390e49feb9dc6c4d46333604651aec57fc",
+          "snippet": "Gonzaga finds itself with a couple of intriguing scenarios, depending on how the bracket works out. The obvious potential matchup is in the Round of 32 against BYU , a former WCC rival."
+        },
+        {
+          "title": "NCAA Tournament by the odds: Vegas picks and preview of the West Region",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Flasvegassun.com%2Fnews%2F2026%2Fmar%2F17%2Fncaa%2Dtournament%2Dodds%2Dvegas%2Dwest%2Dregion%2Dpicks%2Dats%2F&rut=412080cc1e530345ad5b43b80dcec49182404aad1f8ce660afcc88857889c4c1",
+          "snippet": "BYU hasn&#x27;t maintained as high of standing as consistently as its West Region peers, but, fittingly, it owns the record for most NCAA Tournament appearances without a Final Four berth at 32 all-time."
+        },
+        {
+          "title": "March Madness West Region Preview: Final Four Picks And Upsets | OutKick",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.outkick.com%2Fsports%2F2026%2Dncaa%2Dtournament%2Dbreakdown%2Dwest%2Dregion%2Dbest%2Dbets%2Dsleepers%2Dbusts&rut=64f91feedb898d00ea894d0a2833dd2371af2d7796cdf3562f3ff42e0667c674",
+          "snippet": "A guide to the 2026 West bracket, covering Arizona&#x27;s title case, Purdue&#x27;s path, the NC State sleeper angle, and the matchups and stars that could shape March Madness."
+        },
+        {
+          "title": "2026 Anonymously Through The Brackets: West Region",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.anonymouseagle.com%2Fanonymously%2Dthrough%2Dthe%2Dbrackets%2F36112%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dwest%2Dregion%2Dpreview%2Darizona%2Dpurdue%2Dgonzaga%2Dhigh%2Dpoint%2Ddybantsa%2Dacuff%2Djohnson&rut=98e9e5507f1254638ee77accda6d5c9767f1c6985dfd10cac587c4625c0af3e1",
+          "snippet": "2026 Anonymously Through The Brackets: West Region Y&#x27;know, there&#x27;s actually a lot of Western teams in the West Region this year. Arizona, Gonzaga , BYU , Hawaii….."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 NCAA Tournament West Region bracket preview ... - CBS Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Dwest%2Dregion%2Dbracket%2Dpreview%2F&rut=3b8339dd4022e5e253af7657a8a5c9f9254e9bb0b1db6ec79c5237e0692e766d\",\n      \"snippet\": \"Breaking down the 2026 NCAA Tournament West Region with predictions, upset picks, sleeper teams, best first- round games and players to watch in March Madness.\"\n    },\n    {\n      \"title\": \"West Preview: Arizona Is Primed to Get Back to the Final Four - Hoops HQ\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hoopshq.com%2Fbracketology%2Fncaa%2Dwest%2Dregional%2Danalysis%2D2026&rut=6c721846cdc6ed06b3b5786953f939390e49feb9dc6c4d46333604651aec57fc\",\n      \"snippet\": \"Gonzaga finds itself with a couple of intriguing scenarios, depending on how the bracket works out. The obvious potential matchup is in the Round of 32 against BYU , a former WCC rival.\"\n    },\n    {\n      \"title\": \"NCAA Tournament by the odds: Vegas picks and preview of the West Region\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Flasvegassun.com%2Fnews%2F2026%2Fmar%2F17%2Fncaa%2Dtournament%2Dodds%2Dvegas%2Dwest%2Dregion%2Dpicks%2Dats%2F&rut=412080cc1e530345ad5b43b80dcec49182404aad1f8ce660afcc88857889c4c1\",\n      \"snippet\": \"BYU hasn&#x27;t maintained as high of standing as consistently as its West Region peers, but, fittingly, it owns the record for most NCAA Tournament appearances without a Final Four berth at 32 all-time.\"\n    },\n    {\n      \"title\": \"March Madness West Region Preview: Final Four Picks And Upsets | OutKick\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.outkick.com%2Fsports%2F2026%2Dncaa%2Dtournament%2Dbreakdown%2Dwest%2Dregion%2Dbest%2Dbets%2Dsleepers%2Dbusts&rut=64f91feedb898d00ea894d0a2833dd2371af2d7796cdf3562f3ff42e0667c674\",\n      \"snippet\": \"A guide to the 2026 West bracket, covering Arizona&#x27;s title case, Purdue&#x27;s path, the NC State sleeper angle, and the matchups and stars that could shape March Madness.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-west-3-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:31:19.709Z",
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:31:19.709Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.hoopshq.com/bracketology/ncaa-west-regional-analysis-2026",
+        "maxChars": 1000
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-west-3-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:31:19.807Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.hoopshq.com/bracketology/ncaa-west-regional-analysis-2026",
+        "text": "West Preview: Arizona Is Primed to Get Back to the Final Four - Hoops HQ HoopsHQ Seth Davis Conferences ACC Big East Big Ten Big 12 SEC Mid Majors Women&#039;s Bracketology & Bubble Watch Rankings Login Subscribe Your All-Access Pass to College Basketball HoopsHQ Login Subscribe HoopsHQ Seth Davis Conferences ACC Big East Big Ten Big 12 SEC Mid Majors Women&#039;s Rankings Transfer portal Recruiting Betting & Picks Bracketology & Bubble Watch NBA Draft News Long Reads Advertise Terms & Conditions Privacy Policy Bracketology NCAA Tournament 2026 West Region Preview: Arizona Looks Final Four Ready The Wildcats haven’t been past the Sweet Sixteen since 2014-15 and haven’t been to the Final Four since 2000-01. Is this the year that changes? Tristan Freeman 0 Gift This Article Published: March 16, 2026 1:36 am EDT Big 12 Player of the Year Jaden Bradley celebrating Arizona&#039;s conference tournament championship Getty Images The 2026 NCAA Tournament bracket has arrived, and here’s a break"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.hoopshq.com/bracketology/ncaa-west-regional-analysis-2026\",\n    \"text\": \"West Preview: Arizona Is Primed to Get Back to the Final Four - Hoops HQ HoopsHQ Seth Davis Conferences ACC Big East Big Ten Big 12 SEC Mid Majors Women&#039;s Bracketology & Bubble Watch Rankings Login Subscribe Your All-Access Pass to College Basketball HoopsHQ Login Subscribe HoopsHQ Seth Davis Conferences ACC Big East Big Ten Big 12 SEC Mid Majors Women&#039;s Rankings Transfer portal Recruiting Betting & Picks Bracketology & Bubble Watch NBA Draft News Long Reads Advertise Terms & Conditions Privacy Policy Bracketology NCAA Tournament 2026 West Region Preview: Arizona Looks Final Four Ready The Wildcats haven’t been past the Sweet Sixteen since 2014-15 and haven’t been to the Final Four since 2000-01. Is this the year that changes? Tristan Freeman 0 Gift This Article Published: March 16, 2026 1:36 am EDT Big 12 Player of the Year Jaden Bradley celebrating Arizona&#039;s conference tournament championship Getty Images The 2026 NCAA Tournament bracket has arrived, and here’s a break\"\n  }\n}"
+    },
+    {
+      "id": "r32-west-3-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T10:31:25.068Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r32-west-3\",\n    \"winnerId\": \"gonzaga\",\n    \"confidence\": 0.78,\n    \"rationale\": \"Gonzaga holds a decisive edge in overall efficiency metrics, ranking 11th in both KenPom and Torvik with a top-10 defense that should contain BYU's high-powered offense, which ranks 10th in KenPom but 88th in defense. While BYU's offensive firepower is elite, Gonzaga's defensive prowess, experience in big games, and historical dominance in this rivalry (winning the last four WCC tournament finals) provide a more reliable path to victory. The underdog's path for BYU relies on hot three-point shooting and forcing turnovers, but Gonzaga's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"1\",\n    \"title\": \"Investigate team ratings and matchup dynamics\",\n    \"summary\": \"Gonzaga ranks 11th in KenPom and Torvik with elite defense (9th in adjD), while BYU ranks 23rd in KenPom and 33rd in Torvik with a top-10 offense but weaker defense (88th in adjD).\",\n    \"evidence\": \"Gonzaga: 30-3 record, adjO 122.1 (30th), adjD 93.9 (9th). BYU: 23-11 record, adjO 125.5 (10th), adjD 102.3 (88th).\"\n  }\n}"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import path from "node:path";
 import { ModelAdapter } from "@/agents/interfaces";
 import { createDefaultTools } from "@/agents/tools";
 import { ROUND_ORDER, indexTeams, resolveCompetitorName } from "@/lib/bracket";
+import { normalizeConfidenceValue } from "@/lib/confidence";
 import { readJsonFile, writeJsonFile } from "@/lib/fs";
 import { gameRunArtifactSchema } from "@/lib/schema";
 import {
@@ -21,10 +22,7 @@ async function readExistingGameRun(filePath: string) {
       pick: raw?.pick
         ? {
             ...raw.pick,
-            confidence:
-              typeof raw.pick.confidence === "number" && raw.pick.confidence > 1 && raw.pick.confidence <= 100
-                ? raw.pick.confidence / 100
-                : raw.pick.confidence
+            confidence: normalizeConfidenceValue(raw.pick.confidence)
           }
         : raw?.pick
       ,
@@ -122,6 +120,8 @@ export class CentralBracketAgent {
       if (![slotATeamId, slotBTeamId].includes(result.pick.winnerId)) {
         throw new Error(`Model selected invalid winner ${result.pick.winnerId} for game ${game.id}`);
       }
+
+      result.pick.confidence = normalizeConfidenceValue(result.pick.confidence) as number;
 
       if (result.pick.rationale.trim().length < 40) {
         throw new Error(`Model returned an insufficient rationale for game ${game.id}`);
