@@ -27,6 +27,18 @@ async function readExistingGameRun(filePath: string) {
                 : raw.pick.confidence
           }
         : raw?.pick
+      ,
+      reasoningStep: raw?.reasoningStep
+        ? {
+            ...raw.reasoningStep,
+            evidence:
+              Array.isArray(raw.reasoningStep.evidence)
+                ? raw.reasoningStep.evidence
+                : typeof raw.reasoningStep.evidence === "string"
+                  ? [raw.reasoningStep.evidence]
+                  : []
+          }
+        : raw?.reasoningStep
     };
     const parsed = gameRunArtifactSchema.parse(normalized) as GameRunArtifact;
 

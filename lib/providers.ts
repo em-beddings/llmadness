@@ -22,57 +22,61 @@ export const LIVE_PROVIDERS: Exclude<ModelProvider, "mock">[] = [
   "moonshot",
   "qwen",
   "deepseek",
-  "mimo"
+  "mimo",
 ];
 
 const PROVIDER_SPECS: Record<Exclude<ModelProvider, "mock">, ProviderSpec> = {
   openai: {
     envKey: "OPENAI_API_KEY",
     baseUrlEnv: "OPENAI_BASE_URL",
-    defaultBaseUrl: "https://api.openai.com/v1"
+    defaultBaseUrl: "https://api.openai.com/v1",
   },
   anthropic: {
     envKey: "ANTHROPIC_API_KEY",
     baseUrlEnv: "ANTHROPIC_BASE_URL",
-    defaultBaseUrl: "https://api.anthropic.com/v1/"
+    defaultBaseUrl: "https://api.anthropic.com/v1/",
   },
   "google-gemini": {
     envKey: "GEMINI_API_KEY",
     baseUrlEnv: "GEMINI_BASE_URL",
     defaultBaseUrl: "https://generativelanguage.googleapis.com/v1beta/openai/",
     defaultHeaders: {
-      "x-goog-api-client": "llmadness/0.1"
-    }
+      "x-goog-api-client": "llmadness/0.1",
+    },
   },
   xai: {
     envKey: "XAI_API_KEY",
     baseUrlEnv: "XAI_BASE_URL",
-    defaultBaseUrl: "https://api.x.ai/v1"
+    defaultBaseUrl: "https://api.x.ai/v1",
   },
   moonshot: {
     envKey: "KIMI_API_KEY",
     baseUrlEnv: "KIMI_BASE_URL",
-    defaultBaseUrl: "https://api.moonshot.cn/v1"
+    defaultBaseUrl: "https://api.moonshot.ai/v1",
   },
   qwen: {
     envKey: "QWEN_API_KEY",
     baseUrlEnv: "QWEN_BASE_URL",
-    defaultBaseUrl: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    defaultBaseUrl: "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
   },
   deepseek: {
     envKey: "DEEPSEEK_API_KEY",
     baseUrlEnv: "DEEPSEEK_BASE_URL",
-    defaultBaseUrl: "https://api.deepseek.com"
+    defaultBaseUrl: "https://api.deepseek.com",
   },
   mimo: {
     envKey: "MIMO_API_KEY",
-    baseUrlEnv: "MIMO_BASE_URL"
-  }
+    baseUrlEnv: "MIMO_BASE_URL",
+  },
 };
 
-export function resolveProviderRuntime(provider: ModelProvider): ProviderRuntimeConfig {
+export function resolveProviderRuntime(
+  provider: ModelProvider,
+): ProviderRuntimeConfig {
   if (provider === "mock") {
-    throw new Error("Mock provider does not have a live runtime configuration.");
+    throw new Error(
+      "Mock provider does not have a live runtime configuration.",
+    );
   }
 
   const spec = PROVIDER_SPECS[provider];
@@ -83,13 +87,15 @@ export function resolveProviderRuntime(provider: ModelProvider): ProviderRuntime
 
   const baseUrl = process.env[spec.baseUrlEnv] ?? spec.defaultBaseUrl;
   if (!baseUrl) {
-    throw new Error(`${spec.baseUrlEnv} is required for provider "${provider}".`);
+    throw new Error(
+      `${spec.baseUrlEnv} is required for provider "${provider}".`,
+    );
   }
 
   return {
     provider,
     apiKey,
     baseUrl,
-    defaultHeaders: spec.defaultHeaders
+    defaultHeaders: spec.defaultHeaders,
   };
 }
