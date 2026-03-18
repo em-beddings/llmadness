@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import { SubmissionView } from "@/lib/repository";
 
@@ -81,6 +81,27 @@ function rowStart(roundIndex: number, gameIndex: number) {
 
 function rowCount(firstRoundGames: number) {
   return Math.max(firstRoundGames * 2 - 1, 1);
+}
+
+function formatTraceContent(type: string, content: string) {
+  if (type !== "final_json") {
+    return content;
+  }
+
+  try {
+    return JSON.stringify(JSON.parse(content), null, 2);
+  } catch {
+    return content;
+  }
+}
+
+function isTraceExpandedByDefault(type: string) {
+  return (
+    type === "system_prompt" ||
+    type === "user_prompt" ||
+    type === "assistant_message" ||
+    type === "tool_call"
+  );
 }
 
 function GameNode({
@@ -272,6 +293,8 @@ function FirstFourBracket({
 export function BracketBoard({ view }: { view: SubmissionView }) {
   const regions = getRegions(view);
   const [selectedGameId, setSelectedGameId] = useState<string | null>(null);
+  const [collapsedTraceEventIds, setCollapsedTraceEventIds] = useState<string[]>([]);
+  const [expandedTraceEventIds, setExpandedTraceEventIds] = useState<string[]>([]);
 
   const selectedGame = useMemo(
     () =>
@@ -285,6 +308,28 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
     () => selectedGame?.reasoningStep ?? null,
     [selectedGame],
   );
+
+  useEffect(() => {
+    setCollapsedTraceEventIds([]);
+    setExpandedTraceEventIds([]);
+  }, [selectedGameId]);
+
+  const toggleTraceEvent = (eventId: string, defaultExpanded: boolean) => {
+    if (defaultExpanded) {
+      setCollapsedTraceEventIds((current) =>
+        current.includes(eventId)
+          ? current.filter((id) => id !== eventId)
+          : [...current, eventId],
+      );
+      return;
+    }
+
+    setExpandedTraceEventIds((current) =>
+      current.includes(eventId)
+        ? current.filter((id) => id !== eventId)
+        : [...current, eventId],
+    );
+  };
 
   return (
     <>
@@ -380,30 +425,6 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
             ) : null}
 
             <section className="modal-section">
-              <h3>Tool calls</h3>
-              {selectedGame.toolCalls.length === 0 ? (
-                <p>No tool calls were recorded for this game.</p>
-              ) : (
-                <div className="modal-tool-list">
-                  {selectedGame.toolCalls.map((call) => (
-                    <article className="trace-card" key={call.id}>
-                      <div className="leader-topline">
-                        <strong>{call.toolName}</strong>
-                        <span>{call.summary}</span>
-                      </div>
-                      <pre className="code-block">
-                        {JSON.stringify(call.arguments, null, 2)}
-                      </pre>
-                      <pre className="code-block">
-                        {JSON.stringify(call.result, null, 2)}
-                      </pre>
-                    </article>
-                  ))}
-                </div>
-              )}
-            </section>
-
-            <section className="modal-section">
               <h3>Model trace</h3>
               {selectedGame.modelTrace.length === 0 ? (
                 <p>No model trace was recorded for this game.</p>
@@ -411,24 +432,59 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
                 <div className="modal-tool-list">
                   {selectedGame.modelTrace.map((event) => (
                     <article className="trace-card" key={event.id}>
+                      {(() => {
+                        const defaultExpanded = isTraceExpandedByDefault(event.type);
+                        const isExpanded =
+                          (defaultExpanded &&
+                            !collapsedTraceEventIds.includes(event.id)) ||
+                          expandedTraceEventIds.includes(event.id);
+                        const hasExpandableContent =
+                          event.arguments !== undefined ||
+                          event.result !== undefined ||
+                          Boolean(event.content);
+
+                        return (
+                          <>
                       <div className="leader-topline">
-                        <strong>{event.type.replaceAll("_", " ")}</strong>
-                        <span>{new Date(event.createdAt).toLocaleTimeString()}</span>
+                        <div>
+                          <strong>{event.type.replaceAll("_", " ")}</strong>
+                          {event.toolName ? <p>{event.toolName}</p> : null}
+                        </div>
+                        {hasExpandableContent ? (
+                          <button
+                            className="trace-toggle"
+                            onClick={() => toggleTraceEvent(event.id, defaultExpanded)}
+                            type="button"
+                          >
+                            {isExpanded ? "Minimize" : "Expand"}
+                          </button>
+                        ) : (
+                          <span>{new Date(event.createdAt).toLocaleTimeString()}</span>
+                        )}
                       </div>
-                      {event.toolName ? <p>{event.toolName}</p> : null}
-                      {event.arguments !== undefined ? (
-                        <pre className="code-block">
-                          {JSON.stringify(event.arguments, null, 2)}
-                        </pre>
+                      {isExpanded ? (
+                        <div className="trace-expanded">
+                          <p>{new Date(event.createdAt).toLocaleTimeString()}</p>
+                          {event.arguments !== undefined ? (
+                            <pre className="code-block">
+                              {JSON.stringify(event.arguments, null, 2)}
+                            </pre>
+                          ) : null}
+                          {event.result !== undefined ? (
+                            <pre className="code-block">
+                              {JSON.stringify(event.result, null, 2)}
+                            </pre>
+                          ) : null}
+                          {event.content ? (
+                            <pre className="code-block">
+                              {formatTraceContent(event.type, event.content)}
+                            </pre>
+                          ) : null}
+                        </div>
                       ) : null}
-                      {event.result !== undefined ? (
-                        <pre className="code-block">
-                          {JSON.stringify(event.result, null, 2)}
-                        </pre>
-                      ) : null}
-                      {event.content ? (
-                        <pre className="code-block">{event.content}</pre>
-                      ) : null}
+                          </>
+                        );
+                      })()}
                     </article>
                   ))}
                 </div>

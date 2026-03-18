@@ -939,6 +939,44 @@ h3 {
     padding: 14px;
 }
 
+.trace-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 6px 8px;
+    border: 0;
+    background-color: transparent;
+    background-image:
+        var(--dash-border), var(--dash-border-vertical), var(--dash-border),
+        var(--dash-border-vertical);
+    background-position:
+        top left,
+        top right,
+        bottom left,
+        top left;
+    background-size:
+        100% 2px,
+        2px 100%,
+        100% 2px,
+        2px 100%;
+    background-repeat: no-repeat;
+    color: var(--ink);
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.trace-expanded {
+    max-height: 280px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 4px;
+}
+
+.trace-expanded .code-block:first-child {
+    margin-top: 12px;
+}
+
 .trace-card p,
 .trace-card li,
 .modal-section p,
