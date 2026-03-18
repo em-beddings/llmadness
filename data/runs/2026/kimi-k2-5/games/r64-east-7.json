@@ -13,7 +13,7 @@
   "pick": {
     "gameId": "r64-east-7",
     "winnerId": "ucla",
-    "confidence": 70,
+    "confidence": 0.7,
     "rationale": "UCLA holds a significant ~30-spot advantage in both KenPom and Torvik rankings with a +21.64 adjusted efficiency margin that exceeds UCF's +15.05 by nearly 7 points. The Bruins' elite offense, ranked 17th-22nd nationally, presents a severe mismatch against UCF's porous defense ranked 114th, while UCLA's solid 49th-ranked defense can contain the Knights' capable but not explosive attack. While 7/10 games are historically competitive and UCF brings Big 12 tournament experience, the statistical profile clearly favors UCLA's superior two-way efficiency and power conference pedigree."
   },
   "reasoningStep": {
@@ -272,19 +272,20 @@
       "id": "r64-east-7-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:17.880Z",
+      "content": "I'll analyze this East 7/10 matchup between UCLA and UCF by gathering statistical ratings and recent team information.",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "ucla",
           "ucf"
         ]
-      },
-      "content": "I'll analyze this East 7/10 matchup between UCLA and UCF by gathering statistical ratings and recent team information."
+      }
     },
     {
       "id": "r64-east-7-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:17.887Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"ucla\",\n      \"teamName\": \"UCLA\",\n      \"torvik\": {\n        \"rank\": 24,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.49524577151492,\n        \"oe Rank\": 17,\n        \"adjde\": 101.73772797460148,\n        \"de Rank\": 49\n      },\n      \"kenpom\": {\n        \"rank\": 27,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adj_em\": 21.64,\n        \"adj_o\": 123.8,\n        \"adj_o_rank\": 22,\n        \"adj_d\": 102.1\n      }\n    },\n    {\n      \"teamId\": \"ucf\",\n      \"teamName\": \"UCF\",\n      \"torvik\": {\n        \"rank\": 58,\n        \"team\": \"UCF\",\n        \"conf\": \"B12\",\n        \"record\": \"21-11\",\n        \"adjoe\": 120.01879737593126,\n        \"oe Rank\": 39,\n        \"adjde\": 105.6510714134995,\n        \"de Rank\": 114\n      },\n      \"kenpom\": {\n        \"rank\": 54,\n        \"team\": \"UCF\",\n        \"conf\": \"B12\",\n        \"record\": \"21-11\",\n        \"adj_em\": 15.05,\n        \"adj_o\": 120.5,\n        \"adj_o_rank\": 40,\n        \"adj_d\": 105.5\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -435,50 +436,49 @@
             "ncsos_adj_em_rank": 257
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"ucla\",\n      \"teamName\": \"UCLA\",\n      \"torvik\": {\n        \"rank\": 24,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.49524577151492,\n        \"oe Rank\": 17,\n        \"adjde\": 101.73772797460148,\n        \"de Rank\": 49\n      },\n      \"kenpom\": {\n        \"rank\": 27,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adj_em\": 21.64,\n        \"adj_o\": 123.8,\n        \"adj_o_rank\": 22,\n        \"adj_d\": 102.1\n      }\n    },\n    {\n      \"teamId\": \"ucf\",\n      \"teamName\": \"UCF\",\n      \"torvik\": {\n        \"rank\": 58,\n        \"team\": \"UCF\",\n        \"conf\": \"B12\",\n        \"record\": \"21-11\",\n        \"adjoe\": 120.01879737593126,\n        \"oe Rank\": 39,\n        \"adjde\": 105.6510714134995,\n        \"de Rank\": 114\n      },\n      \"kenpom\": {\n        \"rank\": 54,\n        \"team\": \"UCF\",\n        \"conf\": \"B12\",\n        \"record\": \"21-11\",\n        \"adj_em\": 15.05,\n        \"adj_o\": 120.5,\n        \"adj_o_rank\": 40,\n        \"adj_d\": 105.5\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-7-tool-call-0-1",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:17.887Z",
+      "content": "I'll analyze this East 7/10 matchup between UCLA and UCF by gathering statistical ratings and recent team information.",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "UCLA basketball March 2026 NCAA tournament injuries",
         "maxResults": 5
-      },
-      "content": "I'll analyze this East 7/10 matchup between UCLA and UCF by gathering statistical ratings and recent team information."
+      }
     },
     {
       "id": "r64-east-7-tool-result-0-1",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:18.598Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-7-tool-call-0-2",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:18.598Z",
+      "content": "I'll analyze this East 7/10 matchup between UCLA and UCF by gathering statistical ratings and recent team information.",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "UCF basketball March 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": "I'll analyze this East 7/10 matchup between UCLA and UCF by gathering statistical ratings and recent team information."
+      }
     },
     {
       "id": "r64-east-7-tool-result-0-2",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:19.152Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-7-assistant-1",
@@ -490,43 +490,43 @@
       "id": "r64-east-7-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:22.711Z",
+      "content": "Let me try alternative searches for recent team news and injuries.",
       "toolName": "search_web",
       "arguments": {
         "query": "UCLA basketball injuries March 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": "Let me try alternative searches for recent team news and injuries."
+      }
     },
     {
       "id": "r64-east-7-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:23.358Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-7-tool-call-1-1",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:23.358Z",
+      "content": "Let me try alternative searches for recent team news and injuries.",
       "toolName": "search_web",
       "arguments": {
         "query": "UCF basketball 2026 season March Madness preview",
         "maxResults": 5
-      },
-      "content": "Let me try alternative searches for recent team news and injuries."
+      }
     },
     {
       "id": "r64-east-7-tool-result-1-1",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:24.088Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-7-assistant-final-2",

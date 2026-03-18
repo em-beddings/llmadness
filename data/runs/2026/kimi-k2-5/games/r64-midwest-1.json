@@ -13,7 +13,7 @@
   "pick": {
     "gameId": "r64-midwest-1",
     "winnerId": "michigan",
-    "confidence": 97,
+    "confidence": 0.97,
     "rationale": "Michigan enters as a dominant 1-seed with elite #2 national rankings on both KenPom and Torvik, featuring a historic +38.38 adjusted efficiency margin driven by the nation's second-ranked defense and a top-8 offense. UMBC ranks 185th nationally with a negative efficiency margin, creating a gap of approximately 183 ranking spots that dwarfs typical 1/16 disparities. While UMBC's famous 2018 upset of Virginia proved that 16-over-1 miracles are theoretically possible, Michigan's Big Ten-tested roster and overwhelming statistical superiority provide no credible path for the Retrievers to replicate that historic achievement."
   },
   "reasoningStep": {
@@ -267,19 +267,20 @@
       "id": "r64-midwest-1-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:51:02.370Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "michigan",
           "umbc"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-1-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:51:02.376Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"michigan\",\n      \"teamName\": \"Michigan\",\n      \"torvik\": {\n        \"rank\": 2,\n        \"team\": \"Michigan\",\n        \"conf\": \"B10\",\n        \"record\": \"31-2\",\n        \"adjoe\": 127.67488457862952,\n        \"oe Rank\": 7,\n        \"adjde\": 90.51451038034816,\n        \"de Rank\": 2\n      },\n      \"kenpom\": {\n        \"rank\": 2,\n        \"team\": \"Michigan\",\n        \"conf\": \"B10\",\n        \"record\": \"31-2\",\n        \"adj_em\": 38.38,\n        \"adj_o\": 126.7,\n        \"adj_o_rank\": 8,\n        \"adj_d\": 88.4\n      }\n    },\n    {\n      \"teamId\": \"umbc\",\n      \"teamName\": \"UMBC\",\n      \"torvik\": {\n        \"rank\": 185,\n        \"team\": \"UMBC\",\n        \"conf\": \"AE\",\n        \"record\": \"24-8\",\n        \"adjoe\": 107.5051010272995,\n        \"oe Rank\": 193,\n        \"adjde\": 109.20599179259196,\n        \"de Rank\": 187\n      },\n      \"kenpom\": {\n        \"rank\": 185,\n        \"team\": \"UMBC\",\n        \"conf\": \"AE\",\n        \"record\": \"24-8\",\n        \"adj_em\": -1.68,\n        \"adj_o\": 108.2,\n        \"adj_o_rank\": 184,\n        \"adj_d\": 109.9\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -430,48 +431,47 @@
             "ncsos_adj_em_rank": 334
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"michigan\",\n      \"teamName\": \"Michigan\",\n      \"torvik\": {\n        \"rank\": 2,\n        \"team\": \"Michigan\",\n        \"conf\": \"B10\",\n        \"record\": \"31-2\",\n        \"adjoe\": 127.67488457862952,\n        \"oe Rank\": 7,\n        \"adjde\": 90.51451038034816,\n        \"de Rank\": 2\n      },\n      \"kenpom\": {\n        \"rank\": 2,\n        \"team\": \"Michigan\",\n        \"conf\": \"B10\",\n        \"record\": \"31-2\",\n        \"adj_em\": 38.38,\n        \"adj_o\": 126.7,\n        \"adj_o_rank\": 8,\n        \"adj_d\": 88.4\n      }\n    },\n    {\n      \"teamId\": \"umbc\",\n      \"teamName\": \"UMBC\",\n      \"torvik\": {\n        \"rank\": 185,\n        \"team\": \"UMBC\",\n        \"conf\": \"AE\",\n        \"record\": \"24-8\",\n        \"adjoe\": 107.5051010272995,\n        \"oe Rank\": 193,\n        \"adjde\": 109.20599179259196,\n        \"de Rank\": 187\n      },\n      \"kenpom\": {\n        \"rank\": 185,\n        \"team\": \"UMBC\",\n        \"conf\": \"AE\",\n        \"record\": \"24-8\",\n        \"adj_em\": -1.68,\n        \"adj_o\": 108.2,\n        \"adj_o_rank\": 184,\n        \"adj_d\": 109.9\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-1-tool-call-0-1",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:51:02.376Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Michigan basketball injury news March 2026"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-1-tool-result-0-1",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:51:03.085Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-1-tool-call-0-2",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:51:03.085Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "UMBC basketball March 2026 NCAA Tournament"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-1-tool-result-0-2",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:51:03.699Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-1-assistant-1",
@@ -483,41 +483,41 @@
       "id": "r64-midwest-1-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:51:06.259Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Michigan basketball 2026 NCAA Tournament injury update"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-1-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:51:06.976Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-1-tool-call-1-1",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:51:06.976Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "UMBC 2026 NCAA Tournament First Four America East"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-1-tool-result-1-1",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:51:07.693Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-1-assistant-final-2",

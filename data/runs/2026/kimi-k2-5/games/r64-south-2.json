@@ -13,7 +13,7 @@
   "pick": {
     "gameId": "r64-south-2",
     "winnerId": "iowa",
-    "confidence": 56,
+    "confidence": 0.56,
     "rationale": "Iowa holds a slight but consistent edge across advanced metrics, ranking 7-11 spots higher than Clemson on both KenPom (25 vs 36) and Torvik (26 vs 29) with a superior +22.41 adjusted efficiency margin compared to Clemson's +19.26. The Hawkeyes' elite offense, ranked approximately 30th nationally, presents a significant advantage over Clemson's 69th-71st ranked attack, though the Tigers counter with a stronger 20th-ranked defense. While 8/9 games are historically coin flips with minimal separation between teams, Iowa's offensive firepower and narrow but verifiable statistical superiority across multiple rating systems provide a thin edge in this tightly contested matchup."
   },
   "reasoningStep": {
@@ -312,19 +312,20 @@
       "id": "r64-south-2-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:43:28.062Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "clemson",
           "iowa"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-2-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:43:28.070Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"clemson\",\n      \"teamName\": \"Clemson\",\n      \"torvik\": {\n        \"rank\": 29,\n        \"team\": \"Clemson\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-10\",\n        \"adjoe\": 116.53682445813897,\n        \"oe Rank\": 69,\n        \"adjde\": 96.88425906626,\n        \"de Rank\": 20\n      },\n      \"kenpom\": {\n        \"rank\": 36,\n        \"team\": \"Clemson\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-10\",\n        \"adj_em\": 19.26,\n        \"adj_o\": 116.6,\n        \"adj_o_rank\": 71,\n        \"adj_d\": 97.3\n      }\n    },\n    {\n      \"teamId\": \"iowa\",\n      \"teamName\": \"Iowa\",\n      \"torvik\": {\n        \"rank\": 26,\n        \"team\": \"Iowa\",\n        \"conf\": \"B10\",\n        \"record\": \"21-12\",\n        \"adjoe\": 122.12492091053804,\n        \"oe Rank\": 29,\n        \"adjde\": 100.16491106112171,\n        \"de Rank\": 35\n      },\n      \"kenpom\": {\n        \"rank\": 25,\n        \"team\": \"Iowa\",\n        \"conf\": \"B10\",\n        \"record\": \"21-12\",\n        \"adj_em\": 22.41,\n        \"adj_o\": 121.8,\n        \"adj_o_rank\": 31,\n        \"adj_d\": 99.4\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -475,48 +476,47 @@
             "ncsos_adj_em_rank": 336
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"clemson\",\n      \"teamName\": \"Clemson\",\n      \"torvik\": {\n        \"rank\": 29,\n        \"team\": \"Clemson\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-10\",\n        \"adjoe\": 116.53682445813897,\n        \"oe Rank\": 69,\n        \"adjde\": 96.88425906626,\n        \"de Rank\": 20\n      },\n      \"kenpom\": {\n        \"rank\": 36,\n        \"team\": \"Clemson\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-10\",\n        \"adj_em\": 19.26,\n        \"adj_o\": 116.6,\n        \"adj_o_rank\": 71,\n        \"adj_d\": 97.3\n      }\n    },\n    {\n      \"teamId\": \"iowa\",\n      \"teamName\": \"Iowa\",\n      \"torvik\": {\n        \"rank\": 26,\n        \"team\": \"Iowa\",\n        \"conf\": \"B10\",\n        \"record\": \"21-12\",\n        \"adjoe\": 122.12492091053804,\n        \"oe Rank\": 29,\n        \"adjde\": 100.16491106112171,\n        \"de Rank\": 35\n      },\n      \"kenpom\": {\n        \"rank\": 25,\n        \"team\": \"Iowa\",\n        \"conf\": \"B10\",\n        \"record\": \"21-12\",\n        \"adj_em\": 22.41,\n        \"adj_o\": 121.8,\n        \"adj_o_rank\": 31,\n        \"adj_d\": 99.4\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-2-tool-call-0-1",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:43:28.070Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Clemson basketball NCAA tournament 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-2-tool-result-0-1",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:43:28.355Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-south-2-tool-call-0-2",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:43:28.355Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Iowa basketball NCAA tournament 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-2-tool-result-0-2",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:43:28.966Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-2-assistant-1",
@@ -528,64 +528,64 @@
       "id": "r64-south-2-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:43:35.796Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Clemson vs Iowa NCAA tournament 2026 preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-2-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:43:36.499Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-2-tool-call-1-1",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:43:36.499Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Clemson basketball injuries 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-2-tool-result-1-1",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:43:37.231Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-2-tool-call-1-2",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:43:37.231Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Iowa basketball injuries 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-2-tool-result-1-2",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:43:37.890Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-2-assistant-2",
@@ -597,18 +597,19 @@
       "id": "r64-south-2-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:43:45.628Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-south-2"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-2-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:43:45.628Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-south-2\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 8/9\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"clemson\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"iowa\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -625,8 +626,7 @@
             "teamId": "iowa"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-south-2\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 8/9\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"clemson\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"iowa\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-2-assistant-final-3",
