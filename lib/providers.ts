@@ -23,6 +23,7 @@ export const LIVE_PROVIDERS: Exclude<ModelProvider, "mock">[] = [
   "qwen",
   "deepseek",
   "mimo",
+  "zai"
 ];
 
 const PROVIDER_SPECS: Record<Exclude<ModelProvider, "mock">, ProviderSpec> = {
@@ -67,6 +68,11 @@ const PROVIDER_SPECS: Record<Exclude<ModelProvider, "mock">, ProviderSpec> = {
   mimo: {
     envKey: "MIMO_API_KEY",
     baseUrlEnv: "MIMO_BASE_URL",
+  },
+  zai: {
+    envKey: "ZAI_API_KEY",
+    baseUrlEnv: "ZAI_BASE_URL",
+    defaultBaseUrl: "https://api.z.ai/api/paas/v4"
   },
 };
 

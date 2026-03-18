@@ -59,7 +59,8 @@ export const modelDefinitionSchema = z.object({
     "moonshot",
     "qwen",
     "deepseek",
-    "mimo"
+    "mimo",
+    "zai"
   ]),
   model: z.string(),
   description: z.string().optional(),

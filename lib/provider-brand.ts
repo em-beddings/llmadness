@@ -9,6 +9,7 @@ export type ProviderBrand =
   | "qwen"
   | "deepseek"
   | "mimo"
+  | "zai"
   | "unknown";
 
 const PROVIDER_LABELS: Record<ProviderBrand, string> = {
@@ -20,6 +21,7 @@ const PROVIDER_LABELS: Record<ProviderBrand, string> = {
   qwen: "Qwen",
   deepseek: "DeepSeek",
   mimo: "MiMo",
+  zai: "Z.AI",
   unknown: "Unknown"
 };
 
@@ -34,6 +36,7 @@ function inferFromText(value: string): ProviderBrand {
   if (normalized.includes("qwen")) return "qwen";
   if (normalized.includes("deepseek")) return "deepseek";
   if (normalized.includes("mimo")) return "mimo";
+  if (normalized.includes("glm") || normalized.includes("z.ai") || normalized.includes("z ai")) return "zai";
 
   return "unknown";
 }

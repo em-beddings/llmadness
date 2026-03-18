@@ -90,7 +90,8 @@ export type ModelProvider =
   | "moonshot"
   | "qwen"
   | "deepseek"
-  | "mimo";
+  | "mimo"
+  | "zai";
 
 export interface ModelDefinition {
   id: string;

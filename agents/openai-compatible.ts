@@ -75,6 +75,11 @@ const DEFAULT_RATE_LIMITS: Record<string, RateLimitBudget> = {
     requestsPerMinute: 30,
     inputTokensPerMinute: 120_000,
     minDelayMs: 350
+  },
+  zai: {
+    requestsPerMinute: 30,
+    inputTokensPerMinute: 120_000,
+    minDelayMs: 350
   }
 };
 

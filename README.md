@@ -36,7 +36,7 @@ It does three things:
 Current adapters:
 
 - `mock`: deterministic local adapter for demo/testing
-- live providers: generic chat-completions style adapter using iterative tool calls for `openai`, `anthropic`, `google-gemini`, `xai`, `moonshot`, `qwen`, `deepseek`, and `mimo`
+- live providers: generic chat-completions style adapter using iterative tool calls for `openai`, `anthropic`, `google-gemini`, `xai`, `moonshot`, `qwen`, `deepseek`, `mimo`, and `zai`
 
 Built-in agent tools:
 
