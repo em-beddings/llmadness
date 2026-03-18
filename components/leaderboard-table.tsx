@@ -16,6 +16,14 @@ function getProviderLabel(summary?: SubmissionSummary) {
   return provider || null;
 }
 
+function formatCost(value?: number | null) {
+  if (value == null || Number.isNaN(value)) {
+    return "—";
+  }
+
+  return `$${value.toFixed(2)}`;
+}
+
 export function LeaderboardTable({
   leaderboard,
   modelHrefBase,
@@ -75,6 +83,10 @@ export function LeaderboardTable({
                   <span className="leader-meta-label">Max</span>{" "}
                   {entry.pointsRemaining}
                 </span>
+                <span>
+                  <span className="leader-meta-label">Cost</span>{" "}
+                  {formatCost(entry.totalCostUsd)}
+                </span>
               </div>
               {summary?.championshipMatchup ? (
                 <div className="leaderboard-matchup">
@@ -128,6 +140,10 @@ export function LeaderboardTable({
               <div className="leader-remaining">
                 <strong>{entry.pointsRemaining}</strong>
                 <span className="leader-meta-label">Max</span>
+              </div>
+              <div className="leader-cost">
+                <strong>{formatCost(entry.totalCostUsd)}</strong>
+                <span className="leader-meta-label">Cost</span>
               </div>
               <div className="leader-bottomline leader-bottomline-nowrap">
                 <strong>{summary?.championshipPick ?? "Unknown"}</strong>

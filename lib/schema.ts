@@ -125,6 +125,7 @@ export const bracketSubmissionSchema = z.object({
   model: modelDefinitionSchema,
   generatedAt: z.string(),
   configId: z.string(),
+  totalCostUsd: z.number().nullable().optional().default(null),
   picks: z.array(bracketPickSchema),
   reasoning: z.array(reasoningStepSchema),
   toolCalls: z.array(agentToolCallSchema).default([]),

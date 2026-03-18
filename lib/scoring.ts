@@ -85,6 +85,7 @@ export function scoreSubmissions(
       totalPoints,
       maxPoints,
       pointsRemaining,
+      totalCostUsd: submission.totalCostUsd ?? null,
       accuracy: submission.picks.length === 0 ? 0 : correctCount / submission.picks.length,
       gameScores
     };

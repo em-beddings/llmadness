@@ -157,6 +157,7 @@ export class CentralBracketAgent {
       reasoning,
       runId,
       generatedAt: new Date().toISOString(),
+      totalCostUsd: null,
       toolCalls: gameRuns.flatMap((gameRun) => gameRun.toolCalls),
       gameRuns
     };

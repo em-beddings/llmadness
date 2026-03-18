@@ -14,6 +14,12 @@ function readArg(flag: string) {
 function normalizeSubmission(submission: BracketSubmission): BracketSubmission {
   return {
     ...submission,
+    totalCostUsd:
+      submission.totalCostUsd == null
+        ? null
+        : typeof submission.totalCostUsd === "string"
+          ? Number(submission.totalCostUsd)
+          : submission.totalCostUsd,
     picks: submission.picks.map((pick) => ({
       ...pick,
       confidence: normalizeConfidenceValue(pick.confidence) as number

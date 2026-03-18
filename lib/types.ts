@@ -130,6 +130,7 @@ export interface BracketSubmission {
   model: ModelDefinition;
   generatedAt: string;
   configId: string;
+  totalCostUsd?: number | null;
   picks: BracketPick[];
   reasoning: ReasoningStep[];
   toolCalls: AgentToolCall[];
@@ -169,6 +170,7 @@ export interface LeaderboardEntry {
   totalPoints: number;
   maxPoints: number;
   pointsRemaining: number;
+  totalCostUsd?: number | null;
   accuracy: number;
   gameScores: GameScore[];
 }
