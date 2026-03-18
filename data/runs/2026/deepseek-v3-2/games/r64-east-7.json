@@ -1,0 +1,943 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "deepseek-v3-2",
+    "label": "DeepSeek V3.2",
+    "provider": "deepseek",
+    "model": "deepseek-reasoner",
+    "description": "DeepSeek • General-purpose V-series model optimized for reasoning, coding, and efficient inference."
+  },
+  "gameId": "r64-east-7",
+  "generatedAt": "2026-03-18T09:40:46.002Z",
+  "pick": {
+    "gameId": "r64-east-7",
+    "winnerId": "ucla",
+    "confidence": "High",
+    "rationale": "UCLA's significantly higher efficiency ratings, particularly a top-20 offense that should exploit UCF's vulnerable defense, gives them a clear edge. The Bruins' leading scorer Tyler Bilodeau is expected to play despite a minor knee strain, and their experience in the tough Big Ten has prepared them for tournament play. While UCF is capable, UCLA's superior offensive firepower and defensive discipline should control the game and secure a win."
+  },
+  "reasoningStep": {
+    "id": "east-7-analysis",
+    "title": "Efficiency and Health Comparison for UCLA vs UCF",
+    "summary": "Investigated team ratings, injury news, and recent context to evaluate the matchup.",
+    "evidence": "UCLA ranks 24th in Torvik and 27th in KenPom, with a top-20 offense; UCF ranks 58th and 54th with a defense outside the top 100. UCLA's leading scorer Tyler Bilodeau (knee strain) is expected to play, while UCF had multiple players dealing with injuries during the Big 12 Tournament. UCLA's stronger schedule and better metrics indicate a significant advantage."
+  },
+  "toolCalls": [
+    {
+      "id": "tool-olg7xj5s",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "ucla",
+          "ucf"
+        ]
+      },
+      "startedAt": "2026-03-18T09:39:15.330Z",
+      "completedAt": "2026-03-18T09:39:15.339Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "ucla",
+          "teamName": "UCLA",
+          "torvik": {
+            "rank": 24,
+            "team": "UCLA",
+            "conf": "B10",
+            "record": "23-11",
+            "adjoe": 124.49524577151492,
+            "oe Rank": 17,
+            "adjde": 101.73772797460148,
+            "de Rank": 49,
+            "barthag": 0.9106418470962409,
+            "rank.1": 24,
+            "proj. W": 23,
+            "Proj. L": 11,
+            "Pro Con W": 13,
+            "Pro Con L": 7,
+            "Con Rec.": "13-7",
+            "sos": 0.7136274946784696,
+            "ncsos": 0.4861583808845608,
+            "consos": 0.8189877975933623,
+            "Proj. SOS": 0.7136274946784696,
+            "Proj. Noncon SOS": 0.4861583808845608,
+            "Proj. Con SOS": 0.8189877975933623,
+            "elite SOS": 0.6374601353204021,
+            "elite noncon SOS": 0.8026907471475476,
+            "Opp OE": 116.28354697121708,
+            "Opp DE": 103.51479281044573,
+            "Opp Proj. OE": 116.28354697121708,
+            "Opp Proj DE": 103.51479281044573,
+            "Con Adj OE": 124.99041984498136,
+            "Con Adj DE": 102.56497367571004,
+            "Qual O": 126.79653021878352,
+            "Qual D": 105.2530362812684,
+            "Qual Barthag": 0.8948706894697158,
+            "Qual Games": 16,
+            "FUN": 0.0201417511235171,
+            "ConPF": 1511,
+            "ConPA": 1445,
+            "ConPoss": 1295.3625000000002,
+            "ConOE": 1.166468845593415,
+            "ConDE": 1.115517856970539,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.65,
+            "WAB": 3.555697316105933,
+            "WAB Rk": 28,
+            "Fun Rk": 126,
+            "adjt": 64.65847946120198
+          },
+          "kenpom": {
+            "rank": 27,
+            "team": "UCLA",
+            "conf": "B10",
+            "record": "23-11",
+            "adj_em": 21.64,
+            "adj_o": 123.8,
+            "adj_o_rank": 22,
+            "adj_d": 102.1,
+            "adj_d_rank": 53,
+            "adj_t": 64.7,
+            "adj_t_rank": 318,
+            "luck": 0.017,
+            "luck_rank": 136,
+            "sos_adj_em": 12.14,
+            "sos_adj_em_rank": 33,
+            "sos_opp_o": 116.1,
+            "sos_opp_o_rank": 35,
+            "sos_opp_d": 103.9,
+            "sos_opp_d_rank": 37,
+            "ncsos_adj_em": -2.22,
+            "ncsos_adj_em_rank": 248
+          }
+        },
+        {
+          "teamId": "ucf",
+          "teamName": "UCF",
+          "torvik": {
+            "rank": 58,
+            "team": "UCF",
+            "conf": "B12",
+            "record": "21-11",
+            "adjoe": 120.01879737593126,
+            "oe Rank": 39,
+            "adjde": 105.6510714134995,
+            "de Rank": 114,
+            "barthag": 0.8124981060339062,
+            "rank.1": 58,
+            "proj. W": 21,
+            "Proj. L": 11,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.7097951595483944,
+            "ncsos": 0.4774584426604157,
+            "consos": 0.8398383868136458,
+            "Proj. SOS": 0.7097951595483944,
+            "Proj. Noncon SOS": 0.4774584426604157,
+            "Proj. Con SOS": 0.8398383868136458,
+            "elite SOS": 0.6601889876932714,
+            "elite noncon SOS": 0.8492918998586623,
+            "Opp OE": 114.58970583222283,
+            "Opp DE": 103.06443482025227,
+            "Opp Proj. OE": 114.58970583222283,
+            "Opp Proj DE": 103.06443482025227,
+            "Con Adj OE": 121.41826893860296,
+            "Con Adj DE": 105.87117937605584,
+            "Qual O": 119.86069975248174,
+            "Qual D": 104.52550795493195,
+            "Qual Barthag": 0.828401373765229,
+            "Qual Games": 13,
+            "FUN": 0.1167573423663077,
+            "ConPF": 1406,
+            "ConPA": 1466,
+            "ConPoss": 1271.6,
+            "ConOE": 1.1056936143441332,
+            "ConDE": 1.152878263604907,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 2.0775601242147856,
+            "WAB Rk": 37,
+            "Fun Rk": 7,
+            "adjt": 69.09602430540978
+          },
+          "kenpom": {
+            "rank": 54,
+            "team": "UCF",
+            "conf": "B12",
+            "record": "21-11",
+            "adj_em": 15.05,
+            "adj_o": 120.5,
+            "adj_o_rank": 40,
+            "adj_d": 105.5,
+            "adj_d_rank": 101,
+            "adj_t": 69.3,
+            "adj_t_rank": 78,
+            "luck": 0.097,
+            "luck_rank": 17,
+            "sos_adj_em": 11.89,
+            "sos_adj_em_rank": 38,
+            "sos_opp_o": 115,
+            "sos_opp_o_rank": 60,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 16,
+            "ncsos_adj_em": -2.59,
+            "ncsos_adj_em_rank": 257
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-9f1wfy1q",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UCLA basketball 2026 March Madness tournament injury news",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T09:39:20.393Z",
+      "completedAt": "2026-03-18T09:39:21.215Z",
+      "summary": "Returned 5 search results for \"UCLA basketball 2026 March Madness tournament injury news\".",
+      "result": [
+        {
+          "title": "UCLA&#x27;s Tyler Bilodeau (knee strain) expected for NCAA tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48206390%2Fucla%2Dtyler%2Dbilodeau%2Dknee%2Dstrain%2Dexpected%2Dncaa%2Dtournament&rut=5a15a9f2c3df4565d0aa0eea450d8024cab9c4e83590ce68038ea15247846921",
+          "snippet": "UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament ."
+        },
+        {
+          "title": "UCLA 88-84 Michigan State (Mar 13, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851383&rut=398ed293d86952b5251396b56dec3d58b5c6e72de707bf1092af22188372965f",
+          "snippet": "Game summary of the UCLA Bruins vs. Michigan State Spartans NCAAM game, final score 88-84, from March 13, 2026 on ESPN."
+        },
+        {
+          "title": "UCLA loses Bilodeau but ousts Michigan St. in Big Ten quarters",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48201354%2Fucla%2Dloses%2Dbilodeau%2Dousts%2Dmichigan%2Dst%2Dbig%2Dten%2Dquarters&rut=076032f37e8b5a3422738755f8ea81573c5cfa1e10504258d8a2bab183540551",
+          "snippet": "UCLA star Tyler Bilodeau suffered a right leg injury that will likely sideline him for at least one game, but the Bruins held off No. 8 Michigan State 88-84 to advance to the Big Ten tournament ..."
+        },
+        {
+          "title": "UCLA 88-84 Michigan State (Mar 13, 2026) Game Recap - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401851383&rut=9bb9183efa94c7a1e13214395cbb25afee59d526c37fa77bb7ae345f64c75154",
+          "snippet": "Expert recap and game analysis of the UCLA Bruins vs. Michigan State Spartans NCAAM game from March 13, 2026 on ESPN."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=0c86a36b38fe8a85cfca17567cf51b782b5e714eb40e4e241fb8a636a44aaba1",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        }
+      ]
+    },
+    {
+      "id": "tool-lm6az0i1",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UCF basketball 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T09:39:25.434Z",
+      "completedAt": "2026-03-18T09:39:25.565Z",
+      "summary": "Returned 0 search results for \"UCF basketball 2026 NCAA tournament\".",
+      "result": []
+    },
+    {
+      "id": "tool-iumbmpx4",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UCF basketball 2026 injury news March Madness",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T09:39:30.122Z",
+      "completedAt": "2026-03-18T09:39:30.912Z",
+      "summary": "Returned 5 search results for \"UCF basketball 2026 injury news March Madness\".",
+      "result": [
+        {
+          "title": "UCF Basketball Injuries To Watch For March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fucf%2Fbasketball%2Fucf%2Dknights%2Dbasketball%2Dhoops%2Dinjuries%2Dto%2Dwatch%2Dfor%2Dmarch%2Dmadness%2Djohnny%2Ddawkins%2Djohn%2Dbol%2Driley%2Dkugel%2Djamichael%2Dstillwell%2D01kkq4qmnta0&rut=e2b6ea3e06f0b1ef307f16c91b6496053a6e1f18e01f55b30c61092c9da3131b",
+          "snippet": "Three UCF Knights men&#x27;s basketball players officially dealt with injuries during the Big 12 Tournament."
+        },
+        {
+          "title": "Can UCF basketball make a run in March Madness bracket? Our prediction",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fucf%2F2026%2F03%2F16%2Fucf%2Dpredictions%2Dmarch%2Dmadness%2Dpicks%2Dcollege%2Dbasketball%2F89181127007%2F&rut=42b250f9d9e20845bed9127ac676340e0151657714175cbe9ed463dfe461cbf7",
+          "snippet": "Can UCF basketball reach NCAA bracket&#x27;s Sweet 16? Our 2026 March Madness predictions show how Knights can make run in tournament."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for."
+        },
+        {
+          "title": "UCF vs UCLA prediction, pick, odds March Madness first round",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.news%2Djournalonline.com%2Fstory%2Fsports%2Fcollege%2Fucf%2F2026%2F03%2F15%2Fucf%2Ducla%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2F89142675007%2F&rut=c225a9a208f6476e1e8a1e4add9a0ca78009fb2cef1e10d8d87906af10aadb1d",
+          "snippet": "It&#x27;s the UCF Knights vs. the UCLA Bruins in the March Madness bracket. Here&#x27;s our prediction for the 2026 NCAA Tournament basketball game."
+        },
+        {
+          "title": "3 reasons UCF basketball could still make it to March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fbasketball%2F3%2Dreasons%2Ducf%2Dbasketball%2Dcould%2Dstill%2Dmake%2Dit%2Dto%2Dmarch%2Dmadness%2Far%2DAA1YvGMc&rut=b6786a0aa619c0031be78db4a5302192f27ecfd5125f8101c491ace9ea4ae7d7",
+          "snippet": "Let the waiting begin, though UCF&#x27;s men&#x27;s basketball team certainly helped its own March Madness cause by avoiding a one-and-done at this week&#x27;s Big 12 tournament. The Knights staged a late ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-i7gx1jsx",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament"
+      },
+      "startedAt": "2026-03-18T09:39:36.192Z",
+      "completedAt": "2026-03-18T09:39:36.660Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament",
+        "text": "UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament - ESPN UCLA's Bilodeau set to return for NCAA tourney --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates UCLA's Bilodeau set to return for NCAA tourney 4d Mark saves day, sends Texas to NCAA first round Texas Longhorns 5h Adam Rittenberg Howard checks last box with first NCAAT win Howard Bison 8h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 17h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 18h EMU hires Clemson assistant Donlon as coach Clemson Tigers 10h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 14h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 17h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 20h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 21h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 2d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 5h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 17h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament play UCLA Bruins vs. Michigan State Spartans: Game Highlights (1:19) UCLA Bruins vs. Michigan State Spartans: Game Highlights (1:19) ESPN News Services Multiple Authors Mar 14, 2026, 03:31 PM ET Email Print Open Extended Reactions UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament, a school spokesman said Saturday. Bilodeau was ruled out for the Bruins' Big Ten tournament semifi"
+      }
+    },
+    {
+      "id": "tool-ztb7m9ci",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.si.com/college/ucf/basketball/ucf-knights-basketball-hoops-injuries-to-watch-for-march-madness-johnny-dawkins-john-bol-riley-kugel-jamichael-stillwell-01kkq4qmnta0"
+      },
+      "startedAt": "2026-03-18T09:39:42.614Z",
+      "completedAt": "2026-03-18T09:39:43.721Z",
+      "summary": "Fetched https://www.si.com/college/ucf/basketball/ucf-knights-basketball-hoops-injuries-to-watch-for-march-madness-johnny-dawkins-john-bol-riley-kugel-jamichael-stillwell-01kkq4qmnta0 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.si.com/college/ucf/basketball/ucf-knights-basketball-hoops-injuries-to-watch-for-march-madness-johnny-dawkins-john-bol-riley-kugel-jamichael-stillwell-01kkq4qmnta0",
+        "text": "UCF Basketball Injuries To Watch For March Madness Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW FOOTBALL FOOTBALL RECRUITING COLLEGE FOOTBALL NEWS HS FOOTBALL BASKETBALL UCF SPORTS BASEBALL SI.COM Football Basketball Videos Recruiting UCF Sports More from UCF Knights On SI FOOTBALL FOOTBALL RECRUITING COLLEGE FOOTBALL NEWS HS FOOTBALL BASKETBALL UCF SPORTS BASEBALL SI.COM UCF Basketball Injuries To Watch For March Madness Three UCF Knights men's basketball players officially dealt with injuries during the Big 12 Tournament Bryson Turner | Share on Facebook Share on X Add us as a preferred source Mar 11, 2026; Kansas City, MO, USA; UCF Knights center John Bol (7) shoots the ball during the first half against the Cincinnati Bearcats at T-Mobile Center. Mandatory Credit: William Purnell-Imagn Images | William Purnell-Imagn Images In this story: UCF Knights The UCF men&#39;s basketball team has not made it through the 2025-26 unscathed. --> The UCF men&#39;s basketball team has not made it through the 2025-26 unscathed. While this is also the case with most college basketball teams, there can be a difference in exactly when and who the injury bug strikes. In the case of the Knights, it struck fairly late. --> While this is also the case with most college basketball teams, there can be a difference in exactly when and who the injury bug strikes. In the case of the Knights, it struck fairly late. So, as the Knights prepare to hear their name called during the NCAA Tournament selection show for the first time since 2019, here are three UCF players to keep an eye on from an injury standpoint heading into March Madness. --> So, as the Knights prepare to hear their name called during the NCAA Tournament selection show for the first time since 2019, here are three UCF players to keep an eye on from an injury standpoint heading into March Madness. 1. John Bol The Knights&#39; tallest player, John Bol, has not missed a game this season, starting in every single one. However, he is at the top of this list because his ailment is the one the public knows the least about as of Saturday night. --> The Knights&#39; tallest player, John Bol, has not missed a game this season, starting in every single one. However, he is at the top of this list because his ailment is the one the public knows the least about as of Saturday night. During UCF&#39;s Big 12 quarterfinal game against Arizona, Bol came to the sidelines in the early goings of the second half out of breath, according to ESPN sideline reporter Kris Budden on the broadcast. It proceeded to show Bol communicating with trainers and pointing to his chest. --> During UCF&#39;s Big 12 quarterfinal game against Arizona, Bol came to the sidelines in the early goings of the second half out of breath, according to ESPN sideline reporter Kris Budden on the broadcast. It proceeded to show Bol communicating with trainers and pointing to his chest. Bol returned to the"
+      }
+    },
+    {
+      "id": "tool-easgaygv",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.news-journalonline.com/story/sports/college/ucf/2026/03/15/ucf-ucla-march-madness-prediction-ncaa-bracket/89142675007/"
+      },
+      "startedAt": "2026-03-18T09:39:49.146Z",
+      "completedAt": "2026-03-18T09:39:49.335Z",
+      "summary": "Fetched https://www.news-journalonline.com/story/sports/college/ucf/2026/03/15/ucf-ucla-march-madness-prediction-ncaa-bracket/89142675007/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.news-journalonline.com/story/sports/college/ucf/2026/03/15/ucf-ucla-march-madness-prediction-ncaa-bracket/89142675007/",
+        "text": "UCF vs UCLA prediction, pick, odds March Madness first round Skip to main content Home Columns High School College Racing Baseball Fishing and Outdoors Golf NFL SportsbookWire MMA Junkie Golf Week UCF UCF basketball vs UCLA prediction: Our pick for 2026 NCAA bracket first round Chris Boyle Daytona Beach News-Journal Show Caption Hide Caption UCF basketball player Themus Fulks reflects on NCAA Tournament stage Point guard Themus Fulks played a crucial role in the UCF Knights reaching their first March Madness tournament since 2019. The tenth-seeded UCF Knights will face the seventh-seeded UCLA Bruins in the first round of the NCAA Tournament. UCF coach Johnny Dawkins and UCLA coach Mick Cronin have previously faced each other six times. UCLA's leading scorer, Tyler Bilodeau, is expected to play after suffering a mild knee strain in the Big Ten tournament. ORLANDO — The East region is loaded with college basketball's traditional bluebloods, including the UCF Knights ' first-round opponent, 11-time national champion UCLA . Tenth-seeded UCF (21-11) will square off with the Bruins (23-11) in an opening-round NCAA Tournament matchup at 7:25 p.m. on March 20 at Xfinity Mobile Arena in Philadelphia. By contrast, UCF will make just its sixth March Madness appearance since joining Division I in 1984-85. Johnny Dawkins coached the Knights to their last trip to the Big Dance back in 2019. Buy UCF NCAA tournament tickets vs. UCLA \"You can never take these opportunities for granted,\" Dawkins said about an hour after his team learned its tournament destination on Selection Sunday. \"I'm definitely happy for my team, my staff, trainers, doctors, athletic director, deputy athletic director; you name anyone that's in our organization, our family, I'm very, very happy for everyone.\" UCF survived four defeats in its final five games, the lone exception being a late comeback and overtime triumph over Cincinnati in the second round of the Big 12 tournament, to secure the No. 10 seed in the East. The Knights went 9-9 during the regular season in one of the country's toughest conferences, notching three ranked wins (Kansas, Texas Tech, BYU). Fifth-year senior point guard Themus Fulks set the school's all-time, single-season record for assists with 214 and counting. Orlando native Riley Kugel, who played NCAA Tournament games for Florida and Mississippi State, leads the team in scoring at 14.4 points per game. As a team, UCF scores 81 points per game and shoots 36.2% from 3-point range, a figure that took a sizable dent after a 6-for-45 combined showing across its Big 12 tournament contests versus Cincinnati and Arizona. But, what about the Bruins? Let's learn a little bit about UCF's upcoming opponent, which earned a No. 7 seed after reaching the Big Ten tournament semifinals. Think you can beat our expert? Join USA TODAY’s Bracket Challenge today! Ready to win March Madness? Join USA TODAY’s Survivor Pool today! Johnny Dawkins, Mick Cronin have met 6 times before UCLA h"
+      }
+    },
+    {
+      "id": "tool-ubbi2lzv",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UCLA vs UCF head-to-head basketball recent",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T09:39:53.982Z",
+      "completedAt": "2026-03-18T09:39:54.769Z",
+      "summary": "Returned 5 search results for \"UCLA vs UCF head-to-head basketball recent\".",
+      "result": [
+        {
+          "title": "UCLA Basketball and UCF in Head to Head Stat Comparison",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fsites%2Fbruin%2Dreport%2Donline%2Fnews%2Fucla%2Dbasketball%2Dand%2Ducf%2Din%2Dhead%2Dto%2Dhead%2Dstat%2Dcomparison%2F&rut=b3c96a92f1bc245d087a2e6d91448e9a1f975546b2c2517e43b13d34d967fbac",
+          "snippet": "UCLA caught a 7 seed in the NCAA Tournament and will face No. 10 UCF Friday in Philadelphia, Penn. For an analysis of UCLA&#x27;s potential tournament path, GO HERE. How does UCLA and UCF match up this season? Here are some quick numbers. Take advantage of Bruin Report Online&#x27;s EPIC $1 for 5 months ..."
+        },
+        {
+          "title": "UCLA vs UCF scores & predictions | Sofascore",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sofascore.com%2Fbasketball%2Fmatch%2Fucf%2Dknights%2Ducla%2Dbruins%2FBRnsaKJ&rut=9c9d969bba647a51669daf2142e7facf972b783d90b40bb04701aae5d29351d3",
+          "snippet": "Player statistics Head to head streaks Team streaks Current odds and predictions Sofascore community votes on which team is more likely to win the game UCLA Bruins - UCF Knights video highlights are collected in the Media tab for the most popular matches as soon as videos appear on video hosting sites like Youtube or Dailymotion."
+        },
+        {
+          "title": "Yes, the East Region is loaded, but UCLA must solely focus on UCF",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuclawire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fucla%2Fmens%2Dbasketball%2F2026%2F03%2F16%2Fuclas%2Dfirst%2Dround%2Dmatchup%2Dhas%2Dmore%2Dexperience%2Dthan%2Dyou%2Dmight%2Dexpect%2Dcollege%2Dbasketball%2F89185440007%2F&rut=ea90df4048b2e9ae4c019ac27146360f1a31b20acd951a93216302ea9c6173b8",
+          "snippet": "UCLA has certainly had their struggles outside of the Pacific Time Zone since joining the Big Ten ahead of last year but perhaps last week&#x27;s showing in the conference tournament is a sign of better things to come when the Bruins head east."
+        },
+        {
+          "title": "2025-2026 NCAA BB Games: Knights Bruins Head to Head -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fknights%2Dbruins%2D2026%2D03%2D20%2Fhead%2Dto%2Dhead&rut=a6121892514764b3e568358870f9c4b061e2dcb775e5ddb09adb6a088db68488",
+          "snippet": "Betting analysis for the 2025-2026 NCAA Basketball season matchup between UCF and UCLA . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "UCF vs. UCLA (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856496%2Fucf%2Ducla&rut=ada94af36fa456ff90295cb5a84908116cd2d9ea13fe9281a9bfe4e6132fbfbb",
+          "snippet": "Live coverage of the UCF Knights vs . UCLA Bruins NCAAM game on ESPN, including live score, highlights and updated stats."
+        }
+      ]
+    },
+    {
+      "id": "tool-nutssloo",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.on3.com/sites/bruin-report-online/news/ucla-basketball-and-ucf-in-head-to-head-stat-comparison/"
+      },
+      "startedAt": "2026-03-18T09:39:59.894Z",
+      "completedAt": "2026-03-18T09:40:00.905Z",
+      "summary": "Fetched https://www.on3.com/sites/bruin-report-online/news/ucla-basketball-and-ucf-in-head-to-head-stat-comparison/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.on3.com/sites/bruin-report-online/news/ucla-basketball-and-ucf-in-head-to-head-stat-comparison/",
+        "text": "UCLA Basketball and UCF in Head-to-Head Stat Comparison - On3 Skip to main content Mobile Menu News Forums Lobby Premium Football Forum Premium Hoops Forum Baseball Forum Basketball Forum Football Forum Other Sports Tickets Exchange Football News Feed Roster Schedule Transfer Portal Ranking Transfer Portal UCLA Draft History FB Recruiting News Feed Search Commitments Transfers Team Rankings Player Rankings Industry Comparison Offers Visits Recruiting Prediction Machine Basketball News Feed Roster Schedule Transfer Portal Ranking Transfer Portal UCLA Draft History BB Recruiting News Feed Search Commitments Transfers Team Rankings Player Rankings Industry Comparison Offers Visits Recruiting Prediction Machine About About Staff Bruin Report Online On3+ Subscription Contact Podcasts and Shows Join Now Login Message Boards CBB Transfer Portal MegaBoard 2027 Rivals300 Team Recruiting Rankings Search UCLA Basketball and UCF in Head-to-Head Stat Comparison by: Tracy Pierson 03/16/26 BruinReport Read In App UCLA caught a 7 seed in the NCAA Tournament and will face No. 10 UCF Friday in Philadelphia, Penn. For an analysis of UCLA’s potential tournament path, GO HERE . How does UCLA and UCF match up this season? Here are some quick numbers. Take advantage of Bruin Report Online’s EPIC $1 for 5 months deal!!! Join the No. 1 independent source on UCLA sports and recruiting with our introductory offer!! Get unmatched insider Bruin coverage as BRO moves over to the industry-leading On3 network for just $1 for 5 months!! There is no promo code required for this offer, just HIT THIS LINK now, and you’ll be good to go!! National ranking in parentheses. Points Per Game: UCLA 77.7 (102nd), UCF 81.0 (49th) Adjusted Tempo: UCLA 64.6 (317th), UCF 69.2 (78th) Points Allowed Per Game: UCLA 71.0 (80th) UCF 78.5 (278th) Effective Field Goal Percentage: UCLA 53.9% (71st), UCF 52.8% (112th) Opponent Effective Field Goal Percentage: UCLA 50.4% (130th), UCF 52.4% (236th) Three-Point Shooting Percentage: UCLA 38.2% (16th), UCF 36.2% (49th) Free-Throw Percentage: UCLA 76.7% (41st), UCF 74% (138th) Points Per Posession: UCLA 1.20 (44th), UCF 1.11 (74th) Rebounding Percentage Rate: UCLA 49.6% (203rd), UCF 52.6% (55th) Assist/Turnover Ratio: UCLA 1.838 (7th), UCF 1.408 (70th) Turnover Rate: UCLA 13.4% (12th), UCF 15.7% (120th) UCLA point guard Donovan Dent (2) celebrates with teammate Skyy Clark (55) during the second half of the Big Ten tournament quarterfinals against Michigan State at United Center in Chicago on March 13, 2026. (Credit: Kamil Krzaczynski | Imagn Images) Steals Per Possession: UCLA 9.7% (140th), UCF 7.8% (307th) Adjusted Offensive Efficiency (National rank): UCLA 22nd, UCF 40th Adjusted Defensive Efficiency: UCLA 53rd, UCF 101st NET Rankings: UCLA 31st, UCF 51st Wins Above Bubble (National Rank): UCLA 27th, UCF 35th Go to On3 Home About On3 About Advertisers Careers Contact Support Customer Service Privacy Policy Children&#x27;s Privacy Policy Terms of Service On3"
+      }
+    },
+    {
+      "id": "tool-6oi07ju2",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UCLA basketball 2026 Big Ten tournament results",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T09:40:06.442Z",
+      "completedAt": "2026-03-18T09:40:07.282Z",
+      "summary": "Returned 5 search results for \"UCLA basketball 2026 Big Ten tournament results\".",
+      "result": [
+        {
+          "title": "2026 Big Ten tournament: Bracket, schedule, scores for men&#x27;s basketball",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Farticle%2F2026%2D03%2D14%2F2026%2Dbig%2Dten%2Dtournament%2Dbracket%2Dschedule%2Dscores%2Dmens%2Dbasketball&rut=b0cf557d7720176a60cbb91fc7b1642b33a397b767312dc6acf2a24a55a1649a",
+          "snippet": "Follow along here for everything you need to know about the 2026 Big Ten men&#x27;s basketball tournament , including the bracket and live scores."
+        },
+        {
+          "title": "Big Ten basketball tournament 2026 scores, bracket as Purdue wins ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fbig%2Dten%2Dtournament%2D2026%2Dbracket%2Dschedule%2Dscores%2F&rut=310310da80a205fb458df3a347b7c16c4bd649235e8321206e74a728c01b1d45",
+          "snippet": "Get up-to-date results , plus what they mean for the NCAA Tournament bubble and seeding with our CBS Sports Selection Sunday LIVE BLOG. 2026 Big Ten Tournament scores, results"
+        },
+        {
+          "title": "Purdue 73-66 UCLA (Mar 14, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851386&rut=beae9576b8ba1e28436d110d5c95c1a3c0e358aaf37c4a4bd3d0820e15d473ca",
+          "snippet": "Game summary of the Purdue Boilermakers vs. UCLA Bruins NCAAM game, final score 73-66, from March 14, 2026 on ESPN."
+        },
+        {
+          "title": "2026 Big Ten basketball tournament bracket, final scores",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsbookwire.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F14%2Fbig%2Dten%2Dtournament%2Dschedule%2Dtimes%2Dtv%2Dchannel%2Dscores%2F89156333007%2F&rut=421ae0120e0f0189b6594c1bf8487d367f23cd5e1584e9b39a7ba2ce5677509b",
+          "snippet": "Updated 2026 Big Ten Tournament bracket for men&#x27;s basketball with scores, game schedules, times, TV channel and more."
+        },
+        {
+          "title": "Men&#x27;s Basketball Falls to Purdue at Big Ten Tournament, 73-66 - UCLA",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuclabruins.com%2Fnews%2F2026%2F3%2F14%2Fmens%2Dbasketball%2Dfalls%2Dto%2Dpurdue%2Dat%2Dbig%2Dten%2Dtournament&rut=63bc486f38a7bb5d75920ac498db3d709b6f54962f307e69eadf960cfa28e8af",
+          "snippet": "CHICAGO - The No. 6-seed UCLA men&#x27;s basketball team lost to No. 7-seed Purdue, 73-66, in a semifinal contest of the Big Ten Tournament at the United Center on Saturday afternoon. The Bruins (23-11) trailed Purdue at halftime, 34-27, but rallied back from a 13-point second-half deficit, tying the game twice in the final five minutes."
+        }
+      ]
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-east-7-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T09:39:11.185Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-east-7\nCurrent game label: East 7/10\nRound: Round of 64\nResolved teams: UCLA (ucla) vs UCF (ucf)\nPrior committed picks: 10"
+    },
+    {
+      "id": "r64-east-7-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T09:39:11.185Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-east-7\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 7/10\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"ucla\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"ucf\"\n      }\n    },\n    \"slotAName\": \"UCLA\",\n    \"slotBName\": \"UCF\",\n    \"slotATeamId\": \"ucla\",\n    \"slotBTeamId\": \"ucf\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": \"Medium\",\n        \"rationale\": \"Texas's high-powered offense, which ranks among the nation's best, should be the difference in a close game against NC State. The Longhorns have the firepower to overcome their defensive deficiencies, while NC State's inconsistent season makes them vulnerable in a one-and-done setting. Expect Texas to make enough key plays down the stretch to secure a narrow victory.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": \"High\",\n        \"rationale\": \"SMU's significantly higher efficiency ratings, particularly a top-30 offense that should exploit Miami (OH)'s weaker defense, is the key differentiator. The Mustangs' experience against a much tougher ACC schedule has prepared them for this moment, while the RedHawks' remarkable 31-1 record was built against a far weaker MAC. Expect SMU's superior talent and athleticism to control the game and secure a win, though Miami's resilience could keep it competitive for a while.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"howard\",\n        \"confidence\": \"Medium\",\n        \"rationale\": \"Howard's recent head-to-head victory over UMBC demonstrates their capability to win close games in tournament settings. Although UMBC holds slightly better efficiency ratings, Howard's psychological edge and proven ability to perform under pressure in their previous matchup make them the choice. In the high-stakes First Four environment, recent success often trumps minor statistical advantages, favoring the Bison to advance.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": \"Medium\",\n        \"rationale\": \"Lehigh's slight edge in efficiency metrics, particularly on offense, gives them the advantage in this First Four matchup. The Mountain Hawks come from a marginally stronger Patriot League and have shown resilience in winning their conference tournament. While Prairie View A&M is capable, Lehigh's better offensive ranking should be the difference in a closely contested game.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": \"Very High\",\n        \"rationale\": \"Duke is the No. 1 overall seed with the nation's top defense and an elite offense, even without two starters. The Blue Devils' talent, depth, and experience against a tough ACC schedule are far beyond what Siena has faced, making a historic upset extremely unlikely. Expect Duke to control the game from the opening tip and win comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"ohio-state\",\n        \"confidence\": \"Medium\",\n        \"rationale\": \"Ohio State's top-30 offensive efficiency, led by senior guard Bruce Thornton, provides a slight advantage over TCU's strong defense. The Buckeyes' overall higher KenPom rating and experience in close games from the Big Ten should help them in a tight, low-possession contest. Expect a narrow victory for Ohio State in a typical 8-9 seed battle.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": \"High\",\n        \"rationale\": \"St. John's elite defense, ranked 12th nationally, should overwhelm Northern Iowa's mediocre offense and create transition opportunities. The Red Storm's significant advantage in efficiency metrics reflects their superior talent and Big East-tested resilience. While 12-seed upsets are possible, Northern Iowa's offensive limitations make it difficult for them to score enough to pull off the shocker.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": \"High\",\n        \"rationale\": \"Kansas's elite defense, ranked 10th nationally in adjusted efficiency, should overwhelm California Baptist's offense and control the game. The Jayhawks' experience against a rigorous Big 12 schedule has prepared them for tournament play, while the Lancers' lack of high-major competition leaves them vulnerable. Though 13-seed upsets are possible, Kansas's defensive prowess and talent advantage make them a reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": \"High\",\n        \"rationale\": \"Louisville's significant advantage in efficiency metrics, ranking 16th in Torvik and 18th in KenPom compared to South Florida's 50th in both systems, reflects their superior talent and high-major pedigree. The Cardinals' balanced top-25 offense and defense, tested against a rigorous ACC schedule, should overwhelm a South Florida squad that lacks comparable firepower on either end. While 11-seed upsets are possible, Louisville's clear edge in both adjusted efficiency and quality of competition makes them a reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": \"High\",\n        \"rationale\": \"Michigan State's high-major talent, fortified by a challenging Big Ten schedule, provides a significant edge over North Dakota State. The Spartans' defensive discipline and tournament experience should neutralize the Bison's balanced scoring attack. While North Dakota State is capable, Michigan State's overall superiority and heavy favoritism in the odds make them a clear choice to advance.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": \"Medium\",\n      \"rationale\": \"Texas's high-powered offense, which ranks among the nation's best, should be the difference in a close game against NC State. The Longhorns have the firepower to overcome their defensive deficiencies, while NC State's inconsistent season makes them vulnerable in a one-and-done setting. Expect Texas to make enough key plays down the stretch to secure a narrow victory.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": \"High\",\n      \"rationale\": \"SMU's significantly higher efficiency ratings, particularly a top-30 offense that should exploit Miami (OH)'s weaker defense, is the key differentiator. The Mustangs' experience against a much tougher ACC schedule has prepared them for this moment, while the RedHawks' remarkable 31-1 record was built against a far weaker MAC. Expect SMU's superior talent and athleticism to control the game and secure a win, though Miami's resilience could keep it competitive for a while.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-16\",\n      \"winnerId\": \"howard\",\n      \"confidence\": \"Medium\",\n      \"rationale\": \"Howard's recent head-to-head victory over UMBC demonstrates their capability to win close games in tournament settings. Although UMBC holds slightly better efficiency ratings, Howard's psychological edge and proven ability to perform under pressure in their previous matchup make them the choice. In the high-stakes First Four environment, recent success often trumps minor statistical advantages, favoring the Bison to advance.\"\n    },\n    {\n      \"gameId\": \"ff-south-16\",\n      \"winnerId\": \"lehigh\",\n      \"confidence\": \"Medium\",\n      \"rationale\": \"Lehigh's slight edge in efficiency metrics, particularly on offense, gives them the advantage in this First Four matchup. The Mountain Hawks come from a marginally stronger Patriot League and have shown resilience in winning their conference tournament. While Prairie View A&M is capable, Lehigh's better offensive ranking should be the difference in a closely contested game.\"\n    },\n    {\n      \"gameId\": \"r64-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": \"Very High\",\n      \"rationale\": \"Duke is the No. 1 overall seed with the nation's top defense and an elite offense, even without two starters. The Blue Devils' talent, depth, and experience against a tough ACC schedule are far beyond what Siena has faced, making a historic upset extremely unlikely. Expect Duke to control the game from the opening tip and win comfortably.\"\n    },\n    {\n      \"gameId\": \"r64-east-2\",\n      \"winnerId\": \"ohio-state\",\n      \"confidence\": \"Medium\",\n      \"rationale\": \"Ohio State's top-30 offensive efficiency, led by senior guard Bruce Thornton, provides a slight advantage over TCU's strong defense. The Buckeyes' overall higher KenPom rating and experience in close games from the Big Ten should help them in a tight, low-possession contest. Expect a narrow victory for Ohio State in a typical 8-9 seed battle.\"\n    },\n    {\n      \"gameId\": \"r64-east-3\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": \"High\",\n      \"rationale\": \"St. John's elite defense, ranked 12th nationally, should overwhelm Northern Iowa's mediocre offense and create transition opportunities. The Red Storm's significant advantage in efficiency metrics reflects their superior talent and Big East-tested resilience. While 12-seed upsets are possible, Northern Iowa's offensive limitations make it difficult for them to score enough to pull off the shocker.\"\n    },\n    {\n      \"gameId\": \"r64-east-4\",\n      \"winnerId\": \"kansas\",\n      \"confidence\": \"High\",\n      \"rationale\": \"Kansas's elite defense, ranked 10th nationally in adjusted efficiency, should overwhelm California Baptist's offense and control the game. The Jayhawks' experience against a rigorous Big 12 schedule has prepared them for tournament play, while the Lancers' lack of high-major competition leaves them vulnerable. Though 13-seed upsets are possible, Kansas's defensive prowess and talent advantage make them a reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-east-5\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": \"High\",\n      \"rationale\": \"Louisville's significant advantage in efficiency metrics, ranking 16th in Torvik and 18th in KenPom compared to South Florida's 50th in both systems, reflects their superior talent and high-major pedigree. The Cardinals' balanced top-25 offense and defense, tested against a rigorous ACC schedule, should overwhelm a South Florida squad that lacks comparable firepower on either end. While 11-seed upsets are possible, Louisville's clear edge in both adjusted efficiency and quality of competition makes them a reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-east-6\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": \"High\",\n      \"rationale\": \"Michigan State's high-major talent, fortified by a challenging Big Ten schedule, provides a significant edge over North Dakota State. The Spartans' defensive discipline and tournament experience should neutralize the Bison's balanced scoring attack. While North Dakota State is capable, Michigan State's overall superiority and heavy favoritism in the odds make them a clear choice to advance.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:39:15.330Z",
+      "content": "I'll start by gathering information about UCLA and UCF. First, let me get their ratings and recent news."
+    },
+    {
+      "id": "r64-east-7-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:39:15.330Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "ucla",
+          "ucf"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:39:15.339Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "ucla",
+          "teamName": "UCLA",
+          "torvik": {
+            "rank": 24,
+            "team": "UCLA",
+            "conf": "B10",
+            "record": "23-11",
+            "adjoe": 124.49524577151492,
+            "oe Rank": 17,
+            "adjde": 101.73772797460148,
+            "de Rank": 49,
+            "barthag": 0.9106418470962409,
+            "rank.1": 24,
+            "proj. W": 23,
+            "Proj. L": 11,
+            "Pro Con W": 13,
+            "Pro Con L": 7,
+            "Con Rec.": "13-7",
+            "sos": 0.7136274946784696,
+            "ncsos": 0.4861583808845608,
+            "consos": 0.8189877975933623,
+            "Proj. SOS": 0.7136274946784696,
+            "Proj. Noncon SOS": 0.4861583808845608,
+            "Proj. Con SOS": 0.8189877975933623,
+            "elite SOS": 0.6374601353204021,
+            "elite noncon SOS": 0.8026907471475476,
+            "Opp OE": 116.28354697121708,
+            "Opp DE": 103.51479281044573,
+            "Opp Proj. OE": 116.28354697121708,
+            "Opp Proj DE": 103.51479281044573,
+            "Con Adj OE": 124.99041984498136,
+            "Con Adj DE": 102.56497367571004,
+            "Qual O": 126.79653021878352,
+            "Qual D": 105.2530362812684,
+            "Qual Barthag": 0.8948706894697158,
+            "Qual Games": 16,
+            "FUN": 0.0201417511235171,
+            "ConPF": 1511,
+            "ConPA": 1445,
+            "ConPoss": 1295.3625000000002,
+            "ConOE": 1.166468845593415,
+            "ConDE": 1.115517856970539,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.65,
+            "WAB": 3.555697316105933,
+            "WAB Rk": 28,
+            "Fun Rk": 126,
+            "adjt": 64.65847946120198
+          },
+          "kenpom": {
+            "rank": 27,
+            "team": "UCLA",
+            "conf": "B10",
+            "record": "23-11",
+            "adj_em": 21.64,
+            "adj_o": 123.8,
+            "adj_o_rank": 22,
+            "adj_d": 102.1,
+            "adj_d_rank": 53,
+            "adj_t": 64.7,
+            "adj_t_rank": 318,
+            "luck": 0.017,
+            "luck_rank": 136,
+            "sos_adj_em": 12.14,
+            "sos_adj_em_rank": 33,
+            "sos_opp_o": 116.1,
+            "sos_opp_o_rank": 35,
+            "sos_opp_d": 103.9,
+            "sos_opp_d_rank": 37,
+            "ncsos_adj_em": -2.22,
+            "ncsos_adj_em_rank": 248
+          }
+        },
+        {
+          "teamId": "ucf",
+          "teamName": "UCF",
+          "torvik": {
+            "rank": 58,
+            "team": "UCF",
+            "conf": "B12",
+            "record": "21-11",
+            "adjoe": 120.01879737593126,
+            "oe Rank": 39,
+            "adjde": 105.6510714134995,
+            "de Rank": 114,
+            "barthag": 0.8124981060339062,
+            "rank.1": 58,
+            "proj. W": 21,
+            "Proj. L": 11,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.7097951595483944,
+            "ncsos": 0.4774584426604157,
+            "consos": 0.8398383868136458,
+            "Proj. SOS": 0.7097951595483944,
+            "Proj. Noncon SOS": 0.4774584426604157,
+            "Proj. Con SOS": 0.8398383868136458,
+            "elite SOS": 0.6601889876932714,
+            "elite noncon SOS": 0.8492918998586623,
+            "Opp OE": 114.58970583222283,
+            "Opp DE": 103.06443482025227,
+            "Opp Proj. OE": 114.58970583222283,
+            "Opp Proj DE": 103.06443482025227,
+            "Con Adj OE": 121.41826893860296,
+            "Con Adj DE": 105.87117937605584,
+            "Qual O": 119.86069975248174,
+            "Qual D": 104.52550795493195,
+            "Qual Barthag": 0.828401373765229,
+            "Qual Games": 13,
+            "FUN": 0.1167573423663077,
+            "ConPF": 1406,
+            "ConPA": 1466,
+            "ConPoss": 1271.6,
+            "ConOE": 1.1056936143441332,
+            "ConDE": 1.152878263604907,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": 2.0775601242147856,
+            "WAB Rk": 37,
+            "Fun Rk": 7,
+            "adjt": 69.09602430540978
+          },
+          "kenpom": {
+            "rank": 54,
+            "team": "UCF",
+            "conf": "B12",
+            "record": "21-11",
+            "adj_em": 15.05,
+            "adj_o": 120.5,
+            "adj_o_rank": 40,
+            "adj_d": 105.5,
+            "adj_d_rank": 101,
+            "adj_t": 69.3,
+            "adj_t_rank": 78,
+            "luck": 0.097,
+            "luck_rank": 17,
+            "sos_adj_em": 11.89,
+            "sos_adj_em_rank": 38,
+            "sos_opp_o": 115,
+            "sos_opp_o_rank": 60,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 16,
+            "ncsos_adj_em": -2.59,
+            "ncsos_adj_em_rank": 257
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"ucla\",\n      \"teamName\": \"UCLA\",\n      \"torvik\": {\n        \"rank\": 24,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.49524577151492,\n        \"oe Rank\": 17,\n        \"adjde\": 101.73772797460148,\n        \"de Rank\": 49\n      },\n      \"kenpom\": {\n        \"rank\": 27,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adj_em\": 21.64,\n        \"adj_o\": 123.8,\n        \"adj_o_rank\": 22,\n        \"adj_d\": 102.1\n      }\n    },\n    {\n      \"teamId\": \"ucf\",\n      \"teamName\": \"UCF\",\n      \"torvik\": {\n        \"rank\": 58,\n        \"team\": \"UCF\",\n        \"conf\": \"B12\",\n        \"record\": \"21-11\",\n        \"adjoe\": 120.01879737593126,\n        \"oe Rank\": 39,\n        \"adjde\": 105.6510714134995,\n        \"de Rank\": 114\n      },\n      \"kenpom\": {\n        \"rank\": 54,\n        \"team\": \"UCF\",\n        \"conf\": \"B12\",\n        \"record\": \"21-11\",\n        \"adj_em\": 15.05,\n        \"adj_o\": 120.5,\n        \"adj_o_rank\": 40,\n        \"adj_d\": 105.5\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:39:20.393Z",
+      "content": "Now I need to search for recent news, injuries, and matchup context. Let me search for UCLA and UCF March Madness news."
+    },
+    {
+      "id": "r64-east-7-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:39:20.393Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UCLA basketball 2026 March Madness tournament injury news",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:39:21.215Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "UCLA&#x27;s Tyler Bilodeau (knee strain) expected for NCAA tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48206390%2Fucla%2Dtyler%2Dbilodeau%2Dknee%2Dstrain%2Dexpected%2Dncaa%2Dtournament&rut=5a15a9f2c3df4565d0aa0eea450d8024cab9c4e83590ce68038ea15247846921",
+          "snippet": "UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament ."
+        },
+        {
+          "title": "UCLA 88-84 Michigan State (Mar 13, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851383&rut=398ed293d86952b5251396b56dec3d58b5c6e72de707bf1092af22188372965f",
+          "snippet": "Game summary of the UCLA Bruins vs. Michigan State Spartans NCAAM game, final score 88-84, from March 13, 2026 on ESPN."
+        },
+        {
+          "title": "UCLA loses Bilodeau but ousts Michigan St. in Big Ten quarters",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48201354%2Fucla%2Dloses%2Dbilodeau%2Dousts%2Dmichigan%2Dst%2Dbig%2Dten%2Dquarters&rut=076032f37e8b5a3422738755f8ea81573c5cfa1e10504258d8a2bab183540551",
+          "snippet": "UCLA star Tyler Bilodeau suffered a right leg injury that will likely sideline him for at least one game, but the Bruins held off No. 8 Michigan State 88-84 to advance to the Big Ten tournament ..."
+        },
+        {
+          "title": "UCLA 88-84 Michigan State (Mar 13, 2026) Game Recap - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401851383&rut=9bb9183efa94c7a1e13214395cbb25afee59d526c37fa77bb7ae345f64c75154",
+          "snippet": "Expert recap and game analysis of the UCLA Bruins vs. Michigan State Spartans NCAAM game from March 13, 2026 on ESPN."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=0c86a36b38fe8a85cfca17567cf51b782b5e714eb40e4e241fb8a636a44aaba1",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"UCLA&#x27;s Tyler Bilodeau (knee strain) expected for NCAA tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48206390%2Fucla%2Dtyler%2Dbilodeau%2Dknee%2Dstrain%2Dexpected%2Dncaa%2Dtournament&rut=5a15a9f2c3df4565d0aa0eea450d8024cab9c4e83590ce68038ea15247846921\",\n      \"snippet\": \"UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament .\"\n    },\n    {\n      \"title\": \"UCLA 88-84 Michigan State (Mar 13, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851383&rut=398ed293d86952b5251396b56dec3d58b5c6e72de707bf1092af22188372965f\",\n      \"snippet\": \"Game summary of the UCLA Bruins vs. Michigan State Spartans NCAAM game, final score 88-84, from March 13, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"UCLA loses Bilodeau but ousts Michigan St. in Big Ten quarters\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48201354%2Fucla%2Dloses%2Dbilodeau%2Dousts%2Dmichigan%2Dst%2Dbig%2Dten%2Dquarters&rut=076032f37e8b5a3422738755f8ea81573c5cfa1e10504258d8a2bab183540551\",\n      \"snippet\": \"UCLA star Tyler Bilodeau suffered a right leg injury that will likely sideline him for at least one game, but the Bruins held off No. 8 Michigan State 88-84 to advance to the Big Ten tournament ...\"\n    },\n    {\n      \"title\": \"UCLA 88-84 Michigan State (Mar 13, 2026) Game Recap - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401851383&rut=9bb9183efa94c7a1e13214395cbb25afee59d526c37fa77bb7ae345f64c75154\",\n      \"snippet\": \"Expert recap and game analysis of the UCLA Bruins vs. Michigan State Spartans NCAAM game from March 13, 2026 on ESPN.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:39:25.434Z",
+      "content": "Let me also search for UCF news."
+    },
+    {
+      "id": "r64-east-7-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:39:25.434Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "UCF basketball 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:39:25.565Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:39:30.122Z",
+      "content": "Let me search more broadly for UCF injury news."
+    },
+    {
+      "id": "r64-east-7-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:39:30.122Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UCF basketball 2026 injury news March Madness",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:39:30.912Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "UCF Basketball Injuries To Watch For March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fucf%2Fbasketball%2Fucf%2Dknights%2Dbasketball%2Dhoops%2Dinjuries%2Dto%2Dwatch%2Dfor%2Dmarch%2Dmadness%2Djohnny%2Ddawkins%2Djohn%2Dbol%2Driley%2Dkugel%2Djamichael%2Dstillwell%2D01kkq4qmnta0&rut=e2b6ea3e06f0b1ef307f16c91b6496053a6e1f18e01f55b30c61092c9da3131b",
+          "snippet": "Three UCF Knights men&#x27;s basketball players officially dealt with injuries during the Big 12 Tournament."
+        },
+        {
+          "title": "Can UCF basketball make a run in March Madness bracket? Our prediction",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fucf%2F2026%2F03%2F16%2Fucf%2Dpredictions%2Dmarch%2Dmadness%2Dpicks%2Dcollege%2Dbasketball%2F89181127007%2F&rut=42b250f9d9e20845bed9127ac676340e0151657714175cbe9ed463dfe461cbf7",
+          "snippet": "Can UCF basketball reach NCAA bracket&#x27;s Sweet 16? Our 2026 March Madness predictions show how Knights can make run in tournament."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for."
+        },
+        {
+          "title": "UCF vs UCLA prediction, pick, odds March Madness first round",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.news%2Djournalonline.com%2Fstory%2Fsports%2Fcollege%2Fucf%2F2026%2F03%2F15%2Fucf%2Ducla%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2F89142675007%2F&rut=c225a9a208f6476e1e8a1e4add9a0ca78009fb2cef1e10d8d87906af10aadb1d",
+          "snippet": "It&#x27;s the UCF Knights vs. the UCLA Bruins in the March Madness bracket. Here&#x27;s our prediction for the 2026 NCAA Tournament basketball game."
+        },
+        {
+          "title": "3 reasons UCF basketball could still make it to March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fbasketball%2F3%2Dreasons%2Ducf%2Dbasketball%2Dcould%2Dstill%2Dmake%2Dit%2Dto%2Dmarch%2Dmadness%2Far%2DAA1YvGMc&rut=b6786a0aa619c0031be78db4a5302192f27ecfd5125f8101c491ace9ea4ae7d7",
+          "snippet": "Let the waiting begin, though UCF&#x27;s men&#x27;s basketball team certainly helped its own March Madness cause by avoiding a one-and-done at this week&#x27;s Big 12 tournament. The Knights staged a late ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"UCF Basketball Injuries To Watch For March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fucf%2Fbasketball%2Fucf%2Dknights%2Dbasketball%2Dhoops%2Dinjuries%2Dto%2Dwatch%2Dfor%2Dmarch%2Dmadness%2Djohnny%2Ddawkins%2Djohn%2Dbol%2Driley%2Dkugel%2Djamichael%2Dstillwell%2D01kkq4qmnta0&rut=e2b6ea3e06f0b1ef307f16c91b6496053a6e1f18e01f55b30c61092c9da3131b\",\n      \"snippet\": \"Three UCF Knights men&#x27;s basketball players officially dealt with injuries during the Big 12 Tournament.\"\n    },\n    {\n      \"title\": \"Can UCF basketball make a run in March Madness bracket? Our prediction\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fucf%2F2026%2F03%2F16%2Fucf%2Dpredictions%2Dmarch%2Dmadness%2Dpicks%2Dcollege%2Dbasketball%2F89181127007%2F&rut=42b250f9d9e20845bed9127ac676340e0151657714175cbe9ed463dfe461cbf7\",\n      \"snippet\": \"Can UCF basketball reach NCAA bracket&#x27;s Sweet 16? Our 2026 March Madness predictions show how Knights can make run in tournament.\"\n    },\n    {\n      \"title\": \"March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5\",\n      \"snippet\": \"College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for.\"\n    },\n    {\n      \"title\": \"UCF vs UCLA prediction, pick, odds March Madness first round\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.news%2Djournalonline.com%2Fstory%2Fsports%2Fcollege%2Fucf%2F2026%2F03%2F15%2Fucf%2Ducla%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2F89142675007%2F&rut=c225a9a208f6476e1e8a1e4add9a0ca78009fb2cef1e10d8d87906af10aadb1d\",\n      \"snippet\": \"It&#x27;s the UCF Knights vs. the UCLA Bruins in the March Madness bracket. Here&#x27;s our prediction for the 2026 NCAA Tournament basketball game.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:39:36.192Z",
+      "content": "Let me fetch the article about UCLA's injury."
+    },
+    {
+      "id": "r64-east-7-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:39:36.192Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament"
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:39:36.660Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament",
+        "text": "UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament - ESPN UCLA's Bilodeau set to return for NCAA tourney --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates UCLA's Bilodeau set to return for NCAA tourney 4d Mark saves day, sends Texas to NCAA first round Texas Longhorns 5h Adam Rittenberg Howard checks last box with first NCAAT win Howard Bison 8h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 17h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 18h EMU hires Clemson assistant Donlon as coach Clemson Tigers 10h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 14h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 17h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 20h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 21h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 2d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 5h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 17h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament play UCLA Bruins vs. Michigan State Spartans: Game Highlights (1:19) UCLA Bruins vs. Michigan State Spartans: Game Highlights (1:19) ESPN News Services Multiple Authors Mar 14, 2026, 03:31 PM ET Email Print Open Extended Reactions UCLA leading scorer Tyler Bilodeau has a mild right knee strain but is expected to be available for the NCAA tournament, a school spokesman said Saturday. Bilodeau was ruled out for the Bruins' Big Ten tournament semifi"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/story/_/id/48206390/ucla-tyler-bilodeau-knee-strain-expected-ncaa-tournament\",\n    \"text\": \"UCLA's Tyler Bilodeau (knee strain) expected for NCAA tournament - ESPN UCLA's Bilodeau set to return for NCAA tourney --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates UCLA's Bilodeau set to return for NCAA tourney 4d Mark saves day, sends Texas to NCAA first round Texas Longhorns 5h Adam Rittenberg Howard checks last box with first NCAAT win Howard Bison 8h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 17h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 18h EMU hires Clemson assistant Donlon as coach Clemson Tigers 10h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 14h Stephen Holder Charlotte fires coach Fearne after three seas... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:39:42.614Z",
+      "content": "The snippet says Bilodeau is expected to be available. Let me fetch the UCF injury article."
+    },
+    {
+      "id": "r64-east-7-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:39:42.614Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.si.com/college/ucf/basketball/ucf-knights-basketball-hoops-injuries-to-watch-for-march-madness-johnny-dawkins-john-bol-riley-kugel-jamichael-stillwell-01kkq4qmnta0"
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:39:43.721Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.si.com/college/ucf/basketball/ucf-knights-basketball-hoops-injuries-to-watch-for-march-madness-johnny-dawkins-john-bol-riley-kugel-jamichael-stillwell-01kkq4qmnta0",
+        "text": "UCF Basketball Injuries To Watch For March Madness Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW FOOTBALL FOOTBALL RECRUITING COLLEGE FOOTBALL NEWS HS FOOTBALL BASKETBALL UCF SPORTS BASEBALL SI.COM Football Basketball Videos Recruiting UCF Sports More from UCF Knights On SI FOOTBALL FOOTBALL RECRUITING COLLEGE FOOTBALL NEWS HS FOOTBALL BASKETBALL UCF SPORTS BASEBALL SI.COM UCF Basketball Injuries To Watch For March Madness Three UCF Knights men's basketball players officially dealt with injuries during the Big 12 Tournament Bryson Turner | Share on Facebook Share on X Add us as a preferred source Mar 11, 2026; Kansas City, MO, USA; UCF Knights center John Bol (7) shoots the ball during the first half against the Cincinnati Bearcats at T-Mobile Center. Mandatory Credit: William Purnell-Imagn Images | William Purnell-Imagn Images In this story: UCF Knights The UCF men&#39;s basketball team has not made it through the 2025-26 unscathed. --> The UCF men&#39;s basketball team has not made it through the 2025-26 unscathed. While this is also the case with most college basketball teams, there can be a difference in exactly when and who the injury bug strikes. In the case of the Knights, it struck fairly late. --> While this is also the case with most college basketball teams, there can be a difference in exactly when and who the injury bug strikes. In the case of the Knights, it struck fairly late. So, as the Knights prepare to hear their name called during the NCAA Tournament selection show for the first time since 2019, here are three UCF players to keep an eye on from an injury standpoint heading into March Madness. --> So, as the Knights prepare to hear their name called during the NCAA Tournament selection show for the first time since 2019, here are three UCF players to keep an eye on from an injury standpoint heading into March Madness. 1. John Bol The Knights&#39; tallest player, John Bol, has not missed a game this season, starting in every single one. However, he is at the top of this list because his ailment is the one the public knows the least about as of Saturday night. --> The Knights&#39; tallest player, John Bol, has not missed a game this season, starting in every single one. However, he is at the top of this list because his ailment is the one the public knows the least about as of Saturday night. During UCF&#39;s Big 12 quarterfinal game against Arizona, Bol came to the sidelines in the early goings of the second half out of breath, according to ESPN sideline reporter Kris Budden on the broadcast. It proceeded to show Bol communicating with trainers and pointing to his chest. --> During UCF&#39;s Big 12 quarterfinal game against Arizona, Bol came to the sidelines in the early goings of the second half out of breath, according to ESPN sideline reporter Kris Budden on the broadcast. It proceeded to show Bol communicating with trainers and pointing to his chest. Bol returned to the"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.si.com/college/ucf/basketball/ucf-knights-basketball-hoops-injuries-to-watch-for-march-madness-johnny-dawkins-john-bol-riley-kugel-jamichael-stillwell-01kkq4qmnta0\",\n    \"text\": \"UCF Basketball Injuries To Watch For March Madness Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW FOOTBALL FOOTBALL RECRUITING COLLEGE FOOTBALL NEWS HS FOOTBALL BASKETBALL UCF SPORTS BASEBALL SI.COM Football Basketball Videos Recruiting UCF Sports More from UCF Knights On SI FOOTBALL FOOTBALL RECRUITING COLLEGE FOOTBALL NEWS HS FOOTBALL BASKETBALL UCF SPORTS BASEBALL SI.COM UCF Basketball Injuries To Watch For March Madness Three UCF Knights men's basketball players officially dealt with injuries during the Big 12 Tournament Bryson Turner | Share on Facebook Share on X Add us as a preferred source Mar 11, 2026; Kansas City, MO, USA; UCF Knights center John Bol (7) shoots the ball during the first half against the Cincinnati Bearcats at T-Mobile Center. Mandatory Credit: William Purnell-Imagn Images | William Purnell-Imagn Images In this story: UCF Knights The UCF men&#39;s basketball team has not made it through the 2025-26 unscathed. --> The UCF men&#39;s basketball team has not made it through the 2025-26 unscathed. While this is also the case with most college basketball teams, there can be a difference in exactly when and w... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:39:49.146Z",
+      "content": "Let me also fetch the UCF vs UCLA prediction article."
+    },
+    {
+      "id": "r64-east-7-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:39:49.146Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.news-journalonline.com/story/sports/college/ucf/2026/03/15/ucf-ucla-march-madness-prediction-ncaa-bracket/89142675007/"
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:39:49.335Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.news-journalonline.com/story/sports/college/ucf/2026/03/15/ucf-ucla-march-madness-prediction-ncaa-bracket/89142675007/",
+        "text": "UCF vs UCLA prediction, pick, odds March Madness first round Skip to main content Home Columns High School College Racing Baseball Fishing and Outdoors Golf NFL SportsbookWire MMA Junkie Golf Week UCF UCF basketball vs UCLA prediction: Our pick for 2026 NCAA bracket first round Chris Boyle Daytona Beach News-Journal Show Caption Hide Caption UCF basketball player Themus Fulks reflects on NCAA Tournament stage Point guard Themus Fulks played a crucial role in the UCF Knights reaching their first March Madness tournament since 2019. The tenth-seeded UCF Knights will face the seventh-seeded UCLA Bruins in the first round of the NCAA Tournament. UCF coach Johnny Dawkins and UCLA coach Mick Cronin have previously faced each other six times. UCLA's leading scorer, Tyler Bilodeau, is expected to play after suffering a mild knee strain in the Big Ten tournament. ORLANDO — The East region is loaded with college basketball's traditional bluebloods, including the UCF Knights ' first-round opponent, 11-time national champion UCLA . Tenth-seeded UCF (21-11) will square off with the Bruins (23-11) in an opening-round NCAA Tournament matchup at 7:25 p.m. on March 20 at Xfinity Mobile Arena in Philadelphia. By contrast, UCF will make just its sixth March Madness appearance since joining Division I in 1984-85. Johnny Dawkins coached the Knights to their last trip to the Big Dance back in 2019. Buy UCF NCAA tournament tickets vs. UCLA \"You can never take these opportunities for granted,\" Dawkins said about an hour after his team learned its tournament destination on Selection Sunday. \"I'm definitely happy for my team, my staff, trainers, doctors, athletic director, deputy athletic director; you name anyone that's in our organization, our family, I'm very, very happy for everyone.\" UCF survived four defeats in its final five games, the lone exception being a late comeback and overtime triumph over Cincinnati in the second round of the Big 12 tournament, to secure the No. 10 seed in the East. The Knights went 9-9 during the regular season in one of the country's toughest conferences, notching three ranked wins (Kansas, Texas Tech, BYU). Fifth-year senior point guard Themus Fulks set the school's all-time, single-season record for assists with 214 and counting. Orlando native Riley Kugel, who played NCAA Tournament games for Florida and Mississippi State, leads the team in scoring at 14.4 points per game. As a team, UCF scores 81 points per game and shoots 36.2% from 3-point range, a figure that took a sizable dent after a 6-for-45 combined showing across its Big 12 tournament contests versus Cincinnati and Arizona. But, what about the Bruins? Let's learn a little bit about UCF's upcoming opponent, which earned a No. 7 seed after reaching the Big Ten tournament semifinals. Think you can beat our expert? Join USA TODAY’s Bracket Challenge today! Ready to win March Madness? Join USA TODAY’s Survivor Pool today! Johnny Dawkins, Mick Cronin have met 6 times before UCLA h"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.news-journalonline.com/story/sports/college/ucf/2026/03/15/ucf-ucla-march-madness-prediction-ncaa-bracket/89142675007/\",\n    \"text\": \"UCF vs UCLA prediction, pick, odds March Madness first round Skip to main content Home Columns High School College Racing Baseball Fishing and Outdoors Golf NFL SportsbookWire MMA Junkie Golf Week UCF UCF basketball vs UCLA prediction: Our pick for 2026 NCAA bracket first round Chris Boyle Daytona Beach News-Journal Show Caption Hide Caption UCF basketball player Themus Fulks reflects on NCAA Tournament stage Point guard Themus Fulks played a crucial role in the UCF Knights reaching their first March Madness tournament since 2019. The tenth-seeded UCF Knights will face the seventh-seeded UCLA Bruins in the first round of the NCAA Tournament. UCF coach Johnny Dawkins and UCLA coach Mick Cronin have previously faced each other six times. UCLA's leading scorer, Tyler Bilodeau, is expected to play after suffering a mild knee strain in the Big Ten tournament. ORLANDO — The East region is loaded with college basketball's traditional bluebloods, including the UCF Knights ' first-round opponent, 11-time national champion UCLA . Tenth-seeded UCF (21-11) will square off with the Bruins (23-11) in an opening-round NCAA Tournament matchup at 7:25 p.m. on March 20 at Xfinity Mobile Arena in Phi... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:39:53.982Z",
+      "content": "Let me search for head-to-head history between UCLA and UCF."
+    },
+    {
+      "id": "r64-east-7-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:39:53.982Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UCLA vs UCF head-to-head basketball recent",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:39:54.769Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "UCLA Basketball and UCF in Head to Head Stat Comparison",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fsites%2Fbruin%2Dreport%2Donline%2Fnews%2Fucla%2Dbasketball%2Dand%2Ducf%2Din%2Dhead%2Dto%2Dhead%2Dstat%2Dcomparison%2F&rut=b3c96a92f1bc245d087a2e6d91448e9a1f975546b2c2517e43b13d34d967fbac",
+          "snippet": "UCLA caught a 7 seed in the NCAA Tournament and will face No. 10 UCF Friday in Philadelphia, Penn. For an analysis of UCLA&#x27;s potential tournament path, GO HERE. How does UCLA and UCF match up this season? Here are some quick numbers. Take advantage of Bruin Report Online&#x27;s EPIC $1 for 5 months ..."
+        },
+        {
+          "title": "UCLA vs UCF scores & predictions | Sofascore",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sofascore.com%2Fbasketball%2Fmatch%2Fucf%2Dknights%2Ducla%2Dbruins%2FBRnsaKJ&rut=9c9d969bba647a51669daf2142e7facf972b783d90b40bb04701aae5d29351d3",
+          "snippet": "Player statistics Head to head streaks Team streaks Current odds and predictions Sofascore community votes on which team is more likely to win the game UCLA Bruins - UCF Knights video highlights are collected in the Media tab for the most popular matches as soon as videos appear on video hosting sites like Youtube or Dailymotion."
+        },
+        {
+          "title": "Yes, the East Region is loaded, but UCLA must solely focus on UCF",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuclawire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fucla%2Fmens%2Dbasketball%2F2026%2F03%2F16%2Fuclas%2Dfirst%2Dround%2Dmatchup%2Dhas%2Dmore%2Dexperience%2Dthan%2Dyou%2Dmight%2Dexpect%2Dcollege%2Dbasketball%2F89185440007%2F&rut=ea90df4048b2e9ae4c019ac27146360f1a31b20acd951a93216302ea9c6173b8",
+          "snippet": "UCLA has certainly had their struggles outside of the Pacific Time Zone since joining the Big Ten ahead of last year but perhaps last week&#x27;s showing in the conference tournament is a sign of better things to come when the Bruins head east."
+        },
+        {
+          "title": "2025-2026 NCAA BB Games: Knights Bruins Head to Head -",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fknights%2Dbruins%2D2026%2D03%2D20%2Fhead%2Dto%2Dhead&rut=a6121892514764b3e568358870f9c4b061e2dcb775e5ddb09adb6a088db68488",
+          "snippet": "Betting analysis for the 2025-2026 NCAA Basketball season matchup between UCF and UCLA . Includes ats, over/under and straight up odds analysis."
+        },
+        {
+          "title": "UCF vs. UCLA (Mar 20, 2026) Live Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401856496%2Fucf%2Ducla&rut=ada94af36fa456ff90295cb5a84908116cd2d9ea13fe9281a9bfe4e6132fbfbb",
+          "snippet": "Live coverage of the UCF Knights vs . UCLA Bruins NCAAM game on ESPN, including live score, highlights and updated stats."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"UCLA Basketball and UCF in Head to Head Stat Comparison\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fsites%2Fbruin%2Dreport%2Donline%2Fnews%2Fucla%2Dbasketball%2Dand%2Ducf%2Din%2Dhead%2Dto%2Dhead%2Dstat%2Dcomparison%2F&rut=b3c96a92f1bc245d087a2e6d91448e9a1f975546b2c2517e43b13d34d967fbac\",\n      \"snippet\": \"UCLA caught a 7 seed in the NCAA Tournament and will face No. 10 UCF Friday in Philadelphia, Penn. For an analysis of UCLA&#x27;s potential tournament path, GO HERE. How does UCLA and UCF match up this season? Here are some quick numbers. Take advantage of Bruin Report Online&#x27;s EPIC $1 for 5 months ...\"\n    },\n    {\n      \"title\": \"UCLA vs UCF scores & predictions | Sofascore\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sofascore.com%2Fbasketball%2Fmatch%2Fucf%2Dknights%2Ducla%2Dbruins%2FBRnsaKJ&rut=9c9d969bba647a51669daf2142e7facf972b783d90b40bb04701aae5d29351d3\",\n      \"snippet\": \"Player statistics Head to head streaks Team streaks Current odds and predictions Sofascore community votes on which team is more likely to win the game UCLA Bruins - UCF Knights video highlights are collected in the Media tab for the most popular matches as soon as videos appear on video hosting sites like Youtube or Dailymotion.\"\n    },\n    {\n      \"title\": \"Yes, the East Region is loaded, but UCLA must solely focus on UCF\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fuclawire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fucla%2Fmens%2Dbasketball%2F2026%2F03%2F16%2Fuclas%2Dfirst%2Dround%2Dmatchup%2Dhas%2Dmore%2Dexperience%2Dthan%2Dyou%2Dmight%2Dexpect%2Dcollege%2Dbasketball%2F89185440007%2F&rut=ea90df4048b2e9ae4c019ac27146360f1a31b20acd951a93216302ea9c6173b8\",\n      \"snippet\": \"UCLA has certainly had their struggles outside of the Pacific Time Zone since joining the Big Ten ahead of last year but perhaps last week&#x27;s showing in the conference tournament is a sign of better things to come when the Bruins head east.\"\n    },\n    {\n      \"title\": \"2025-2026 NCAA BB Games: Knights Bruins Head to Head -\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fknights%2Dbruins%2D2026%2D03%2D20%2Fhead%2Dto%2Dhead&rut=a6121892514764b3e568358870f9c4b061e2dcb775e5ddb09adb6a088db68488\",\n      \"snippet\": \"Betting analysis for the 2025-2026 NCAA Basketball season matchup between UCF and UCLA . Includes ats, over/under and straight up odds analysis.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:39:59.894Z",
+      "content": "Let me fetch the head-to-head stat comparison article."
+    },
+    {
+      "id": "r64-east-7-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:39:59.894Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.on3.com/sites/bruin-report-online/news/ucla-basketball-and-ucf-in-head-to-head-stat-comparison/"
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:40:00.905Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.on3.com/sites/bruin-report-online/news/ucla-basketball-and-ucf-in-head-to-head-stat-comparison/",
+        "text": "UCLA Basketball and UCF in Head-to-Head Stat Comparison - On3 Skip to main content Mobile Menu News Forums Lobby Premium Football Forum Premium Hoops Forum Baseball Forum Basketball Forum Football Forum Other Sports Tickets Exchange Football News Feed Roster Schedule Transfer Portal Ranking Transfer Portal UCLA Draft History FB Recruiting News Feed Search Commitments Transfers Team Rankings Player Rankings Industry Comparison Offers Visits Recruiting Prediction Machine Basketball News Feed Roster Schedule Transfer Portal Ranking Transfer Portal UCLA Draft History BB Recruiting News Feed Search Commitments Transfers Team Rankings Player Rankings Industry Comparison Offers Visits Recruiting Prediction Machine About About Staff Bruin Report Online On3+ Subscription Contact Podcasts and Shows Join Now Login Message Boards CBB Transfer Portal MegaBoard 2027 Rivals300 Team Recruiting Rankings Search UCLA Basketball and UCF in Head-to-Head Stat Comparison by: Tracy Pierson 03/16/26 BruinReport Read In App UCLA caught a 7 seed in the NCAA Tournament and will face No. 10 UCF Friday in Philadelphia, Penn. For an analysis of UCLA’s potential tournament path, GO HERE . How does UCLA and UCF match up this season? Here are some quick numbers. Take advantage of Bruin Report Online’s EPIC $1 for 5 months deal!!! Join the No. 1 independent source on UCLA sports and recruiting with our introductory offer!! Get unmatched insider Bruin coverage as BRO moves over to the industry-leading On3 network for just $1 for 5 months!! There is no promo code required for this offer, just HIT THIS LINK now, and you’ll be good to go!! National ranking in parentheses. Points Per Game: UCLA 77.7 (102nd), UCF 81.0 (49th) Adjusted Tempo: UCLA 64.6 (317th), UCF 69.2 (78th) Points Allowed Per Game: UCLA 71.0 (80th) UCF 78.5 (278th) Effective Field Goal Percentage: UCLA 53.9% (71st), UCF 52.8% (112th) Opponent Effective Field Goal Percentage: UCLA 50.4% (130th), UCF 52.4% (236th) Three-Point Shooting Percentage: UCLA 38.2% (16th), UCF 36.2% (49th) Free-Throw Percentage: UCLA 76.7% (41st), UCF 74% (138th) Points Per Posession: UCLA 1.20 (44th), UCF 1.11 (74th) Rebounding Percentage Rate: UCLA 49.6% (203rd), UCF 52.6% (55th) Assist/Turnover Ratio: UCLA 1.838 (7th), UCF 1.408 (70th) Turnover Rate: UCLA 13.4% (12th), UCF 15.7% (120th) UCLA point guard Donovan Dent (2) celebrates with teammate Skyy Clark (55) during the second half of the Big Ten tournament quarterfinals against Michigan State at United Center in Chicago on March 13, 2026. (Credit: Kamil Krzaczynski | Imagn Images) Steals Per Possession: UCLA 9.7% (140th), UCF 7.8% (307th) Adjusted Offensive Efficiency (National rank): UCLA 22nd, UCF 40th Adjusted Defensive Efficiency: UCLA 53rd, UCF 101st NET Rankings: UCLA 31st, UCF 51st Wins Above Bubble (National Rank): UCLA 27th, UCF 35th Go to On3 Home About On3 About Advertisers Careers Contact Support Customer Service Privacy Policy Children&#x27;s Privacy Policy Terms of Service On3"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.on3.com/sites/bruin-report-online/news/ucla-basketball-and-ucf-in-head-to-head-stat-comparison/\",\n    \"text\": \"UCLA Basketball and UCF in Head-to-Head Stat Comparison - On3 Skip to main content Mobile Menu News Forums Lobby Premium Football Forum Premium Hoops Forum Baseball Forum Basketball Forum Football Forum Other Sports Tickets Exchange Football News Feed Roster Schedule Transfer Portal Ranking Transfer Portal UCLA Draft History FB Recruiting News Feed Search Commitments Transfers Team Rankings Player Rankings Industry Comparison Offers Visits Recruiting Prediction Machine Basketball News Feed Roster Schedule Transfer Portal Ranking Transfer Portal UCLA Draft History BB Recruiting News Feed Search Commitments Transfers Team Rankings Player Rankings Industry Comparison Offers Visits Recruiting Prediction Machine About About Staff Bruin Report Online On3+ Subscription Contact Podcasts and Shows Join Now Login Message Boards CBB Transfer Portal MegaBoard 2027 Rivals300 Team Recruiting Rankings Search UCLA Basketball and UCF in Head-to-Head Stat Comparison by: Tracy Pierson 03/16/26 BruinReport Read In App UCLA caught a 7 seed in the NCAA Tournament and will face No. 10 UCF Friday in Philadelphia, Penn. For an analysis of UCLA’s potential tournament path, GO HERE . How does UCLA and UCF ma... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-7-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T09:40:06.442Z",
+      "content": "Let me get more details about the matchup from the article. I'll search for specific stats. Let me also check for recent form and performance. I'll search for UCLA's recent results and UCF's recent results."
+    },
+    {
+      "id": "r64-east-7-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T09:40:06.442Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "UCLA basketball 2026 Big Ten tournament results",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-east-7-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T09:40:07.282Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 Big Ten tournament: Bracket, schedule, scores for men&#x27;s basketball",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Farticle%2F2026%2D03%2D14%2F2026%2Dbig%2Dten%2Dtournament%2Dbracket%2Dschedule%2Dscores%2Dmens%2Dbasketball&rut=b0cf557d7720176a60cbb91fc7b1642b33a397b767312dc6acf2a24a55a1649a",
+          "snippet": "Follow along here for everything you need to know about the 2026 Big Ten men&#x27;s basketball tournament , including the bracket and live scores."
+        },
+        {
+          "title": "Big Ten basketball tournament 2026 scores, bracket as Purdue wins ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fbig%2Dten%2Dtournament%2D2026%2Dbracket%2Dschedule%2Dscores%2F&rut=310310da80a205fb458df3a347b7c16c4bd649235e8321206e74a728c01b1d45",
+          "snippet": "Get up-to-date results , plus what they mean for the NCAA Tournament bubble and seeding with our CBS Sports Selection Sunday LIVE BLOG. 2026 Big Ten Tournament scores, results"
+        },
+        {
+          "title": "Purdue 73-66 UCLA (Mar 14, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851386&rut=beae9576b8ba1e28436d110d5c95c1a3c0e358aaf37c4a4bd3d0820e15d473ca",
+          "snippet": "Game summary of the Purdue Boilermakers vs. UCLA Bruins NCAAM game, final score 73-66, from March 14, 2026 on ESPN."
+        },
+        {
+          "title": "2026 Big Ten basketball tournament bracket, final scores",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsbookwire.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F14%2Fbig%2Dten%2Dtournament%2Dschedule%2Dtimes%2Dtv%2Dchannel%2Dscores%2F89156333007%2F&rut=421ae0120e0f0189b6594c1bf8487d367f23cd5e1584e9b39a7ba2ce5677509b",
+          "snippet": "Updated 2026 Big Ten Tournament bracket for men&#x27;s basketball with scores, game schedules, times, TV channel and more."
+        },
+        {
+          "title": "Men&#x27;s Basketball Falls to Purdue at Big Ten Tournament, 73-66 - UCLA",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuclabruins.com%2Fnews%2F2026%2F3%2F14%2Fmens%2Dbasketball%2Dfalls%2Dto%2Dpurdue%2Dat%2Dbig%2Dten%2Dtournament&rut=63bc486f38a7bb5d75920ac498db3d709b6f54962f307e69eadf960cfa28e8af",
+          "snippet": "CHICAGO - The No. 6-seed UCLA men&#x27;s basketball team lost to No. 7-seed Purdue, 73-66, in a semifinal contest of the Big Ten Tournament at the United Center on Saturday afternoon. The Bruins (23-11) trailed Purdue at halftime, 34-27, but rallied back from a 13-point second-half deficit, tying the game twice in the final five minutes."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Big Ten tournament: Bracket, schedule, scores for men&#x27;s basketball\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Farticle%2F2026%2D03%2D14%2F2026%2Dbig%2Dten%2Dtournament%2Dbracket%2Dschedule%2Dscores%2Dmens%2Dbasketball&rut=b0cf557d7720176a60cbb91fc7b1642b33a397b767312dc6acf2a24a55a1649a\",\n      \"snippet\": \"Follow along here for everything you need to know about the 2026 Big Ten men&#x27;s basketball tournament , including the bracket and live scores.\"\n    },\n    {\n      \"title\": \"Big Ten basketball tournament 2026 scores, bracket as Purdue wins ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fbig%2Dten%2Dtournament%2D2026%2Dbracket%2Dschedule%2Dscores%2F&rut=310310da80a205fb458df3a347b7c16c4bd649235e8321206e74a728c01b1d45\",\n      \"snippet\": \"Get up-to-date results , plus what they mean for the NCAA Tournament bubble and seeding with our CBS Sports Selection Sunday LIVE BLOG. 2026 Big Ten Tournament scores, results\"\n    },\n    {\n      \"title\": \"Purdue 73-66 UCLA (Mar 14, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851386&rut=beae9576b8ba1e28436d110d5c95c1a3c0e358aaf37c4a4bd3d0820e15d473ca\",\n      \"snippet\": \"Game summary of the Purdue Boilermakers vs. UCLA Bruins NCAAM game, final score 73-66, from March 14, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"2026 Big Ten basketball tournament bracket, final scores\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsbookwire.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F14%2Fbig%2Dten%2Dtournament%2Dschedule%2Dtimes%2Dtv%2Dchannel%2Dscores%2F89156333007%2F&rut=421ae0120e0f0189b6594c1bf8487d367f23cd5e1584e9b39a7ba2ce5677509b\",\n      \"snippet\": \"Updated 2026 Big Ten Tournament bracket for men&#x27;s basketball with scores, game schedules, times, TV channel and more.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-7-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T09:40:46.002Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-east-7\",\n    \"winnerId\": \"ucla\",\n    \"confidence\": \"High\",\n    \"rationale\": \"UCLA's significantly higher efficiency ratings, particularly a top-20 offense that should exploit UCF's vulnerable defense, gives them a clear edge. The Bruins' leading scorer Tyler Bilodeau is expected to play despite a minor knee strain, and their experience in the tough Big Ten has prepared them for tournament play. While UCF is capable, UCLA's superior offensive firepower and defensive discipline should control the game and secure a win.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"east-7-analysis\",\n    \"title\": \"Efficiency and Health Comparison for UCLA vs UCF\",\n    \"summary\": \"Investigated team ratings, injury news, and recent context to evaluate the matchup.\",\n    \"evidence\": \"UCLA ranks 24th in Torvik and 27th in KenPom, with a top-20 offense; UCF ranks 58th and 54th with a defense outside the top 100. UCLA's leading scorer Tyler Bilodeau (knee strain) is expected to play, while UCF had multiple players dealing with injuries during the Big 12 Tournament. UCLA's stronger schedule and better metrics indicate a significant advantage.\"\n  }\n}"
+    }
+  ]
+}
