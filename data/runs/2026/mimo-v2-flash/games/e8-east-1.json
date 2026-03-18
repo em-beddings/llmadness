@@ -1,0 +1,947 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mimo",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "e8-east-1",
+  "generatedAt": "2026-03-18T10:57:34.975Z",
+  "pick": {
+    "gameId": "e8-east-1",
+    "winnerId": "duke",
+    "confidence": 0.82,
+    "rationale": "Duke enters as the tournament's top-ranked team with elite efficiency on both ends, boasting the nation's best defense and a top-5 offense, while Louisville ranks 16th-18th overall and faces a significant talent gap. The Blue Devils' superior metrics, depth, and recent form—including a 31-2 record and a head-to-head win over Louisville in January—provide a clear advantage, though the loss of Caleb Foster to a foot fracture introduces some uncertainty. Louisville's path relies on hot shooting and exploiting Duke's backcourt vulnerability, but Duke's defensive prowess and offensive firepower should control the game and secure the win."
+  },
+  "reasoningStep": {
+    "id": "e8-east-1-analysis",
+    "title": "Elite 8 East Regional Final: Duke vs. Louisville",
+    "summary": "Duke is the clear favorite based on efficiency metrics, head-to-head results, and overall team quality, but injuries to key guards on both sides require careful consideration.",
+    "evidence": "Duke ranks 1st in KenPom and Torvik with elite offense (adjO ~128) and defense (adjD ~90), while Louisville ranks 16th-18th (adjO ~124, adjD ~98). Duke won the regular-season matchup 84-73 on Jan 6, 2026. Duke's Caleb Foster is out with a foot fracture, and Louisville's Mikel Brown Jr. is out with a back injury, but Duke's depth and talent advantage remain substantial."
+  },
+  "toolCalls": [
+    {
+      "id": "tool-wb6oj6o8",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "duke",
+          "louisville"
+        ]
+      },
+      "startedAt": "2026-03-18T10:56:04.352Z",
+      "completedAt": "2026-03-18T10:56:04.360Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "duke",
+          "teamName": "Duke",
+          "torvik": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adjoe": 128.01924984850498,
+            "oe Rank": 4,
+            "adjde": 90.44607016864468,
+            "de Rank": 1,
+            "barthag": 0.9819325227198022,
+            "rank.1": 1,
+            "proj. W": 31.77263480392547,
+            "Proj. L": 2.2273651960745293,
+            "Pro Con W": 17,
+            "Pro Con L": 1,
+            "Con Rec.": "17-1",
+            "sos": 0.7350779717539253,
+            "ncsos": 0.6248828246440576,
+            "consos": 0.8004871126999,
+            "Proj. SOS": 0.7411389942783231,
+            "Proj. Noncon SOS": 0.6248828246440576,
+            "Proj. Con SOS": 0.8004871126999,
+            "elite SOS": 0.6154338494473306,
+            "elite noncon SOS": 0.6350244038172387,
+            "Opp OE": 116.43303268254998,
+            "Opp DE": 103.17328486033144,
+            "Opp Proj. OE": 116.58941508909258,
+            "Opp Proj DE": 102.95262216602733,
+            "Con Adj OE": 129.25576212251133,
+            "Con Adj DE": 90.79514971478837,
+            "Qual O": 127.85704514358656,
+            "Qual D": 89.47568126665206,
+            "Qual Barthag": 0.9837755473959358,
+            "Qual Games": 19,
+            "FUN": 0.0627594166033986,
+            "ConPF": 1457,
+            "ConPA": 1123,
+            "ConPoss": 1174.9625,
+            "ConOE": 1.2400395757311404,
+            "ConDE": 0.9557751843143932,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.9444444444444444,
+            "WAB": 12.883073206764472,
+            "WAB Rk": 2,
+            "Fun Rk": 47,
+            "adjt": 65.82335494511732
+          },
+          "kenpom": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adj_em": 39.17,
+            "adj_o": 127.9,
+            "adj_o_rank": 4,
+            "adj_d": 88.7,
+            "adj_d_rank": 2,
+            "adj_t": 65.4,
+            "adj_t_rank": 287,
+            "luck": 0.042,
+            "luck_rank": 80,
+            "sos_adj_em": 13.78,
+            "sos_adj_em_rank": 19,
+            "sos_opp_o": 116.8,
+            "sos_opp_o_rank": 24,
+            "sos_opp_d": 103,
+            "sos_opp_d_rank": 13,
+            "ncsos_adj_em": 10,
+            "ncsos_adj_em_rank": 18
+          }
+        },
+        {
+          "teamId": "louisville",
+          "teamName": "Louisville",
+          "torvik": {
+            "rank": 16,
+            "team": "Louisville",
+            "conf": "ACC",
+            "record": "23-10",
+            "adjoe": 124.033765527537,
+            "oe Rank": 23,
+            "adjde": 98.13789253332496,
+            "de Rank": 23,
+            "barthag": 0.9366166675468518,
+            "rank.1": 16,
+            "proj. W": 23,
+            "Proj. L": 10,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7087696465073728,
+            "ncsos": 0.5538659774704985,
+            "consos": 0.802380575091942,
+            "Proj. SOS": 0.7087696465073728,
+            "Proj. Noncon SOS": 0.5538659774704985,
+            "Proj. Con SOS": 0.802380575091942,
+            "elite SOS": 0.6472610353299876,
+            "elite noncon SOS": 0.7412377287153631,
+            "Opp OE": 115.40795559390706,
+            "Opp DE": 103.7681312373706,
+            "Opp Proj. OE": 115.40795559390706,
+            "Opp Proj DE": 103.7681312373706,
+            "Con Adj OE": 125.77085330943557,
+            "Con Adj DE": 99.4847566040504,
+            "Qual O": 122.34578757391589,
+            "Qual D": 101.0746941737713,
+            "Qual Barthag": 0.8999260388959681,
+            "Qual Games": 17,
+            "FUN": -0.0279050206246417,
+            "ConPF": 1481,
+            "ConPA": 1357,
+            "ConPoss": 1260.2875,
+            "ConOE": 1.175128690874106,
+            "ConDE": 1.07673844261726,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 3.9476048938913606,
+            "WAB Rk": 25,
+            "Fun Rk": 244,
+            "adjt": 69.69049412007061
+          },
+          "kenpom": {
+            "rank": 18,
+            "team": "Louisville",
+            "conf": "ACC",
+            "record": "23-10",
+            "adj_em": 25.42,
+            "adj_o": 124.1,
+            "adj_o_rank": 20,
+            "adj_d": 98.7,
+            "adj_d_rank": 26,
+            "adj_t": 69.7,
+            "adj_t_rank": 63,
+            "luck": -0.02,
+            "luck_rank": 239,
+            "sos_adj_em": 12.49,
+            "sos_adj_em_rank": 30,
+            "sos_opp_o": 115.9,
+            "sos_opp_o_rank": 41,
+            "sos_opp_d": 103.4,
+            "sos_opp_d_rank": 23,
+            "ncsos_adj_em": 2.33,
+            "ncsos_adj_em_rank": 117
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-grvxfj3g",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Duke Louisville Elite 8 injury news 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:56:05.764Z",
+      "completedAt": "2026-03-18T10:56:06.503Z",
+      "summary": "Returned 5 search results for \"Duke Louisville Elite 8 injury news 2026\".",
+      "result": [
+        {
+          "title": "Louisville&#x27;s Mikel Brown Jr. out vs. Duke due to back injury",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47513997%2Flouisville%2Dmikel%2Dbrown%2Djr%2Dvs%2Dduke%2Ddue%2Dback%2Dinjury&rut=a1fab9ad92c6931c8f98b12105aa22a62cdd0f0491abe62702451f75a3c1a66e",
+          "snippet": "Louisville star guard Mikel Brown Jr., who has missed the last four games with a back injury , will not play in Tuesday&#x27;s game vs. Duke , coach Pat Kelsey said."
+        },
+        {
+          "title": "Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b",
+          "snippet": "Duke starting guard Caleb Foster has a fractured right foot and will be out indefinitely."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Duke Blue Devils Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=d6bcf80025b06743fd52d54637c63655e1dc2bb35b61c45c1a0db1de6957841b",
+          "snippet": "Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Men&#x27;s College Basketball Scores, 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fscoreboard&rut=68954f0bec87320e677368e95a3de46cc6516cab1a79c1654cd99a18bb9a83b0",
+          "snippet": "Live scores for every 2025-26 NCAAM season game on ESPN. Includes box scores, video highlights, play breakdowns and updated odds."
+        }
+      ]
+    },
+    {
+      "id": "tool-cbxj27ae",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/47513997/louisville-mikel-brown-jr-vs-duke-due-back-injury"
+      },
+      "startedAt": "2026-03-18T10:56:20.939Z",
+      "completedAt": "2026-03-18T10:56:21.298Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/story/_/id/47513997/louisville-mikel-brown-jr-vs-duke-due-back-injury and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/47513997/louisville-mikel-brown-jr-vs-duke-due-back-injury",
+        "text": "Louisville's Mikel Brown Jr. out vs. Duke due to back injury - ESPN Louisville's Brown (back) to remain out vs. Duke --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Louisville's Brown (back) to remain out vs. Duke Louisville Cardinals 72d Jeff Borzello Mark saves day, sends Texas to NCAA first round Texas Longhorns 6h Adam Rittenberg Howard checks last box with first tourney win Howard Bison 9h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 18h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 19h EMU hires Clemson assistant Donlon as coach Clemson Tigers 11h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 15h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 18h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 21h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 22h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 3d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 7h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 18h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello Louisville's Mikel Brown Jr. out vs. Duke due to back injury Jeff Borzello Jan 5, 2026, 11:47 AM ET Close Jeff Borzello is a basketball recruiting insider. He has joined ESPN in 2014. Follow on X Multiple Authors Email Print Open Extended Reactions Louisville star guard Mikel Brown Jr ., who has missed the last four games with a lower-back injury, will not play in Tuesday's game against Duke , coach Pat Kelsey said on the ACC coaches' media call on Monday. \"He's champing a"
+      }
+    },
+    {
+      "id": "tool-lk1gwm5l",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture"
+      },
+      "startedAt": "2026-03-18T10:56:28.721Z",
+      "completedAt": "2026-03-18T10:56:29.167Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture",
+        "text": "Duke's Caleb Foster out indefinitely with foot fracture - ESPN Duke's Foster out indefinitely with foot fracture --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Duke's Foster out indefinitely with foot fracture Duke Blue Devils 8d Mark saves day, sends Texas to NCAA first round Texas Longhorns 6h Adam Rittenberg Howard checks last box with first tourney win Howard Bison 9h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 18h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 19h EMU hires Clemson assistant Donlon as coach Clemson Tigers 11h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 15h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 18h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 21h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 22h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 3d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 7h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 18h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello Duke's Caleb Foster out indefinitely with foot fracture play Caleb Foster lays it in for a Duke bucket (0:21) Caleb Foster banks it in off the glass to extend Duke’s first-half lead. (0:21) Associated Press Multiple Authors Mar 10, 2026, 10:20 AM ET Email Print Open Extended Reactions Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won't play in this week's Atlantic Coast C"
+      }
+    },
+    {
+      "id": "tool-89cuugon",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke vs Louisville Elite 8 2026 matchup analysis",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:56:30.666Z",
+      "completedAt": "2026-03-18T10:56:31.527Z",
+      "summary": "Returned 5 search results for \"Duke vs Louisville Elite 8 2026 matchup analysis\".",
+      "result": [
+        {
+          "title": "Louisville vs. Duke Free Pick, Odds & Analysis 1/26/2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.predictem.com%2Fcollege%2Dbasketball%2Flouisville%2Dvs%2Dduke%2Dprediction%2D2026%2D01%2D26%2F&rut=b0c073ff69676df6ab554dd6b8694cd2708cb15f602a3c0cfd249c98606abefc",
+          "snippet": "Expert Louisville vs . Duke prediction for tonight&#x27;s ACC clash. Analysis of the 7.5-point spread, Cameron Boozer&#x27;s impact, and our best bet for this top-25 matchup on ESPN."
+        },
+        {
+          "title": "Duke 84-73 Louisville (Jan 6, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401820650%2Fduke%2Dlouisville&rut=43236f86ab4d697607437b0611030ebf403fd9b8c7a387ffc606cbfca2ebc0d4",
+          "snippet": "Game summary of the Duke Blue Devils vs . Louisville Cardinals NCAAM game, final score 84-73, from January 6, 2026 on ESPN."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "Louisville vs Duke Prediction | CBB Picks & Analysis",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsbettingstats.com%2Fncaab%2Fpicks%2Flouisville%2Dvs%2Dduke%2Dprediction%2D2026%2D01%2D26%2F&rut=a7cc746d954a7b68062a0023b071f5b6f968cdc9c9a3a365a2b59df87051c23f",
+          "snippet": "The market positions Duke as a clear home favorite at -7.5 in this ACC matchup at Cameron Indoor Stadium. The number reflects Duke&#x27;s elite defensive profile, undefeated start, and significant home-court edge against a Louisville team that prefers a faster tempo and transition scoring. The total in ..."
+        },
+        {
+          "title": "Prediction: Louisville vs Duke on 2026-01-06 | The Wager King",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fthewagerking.com%2Fprediction%2Dlouisville%2Dvs%2Dduke%2Don%2D2026%2D01%2D06%2F&rut=617f10c7d093e3e60ab9fd978f3c0d672967c42a8e7c71023cbd74db78c21a83",
+          "snippet": "Player Prop #1: Cooper Flagg / Over Points / 21.5 at -115 / 72% / Flagg averages 22.8 PPG in 2026 with 28% usage; faces Louisville&#x27;s weakened backcourt without Brown, projecting 24+ in high-efficiency matchup ( Duke&#x27;s eFG% 58.2 vs Louisville&#x27;s def allowing 25 PPG to forwards)."
+        }
+      ]
+    },
+    {
+      "id": "tool-qn6evqru",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/game/_/gameId/401820650/duke-louisville"
+      },
+      "startedAt": "2026-03-18T10:56:34.048Z",
+      "completedAt": "2026-03-18T10:56:34.732Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/game/_/gameId/401820650/duke-louisville and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/game/_/gameId/401820650/duke-louisville",
+        "text": "Duke 84-73 Louisville (Jan 6, 2026) Final Score - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search Duke Blue Devils @ Louisville Cardinals 6 Duke Blue Devils Duke DUKE 14-1 , 3-0 ACC 84 14-1 , 3-0 ACC Final 1 2 T Duke DUKE 38 46 84 Louisville LOU 47 26 73 20 Louisville Cardinals Louisville LOU 11-4 , 1-2 ACC 73 11-4 , 1-2 ACC Gamecast Recap Box Score Play-by-Play Team Stats Videos Game Leaders DUKE LOU 27 C. Boozer #12 10/12 FG, 4/5 FT 27 Points 24 R. Conwell #3 8/19 FG, 4/4 FT 24 8 C. Boozer #12 7 DREB, 1 OREB 8 Rebounds 7 R. Conwell #3 7 DREB, 0 OREB 7 4 C. Boozer #12 4 TO, 39 MIN 4 Assists 4 J. Hadley #1 3 TO, 30 MIN 4 Full Box Score Team Stats DUKE LOU 51% ( 29-57 ) Field Goal % 40% ( 26-65 ) 30% ( 7-23 ) Three Point % 32% ( 12-38 ) 68% ( 19-28 ) Free Throw % 75% ( 9-12 ) 12 Turnovers 14 39 Rebounds 37 33% Percent Led 64% 14 Largest Lead 12 Full Team Stats Game Information Louisville , KY ESPN Referee : Pat Driscoll Referee : John Gaffney Referee : Tony Chiazza Video Highlights Cameron Boozer scores 27, hot-shooting No. 6 Duke rallies past No. 20 Louisville 84-73 — Cameron Boozer scored 27 points, including seven during a 16-6 run early in the second half, Isaiah Evans added 23 and No. 6 Duke shot 71% after the break to rally past No. 20 Louisville 84-73 on Tuesday night for its third consecutive victory. Jan 6, 2026, 09:39 pm - AP Probabilities & Game Flow Win Probability Win Prob. Game Flow 100% -- DUKE 0% -- LOU According to ESPN Analytics Shot Chart All Periods All Play Types All Players Ryan Conwell makes 24-foot three point jumper (J'Vonne Hadley assists) Patrick Ngongba II misses 26-foot three point jumper Ryan Conwell misses 11-foot jumper Patrick Ngongba II makes free throw 1 of 2 Patrick Ngongba II misses free throw 2 of 2 Ryan Conwell makes 25-foot three pointer Cameron Boozer makes layup Ryan Conwell makes 27-foot three point jumper (Sananda Fru assists) Isaiah Evans misses 6-foot jumper Patrick Ngongba II misses tip in layup Ryan Conwell misses driving layup Cayden Boozer makes free throw 1 of 2 Cayden Boozer misses free throw 2 of 2 Isaiah Evans makes free throw 1 of 2 Isaiah Evans makes free throw 2 of 2 Adrian Wooley misses 13-foot floating jump shot Isaiah Evans makes 26-foot three point jumper (Cameron Boozer assists) Aly Khalifa makes 26-foot three point jumper (J'Vonne Hadley assists) Cayden Boozer misses 8-foot jumper Ryan Conwell misses 7-foot floating jump shot Isaiah Evans makes 27-foot three pointer Ryan Conwell makes free throw 1 of 2 Ryan Conwell makes free throw 2 of 2 Isaiah Evans misses 24-foot three point pullup jump shot Adrian Wooley makes 7-foot floating jump shot Caleb Foster misses 7-foot pullup jump shot Kobe Rodgers misses 23-foot three point jumper Isaiah Evans misses 24-foot three point jumper Khani Rooths misses 24-foot three point jumper Caleb Foster misses 2"
+      }
+    },
+    {
+      "id": "tool-wq7jb4m3",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke Louisville Elite 8 2026 preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:56:42.132Z",
+      "completedAt": "2026-03-18T10:56:43.009Z",
+      "summary": "Returned 5 search results for \"Duke Louisville Elite 8 2026 preview\".",
+      "result": [
+        {
+          "title": "2026 NCAA Tournament Breakdown: East Region Best Bets ... - OutKick",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.outkick.com%2Fsports%2F2026%2Dncaa%2Dtournament%2Dbreakdown%2Deast%2Dregion%2Dbest%2Dbets%2Dsleepers%2Dbusts&rut=d2bcc80f6b9be18f69b4413a8a2d48aa074681c473d542c49e0aefba477e7cc3",
+          "snippet": "East Region picks for the 2026 NCAA Tournament, with Duke&#x27;s path, Louisville sleeper logic, upset alerts, and the players who can swing your March Madness bracket."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "March Madness East Region Predictions 2026 | NCAA Tournament Bracket ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Deast%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=25e6368f544675f01902e26368a5f0c4bdbd53bbe7041aac490fe6f40bf291f2",
+          "snippet": "I&#x27;m breaking down my March Madness East Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament."
+        },
+        {
+          "title": "March Madness 2026: East Region Picks & Predictions - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fmarch%2Dmadness%2D2026%2Dncaa%2Dtournament%2Deast%2Dregion%2Dpicks%2Dpredictions%2D108070&rut=2c1f9559e0c2f87accec516f29119de49f65de01fee07538be4488401bab4874",
+          "snippet": "March Madness 2026 : NCAA Tournament East Region Picks & Predictions The NCAA Tournament South Region contains a lineup of legendary coaches, carving a tough path for top overall seed Duke . Our regional preview contains matchup breakdowns, plus Final Four and upset picks. East Region NCAA Tournament Preview West Region NCAA Tournament Preview Midwest Region NCAA Tournament Preview South Region ..."
+        },
+        {
+          "title": "March Madness bracket predictions: Expert picks, upsets, winners, odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd",
+          "snippet": "Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis, including predictions, upsets, Vegas odds and more to help you ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-c6rik1rs",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.outkick.com/sports/2026-ncaa-tournament-breakdown-east-region-best-bets-sleepers-busts"
+      },
+      "startedAt": "2026-03-18T10:57:02.206Z",
+      "completedAt": "2026-03-18T10:57:03.030Z",
+      "summary": "Fetched https://www.outkick.com/sports/2026-ncaa-tournament-breakdown-east-region-best-bets-sleepers-busts and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.outkick.com/sports/2026-ncaa-tournament-breakdown-east-region-best-bets-sleepers-busts",
+        "text": "March Madness East Region Preview: Final Four Picks And Upsets | OutKick OutKick Sports Culture Analysis Watch Shows Shop Newsletters Search Home Sports 2026 NCAA Tournament Breakd&hellip; 2026 NCAA Tournament Breakdown: East Region Best Bets, Sleepers & Busts Our East Region guide highlights the safest bets, contrarian sleepers, and bust candidates to target as you fill out your 2026 March Madness bracket. Dan Zaksheske Published March 17, 2026 10:45 AM EDT • Updated March 17, 2026 9:13 AM EDT Facebook Twitter Email Copy Link The NCAA Tournament Bracket is set and, for many Americans, that means it&apos;s time to start making picks for March Madness bracket pools. In case you missed it, I wrote a general tips & tricks piece with advice for filling out your own bracket as you attempt to win your office pool. For this series, we&apos;re going to go through each region and deliver an in-depth breakdown of each of the 16-team clusters, with some of my favorite picks and sleepers. And we&apos;re starting with the East region, headlined by the #1 overall seed in the tournament, the Duke Blue Devils.&#xA0; Most Likely Final Four Team: #1 Duke Blue Devils I&apos;d love to pick another team here, but the fact is that this year has loaded teams at the top of each region . Like last year, the #1 seeds are among the strongest group of #1s (relative to the field) as we&apos;ve seen in a long time, and Duke is the best of the bunch&#x2026; again. It didn&apos;t work out last year, as Duke fell in the Final Four to Houston. But there&apos;s no reason to think Duke won&apos;t be in the Final Four again.&#xA0; They replaced their superstar freshman from last season, Cooper Flagg, with another superstar freshman, Cameron Boozer. He&apos;s averaging a double-double (22.5 points, 10.2 rebounds per game) and is a lock to be selected with one of the first three picks in the 2026 NBA Draft.&#xA0; Cam Boozer is one of the best players in college basketball and had led the Duke Blue Devils to the #1 overall seed in the 2026 NCAA Tournament. (Jim Dedmon/Imagn Images) The two biggest hurdles for Duke are injuries and the East region. The team lost starting point guard Caleb Foster to a fractured foot, and he&apos;s out indefinitely with his NCAA Tournament status in serious doubt. Starting forward Patrick Ngongba missed the ACC Tournament with his own foot injury, but he&apos;s expected to play in the team&apos;s Round of 64 game.&#xA0; If Foster can&apos;t return and Ngongba is hampered by his injury, it could be tough sledding in a region that also features UConn, Michigan State, Kansas and St. John&apos;s. Still, Duke is the heavy favorite to make it to the Final Four and should be able to get there.&#xA0; Sleeper Final Four Pick: #6 Louisville Cardinals While this region looks tough on paper because it features so many blue-blood programs, the real reason is the underseeding of the Cardinals. The biggest hurdle for Louisville for a Final Four run is a potential Round "
+      }
+    },
+    {
+      "id": "tool-usht73f3",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke Louisville Elite 8 2026 injury update",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:57:06.082Z",
+      "completedAt": "2026-03-18T10:57:07.019Z",
+      "summary": "Returned 5 search results for \"Duke Louisville Elite 8 2026 injury update\".",
+      "result": [
+        {
+          "title": "Duke&#x27;s massive injury update should have Louisville basketball fans ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbigredlouie.com%2Fduke%2Dmassive%2Dinjury%2Dupdate%2Dshould%2Dhave%2Dlouisville%2Dbasketball%2Dfans%2Ddreaming%2Dbig&rut=fdb4f9de899465fcbdfe524c0b0cf98937f6d8927515adb4ad3be7c5f4d01d98",
+          "snippet": "When looking at the ACC, Louisville fans know there is a giant in the tournament who is the heavy favorite, the Duke Blue Devils. However, Duke gave a major update this morning, and Louisville fans should suddenly dream big. Major Duke injury update could boost Louisville basketball&#x27;s ACC title hopes"
+        },
+        {
+          "title": "ACC Releases Final Injury Report for Louisville vs. Duke",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Flouisville%2Fbasketball%2Fsecond%2Dinjury%2Dreport%2D2025%2D26%2Dduke%2Drematch&rut=b7b199c9192e53b77e5a8fa945c05fad73faacd3676173a69938441b0d3a660a",
+          "snippet": "Louisville Cardinals center Aly Khalifa (15) celebrates after scoring a three-point shot against Duke Tuesday night at KFC Yum Center January 6, 2026 . | Matt Stone/Courier Journal / USA TODAY ..."
+        },
+        {
+          "title": "Louisville&#x27;s Mikel Brown Jr. out vs. Duke due to back injury",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47513997%2Flouisville%2Dmikel%2Dbrown%2Djr%2Dvs%2Dduke%2Ddue%2Dback%2Dinjury&rut=a1fab9ad92c6931c8f98b12105aa22a62cdd0f0491abe62702451f75a3c1a66e",
+          "snippet": "Louisville star guard Mikel Brown Jr., who has missed the last four games with a back injury , will not play in Tuesday&#x27;s game vs. Duke , coach Pat Kelsey said."
+        },
+        {
+          "title": "Louisville vs Duke: Khani Rooths&#x27; Injury Update Ahead of the Game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fthegadgetscentral.com%2Fsports%2F2026%2F01%2F27%2Flouisville%2Dvs%2Dduke%2Dinjury%2Dupdate%2F&rut=1337eeb6ec406c48bb3a53134ba90bf38134a838c66c14f95af1a2f1fe78a807",
+          "snippet": "Get the latest on Khani Rooths and the Louisville vs Duke matchup, including injury updates and game insights."
+        },
+        {
+          "title": "Duke vs. Louisville - March 08, 2026 | Live Scores, Updates, Odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Flouisville%2Dcardinals%2Dw%2Dbasketball%2Dvs%2Dduke%2Dw%2Dbasketball%2D2026%2D3%2D8%2D12%2D00&rut=e8f93178ef18f1836e2b36abfab51a563ba243e8284345cb1668755b04398523",
+          "snippet": "Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports, and betting odds, all in one place"
+        }
+      ]
+    },
+    {
+      "id": "tool-ka1xrgc3",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.si.com/college/louisville/basketball/second-injury-report-2025-26-duke-rematch"
+      },
+      "startedAt": "2026-03-18T10:57:29.035Z",
+      "completedAt": "2026-03-18T10:57:29.684Z",
+      "summary": "Fetched https://www.si.com/college/louisville/basketball/second-injury-report-2025-26-duke-rematch and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.si.com/college/louisville/basketball/second-injury-report-2025-26-duke-rematch",
+        "text": "ACC Releases Final Injury Report for Louisville vs. Duke Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW FOOTBALL BASKETBALL BASEBALL OTHER SPORTS SI.COM SI.COM CARDINAL FB SI.COM CARDINAL BB FOOTBALL BASKETBALL BASEBALL OTHER SPORTS SI.COM FOOTBALL FOOTBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES BASKETBALL BASKETBALL NEWS SCHEDULE STATS ROSTER RANKINGS RANKINGS SCORES More from Louisville Cardinals On SI BASEBALL OTHER SPORTS SI.COM SI.COM CARDINAL FB SI.COM CARDINAL BB ACC Releases Final Injury Report for Louisville vs. Duke The Cardinals tip off against the Blue Devils at 7:00 p.m. EST. Matthew McGavic | Share on Facebook Share on X Add us as a preferred source Louisville Cardinals center Aly Khalifa (15) celebrates after scoring a three-point shot against Duke Tuesday night at KFC Yum Center January 6, 2026. | Matt Stone/Courier Journal / USA TODAY NETWORK via Imagn Images In this story: Louisville Cardinals LOUISVILLE, Ky. - They might have had to brave several inches of snow to be able to play tonight, but that wasn&#39;t going to stop the Louisville men&#39;s basketball program from getting their crack at revenge. --> LOUISVILLE, Ky. - They might have had to brave several inches of snow to be able to play tonight, but that wasn&#39;t going to stop the Louisville men&#39;s basketball program from getting their crack at revenge. In just a couple hours, the Cardinals will face Duke in Durham for their first in-season rematch of the year. Tip-off against the Blue Devils is set for 7:00 p.m. EST. --> In just a couple hours, the Cardinals will face Duke in Durham for their first in-season rematch of the year. Tip-off against the Blue Devils is set for 7:00 p.m. EST. Two hours before tip-off, we learned just who will actually be able to suit up for both Louisville and Duke, with the ACC releasing their updated availability report. --> Two hours before tip-off, we learned just who will actually be able to suit up for both Louisville and Duke, with the ACC releasing their updated availability report. On the Louisville side of things, just like on the first report, reserve forward Khani Rooths was designated as &#34;out&#34; due to an illness and is set to miss his fourth straight game. He&#39;s played in 16 games and made two starts, averaging 6.1 points, 4.9 rebounds and 1.3 assists. --> On the Louisville side of things, just like on the first report, reserve forward Khani Rooths was designated as &#34;out&#34; due to an illness and is set to miss his fourth straight game. He&#39;s played in 16 games and made two starts, averaging 6.1 points, 4.9 rebounds and 1.3 assists. While Rooths has not yet been cleared to resume normal basketball activities, he was healthy enough to get back in the building last week. --> While Rooths has not yet been cleared to resume normal basketball activities, he was healthy enough to get back in the building last week. &#34;We have him back in the building, whi"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "e8-east-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T10:55:43.773Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: e8-east-1\nCurrent game label: East Regional Final\nRound: Elite 8\nResolved teams: Duke (duke) vs Louisville (louisville)\nPrior committed picks: 60"
+    },
+    {
+      "id": "e8-east-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T10:55:43.773Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"e8-east-1\",\n      \"round\": \"Elite 8\",\n      \"region\": \"East\",\n      \"label\": \"East Regional Final\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"s16-east-1\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"s16-east-2\"\n      }\n    },\n    \"slotAName\": \"Duke\",\n    \"slotBName\": \"Louisville\",\n    \"slotATeamId\": \"duke\",\n    \"slotBTeamId\": \"louisville\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Texas holds a clear edge in advanced metrics, ranking 37th in KenPom and 45th in Torvik compared to NC State's unranked status, and they just defeated the Wolfpack 68-66 in a tight First Four game where Tramon Mark hit a game-winning jumper. While NC State showed resilience and kept the game close, Texas's superior offensive efficiency and proven ability to execute in clutch moments give them the advantage in this rematch. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Texas's experience and recent head-to-head win make them the more reliable pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"SMU holds a significant edge in advanced metrics, ranking 42nd in KenPom and Torvik compared to Miami (OH)'s 87th-93rd range, with a stronger adjusted offensive efficiency (123 vs. 116.8) that should exploit the RedHawks' weaker defense. While Miami (OH) boasts an impressive 31-1 record, their competition level in the MAC is inferior, and SMU's experience in the ACC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but SMU's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"howard\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Howard enters this First Four matchup with a recent head-to-head victory over UMBC, having won 86-83 in the 2026 tournament, which demonstrates their ability to execute in clutch moments. While UMBC holds a slight edge in raw offensive efficiency metrics, Howard's balanced attack and superior defensive rebounding proved decisive in their previous encounter. The underdog's path relies on hot three-point shooting and forcing turnovers, but Howard's proven resilience and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Lehigh holds a slight edge in advanced metrics, ranking 284th in KenPom compared to Prairie View A&M's 291st, with a marginally better adjusted offensive efficiency that should exploit the Panthers' weaker defense. While Prairie View A&M has a balanced record, Lehigh's recent Patriot League championship demonstrates clutch performance and tournament readiness. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Lehigh's proven form and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Duke is the overwhelming favorite as the tournament's top-ranked team in both KenPom and Torvik, boasting a 31-2 record and elite efficiency on both ends of the floor. Siena, the MAAC champion, faces a massive talent gap, ranking 187th in Torvik and 192nd in KenPom, with no credible path to exploit Duke's weaknesses. While Siena's recent form and championship experience provide some intangible value, Duke's superior size, athleticism, and defensive prowess make this a near-certain outcome.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.68,\n        \"rationale\": \"TCU holds a clear edge in advanced metrics, ranking 43rd in KenPom and 48th in Torvik with a strong defensive efficiency (adjde 99.6) that should disrupt Ohio State's offense. While Ohio State is a traditional power, the lack of available ratings suggests they may be unranked or lower-tier this season, making their path to victory reliant on offensive execution against a disciplined Big 12 defense. TCU's experience in a tougher conference and proven defensive prowess give them the advantage in this matchup.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.82,\n        \"rationale\": \"St. John's holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 20th in KenPom and 18th in Torvik compared to Northern Iowa's 71st and 70th, respectively. Their elite defense (adjde 95.1) should effectively contain Northern Iowa's average offense (adjoe 110.1), while their own potent offense can exploit the Panthers' defense. While Northern Iowa has a credible path through disciplined play and rebounding, St. John's superior talent and efficiency make them the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Kansas is a top-25 team in both KenPom and Torvik with an elite defense ranked 10th in adjusted defensive efficiency, while California Baptist lacks any available advanced metrics, indicating they are a low-major automatic qualifier with a significant talent gap. The Jayhawks' experience in the Big 12 and proven ability to dominate defensively make them the overwhelming favorite, and the underdog's only path would require a perfect shooting night and Kansas having an off game, which is highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Louisville holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 18th in KenPom and 16th in Torvik compared to South Florida's 50th in both, with a significantly stronger adjusted offensive efficiency (124.1 vs. 117.7) that should exploit the Bulls' average defense. While South Florida has a solid 24-8 record and a credible path through disciplined play and rebounding, Louisville's superior talent, experience in the ACC, and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's path would require a perfect shooting night and Louisville having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State, a 3-seed from the Big Ten, holds a significant talent and experience advantage over 14-seed North Dakota State, a Summit League automatic qualifier. While specific advanced metrics are unavailable, the Spartans' conference strength and historical tournament pedigree provide a clear edge. North Dakota State's path relies on perimeter shooting and forcing turnovers, but Michigan State's disciplined defense and superior size should control the game. The underdog's upset potential is limited without a major shooting night from the Bison and a poor performance from the Spartans.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.78,\n        \"rationale\": \"UCLA holds a clear edge in advanced metrics, ranking 24th in Torvik and 27th in KenPom compared to UCF's 58th and 54th, with a stronger adjusted offensive efficiency and a defense that should contain the Knights' attack. While UCF has shown resilience in close games and plays in the tough Big 12, UCLA's superior talent, experience, and recent form—including a dominant sweep of USC—make them the more reliable pick. The underdog's path relies on hot three-point shooting and forcing turnovers, but UCLA's balanced attack and defensive prowess should control the tempo and secure the win.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.92,\n        \"rationale\": \"UConn is a top-tier program with a significant talent and efficiency advantage over Furman, which ranks outside the top 190 in both KenPom and Torvik metrics. While Furman has a credible upset path through disciplined play and three-point shooting, UConn's elite defense, physical frontcourt, and tournament experience make them the overwhelming favorite. The Huskies' ability to control the tempo and dominate the paint should neutralize Furman's strengths and secure a comfortable win.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while LIU, a 234th-ranked NEC champion, lacks the offensive firepower to compete. The Wildcats' top-10 adjusted offense and defense should overwhelm LIU's average attack, and there are no significant injury concerns for Arizona. Although LIU has momentum from its conference title, the talent gap is too wide for a credible upset path.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Villanova holds a clear advantage in advanced metrics, ranking 33rd in KenPom and 36th in Torvik with a balanced offensive and defensive efficiency that should exploit Utah State's lack of available ratings, indicating they are likely a lower-tier automatic qualifier. While Utah State's path relies on disciplined play and perimeter shooting, Villanova's experience in the Big East and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Villanova having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Wisconsin holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 21st in Torvik and 22nd in KenPom compared to High Point's 93rd and 92nd, with a top-11 adjusted offense that should overwhelm the Panthers' average defense. While High Point boasts a strong 30-4 record, their competition level in the Big South is inferior, and Wisconsin's experience in the Big Ten provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Wisconsin's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Arkansas holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 17th in KenPom and 20th in Torvik with a top-5 adjusted offense that should overwhelm Hawai'i, which lacks any available advanced ratings and is likely a low-major automatic qualifier. While Hawai'i's path relies on disciplined play and perimeter shooting, Arkansas's experience in the SEC and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Arkansas having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"BYU holds a clear edge in advanced metrics, ranking 23rd in KenPom and 33rd in Torvik with a top-10 adjusted offense that should exploit Texas's 125th-ranked defense. While Texas has a strong offense, their defensive struggles and a weaker 18-14 record suggest inconsistency, whereas BYU's 23-11 record and recent form in the Big 12 provide stability. The underdog's path relies on Texas's perimeter shooting and forcing turnovers, but BYU's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Gonzaga enters as a dominant 3-seed with elite efficiency metrics, ranking 11th in both KenPom and Torvik, while Kennesaw State lacks any available advanced ratings, indicating they are a low-major automatic qualifier with a significant talent gap. The Bulldogs' top-10 adjusted defense and potent offense should overwhelm the Owls, and there are no significant injury concerns for Gonzaga. Although Kennesaw State has momentum from its conference title, the talent gap is too wide for a credible upset path, making Gonzaga the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Miami (FL) holds a clear edge in advanced metrics, ranking 30th in KenPom and 35th in Torvik compared to Missouri's 52nd and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Tigers' attack. While Missouri plays in the tougher SEC, Miami's superior efficiency, balanced attack, and recent form in the ACC provide a more reliable path to victory. The underdog's upset potential is limited without a major shooting night from Missouri and a poor performance from Miami, which is unlikely given the metrics and matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team nationally with elite offensive efficiency (ranked 1st in Torvik offensive rating) and a strong defense, while Queens ranks outside the top 190 and has a significant talent gap as a lower-major automatic qualifier. The Boilermakers' experience in the Big Ten and proven ability to dominate physically should overwhelm Queens' average attack, and there are no reported injury concerns for Purdue. Although Queens has momentum from its conference title, the matchup dynamics and efficiency metrics make a credible upset path highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Florida is a top-5 team nationally with elite efficiency on both ends of the floor, ranking 4th in KenPom and Torvik, while Lehigh, a 284th-ranked Patriot League team, lacks the offensive firepower to compete. The Gators' top-10 adjusted offense and top-5 defense should overwhelm Lehigh's average attack, and there are no significant injury concerns for Florida. Although Lehigh has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Florida the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Iowa holds a slight edge in both offensive and defensive efficiency metrics, ranking 25th in KenPom and 26th in Torvik compared to Clemson's 36th and 29th, with a top-30 adjusted offense that can exploit Clemson's average attack. While Clemson's defense is solid, Iowa's superior offensive firepower and experience in the Big Ten provide a more reliable path to victory in a tight 8/9 matchup. The underdog's path relies on Clemson's defense forcing turnovers and winning the rebounding battle, but Iowa's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Vanderbilt holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 10th in Torvik and 12th in KenPom with a top-6 adjusted offense that should overwhelm McNeese's 91st-ranked attack. While McNeese boasts a strong 28-5 record, their competition level in the Southland Conference is inferior, and Vanderbilt's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Vanderbilt's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Nebraska, a 4-seed from the Big Ten, holds a decisive advantage over 13-seed Troy, ranking 14th in KenPom and 19th in Torvik with a top-7 adjusted defense that should stifle Troy's average offense. While Troy has Sun Belt championship momentum, the talent and efficiency gap is substantial, and Nebraska's recent form—including a 26-6 record and strong defensive metrics—makes them the reliable pick. The underdog's path would require a perfect shooting night and Nebraska having an off game, which is unlikely given the matchup dynamics and prior picks favoring higher-seeded teams in the South region.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.85,\n        \"rationale\": \"North Carolina holds a clear edge in advanced metrics, ranking 27th in Torvik and 29th in KenPom compared to VCU's 51st and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Rams' attack. While VCU has a solid 26-7 record and a credible path through disciplined play and forcing turnovers, North Carolina's superior talent, experience in the ACC, and recent form—including a win over Duke—make them the more reliable pick. The underdog's upset potential is limited without a major shooting night from VCU and a poor performance from the Tar Heels, which is unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Illinois is a top-10 team nationally with elite offensive efficiency, ranking 1st in KenPom adjusted offensive efficiency and 2nd in Torvik offensive rating, while Penn ranks outside the top 150 in both metrics. The Illini's top-25 defense should contain Penn's average attack, and there are no reported injury concerns for Illinois. Although Penn has Ivy League championship experience, the talent and efficiency gap is too wide for a credible upset path, making Illinois the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Saint Mary's holds a slight edge in both offensive and defensive efficiency metrics, ranking 24th in KenPom and 25th in Torvik compared to Texas A&M's 39th in both, with a superior adjusted defensive efficiency that should contain the Aggies' attack. While Texas A&M plays in the tougher SEC, Saint Mary's disciplined style, experience in the WCC, and recent form—including a 27-5 record—provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on Texas A&M's perimeter shooting and forcing turnovers, but Saint Mary's balanced attack and defensive prowess make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Houston is a top-5 team nationally with elite defensive efficiency (4th in KenPom adjD) and a potent offense, while Idaho ranks outside the top 130 and lacks the firepower to compete. The Cougars' experience in the Big 12 and recent form—including a 28-5 record—make them the overwhelming favorite, and there are no reported injury concerns. Idaho's only path would require a perfect shooting night and Houston having an off game, which is highly unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Michigan enters as a dominant 1-seed with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Howard, a 206th-ranked MEAC team, lacks the offensive firepower to compete. The Wolverines' top-2 offense and defense should overwhelm the Bison, and there are no significant injury concerns for Michigan. Although Howard has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Michigan the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Georgia holds a slight edge in advanced metrics, ranking 31st in KenPom and 37th in Torvik compared to Saint Louis's 41st and 44th, with a stronger adjusted offensive efficiency that should exploit the Billikens' average defense. While Saint Louis boasts an impressive 28-5 record, their competition in the A10 is inferior to the SEC's rigor, and Georgia's recent form in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Georgia's balanced attack and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Texas Tech holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 12th in Torvik and 19th in KenPom compared to Akron's 68th and 64th, with a top-10 adjusted offense that should overwhelm the Zips' average defense. While Akron boasts a strong 28-5 record, their competition in the MAC is inferior to the Big 12's rigor, and Texas Tech's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Texas Tech's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Alabama holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 16th in KenPom and 17th in Torvik with a top-3 adjusted offense that should overwhelm Hofstra's 87th-ranked defense. While Hofstra has a solid 24-10 record and CAA championship momentum, their competition level is inferior to the SEC's rigor, and Alabama's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Alabama's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Tennessee holds a decisive edge in overall team quality, ranking 15th in both KenPom and Torvik with a top-15 defense that should disrupt SMU's offense, which has shown recent vulnerability with a late-season slump and an injury to key guard BJ Edwards. While SMU's offense is potent on paper, their defensive rating is significantly weaker (95th in Torvik), and Tennessee's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on SMU's shooting and forcing turnovers, but Tennessee's disciplined defense and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-6\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-7\",\n        \"winnerId\": \"kentucky\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-8\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Iowa State enters as a 2-seed from the Big 12 with a proven track record under coach T.J. Otzelberger, having reached the Sweet 16 twice recently and earning a high seed due to strong conference play and defensive identity. Tennessee State, while riding momentum from an OVC championship and a 23-9 record, faces a significant talent and efficiency gap against a Power 5 opponent that regularly competes at a high level. The Tigers' path relies on hot three-point shooting and forcing turnovers, but Iowa State's disciplined defense, superior rebounding, and experience in high-stakes games make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Duke remains the superior team by a wide margin in efficiency metrics, ranking 1st nationally in both KenPom and Torvik, but the loss of starting point guard Caleb Foster to a foot fracture introduces meaningful uncertainty and could disrupt their offensive rhythm. TCU's defense is solid (30th in Torvik adjD) and could exploit Duke's backcourt vulnerability, but the Horned Frogs' offense is only 83rd in efficiency, making it difficult to fully capitalize. Ultimately, Duke's elite defense, depth, and talent advantage should still prevail, but the injury lowers confidence from the near-certain level of the first round.\"\n      },\n      {\n        \"gameId\": \"r32-east-2\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.68,\n        \"rationale\": \"St. John's holds a slight edge in overall efficiency metrics, ranking 18th in Torvik and 20th in KenPom compared to Kansas's 22nd and 21st, with a more balanced offensive attack and a defense that has proven elite all season. While Kansas boasts a top-10 adjusted defense, their offense is less potent (56th-57th in efficiency) and they have shown vulnerability in close games against top competition, whereas St. John's has won 27 games and the Big East title under Rick Pitino. The underdog's path for Kansas relies on their defense forcing turnovers and winning the rebounding battle, but St. John's superior form, experience in a tougher conference, and recent championship pedigree make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-east-3\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Louisville holds a clear edge in advanced metrics, ranking 18th in KenPom and 16th in Torvik with a top-20 offense and defense, while Michigan State's ratings are unavailable, suggesting they may be lower-tier this season. The Cardinals' recent form, including a 23-10 record and strong ACC play, provides a reliable path to victory, whereas Michigan State's path relies on tournament experience and defensive grit but lacks the statistical backing to overcome Louisville's efficiency. The underdog's upset potential is limited without a major shooting night from the Spartans and a poor performance from Louisville, which is unlikely given the matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r32-east-4\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.65,\n        \"rationale\": \"UCLA holds a clear edge in available advanced metrics, ranking 24th in Torvik and 27th in KenPom with a top-20 offense and solid defense, while UConn's ratings are unavailable, suggesting they may be lower-tier this season. The Bruins' recent form, including a strong finish to the Big Ten schedule and a first-round win over UCF, provides momentum and proven tournament readiness. UConn's path relies on their championship pedigree and defensive grit, but without statistical backing or clear health updates, UCLA's efficiency and balanced attack make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while Villanova ranks 33rd-36th, creating a significant talent gap. The Wildcats' top-10 adjusted offense and defense should overwhelm Villanova's balanced but less potent attack, and there are no reported injury concerns for either side. Villanova's path relies on disciplined play and perimeter shooting, but Arizona's superior efficiency, depth, and recent form—including a 31-2 record and wins over top teams—make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-2\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Arkansas holds a slight edge in overall efficiency metrics, ranking 17th in KenPom and 20th in Torvik compared to Wisconsin's 22nd and 21st, with a top-5 adjusted offense that can exploit the Badgers' defense. While Wisconsin's offense is potent, Arkansas's experience in the tougher SEC and superior defensive rebounding provide a more reliable path to victory in this neutral-site matchup. The underdog's path for Wisconsin relies on hot three-point shooting and forcing turnovers, but Arkansas's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-3\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Gonzaga holds a decisive edge in overall efficiency metrics, ranking 11th in both KenPom and Torvik with a top-10 defense that should contain BYU's high-powered offense, which ranks 10th in KenPom but 88th in defense. While BYU's offensive firepower is elite, Gonzaga's defensive prowess, experience in big games, and historical dominance in this rivalry (winning the last four WCC tournament finals) provide a more reliable path to victory. The underdog's path for BYU relies on hot three-point shooting and forcing turnovers, but Gonzaga's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-4\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Purdue holds a decisive edge in overall efficiency metrics, ranking 8th in both KenPom and Torvik with the nation's top-ranked adjusted offense (132.6 Torvik, 131 KenPom) that should overwhelm Miami's 35th-ranked attack. While Miami has a credible path through disciplined play and perimeter shooting, as noted by analysts, Purdue's elite offensive firepower, superior rebounding, and experience in the Big Ten provide a more reliable path to victory in this neutral-site matchup. The underdog's upset potential is limited without a major shooting night from Miami and a poor performance from Purdue, which is unlikely given the efficiency gap and recent form.\"\n      },\n      {\n        \"gameId\": \"r32-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Florida enters as the top-5 overall team with elite efficiency on both ends, ranking 4th in KenPom and Torvik, while Iowa's 25th-26th ranking shows a clear talent gap. The Gators' top-5 defense should disrupt Iowa's potent offense, and Florida's recent form—including a 26-7 record and dominant first-round win—provides momentum. Iowa's path relies on hot three-point shooting and forcing turnovers, but Florida's superior efficiency, depth, and matchup advantage make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-south-2\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Vanderbilt holds a decisive edge in offensive efficiency, ranking 6th in KenPom adjusted offense and 10th overall in Torvik, which should exploit Nebraska's weaker defense despite the Cornhuskers' top-10 defensive rating. While Nebraska's defense is elite, their offense is only 55th-62nd in efficiency, and they lack a consistent go-to scorer, which could limit their ability to keep pace with Vanderbilt's high-powered attack. Vanderbilt's recent form in the SEC and superior overall efficiency metrics make them the more reliable pick, though Nebraska's defensive prowess gives them a credible path if they can force turnovers and control tempo.\"\n      },\n      {\n        \"gameId\": \"r32-south-3\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Illinois holds a decisive edge in offensive efficiency, ranking 1st in KenPom adjusted offense and 2nd in Torvik offensive rating, which should exploit North Carolina's average defense. While North Carolina has a solid 24-8 record and ACC pedigree, Illinois's superior metrics, balanced attack, and recent form in the Big Ten provide a more reliable path to victory. The underdog's path relies on North Carolina's defense forcing turnovers and winning the rebounding battle, but Illinois's efficiency and matchup advantage make them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-south-4\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Houston holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 5th nationally in KenPom and Torvik with a top-5 defense that should stifle Saint Mary's methodical offense. While Saint Mary's is disciplined and capable of controlling tempo, Houston's elite defensive pressure and superior athleticism create a clear path to victory. The Gaels' upset potential relies on winning the rebounding battle and limiting turnovers, but Houston's proven ability to force mistakes and score in transition makes them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Michigan enters as the 2-seed nationally with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Georgia ranks 31st-37th, creating a significant talent gap. The Wolverines' top-2 offense and defense should overwhelm Georgia's average attack, and while there are minor injury concerns for Michigan's Yaxel Lendeborg, he is expected to play and the team's depth ensures no major drop-off. Georgia's path relies on hot three-point shooting and forcing turnovers, but Michigan's superior efficiency, balanced attack, and recent form make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-2\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.7,\n        \"rationale\": \"Alabama holds a slight edge in offensive firepower, ranking 3rd nationally in adjusted offensive efficiency, which should challenge Texas Tech's 27th-ranked defense. While Texas Tech boasts a stronger overall defensive rating and a more balanced efficiency profile, Alabama's experience in the SEC and proven ability to score in bunches provide a credible path to victory. The Red Raiders' upset potential relies on controlling tempo and limiting Alabama's transition opportunities, but the Crimson Tide's elite offense and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-3\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Virginia holds a slight edge in efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should disrupt Tennessee's offense, which has shown inconsistency with a 22-11 record and recent injury concerns for freshman forward Nate Ament. While Tennessee's defense is elite, their offensive efficiency is lower (35th in KenPom) and they lack the same depth as the Cavaliers, who boast a 29-4 record and superior rim protection. The underdog's path for Tennessee relies on hot three-point shooting and forcing turnovers, but Virginia's disciplined style, experience in the ACC, and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-4\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Iowa State holds a decisive defensive edge, ranking 1st nationally in KenPom adjusted defensive efficiency, which should disrupt Kentucky's potent but turnover-prone offense. While Kentucky's offensive metrics are strong, their 21-13 record and defensive inconsistencies suggest vulnerability against disciplined teams. Iowa State's experience in the Big 12 and proven ability to control tempo provide a reliable path to victory, making them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Duke enters as the tournament's top-ranked team with elite efficiency on both ends, boasting the nation's best defense and a top-5 offense, while St. John's, though a strong Big East champion, ranks 18th-20th overall and faces a significant talent gap. The Blue Devils' superior metrics, depth, and recent form—including a 31-2 record and wins over top competition—provide a clear advantage, and while St. John's has a credible path through disciplined play and Rick Pitino's coaching, Duke's defensive prowess and offensive firepower should control the game. The underdog's upset potential relies on hot shooting and forcing turnovers, but Duke's balanced attack and matchup edge make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-east-2\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Louisville holds a slight edge in overall efficiency metrics, ranking 16th in Torvik and 18th in KenPom compared to UCLA's 24th and 27th, with a more balanced offensive attack and a defense that has proven elite all season. While UCLA's offense is potent, their defensive rating is weaker (49th in Torvik), and Louisville's recent form—including a 23-10 record and strong ACC play—provides a reliable path to victory. The underdog's path for UCLA relies on hot three-point shooting and forcing turnovers, but Louisville's superior efficiency, depth, and matchup advantage make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Arizona enters as the superior team by a wide margin in efficiency metrics, ranking 3rd nationally in both KenPom and Torvik with a top-10 offense and elite defense, while Arkansas ranks 17th-20th with a potent offense but weaker defense. The Wildcats' balanced attack and defensive prowess should control the tempo and exploit Arkansas's defensive vulnerabilities, though the Razorbacks' offensive firepower gives them a credible upset path if they force turnovers and shoot well. Ultimately, Arizona's depth, recent form, and matchup advantage make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-west-2\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Purdue holds a decisive edge in offensive efficiency, ranking 1st nationally in adjusted offensive rating, which should challenge Gonzaga's elite defense. While Gonzaga boasts a top-10 defense and a strong 30-3 record, Purdue's rebounding dominance and experience in the Big Ten provide a reliable path to victory in this neutral-site matchup. The underdog's path for Gonzaga relies on forcing turnovers and winning the perimeter battle, but Purdue's superior efficiency metrics and balanced attack make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Florida holds a slight edge in overall efficiency metrics, ranking 4th in both KenPom and Torvik compared to Vanderbilt's 10th-12th, with a superior defense (5th in KenPom adjD) that should contain Vanderbilt's potent offense. While Vanderbilt's offense is elite (6th in KenPom adjO), Florida's balanced attack and defensive prowess provide a more reliable path to victory in this SEC showdown. The underdog's path for Vanderbilt relies on hot three-point shooting and forcing turnovers, but Florida's depth, recent form, and matchup advantage make them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-south-2\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Houston holds a decisive edge in defensive efficiency, ranking 4th nationally in adjusted defensive efficiency, which should disrupt Illinois's top-ranked offense and force turnovers in a high-stakes Sweet 16 matchup. While Illinois boasts the nation's best offensive rating and can score in bunches, Houston's elite defense, physicality, and experience in the Big 12 provide a more reliable path to victory in this neutral-site game. The underdog's path for Illinois relies on hot three-point shooting and winning the rebounding battle, but Houston's proven ability to control tempo and force mistakes makes them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Michigan enters as the superior team by a wide margin in efficiency metrics, ranking 2nd nationally in both KenPom and Torvik with elite defense and a top-10 offense, while Alabama ranks 16th-17th with a potent offense but a significantly weaker defense. The Wolverines' balanced attack and defensive prowess should control the tempo and exploit Alabama's defensive vulnerabilities, especially given the Crimson Tide's recent off-court issues with Aden Holloway's arrest, which could disrupt their backcourt depth and shooting. While Alabama's elite offense gives them a credible upset path if they force turnovers and shoot well, Michigan's superior metrics, depth, and matchup advantage make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-midwest-2\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Virginia's elite defense, anchored by rim protector Ugonna Onyenso and ranking 14th nationally in adjusted defensive efficiency, should disrupt Iowa State's offense, which relies on guard play and can be vulnerable against physical interior teams. While Iowa State boasts the nation's top-ranked defense, their offensive efficiency is lower, and Virginia's disciplined, methodical style under coach Ryan Odom is built for tournament success. The Cavaliers' experience, recent form, and matchup advantage give them a credible path to control tempo and secure a low-scoring win.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r32-midwest-1\",\n      \"winnerId\": \"michigan\",\n      \"confidence\": 0.85,\n      \"rationale\": \"Michigan enters as the 2-seed nationally with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Georgia ranks 31st-37th, creating a significant talent gap. The Wolverines' top-2 offense and defense should overwhelm Georgia's average attack, and while there are minor injury concerns for Michigan's Yaxel Lendeborg, he is expected to play and the team's depth ensures no major drop-off. Georgia's path relies on hot three-point shooting and forcing turnovers, but Michigan's superior efficiency, balanced attack, and recent form make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-midwest-2\",\n      \"winnerId\": \"alabama\",\n      \"confidence\": 0.7,\n      \"rationale\": \"Alabama holds a slight edge in offensive firepower, ranking 3rd nationally in adjusted offensive efficiency, which should challenge Texas Tech's 27th-ranked defense. While Texas Tech boasts a stronger overall defensive rating and a more balanced efficiency profile, Alabama's experience in the SEC and proven ability to score in bunches provide a credible path to victory. The Red Raiders' upset potential relies on controlling tempo and limiting Alabama's transition opportunities, but the Crimson Tide's elite offense and recent form make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-midwest-3\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Virginia holds a slight edge in efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should disrupt Tennessee's offense, which has shown inconsistency with a 22-11 record and recent injury concerns for freshman forward Nate Ament. While Tennessee's defense is elite, their offensive efficiency is lower (35th in KenPom) and they lack the same depth as the Cavaliers, who boast a 29-4 record and superior rim protection. The underdog's path for Tennessee relies on hot three-point shooting and forcing turnovers, but Virginia's disciplined style, experience in the ACC, and recent form make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-midwest-4\",\n      \"winnerId\": \"iowa-state\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Iowa State holds a decisive defensive edge, ranking 1st nationally in KenPom adjusted defensive efficiency, which should disrupt Kentucky's potent but turnover-prone offense. While Kentucky's offensive metrics are strong, their 21-13 record and defensive inconsistencies suggest vulnerability against disciplined teams. Iowa State's experience in the Big 12 and proven ability to control tempo provide a reliable path to victory, making them the pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.85,\n      \"rationale\": \"Duke enters as the tournament's top-ranked team with elite efficiency on both ends, boasting the nation's best defense and a top-5 offense, while St. John's, though a strong Big East champion, ranks 18th-20th overall and faces a significant talent gap. The Blue Devils' superior metrics, depth, and recent form—including a 31-2 record and wins over top competition—provide a clear advantage, and while St. John's has a credible path through disciplined play and Rick Pitino's coaching, Duke's defensive prowess and offensive firepower should control the game. The underdog's upset potential relies on hot shooting and forcing turnovers, but Duke's balanced attack and matchup edge make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-east-2\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.72,\n      \"rationale\": \"Louisville holds a slight edge in overall efficiency metrics, ranking 16th in Torvik and 18th in KenPom compared to UCLA's 24th and 27th, with a more balanced offensive attack and a defense that has proven elite all season. While UCLA's offense is potent, their defensive rating is weaker (49th in Torvik), and Louisville's recent form—including a 23-10 record and strong ACC play—provides a reliable path to victory. The underdog's path for UCLA relies on hot three-point shooting and forcing turnovers, but Louisville's superior efficiency, depth, and matchup advantage make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Arizona enters as the superior team by a wide margin in efficiency metrics, ranking 3rd nationally in both KenPom and Torvik with a top-10 offense and elite defense, while Arkansas ranks 17th-20th with a potent offense but weaker defense. The Wildcats' balanced attack and defensive prowess should control the tempo and exploit Arkansas's defensive vulnerabilities, though the Razorbacks' offensive firepower gives them a credible upset path if they force turnovers and shoot well. Ultimately, Arizona's depth, recent form, and matchup advantage make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-west-2\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Purdue holds a decisive edge in offensive efficiency, ranking 1st nationally in adjusted offensive rating, which should challenge Gonzaga's elite defense. While Gonzaga boasts a top-10 defense and a strong 30-3 record, Purdue's rebounding dominance and experience in the Big Ten provide a reliable path to victory in this neutral-site matchup. The underdog's path for Gonzaga relies on forcing turnovers and winning the perimeter battle, but Purdue's superior efficiency metrics and balanced attack make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Florida holds a slight edge in overall efficiency metrics, ranking 4th in both KenPom and Torvik compared to Vanderbilt's 10th-12th, with a superior defense (5th in KenPom adjD) that should contain Vanderbilt's potent offense. While Vanderbilt's offense is elite (6th in KenPom adjO), Florida's balanced attack and defensive prowess provide a more reliable path to victory in this SEC showdown. The underdog's path for Vanderbilt relies on hot three-point shooting and forcing turnovers, but Florida's depth, recent form, and matchup advantage make them the pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-south-2\",\n      \"winnerId\": \"houston\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Houston holds a decisive edge in defensive efficiency, ranking 4th nationally in adjusted defensive efficiency, which should disrupt Illinois's top-ranked offense and force turnovers in a high-stakes Sweet 16 matchup. While Illinois boasts the nation's best offensive rating and can score in bunches, Houston's elite defense, physicality, and experience in the Big 12 provide a more reliable path to victory in this neutral-site game. The underdog's path for Illinois relies on hot three-point shooting and winning the rebounding battle, but Houston's proven ability to control tempo and force mistakes makes them the pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-midwest-1\",\n      \"winnerId\": \"michigan\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Michigan enters as the superior team by a wide margin in efficiency metrics, ranking 2nd nationally in both KenPom and Torvik with elite defense and a top-10 offense, while Alabama ranks 16th-17th with a potent offense but a significantly weaker defense. The Wolverines' balanced attack and defensive prowess should control the tempo and exploit Alabama's defensive vulnerabilities, especially given the Crimson Tide's recent off-court issues with Aden Holloway's arrest, which could disrupt their backcourt depth and shooting. While Alabama's elite offense gives them a credible upset path if they force turnovers and shoot well, Michigan's superior metrics, depth, and matchup advantage make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-midwest-2\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.75,\n      \"rationale\": \"Virginia's elite defense, anchored by rim protector Ugonna Onyenso and ranking 14th nationally in adjusted defensive efficiency, should disrupt Iowa State's offense, which relies on guard play and can be vulnerable against physical interior teams. While Iowa State boasts the nation's top-ranked defense, their offensive efficiency is lower, and Virginia's disciplined, methodical style under coach Ryan Odom is built for tournament success. The Cavaliers' experience, recent form, and matchup advantage give them a credible path to control tempo and secure a low-scoring win.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:56:04.352Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:56:04.352Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "duke",
+          "louisville"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:56:04.360Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "duke",
+          "teamName": "Duke",
+          "torvik": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adjoe": 128.01924984850498,
+            "oe Rank": 4,
+            "adjde": 90.44607016864468,
+            "de Rank": 1,
+            "barthag": 0.9819325227198022,
+            "rank.1": 1,
+            "proj. W": 31.77263480392547,
+            "Proj. L": 2.2273651960745293,
+            "Pro Con W": 17,
+            "Pro Con L": 1,
+            "Con Rec.": "17-1",
+            "sos": 0.7350779717539253,
+            "ncsos": 0.6248828246440576,
+            "consos": 0.8004871126999,
+            "Proj. SOS": 0.7411389942783231,
+            "Proj. Noncon SOS": 0.6248828246440576,
+            "Proj. Con SOS": 0.8004871126999,
+            "elite SOS": 0.6154338494473306,
+            "elite noncon SOS": 0.6350244038172387,
+            "Opp OE": 116.43303268254998,
+            "Opp DE": 103.17328486033144,
+            "Opp Proj. OE": 116.58941508909258,
+            "Opp Proj DE": 102.95262216602733,
+            "Con Adj OE": 129.25576212251133,
+            "Con Adj DE": 90.79514971478837,
+            "Qual O": 127.85704514358656,
+            "Qual D": 89.47568126665206,
+            "Qual Barthag": 0.9837755473959358,
+            "Qual Games": 19,
+            "FUN": 0.0627594166033986,
+            "ConPF": 1457,
+            "ConPA": 1123,
+            "ConPoss": 1174.9625,
+            "ConOE": 1.2400395757311404,
+            "ConDE": 0.9557751843143932,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.9444444444444444,
+            "WAB": 12.883073206764472,
+            "WAB Rk": 2,
+            "Fun Rk": 47,
+            "adjt": 65.82335494511732
+          },
+          "kenpom": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adj_em": 39.17,
+            "adj_o": 127.9,
+            "adj_o_rank": 4,
+            "adj_d": 88.7,
+            "adj_d_rank": 2,
+            "adj_t": 65.4,
+            "adj_t_rank": 287,
+            "luck": 0.042,
+            "luck_rank": 80,
+            "sos_adj_em": 13.78,
+            "sos_adj_em_rank": 19,
+            "sos_opp_o": 116.8,
+            "sos_opp_o_rank": 24,
+            "sos_opp_d": 103,
+            "sos_opp_d_rank": 13,
+            "ncsos_adj_em": 10,
+            "ncsos_adj_em_rank": 18
+          }
+        },
+        {
+          "teamId": "louisville",
+          "teamName": "Louisville",
+          "torvik": {
+            "rank": 16,
+            "team": "Louisville",
+            "conf": "ACC",
+            "record": "23-10",
+            "adjoe": 124.033765527537,
+            "oe Rank": 23,
+            "adjde": 98.13789253332496,
+            "de Rank": 23,
+            "barthag": 0.9366166675468518,
+            "rank.1": 16,
+            "proj. W": 23,
+            "Proj. L": 10,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7087696465073728,
+            "ncsos": 0.5538659774704985,
+            "consos": 0.802380575091942,
+            "Proj. SOS": 0.7087696465073728,
+            "Proj. Noncon SOS": 0.5538659774704985,
+            "Proj. Con SOS": 0.802380575091942,
+            "elite SOS": 0.6472610353299876,
+            "elite noncon SOS": 0.7412377287153631,
+            "Opp OE": 115.40795559390706,
+            "Opp DE": 103.7681312373706,
+            "Opp Proj. OE": 115.40795559390706,
+            "Opp Proj DE": 103.7681312373706,
+            "Con Adj OE": 125.77085330943557,
+            "Con Adj DE": 99.4847566040504,
+            "Qual O": 122.34578757391589,
+            "Qual D": 101.0746941737713,
+            "Qual Barthag": 0.8999260388959681,
+            "Qual Games": 17,
+            "FUN": -0.0279050206246417,
+            "ConPF": 1481,
+            "ConPA": 1357,
+            "ConPoss": 1260.2875,
+            "ConOE": 1.175128690874106,
+            "ConDE": 1.07673844261726,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 3.9476048938913606,
+            "WAB Rk": 25,
+            "Fun Rk": 244,
+            "adjt": 69.69049412007061
+          },
+          "kenpom": {
+            "rank": 18,
+            "team": "Louisville",
+            "conf": "ACC",
+            "record": "23-10",
+            "adj_em": 25.42,
+            "adj_o": 124.1,
+            "adj_o_rank": 20,
+            "adj_d": 98.7,
+            "adj_d_rank": 26,
+            "adj_t": 69.7,
+            "adj_t_rank": 63,
+            "luck": -0.02,
+            "luck_rank": 239,
+            "sos_adj_em": 12.49,
+            "sos_adj_em_rank": 30,
+            "sos_opp_o": 115.9,
+            "sos_opp_o_rank": 41,
+            "sos_opp_d": 103.4,
+            "sos_opp_d_rank": 23,
+            "ncsos_adj_em": 2.33,
+            "ncsos_adj_em_rank": 117
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"duke\",\n      \"teamName\": \"Duke\",\n      \"torvik\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adjoe\": 128.01924984850498,\n        \"oe Rank\": 4,\n        \"adjde\": 90.44607016864468,\n        \"de Rank\": 1\n      },\n      \"kenpom\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adj_em\": 39.17,\n        \"adj_o\": 127.9,\n        \"adj_o_rank\": 4,\n        \"adj_d\": 88.7\n      }\n    },\n    {\n      \"teamId\": \"louisville\",\n      \"teamName\": \"Louisville\",\n      \"torvik\": {\n        \"rank\": 16,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 124.033765527537,\n        \"oe Rank\": 23,\n        \"adjde\": 98.13789253332496,\n        \"de Rank\": 23\n      },\n      \"kenpom\": {\n        \"rank\": 18,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adj_em\": 25.42,\n        \"adj_o\": 124.1,\n        \"adj_o_rank\": 20,\n        \"adj_d\": 98.7\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:56:05.764Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:56:05.764Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Duke Louisville Elite 8 injury news 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:56:06.503Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Louisville&#x27;s Mikel Brown Jr. out vs. Duke due to back injury",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47513997%2Flouisville%2Dmikel%2Dbrown%2Djr%2Dvs%2Dduke%2Ddue%2Dback%2Dinjury&rut=a1fab9ad92c6931c8f98b12105aa22a62cdd0f0491abe62702451f75a3c1a66e",
+          "snippet": "Louisville star guard Mikel Brown Jr., who has missed the last four games with a back injury , will not play in Tuesday&#x27;s game vs. Duke , coach Pat Kelsey said."
+        },
+        {
+          "title": "Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b",
+          "snippet": "Duke starting guard Caleb Foster has a fractured right foot and will be out indefinitely."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Duke Blue Devils Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=d6bcf80025b06743fd52d54637c63655e1dc2bb35b61c45c1a0db1de6957841b",
+          "snippet": "Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Men&#x27;s College Basketball Scores, 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fscoreboard&rut=68954f0bec87320e677368e95a3de46cc6516cab1a79c1654cd99a18bb9a83b0",
+          "snippet": "Live scores for every 2025-26 NCAAM season game on ESPN. Includes box scores, video highlights, play breakdowns and updated odds."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Louisville&#x27;s Mikel Brown Jr. out vs. Duke due to back injury\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47513997%2Flouisville%2Dmikel%2Dbrown%2Djr%2Dvs%2Dduke%2Ddue%2Dback%2Dinjury&rut=a1fab9ad92c6931c8f98b12105aa22a62cdd0f0491abe62702451f75a3c1a66e\",\n      \"snippet\": \"Louisville star guard Mikel Brown Jr., who has missed the last four games with a back injury , will not play in Tuesday&#x27;s game vs. Duke , coach Pat Kelsey said.\"\n    },\n    {\n      \"title\": \"Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b\",\n      \"snippet\": \"Duke starting guard Caleb Foster has a fractured right foot and will be out indefinitely.\"\n    },\n    {\n      \"title\": \"Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa\",\n      \"snippet\": \"Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis.\"\n    },\n    {\n      \"title\": \"Duke Blue Devils Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=d6bcf80025b06743fd52d54637c63655e1dc2bb35b61c45c1a0db1de6957841b\",\n      \"snippet\": \"Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:56:20.939Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:56:20.939Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/47513997/louisville-mikel-brown-jr-vs-duke-due-back-injury"
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:56:21.298Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/47513997/louisville-mikel-brown-jr-vs-duke-due-back-injury",
+        "text": "Louisville's Mikel Brown Jr. out vs. Duke due to back injury - ESPN Louisville's Brown (back) to remain out vs. Duke --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Louisville's Brown (back) to remain out vs. Duke Louisville Cardinals 72d Jeff Borzello Mark saves day, sends Texas to NCAA first round Texas Longhorns 6h Adam Rittenberg Howard checks last box with first tourney win Howard Bison 9h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 18h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 19h EMU hires Clemson assistant Donlon as coach Clemson Tigers 11h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 15h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 18h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 21h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 22h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 3d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 7h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 18h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello Louisville's Mikel Brown Jr. out vs. Duke due to back injury Jeff Borzello Jan 5, 2026, 11:47 AM ET Close Jeff Borzello is a basketball recruiting insider. He has joined ESPN in 2014. Follow on X Multiple Authors Email Print Open Extended Reactions Louisville star guard Mikel Brown Jr ., who has missed the last four games with a lower-back injury, will not play in Tuesday's game against Duke , coach Pat Kelsey said on the ACC coaches' media call on Monday. \"He's champing a"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/story/_/id/47513997/louisville-mikel-brown-jr-vs-duke-due-back-injury\",\n    \"text\": \"Louisville's Mikel Brown Jr. out vs. Duke due to back injury - ESPN Louisville's Brown (back) to remain out vs. Duke --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Louisville's Brown (back) to remain out vs. Duke Louisville Cardinals 72d Jeff Borzello Mark saves day, sends Texas to NCAA first round Texas Longhorns 6h Adam Rittenberg Howard checks last box with first tourney win Howard Bison 9h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 18h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 19h EMU hires Clemson assistant Donlon as coach Clemson Tigers 11h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 15h Stephen Holder Charlot... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:56:28.721Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:56:28.721Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture"
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:56:29.167Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture",
+        "text": "Duke's Caleb Foster out indefinitely with foot fracture - ESPN Duke's Foster out indefinitely with foot fracture --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Duke's Foster out indefinitely with foot fracture Duke Blue Devils 8d Mark saves day, sends Texas to NCAA first round Texas Longhorns 6h Adam Rittenberg Howard checks last box with first tourney win Howard Bison 9h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 18h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 19h EMU hires Clemson assistant Donlon as coach Clemson Tigers 11h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 15h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 18h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 21h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 22h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 3d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 7h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 18h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello Duke's Caleb Foster out indefinitely with foot fracture play Caleb Foster lays it in for a Duke bucket (0:21) Caleb Foster banks it in off the glass to extend Duke’s first-half lead. (0:21) Associated Press Multiple Authors Mar 10, 2026, 10:20 AM ET Email Print Open Extended Reactions Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won't play in this week's Atlantic Coast C"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture\",\n    \"text\": \"Duke's Caleb Foster out indefinitely with foot fracture - ESPN Duke's Foster out indefinitely with foot fracture --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Duke's Foster out indefinitely with foot fracture Duke Blue Devils 8d Mark saves day, sends Texas to NCAA first round Texas Longhorns 6h Adam Rittenberg Howard checks last box with first tourney win Howard Bison 9h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 18h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 19h EMU hires Clemson assistant Donlon as coach Clemson Tigers 11h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 15h Stephen Holder Charlotte fires coach Fearne ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:56:30.666Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:56:30.666Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke vs Louisville Elite 8 2026 matchup analysis",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:56:31.527Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Louisville vs. Duke Free Pick, Odds & Analysis 1/26/2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.predictem.com%2Fcollege%2Dbasketball%2Flouisville%2Dvs%2Dduke%2Dprediction%2D2026%2D01%2D26%2F&rut=b0c073ff69676df6ab554dd6b8694cd2708cb15f602a3c0cfd249c98606abefc",
+          "snippet": "Expert Louisville vs . Duke prediction for tonight&#x27;s ACC clash. Analysis of the 7.5-point spread, Cameron Boozer&#x27;s impact, and our best bet for this top-25 matchup on ESPN."
+        },
+        {
+          "title": "Duke 84-73 Louisville (Jan 6, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401820650%2Fduke%2Dlouisville&rut=43236f86ab4d697607437b0611030ebf403fd9b8c7a387ffc606cbfca2ebc0d4",
+          "snippet": "Game summary of the Duke Blue Devils vs . Louisville Cardinals NCAAM game, final score 84-73, from January 6, 2026 on ESPN."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "Louisville vs Duke Prediction | CBB Picks & Analysis",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsbettingstats.com%2Fncaab%2Fpicks%2Flouisville%2Dvs%2Dduke%2Dprediction%2D2026%2D01%2D26%2F&rut=a7cc746d954a7b68062a0023b071f5b6f968cdc9c9a3a365a2b59df87051c23f",
+          "snippet": "The market positions Duke as a clear home favorite at -7.5 in this ACC matchup at Cameron Indoor Stadium. The number reflects Duke&#x27;s elite defensive profile, undefeated start, and significant home-court edge against a Louisville team that prefers a faster tempo and transition scoring. The total in ..."
+        },
+        {
+          "title": "Prediction: Louisville vs Duke on 2026-01-06 | The Wager King",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fthewagerking.com%2Fprediction%2Dlouisville%2Dvs%2Dduke%2Don%2D2026%2D01%2D06%2F&rut=617f10c7d093e3e60ab9fd978f3c0d672967c42a8e7c71023cbd74db78c21a83",
+          "snippet": "Player Prop #1: Cooper Flagg / Over Points / 21.5 at -115 / 72% / Flagg averages 22.8 PPG in 2026 with 28% usage; faces Louisville&#x27;s weakened backcourt without Brown, projecting 24+ in high-efficiency matchup ( Duke&#x27;s eFG% 58.2 vs Louisville&#x27;s def allowing 25 PPG to forwards)."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Louisville vs. Duke Free Pick, Odds & Analysis 1/26/2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.predictem.com%2Fcollege%2Dbasketball%2Flouisville%2Dvs%2Dduke%2Dprediction%2D2026%2D01%2D26%2F&rut=b0c073ff69676df6ab554dd6b8694cd2708cb15f602a3c0cfd249c98606abefc\",\n      \"snippet\": \"Expert Louisville vs . Duke prediction for tonight&#x27;s ACC clash. Analysis of the 7.5-point spread, Cameron Boozer&#x27;s impact, and our best bet for this top-25 matchup on ESPN.\"\n    },\n    {\n      \"title\": \"Duke 84-73 Louisville (Jan 6, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401820650%2Fduke%2Dlouisville&rut=43236f86ab4d697607437b0611030ebf403fd9b8c7a387ffc606cbfca2ebc0d4\",\n      \"snippet\": \"Game summary of the Duke Blue Devils vs . Louisville Cardinals NCAAM game, final score 84-73, from January 6, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament.\"\n    },\n    {\n      \"title\": \"Louisville vs Duke Prediction | CBB Picks & Analysis\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsbettingstats.com%2Fncaab%2Fpicks%2Flouisville%2Dvs%2Dduke%2Dprediction%2D2026%2D01%2D26%2F&rut=a7cc746d954a7b68062a0023b071f5b6f968cdc9c9a3a365a2b59df87051c23f\",\n      \"snippet\": \"The market positions Duke as a clear home favorite at -7.5 in this ACC matchup at Cameron Indoor Stadium. The number reflects Duke&#x27;s elite defensive profile, undefeated start, and significant home-court edge against a Louisville team that prefers a faster tempo and transition scoring. The total in ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:56:34.048Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:56:34.048Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/game/_/gameId/401820650/duke-louisville"
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:56:34.733Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/game/_/gameId/401820650/duke-louisville",
+        "text": "Duke 84-73 Louisville (Jan 6, 2026) Final Score - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search Duke Blue Devils @ Louisville Cardinals 6 Duke Blue Devils Duke DUKE 14-1 , 3-0 ACC 84 14-1 , 3-0 ACC Final 1 2 T Duke DUKE 38 46 84 Louisville LOU 47 26 73 20 Louisville Cardinals Louisville LOU 11-4 , 1-2 ACC 73 11-4 , 1-2 ACC Gamecast Recap Box Score Play-by-Play Team Stats Videos Game Leaders DUKE LOU 27 C. Boozer #12 10/12 FG, 4/5 FT 27 Points 24 R. Conwell #3 8/19 FG, 4/4 FT 24 8 C. Boozer #12 7 DREB, 1 OREB 8 Rebounds 7 R. Conwell #3 7 DREB, 0 OREB 7 4 C. Boozer #12 4 TO, 39 MIN 4 Assists 4 J. Hadley #1 3 TO, 30 MIN 4 Full Box Score Team Stats DUKE LOU 51% ( 29-57 ) Field Goal % 40% ( 26-65 ) 30% ( 7-23 ) Three Point % 32% ( 12-38 ) 68% ( 19-28 ) Free Throw % 75% ( 9-12 ) 12 Turnovers 14 39 Rebounds 37 33% Percent Led 64% 14 Largest Lead 12 Full Team Stats Game Information Louisville , KY ESPN Referee : Pat Driscoll Referee : John Gaffney Referee : Tony Chiazza Video Highlights Cameron Boozer scores 27, hot-shooting No. 6 Duke rallies past No. 20 Louisville 84-73 — Cameron Boozer scored 27 points, including seven during a 16-6 run early in the second half, Isaiah Evans added 23 and No. 6 Duke shot 71% after the break to rally past No. 20 Louisville 84-73 on Tuesday night for its third consecutive victory. Jan 6, 2026, 09:39 pm - AP Probabilities & Game Flow Win Probability Win Prob. Game Flow 100% -- DUKE 0% -- LOU According to ESPN Analytics Shot Chart All Periods All Play Types All Players Ryan Conwell makes 24-foot three point jumper (J'Vonne Hadley assists) Patrick Ngongba II misses 26-foot three point jumper Ryan Conwell misses 11-foot jumper Patrick Ngongba II makes free throw 1 of 2 Patrick Ngongba II misses free throw 2 of 2 Ryan Conwell makes 25-foot three pointer Cameron Boozer makes layup Ryan Conwell makes 27-foot three point jumper (Sananda Fru assists) Isaiah Evans misses 6-foot jumper Patrick Ngongba II misses tip in layup Ryan Conwell misses driving layup Cayden Boozer makes free throw 1 of 2 Cayden Boozer misses free throw 2 of 2 Isaiah Evans makes free throw 1 of 2 Isaiah Evans makes free throw 2 of 2 Adrian Wooley misses 13-foot floating jump shot Isaiah Evans makes 26-foot three point jumper (Cameron Boozer assists) Aly Khalifa makes 26-foot three point jumper (J'Vonne Hadley assists) Cayden Boozer misses 8-foot jumper Ryan Conwell misses 7-foot floating jump shot Isaiah Evans makes 27-foot three pointer Ryan Conwell makes free throw 1 of 2 Ryan Conwell makes free throw 2 of 2 Isaiah Evans misses 24-foot three point pullup jump shot Adrian Wooley makes 7-foot floating jump shot Caleb Foster misses 7-foot pullup jump shot Kobe Rodgers misses 23-foot three point jumper Isaiah Evans misses 24-foot three point jumper Khani Rooths misses 24-foot three point jumper Caleb Foster misses 2"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/game/_/gameId/401820650/duke-louisville\",\n    \"text\": \"Duke 84-73 Louisville (Jan 6, 2026) Final Score - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search Duke Blue Devils @ Louisville Cardinals 6 Duke Blue Devils Duke DUKE 14-1 , 3-0 ACC 84 14-1 , 3-0 ACC Final 1 2 T Duke DUKE 38 46 84 Louisville LOU 47 26 73 20 Louisville Cardinals Louisville LOU 11-4 , 1-2 ACC 73 11-4 , 1-2 ACC Gamecast Recap Box Score Play-by-Play Team Stats Videos Game Leaders DUKE LOU 27 C. Boozer #12 10/12 FG, 4/5 FT 27 Points 24 R. Conwell #3 8/19 FG, 4/4 FT 24 8 C. Boozer #12 7 DREB, 1 OREB 8 Rebounds 7 R. Conwell #3 7 DREB, 0 OREB 7 4 C. Boozer #12 4 TO, 39 MIN 4 Assists 4 J. Hadley #1 3 TO, 30 MIN 4 Full Box Score Team Stats DUKE LOU 51% ( 29-57 ) Field Goal % 40% ( 26-65 ) 30% ( 7-23 ) Three Point % 32% ( 12-38 ) 68% ( 19-28 ) Free Throw % 75% ( 9-12 ) 12 Turnovers 14 39 Rebounds 37 33% Percent Led 64% 14 Largest Lead 12 Full Team Stats Game Information Louisville , KY ESPN Referee : Pat Driscoll Referee : John Gaffney Referee : Tony Chiazza Video Highlights Cameron Boozer scores 27, hot-shooting No. 6 Duke rallies ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:56:42.132Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:56:42.132Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke Louisville Elite 8 2026 preview",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:56:43.009Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 NCAA Tournament Breakdown: East Region Best Bets ... - OutKick",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.outkick.com%2Fsports%2F2026%2Dncaa%2Dtournament%2Dbreakdown%2Deast%2Dregion%2Dbest%2Dbets%2Dsleepers%2Dbusts&rut=d2bcc80f6b9be18f69b4413a8a2d48aa074681c473d542c49e0aefba477e7cc3",
+          "snippet": "East Region picks for the 2026 NCAA Tournament, with Duke&#x27;s path, Louisville sleeper logic, upset alerts, and the players who can swing your March Madness bracket."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "March Madness East Region Predictions 2026 | NCAA Tournament Bracket ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Deast%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=25e6368f544675f01902e26368a5f0c4bdbd53bbe7041aac490fe6f40bf291f2",
+          "snippet": "I&#x27;m breaking down my March Madness East Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament."
+        },
+        {
+          "title": "March Madness 2026: East Region Picks & Predictions - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fmarch%2Dmadness%2D2026%2Dncaa%2Dtournament%2Deast%2Dregion%2Dpicks%2Dpredictions%2D108070&rut=2c1f9559e0c2f87accec516f29119de49f65de01fee07538be4488401bab4874",
+          "snippet": "March Madness 2026 : NCAA Tournament East Region Picks & Predictions The NCAA Tournament South Region contains a lineup of legendary coaches, carving a tough path for top overall seed Duke . Our regional preview contains matchup breakdowns, plus Final Four and upset picks. East Region NCAA Tournament Preview West Region NCAA Tournament Preview Midwest Region NCAA Tournament Preview South Region ..."
+        },
+        {
+          "title": "March Madness bracket predictions: Expert picks, upsets, winners, odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd",
+          "snippet": "Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis, including predictions, upsets, Vegas odds and more to help you ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 NCAA Tournament Breakdown: East Region Best Bets ... - OutKick\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.outkick.com%2Fsports%2F2026%2Dncaa%2Dtournament%2Dbreakdown%2Deast%2Dregion%2Dbest%2Dbets%2Dsleepers%2Dbusts&rut=d2bcc80f6b9be18f69b4413a8a2d48aa074681c473d542c49e0aefba477e7cc3\",\n      \"snippet\": \"East Region picks for the 2026 NCAA Tournament, with Duke&#x27;s path, Louisville sleeper logic, upset alerts, and the players who can swing your March Madness bracket.\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament.\"\n    },\n    {\n      \"title\": \"March Madness East Region Predictions 2026 | NCAA Tournament Bracket ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Deast%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=25e6368f544675f01902e26368a5f0c4bdbd53bbe7041aac490fe6f40bf291f2\",\n      \"snippet\": \"I&#x27;m breaking down my March Madness East Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament.\"\n    },\n    {\n      \"title\": \"March Madness 2026: East Region Picks & Predictions - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fmarch%2Dmadness%2D2026%2Dncaa%2Dtournament%2Deast%2Dregion%2Dpicks%2Dpredictions%2D108070&rut=2c1f9559e0c2f87accec516f29119de49f65de01fee07538be4488401bab4874\",\n      \"snippet\": \"March Madness 2026 : NCAA Tournament East Region Picks & Predictions The NCAA Tournament South Region contains a lineup of legendary coaches, carving a tough path for top overall seed Duke . Our regional preview contains matchup breakdowns, plus Final Four and upset picks. East Region NCAA Tournament Preview West Region NCAA Tournament Preview Midwest Region NCAA Tournament Preview South Region ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:57:02.206Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:57:02.206Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.outkick.com/sports/2026-ncaa-tournament-breakdown-east-region-best-bets-sleepers-busts"
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:57:03.030Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.outkick.com/sports/2026-ncaa-tournament-breakdown-east-region-best-bets-sleepers-busts",
+        "text": "March Madness East Region Preview: Final Four Picks And Upsets | OutKick OutKick Sports Culture Analysis Watch Shows Shop Newsletters Search Home Sports 2026 NCAA Tournament Breakd&hellip; 2026 NCAA Tournament Breakdown: East Region Best Bets, Sleepers & Busts Our East Region guide highlights the safest bets, contrarian sleepers, and bust candidates to target as you fill out your 2026 March Madness bracket. Dan Zaksheske Published March 17, 2026 10:45 AM EDT • Updated March 17, 2026 9:13 AM EDT Facebook Twitter Email Copy Link The NCAA Tournament Bracket is set and, for many Americans, that means it&apos;s time to start making picks for March Madness bracket pools. In case you missed it, I wrote a general tips & tricks piece with advice for filling out your own bracket as you attempt to win your office pool. For this series, we&apos;re going to go through each region and deliver an in-depth breakdown of each of the 16-team clusters, with some of my favorite picks and sleepers. And we&apos;re starting with the East region, headlined by the #1 overall seed in the tournament, the Duke Blue Devils.&#xA0; Most Likely Final Four Team: #1 Duke Blue Devils I&apos;d love to pick another team here, but the fact is that this year has loaded teams at the top of each region . Like last year, the #1 seeds are among the strongest group of #1s (relative to the field) as we&apos;ve seen in a long time, and Duke is the best of the bunch&#x2026; again. It didn&apos;t work out last year, as Duke fell in the Final Four to Houston. But there&apos;s no reason to think Duke won&apos;t be in the Final Four again.&#xA0; They replaced their superstar freshman from last season, Cooper Flagg, with another superstar freshman, Cameron Boozer. He&apos;s averaging a double-double (22.5 points, 10.2 rebounds per game) and is a lock to be selected with one of the first three picks in the 2026 NBA Draft.&#xA0; Cam Boozer is one of the best players in college basketball and had led the Duke Blue Devils to the #1 overall seed in the 2026 NCAA Tournament. (Jim Dedmon/Imagn Images) The two biggest hurdles for Duke are injuries and the East region. The team lost starting point guard Caleb Foster to a fractured foot, and he&apos;s out indefinitely with his NCAA Tournament status in serious doubt. Starting forward Patrick Ngongba missed the ACC Tournament with his own foot injury, but he&apos;s expected to play in the team&apos;s Round of 64 game.&#xA0; If Foster can&apos;t return and Ngongba is hampered by his injury, it could be tough sledding in a region that also features UConn, Michigan State, Kansas and St. John&apos;s. Still, Duke is the heavy favorite to make it to the Final Four and should be able to get there.&#xA0; Sleeper Final Four Pick: #6 Louisville Cardinals While this region looks tough on paper because it features so many blue-blood programs, the real reason is the underseeding of the Cardinals. The biggest hurdle for Louisville for a Final Four run is a potential Round "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.outkick.com/sports/2026-ncaa-tournament-breakdown-east-region-best-bets-sleepers-busts\",\n    \"text\": \"March Madness East Region Preview: Final Four Picks And Upsets | OutKick OutKick Sports Culture Analysis Watch Shows Shop Newsletters Search Home Sports 2026 NCAA Tournament Breakd&hellip; 2026 NCAA Tournament Breakdown: East Region Best Bets, Sleepers & Busts Our East Region guide highlights the safest bets, contrarian sleepers, and bust candidates to target as you fill out your 2026 March Madness bracket. Dan Zaksheske Published March 17, 2026 10:45 AM EDT • Updated March 17, 2026 9:13 AM EDT Facebook Twitter Email Copy Link The NCAA Tournament Bracket is set and, for many Americans, that means it&apos;s time to start making picks for March Madness bracket pools. In case you missed it, I wrote a general tips & tricks piece with advice for filling out your own bracket as you attempt to win your office pool. For this series, we&apos;re going to go through each region and deliver an in-depth breakdown of each of the 16-team clusters, with some of my favorite picks and sleepers. And we&apos;re starting with the East region, headlined by the #1 overall seed in the tournament, the Duke Blue Devils.&#xA0; Most Likely Final Four Team: #1 Duke Blue Devils I&apos;d love to pick another tea... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:57:06.082Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:57:06.082Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke Louisville Elite 8 2026 injury update",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:57:07.019Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Duke&#x27;s massive injury update should have Louisville basketball fans ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbigredlouie.com%2Fduke%2Dmassive%2Dinjury%2Dupdate%2Dshould%2Dhave%2Dlouisville%2Dbasketball%2Dfans%2Ddreaming%2Dbig&rut=fdb4f9de899465fcbdfe524c0b0cf98937f6d8927515adb4ad3be7c5f4d01d98",
+          "snippet": "When looking at the ACC, Louisville fans know there is a giant in the tournament who is the heavy favorite, the Duke Blue Devils. However, Duke gave a major update this morning, and Louisville fans should suddenly dream big. Major Duke injury update could boost Louisville basketball&#x27;s ACC title hopes"
+        },
+        {
+          "title": "ACC Releases Final Injury Report for Louisville vs. Duke",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Flouisville%2Fbasketball%2Fsecond%2Dinjury%2Dreport%2D2025%2D26%2Dduke%2Drematch&rut=b7b199c9192e53b77e5a8fa945c05fad73faacd3676173a69938441b0d3a660a",
+          "snippet": "Louisville Cardinals center Aly Khalifa (15) celebrates after scoring a three-point shot against Duke Tuesday night at KFC Yum Center January 6, 2026 . | Matt Stone/Courier Journal / USA TODAY ..."
+        },
+        {
+          "title": "Louisville&#x27;s Mikel Brown Jr. out vs. Duke due to back injury",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47513997%2Flouisville%2Dmikel%2Dbrown%2Djr%2Dvs%2Dduke%2Ddue%2Dback%2Dinjury&rut=a1fab9ad92c6931c8f98b12105aa22a62cdd0f0491abe62702451f75a3c1a66e",
+          "snippet": "Louisville star guard Mikel Brown Jr., who has missed the last four games with a back injury , will not play in Tuesday&#x27;s game vs. Duke , coach Pat Kelsey said."
+        },
+        {
+          "title": "Louisville vs Duke: Khani Rooths&#x27; Injury Update Ahead of the Game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fthegadgetscentral.com%2Fsports%2F2026%2F01%2F27%2Flouisville%2Dvs%2Dduke%2Dinjury%2Dupdate%2F&rut=1337eeb6ec406c48bb3a53134ba90bf38134a838c66c14f95af1a2f1fe78a807",
+          "snippet": "Get the latest on Khani Rooths and the Louisville vs Duke matchup, including injury updates and game insights."
+        },
+        {
+          "title": "Duke vs. Louisville - March 08, 2026 | Live Scores, Updates, Odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Flouisville%2Dcardinals%2Dw%2Dbasketball%2Dvs%2Dduke%2Dw%2Dbasketball%2D2026%2D3%2D8%2D12%2D00&rut=e8f93178ef18f1836e2b36abfab51a563ba243e8284345cb1668755b04398523",
+          "snippet": "Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports, and betting odds, all in one place"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Duke&#x27;s massive injury update should have Louisville basketball fans ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbigredlouie.com%2Fduke%2Dmassive%2Dinjury%2Dupdate%2Dshould%2Dhave%2Dlouisville%2Dbasketball%2Dfans%2Ddreaming%2Dbig&rut=fdb4f9de899465fcbdfe524c0b0cf98937f6d8927515adb4ad3be7c5f4d01d98\",\n      \"snippet\": \"When looking at the ACC, Louisville fans know there is a giant in the tournament who is the heavy favorite, the Duke Blue Devils. However, Duke gave a major update this morning, and Louisville fans should suddenly dream big. Major Duke injury update could boost Louisville basketball&#x27;s ACC title hopes\"\n    },\n    {\n      \"title\": \"ACC Releases Final Injury Report for Louisville vs. Duke\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Flouisville%2Fbasketball%2Fsecond%2Dinjury%2Dreport%2D2025%2D26%2Dduke%2Drematch&rut=b7b199c9192e53b77e5a8fa945c05fad73faacd3676173a69938441b0d3a660a\",\n      \"snippet\": \"Louisville Cardinals center Aly Khalifa (15) celebrates after scoring a three-point shot against Duke Tuesday night at KFC Yum Center January 6, 2026 . | Matt Stone/Courier Journal / USA TODAY ...\"\n    },\n    {\n      \"title\": \"Louisville&#x27;s Mikel Brown Jr. out vs. Duke due to back injury\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47513997%2Flouisville%2Dmikel%2Dbrown%2Djr%2Dvs%2Dduke%2Ddue%2Dback%2Dinjury&rut=a1fab9ad92c6931c8f98b12105aa22a62cdd0f0491abe62702451f75a3c1a66e\",\n      \"snippet\": \"Louisville star guard Mikel Brown Jr., who has missed the last four games with a back injury , will not play in Tuesday&#x27;s game vs. Duke , coach Pat Kelsey said.\"\n    },\n    {\n      \"title\": \"Louisville vs Duke: Khani Rooths&#x27; Injury Update Ahead of the Game\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fthegadgetscentral.com%2Fsports%2F2026%2F01%2F27%2Flouisville%2Dvs%2Dduke%2Dinjury%2Dupdate%2F&rut=1337eeb6ec406c48bb3a53134ba90bf38134a838c66c14f95af1a2f1fe78a807\",\n      \"snippet\": \"Get the latest on Khani Rooths and the Louisville vs Duke matchup, including injury updates and game insights.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "e8-east-1-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:57:29.035Z",
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:57:29.035Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.si.com/college/louisville/basketball/second-injury-report-2025-26-duke-rematch"
+      },
+      "content": ""
+    },
+    {
+      "id": "e8-east-1-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:57:29.684Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.si.com/college/louisville/basketball/second-injury-report-2025-26-duke-rematch",
+        "text": "ACC Releases Final Injury Report for Louisville vs. Duke Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW FOOTBALL BASKETBALL BASEBALL OTHER SPORTS SI.COM SI.COM CARDINAL FB SI.COM CARDINAL BB FOOTBALL BASKETBALL BASEBALL OTHER SPORTS SI.COM FOOTBALL FOOTBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES BASKETBALL BASKETBALL NEWS SCHEDULE STATS ROSTER RANKINGS RANKINGS SCORES More from Louisville Cardinals On SI BASEBALL OTHER SPORTS SI.COM SI.COM CARDINAL FB SI.COM CARDINAL BB ACC Releases Final Injury Report for Louisville vs. Duke The Cardinals tip off against the Blue Devils at 7:00 p.m. EST. Matthew McGavic | Share on Facebook Share on X Add us as a preferred source Louisville Cardinals center Aly Khalifa (15) celebrates after scoring a three-point shot against Duke Tuesday night at KFC Yum Center January 6, 2026. | Matt Stone/Courier Journal / USA TODAY NETWORK via Imagn Images In this story: Louisville Cardinals LOUISVILLE, Ky. - They might have had to brave several inches of snow to be able to play tonight, but that wasn&#39;t going to stop the Louisville men&#39;s basketball program from getting their crack at revenge. --> LOUISVILLE, Ky. - They might have had to brave several inches of snow to be able to play tonight, but that wasn&#39;t going to stop the Louisville men&#39;s basketball program from getting their crack at revenge. In just a couple hours, the Cardinals will face Duke in Durham for their first in-season rematch of the year. Tip-off against the Blue Devils is set for 7:00 p.m. EST. --> In just a couple hours, the Cardinals will face Duke in Durham for their first in-season rematch of the year. Tip-off against the Blue Devils is set for 7:00 p.m. EST. Two hours before tip-off, we learned just who will actually be able to suit up for both Louisville and Duke, with the ACC releasing their updated availability report. --> Two hours before tip-off, we learned just who will actually be able to suit up for both Louisville and Duke, with the ACC releasing their updated availability report. On the Louisville side of things, just like on the first report, reserve forward Khani Rooths was designated as &#34;out&#34; due to an illness and is set to miss his fourth straight game. He&#39;s played in 16 games and made two starts, averaging 6.1 points, 4.9 rebounds and 1.3 assists. --> On the Louisville side of things, just like on the first report, reserve forward Khani Rooths was designated as &#34;out&#34; due to an illness and is set to miss his fourth straight game. He&#39;s played in 16 games and made two starts, averaging 6.1 points, 4.9 rebounds and 1.3 assists. While Rooths has not yet been cleared to resume normal basketball activities, he was healthy enough to get back in the building last week. --> While Rooths has not yet been cleared to resume normal basketball activities, he was healthy enough to get back in the building last week. &#34;We have him back in the building, whi"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.si.com/college/louisville/basketball/second-injury-report-2025-26-duke-rematch\",\n    \"text\": \"ACC Releases Final Injury Report for Louisville vs. Duke Skip to main content SI.COM ON SI SI SWIMSUIT SI TICKETS SI RESORTS SI SHOPS MY ACCOUNT SUBSCRIBE NOW FOOTBALL BASKETBALL BASEBALL OTHER SPORTS SI.COM SI.COM CARDINAL FB SI.COM CARDINAL BB FOOTBALL BASKETBALL BASEBALL OTHER SPORTS SI.COM FOOTBALL FOOTBALL NEWS SCHEDULE STATS ROSTER RANKINGS SCORES BASKETBALL BASKETBALL NEWS SCHEDULE STATS ROSTER RANKINGS RANKINGS SCORES More from Louisville Cardinals On SI BASEBALL OTHER SPORTS SI.COM SI.COM CARDINAL FB SI.COM CARDINAL BB ACC Releases Final Injury Report for Louisville vs. Duke The Cardinals tip off against the Blue Devils at 7:00 p.m. EST. Matthew McGavic | Share on Facebook Share on X Add us as a preferred source Louisville Cardinals center Aly Khalifa (15) celebrates after scoring a three-point shot against Duke Tuesday night at KFC Yum Center January 6, 2026. | Matt Stone/Courier Journal / USA TODAY NETWORK via Imagn Images In this story: Louisville Cardinals LOUISVILLE, Ky. - They might have had to brave several inches of snow to be able to play tonight, but that wasn&#39;t going to stop the Louisville men&#39;s basketball program from getting their crack at revenge. -->... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "e8-east-1-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T10:57:34.975Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"e8-east-1\",\n    \"winnerId\": \"duke\",\n    \"confidence\": 0.82,\n    \"rationale\": \"Duke enters as the tournament's top-ranked team with elite efficiency on both ends, boasting the nation's best defense and a top-5 offense, while Louisville ranks 16th-18th overall and faces a significant talent gap. The Blue Devils' superior metrics, depth, and recent form—including a 31-2 record and a head-to-head win over Louisville in January—provide a clear advantage, though the loss of Caleb Foster to a foot fracture introduces some uncertainty. Louisville's path relies on hot shooting and exploiting Duke's backcourt vulnerability, but Duke's defensive prowess and offensive firepower should control the game and secure the win.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"e8-east-1-analysis\",\n    \"title\": \"Elite 8 East Regional Final: Duke vs. Louisville\",\n    \"summary\": \"Duke is the clear favorite based on efficiency metrics, head-to-head results, and overall team quality, but injuries to key guards on both sides require careful consideration.\",\n    \"evidence\": \"Duke ranks 1st in KenPom and Torvik with elite offense (adjO ~128) and defense (adjD ~90), while Louisville ranks 16th-18th (adjO ~124, adjD ~98). Duke won the regular-season matchup 84-73 on Jan 6, 2026. Duke's Caleb Foster is out with a foot fracture, and Louisville's Mikel Brown Jr. is out with a back injury, but Duke's depth and talent advantage remain substantial.\"\n  }\n}"
+    }
+  ]
+}

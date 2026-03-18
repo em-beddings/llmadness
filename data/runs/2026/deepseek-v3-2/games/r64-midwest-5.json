@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-midwest-5",
     "winnerId": "tennessee",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Tennessee's elite defense, ranked 13th nationally in adjusted efficiency, should effectively contain SMU's solid but not overwhelming offense. The Volunteers' significant advantage in overall team quality, reflected in their top-15 efficiency ratings and rigorous SEC schedule, provides a reliable edge. While SMU's offensive prowess could keep the game interesting, Tennessee's defensive discipline and balanced attack should lead to a comfortable victory."
   },
   "reasoningStep": {
     "id": "analysis-r64-midwest-5",
     "title": "Efficiency Analysis and Defensive Mismatch",
     "summary": "Evaluated team efficiency ratings, defensive strengths, and overall matchup dynamics favoring Tennessee.",
-    "evidence": "Tennessee ranks 15th in both Torvik and KenPom with an elite defense (Torvik DE rank 13, KenPom adj_d 95). SMU ranks 42nd with a weaker defense (Torvik DE rank 95, KenPom adj_d 104.8). Tennessee's adjusted efficiency margin (+26.06) significantly exceeds SMU's (+18.11), indicating superior overall team quality and a favorable defensive matchup."
+    "evidence": [
+      "Tennessee ranks 15th in both Torvik and KenPom with an elite defense (Torvik DE rank 13, KenPom adj_d 95). SMU ranks 42nd with a weaker defense (Torvik DE rank 95, KenPom adj_d 104.8). Tennessee's adjusted efficiency margin (+26.06) significantly exceeds SMU's (+18.11), indicating superior overall team quality and a favorable defensive matchup."
+    ]
   },
   "toolCalls": [
     {
@@ -429,19 +431,20 @@
       "id": "r64-midwest-5-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:15:31.895Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "tennessee",
           "smu"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-5-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:15:31.902Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"tennessee\",\n      \"teamName\": \"Tennessee\",\n      \"torvik\": {\n        \"rank\": 15,\n        \"team\": \"Tennessee\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-11\",\n        \"adjoe\": 121.51140570103011,\n        \"oe Rank\": 33,\n        \"adjde\": 95.48451900437048,\n        \"de Rank\": 13\n      },\n      \"kenpom\": {\n        \"rank\": 15,\n        \"team\": \"Tennessee\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-11\",\n        \"adj_em\": 26.06,\n        \"adj_o\": 121.1,\n        \"adj_o_rank\": 35,\n        \"adj_d\": 95\n      }\n    },\n    {\n      \"teamId\": \"smu\",\n      \"teamName\": \"SMU\",\n      \"torvik\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adjoe\": 123.05789628875004,\n        \"oe Rank\": 26,\n        \"adjde\": 104.92005426722466,\n        \"de Rank\": 95\n      },\n      \"kenpom\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adj_em\": 18.11,\n        \"adj_o\": 123,\n        \"adj_o_rank\": 27,\n        \"adj_d\": 104.8\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -592,8 +595,7 @@
             "ncsos_adj_em_rank": 144
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"tennessee\",\n      \"teamName\": \"Tennessee\",\n      \"torvik\": {\n        \"rank\": 15,\n        \"team\": \"Tennessee\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-11\",\n        \"adjoe\": 121.51140570103011,\n        \"oe Rank\": 33,\n        \"adjde\": 95.48451900437048,\n        \"de Rank\": 13\n      },\n      \"kenpom\": {\n        \"rank\": 15,\n        \"team\": \"Tennessee\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-11\",\n        \"adj_em\": 26.06,\n        \"adj_o\": 121.1,\n        \"adj_o_rank\": 35,\n        \"adj_d\": 95\n      }\n    },\n    {\n      \"teamId\": \"smu\",\n      \"teamName\": \"SMU\",\n      \"torvik\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adjoe\": 123.05789628875004,\n        \"oe Rank\": 26,\n        \"adjde\": 104.92005426722466,\n        \"de Rank\": 95\n      },\n      \"kenpom\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adj_em\": 18.11,\n        \"adj_o\": 123,\n        \"adj_o_rank\": 27,\n        \"adj_d\": 104.8\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-5-assistant-1",
@@ -605,22 +607,22 @@
       "id": "r64-midwest-5-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:15:41.724Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Tennessee basketball March Madness 2026 injury update",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-5-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:15:42.369Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-5-assistant-2",
@@ -632,22 +634,22 @@
       "id": "r64-midwest-5-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:15:47.073Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Tennessee Volunteers basketball 2026 NCAA tournament injury news",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-5-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:15:47.923Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-5-assistant-3",
@@ -659,18 +661,19 @@
       "id": "r64-midwest-5-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:16:08.060Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-midwest-5"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-5-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:16:08.060Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-5\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 6/11\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"tennessee\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"ff-midwest-11\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -687,8 +690,7 @@
             "gameId": "ff-midwest-11"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-5\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 6/11\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"tennessee\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"ff-midwest-11\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-5-assistant-4",
@@ -700,19 +702,20 @@
       "id": "r64-midwest-5-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:16:11.957Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "tennessee",
           "smu"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-5-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:16:11.965Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"tennessee\",\n      \"teamName\": \"Tennessee\",\n      \"torvik\": {\n        \"rank\": 15,\n        \"team\": \"Tennessee\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-11\",\n        \"adjoe\": 121.51140570103011,\n        \"oe Rank\": 33,\n        \"adjde\": 95.48451900437048,\n        \"de Rank\": 13\n      },\n      \"kenpom\": {\n        \"rank\": 15,\n        \"team\": \"Tennessee\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-11\",\n        \"adj_em\": 26.06,\n        \"adj_o\": 121.1,\n        \"adj_o_rank\": 35,\n        \"adj_d\": 95\n      }\n    },\n    {\n      \"teamId\": \"smu\",\n      \"teamName\": \"SMU\",\n      \"torvik\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adjoe\": 123.05789628875004,\n        \"oe Rank\": 26,\n        \"adjde\": 104.92005426722466,\n        \"de Rank\": 95\n      },\n      \"kenpom\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adj_em\": 18.11,\n        \"adj_o\": 123,\n        \"adj_o_rank\": 27,\n        \"adj_d\": 104.8\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -863,8 +866,7 @@
             "ncsos_adj_em_rank": 144
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"tennessee\",\n      \"teamName\": \"Tennessee\",\n      \"torvik\": {\n        \"rank\": 15,\n        \"team\": \"Tennessee\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-11\",\n        \"adjoe\": 121.51140570103011,\n        \"oe Rank\": 33,\n        \"adjde\": 95.48451900437048,\n        \"de Rank\": 13\n      },\n      \"kenpom\": {\n        \"rank\": 15,\n        \"team\": \"Tennessee\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-11\",\n        \"adj_em\": 26.06,\n        \"adj_o\": 121.1,\n        \"adj_o_rank\": 35,\n        \"adj_d\": 95\n      }\n    },\n    {\n      \"teamId\": \"smu\",\n      \"teamName\": \"SMU\",\n      \"torvik\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adjoe\": 123.05789628875004,\n        \"oe Rank\": 26,\n        \"adjde\": 104.92005426722466,\n        \"de Rank\": 95\n      },\n      \"kenpom\": {\n        \"rank\": 42,\n        \"team\": \"SMU\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adj_em\": 18.11,\n        \"adj_o\": 123,\n        \"adj_o_rank\": 27,\n        \"adj_d\": 104.8\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-5-assistant-final-5",

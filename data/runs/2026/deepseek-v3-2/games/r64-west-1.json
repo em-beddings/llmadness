@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-west-1",
     "winnerId": "arizona",
-    "confidence": "Very High",
+    "confidence": 0.93,
     "rationale": "Arizona's elite defense, ranked 3rd nationally in adjusted efficiency, and a top-10 offense create a overwhelming mismatch against LIU. The Wildcats' 31-2 record was built against a rigorous Big 12 schedule, providing high-major experience that LIU lacks from the NEC. With such a vast disparity in talent and team quality, Arizona should control this game from start to finish and advance comfortably."
   },
   "reasoningStep": {
     "id": "reasoning-r64-west-1",
     "title": "Analysis of Arizona vs LIU Round of 64 Matchup",
     "summary": "Evaluated team efficiency ratings, injury context, and tournament seeding to determine the likely outcome. Arizona's superior rankings in both offense and defense, combined with their high-major pedigree, make them a heavy favorite over LIU, who ranks outside the top 200 nationally in key metrics.",
-    "evidence": "Tool results: lookup_cbb_ratings showed Arizona ranked 3rd in Torvik and KenPom with adjde rank 3 and adjoe rank 10, while LIU ranked 234th in Torvik and 216th in KenPom with poor offensive rankings. Search for injury news indicated no major concerns for Arizona's key players, and LIU's recent NEC tournament win does not offset the talent gap."
+    "evidence": [
+      "Tool results: lookup_cbb_ratings showed Arizona ranked 3rd in Torvik and KenPom with adjde rank 3 and adjoe rank 10, while LIU ranked 234th in Torvik and 216th in KenPom with poor offensive rankings. Search for injury news indicated no major concerns for Arizona's key players, and LIU's recent NEC tournament win does not offset the talent gap."
+    ]
   },
   "toolCalls": [
     {
@@ -1094,14 +1096,15 @@
       "id": "r64-west-1-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:42:28.387Z",
+      "content": "",
       "toolName": "list_teams",
-      "arguments": {},
-      "content": ""
+      "arguments": {}
     },
     {
       "id": "r64-west-1-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:42:28.387Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1648,8 +1651,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-1-assistant-1",
@@ -1661,19 +1663,20 @@
       "id": "r64-west-1-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:42:32.455Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "arizona",
           "liu"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-1-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:42:32.462Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"arizona\",\n      \"teamName\": \"Arizona\",\n      \"torvik\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adjoe\": 126.22482613026838,\n        \"oe Rank\": 10,\n        \"adjde\": 91.12598305356042,\n        \"de Rank\": 3\n      },\n      \"kenpom\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adj_em\": 37.56,\n        \"adj_o\": 127.2,\n        \"adj_o_rank\": 7,\n        \"adj_d\": 89.7\n      }\n    },\n    {\n      \"teamId\": \"liu\",\n      \"teamName\": \"LIU\",\n      \"torvik\": {\n        \"rank\": 234,\n        \"team\": \"LIU\",\n        \"conf\": \"NEC\",\n        \"record\": \"24-10\",\n        \"adjoe\": 103.60491085105896,\n        \"oe Rank\": 269,\n        \"adjde\": 109.718789493818,\n        \"de Rank\": 196\n      },\n      \"kenpom\": {\n        \"rank\": 216,\n        \"team\": \"LIU\",\n        \"conf\": \"NEC\",\n        \"record\": \"24-10\",\n        \"adj_em\": -3.95,\n        \"adj_o\": 105.7,\n        \"adj_o_rank\": 239,\n        \"adj_d\": 109.6\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -1824,8 +1827,7 @@
             "ncsos_adj_em_rank": 120
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"arizona\",\n      \"teamName\": \"Arizona\",\n      \"torvik\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adjoe\": 126.22482613026838,\n        \"oe Rank\": 10,\n        \"adjde\": 91.12598305356042,\n        \"de Rank\": 3\n      },\n      \"kenpom\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adj_em\": 37.56,\n        \"adj_o\": 127.2,\n        \"adj_o_rank\": 7,\n        \"adj_d\": 89.7\n      }\n    },\n    {\n      \"teamId\": \"liu\",\n      \"teamName\": \"LIU\",\n      \"torvik\": {\n        \"rank\": 234,\n        \"team\": \"LIU\",\n        \"conf\": \"NEC\",\n        \"record\": \"24-10\",\n        \"adjoe\": 103.60491085105896,\n        \"oe Rank\": 269,\n        \"adjde\": 109.718789493818,\n        \"de Rank\": 196\n      },\n      \"kenpom\": {\n        \"rank\": 216,\n        \"team\": \"LIU\",\n        \"conf\": \"NEC\",\n        \"record\": \"24-10\",\n        \"adj_em\": -3.95,\n        \"adj_o\": 105.7,\n        \"adj_o_rank\": 239,\n        \"adj_d\": 109.6\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-1-assistant-2",
@@ -1837,17 +1839,18 @@
       "id": "r64-west-1-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:42:39.319Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Arizona basketball 2026 tournament injury news",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-1-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:42:40.178Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Arizona Wildcats Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F12%2Farizona%2Dwildcats&rut=0f9bc3e1c0ee4575e7ae9f0e5ced6f794bdcb07e3ad173e543920a95a4bd2dd4\",\n      \"snippet\": \"Visit ESPN for Arizona Wildcats live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Texas Tech&#x27;s JT Toppin injures lower right leg in loss to ASU\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47961941%2Ftexas%2Dtech%2Dstar%2Djt%2Dtoppin%2Dinjured%2Dupset%2Dloss%2Darizona%2Dstate&rut=987e726cd2b8925789eb2a7979dbfc83646355f668bd96424ff6497818d9ffaa\",\n      \"snippet\": \"Texas Tech star forward JT Toppin injured his lower right leg while driving to the basket with 6:03 remaining in Tuesday night&#x27;s upset loss at Arizona State.\"\n    },\n    {\n      \"title\": \"Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa\",\n      \"snippet\": \"Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis.\"\n    },\n    {\n      \"title\": \"Arizona State 72-67 Texas Tech (Feb 17, 2026) Game Recap - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401827686&rut=045b70d29a1ccd00a1b00d52ba34027043156fb032eba7a780808c4d18838d81\",\n      \"snippet\": \"Expert recap and game analysis of the Arizona State Sun Devils vs. Texas Tech Red Raiders NCAAM game from February 17, 2026 on ESPN.\"\n    }\n  ]\n}",
       "toolName": "search_espn_news",
       "result": [
         {
@@ -1875,8 +1878,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=0c86a36b38fe8a85cfca17567cf51b782b5e714eb40e4e241fb8a636a44aaba1",
           "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Arizona Wildcats Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F12%2Farizona%2Dwildcats&rut=0f9bc3e1c0ee4575e7ae9f0e5ced6f794bdcb07e3ad173e543920a95a4bd2dd4\",\n      \"snippet\": \"Visit ESPN for Arizona Wildcats live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Texas Tech&#x27;s JT Toppin injures lower right leg in loss to ASU\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47961941%2Ftexas%2Dtech%2Dstar%2Djt%2Dtoppin%2Dinjured%2Dupset%2Dloss%2Darizona%2Dstate&rut=987e726cd2b8925789eb2a7979dbfc83646355f668bd96424ff6497818d9ffaa\",\n      \"snippet\": \"Texas Tech star forward JT Toppin injured his lower right leg while driving to the basket with 6:03 remaining in Tuesday night&#x27;s upset loss at Arizona State.\"\n    },\n    {\n      \"title\": \"Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa\",\n      \"snippet\": \"Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis.\"\n    },\n    {\n      \"title\": \"Arizona State 72-67 Texas Tech (Feb 17, 2026) Game Recap - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401827686&rut=045b70d29a1ccd00a1b00d52ba34027043156fb032eba7a780808c4d18838d81\",\n      \"snippet\": \"Expert recap and game analysis of the Arizona State Sun Devils vs. Texas Tech Red Raiders NCAAM game from February 17, 2026 on ESPN.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-1-assistant-3",
@@ -1888,17 +1890,18 @@
       "id": "r64-west-1-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:42:44.787Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Arizona Wildcats injury update March 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-1-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:42:45.703Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Every key injury to know while making your 2026 March Madness bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dcaleb%2Dfoster%2Djt%2Dtoppin%2D2026%2Dbrackets%2F310f01ec055e579a2f819984&rut=4930c52a30981b049a2902a5ccc59c491e7868223b2dc012e028231da748647f\",\n      \"snippet\": \"There&#x27;s a lot to know before you lock in your 2026 March Madness bracket. The period before the NCAA Tournament is always a time for cramming in research about the best offenses and defenses in ...\"\n    },\n    {\n      \"title\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=f1413f8111203286478c533d2ba7092871ce85212817bc623e72e492ebffe4d4\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report.\"\n    },\n    {\n      \"title\": \"March Madness injuries to know: Updates for key players ahead of the ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nbcsports.com%2Fmens%2Dcollege%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dto%2Dknow%2Dupdates%2Dfor%2Dkey%2Dplayers%2Dahead%2Dof%2Dthe%2Dmens%2Dncaa%2Dtournament&rut=3cce350305a3a4105fe38e5472b2f64212a2b9ed35295de9ff7fe7c78792554b\",\n      \"snippet\": \"March Madness injuries to know: Updates for key players ahead of the men&#x27;s NCAA Tournament By Aidan Berg Published March 17, 2026 03:07 PM\"\n    },\n    {\n      \"title\": \"Depth concerns popping up for Arizona Wildcats men&#x27;s basketball as ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.azdesertswarm.com%2Fbasketball%2F75992%2Farizona%2Dwildcats%2Dmens%2Dbasketball%2Dinjuries%2Dillness%2Dkoa%2Dpeat%2Daristode%2Dtommy%2Dlloyd%2Dhistory%2Dbig12%2D2026%2Dveesaar%2Dkriisa%2Dkrivas%2Dballo&rut=67769ce7902774addde5b0ff4daaf6aafc5574177981aa27de442a2dc28577e1\",\n      \"snippet\": \"Your best source for quality Arizona Wildcats news, rumors, analysis, stats and scores from the fan perspective.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -1926,8 +1929,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Farizona%2Dwildcats%2Finjuries&rut=c076cba8f5ac6e683d586b9e5d85249c92c2249d0d319ed4e345da51b3dcd77f",
           "snippet": "Stay In the Know: Check Out Arizona Wildcats Injuries Impacting The 2025- 2026 NCAAB Season."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Every key injury to know while making your 2026 March Madness bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dcaleb%2Dfoster%2Djt%2Dtoppin%2D2026%2Dbrackets%2F310f01ec055e579a2f819984&rut=4930c52a30981b049a2902a5ccc59c491e7868223b2dc012e028231da748647f\",\n      \"snippet\": \"There&#x27;s a lot to know before you lock in your 2026 March Madness bracket. The period before the NCAA Tournament is always a time for cramming in research about the best offenses and defenses in ...\"\n    },\n    {\n      \"title\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=f1413f8111203286478c533d2ba7092871ce85212817bc623e72e492ebffe4d4\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report.\"\n    },\n    {\n      \"title\": \"March Madness injuries to know: Updates for key players ahead of the ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nbcsports.com%2Fmens%2Dcollege%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dto%2Dknow%2Dupdates%2Dfor%2Dkey%2Dplayers%2Dahead%2Dof%2Dthe%2Dmens%2Dncaa%2Dtournament&rut=3cce350305a3a4105fe38e5472b2f64212a2b9ed35295de9ff7fe7c78792554b\",\n      \"snippet\": \"March Madness injuries to know: Updates for key players ahead of the men&#x27;s NCAA Tournament By Aidan Berg Published March 17, 2026 03:07 PM\"\n    },\n    {\n      \"title\": \"Depth concerns popping up for Arizona Wildcats men&#x27;s basketball as ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.azdesertswarm.com%2Fbasketball%2F75992%2Farizona%2Dwildcats%2Dmens%2Dbasketball%2Dinjuries%2Dillness%2Dkoa%2Dpeat%2Daristode%2Dtommy%2Dlloyd%2Dhistory%2Dbig12%2D2026%2Dveesaar%2Dkriisa%2Dkrivas%2Dballo&rut=67769ce7902774addde5b0ff4daaf6aafc5574177981aa27de442a2dc28577e1\",\n      \"snippet\": \"Your best source for quality Arizona Wildcats news, rumors, analysis, stats and scores from the fan perspective.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-1-assistant-4",
@@ -1939,22 +1941,22 @@
       "id": "r64-west-1-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:42:51.207Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.azdesertswarm.com/basketball/75992/arizona-wildcats-mens-basketball-injuries-illness-koa-peat-aristode-tommy-lloyd-history-big12-2026-veesaar-kriisa-krivas-ballo"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-1-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:42:51.384Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.azdesertswarm.com/basketball/75992/arizona-wildcats-mens-basketball-injuries-illness-koa-peat-aristode-tommy-lloyd-history-big12-2026-veesaar-kriisa-krivas-ballo\",\n    \"text\": \"Depth concerns popping up for Arizona Wildcats men’s basketball as toughest stretch of schedule continues | Arizona Desert Swarm Skip to main content SB Nation SB Nation logo An Arizona Wildcats Community Arizona Desert Swarm March 18, 2026 Arizona Desert Swarm Notifications Notifications The Feed Sections Arizona Basketball Arizona Football Arizona Softball Arizona Recruiting Arizona Soccer Arizona Volleyball Arizona Baseball Arizona Golf Arizona Gymnastics Arizona in the Pros Betting FanDuel College Football Odds FanDuel College Basketball Odds Arizona Football Odds Arizona Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Shop About Navigation Drawer Login / Sign Up close Close Search The Feed Sections Expand Arizona Basketball Arizona Football Arizona Softball Arizona Recruiting Arizona Soccer Arizona Volleyball Arizona Baseball Arizona Golf Arizona Gymnastics Arizona in the Pros Betting Expand FanDuel College Football Odds FanDuel College Basketball Odds Arizona Football Odds Arizona Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Shop About Community Guidelines Newsletters All commun... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.azdesertswarm.com/basketball/75992/arizona-wildcats-mens-basketball-injuries-illness-koa-peat-aristode-tommy-lloyd-history-big12-2026-veesaar-kriisa-krivas-ballo",
         "text": "Depth concerns popping up for Arizona Wildcats men’s basketball as toughest stretch of schedule continues | Arizona Desert Swarm Skip to main content SB Nation SB Nation logo An Arizona Wildcats Community Arizona Desert Swarm March 18, 2026 Arizona Desert Swarm Notifications Notifications The Feed Sections Arizona Basketball Arizona Football Arizona Softball Arizona Recruiting Arizona Soccer Arizona Volleyball Arizona Baseball Arizona Golf Arizona Gymnastics Arizona in the Pros Betting FanDuel College Football Odds FanDuel College Basketball Odds Arizona Football Odds Arizona Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Shop About Navigation Drawer Login / Sign Up close Close Search The Feed Sections Expand Arizona Basketball Arizona Football Arizona Softball Arizona Recruiting Arizona Soccer Arizona Volleyball Arizona Baseball Arizona Golf Arizona Gymnastics Arizona in the Pros Betting Expand FanDuel College Football Odds FanDuel College Basketball Odds Arizona Football Odds Arizona Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Shop About Community Guidelines Newsletters All communities Facebook Twitter Youtube RSS Arizona Desert Swarm Depth concerns popping up for Arizona men’s basketball as toughest stretch of schedule continues Notifications Notifications Arizona Basketball Depth concerns popping up for Arizona men’s basketball as toughest stretch of schedule continues by Brian Pedersen Feb 16, 2026, 10:00 AM UTC Facebook Link TUCSON, ARIZONA - FEBRUARY 14: Motiejus Krivas #13 and Koa Peat #10 of the Arizona Wildcats walk off the court after losing to the Texas Tech Red Raiders 78-75 in overtime at McKale Center at ALKEME Arena on February 14, 2026 in Tucson, Arizona. (Photo by Chris Coduto/Getty Images) Getty Images In Tommy Lloyd’s first season, it was Kerr Kriisa . The second year it was Oumar Ballo. Then Henri Veesaar in 2023-24 and Motiejus Krivas last season. Injuries and absences are a part of every sport, and Arizona has not been immune from this. It just hadn’t happened to the current Wildcats team until Saturday, when Dwayne Aristode sat out the overtime loss to Texas Tech with an illness and Koa Peat suffered a lower body injury and missed the second half. “If you think you’re going to go through a season unscathed, you’ve never done this before,” Lloyd said Saturday after the UA lost a second straight game. “You just got to be honest with yourself. We’re all human. I mean, the season’s been long, obviously you can see some injuries and illnesses are starting to pile up and catch up with us a little bit. We’ll bounce back. And hopefully we will be fully loaded when we need to be.” Both Aristode and Peat could miss the next game, Wednesday at home against No. 22 BYU. If Peat can’t go it will mark the first time this season the UA will send out a different starting five, but more importantly it means the 8-man rotation that has served"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.azdesertswarm.com/basketball/75992/arizona-wildcats-mens-basketball-injuries-illness-koa-peat-aristode-tommy-lloyd-history-big12-2026-veesaar-kriisa-krivas-ballo\",\n    \"text\": \"Depth concerns popping up for Arizona Wildcats men’s basketball as toughest stretch of schedule continues | Arizona Desert Swarm Skip to main content SB Nation SB Nation logo An Arizona Wildcats Community Arizona Desert Swarm March 18, 2026 Arizona Desert Swarm Notifications Notifications The Feed Sections Arizona Basketball Arizona Football Arizona Softball Arizona Recruiting Arizona Soccer Arizona Volleyball Arizona Baseball Arizona Golf Arizona Gymnastics Arizona in the Pros Betting FanDuel College Football Odds FanDuel College Basketball Odds Arizona Football Odds Arizona Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Shop About Navigation Drawer Login / Sign Up close Close Search The Feed Sections Expand Arizona Basketball Arizona Football Arizona Softball Arizona Recruiting Arizona Soccer Arizona Volleyball Arizona Baseball Arizona Golf Arizona Gymnastics Arizona in the Pros Betting Expand FanDuel College Football Odds FanDuel College Basketball Odds Arizona Football Odds Arizona Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Shop About Community Guidelines Newsletters All commun... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-1-assistant-5",
@@ -1966,20 +1968,20 @@
       "id": "r64-west-1-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:42:55.971Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "LIU basketball 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-1-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:42:56.109Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-west-1-assistant-6",
@@ -1991,17 +1993,18 @@
       "id": "r64-west-1-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:43:00.905Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "LIU Sharks 2026 NEC tournament champion",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-1-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:43:01.783Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 NEC men&#x27;s basketball tournament - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_NEC_men%2527s_basketball_tournament&rut=1de54b412f0bd21b9f9c0a431799a97d4cb30a0b157691f118c4c9f501b0e79a\",\n      \"snippet\": \"The 2026 NEC Men&#x27;s Basketball Tournament was the postseason men&#x27;s basketball tournament for the NEC for the 2025-26 NCAA Division I men&#x27;s basketball season. The tournament took place over three dates between March 4 and 10, 2026 , and all tournament games were played in the home arenas of the higher-seeded school.\"\n    },\n    {\n      \"title\": \"Fins Up! LIU Cuts Down the Nets for Seventh NEC Men&#x27;s Basketball Crown\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnecsports.com%2Fnews%2F2026%2F3%2F10%2FMBB_CH_Recap_26.aspx&rut=1fac35902489693584700050a281e546780854d2e97f9c9dc671a6ea3f69cf0d\",\n      \"snippet\": \"Rounding out the five-member team was Stonehill&#x27;s Davante Hackett. The Sharks will learn their NCAA Tournament destination and opponent during the 2026 NCAA Selection Show, which will air on CBS at 6 p.m. 2026 NEC All- Tournament Team MVP: Greg Gordon, LIU Malachi Davis, LIU Bernie Blunt III, Mercyhurst Quadir Martin, Mercyhurst Davante Hackett ...\"\n    },\n    {\n      \"title\": \"2026 NEC Men&#x27;s Basketball Tournament Field Set - NEC\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnecsports.com%2Fnews%2F2026%2F2%2F19%2FMBB_TournamentFieldSet_26.aspx&rut=2d28fce5a7d14b6dabccf7ff50a2299d8fb22b35821f137ec06d9be6a3e8dce8\",\n      \"snippet\": \"A program with championship pedigree, LIU remains the only school to win three consecutive NEC Tournament titles (2011-13) and owns six league crowns, tied for the most among current NEC programs.\"\n    },\n    {\n      \"title\": \"LIU Sharks become first team into 2026 NCAA Tournament after unusual ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fliu%2Dsharks%2Dbecome%2Dfirst%2Dteam%2D2026%2Dncaa%2Dtournament%2Dafter%2Dunusual%2Dnec%2Dsituation%2F6ab7e3f80c90dd310a6cc503&rut=e3cd5c1c9b3ab6ee3c2f3347b9ba59fdce052f1ab08f85267e7be4da2368861f\",\n      \"snippet\": \"Now the Sharks will play for the NEC championship Monday night. The outcome will not change the NCAA tournament bid, but it still gives LIU the chance to bring home the conference tournament title.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -2029,8 +2032,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.liuathletics.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dthe%2Dsharks%2Dare%2Ddancing%2Dliu%2Dto%2Dtake%2Don%2Darizona%2Dto%2Dopen%2Dthe%2Dncaa%2Dtournament.aspx&rut=d32f34a49aac11ff7cbc7c21968e6ff026a8c66db9181cd44b91e2f69e80ef88",
           "snippet": "LIU , the 2025-26 NEC regular season and tournament champion , enters the NCAA tournament after storming through the NEC , posting a 15-3 mark in conference play and a 24-10 overall record. LIU&#x27;s 24 wins are the most in the Sharks era of the program, and the first 20-plus win season since the 2016-17 campaign."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 NEC men&#x27;s basketball tournament - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_NEC_men%2527s_basketball_tournament&rut=1de54b412f0bd21b9f9c0a431799a97d4cb30a0b157691f118c4c9f501b0e79a\",\n      \"snippet\": \"The 2026 NEC Men&#x27;s Basketball Tournament was the postseason men&#x27;s basketball tournament for the NEC for the 2025-26 NCAA Division I men&#x27;s basketball season. The tournament took place over three dates between March 4 and 10, 2026 , and all tournament games were played in the home arenas of the higher-seeded school.\"\n    },\n    {\n      \"title\": \"Fins Up! LIU Cuts Down the Nets for Seventh NEC Men&#x27;s Basketball Crown\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnecsports.com%2Fnews%2F2026%2F3%2F10%2FMBB_CH_Recap_26.aspx&rut=1fac35902489693584700050a281e546780854d2e97f9c9dc671a6ea3f69cf0d\",\n      \"snippet\": \"Rounding out the five-member team was Stonehill&#x27;s Davante Hackett. The Sharks will learn their NCAA Tournament destination and opponent during the 2026 NCAA Selection Show, which will air on CBS at 6 p.m. 2026 NEC All- Tournament Team MVP: Greg Gordon, LIU Malachi Davis, LIU Bernie Blunt III, Mercyhurst Quadir Martin, Mercyhurst Davante Hackett ...\"\n    },\n    {\n      \"title\": \"2026 NEC Men&#x27;s Basketball Tournament Field Set - NEC\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnecsports.com%2Fnews%2F2026%2F2%2F19%2FMBB_TournamentFieldSet_26.aspx&rut=2d28fce5a7d14b6dabccf7ff50a2299d8fb22b35821f137ec06d9be6a3e8dce8\",\n      \"snippet\": \"A program with championship pedigree, LIU remains the only school to win three consecutive NEC Tournament titles (2011-13) and owns six league crowns, tied for the most among current NEC programs.\"\n    },\n    {\n      \"title\": \"LIU Sharks become first team into 2026 NCAA Tournament after unusual ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fliu%2Dsharks%2Dbecome%2Dfirst%2Dteam%2D2026%2Dncaa%2Dtournament%2Dafter%2Dunusual%2Dnec%2Dsituation%2F6ab7e3f80c90dd310a6cc503&rut=e3cd5c1c9b3ab6ee3c2f3347b9ba59fdce052f1ab08f85267e7be4da2368861f\",\n      \"snippet\": \"Now the Sharks will play for the NEC championship Monday night. The outcome will not change the NCAA tournament bid, but it still gives LIU the chance to bring home the conference tournament title.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-1-assistant-7",
@@ -2042,22 +2044,22 @@
       "id": "r64-west-1-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:43:06.859Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-1-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:43:06.961Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503\",\n    \"text\": \"LIU Sharks become first team into 2026 NCAA Tournament after unusual NEC situation | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlott... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503",
         "text": "LIU Sharks become first team into 2026 NCAA Tournament after unusual NEC situation | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Strea"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/liu-sharks-become-first-team-2026-ncaa-tournament-after-unusual-nec-situation/6ab7e3f80c90dd310a6cc503\",\n    \"text\": \"LIU Sharks become first team into 2026 NCAA Tournament after unusual NEC situation | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlott... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-1-assistant-8",
@@ -2069,18 +2071,19 @@
       "id": "r64-west-1-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:43:12.139Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-west-1"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-1-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:43:12.139Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-1\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 1/16\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"arizona\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"liu\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -2097,8 +2100,7 @@
             "teamId": "liu"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-1\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 1/16\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"arizona\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"liu\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-1-assistant-9",
@@ -2110,16 +2112,17 @@
       "id": "r64-west-1-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:43:16.223Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "West"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-1-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:43:16.223Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"arizona\",\n      \"name\": \"Arizona\",\n      \"shortName\": \"ARIZ\",\n      \"seed\": 1,\n      \"region\": \"West\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"purdue\",\n      \"name\": \"Purdue\",\n      \"shortName\": \"PUR\",\n      \"seed\": 2,\n      \"region\": \"West\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"gonzaga\",\n      \"name\": \"Gonzaga\",\n      \"shortName\": \"GONZ\",\n      \"seed\": 3,\n      \"region\": \"West\",\n      \"conference\": \"WCC\"\n    },\n    {\n      \"id\": \"arkansas\",\n      \"name\": \"Arkansas\",\n      \"shortName\": \"ARK\",\n      \"seed\": 4,\n      \"region\": \"West\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -2258,8 +2261,7 @@
           "region": "West",
           "conference": "SEC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"arizona\",\n      \"name\": \"Arizona\",\n      \"shortName\": \"ARIZ\",\n      \"seed\": 1,\n      \"region\": \"West\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"purdue\",\n      \"name\": \"Purdue\",\n      \"shortName\": \"PUR\",\n      \"seed\": 2,\n      \"region\": \"West\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"gonzaga\",\n      \"name\": \"Gonzaga\",\n      \"shortName\": \"GONZ\",\n      \"seed\": 3,\n      \"region\": \"West\",\n      \"conference\": \"WCC\"\n    },\n    {\n      \"id\": \"arkansas\",\n      \"name\": \"Arkansas\",\n      \"shortName\": \"ARK\",\n      \"seed\": 4,\n      \"region\": \"West\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-1-final-json",

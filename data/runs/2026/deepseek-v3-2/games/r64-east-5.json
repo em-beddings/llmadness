@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-east-5",
     "winnerId": "louisville",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Louisville's significant advantage in efficiency metrics, ranking 16th in Torvik and 18th in KenPom compared to South Florida's 50th in both systems, reflects their superior talent and high-major pedigree. The Cardinals' balanced top-25 offense and defense, tested against a rigorous ACC schedule, should overwhelm a South Florida squad that lacks comparable firepower on either end. While 11-seed upsets are possible, Louisville's clear edge in both adjusted efficiency and quality of competition makes them a reliable pick to advance."
   },
   "reasoningStep": {
     "id": "analysis-r64-east-5",
     "title": "Efficiency ratings and matchup evaluation",
     "summary": "Louisville holds substantial advantages in adjusted efficiency metrics on both offense and defense, ranking in the top 25 nationally compared to South Florida's rankings in the 50-65 range. The Cardinals' high-major experience and balanced profile suggest they should control this game despite typical 6-11 upset potential.",
-    "evidence": "Louisville: Torvik rank 16 (adjoe 124.0, rank 23; adjde 98.1, rank 23), KenPom rank 18 (adj_o 124.1 rank 20, adj_d 98.7). South Florida: Torvik rank 50 (adjoe 117.2 rank 65, adjde 102.3 rank 60), KenPom rank 50 (adj_o 117.7 rank 58, adj_d 101.9)."
+    "evidence": [
+      "Louisville: Torvik rank 16 (adjoe 124.0, rank 23; adjde 98.1, rank 23), KenPom rank 18 (adj_o 124.1 rank 20, adj_d 98.7). South Florida: Torvik rank 50 (adjoe 117.2 rank 65, adjde 102.3 rank 60), KenPom rank 50 (adj_o 117.7 rank 58, adj_d 101.9)."
+    ]
   },
   "toolCalls": [
     {
@@ -583,19 +585,20 @@
       "id": "r64-east-5-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:36:01.003Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "louisville",
           "south-florida"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-5-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:36:01.012Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"louisville\",\n      \"teamName\": \"Louisville\",\n      \"torvik\": {\n        \"rank\": 16,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 124.033765527537,\n        \"oe Rank\": 23,\n        \"adjde\": 98.13789253332496,\n        \"de Rank\": 23\n      },\n      \"kenpom\": {\n        \"rank\": 18,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adj_em\": 25.42,\n        \"adj_o\": 124.1,\n        \"adj_o_rank\": 20,\n        \"adj_d\": 98.7\n      }\n    },\n    {\n      \"teamId\": \"south-florida\",\n      \"teamName\": \"South Florida\",\n      \"torvik\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adjoe\": 117.15762730139662,\n        \"oe Rank\": 65,\n        \"adjde\": 102.25096061592896,\n        \"de Rank\": 60\n      },\n      \"kenpom\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adj_em\": 15.77,\n        \"adj_o\": 117.7,\n        \"adj_o_rank\": 58,\n        \"adj_d\": 101.9\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -746,8 +749,7 @@
             "ncsos_adj_em_rank": 74
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"louisville\",\n      \"teamName\": \"Louisville\",\n      \"torvik\": {\n        \"rank\": 16,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 124.033765527537,\n        \"oe Rank\": 23,\n        \"adjde\": 98.13789253332496,\n        \"de Rank\": 23\n      },\n      \"kenpom\": {\n        \"rank\": 18,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adj_em\": 25.42,\n        \"adj_o\": 124.1,\n        \"adj_o_rank\": 20,\n        \"adj_d\": 98.7\n      }\n    },\n    {\n      \"teamId\": \"south-florida\",\n      \"teamName\": \"South Florida\",\n      \"torvik\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adjoe\": 117.15762730139662,\n        \"oe Rank\": 65,\n        \"adjde\": 102.25096061592896,\n        \"de Rank\": 60\n      },\n      \"kenpom\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adj_em\": 15.77,\n        \"adj_o\": 117.7,\n        \"adj_o_rank\": 58,\n        \"adj_d\": 101.9\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-5-assistant-1",
@@ -759,22 +761,22 @@
       "id": "r64-east-5-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:36:07.864Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Louisville basketball March Madness 2026 injury",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-5-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:36:08.470Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-5-assistant-2",
@@ -786,22 +788,22 @@
       "id": "r64-east-5-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:36:12.896Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Louisville Cardinals 2026 NCAA tournament injury update",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-5-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:36:13.613Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-5-assistant-3",
@@ -813,22 +815,22 @@
       "id": "r64-east-5-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:36:18.583Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "South Florida Bulls 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-5-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:36:19.269Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-5-assistant-4",
@@ -840,18 +842,19 @@
       "id": "r64-east-5-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:36:45.153Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-east-5"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-5-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:36:45.153Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-east-5\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 6/11\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"louisville\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"south-florida\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -868,8 +871,7 @@
             "teamId": "south-florida"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-east-5\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 6/11\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"louisville\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"south-florida\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-5-assistant-5",
@@ -881,16 +883,17 @@
       "id": "r64-east-5-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:36:48.389Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "East"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-5-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:36:48.389Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1021,8 +1024,7 @@
           "region": "East",
           "conference": "MAAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-5-assistant-6",
@@ -1034,19 +1036,20 @@
       "id": "r64-east-5-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:36:52.629Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "louisville",
           "south-florida"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-5-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:36:52.640Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"louisville\",\n      \"teamName\": \"Louisville\",\n      \"torvik\": {\n        \"rank\": 16,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 124.033765527537,\n        \"oe Rank\": 23,\n        \"adjde\": 98.13789253332496,\n        \"de Rank\": 23\n      },\n      \"kenpom\": {\n        \"rank\": 18,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adj_em\": 25.42,\n        \"adj_o\": 124.1,\n        \"adj_o_rank\": 20,\n        \"adj_d\": 98.7\n      }\n    },\n    {\n      \"teamId\": \"south-florida\",\n      \"teamName\": \"South Florida\",\n      \"torvik\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adjoe\": 117.15762730139662,\n        \"oe Rank\": 65,\n        \"adjde\": 102.25096061592896,\n        \"de Rank\": 60\n      },\n      \"kenpom\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adj_em\": 15.77,\n        \"adj_o\": 117.7,\n        \"adj_o_rank\": 58,\n        \"adj_d\": 101.9\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -1197,8 +1200,7 @@
             "ncsos_adj_em_rank": 74
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"louisville\",\n      \"teamName\": \"Louisville\",\n      \"torvik\": {\n        \"rank\": 16,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 124.033765527537,\n        \"oe Rank\": 23,\n        \"adjde\": 98.13789253332496,\n        \"de Rank\": 23\n      },\n      \"kenpom\": {\n        \"rank\": 18,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adj_em\": 25.42,\n        \"adj_o\": 124.1,\n        \"adj_o_rank\": 20,\n        \"adj_d\": 98.7\n      }\n    },\n    {\n      \"teamId\": \"south-florida\",\n      \"teamName\": \"South Florida\",\n      \"torvik\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adjoe\": 117.15762730139662,\n        \"oe Rank\": 65,\n        \"adjde\": 102.25096061592896,\n        \"de Rank\": 60\n      },\n      \"kenpom\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adj_em\": 15.77,\n        \"adj_o\": 117.7,\n        \"adj_o_rank\": 58,\n        \"adj_d\": 101.9\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-5-assistant-final-7",

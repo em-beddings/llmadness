@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-east-4",
     "winnerId": "kansas",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Kansas's elite defense, ranked 10th nationally in adjusted efficiency, should overwhelm California Baptist's offense and control the game. The Jayhawks' experience against a rigorous Big 12 schedule has prepared them for tournament play, while the Lancers' lack of high-major competition leaves them vulnerable. Though 13-seed upsets are possible, Kansas's defensive prowess and talent advantage make them a reliable pick to advance."
   },
   "reasoningStep": {
     "id": "analysis-east-4-13",
     "title": "Kansas vs California Baptist 4/13 matchup analysis",
     "summary": "Kansas's elite defense and higher efficiency ratings provide significant advantage over unknown mid-major California Baptist.",
-    "evidence": "Kansas ranks 22nd in Torvik, 21st in KenPom with top-10 defense (adjde rank 10, KenPom adj_d 94). California Baptist lacks available ratings, suggesting significant talent gap."
+    "evidence": [
+      "Kansas ranks 22nd in Torvik, 21st in KenPom with top-10 defense (adjde rank 10, KenPom adj_d 94). California Baptist lacks available ratings, suggesting significant talent gap."
+    ]
   },
   "toolCalls": [
     {
@@ -766,14 +768,15 @@
       "id": "r64-east-4-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:34:37.424Z",
+      "content": "",
       "toolName": "list_teams",
-      "arguments": {},
-      "content": ""
+      "arguments": {}
     },
     {
       "id": "r64-east-4-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:34:37.424Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1320,8 +1323,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-4-assistant-1",
@@ -1333,19 +1335,20 @@
       "id": "r64-east-4-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:34:42.774Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "kansas",
           "california-baptist"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-4-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:34:42.781Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"kansas\",\n      \"teamName\": \"Kansas\",\n      \"torvik\": {\n        \"rank\": 22,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adjoe\": 117.9504990311845,\n        \"oe Rank\": 56,\n        \"adjde\": 94.37707528872744,\n        \"de Rank\": 10\n      },\n      \"kenpom\": {\n        \"rank\": 21,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adj_em\": 24.48,\n        \"adj_o\": 118.4,\n        \"adj_o_rank\": 57,\n        \"adj_d\": 94\n      }\n    },\n    {\n      \"teamId\": \"california-baptist\",\n      \"teamName\": \"California Baptist\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -1428,8 +1431,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"kansas\",\n      \"teamName\": \"Kansas\",\n      \"torvik\": {\n        \"rank\": 22,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adjoe\": 117.9504990311845,\n        \"oe Rank\": 56,\n        \"adjde\": 94.37707528872744,\n        \"de Rank\": 10\n      },\n      \"kenpom\": {\n        \"rank\": 21,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adj_em\": 24.48,\n        \"adj_o\": 118.4,\n        \"adj_o_rank\": 57,\n        \"adj_d\": 94\n      }\n    },\n    {\n      \"teamId\": \"california-baptist\",\n      \"teamName\": \"California Baptist\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-4-assistant-2",
@@ -1441,22 +1443,22 @@
       "id": "r64-east-4-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:34:49.134Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Kansas basketball 2026 tournament injury update",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-4-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:34:49.749Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-4-assistant-3",
@@ -1468,22 +1470,22 @@
       "id": "r64-east-4-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:34:54.356Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Kansas Jayhawks 2026 NCAA tournament injuries updates",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-4-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:34:55.060Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-4-assistant-4",
@@ -1495,18 +1497,19 @@
       "id": "r64-east-4-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:34:59.987Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-east-4"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-4-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:34:59.987Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-east-4\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 4/13\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"kansas\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"california-baptist\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -1523,8 +1526,7 @@
             "teamId": "california-baptist"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-east-4\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 4/13\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"kansas\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"california-baptist\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-4-assistant-5",
@@ -1536,22 +1538,22 @@
       "id": "r64-east-4-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:35:05.619Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "California Baptist Lancers basketball 2026 record",
         "maxResults": 3
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-4-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:35:06.338Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-4-assistant-final-6",

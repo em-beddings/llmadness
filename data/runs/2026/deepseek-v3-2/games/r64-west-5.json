@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-west-5",
     "winnerId": "byu",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "BYU's elite top-10 offensive efficiency, combined with a significantly better defense than Texas, provides a clear advantage in this matchup. The Cougars' experience in the rigorous Big 12 has prepared them for tournament play, while Texas's defensive deficiencies, ranking outside the top 100, make them vulnerable. Although Texas has a high-powered offense, BYU's balanced attack and defensive solidity should secure a victory."
   },
   "reasoningStep": {
     "id": "reasoning-r64-west-5",
     "title": "Efficiency Metrics and Team Comparison",
     "summary": "BYU holds superior overall efficiency ratings with a top-10 offense and better defensive metrics compared to Texas's weaker defense, leading to a pick in favor of BYU.",
-    "evidence": "Torvik and KenPom ratings: BYU ranks 23rd (KenPom) and 33rd (Torvik) with adj_o rank 10 and adj_d 102.3; Texas ranks 37th (KenPom) and 45th (Torvik) with adj_o rank 13 and adj_d 106. BYU's record is 23-11 vs Texas's 18-14, indicating better season performance."
+    "evidence": [
+      "Torvik and KenPom ratings: BYU ranks 23rd (KenPom) and 33rd (Torvik) with adj_o rank 10 and adj_d 102.3; Texas ranks 37th (KenPom) and 45th (Torvik) with adj_o rank 13 and adj_d 106. BYU's record is 23-11 vs Texas's 18-14, indicating better season performance."
+    ]
   },
   "toolCalls": [
     {
@@ -1018,19 +1020,20 @@
       "id": "r64-west-5-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:48:46.149Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "byu",
           "texas"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-5-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:48:46.155Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"byu\",\n      \"teamName\": \"BYU\",\n      \"torvik\": {\n        \"rank\": 33,\n        \"team\": \"BYU\",\n        \"conf\": \"B12\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.78766507254886,\n        \"oe Rank\": 16,\n        \"adjde\": 104.28867912262888,\n        \"de Rank\": 88\n      },\n      \"kenpom\": {\n        \"rank\": 23,\n        \"team\": \"BYU\",\n        \"conf\": \"B12\",\n        \"record\": \"23-11\",\n        \"adj_em\": 23.28,\n        \"adj_o\": 125.5,\n        \"adj_o_rank\": 10,\n        \"adj_d\": 102.3\n      }\n    },\n    {\n      \"teamId\": \"texas\",\n      \"teamName\": \"Texas\",\n      \"torvik\": {\n        \"rank\": 45,\n        \"team\": \"Texas\",\n        \"conf\": \"SEC\",\n        \"record\": \"18-14\",\n        \"adjoe\": 124.07462361953156,\n        \"oe Rank\": 21,\n        \"adjde\": 106.33467387240466,\n        \"de Rank\": 125\n      },\n      \"kenpom\": {\n        \"rank\": 37,\n        \"team\": \"Texas\",\n        \"conf\": \"SEC\",\n        \"record\": \"18-14\",\n        \"adj_em\": 19.06,\n        \"adj_o\": 125,\n        \"adj_o_rank\": 13,\n        \"adj_d\": 106\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -1181,8 +1184,7 @@
             "ncsos_adj_em_rank": 320
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"byu\",\n      \"teamName\": \"BYU\",\n      \"torvik\": {\n        \"rank\": 33,\n        \"team\": \"BYU\",\n        \"conf\": \"B12\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.78766507254886,\n        \"oe Rank\": 16,\n        \"adjde\": 104.28867912262888,\n        \"de Rank\": 88\n      },\n      \"kenpom\": {\n        \"rank\": 23,\n        \"team\": \"BYU\",\n        \"conf\": \"B12\",\n        \"record\": \"23-11\",\n        \"adj_em\": 23.28,\n        \"adj_o\": 125.5,\n        \"adj_o_rank\": 10,\n        \"adj_d\": 102.3\n      }\n    },\n    {\n      \"teamId\": \"texas\",\n      \"teamName\": \"Texas\",\n      \"torvik\": {\n        \"rank\": 45,\n        \"team\": \"Texas\",\n        \"conf\": \"SEC\",\n        \"record\": \"18-14\",\n        \"adjoe\": 124.07462361953156,\n        \"oe Rank\": 21,\n        \"adjde\": 106.33467387240466,\n        \"de Rank\": 125\n      },\n      \"kenpom\": {\n        \"rank\": 37,\n        \"team\": \"Texas\",\n        \"conf\": \"SEC\",\n        \"record\": \"18-14\",\n        \"adj_em\": 19.06,\n        \"adj_o\": 125,\n        \"adj_o_rank\": 13,\n        \"adj_d\": 106\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-5-assistant-1",
@@ -1194,22 +1196,22 @@
       "id": "r64-west-5-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:48:55.912Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "BYU Texas NCAA tournament 2026 preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-5-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:48:56.518Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-5-assistant-2",
@@ -1221,20 +1223,20 @@
       "id": "r64-west-5-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:49:00.690Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "BYU vs Texas March Madness 2026 preview injury news",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-5-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:49:00.832Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-west-5-assistant-3",
@@ -1246,20 +1248,20 @@
       "id": "r64-west-5-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:49:05.923Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "BYU basketball injury March 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-5-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:49:06.066Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-west-5-assistant-4",
@@ -1271,20 +1273,20 @@
       "id": "r64-west-5-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:49:10.190Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Texas Longhorns basketball injury March 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-5-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:49:10.327Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-west-5-assistant-5",
@@ -1296,22 +1298,22 @@
       "id": "r64-west-5-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:49:20.055Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "BYU Texas 2025 2026 basketball game",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-5-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:49:20.772Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-5-assistant-6",
@@ -1323,16 +1325,17 @@
       "id": "r64-west-5-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:49:26.184Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "West"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-5-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:49:26.184Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"arizona\",\n      \"name\": \"Arizona\",\n      \"shortName\": \"ARIZ\",\n      \"seed\": 1,\n      \"region\": \"West\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"purdue\",\n      \"name\": \"Purdue\",\n      \"shortName\": \"PUR\",\n      \"seed\": 2,\n      \"region\": \"West\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"gonzaga\",\n      \"name\": \"Gonzaga\",\n      \"shortName\": \"GONZ\",\n      \"seed\": 3,\n      \"region\": \"West\",\n      \"conference\": \"WCC\"\n    },\n    {\n      \"id\": \"arkansas\",\n      \"name\": \"Arkansas\",\n      \"shortName\": \"ARK\",\n      \"seed\": 4,\n      \"region\": \"West\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1471,8 +1474,7 @@
           "region": "West",
           "conference": "SEC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"arizona\",\n      \"name\": \"Arizona\",\n      \"shortName\": \"ARIZ\",\n      \"seed\": 1,\n      \"region\": \"West\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"purdue\",\n      \"name\": \"Purdue\",\n      \"shortName\": \"PUR\",\n      \"seed\": 2,\n      \"region\": \"West\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"gonzaga\",\n      \"name\": \"Gonzaga\",\n      \"shortName\": \"GONZ\",\n      \"seed\": 3,\n      \"region\": \"West\",\n      \"conference\": \"WCC\"\n    },\n    {\n      \"id\": \"arkansas\",\n      \"name\": \"Arkansas\",\n      \"shortName\": \"ARK\",\n      \"seed\": 4,\n      \"region\": \"West\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-5-assistant-7",
@@ -1484,14 +1486,15 @@
       "id": "r64-west-5-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:49:28.763Z",
+      "content": "",
       "toolName": "list_teams",
-      "arguments": {},
-      "content": ""
+      "arguments": {}
     },
     {
       "id": "r64-west-5-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:49:28.763Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -2038,8 +2041,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-5-assistant-8",
@@ -2051,18 +2053,19 @@
       "id": "r64-west-5-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:49:56.086Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-west-5"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-5-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:49:56.086Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-5\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 6/11\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"byu\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"ff-west-11\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -2079,8 +2082,7 @@
             "gameId": "ff-west-11"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-5\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 6/11\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"byu\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"ff-west-11\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-5-assistant-9",
@@ -2092,22 +2094,22 @@
       "id": "r64-west-5-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:50:00.918Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "BYU Cougars 2026 NCAA tournament roster",
         "maxResults": 3
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-5-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:50:01.617Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-5-final-json",

@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "ff-south-16",
     "winnerId": "lehigh",
-    "confidence": "Medium",
+    "confidence": 0.68,
     "rationale": "Lehigh's slight edge in efficiency metrics, particularly on offense, gives them the advantage in this First Four matchup. The Mountain Hawks come from a marginally stronger Patriot League and have shown resilience in winning their conference tournament. While Prairie View A&M is capable, Lehigh's better offensive ranking should be the difference in a closely contested game."
   },
   "reasoningStep": {
     "id": "analysis-ff-south-16",
     "title": "Efficiency Analysis and Context Review",
     "summary": "Lehigh holds a small but consistent advantage in efficiency ratings over Prairie View A&M, with better offensive metrics and a slightly higher overall ranking. Both teams are healthy and coming off conference tournament wins, but Lehigh's performance in a marginally tougher league supports their selection.",
-    "evidence": "Torvik ranks: Lehigh 282, Prairie View A&M 292. KenPom adjusted efficiency margin: Lehigh -10.38, Prairie View A&M -11.1. Offensive ranking: Lehigh 290, Prairie View A&M 311. News articles confirm no significant injuries and first-ever meeting between the teams."
+    "evidence": [
+      "Torvik ranks: Lehigh 282, Prairie View A&M 292. KenPom adjusted efficiency margin: Lehigh -10.38, Prairie View A&M -11.1. Offensive ranking: Lehigh 290, Prairie View A&M 311. News articles confirm no significant injuries and first-ever meeting between the teams."
+    ]
   },
   "toolCalls": [
     {
@@ -457,19 +459,20 @@
       "id": "ff-south-16-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:27:42.991Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "lehigh",
           "prairie-view-a-m"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:27:42.997Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"lehigh\",\n      \"teamName\": \"Lehigh\",\n      \"torvik\": {\n        \"rank\": 282,\n        \"team\": \"Lehigh\",\n        \"conf\": \"Pat\",\n        \"record\": \"18-16\",\n        \"adjoe\": 102.53395697749907,\n        \"oe Rank\": 289,\n        \"adjde\": 112.74529325300304,\n        \"de Rank\": 262\n      },\n      \"kenpom\": {\n        \"rank\": 284,\n        \"team\": \"Lehigh\",\n        \"conf\": \"PL\",\n        \"record\": \"18-16\",\n        \"adj_em\": -10.38,\n        \"adj_o\": 102.8,\n        \"adj_o_rank\": 290,\n        \"adj_d\": 113.1\n      }\n    },\n    {\n      \"teamId\": \"prairie-view-a-m\",\n      \"teamName\": \"Prairie View A&M\",\n      \"torvik\": {\n        \"rank\": 292,\n        \"team\": \"Prairie View A&M\",\n        \"conf\": \"SWAC\",\n        \"record\": \"17-17\",\n        \"adjoe\": 101.04043265978908,\n        \"oe Rank\": 308,\n        \"adjde\": 111.89729828172364,\n        \"de Rank\": 238\n      },\n      \"kenpom\": {\n        \"rank\": 291,\n        \"team\": \"Prairie View A&M\",\n        \"conf\": \"SWAC\",\n        \"record\": \"17-17\",\n        \"adj_em\": -11.1,\n        \"adj_o\": 101.1,\n        \"adj_o_rank\": 311,\n        \"adj_d\": 112.2\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -620,8 +623,7 @@
             "ncsos_adj_em_rank": 23
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"lehigh\",\n      \"teamName\": \"Lehigh\",\n      \"torvik\": {\n        \"rank\": 282,\n        \"team\": \"Lehigh\",\n        \"conf\": \"Pat\",\n        \"record\": \"18-16\",\n        \"adjoe\": 102.53395697749907,\n        \"oe Rank\": 289,\n        \"adjde\": 112.74529325300304,\n        \"de Rank\": 262\n      },\n      \"kenpom\": {\n        \"rank\": 284,\n        \"team\": \"Lehigh\",\n        \"conf\": \"PL\",\n        \"record\": \"18-16\",\n        \"adj_em\": -10.38,\n        \"adj_o\": 102.8,\n        \"adj_o_rank\": 290,\n        \"adj_d\": 113.1\n      }\n    },\n    {\n      \"teamId\": \"prairie-view-a-m\",\n      \"teamName\": \"Prairie View A&M\",\n      \"torvik\": {\n        \"rank\": 292,\n        \"team\": \"Prairie View A&M\",\n        \"conf\": \"SWAC\",\n        \"record\": \"17-17\",\n        \"adjoe\": 101.04043265978908,\n        \"oe Rank\": 308,\n        \"adjde\": 111.89729828172364,\n        \"de Rank\": 238\n      },\n      \"kenpom\": {\n        \"rank\": 291,\n        \"team\": \"Prairie View A&M\",\n        \"conf\": \"SWAC\",\n        \"record\": \"17-17\",\n        \"adj_em\": -11.1,\n        \"adj_o\": 101.1,\n        \"adj_o_rank\": 311,\n        \"adj_d\": 112.2\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "ff-south-16-assistant-1",
@@ -633,20 +635,20 @@
       "id": "ff-south-16-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:27:52.056Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Lehigh basketball 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:27:52.191Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "ff-south-16-assistant-2",
@@ -658,17 +660,18 @@
       "id": "ff-south-16-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:27:56.298Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Lehigh Prairie View A&M NCAA tournament First Four 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:27:57.141Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"No. 16 Lehigh Readies For NCAA First Four Vs. No. 16 Prairie View A&M\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Flehighsports.com%2Fnews%2F2026%2F3%2F17%2Fmens%2Dbasketball%2Dno%2D16%2Dlehigh%2Dreadies%2Dfor%2Dncaa%2Dfirst%2Dfour%2Dvs%2Dno%2D16%2Dprairie%2Dview%2Dam&rut=a39145eeba2ea908316d6b734224ff438db0b07be4d8b52e67f53dbbc1693621\",\n      \"snippet\": \"BETHLEHEM, Pa. - No. 16 Lehigh men&#x27;s basketball returns to the big dance on Wednesday evening at 6:40 p.m. from UD Arena in Dayton, Ohio to take on No. 16 Prairie View A&M in the NCAA Tournament First Four . Wednesday&#x27;s game will be the first -ever meeting between Lehigh (18-16, 11-7 Patriot League ...\"\n    },\n    {\n      \"title\": \"Prairie View A&M to clash with Lehigh in NCAA First Four showdown - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fgeneral%2Fprairie%2Dview%2Da%2Dm%2Dto%2Dclash%2Dwith%2Dlehigh%2Din%2Dncaa%2Dfirst%2Dfour%2Dshowdown%2Far%2DAA1YGtNB&rut=9a202dbbfeac43ba9a7d6b81883a3557479a14b8b03f0fe530af5b0d75fcf0ad\",\n      \"snippet\": \"Prairie View A&M punched its NCAA Tournament ticket as SWAC champions, setting up a First Four clash with Lehigh in Dayton with No. 1 Florida looming.\"\n    },\n    {\n      \"title\": \"Longshots Lehigh, Prairie View A&M ready to shoot their shot in First Four\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Flongshots%2Dlehigh%2Dprairie%2Dview%2Da%2Dm%2Dready%2Dto%2Dshoot%2Dtheir%2Dshot%2Din%2Dfirst%2Dfour%2F&rut=e85038c502a47bd48908bdb4f1245ff54ae5641db24818ac074d96dc0afbb23d\",\n      \"snippet\": \"Prairie View A&M and Lehigh reached the NCAA Tournament , which begins when the Panthers and Mountain Hawks meet in the First Four in Dayton, Ohio, on Wednesday.\"\n    },\n    {\n      \"title\": \"Patriot League Champ Lehigh to Meet Prairie View A&M in NCAA Men&#x27;s ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpatriotleague.org%2Fnews%2F2026%2F3%2F16%2Fpatriot%2Dleague%2Dchamp%2Dlehigh%2Dto%2Dmeet%2Dprairie%2Dview%2Dam%2Din%2Dncaa%2Dmens%2Dbasketball%2Dtournament%2Dfirst%2Dfour%2D3%2D15%2D26.aspx&rut=78d2fc470e7fcf8c7649cf82d3ad4e6cfc9299f9a41d6fd0f93eb9e1112d5133\",\n      \"snippet\": \"BETHLEHEM, Pa. - Lehigh (18-16, 11-7 PL), the 2026 Patriot League Men&#x27;s Basketball Champion, received a No. 16 seed in the South Region of the NCAA Division I Men&#x27;s Basketball Championship when the bracket was unveiled Sunday. The Mountain Hawks will meet No. 16 Prairie View A&M (18-17, 9-9 SWAC) during the First Four in Dayton, Ohio on Wednesday.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -696,8 +699,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Ftx%2Fhouston%2Fnews%2F2026%2F03%2F16%2Fprairie%2Dview%2Da%2Dm%2Dto%2Dface%2Dlehigh%2Din%2Dncaa%2Dfirst%2Dfour%2Dshowdown%2F&rut=9dd4376c540cba6fc958e662810f1696cbaa2fb34a1292e25b2d12b7d718cc9f",
           "snippet": "Prairie View shot 50% from 3-point range in the title game. Prairie View A&M won the SWAC Tournament championship on March 14, 2026 . The NCAA First Four matchup between Prairie View A&M and Lehigh will take place on March 19, 2026 in Dayton, Ohio."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"No. 16 Lehigh Readies For NCAA First Four Vs. No. 16 Prairie View A&M\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Flehighsports.com%2Fnews%2F2026%2F3%2F17%2Fmens%2Dbasketball%2Dno%2D16%2Dlehigh%2Dreadies%2Dfor%2Dncaa%2Dfirst%2Dfour%2Dvs%2Dno%2D16%2Dprairie%2Dview%2Dam&rut=a39145eeba2ea908316d6b734224ff438db0b07be4d8b52e67f53dbbc1693621\",\n      \"snippet\": \"BETHLEHEM, Pa. - No. 16 Lehigh men&#x27;s basketball returns to the big dance on Wednesday evening at 6:40 p.m. from UD Arena in Dayton, Ohio to take on No. 16 Prairie View A&M in the NCAA Tournament First Four . Wednesday&#x27;s game will be the first -ever meeting between Lehigh (18-16, 11-7 Patriot League ...\"\n    },\n    {\n      \"title\": \"Prairie View A&M to clash with Lehigh in NCAA First Four showdown - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fgeneral%2Fprairie%2Dview%2Da%2Dm%2Dto%2Dclash%2Dwith%2Dlehigh%2Din%2Dncaa%2Dfirst%2Dfour%2Dshowdown%2Far%2DAA1YGtNB&rut=9a202dbbfeac43ba9a7d6b81883a3557479a14b8b03f0fe530af5b0d75fcf0ad\",\n      \"snippet\": \"Prairie View A&M punched its NCAA Tournament ticket as SWAC champions, setting up a First Four clash with Lehigh in Dayton with No. 1 Florida looming.\"\n    },\n    {\n      \"title\": \"Longshots Lehigh, Prairie View A&M ready to shoot their shot in First Four\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Flongshots%2Dlehigh%2Dprairie%2Dview%2Da%2Dm%2Dready%2Dto%2Dshoot%2Dtheir%2Dshot%2Din%2Dfirst%2Dfour%2F&rut=e85038c502a47bd48908bdb4f1245ff54ae5641db24818ac074d96dc0afbb23d\",\n      \"snippet\": \"Prairie View A&M and Lehigh reached the NCAA Tournament , which begins when the Panthers and Mountain Hawks meet in the First Four in Dayton, Ohio, on Wednesday.\"\n    },\n    {\n      \"title\": \"Patriot League Champ Lehigh to Meet Prairie View A&M in NCAA Men&#x27;s ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpatriotleague.org%2Fnews%2F2026%2F3%2F16%2Fpatriot%2Dleague%2Dchamp%2Dlehigh%2Dto%2Dmeet%2Dprairie%2Dview%2Dam%2Din%2Dncaa%2Dmens%2Dbasketball%2Dtournament%2Dfirst%2Dfour%2D3%2D15%2D26.aspx&rut=78d2fc470e7fcf8c7649cf82d3ad4e6cfc9299f9a41d6fd0f93eb9e1112d5133\",\n      \"snippet\": \"BETHLEHEM, Pa. - Lehigh (18-16, 11-7 PL), the 2026 Patriot League Men&#x27;s Basketball Champion, received a No. 16 seed in the South Region of the NCAA Division I Men&#x27;s Basketball Championship when the bracket was unveiled Sunday. The Mountain Hawks will meet No. 16 Prairie View A&M (18-17, 9-9 SWAC) during the First Four in Dayton, Ohio on Wednesday.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "ff-south-16-assistant-3",
@@ -709,23 +711,23 @@
       "id": "ff-south-16-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:28:02.759Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://lehighsports.com/news/2026/3/17/mens-basketball-no-16-lehigh-readies-for-ncaa-first-four-vs-no-16-prairie-view-am",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:28:03.660Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://lehighsports.com/news/2026/3/17/mens-basketball-no-16-lehigh-readies-for-ncaa-first-four-vs-no-16-prairie-view-am\",\n    \"text\": \"No. 16 Lehigh Readies For NCAA First Four Vs. No. 16 Prairie View A&M - Lehigh University Athletics Skip to main content Close Ad Skip Ad Toggle Navigation Search: Search Sports MEN&#39;S VARSITY Baseball Basketball Cross Country Football Golf Lacrosse Soccer Swimming and Diving Tennis Track and Field Wrestling MEN&#39;S CLUB VARSITY Ice Hockey Rowing WOMEN&#39;S VARSITY Basketball Cross Country Field Hockey Golf Lacrosse Rowing Soccer Softball Swimming and Diving Tennis Track and Field Volleyball Wrestling Skip Ad , Opens in new window Who We Are ATHLETICS Staff Directory Athletics Partnership Corporate Partners Compliance Youth Camps Walk On Tryouts Reports & Data Research Inquiries Facilities & Directions Employment News Archives RSS Contact Us LEARN. GROW. LEAD. Lehigh University Mission & Values Our Stories Student Athlete Resources Flight 45 Life After Lehigh Student Athlete Handbook NIL/Mountain Hawk Exchange Sports Medicine Sports Performance Sports Psychology Intellectual Development Inclusive Excellence & Belonging Awards & Recognitions ACT HISTORY & TRADITION The Rivalry Conference Championships Hall of Fame Fight Song Spirit Groups 50 Years of Women&#39;s Athletics Clut... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://lehighsports.com/news/2026/3/17/mens-basketball-no-16-lehigh-readies-for-ncaa-first-four-vs-no-16-prairie-view-am",
         "text": "No. 16 Lehigh Readies For NCAA First Four Vs. No. 16 Prairie View A&M - Lehigh University Athletics Skip to main content Close Ad Skip Ad Toggle Navigation Search: Search Sports MEN&#39;S VARSITY Baseball Basketball Cross Country Football Golf Lacrosse Soccer Swimming and Diving Tennis Track and Field Wrestling MEN&#39;S CLUB VARSITY Ice Hockey Rowing WOMEN&#39;S VARSITY Basketball Cross Country Field Hockey Golf Lacrosse Rowing Soccer Softball Swimming and Diving Tennis Track and Field Volleyball Wrestling Skip Ad , Opens in new window Who We Are ATHLETICS Staff Directory Athletics Partnership Corporate Partners Compliance Youth Camps Walk On Tryouts Reports & Data Research Inquiries Facilities & Directions Employment News Archives RSS Contact Us LEARN. GROW. LEAD. Lehigh University Mission & Values Our Stories Student Athlete Resources Flight 45 Life After Lehigh Student Athlete Handbook NIL/Mountain Hawk Exchange Sports Medicine Sports Performance Sports Psychology Intellectual Development Inclusive Excellence & Belonging Awards & Recognitions ACT HISTORY & TRADITION The Rivalry Conference Championships Hall of Fame Fight Song Spirit Groups 50 Years of Women&#39;s Athletics Clutch RECRUITING Recruiting Home Fill Out A Questionnaire Camps & Clinics Faculty Athletics Council Virtual Campus Tour Fan Zone GAME DAY Buy Tickets A-Z Guides Student Gameday Info Venues & Directions Group Opportunities Birthday Parties National Anthem Inquiry Composite Schedule MULTIMEDIA Patriot League on ESPN+ Social Media Directory 2024-25 Sports Annual Live Events Live Stats Photo Galleries Video Gallery Podcasts Patriot League Network Archives How to Watch ESPN+ MORE+ Online Store Hotel & Dining Partners Season Ticket Benefits Event Staff Jobs Contact Us Camps & Clinics NIL/Mountain Hawk Exchange Recreation PROGRAMS Recreation Home Club Sports Intramural Sports Fitness FACILITIES Taylor Gym Hours Facility Information Facility Reservations SUPPORT Make A Gift Skip Ad , Opens in new win"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://lehighsports.com/news/2026/3/17/mens-basketball-no-16-lehigh-readies-for-ncaa-first-four-vs-no-16-prairie-view-am\",\n    \"text\": \"No. 16 Lehigh Readies For NCAA First Four Vs. No. 16 Prairie View A&M - Lehigh University Athletics Skip to main content Close Ad Skip Ad Toggle Navigation Search: Search Sports MEN&#39;S VARSITY Baseball Basketball Cross Country Football Golf Lacrosse Soccer Swimming and Diving Tennis Track and Field Wrestling MEN&#39;S CLUB VARSITY Ice Hockey Rowing WOMEN&#39;S VARSITY Basketball Cross Country Field Hockey Golf Lacrosse Rowing Soccer Softball Swimming and Diving Tennis Track and Field Volleyball Wrestling Skip Ad , Opens in new window Who We Are ATHLETICS Staff Directory Athletics Partnership Corporate Partners Compliance Youth Camps Walk On Tryouts Reports & Data Research Inquiries Facilities & Directions Employment News Archives RSS Contact Us LEARN. GROW. LEAD. Lehigh University Mission & Values Our Stories Student Athlete Resources Flight 45 Life After Lehigh Student Athlete Handbook NIL/Mountain Hawk Exchange Sports Medicine Sports Performance Sports Psychology Intellectual Development Inclusive Excellence & Belonging Awards & Recognitions ACT HISTORY & TRADITION The Rivalry Conference Championships Hall of Fame Fight Song Spirit Groups 50 Years of Women&#39;s Athletics Clut... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "ff-south-16-assistant-4",
@@ -737,17 +739,18 @@
       "id": "ff-south-16-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:28:08.579Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Lehigh injury basketball March 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:28:09.873Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Lehigh Receives 16-Seed, Will Face Prairie View A&M In First Four\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Flehighsports.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dlehigh%2Dreceives%2D16%2Dseed%2Dwill%2Dface%2Dprairie%2Dview%2Dam%2Din%2Dfirst%2Dfour&rut=52338fc7e21017bed5d8e333115b4b933f4685ec798859f2b55690c1193654b7\",\n      \"snippet\": \"BETHLEHEM, Pa. - After winning their fourth Patriot League championship on Wednesday, Lehigh men&#x27;s basketball has received its seeding and opponent for the 2026 NCAA Tournament. The 16th-seeded Mountain Hawks will face the 16th-seeded Prairie View A&M Panthers in the First Four in Dayton, Ohio on Wednesday, March 18 at 6:40 p.m.\"\n    },\n    {\n      \"title\": \"2025-2026 NCAA BB Games: Terriers Mountain Hawks Injury Report -\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fterriers%2Dmountain%2Dhawks%2D2026%2D03%2D11%2Finjuries&rut=6e273e3c16538d2bf47c07325bf3b97766869d3a6ebefb8091f3f76248feb12a\",\n      \"snippet\": \"Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Boston U and Lehigh . Includes ats, over/under and straight up odds analysis.\"\n    },\n    {\n      \"title\": \"Lehigh vs. Boston University - March 11, 2026 - Bleacher Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Fboston%2Duniversity%2Dbasketball%2Dvs%2Dlehigh%2Dbasketball%2D2026%2D3%2D11%2D18%2D00&rut=5da2e5c72b20c57050cec94834f1a96949ae61477bf26f2a418d7bf182430280\",\n      \"snippet\": \"Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports, and betting odds, all in one place\"\n    },\n    {\n      \"title\": \"Prairie View to face Lehigh in First Four of March Madness 2026 ... - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fprairie%2Dview%2Dto%2Dface%2Dlehigh%2Din%2Dfirst%2Dfour%2Dof%2Dmarch%2Dmadness%2D2026%2Deverything%2Dyou%2Dneed%2Dto%2Dknow%2Far%2DAA1YHfFb&rut=cff5dc8f76c96354c7a3d187ea1031356e5787513e4f122a35c614b8e4879330\",\n      \"snippet\": \"Here&#x27;s all you need to know about Prairie View in the NCAA Tournament. Matchup The Panthers will play in the First Four, facing off against the Patriot League champions Lehigh on Wednesday in ...\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -775,8 +778,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fmatchup%2F376580&rut=10aa3b616673f30c796bc3cb71c17c358b6bf6cd92885222c69cce88c9f2999a",
           "snippet": "Get key insights for Boston University Terriers vs Lehigh Mountain Hawks on March 11, 2026 , including season records, injuries, and essential stats to help you make informed bets."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Lehigh Receives 16-Seed, Will Face Prairie View A&M In First Four\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Flehighsports.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dlehigh%2Dreceives%2D16%2Dseed%2Dwill%2Dface%2Dprairie%2Dview%2Dam%2Din%2Dfirst%2Dfour&rut=52338fc7e21017bed5d8e333115b4b933f4685ec798859f2b55690c1193654b7\",\n      \"snippet\": \"BETHLEHEM, Pa. - After winning their fourth Patriot League championship on Wednesday, Lehigh men&#x27;s basketball has received its seeding and opponent for the 2026 NCAA Tournament. The 16th-seeded Mountain Hawks will face the 16th-seeded Prairie View A&M Panthers in the First Four in Dayton, Ohio on Wednesday, March 18 at 6:40 p.m.\"\n    },\n    {\n      \"title\": \"2025-2026 NCAA BB Games: Terriers Mountain Hawks Injury Report -\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.teamrankings.com%2Fncaa%2Dbasketball%2Fmatchup%2Fterriers%2Dmountain%2Dhawks%2D2026%2D03%2D11%2Finjuries&rut=6e273e3c16538d2bf47c07325bf3b97766869d3a6ebefb8091f3f76248feb12a\",\n      \"snippet\": \"Betting analysis for the 2025- 2026 NCAA Basketball season matchup between Boston U and Lehigh . Includes ats, over/under and straight up odds analysis.\"\n    },\n    {\n      \"title\": \"Lehigh vs. Boston University - March 11, 2026 - Bleacher Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Fgame%2Fboston%2Duniversity%2Dbasketball%2Dvs%2Dlehigh%2Dbasketball%2D2026%2D3%2D11%2D18%2D00&rut=5da2e5c72b20c57050cec94834f1a96949ae61477bf26f2a418d7bf182430280\",\n      \"snippet\": \"Visit Bleacher Report for live scores of every game. Catch highlights, play-by-play breakdowns, stats, injury reports, and betting odds, all in one place\"\n    },\n    {\n      \"title\": \"Prairie View to face Lehigh in First Four of March Madness 2026 ... - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fprairie%2Dview%2Dto%2Dface%2Dlehigh%2Din%2Dfirst%2Dfour%2Dof%2Dmarch%2Dmadness%2D2026%2Deverything%2Dyou%2Dneed%2Dto%2Dknow%2Far%2DAA1YHfFb&rut=cff5dc8f76c96354c7a3d187ea1031356e5787513e4f122a35c614b8e4879330\",\n      \"snippet\": \"Here&#x27;s all you need to know about Prairie View in the NCAA Tournament. Matchup The Panthers will play in the First Four, facing off against the Patriot League champions Lehigh on Wednesday in ...\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "ff-south-16-assistant-5",
@@ -788,23 +790,23 @@
       "id": "ff-south-16-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:28:15.560Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.msn.com/en-us/sports/other/prairie-view-to-face-lehigh-in-first-four-of-march-madness-2026-everything-you-need-to-know/ar-AA1YHfFb",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:28:15.691Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.msn.com/en-us/sports/other/prairie-view-to-face-lehigh-in-first-four-of-march-madness-2026-everything-you-need-to-know/ar-AA1YHfFb\",\n    \"text\": \"MSN\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.msn.com/en-us/sports/other/prairie-view-to-face-lehigh-in-first-four-of-march-madness-2026-everything-you-need-to-know/ar-AA1YHfFb",
         "text": "MSN"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.msn.com/en-us/sports/other/prairie-view-to-face-lehigh-in-first-four-of-march-madness-2026-everything-you-need-to-know/ar-AA1YHfFb\",\n    \"text\": \"MSN\"\n  }\n}"
+      }
     },
     {
       "id": "ff-south-16-assistant-6",
@@ -816,17 +818,18 @@
       "id": "ff-south-16-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:28:22.132Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Patriot League SWAC conference rankings 2026 basketball",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:28:23.116Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Patriot League men&#x27;s basketball tournament - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_Patriot_League_men%2527s_basketball_tournament&rut=e32112be932647e59420cd407fd52c5493553b0314bf290ed23f514287b0cb28\",\n      \"snippet\": \"The 2026 Patriot League Men&#x27;s Basketball Tournament was the conference postseason tournament for the Patriot League . The tournament was held March 3-11, 2026 at campus sites of the higher seeds. [1] The winner, Lehigh, received the conference&#x27;s automatic bid to the NCAA Tournament.\"\n    },\n    {\n      \"title\": \"Conference Standings - 2026 Patriot League Men&#x27;s Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fconference%2FPatriot%2DLeague&rut=b8781dc162f4c564dbbb4f697059dbfe68056cca782bba5552483dac7de21d46\",\n      \"snippet\": \"Patriot League Conference Standings for Men&#x27;s College Basketball with division standings, games back, team NET, streaks, and conference NET\"\n    },\n    {\n      \"title\": \"2025-26 Men&#x27;s Basketball Standings - Patriot League\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpatriotleague.org%2Fstandings.aspx%3Fpath%3Dmbball&rut=3f66fdf275859cad42ad2b4a7b8d16b9751a54680a4698663105744003b6baed\",\n      \"snippet\": \"Basketball Specific Tiebreaker: a. NCAA Men&#x27;s Basketball NET Rankings (NCAA.com) published on the day (or the next day that a report is available, if warranted) following the final regular-season League game to determine the higher-seeded team.\"\n    },\n    {\n      \"title\": \"2025-26 Men&#x27;s Basketball Standings - Southwestern Athletic Conference\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fswac.org%2Fstandings.aspx%3Fstandings%3D88&rut=1165d825e0e631928b87cce41c5acf5c0c36c7162582fa01fd6580bbc2620b8d\",\n      \"snippet\": \"The official 2025-26 Men&#x27;s Basketball Standings for Southwestern Athletic Conference\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -854,8 +857,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fcollege%2Dbasketball%2Fpatriot%2Fstandings&rut=2653f700bf746820bcec46b360bdc00fdaaa727249b0ac6f390b70738c71f312",
           "snippet": "Patriot League NCAA men&#x27;s college basketball conference Conference standings and conference rankings ."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Patriot League men&#x27;s basketball tournament - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2026_Patriot_League_men%2527s_basketball_tournament&rut=e32112be932647e59420cd407fd52c5493553b0314bf290ed23f514287b0cb28\",\n      \"snippet\": \"The 2026 Patriot League Men&#x27;s Basketball Tournament was the conference postseason tournament for the Patriot League . The tournament was held March 3-11, 2026 at campus sites of the higher seeds. [1] The winner, Lehigh, received the conference&#x27;s automatic bid to the NCAA Tournament.\"\n    },\n    {\n      \"title\": \"Conference Standings - 2026 Patriot League Men&#x27;s Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fconference%2FPatriot%2DLeague&rut=b8781dc162f4c564dbbb4f697059dbfe68056cca782bba5552483dac7de21d46\",\n      \"snippet\": \"Patriot League Conference Standings for Men&#x27;s College Basketball with division standings, games back, team NET, streaks, and conference NET\"\n    },\n    {\n      \"title\": \"2025-26 Men&#x27;s Basketball Standings - Patriot League\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpatriotleague.org%2Fstandings.aspx%3Fpath%3Dmbball&rut=3f66fdf275859cad42ad2b4a7b8d16b9751a54680a4698663105744003b6baed\",\n      \"snippet\": \"Basketball Specific Tiebreaker: a. NCAA Men&#x27;s Basketball NET Rankings (NCAA.com) published on the day (or the next day that a report is available, if warranted) following the final regular-season League game to determine the higher-seeded team.\"\n    },\n    {\n      \"title\": \"2025-26 Men&#x27;s Basketball Standings - Southwestern Athletic Conference\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fswac.org%2Fstandings.aspx%3Fstandings%3D88&rut=1165d825e0e631928b87cce41c5acf5c0c36c7162582fa01fd6580bbc2620b8d\",\n      \"snippet\": \"The official 2025-26 Men&#x27;s Basketball Standings for Southwestern Athletic Conference\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "ff-south-16-assistant-7",
@@ -867,17 +869,18 @@
       "id": "ff-south-16-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:28:30.075Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Prairie View A&M basketball strengths 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:28:31.266Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025-26 Prairie View A&M Panthers Men&#x27;s Roster and Stats | College ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fprairie%2Dview%2Fmen%2F2026.html&rut=66edfb136f037a95a1b49cc5f4ed02f3713bebed74eb74ed1032dd7694d08e65\",\n      \"snippet\": \"Check out the detailed 2025-26 Prairie View A&M Panthers Roster and Stats for College Basketball at Sports-Reference.com\"\n    },\n    {\n      \"title\": \"Prairie View A&M Panthers RPI Team Sheet 2026 Men&#x27;s Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fteam%2Dsheet%3Fteam%3DPrairie%2DView%2DAM&rut=9ac4da995c3ea752908704ffa0bfa8202680162476c813945303a35d6dcdf4a8\",\n      \"snippet\": \"The 2026 NCAA Men&#x27;s Basketball Tournament Selection Committee Team Sheet for Prairie View A&M Panthers with RPI, Strength of Schedule, Quadrant Records, and Every Game Result Ordered by RPI\"\n    },\n    {\n      \"title\": \"Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dprairie%2Dview%2Da%2Dm%2Dpanthers%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=194a25631fe30221b745a347f3d51425987c228fcdaafac6d2339a713787d874\",\n      \"snippet\": \"Prairie View A&M earned a No. 16 seed at the NCAA Tournament. In terms of seed strength , the Tournament Index grades the Quakers as the second-weakest No. 16 seed compared to the last 12 tournament fields. For Prairie View A&M , the TI projects an average of 0.04 wins (if it gets out of Dayton) given its seed and team strength .\"\n    },\n    {\n      \"title\": \"2025-26 Prairie View A&M Panthers basketball team - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025%25E2%2580%259326_Prairie_View_A%2526M_Panthers_basketball_team&rut=b9bf9a5915c7a9655b5f77b2ea59c668e2c2520810ede5e47d8ab8a96fc43bb2\",\n      \"snippet\": \"The 2025-26 Prairie View A&M Panthers basketball team represents Prairie View A&M University during the 2025-26 NCAA Division I men&#x27;s basketball season. The Panthers, led by tenth-year head coach Byron Smith, played their home games at the William Nicks Building in Prairie View , Texas as members of the Southwestern Athletic Conference.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -905,8 +908,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fpvpanthers.com%2Fsports%2Fmens%2Dbasketball&rut=2afc58c3942b651821b510b9c92387cbcfc94a917f1e642bf819ab25642afe16",
           "snippet": "The official Men&#x27;s Basketball page for the Prairie View A&M University Panthers"
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025-26 Prairie View A&M Panthers Men&#x27;s Roster and Stats | College ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fprairie%2Dview%2Fmen%2F2026.html&rut=66edfb136f037a95a1b49cc5f4ed02f3713bebed74eb74ed1032dd7694d08e65\",\n      \"snippet\": \"Check out the detailed 2025-26 Prairie View A&M Panthers Roster and Stats for College Basketball at Sports-Reference.com\"\n    },\n    {\n      \"title\": \"Prairie View A&M Panthers RPI Team Sheet 2026 Men&#x27;s Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fteam%2Dsheet%3Fteam%3DPrairie%2DView%2DAM&rut=9ac4da995c3ea752908704ffa0bfa8202680162476c813945303a35d6dcdf4a8\",\n      \"snippet\": \"The 2026 NCAA Men&#x27;s Basketball Tournament Selection Committee Team Sheet for Prairie View A&M Panthers with RPI, Strength of Schedule, Quadrant Records, and Every Game Result Ordered by RPI\"\n    },\n    {\n      \"title\": \"Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dprairie%2Dview%2Da%2Dm%2Dpanthers%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=194a25631fe30221b745a347f3d51425987c228fcdaafac6d2339a713787d874\",\n      \"snippet\": \"Prairie View A&M earned a No. 16 seed at the NCAA Tournament. In terms of seed strength , the Tournament Index grades the Quakers as the second-weakest No. 16 seed compared to the last 12 tournament fields. For Prairie View A&M , the TI projects an average of 0.04 wins (if it gets out of Dayton) given its seed and team strength .\"\n    },\n    {\n      \"title\": \"2025-26 Prairie View A&M Panthers basketball team - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025%25E2%2580%259326_Prairie_View_A%2526M_Panthers_basketball_team&rut=b9bf9a5915c7a9655b5f77b2ea59c668e2c2520810ede5e47d8ab8a96fc43bb2\",\n      \"snippet\": \"The 2025-26 Prairie View A&M Panthers basketball team represents Prairie View A&M University during the 2025-26 NCAA Division I men&#x27;s basketball season. The Panthers, led by tenth-year head coach Byron Smith, played their home games at the William Nicks Building in Prairie View , Texas as members of the Southwestern Athletic Conference.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "ff-south-16-assistant-8",
@@ -918,23 +920,23 @@
       "id": "ff-south-16-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:28:38.079Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.basketunderreview.com/ticket-punched-previewing-the-prairie-view-a-m-panthers-for-the-2026-ncaa-tournament/",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:28:38.194Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.basketunderreview.com/ticket-punched-previewing-the-prairie-view-a-m-panthers-for-the-2026-ncaa-tournament/\",\n    \"text\": \"Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 NCAA Tournament Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Search Sign Up Sign Up Create Your Account Get access to exclusive features and stay updated. Sign Up Sign Up Already have an account? Log In Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Become a member Become a member Home Articles & Editorials Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 NCAA Tournament Articles & Editorials Articles & Editorials Bracketology Bracketology Free Content Free Content Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 NCAA Tournament Featured Mar 16, 2026 by 3MW_CBB The Panthers of Prairie View are back in March, snapping a 7-year hiatus from the NCAA Tournament. It wasn't so long ago head coach Byron Smith was feared as a perennial SWAC contender. Lately, however, this once proud program mysteriously got lost in the wilderness. Akin to his program resurrection back in 2019, Smith course corrected the Panthers again this year and maneuvered Prai... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.basketunderreview.com/ticket-punched-previewing-the-prairie-view-a-m-panthers-for-the-2026-ncaa-tournament/",
         "text": "Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 NCAA Tournament Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Search Sign Up Sign Up Create Your Account Get access to exclusive features and stay updated. Sign Up Sign Up Already have an account? Log In Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Become a member Become a member Home Articles & Editorials Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 NCAA Tournament Articles & Editorials Articles & Editorials Bracketology Bracketology Free Content Free Content Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 NCAA Tournament Featured Mar 16, 2026 by 3MW_CBB The Panthers of Prairie View are back in March, snapping a 7-year hiatus from the NCAA Tournament. It wasn't so long ago head coach Byron Smith was feared as a perennial SWAC contender. Lately, however, this once proud program mysteriously got lost in the wilderness. Akin to his program resurrection back in 2019, Smith course corrected the Panthers again this year and maneuvered Prairie View to an improbable four-game run in the SWAC Championship. He leaned heavily on his ironman backcourt, Dontae Horn and Lance Williams, who clocked 155 of a possible 160 total minutes. Restoring a Lost Luster Bryon Smith was the toast of the SWAC before the COVID dark ages. He inherited one of the worst programs in the league in 2017. Five years later his Panthers were 66-19 in the SWAC, culminating in a flawless 13-0 campaign in 2020-21. A blowout loss in the 2021 SWAC Championship game to nearby rival Texas Southern would be the closest Smith would sniff the dance. From 2022 through 2025, this program was stuck in reverse. A combination of an eroding talent supply, failed JUCO recruits, and numerous injuries turned the Panthers back into a pumpkin. The difference this year is roste"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.basketunderreview.com/ticket-punched-previewing-the-prairie-view-a-m-panthers-for-the-2026-ncaa-tournament/\",\n    \"text\": \"Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 NCAA Tournament Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Search Sign Up Sign Up Create Your Account Get access to exclusive features and stay updated. Sign Up Sign Up Already have an account? Log In Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Become a member Become a member Home Articles & Editorials Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 NCAA Tournament Articles & Editorials Articles & Editorials Bracketology Bracketology Free Content Free Content Ticket Punched: Previewing the Prairie View A&M Panthers For the 2026 NCAA Tournament Featured Mar 16, 2026 by 3MW_CBB The Panthers of Prairie View are back in March, snapping a 7-year hiatus from the NCAA Tournament. It wasn't so long ago head coach Byron Smith was feared as a perennial SWAC contender. Lately, however, this once proud program mysteriously got lost in the wilderness. Akin to his program resurrection back in 2019, Smith course corrected the Panthers again this year and maneuvered Prai... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "ff-south-16-assistant-9",
@@ -946,17 +948,18 @@
       "id": "ff-south-16-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:28:42.842Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Lehigh 2026 NCAA tournament preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "ff-south-16-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:28:43.617Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"NCAA Men&#x27;s Basketball Tournament First Four Preview: No. 16 Lehigh ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpatriotleague.org%2Fnews%2F2026%2F3%2F17%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dfirst%2Dfour%2Dpreview%2Dno%2D16%2Dlehigh%2Dmeets%2Dno%2D16%2Dprairie%2Dview%2Dam%2D3%2D17%2D26.aspx&rut=f38215b82794f77a3f95fc75fa22cb03e896e78a2c69fd7eb1002861f95b54dd\",\n      \"snippet\": \"DAYTON, Ohio - No. 16 Lehigh (18-16, 11-7 PL), the 2026 Patriot League Men&#x27;s Basketball Champion, will face the SWAC Champion No. 16 Prairie View A&M (18-17, 9-9 SWAC) Wednesday during the First Four at the University of Dayton&#x27;s UD Arena.\"\n    },\n    {\n      \"title\": \"Lehigh vs Prairie View A&M Prediction and Preview: NCAA Tournament ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2Flehigh%2Dvs%2Dprairie%2Dview%2Dam%2Dprediction%2Dpreview%2Dncaa%2Dtournament%2Dfirst%2Dfour&rut=193f883be860ffc4ab287c16682a048bf6c0cc9bf00fb8d42e85556174f01d9d\",\n      \"snippet\": \"Lehigh and Prairie View A&M might be near the bottom of the 68-team field, but they&#x27;re fun, and they&#x27;ll put on a show. Here&#x27;s the CFN First Four preview and prediction.\"\n    },\n    {\n      \"title\": \"Prairie View A&M vs. Lehigh: NCAA Tournament Predictions & Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fprairie%2Dview%2Dam%2Dvs%2Dlehigh%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=f86b1028c7ada5a5aeb23623f867ed8ea0bf78a8296bc280a0ea3d60d18e5f6a\",\n      \"snippet\": \"2026 NCAA Tournament Predictions & Preview : Prairie View A&M vs. Lehigh Here are the odds for this opening-round matchup of the 2026 NCAA Tournament . Let&#x27;s dive into our preview and predictions for this NCAA Tournament matchup.\"\n    },\n    {\n      \"title\": \"Mar 18, 2026 - Prairie View A&M at Lehigh - RealGM NCAA Game Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbasketball.realgm.com%2Fncaa%2Fpreview%2F2026%2D03%2D18%2FPrairie%2DView%2DAM%2Dat%2DLehigh%2F521842&rut=c27d3390bce690af756773384774ba5b893a240bc66cefa36cef867faff29884\",\n      \"snippet\": \"3/18/ 2026 Lehigh v. Prairie View A&M Game Preview Prairie View A&M Panthers (18-17, 7-14 away) Lehigh Mountain Hawks (18-16, 13-5 home) March 18, 2026 at 6:40 PM ET NCAA Tournament UD Arena Dayton ...\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -984,8 +987,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fhbcusports.com%2F2026%2F03%2F16%2Fncaa%2Dtournament%2Dfirst%2Dfour%2Dpreview%2Dprairie%2Dview%2Dam%2Dvs%2Dlehigh%2F&rut=ab17e2ff72282700f7c2dd847e79a9ebc1d390e573a3c226d25b7bfa1eeff23c",
           "snippet": "After wrapping up their first SWAC championship since 2019, Prairie View has its sights set on a date in the First Four round of the NCAA Tournament ."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"NCAA Men&#x27;s Basketball Tournament First Four Preview: No. 16 Lehigh ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpatriotleague.org%2Fnews%2F2026%2F3%2F17%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dfirst%2Dfour%2Dpreview%2Dno%2D16%2Dlehigh%2Dmeets%2Dno%2D16%2Dprairie%2Dview%2Dam%2D3%2D17%2D26.aspx&rut=f38215b82794f77a3f95fc75fa22cb03e896e78a2c69fd7eb1002861f95b54dd\",\n      \"snippet\": \"DAYTON, Ohio - No. 16 Lehigh (18-16, 11-7 PL), the 2026 Patriot League Men&#x27;s Basketball Champion, will face the SWAC Champion No. 16 Prairie View A&M (18-17, 9-9 SWAC) Wednesday during the First Four at the University of Dayton&#x27;s UD Arena.\"\n    },\n    {\n      \"title\": \"Lehigh vs Prairie View A&M Prediction and Preview: NCAA Tournament ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2Flehigh%2Dvs%2Dprairie%2Dview%2Dam%2Dprediction%2Dpreview%2Dncaa%2Dtournament%2Dfirst%2Dfour&rut=193f883be860ffc4ab287c16682a048bf6c0cc9bf00fb8d42e85556174f01d9d\",\n      \"snippet\": \"Lehigh and Prairie View A&M might be near the bottom of the 68-team field, but they&#x27;re fun, and they&#x27;ll put on a show. Here&#x27;s the CFN First Four preview and prediction.\"\n    },\n    {\n      \"title\": \"Prairie View A&M vs. Lehigh: NCAA Tournament Predictions & Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fprairie%2Dview%2Dam%2Dvs%2Dlehigh%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=f86b1028c7ada5a5aeb23623f867ed8ea0bf78a8296bc280a0ea3d60d18e5f6a\",\n      \"snippet\": \"2026 NCAA Tournament Predictions & Preview : Prairie View A&M vs. Lehigh Here are the odds for this opening-round matchup of the 2026 NCAA Tournament . Let&#x27;s dive into our preview and predictions for this NCAA Tournament matchup.\"\n    },\n    {\n      \"title\": \"Mar 18, 2026 - Prairie View A&M at Lehigh - RealGM NCAA Game Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbasketball.realgm.com%2Fncaa%2Fpreview%2F2026%2D03%2D18%2FPrairie%2DView%2DAM%2Dat%2DLehigh%2F521842&rut=c27d3390bce690af756773384774ba5b893a240bc66cefa36cef867faff29884\",\n      \"snippet\": \"3/18/ 2026 Lehigh v. Prairie View A&M Game Preview Prairie View A&M Panthers (18-17, 7-14 away) Lehigh Mountain Hawks (18-16, 13-5 home) March 18, 2026 at 6:40 PM ET NCAA Tournament UD Arena Dayton ...\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "ff-south-16-final-json",

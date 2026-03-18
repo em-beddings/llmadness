@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-midwest-2",
     "winnerId": "georgia",
-    "confidence": "Medium",
+    "confidence": 0.68,
     "rationale": "Georgia's elite top-15 offense, built against rigorous SEC competition, provides a slight advantage over Saint Louis's solid but less potent attack. The Bulldogs' high-major experience and ability to score against quality defenses should outweigh their defensive deficiencies, while Saint Louis's impressive record was compiled against weaker A10 opposition. In a typical toss-up 8/9 game, Georgia's offensive firepower and tougher schedule give them the edge."
   },
   "reasoningStep": {
     "id": "midwest-8-9-analysis",
     "title": "Georgia's Elite Offense vs. Saint Louis's Balanced Profile",
     "summary": "Georgia's top-20 offense gives them a slight edge over Saint Louis's solid but less potent attack, while the Bulldogs' SEC-tested resilience should help in a tight contest.",
-    "evidence": "Torvik and KenPom ratings show Georgia ranked 31st/37th overall with an elite offense (15th/18th) but weaker defense (93rd). Saint Louis ranks 41st/44th with a balanced profile (offense 45th/51st, defense 56th). Georgia's adjusted efficiency margin (+20.47) exceeds Saint Louis's (+18.32), and the Bulldogs faced a stronger SEC schedule."
+    "evidence": [
+      "Torvik and KenPom ratings show Georgia ranked 31st/37th overall with an elite offense (15th/18th) but weaker defense (93rd). Saint Louis ranks 41st/44th with a balanced profile (offense 45th/51st, defense 56th). Georgia's adjusted efficiency margin (+20.47) exceeds Saint Louis's (+18.32), and the Bulldogs faced a stronger SEC schedule."
+    ]
   },
   "toolCalls": [
     {
@@ -1167,19 +1169,20 @@
       "id": "r64-midwest-2-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:10:32.698Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "georgia",
           "saint-louis"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-2-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:10:32.708Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"georgia\",\n      \"teamName\": \"Georgia\",\n      \"torvik\": {\n        \"rank\": 37,\n        \"team\": \"Georgia\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-10\",\n        \"adjoe\": 124.27773559517624,\n        \"oe Rank\": 18,\n        \"adjde\": 104.71081838579089,\n        \"de Rank\": 93\n      },\n      \"kenpom\": {\n        \"rank\": 31,\n        \"team\": \"Georgia\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-10\",\n        \"adj_em\": 20.47,\n        \"adj_o\": 124.7,\n        \"adj_o_rank\": 15,\n        \"adj_d\": 104.2\n      }\n    },\n    {\n      \"teamId\": \"saint-louis\",\n      \"teamName\": \"Saint Louis\",\n      \"torvik\": {\n        \"rank\": 44,\n        \"team\": \"Saint Louis\",\n        \"conf\": \"A10\",\n        \"record\": \"28-5\",\n        \"adjoe\": 119.52753533172172,\n        \"oe Rank\": 45,\n        \"adjde\": 102.15070438074906,\n        \"de Rank\": 56\n      },\n      \"kenpom\": {\n        \"rank\": 41,\n        \"team\": \"Saint Louis\",\n        \"conf\": \"A10\",\n        \"record\": \"28-5\",\n        \"adj_em\": 18.32,\n        \"adj_o\": 119.5,\n        \"adj_o_rank\": 51,\n        \"adj_d\": 101.2\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -1330,8 +1333,7 @@
             "ncsos_adj_em_rank": 316
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"georgia\",\n      \"teamName\": \"Georgia\",\n      \"torvik\": {\n        \"rank\": 37,\n        \"team\": \"Georgia\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-10\",\n        \"adjoe\": 124.27773559517624,\n        \"oe Rank\": 18,\n        \"adjde\": 104.71081838579089,\n        \"de Rank\": 93\n      },\n      \"kenpom\": {\n        \"rank\": 31,\n        \"team\": \"Georgia\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-10\",\n        \"adj_em\": 20.47,\n        \"adj_o\": 124.7,\n        \"adj_o_rank\": 15,\n        \"adj_d\": 104.2\n      }\n    },\n    {\n      \"teamId\": \"saint-louis\",\n      \"teamName\": \"Saint Louis\",\n      \"torvik\": {\n        \"rank\": 44,\n        \"team\": \"Saint Louis\",\n        \"conf\": \"A10\",\n        \"record\": \"28-5\",\n        \"adjoe\": 119.52753533172172,\n        \"oe Rank\": 45,\n        \"adjde\": 102.15070438074906,\n        \"de Rank\": 56\n      },\n      \"kenpom\": {\n        \"rank\": 41,\n        \"team\": \"Saint Louis\",\n        \"conf\": \"A10\",\n        \"record\": \"28-5\",\n        \"adj_em\": 18.32,\n        \"adj_o\": 119.5,\n        \"adj_o_rank\": 51,\n        \"adj_d\": 101.2\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-2-assistant-1",
@@ -1343,22 +1345,22 @@
       "id": "r64-midwest-2-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:10:41.390Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Georgia Saint Louis NCAA tournament 2026 preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-2-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:10:42.118Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-2-assistant-2",
@@ -1370,22 +1372,22 @@
       "id": "r64-midwest-2-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:10:46.622Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Georgia vs Saint Louis March Madness 2026 preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-2-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:10:47.340Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-2-assistant-3",
@@ -1397,22 +1399,22 @@
       "id": "r64-midwest-2-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:10:52.559Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Georgia basketball injury March 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-2-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:10:53.194Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-2-assistant-4",
@@ -1424,16 +1426,17 @@
       "id": "r64-midwest-2-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:10:58.429Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "Midwest"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-2-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:10:58.429Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"michigan\",\n      \"name\": \"Michigan\",\n      \"shortName\": \"MICH\",\n      \"seed\": 1,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"iowa-state\",\n      \"name\": \"Iowa State\",\n      \"shortName\": \"ISU\",\n      \"seed\": 2,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"virginia\",\n      \"name\": \"Virginia\",\n      \"shortName\": \"UVA\",\n      \"seed\": 3,\n      \"region\": \"Midwest\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"alabama\",\n      \"name\": \"Alabama\",\n      \"shortName\": \"BAMA\",\n      \"seed\": 4,\n      \"region\": \"Midwest\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1580,8 +1583,7 @@
           "region": "Midwest",
           "conference": "America East"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"michigan\",\n      \"name\": \"Michigan\",\n      \"shortName\": \"MICH\",\n      \"seed\": 1,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"iowa-state\",\n      \"name\": \"Iowa State\",\n      \"shortName\": \"ISU\",\n      \"seed\": 2,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"virginia\",\n      \"name\": \"Virginia\",\n      \"shortName\": \"UVA\",\n      \"seed\": 3,\n      \"region\": \"Midwest\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"alabama\",\n      \"name\": \"Alabama\",\n      \"shortName\": \"BAMA\",\n      \"seed\": 4,\n      \"region\": \"Midwest\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-2-assistant-5",
@@ -1593,14 +1595,15 @@
       "id": "r64-midwest-2-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:11:02.188Z",
+      "content": "",
       "toolName": "list_teams",
-      "arguments": {},
-      "content": ""
+      "arguments": {}
     },
     {
       "id": "r64-midwest-2-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:11:02.188Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -2147,8 +2150,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-2-assistant-6",
@@ -2160,22 +2162,22 @@
       "id": "r64-midwest-2-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:11:14.169Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "\"Georgia\" \"Saint Louis\" NCAA tournament preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-2-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:11:14.784Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-2-assistant-7",
@@ -2187,18 +2189,19 @@
       "id": "r64-midwest-2-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:11:36.128Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-midwest-2"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-2-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:11:36.129Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-2\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 8/9\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"georgia\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"saint-louis\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -2215,8 +2218,7 @@
             "teamId": "saint-louis"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-2\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 8/9\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"georgia\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"saint-louis\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-2-assistant-8",
@@ -2228,19 +2230,20 @@
       "id": "r64-midwest-2-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:11:39.665Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "georgia",
           "saint-louis"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-2-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:11:39.675Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"georgia\",\n      \"teamName\": \"Georgia\",\n      \"torvik\": {\n        \"rank\": 37,\n        \"team\": \"Georgia\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-10\",\n        \"adjoe\": 124.27773559517624,\n        \"oe Rank\": 18,\n        \"adjde\": 104.71081838579089,\n        \"de Rank\": 93\n      },\n      \"kenpom\": {\n        \"rank\": 31,\n        \"team\": \"Georgia\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-10\",\n        \"adj_em\": 20.47,\n        \"adj_o\": 124.7,\n        \"adj_o_rank\": 15,\n        \"adj_d\": 104.2\n      }\n    },\n    {\n      \"teamId\": \"saint-louis\",\n      \"teamName\": \"Saint Louis\",\n      \"torvik\": {\n        \"rank\": 44,\n        \"team\": \"Saint Louis\",\n        \"conf\": \"A10\",\n        \"record\": \"28-5\",\n        \"adjoe\": 119.52753533172172,\n        \"oe Rank\": 45,\n        \"adjde\": 102.15070438074906,\n        \"de Rank\": 56\n      },\n      \"kenpom\": {\n        \"rank\": 41,\n        \"team\": \"Saint Louis\",\n        \"conf\": \"A10\",\n        \"record\": \"28-5\",\n        \"adj_em\": 18.32,\n        \"adj_o\": 119.5,\n        \"adj_o_rank\": 51,\n        \"adj_d\": 101.2\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -2391,8 +2394,7 @@
             "ncsos_adj_em_rank": 316
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"georgia\",\n      \"teamName\": \"Georgia\",\n      \"torvik\": {\n        \"rank\": 37,\n        \"team\": \"Georgia\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-10\",\n        \"adjoe\": 124.27773559517624,\n        \"oe Rank\": 18,\n        \"adjde\": 104.71081838579089,\n        \"de Rank\": 93\n      },\n      \"kenpom\": {\n        \"rank\": 31,\n        \"team\": \"Georgia\",\n        \"conf\": \"SEC\",\n        \"record\": \"22-10\",\n        \"adj_em\": 20.47,\n        \"adj_o\": 124.7,\n        \"adj_o_rank\": 15,\n        \"adj_d\": 104.2\n      }\n    },\n    {\n      \"teamId\": \"saint-louis\",\n      \"teamName\": \"Saint Louis\",\n      \"torvik\": {\n        \"rank\": 44,\n        \"team\": \"Saint Louis\",\n        \"conf\": \"A10\",\n        \"record\": \"28-5\",\n        \"adjoe\": 119.52753533172172,\n        \"oe Rank\": 45,\n        \"adjde\": 102.15070438074906,\n        \"de Rank\": 56\n      },\n      \"kenpom\": {\n        \"rank\": 41,\n        \"team\": \"Saint Louis\",\n        \"conf\": \"A10\",\n        \"record\": \"28-5\",\n        \"adj_em\": 18.32,\n        \"adj_o\": 119.5,\n        \"adj_o_rank\": 51,\n        \"adj_d\": 101.2\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-2-assistant-final-9",

@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-south-6",
     "winnerId": "illinois",
-    "confidence": "Very High",
+    "confidence": 0.93,
     "rationale": "Illinois boasts the nation's top-ranked offense and a top-25 defense, creating an overwhelming mismatch against a Penn squad that ranks outside the top 150 in efficiency metrics. The Fighting Illini's high-major talent and experience from the rigorous Big Ten schedule provide a level of competition that the Ivy League champion has not consistently faced. While 14-seed upsets occasionally happen, the vast disparity in team quality and Illinois's elite offensive firepower make a credible path to victory for Penn highly unlikely."
   },
   "reasoningStep": {
     "id": "analysis-illinois-penn",
     "title": "Efficiency Mismatch Analysis",
     "summary": "Illinois's elite top-ranked offense and strong defense create overwhelming advantage over Penn's mediocre ratings.",
-    "evidence": "Torvik ratings: Illinois rank 6 (adjoe rank 2, adjde rank 24); Penn rank 153 (adjoe rank 226, adjde rank 103). KenPom ratings: Illinois rank 7 (adj_o rank 1, adj_d rank ~top 30); Penn rank 159 (adj_o rank 215, adj_d rank ~200). Illinois's 24-8 record vs. Penn's 17-11 record."
+    "evidence": [
+      "Torvik ratings: Illinois rank 6 (adjoe rank 2, adjde rank 24); Penn rank 153 (adjoe rank 226, adjde rank 103). KenPom ratings: Illinois rank 7 (adj_o rank 1, adj_d rank ~top 30); Penn rank 159 (adj_o rank 215, adj_d rank ~200). Illinois's 24-8 record vs. Penn's 17-11 record."
+    ]
   },
   "toolCalls": [
     {
@@ -438,19 +440,20 @@
       "id": "r64-south-6-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:04:33.622Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "illinois",
           "penn"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-6-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:04:33.628Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"illinois\",\n      \"teamName\": \"Illinois\",\n      \"torvik\": {\n        \"rank\": 6,\n        \"team\": \"Illinois\",\n        \"conf\": \"B10\",\n        \"record\": \"24-8\",\n        \"adjoe\": 131.9558297057279,\n        \"oe Rank\": 2,\n        \"adjde\": 98.14121578057112,\n        \"de Rank\": 24\n      },\n      \"kenpom\": {\n        \"rank\": 7,\n        \"team\": \"Illinois\",\n        \"conf\": \"B10\",\n        \"record\": \"24-8\",\n        \"adj_em\": 32.14,\n        \"adj_o\": 131.2,\n        \"adj_o_rank\": 1,\n        \"adj_d\": 99.1\n      }\n    },\n    {\n      \"teamId\": \"penn\",\n      \"teamName\": \"Penn\",\n      \"torvik\": {\n        \"rank\": 153,\n        \"team\": \"Penn\",\n        \"conf\": \"Ivy\",\n        \"record\": \"17-11\",\n        \"adjoe\": 106.01532910915247,\n        \"oe Rank\": 226,\n        \"adjde\": 105.23467739306388,\n        \"de Rank\": 103\n      },\n      \"kenpom\": {\n        \"rank\": 159,\n        \"team\": \"Penn\",\n        \"conf\": \"Ivy\",\n        \"record\": \"17-11\",\n        \"adj_em\": 0.8,\n        \"adj_o\": 106.9,\n        \"adj_o_rank\": 215,\n        \"adj_d\": 106.1\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -601,8 +604,7 @@
             "ncsos_adj_em_rank": 172
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"illinois\",\n      \"teamName\": \"Illinois\",\n      \"torvik\": {\n        \"rank\": 6,\n        \"team\": \"Illinois\",\n        \"conf\": \"B10\",\n        \"record\": \"24-8\",\n        \"adjoe\": 131.9558297057279,\n        \"oe Rank\": 2,\n        \"adjde\": 98.14121578057112,\n        \"de Rank\": 24\n      },\n      \"kenpom\": {\n        \"rank\": 7,\n        \"team\": \"Illinois\",\n        \"conf\": \"B10\",\n        \"record\": \"24-8\",\n        \"adj_em\": 32.14,\n        \"adj_o\": 131.2,\n        \"adj_o_rank\": 1,\n        \"adj_d\": 99.1\n      }\n    },\n    {\n      \"teamId\": \"penn\",\n      \"teamName\": \"Penn\",\n      \"torvik\": {\n        \"rank\": 153,\n        \"team\": \"Penn\",\n        \"conf\": \"Ivy\",\n        \"record\": \"17-11\",\n        \"adjoe\": 106.01532910915247,\n        \"oe Rank\": 226,\n        \"adjde\": 105.23467739306388,\n        \"de Rank\": 103\n      },\n      \"kenpom\": {\n        \"rank\": 159,\n        \"team\": \"Penn\",\n        \"conf\": \"Ivy\",\n        \"record\": \"17-11\",\n        \"adj_em\": 0.8,\n        \"adj_o\": 106.9,\n        \"adj_o_rank\": 215,\n        \"adj_d\": 106.1\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-6-assistant-1",
@@ -614,22 +616,22 @@
       "id": "r64-south-6-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:04:41.291Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Illinois basketball March Madness 2026 injury update",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-6-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:04:41.973Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-6-assistant-2",
@@ -641,20 +643,20 @@
       "id": "r64-south-6-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:04:46.376Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Illinois Fighting Illini 2026 NCAA tournament team news injury",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-6-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:04:46.512Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-south-6-assistant-3",
@@ -666,20 +668,20 @@
       "id": "r64-south-6-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:04:51.419Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Penn Quakers 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-6-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:04:51.528Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-south-6-assistant-4",
@@ -691,22 +693,22 @@
       "id": "r64-south-6-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:05:02.385Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "\"Illinois\" \"Penn\" 2026 NCAA tournament prediction",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-6-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:05:02.998Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-6-assistant-5",
@@ -718,18 +720,19 @@
       "id": "r64-south-6-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:05:14.045Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-south-6"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-6-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:05:14.045Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-south-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"illinois\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"penn\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -746,8 +749,7 @@
             "teamId": "penn"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-south-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"illinois\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"penn\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-6-assistant-6",
@@ -759,16 +761,17 @@
       "id": "r64-south-6-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:05:17.385Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "South"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-6-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:05:17.385Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"florida\",\n      \"name\": \"Florida\",\n      \"shortName\": \"FLA\",\n      \"seed\": 1,\n      \"region\": \"South\",\n      \"conference\": \"SEC\"\n    },\n    {\n      \"id\": \"houston\",\n      \"name\": \"Houston\",\n      \"shortName\": \"HOU\",\n      \"seed\": 2,\n      \"region\": \"South\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"illinois\",\n      \"name\": \"Illinois\",\n      \"shortName\": \"ILL\",\n      \"seed\": 3,\n      \"region\": \"South\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"nebraska\",\n      \"name\": \"Nebraska\",\n      \"shortName\": \"NEB\",\n      \"seed\": 4,\n      \"region\": \"South\",\n      \"conference\": \"Big Ten\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -907,8 +910,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"florida\",\n      \"name\": \"Florida\",\n      \"shortName\": \"FLA\",\n      \"seed\": 1,\n      \"region\": \"South\",\n      \"conference\": \"SEC\"\n    },\n    {\n      \"id\": \"houston\",\n      \"name\": \"Houston\",\n      \"shortName\": \"HOU\",\n      \"seed\": 2,\n      \"region\": \"South\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"illinois\",\n      \"name\": \"Illinois\",\n      \"shortName\": \"ILL\",\n      \"seed\": 3,\n      \"region\": \"South\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"nebraska\",\n      \"name\": \"Nebraska\",\n      \"shortName\": \"NEB\",\n      \"seed\": 4,\n      \"region\": \"South\",\n      \"conference\": \"Big Ten\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-6-assistant-final-7",

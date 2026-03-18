@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-east-6",
     "winnerId": "michigan-state",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Michigan State's high-major talent, fortified by a challenging Big Ten schedule, provides a significant edge over North Dakota State. The Spartans' defensive discipline and tournament experience should neutralize the Bison's balanced scoring attack. While North Dakota State is capable, Michigan State's overall superiority and heavy favoritism in the odds make them a clear choice to advance."
   },
   "reasoningStep": {
     "id": "reasoning-east-3-14",
     "title": "Assessment of 3/14 Seed Matchup: Michigan State vs North Dakota State",
     "summary": "Evaluated team quality, matchup dynamics, injury context, and upset risk, concluding Michigan State's advantages in talent, schedule strength, and tournament readiness outweigh North Dakota State's balanced scoring.",
-    "evidence": "Michigan State is a 16.5-point favorite with a -2000 moneyline, indicating heavy expected victory. North Dakota State has four players averaging double-digit points but comes from the weaker Summit League. Michigan State has some injury concerns with Divine Ugochukwu, but remains heavily favored due to superior resources and high-major pedigree."
+    "evidence": [
+      "Michigan State is a 16.5-point favorite with a -2000 moneyline, indicating heavy expected victory. North Dakota State has four players averaging double-digit points but comes from the weaker Summit League. Michigan State has some injury concerns with Divine Ugochukwu, but remains heavily favored due to superior resources and high-major pedigree."
+    ]
   },
   "toolCalls": [
     {
@@ -806,14 +808,15 @@
       "id": "r64-east-6-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:37:33.121Z",
+      "content": "",
       "toolName": "list_teams",
-      "arguments": {},
-      "content": ""
+      "arguments": {}
     },
     {
       "id": "r64-east-6-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:37:33.121Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1360,8 +1363,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-6-assistant-1",
@@ -1373,19 +1375,20 @@
       "id": "r64-east-6-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:37:38.293Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "michigan-state",
           "north-dakota-state"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-6-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:37:38.299Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"michigan-state\",\n      \"teamName\": \"Michigan State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"north-dakota-state\",\n      \"teamName\": \"North Dakota State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -1400,8 +1403,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"michigan-state\",\n      \"teamName\": \"Michigan State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"north-dakota-state\",\n      \"teamName\": \"North Dakota State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-6-assistant-2",
@@ -1413,16 +1415,17 @@
       "id": "r64-east-6-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:37:43.231Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "2026 NCAA tournament Michigan State North Dakota State preview analysis"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-6-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:37:44.082Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament .\"\n    },\n    {\n      \"title\": \"Michigan State prediction for Round 1 of 2026 NCAA bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.detroitnews.com%2Fstory%2Fsports%2Fcollege%2Fmichigan%2Dstate%2Duniversity%2F2026%2F03%2F15%2Fmichigan%2Dstate%2Dprediction%2Dfor%2Dround%2D1%2Dof%2D2026%2Dncaa%2Dbracket%2F89101251007%2F&rut=514c33c4f5a8472101c914a88d9835d78694767c4bf7ebe964350b94ae983de3\",\n      \"snippet\": \"Connor Earegood of The Detroit News breaks down Michigan State&#x27;s first-round opponent in the NCAA Tournament and predicts the outcome: Four North Dakota State players average 10.0 or more points ...\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament Schedule, Predictions and Picks\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Dschedule%2Dpredictions%2Dpicks&rut=e7af8236e248b8fc5c70537a45741a4874ab4ff36914e8d4efa5f43229a7fda9\",\n      \"snippet\": \"The 2026 NCAA Tournament full schedule, game previews , predictions, and betting lines for every game from the First Four through the national championship.\"\n    },\n    {\n      \"title\": \"Michigan State vs North Dakota State predictions for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fftw.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F16%2Fmichigan%2Dstate%2Dnorth%2Ddakota%2Dstate%2Dpicks%2Dpredictions%2Dodds%2Dmarch%2Dmadness%2F88419862007%2F&rut=3b06f3ee3b9b9fd8e3aec50cb1a368df3da182baea8e2e200f78cccb29b45676\",\n      \"snippet\": \"March Madness picks, predictions, odds for North Dakota State vs Michigan State NCAA Tournament first-round East Region game Thursday, March 19, 2026 .\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -1450,8 +1453,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fmichigan%2Dstate%2Dvs%2Dnorth%2Ddakota%2Dstate%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=bb3fb6238a56447fabb1ec8172161bba3da88e90d597c3c031d797d5ff741896",
           "snippet": "We&#x27;re here to help as we&#x27;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for Michigan State vs. North Dakota State ."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament .\"\n    },\n    {\n      \"title\": \"Michigan State prediction for Round 1 of 2026 NCAA bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.detroitnews.com%2Fstory%2Fsports%2Fcollege%2Fmichigan%2Dstate%2Duniversity%2F2026%2F03%2F15%2Fmichigan%2Dstate%2Dprediction%2Dfor%2Dround%2D1%2Dof%2D2026%2Dncaa%2Dbracket%2F89101251007%2F&rut=514c33c4f5a8472101c914a88d9835d78694767c4bf7ebe964350b94ae983de3\",\n      \"snippet\": \"Connor Earegood of The Detroit News breaks down Michigan State&#x27;s first-round opponent in the NCAA Tournament and predicts the outcome: Four North Dakota State players average 10.0 or more points ...\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament Schedule, Predictions and Picks\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Dschedule%2Dpredictions%2Dpicks&rut=e7af8236e248b8fc5c70537a45741a4874ab4ff36914e8d4efa5f43229a7fda9\",\n      \"snippet\": \"The 2026 NCAA Tournament full schedule, game previews , predictions, and betting lines for every game from the First Four through the national championship.\"\n    },\n    {\n      \"title\": \"Michigan State vs North Dakota State predictions for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fftw.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F16%2Fmichigan%2Dstate%2Dnorth%2Ddakota%2Dstate%2Dpicks%2Dpredictions%2Dodds%2Dmarch%2Dmadness%2F88419862007%2F&rut=3b06f3ee3b9b9fd8e3aec50cb1a368df3da182baea8e2e200f78cccb29b45676\",\n      \"snippet\": \"March Madness picks, predictions, odds for North Dakota State vs Michigan State NCAA Tournament first-round East Region game Thursday, March 19, 2026 .\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-6-assistant-3",
@@ -1463,22 +1465,22 @@
       "id": "r64-east-6-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:37:49.754Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.detroitnews.com/story/sports/college/michigan-state-university/2026/03/15/michigan-state-prediction-for-round-1-of-2026-ncaa-bracket/89101251007/"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-6-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:37:49.945Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.detroitnews.com/story/sports/college/michigan-state-university/2026/03/15/michigan-state-prediction-for-round-1-of-2026-ncaa-bracket/89101251007/\",\n    \"text\": \"Michigan State prediction for Round 1 of 2026 NCAA bracket Skip to main content Home Sports Lions Tigers Red Wings Pistons Michigan Michigan State Big Ten More Colleges High School Soccer Scoreboards Michigan State vs. North Dakota State scouting report, prediction for March Madness first round Connor Earegood The Detroit News Show Caption Hide Caption MSU beat writer Connor Earegood on MSU's NCAA tournament bid, run and opponent Michigan State drew a No. 3 seed in the NCAA Tournament in Sunday's selection show. First up: No. 14 seed North Dakota State. Earegood breaks it down. Connor Earegood of The Detroit News breaks down Michigan State's first-round opponent in the NCAA Tournament and predicts the outcome: Michigan State vs. North Dakota State scouting report, prediction Four North Dakota State players average 10.0 or more points per game, led by Damari Wheeler-Thomas at 14.4 points per game. Trevian Carson (12.0), Markhi Strickland (11.8) and Treyson Anderson (10.4) are also factors offensively. Carson and Anderson lead with 6.4 and 5.4 rebounds per game. Andy Stefonowicz ties those four together with 4.9 assists per game. North Dakota State averages the 26th-best scoring marg... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.detroitnews.com/story/sports/college/michigan-state-university/2026/03/15/michigan-state-prediction-for-round-1-of-2026-ncaa-bracket/89101251007/",
         "text": "Michigan State prediction for Round 1 of 2026 NCAA bracket Skip to main content Home Sports Lions Tigers Red Wings Pistons Michigan Michigan State Big Ten More Colleges High School Soccer Scoreboards Michigan State vs. North Dakota State scouting report, prediction for March Madness first round Connor Earegood The Detroit News Show Caption Hide Caption MSU beat writer Connor Earegood on MSU's NCAA tournament bid, run and opponent Michigan State drew a No. 3 seed in the NCAA Tournament in Sunday's selection show. First up: No. 14 seed North Dakota State. Earegood breaks it down. Connor Earegood of The Detroit News breaks down Michigan State's first-round opponent in the NCAA Tournament and predicts the outcome: Michigan State vs. North Dakota State scouting report, prediction Four North Dakota State players average 10.0 or more points per game, led by Damari Wheeler-Thomas at 14.4 points per game. Trevian Carson (12.0), Markhi Strickland (11.8) and Treyson Anderson (10.4) are also factors offensively. Carson and Anderson lead with 6.4 and 5.4 rebounds per game. Andy Stefonowicz ties those four together with 4.9 assists per game. North Dakota State averages the 26th-best scoring margin in Division I at 11.1 points per game, though that came against the 282nd best strength of schedule as calculated by KenPom. The Bison score 80.7 points per game (70th) and allow 69.6 (64th). North Dakota State ranks 38th in Division I with 36.5% 3-point shooting and ties for 62nd in total 3-pointers per game at 9.4. That’s a tough matchup for Michigan State, which has allowed 40% or better 3-point shooting in three of its past four games, two of those games being losses to Michigan and UCLA. Since Jan. 1, Michigan State is allowing 33.5% 3-point shooting, which would tie for 163rd in Division I, and its defense has slipped out of the top 10 in efficiency in conjunction with that slippage. This game will be a battle of two of the best defensive rebounding teams in Division I. Nobody hauls in a higher percentage of defensive rebounds than Michigan State, whose 22.6% offensive rebounding percentage leads all teams as calculated by KenPom. North Dakota State comes in at 25.7, ranking 17th. The Spartans corral 39.84 rebounds per game (26th) while the Bison haul in 36.44 (117th). Michigan State will need its frontcourt to control the glass, from starters Jaxon Kohler and Carson Cooper to Cam Ward off the bench. Michigan State (25-7) knows it can’t overlook any opening-round opponent — that’s how you get Middle Tennessee State’s upset in 2016, which will always give Tom Izzo a teaching point this time of year. But the Spartans have the size and physicality to outmatch North Dakota State (27-7), who hasn’t played anyone of MSU's ilk all season. And a Big Ten Tournament loss to UCLA is enough of a gut check to make this game as routine as it should be. Final: 78-63 Michigan State ➤ BRACKET CHALLENGE: Think you can beat our expert? Join USA TODAY’s Bracket Challenge today! ➤ "
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.detroitnews.com/story/sports/college/michigan-state-university/2026/03/15/michigan-state-prediction-for-round-1-of-2026-ncaa-bracket/89101251007/\",\n    \"text\": \"Michigan State prediction for Round 1 of 2026 NCAA bracket Skip to main content Home Sports Lions Tigers Red Wings Pistons Michigan Michigan State Big Ten More Colleges High School Soccer Scoreboards Michigan State vs. North Dakota State scouting report, prediction for March Madness first round Connor Earegood The Detroit News Show Caption Hide Caption MSU beat writer Connor Earegood on MSU's NCAA tournament bid, run and opponent Michigan State drew a No. 3 seed in the NCAA Tournament in Sunday's selection show. First up: No. 14 seed North Dakota State. Earegood breaks it down. Connor Earegood of The Detroit News breaks down Michigan State's first-round opponent in the NCAA Tournament and predicts the outcome: Michigan State vs. North Dakota State scouting report, prediction Four North Dakota State players average 10.0 or more points per game, led by Damari Wheeler-Thomas at 14.4 points per game. Trevian Carson (12.0), Markhi Strickland (11.8) and Treyson Anderson (10.4) are also factors offensively. Carson and Anderson lead with 6.4 and 5.4 rebounds per game. Andy Stefonowicz ties those four together with 4.9 assists per game. North Dakota State averages the 26th-best scoring marg... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-6-assistant-4",
@@ -1490,22 +1492,22 @@
       "id": "r64-east-6-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:37:55.912Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://ftw.usatoday.com/story/sports/college/2026/03/16/michigan-state-north-dakota-state-picks-predictions-odds-march-madness/88419862007/"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-6-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:37:56.518Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://ftw.usatoday.com/story/sports/college/2026/03/16/michigan-state-north-dakota-state-picks-predictions-odds-march-madness/88419862007/\",\n    \"text\": \"Michigan State vs North Dakota State predictions for March Madness Skip to main content Home NFL NBA NHL MLB WNBA Outdoors BetFTW Casinos Newsletter Pop Culture College Football Men's College Basketball Women's College Basketball MotorSports Golf USA TODAY Sports Michigan State vs North Dakota State picks, odds for March Madness Jeremy Cluff Arizona Republic Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. No. 3 seed Michigan State and No. 14 seed North Dakota State play Thursday, March 19, in a March Madness NCAA Tournament first-round game . The East Region game is scheduled for 1:05 p.m. MST and can be seen on TNT ( stream with Sling TV ). Who will win the March Madness game and advance to the second round in the NCAA Tournament bracket ? Check out these March Madness picks and March Madness predictions for the men's college basketball NCAA Tournament matchup . Michigan State is a 16.5-point favorite over North Dakota State in the game in March Madness odds provided by BetMGM Sportsbook . The Spartans are -2000 on the moneyline... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://ftw.usatoday.com/story/sports/college/2026/03/16/michigan-state-north-dakota-state-picks-predictions-odds-march-madness/88419862007/",
         "text": "Michigan State vs North Dakota State predictions for March Madness Skip to main content Home NFL NBA NHL MLB WNBA Outdoors BetFTW Casinos Newsletter Pop Culture College Football Men's College Basketball Women's College Basketball MotorSports Golf USA TODAY Sports Michigan State vs North Dakota State picks, odds for March Madness Jeremy Cluff Arizona Republic Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. No. 3 seed Michigan State and No. 14 seed North Dakota State play Thursday, March 19, in a March Madness NCAA Tournament first-round game . The East Region game is scheduled for 1:05 p.m. MST and can be seen on TNT ( stream with Sling TV ). Who will win the March Madness game and advance to the second round in the NCAA Tournament bracket ? Check out these March Madness picks and March Madness predictions for the men's college basketball NCAA Tournament matchup . Michigan State is a 16.5-point favorite over North Dakota State in the game in March Madness odds provided by BetMGM Sportsbook . The Spartans are -2000 on the moneyline. The Bison are +950. The over/under for the game is set at 143.5 points. March Madness picks: Ohio State-TCU | Nebraska-Troy | Louisville-South Florida | Wisconsin-High Point | Duke-Siena | Vanderbilt-McNeese | Michigan State-North Dakota State | Arkansas-Hawaii | North Carolina-VCU | Saint Mary's-Texas A&M | Illinois-Penn | Georgia-Saint Louis | Gonzaga-Kennesaw State | Houston-Idaho | Kentucky-Santa Clara | Texas Tech-Akron | Arizona-Long Island | Virginia-Wright State | Iowa State-Tennessee State | Alabama-Hofstra | Villanova-Utah State | Clemson-Iowa | St. John's-UNI | UCLA-UCF | Purdue-Queens | Kansas-Cal Baptist | UConn-Furman | Miami-Missouri | The Republic's score predictions Watch Michigan State vs North Dakota State on Sling The Arizona Republic : Michigan State 75, North Dakota State 60 Jeremy Cluff writes: \"Michigan State hasn't lost before the second round of the NCAA Tournament since 2020-21. Don't count on it happening against the Bison. The Spartans are a big favorite for a reason.\" March Madness picks: Predictions for NCAA Tournament first-round games Dimers : Michigan State 82, North Dakota State 64 It writes: \"After extensive simulations, our model gives North Dakota State a win probability of 5%, while Michigan State has a win probability of 95%.\" How to watch March Madness: Ohio State-TCU | Nebraska-Troy | Louisville-South Florida | Wisconsin-High Point | Duke-Siena | Vanderbilt-McNeese | Michigan State-North Dakota State | Arkansas-Hawaii | North Carolina-VCU | Saint Mary's-Texas A&M | Illinois-Penn | Georgia-Saint Louis | Gonzaga-Kennesaw State | Houston-Idaho | Kentucky-Santa Clara | Texas Tech-Akron | Arizona-Long Island | Virginia-Wright State | Iowa State-Tennessee State | Alabama-Hofstra | Villanova-Utah State | Clemson-Iowa | St. John's-UNI"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://ftw.usatoday.com/story/sports/college/2026/03/16/michigan-state-north-dakota-state-picks-predictions-odds-march-madness/88419862007/\",\n    \"text\": \"Michigan State vs North Dakota State predictions for March Madness Skip to main content Home NFL NBA NHL MLB WNBA Outdoors BetFTW Casinos Newsletter Pop Culture College Football Men's College Basketball Women's College Basketball MotorSports Golf USA TODAY Sports Michigan State vs North Dakota State picks, odds for March Madness Jeremy Cluff Arizona Republic Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. No. 3 seed Michigan State and No. 14 seed North Dakota State play Thursday, March 19, in a March Madness NCAA Tournament first-round game . The East Region game is scheduled for 1:05 p.m. MST and can be seen on TNT ( stream with Sling TV ). Who will win the March Madness game and advance to the second round in the NCAA Tournament bracket ? Check out these March Madness picks and March Madness predictions for the men's college basketball NCAA Tournament matchup . Michigan State is a 16.5-point favorite over North Dakota State in the game in March Madness odds provided by BetMGM Sportsbook . The Spartans are -2000 on the moneyline... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-6-assistant-5",
@@ -1517,19 +1519,19 @@
       "id": "r64-east-6-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:38:01.443Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Michigan State injury 2026 March Madness"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-6-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:38:01.580Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-east-6-assistant-6",
@@ -1541,16 +1543,17 @@
       "id": "r64-east-6-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:38:05.629Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Michigan State Spartans 2026 season review NCAA tournament injury report"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-6-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:38:06.665Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Michigan State Spartans Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fmichigan%2Dstate%2Dspartans%2Finjuries&rut=b8482d5a823415a37bda5e3c719d73e60031c09b283cf87ba540afc595273b42\",\n      \"snippet\": \"Stay In the Know: Check Out Michigan State Spartans Injuries Impacting The 2025- 2026 NCAAB Season .\"\n    },\n    {\n      \"title\": \"Michigan State Spartans Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fmsu%2Fmichigan%2Dstate%2Dspartans&rut=bc36317945621438bc7a6faacfc763542b5db718a39c6dd732f63145d732385a\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2026 Michigan State Spartans . Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Fatigue concerns aside, Michigan State hopes for &#x27;special ... - mlive\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mlive.com%2Fspartans%2Fbasketball%2F2026%2F03%2Fmichigan%2Dstate%2Dhas%2Dfatigue%2Dconcerns%2Dbut%2Dhopes%2Dfor%2Dspecial%2Dbig%2Dten%2Dtournament%2Drun.html&rut=06a3f731c171b74d6c6e69a890e6080cac0cbb3a8c53dbe8e5ecf0277272120b\",\n      \"snippet\": \"EAST LANSING - Michigan State opened the postseason in Indianapolis last year as the Big Ten regular- season champion. The Spartans were unable to add a conference tournament title by losing in ...\"\n    },\n    {\n      \"title\": \"Divine Ugochukwu&#x27;s injury proving to be important for Michigan State\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fspartanswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fspartans%2Fmens%2Dbasketball%2F2026%2F03%2F15%2Fdivine%2Dugochukwus%2Dinjury%2Dproving%2Dto%2Dbe%2Dimportant%2Dfor%2Dmichigan%2Dstate%2F89150159007%2F&rut=2860d67dd87ccaa75d7ff3149b5d7be3a3d3480daad9809c51519695641c8648\",\n      \"snippet\": \"This will be a very important position to monitor as the NCAA Tournament kicks off this week. Need a news break? Check out the all new PLAY hub with puzzles, games and more! Contact/Follow us @The SpartansWire on X, and like our page onFacebook to follow ongoing coverage of Michigan state news, notes, and opinion.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -1578,8 +1581,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fmsuspartans.com%2F&rut=7bdda7e27867353f1611eedffbdd638477d0743b253740ed392d08b18a8b7d52",
           "snippet": "WGOLF | Mar 17, 2026 Spartans Earn No. 3 Seed in East Region, Extend NCAA Tournament Streak to 28 Straight MBB | Mar 15, 2026"
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Michigan State Spartans Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fmichigan%2Dstate%2Dspartans%2Finjuries&rut=b8482d5a823415a37bda5e3c719d73e60031c09b283cf87ba540afc595273b42\",\n      \"snippet\": \"Stay In the Know: Check Out Michigan State Spartans Injuries Impacting The 2025- 2026 NCAAB Season .\"\n    },\n    {\n      \"title\": \"Michigan State Spartans Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fmsu%2Fmichigan%2Dstate%2Dspartans&rut=bc36317945621438bc7a6faacfc763542b5db718a39c6dd732f63145d732385a\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2026 Michigan State Spartans . Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Fatigue concerns aside, Michigan State hopes for &#x27;special ... - mlive\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mlive.com%2Fspartans%2Fbasketball%2F2026%2F03%2Fmichigan%2Dstate%2Dhas%2Dfatigue%2Dconcerns%2Dbut%2Dhopes%2Dfor%2Dspecial%2Dbig%2Dten%2Dtournament%2Drun.html&rut=06a3f731c171b74d6c6e69a890e6080cac0cbb3a8c53dbe8e5ecf0277272120b\",\n      \"snippet\": \"EAST LANSING - Michigan State opened the postseason in Indianapolis last year as the Big Ten regular- season champion. The Spartans were unable to add a conference tournament title by losing in ...\"\n    },\n    {\n      \"title\": \"Divine Ugochukwu&#x27;s injury proving to be important for Michigan State\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fspartanswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fspartans%2Fmens%2Dbasketball%2F2026%2F03%2F15%2Fdivine%2Dugochukwus%2Dinjury%2Dproving%2Dto%2Dbe%2Dimportant%2Dfor%2Dmichigan%2Dstate%2F89150159007%2F&rut=2860d67dd87ccaa75d7ff3149b5d7be3a3d3480daad9809c51519695641c8648\",\n      \"snippet\": \"This will be a very important position to monitor as the NCAA Tournament kicks off this week. Need a news break? Check out the all new PLAY hub with puzzles, games and more! Contact/Follow us @The SpartansWire on X, and like our page onFacebook to follow ongoing coverage of Michigan state news, notes, and opinion.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-6-assistant-7",
@@ -1591,22 +1593,22 @@
       "id": "r64-east-6-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:38:12.295Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://spartanswire.usatoday.com/story/sports/college/spartans/mens-basketball/2026/03/15/divine-ugochukwus-injury-proving-to-be-important-for-michigan-state/89150159007/"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-6-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:38:12.467Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://spartanswire.usatoday.com/story/sports/college/spartans/mens-basketball/2026/03/15/divine-ugochukwus-injury-proving-to-be-important-for-michigan-state/89150159007/\",\n    \"text\": \"Divine Ugochukwu's injury proving to be important for Michigan State Skip to main content Home Schedule Football Basketball Women's Basketball Hockey Tom Izzo Recruiting Big Ten Sports Odds Newsletter College Sports Wire USA TODAY Sports Loss of Divine Ugochukwu rearing it's head for MSU down the stretch Andrew Brewster Spartans Wire This past offseason, Michigan State basketball lost three starting-caliber shooting guards, all for three different reasons. Jaden Akins went to the G-League after using up his eligibility. Tre Holloman transferred to NC State . And Jase Richardson went to the NBA . Going into the season, Tom Izzo tried to shore up that position, adding veteran Trey Fort from Samford through the transfer portal, and the Spartans also had Kur Teng already on the roster. But it was another transfer , one who was projected to be the team's backup point guard, who ended up being the most effective 2-guard on the roster. Ugochukwu was expected to be there to give Jeremy Fears Jr. some much-needed rest here and there throughout the season as the backup point guard. Instead, he shot 44 percent from three, played great defense, and ended up being the starting shooting guard an... [truncated 1712 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://spartanswire.usatoday.com/story/sports/college/spartans/mens-basketball/2026/03/15/divine-ugochukwus-injury-proving-to-be-important-for-michigan-state/89150159007/",
         "text": "Divine Ugochukwu's injury proving to be important for Michigan State Skip to main content Home Schedule Football Basketball Women's Basketball Hockey Tom Izzo Recruiting Big Ten Sports Odds Newsletter College Sports Wire USA TODAY Sports Loss of Divine Ugochukwu rearing it's head for MSU down the stretch Andrew Brewster Spartans Wire This past offseason, Michigan State basketball lost three starting-caliber shooting guards, all for three different reasons. Jaden Akins went to the G-League after using up his eligibility. Tre Holloman transferred to NC State . And Jase Richardson went to the NBA . Going into the season, Tom Izzo tried to shore up that position, adding veteran Trey Fort from Samford through the transfer portal, and the Spartans also had Kur Teng already on the roster. But it was another transfer , one who was projected to be the team's backup point guard, who ended up being the most effective 2-guard on the roster. Ugochukwu was expected to be there to give Jeremy Fears Jr. some much-needed rest here and there throughout the season as the backup point guard. Instead, he shot 44 percent from three, played great defense, and ended up being the starting shooting guard and still handling the backup point guard duties as well. However, that all came to a screeching halt in early February, when Ugochukwu suffered a broken foot in a game that ended up being a loss to lowly Minnesota. Ugochukwu was a revelation this year, solidifying a position that had a lot of question marks. With Ugochukwu in the lineup, the Spartans had one of the top defenses in the country and enough ball-handling to survive when Fears had to take a breather. Now, MSU is back to their initial problem at that position, and I think it's partially responsible for the Spartans' early exit from the Big Ten Tournament . MSU has several interesting options to plug in at that spot, but they all come with their own downsides. Kur Teng is probably the best shooter on the team, but his defense isn't quite ready for a starting spot. Jordan Scott has been a breakout impact player this season, but he's really a small forward and can sometimes be a step slow for faster shooting guards, and he's also probably asked to do a little too much on offense in that position. The X-Factor could be Trey Fort, who hasn't had a consistent opportunity for minutes this year, but looked good in MSU's loss to UCLA. This will be a very important position to monitor as the NCAA Tournament kicks off this week. Contact/Follow us @ The SpartansWire on X, and like our page on Facebook to follow ongoing coverage of Michigan state news, notes, and opinion. You can also follow Andrew Brewster on Twitter @ IAmBrewster . Facebook Twitter Email Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your Privacy Choices © Copyright Gannett 2026"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://spartanswire.usatoday.com/story/sports/college/spartans/mens-basketball/2026/03/15/divine-ugochukwus-injury-proving-to-be-important-for-michigan-state/89150159007/\",\n    \"text\": \"Divine Ugochukwu's injury proving to be important for Michigan State Skip to main content Home Schedule Football Basketball Women's Basketball Hockey Tom Izzo Recruiting Big Ten Sports Odds Newsletter College Sports Wire USA TODAY Sports Loss of Divine Ugochukwu rearing it's head for MSU down the stretch Andrew Brewster Spartans Wire This past offseason, Michigan State basketball lost three starting-caliber shooting guards, all for three different reasons. Jaden Akins went to the G-League after using up his eligibility. Tre Holloman transferred to NC State . And Jase Richardson went to the NBA . Going into the season, Tom Izzo tried to shore up that position, adding veteran Trey Fort from Samford through the transfer portal, and the Spartans also had Kur Teng already on the roster. But it was another transfer , one who was projected to be the team's backup point guard, who ended up being the most effective 2-guard on the roster. Ugochukwu was expected to be there to give Jeremy Fears Jr. some much-needed rest here and there throughout the season as the backup point guard. Instead, he shot 44 percent from three, played great defense, and ended up being the starting shooting guard an... [truncated 1712 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-6-assistant-8",
@@ -1618,16 +1620,17 @@
       "id": "r64-east-6-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:38:16.920Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "North Dakota State Bison 2026 NCAA tournament preview strengths weaknesses"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-6-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:38:18.232Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Ticket Punched: Previewing the North Dakota State Bison for the 2026 ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dnorth%2Ddakota%2Dstate%2Dbison%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=4ef7731a99992d0416105485947f1b23ea5dbff0b1c4acd6a6b5c406ccc3302f\",\n      \"snippet\": \"Similar NCAA Tournament efficiency profiles Similar efficiency profiles and statistics found via Bart Torvik. Tournament Index evaluation As it stands, North Dakota State is a projected No. 14 seed by our bracketology at Basket Under Review and on the Bracket Matrix.\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament Team Previews: Who Can Make a Run in ... - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2F2026%2Dncaa%2Dtournament%2Dteam%2Dpreviews%2D108065&rut=36e8125758cd40def7fd28fd7ac84a9e0ed1bca408470724326fa954d8e4ff4c\",\n      \"snippet\": \"North Dakota State Bison (27-7) After winning the Summit League regular-season and tournament titles, North Dakota State is dancing for the fifth time since 2009.\"\n    },\n    {\n      \"title\": \"Meet the NCAA Tournament No. 14 Seeds: Kennesaw State, NDSU, Penn ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fmeet%2Dncaa%2Dtournament%2Dno%2D14%2D023349674.html&rut=d71214dfc7453aa21c79a82196354a78714d7465f50e5720cdefe222312bc2fc\",\n      \"snippet\": \"What To Know About Every 2026 No. 14 Seed: Kennesaw State , North Dakota State , Penn, Wright State CFN takes a quick look at each team&#x27;s strengths , weaknesses , and star players to know among the No ...\"\n    },\n    {\n      \"title\": \"North Dakota State Bison RPI Team Sheet 2026 Men&#x27;s Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fteam%2Dsheet%3Fteam%3DNorth%2DDakota%2DState&rut=d4d8e20a893517e87c619626c9c981b8159514162bf28283615de39db140f8e2\",\n      \"snippet\": \"The 2026 NCAA Men&#x27;s Basketball Tournament Selection Committee Team Sheet for North Dakota State Bison with RPI, Strength of Schedule, Quadrant Records, and Every Game Result Ordered by RPI\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -1655,8 +1658,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fiahhm.com%2F2026%2F03%2F13%2Fnorth%2Ddakota%2Dstate%2Dbison%2Dbasketball%2Dstats%2Dwin%2Dprobability%2Dand%2Dtournament%2Doutlook%2F&rut=52591c75e263afc1a9becd15c00bfa5df061eb796d5492434ab716dd661ddbda",
           "snippet": "The North Dakota State Bison men&#x27;s basketball enter postseason play as one of the more balanced mid-major teams in the country. With a deep rotation, efficient three-point shooting, and strong defensive metrics, the Bison could present matchup problems for higher-seeded teams in the NCAA Division I Men&#x27;s Basketball Tournament ."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Ticket Punched: Previewing the North Dakota State Bison for the 2026 ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dnorth%2Ddakota%2Dstate%2Dbison%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=4ef7731a99992d0416105485947f1b23ea5dbff0b1c4acd6a6b5c406ccc3302f\",\n      \"snippet\": \"Similar NCAA Tournament efficiency profiles Similar efficiency profiles and statistics found via Bart Torvik. Tournament Index evaluation As it stands, North Dakota State is a projected No. 14 seed by our bracketology at Basket Under Review and on the Bracket Matrix.\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament Team Previews: Who Can Make a Run in ... - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2F2026%2Dncaa%2Dtournament%2Dteam%2Dpreviews%2D108065&rut=36e8125758cd40def7fd28fd7ac84a9e0ed1bca408470724326fa954d8e4ff4c\",\n      \"snippet\": \"North Dakota State Bison (27-7) After winning the Summit League regular-season and tournament titles, North Dakota State is dancing for the fifth time since 2009.\"\n    },\n    {\n      \"title\": \"Meet the NCAA Tournament No. 14 Seeds: Kennesaw State, NDSU, Penn ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fmeet%2Dncaa%2Dtournament%2Dno%2D14%2D023349674.html&rut=d71214dfc7453aa21c79a82196354a78714d7465f50e5720cdefe222312bc2fc\",\n      \"snippet\": \"What To Know About Every 2026 No. 14 Seed: Kennesaw State , North Dakota State , Penn, Wright State CFN takes a quick look at each team&#x27;s strengths , weaknesses , and star players to know among the No ...\"\n    },\n    {\n      \"title\": \"North Dakota State Bison RPI Team Sheet 2026 Men&#x27;s Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fteam%2Dsheet%3Fteam%3DNorth%2DDakota%2DState&rut=d4d8e20a893517e87c619626c9c981b8159514162bf28283615de39db140f8e2\",\n      \"snippet\": \"The 2026 NCAA Men&#x27;s Basketball Tournament Selection Committee Team Sheet for North Dakota State Bison with RPI, Strength of Schedule, Quadrant Records, and Every Game Result Ordered by RPI\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-6-assistant-9",
@@ -1668,22 +1670,22 @@
       "id": "r64-east-6-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:38:22.743Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.basketunderreview.com/ticket-punched-previewing-the-north-dakota-state-bison-for-the-2026-ncaa-tournament/"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-6-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:38:22.877Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.basketunderreview.com/ticket-punched-previewing-the-north-dakota-state-bison-for-the-2026-ncaa-tournament/\",\n    \"text\": \"Ticket Punched: Previewing the North Dakota State Bison for the 2026 NCAA Tournament Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Search Sign Up Sign Up Create Your Account Get access to exclusive features and stay updated. Sign Up Sign Up Already have an account? Log In Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Become a member Become a member Home Articles & Editorials Ticket Punched: Previewing the North Dakota State Bison for the 2026 NCAA Tournament Articles & Editorials Articles & Editorials Bracketology Bracketology Free Content Free Content Ticket Punched: Previewing the North Dakota State Bison for the 2026 NCAA Tournament Featured Mar 10, 2026 by Lukas Harkins In a year full of top-seeded mid-majors falling in their conference tournaments, North Dakota State made sure it did not join the list... North Dakota State finished its regular season with a 14-2 intra-league record that won the Summit League by two full games and earned the No. 1 seed at the conference tournament. They did not waste the opportunity, either, pushing past No. 8 se... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.basketunderreview.com/ticket-punched-previewing-the-north-dakota-state-bison-for-the-2026-ncaa-tournament/",
         "text": "Ticket Punched: Previewing the North Dakota State Bison for the 2026 NCAA Tournament Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Search Sign Up Sign Up Create Your Account Get access to exclusive features and stay updated. Sign Up Sign Up Already have an account? Log In Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Become a member Become a member Home Articles & Editorials Ticket Punched: Previewing the North Dakota State Bison for the 2026 NCAA Tournament Articles & Editorials Articles & Editorials Bracketology Bracketology Free Content Free Content Ticket Punched: Previewing the North Dakota State Bison for the 2026 NCAA Tournament Featured Mar 10, 2026 by Lukas Harkins In a year full of top-seeded mid-majors falling in their conference tournaments, North Dakota State made sure it did not join the list... North Dakota State finished its regular season with a 14-2 intra-league record that won the Summit League by two full games and earned the No. 1 seed at the conference tournament. They did not waste the opportunity, either, pushing past No. 8 seed Oral Roberts by 11 in their quarterfinal matchup, blowing out No. 5 seed Omaha by 24 in the semifinals, and notching an eight-point win over North Dakota in the championship game to earn their sixth* automatic bid in the last 18 years — but this year will mark its first playing an NCAA Tournament game since 2019. The Bison trailed for just 4:05 out of a total 120 minutes played in the conference tournament before cutting down the nets. Damari Wheeler-Thomas, who crossed the 1,000-point mark for his career in the title game, was named Tournament MVP for averaging 17.3 points on 10-for-19 (52.6%) from beyond the arc. North Dakota State is more than just its intra-conference performance, though. The Bison enter the NCAA Tournament with a 27-7 overall record, their most wins in a season in program history. Their No. 114 ranking on KenPom is also their highest mark since finishing 112th in the 2019-20 season that was cut short before they could turn their conference tournament championship into an NCAA Tournament game due to the COVID cancellation. The 3-point line is critical on both ends. North Dakota State is not incredibly reliant on the 3-ball, ranking only slightly above the national average for 3-point attempt rate (42.7% of shots, 122nd). However, its shooting differential in wins vs. losses is staggering. It is not a surprise when a team performs better when it shoots better, but NDSU is splashing 38.1% of its 3s when it wins as opposed to just 26.6% when it loses. The Bison are also taking more 3s in wins (26.5 3PA/40) than losses (23.7 3PA/40). From a shot selection standpoint, North Dakota State appears to have a preference from beyond the arc. The Bison are attempting 17.1% of their shots on right-side 3s in their wins but only 10.0% of their shots in that ar"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.basketunderreview.com/ticket-punched-previewing-the-north-dakota-state-bison-for-the-2026-ncaa-tournament/\",\n    \"text\": \"Ticket Punched: Previewing the North Dakota State Bison for the 2026 NCAA Tournament Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Search Sign Up Sign Up Create Your Account Get access to exclusive features and stay updated. Sign Up Sign Up Already have an account? Log In Articles Podcasts Scout Team Game Analysis Bracketology Women&#x27;s Hoops Free Content Team Previews Scoreboard Become a member Become a member Home Articles & Editorials Ticket Punched: Previewing the North Dakota State Bison for the 2026 NCAA Tournament Articles & Editorials Articles & Editorials Bracketology Bracketology Free Content Free Content Ticket Punched: Previewing the North Dakota State Bison for the 2026 NCAA Tournament Featured Mar 10, 2026 by Lukas Harkins In a year full of top-seeded mid-majors falling in their conference tournaments, North Dakota State made sure it did not join the list... North Dakota State finished its regular season with a 14-2 intra-league record that won the Summit League by two full games and earned the No. 1 seed at the conference tournament. They did not waste the opportunity, either, pushing past No. 8 se... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-6-final-json",

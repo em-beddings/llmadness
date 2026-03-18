@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-east-8",
     "winnerId": "uconn",
-    "confidence": "Very High",
+    "confidence": 0.93,
     "rationale": "UConn is a No. 6-ranked powerhouse from the Big East with a 29-4 record and a recent conference tournament run, showcasing their readiness for March. The Huskies possess far superior talent, size, and athleticism compared to Furman, whose efficiency ratings rank outside the top 190 nationally. While Furman is healthy and has improved its interior presence, the vast gulf in high-major experience and overall team quality makes a monumental 15-seed upset highly improbable."
   },
   "reasoningStep": {
     "id": "east-2-15-analysis",
     "title": "Evaluating the 2 vs 15 Seed Mismatch",
     "summary": "UConn's elite national standing, high-major pedigree, and significant efficiency advantage over a mid-major Furman team create a mismatch with minimal upset risk.",
-    "evidence": "UConn is ranked #6 nationally with a 29-4 (17-3 Big East) record and just advanced to the Big East tournament final. Furman is a 15-seed from the Southern Conference with a 22-12 record, ranking 191st in KenPom and 195th in Torvik with sub-200 adjusted efficiency ratings on both offense and defense. No significant injuries were reported for either team. Historical context heavily favors the 2-seed in this matchup."
+    "evidence": [
+      "UConn is ranked #6 nationally with a 29-4 (17-3 Big East) record and just advanced to the Big East tournament final. Furman is a 15-seed from the Southern Conference with a 22-12 record, ranking 191st in KenPom and 195th in Torvik with sub-200 adjusted efficiency ratings on both offense and defense. No significant injuries were reported for either team. Historical context heavily favors the 2-seed in this matchup."
+    ]
   },
   "toolCalls": [
     {
@@ -362,19 +364,20 @@
       "id": "r64-east-8-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:40:51.851Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "uconn",
           "furman"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:40:51.859Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"uconn\",\n      \"teamName\": \"UConn\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"furman\",\n      \"teamName\": \"Furman\",\n      \"torvik\": {\n        \"rank\": 195,\n        \"team\": \"Furman\",\n        \"conf\": \"SC\",\n        \"record\": \"22-12\",\n        \"adjoe\": 106.84229880131988,\n        \"oe Rank\": 206,\n        \"adjde\": 108.98101752722744,\n        \"de Rank\": 177\n      },\n      \"kenpom\": {\n        \"rank\": 191,\n        \"team\": \"Furman\",\n        \"conf\": \"SC\",\n        \"record\": \"22-12\",\n        \"adj_em\": -1.99,\n        \"adj_o\": 107.5,\n        \"adj_o_rank\": 200,\n        \"adj_d\": 109.5\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -457,8 +460,7 @@
             "ncsos_adj_em_rank": 203
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"uconn\",\n      \"teamName\": \"UConn\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"furman\",\n      \"teamName\": \"Furman\",\n      \"torvik\": {\n        \"rank\": 195,\n        \"team\": \"Furman\",\n        \"conf\": \"SC\",\n        \"record\": \"22-12\",\n        \"adjoe\": 106.84229880131988,\n        \"oe Rank\": 206,\n        \"adjde\": 108.98101752722744,\n        \"de Rank\": 177\n      },\n      \"kenpom\": {\n        \"rank\": 191,\n        \"team\": \"Furman\",\n        \"conf\": \"SC\",\n        \"record\": \"22-12\",\n        \"adj_em\": -1.99,\n        \"adj_o\": 107.5,\n        \"adj_o_rank\": 200,\n        \"adj_d\": 109.5\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-8-assistant-1",
@@ -470,17 +472,18 @@
       "id": "r64-east-8-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:40:58.927Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "UConn 2026 basketball ratings KenPom Torvik",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:40:59.725Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings - kenpom.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php%3Fy%3D2026&rut=9b34804cfad35b5cbae634e02c885605bfcfae75be908d7c292f7ca6ce29df20\",\n      \"snippet\": \"2026 Pomeroy College Basketball Ratings help 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26 Data includes 9 of 10 games played on Tuesday, March 17\"\n    },\n    {\n      \"title\": \"Bart Torvik - Verifying Browser...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.barttorvik.com%2F&rut=b727e8166b5eb383c32c90896baaf808207615b2d743f9f7538729ae6662393e\",\n      \"snippet\": \"Explore college basketball ratings , rankings, and statistics with Bart Torvik&#x27;s innovative tools and insights.\"\n    },\n    {\n      \"title\": \"KenPom College Basketball Ratings (2000-2026) | Formula Bot\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.formulabot.com%2Fdatasets%2Fkenpom%2Dmarch%2Dmadness&rut=407adeb44f4eb358b6482ddc1ff0847e4abe6f6931b5e55a451fd203afc34039\",\n      \"snippet\": \"Explore KenPom efficiency ratings for every Division I college basketball team from 2000 to 2026 . Analyze adjusted offense, defense, tempo, and March Madness seeds with AI-powered analytics.\"\n    },\n    {\n      \"title\": \"Latest KenPom Rankings for the 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcleatz.com%2Flatest%2Dkenpom%2Drankings%2F&rut=e00d44a1d343d8c4cdc7d4399fbe5850fe5a668cbfaaf2fc09179eadd61a9cf4\",\n      \"snippet\": \"Understand KenPom Rankings: how teams are rated by adjusted offensive and defensive efficiencies for college basketball .\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -508,8 +511,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbarttorvik.com%2Fcgi%2Dbin%2Fpred.cgi&rut=43410e8bf8e83c1d42c921e3691703c0574fd52f867780b34b5dcff3a4049a0c",
           "snippet": "T-Rank College Basketball Ratings and Rankings. And fun."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings - kenpom.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php%3Fy%3D2026&rut=9b34804cfad35b5cbae634e02c885605bfcfae75be908d7c292f7ca6ce29df20\",\n      \"snippet\": \"2026 Pomeroy College Basketball Ratings help 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26 Data includes 9 of 10 games played on Tuesday, March 17\"\n    },\n    {\n      \"title\": \"Bart Torvik - Verifying Browser...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.barttorvik.com%2F&rut=b727e8166b5eb383c32c90896baaf808207615b2d743f9f7538729ae6662393e\",\n      \"snippet\": \"Explore college basketball ratings , rankings, and statistics with Bart Torvik&#x27;s innovative tools and insights.\"\n    },\n    {\n      \"title\": \"KenPom College Basketball Ratings (2000-2026) | Formula Bot\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.formulabot.com%2Fdatasets%2Fkenpom%2Dmarch%2Dmadness&rut=407adeb44f4eb358b6482ddc1ff0847e4abe6f6931b5e55a451fd203afc34039\",\n      \"snippet\": \"Explore KenPom efficiency ratings for every Division I college basketball team from 2000 to 2026 . Analyze adjusted offense, defense, tempo, and March Madness seeds with AI-powered analytics.\"\n    },\n    {\n      \"title\": \"Latest KenPom Rankings for the 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcleatz.com%2Flatest%2Dkenpom%2Drankings%2F&rut=e00d44a1d343d8c4cdc7d4399fbe5850fe5a668cbfaaf2fc09179eadd61a9cf4\",\n      \"snippet\": \"Understand KenPom Rankings: how teams are rated by adjusted offensive and defensive efficiencies for college basketball .\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-8-assistant-2",
@@ -521,17 +523,18 @@
       "id": "r64-east-8-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:41:04.675Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "UConn basketball 2026 tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:41:05.460Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Sports Shows Online - Sports on ITVX - Live & On-Demand on ITVX\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Ditv.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DZaoHKy_XW4EtxSvXT7Wp9%252Dx8cLrDSZR4UkyHwIxmTxsiCW%252DW83_HcnYTIDG%252D7SLpZGGL1WQ7uIrUF_WXH29eGGxysnHGs0q9YHUaqnOTs8W6H8UOegY_IyEmmhLUTkcSFf4mVtcyesJSQkwiNsqDQT%252DjCKKMcxe4_qBAhRTEDso.t36ErgPXznGi_X%252DexkdatQ%26rut%3D7d32aba960ce9346da234cff81bc227339d349c8acd524623270c3d1e2f8ff9b%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8LcmQ0L3EnYWxwe%252DnukDGQzVUCUySbufIpwC5CfO%252DMieEkh7mMmbhJDHGrG9ok7zkeV6G9wGUCDITCzSk_mff14QbYe4Qy7MJtxC2P2LAkt95VTCKpCS%252DA8yJUZnSZCTLnQuFGLT3ahDPtPMzKISwPJn%252DSLf8u%252Dj80Jam%252DfxpjlEOyu_ICiWe7ItyV_6hgnajg6XjTvIcBfGu_76KcbpugdfW%252DSQ%2526u%253DaHR0cHMlM2ElMmYlMmZ0cmFjay50cmFmZmljZ3VhcmQuYWklMmZpdHZ4X2NfciUyZmdvb2dsZS1hZHMlMmZ2MSUyZmNsaWNrJTJmJTNmcHJvcGVydHlfaWQlM2R0Zy0wMTgyNzctMDAxJTI2c291cmNlX2lkJTNkcyUyNmNyZWF0aXZlX2lkJTNkJTI2Y2FtcGFpZ25faWQlM2Q1MjI2MDUwNzklMjZjcmVhdGl2ZV9zZXRfaWQlM2QxMzIyNzE1MDIyMDQxMjA5JTI2cGxhY2VtZW50X2lkJTNkJTI2a2V5d29yZCUzZHdhdGNoJTI1MjBzcG9ydHMlMjZzZXNzaW9uX2lkJTNkJTI2ZmVlZGl0ZW1pZCUzZCUyNnRhcmdldGlkJTNka3dkLTgyNjcxMjMxMDQ5OTQxJTNhbG9jLTE4OCUyNmxvY19pbnRlcm... [truncated 1413 chars]\",\n      \"snippet\": \"All episodes in one place on ITVX. Stream sports free on ITVX, with more shows than anywhere else\"\n    },\n    {\n      \"title\": \"UConn Huskies Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F41%2Fuconn%2Dhuskies&rut=77c3d738bf9818134df66940febf7d715a5addc488a73e8dbeafac35ff3b6db6\",\n      \"snippet\": \"Visit ESPN for UConn Huskies live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=0c86a36b38fe8a85cfca17567cf51b782b5e714eb40e4e241fb8a636a44aaba1\",\n      \"snippet\": \"The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title.\"\n    },\n    {\n      \"title\": \"UConn 67-51 Georgetown (Mar 13, 2026) Game Recap - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401851316&rut=f174290eb094c9d59093cc2466d81e603e5f2ba00de49bd3a88af7a839318353\",\n      \"snippet\": \"Expert recap and game analysis of the UConn Huskies vs. Georgetown Hoyas NCAAM game from March 13, 2026 on ESPN.\"\n    }\n  ]\n}",
       "toolName": "search_espn_news",
       "result": [
         {
@@ -559,8 +562,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401851313&rut=ff94c7024a138555c9433663ba94618ebde9b880a7362c2e8fa73d314e9f8e80",
           "snippet": "Expert recap and game analysis of the UConn Huskies vs. Xavier Musketeers NCAAM game from March 12, 2026 on ESPN."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Sports Shows Online - Sports on ITVX - Live & On-Demand on ITVX\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Ditv.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DZaoHKy_XW4EtxSvXT7Wp9%252Dx8cLrDSZR4UkyHwIxmTxsiCW%252DW83_HcnYTIDG%252D7SLpZGGL1WQ7uIrUF_WXH29eGGxysnHGs0q9YHUaqnOTs8W6H8UOegY_IyEmmhLUTkcSFf4mVtcyesJSQkwiNsqDQT%252DjCKKMcxe4_qBAhRTEDso.t36ErgPXznGi_X%252DexkdatQ%26rut%3D7d32aba960ce9346da234cff81bc227339d349c8acd524623270c3d1e2f8ff9b%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8LcmQ0L3EnYWxwe%252DnukDGQzVUCUySbufIpwC5CfO%252DMieEkh7mMmbhJDHGrG9ok7zkeV6G9wGUCDITCzSk_mff14QbYe4Qy7MJtxC2P2LAkt95VTCKpCS%252DA8yJUZnSZCTLnQuFGLT3ahDPtPMzKISwPJn%252DSLf8u%252Dj80Jam%252DfxpjlEOyu_ICiWe7ItyV_6hgnajg6XjTvIcBfGu_76KcbpugdfW%252DSQ%2526u%253DaHR0cHMlM2ElMmYlMmZ0cmFjay50cmFmZmljZ3VhcmQuYWklMmZpdHZ4X2NfciUyZmdvb2dsZS1hZHMlMmZ2MSUyZmNsaWNrJTJmJTNmcHJvcGVydHlfaWQlM2R0Zy0wMTgyNzctMDAxJTI2c291cmNlX2lkJTNkcyUyNmNyZWF0aXZlX2lkJTNkJTI2Y2FtcGFpZ25faWQlM2Q1MjI2MDUwNzklMjZjcmVhdGl2ZV9zZXRfaWQlM2QxMzIyNzE1MDIyMDQxMjA5JTI2cGxhY2VtZW50X2lkJTNkJTI2a2V5d29yZCUzZHdhdGNoJTI1MjBzcG9ydHMlMjZzZXNzaW9uX2lkJTNkJTI2ZmVlZGl0ZW1pZCUzZCUyNnRhcmdldGlkJTNka3dkLTgyNjcxMjMxMDQ5OTQxJTNhbG9jLTE4OCUyNmxvY19pbnRlcm... [truncated 1413 chars]\",\n      \"snippet\": \"All episodes in one place on ITVX. Stream sports free on ITVX, with more shows than anywhere else\"\n    },\n    {\n      \"title\": \"UConn Huskies Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F41%2Fuconn%2Dhuskies&rut=77c3d738bf9818134df66940febf7d715a5addc488a73e8dbeafac35ff3b6db6\",\n      \"snippet\": \"Visit ESPN for UConn Huskies live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=0c86a36b38fe8a85cfca17567cf51b782b5e714eb40e4e241fb8a636a44aaba1\",\n      \"snippet\": \"The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title.\"\n    },\n    {\n      \"title\": \"UConn 67-51 Georgetown (Mar 13, 2026) Game Recap - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401851316&rut=f174290eb094c9d59093cc2466d81e603e5f2ba00de49bd3a88af7a839318353\",\n      \"snippet\": \"Expert recap and game analysis of the UConn Huskies vs. Georgetown Hoyas NCAAM game from March 13, 2026 on ESPN.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-8-assistant-3",
@@ -572,22 +574,22 @@
       "id": "r64-east-8-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:41:12.281Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.espn.com/mens-college-basketball/recap/_/gameId/401851316"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:41:12.914Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/recap/_/gameId/401851316\",\n    \"text\": \"UConn 67-51 Georgetown (Mar 13, 2026) Game Recap - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UConn Huskies vs Georgetown Hoyas Big East Tournament - Semifinal Georgetown Hoyas Georgetown GTWN 16-18 , 6-14 Big East 51 16-18 , 6-14 Big East Final 1 2 T Georgetown GTWN 21 30 51 UConn CONN 32 35 67 6 UConn Huskies UConn CONN 29-4 , 17-3 Big East 67 29-4 , 17-3 Big East Gamecast Recap Box Score Play-by-Play Team Stats No. 6 UConn beats Georgetown 67-51 to set up a Big East final clash against No. 13 St. John&#x27;s By AP Mar 13, 2026, 10:50 pm Facebook Facebook Messenger Twitter Email NEW YORK -- — Braylon Mullins scored 15 of his 21 points in the first half, Jayden Ross hit a couple of momentum-stunting 3-pointers in the second, and sixth-ranked UConn defeated Georgetown 67-51 on Friday night to set up a showdown of the top two seeds in the Big East Tournament final. The second-seeded Huskies (29-4) will face regular-season conference champion and 13th-ranked St. John's in the title game Saturday night after the Red Storm beat Seton Hal... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.espn.com/mens-college-basketball/recap/_/gameId/401851316",
         "text": "UConn 67-51 Georgetown (Mar 13, 2026) Game Recap - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UConn Huskies vs Georgetown Hoyas Big East Tournament - Semifinal Georgetown Hoyas Georgetown GTWN 16-18 , 6-14 Big East 51 16-18 , 6-14 Big East Final 1 2 T Georgetown GTWN 21 30 51 UConn CONN 32 35 67 6 UConn Huskies UConn CONN 29-4 , 17-3 Big East 67 29-4 , 17-3 Big East Gamecast Recap Box Score Play-by-Play Team Stats No. 6 UConn beats Georgetown 67-51 to set up a Big East final clash against No. 13 St. John&#x27;s By AP Mar 13, 2026, 10:50 pm Facebook Facebook Messenger Twitter Email NEW YORK -- — Braylon Mullins scored 15 of his 21 points in the first half, Jayden Ross hit a couple of momentum-stunting 3-pointers in the second, and sixth-ranked UConn defeated Georgetown 67-51 on Friday night to set up a showdown of the top two seeds in the Big East Tournament final. The second-seeded Huskies (29-4) will face regular-season conference champion and 13th-ranked St. John's in the title game Saturday night after the Red Storm beat Seton Hall 78-68 in the other semifinal. Like St. John's, UConn has yet to trail in either of its first two games this week at Madison Square Garden. Mullins scored five of the team's first seven points to go up 7-0, and the closest 11th-seeded Georgetown (16-18) got after that was down three at the 7 1/2-minute mark. UConn led by 11 at halftime, despite not attempting a free throw to that point, and finished with assists on 21 of its 28 field goals. Without leading scorer KJ Lewis , who was ruled out for the season with a left ankle injury, the Hoyas were ultimately overmatched by a stacked opponent they played tight in January and again in February . Although not as dominant as in a quarterfinal rout of Xavier, coach Dan Hurley's team has responded as he had hoped from what he called a “choke job” loss last weekend at Marquette that dropped UConn two spots in the AP Top 25 . That defeat and the “brutal film session” that Hurley said followed might turn out to be an important learning moment for the Huskies — if they keep this level of play going and make another lengthy NCAA Tournament run two years since the program won the second of back-to-back national championships. Up next A rubber match for the conference's top two teams after they split the two-game season series . UConn won the second meeting on Feb. 25 by 32 points. ------ Get poll alerts and updates on the AP Top 25 throughout the season. Sign up here and here (AP mobile app). AP college basketball: https://apnews.com/hub/ap-top-25-college-basketball-poll and https://apnews.com/hub/college-basketball Game Information New York , NY FS1 Referee : Tim Clougherty Referee : Brian O&#x27;Connell Referee : Tony Chiazza 2025-26 Standings NCAA Division I Big East Conference Big East Conference CONF GB OVR St. John&#x27;s 18-"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/recap/_/gameId/401851316\",\n    \"text\": \"UConn 67-51 Georgetown (Mar 13, 2026) Game Recap - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UConn Huskies vs Georgetown Hoyas Big East Tournament - Semifinal Georgetown Hoyas Georgetown GTWN 16-18 , 6-14 Big East 51 16-18 , 6-14 Big East Final 1 2 T Georgetown GTWN 21 30 51 UConn CONN 32 35 67 6 UConn Huskies UConn CONN 29-4 , 17-3 Big East 67 29-4 , 17-3 Big East Gamecast Recap Box Score Play-by-Play Team Stats No. 6 UConn beats Georgetown 67-51 to set up a Big East final clash against No. 13 St. John&#x27;s By AP Mar 13, 2026, 10:50 pm Facebook Facebook Messenger Twitter Email NEW YORK -- — Braylon Mullins scored 15 of his 21 points in the first half, Jayden Ross hit a couple of momentum-stunting 3-pointers in the second, and sixth-ranked UConn defeated Georgetown 67-51 on Friday night to set up a showdown of the top two seeds in the Big East Tournament final. The second-seeded Huskies (29-4) will face regular-season conference champion and 13th-ranked St. John's in the title game Saturday night after the Red Storm beat Seton Hal... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-8-assistant-4",
@@ -599,20 +601,20 @@
       "id": "r64-east-8-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:41:20.164Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Furman basketball 2026 tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:41:20.298Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-east-8-assistant-5",
@@ -624,17 +626,18 @@
       "id": "r64-east-8-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:41:24.828Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Furman 2026 NCAA tournament team preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:41:25.836Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Furman March Madness bracket predictions for 2026 NCAA tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.greenvilleonline.com%2Fstory%2Fsports%2Fcollege%2Ffurman%2F2026%2F03%2F15%2Ffurman%2Dbasketball%2Dmarch%2Dmadness%2Dbracketology%2F89100596007%2F&rut=172c82d18b20e2f04ecd6b5818d8befb4de39d75c3bf1d030dc8e93f2c6329b7\",\n      \"snippet\": \"Where Furman basketball lands in March Madness bracketology on Selection Sunday, when the 2026 NCAA Tournament bracket will be revealed.\"\n    },\n    {\n      \"title\": \"UConn vs. Furman: NCAA Tournament Predictions & Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fuconn%2Dvs%2Dfurman%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=78ce5c1c6d3af9f92a81b72ffd3ba4c2fbd3cdea78eda89444074886f2594ea0\",\n      \"snippet\": \"Furman 2026 NCAA Tournament Preview Bob Richey&#x27;s team got here as a 6-seed in the SoCon tournament , and Furman is healthier now than it&#x27;s been all season. This isn&#x27;t the same undersized Furman squad from years past. The Paladins are one of the tallest teams in the country, and that added size has been a real difference-maker on both ends.\"\n    },\n    {\n      \"title\": \"Furman vs UConn prediction, pick, odds March Madness first round\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fthelistwire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Ffurman%2F2026%2F03%2F15%2Ffurman%2Duconn%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2F89101252007%2F&rut=6ac5705e8f6f6172de3221a33bd9fc21186de57e7679bcaf20784af1dfc39db7\",\n      \"snippet\": \"It&#x27;s Furman Paladins vs UConn Huskies in March Madness bracket. Here&#x27;s our prediction for the 2026 NCAA tournament basketball game.\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament .\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -662,8 +665,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dfurman%2Dpaladins%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=425c90d3e2c27c540309703a4e2057dbec91877b0cf2e0b33e0ff7278aacde14",
           "snippet": "The Paladins became the latest purple ticket punched on Monday night, handling SoCon No. 1 seed ETSU en route to a 76-61 victory. This marks Bob Richey&#x27;s second NCAA Tournament appearance in nine years as Furman&#x27;s head coach; you might recall the first appearance (and Kevin Harlan&#x27;s virtuoso performance calling it)."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Furman March Madness bracket predictions for 2026 NCAA tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.greenvilleonline.com%2Fstory%2Fsports%2Fcollege%2Ffurman%2F2026%2F03%2F15%2Ffurman%2Dbasketball%2Dmarch%2Dmadness%2Dbracketology%2F89100596007%2F&rut=172c82d18b20e2f04ecd6b5818d8befb4de39d75c3bf1d030dc8e93f2c6329b7\",\n      \"snippet\": \"Where Furman basketball lands in March Madness bracketology on Selection Sunday, when the 2026 NCAA Tournament bracket will be revealed.\"\n    },\n    {\n      \"title\": \"UConn vs. Furman: NCAA Tournament Predictions & Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fuconn%2Dvs%2Dfurman%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=78ce5c1c6d3af9f92a81b72ffd3ba4c2fbd3cdea78eda89444074886f2594ea0\",\n      \"snippet\": \"Furman 2026 NCAA Tournament Preview Bob Richey&#x27;s team got here as a 6-seed in the SoCon tournament , and Furman is healthier now than it&#x27;s been all season. This isn&#x27;t the same undersized Furman squad from years past. The Paladins are one of the tallest teams in the country, and that added size has been a real difference-maker on both ends.\"\n    },\n    {\n      \"title\": \"Furman vs UConn prediction, pick, odds March Madness first round\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fthelistwire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Ffurman%2F2026%2F03%2F15%2Ffurman%2Duconn%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2F89101252007%2F&rut=6ac5705e8f6f6172de3221a33bd9fc21186de57e7679bcaf20784af1dfc39db7\",\n      \"snippet\": \"It&#x27;s Furman Paladins vs UConn Huskies in March Madness bracket. Here&#x27;s our prediction for the 2026 NCAA tournament basketball game.\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament .\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-8-assistant-6",
@@ -675,22 +677,22 @@
       "id": "r64-east-8-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:41:30.750Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.bettingpros.com/articles/uconn-vs-furman-ncaa-tournament-predictions-preview/"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:41:33.685Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.bettingpros.com/articles/uconn-vs-furman-ncaa-tournament-predictions-preview/\",\n    \"text\": \"UConn vs. Furman: NCAA Tournament Predictions &#038; Preview | BettingPros to prevent flash of incorrect theme on page load --> Skip to main content Skip to navigation Skip to footer Click to go to homepage Picks Odds Tools Research Leaders Click to expand More menu Home Games Picks Upgrade Menu Click to Find a bet ... Contest Click to expand picks panel Click to open Sharp AI UConn vs. Furman: NCAA Tournament Predictions & Preview by BettingPros Staff | @BettingPros | Mar 15, 2026 by BettingPros Staff | @BettingPros | Mar 15, 2026 The 2026 NCAA Tournament is officially here! The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#8217;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament! We&#8217;re here to help as we&#8217;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for UConn vs. Furman. NCAA Tournament Odds NCAA Tournament Pick&#8217;Em Contest NCAA Tournament March Madness Bracket Optimizer NCAA Tournament Betting Trends 2026 NCAA Tournament Predictions & Preview: UConn vs. Furman Here are the odds for this open... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.bettingpros.com/articles/uconn-vs-furman-ncaa-tournament-predictions-preview/",
         "text": "UConn vs. Furman: NCAA Tournament Predictions &#038; Preview | BettingPros to prevent flash of incorrect theme on page load --> Skip to main content Skip to navigation Skip to footer Click to go to homepage Picks Odds Tools Research Leaders Click to expand More menu Home Games Picks Upgrade Menu Click to Find a bet ... Contest Click to expand picks panel Click to open Sharp AI UConn vs. Furman: NCAA Tournament Predictions & Preview by BettingPros Staff | @BettingPros | Mar 15, 2026 by BettingPros Staff | @BettingPros | Mar 15, 2026 The 2026 NCAA Tournament is officially here! The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#8217;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament! We&#8217;re here to help as we&#8217;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for UConn vs. Furman. NCAA Tournament Odds NCAA Tournament Pick&#8217;Em Contest NCAA Tournament March Madness Bracket Optimizer NCAA Tournament Betting Trends 2026 NCAA Tournament Predictions & Preview: UConn vs. Furman Here are the odds for this opening-round matchup of the 2026 NCAA Tournament. Let&#8217;s dive into our preview and predictions for this NCAA Tournament matchup. UConn 2026 NCAA Tournament Preview Dan Hurley&#8217;s team regrouped well after its second-round exit last March. The Huskies went 27-4 in the regular season and reclaimed the Big East summit with a 17-3 conference record. Their 72-40 dismantling of St. John&#8217;s was the first time UConn held a Big East opponent to 20% shooting or worse in more than 30 seasons, and it said everything about UConn's ceiling. Alex Karaban is the senior heartbeat of this team. He moved into the top 10 in program history in career scoring during the regular-season finale and scored 23 points on senior day to will his team to a comeback win over Seton Hall. Tarris Reed Jr. is as dominant a rebounder as there is in college basketball, anchoring an interior defense that ranks top 10 nationally in opponent two-point shooting and block percentage. Solo Ball has done well in his second full season as a starter, averaging 13.5 points per game, and freshman Braylon Mullins has given UConn a perimeter weapon to go with Silas Demary Jr., who owns a top-15 assist rate nationally. The Huskies rank top 10 in assists per game and assist-to-field goal percentage. Nothing goes to waste. There are holes to poke, as losses to Creighton and Marquette were confusing red flags for the tournament. The Huskies do a lot of things really well, but it's hard to say they do anything the best. Basket Under Review released a &#8220;Kemba Factor&#8221; ranking for potential takeover players in March, and UConn&#8217;s highest-rated player was Demary at No. 43. When the going gets tough, it's hard to see anyone as a go-to bucket-getter. Karaban can knock down a shot anywhere off a screen bu"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.bettingpros.com/articles/uconn-vs-furman-ncaa-tournament-predictions-preview/\",\n    \"text\": \"UConn vs. Furman: NCAA Tournament Predictions &#038; Preview | BettingPros to prevent flash of incorrect theme on page load --> Skip to main content Skip to navigation Skip to footer Click to go to homepage Picks Odds Tools Research Leaders Click to expand More menu Home Games Picks Upgrade Menu Click to Find a bet ... Contest Click to expand picks panel Click to open Sharp AI UConn vs. Furman: NCAA Tournament Predictions & Preview by BettingPros Staff | @BettingPros | Mar 15, 2026 by BettingPros Staff | @BettingPros | Mar 15, 2026 The 2026 NCAA Tournament is officially here! The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#8217;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament! We&#8217;re here to help as we&#8217;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for UConn vs. Furman. NCAA Tournament Odds NCAA Tournament Pick&#8217;Em Contest NCAA Tournament March Madness Bracket Optimizer NCAA Tournament Betting Trends 2026 NCAA Tournament Predictions & Preview: UConn vs. Furman Here are the odds for this open... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-8-assistant-7",
@@ -702,22 +704,22 @@
       "id": "r64-east-8-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:41:39.174Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.greenvilleonline.com/story/sports/college/furman/2026/03/15/furman-basketball-march-madness-bracketology/89100596007/"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:41:39.399Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.greenvilleonline.com/story/sports/college/furman/2026/03/15/furman-basketball-march-madness-bracketology/89100596007/\",\n    \"text\": \"Furman March Madness bracket predictions for 2026 NCAA tournament Skip to main content Home Sports High Schools Clemson USC Furman Paladins Greenville Drive Swamp Rabbits Fantasy Sports SAIL Swimming USA TODAY Sports Where Furman basketball stands in March Madness bracket predictions on Selection Sunday Zachary Huber Hendersonville Times-News Show Caption Hide Caption Watch coach Bob Richey react to Furman basketball's March Madness bid Furman men's basketball coach Bob Richey speaks at the team's Selection Sunday watch party. \\\"We'll see you at Philly!\\\" The Furman Paladins men's basketball team has secured a spot in the NCAA Tournament. Bracketology experts project Furman will likely be a No. 15 seed in the tournament. Furman earned its bid by winning the Southern Conference tournament championship against East Tennessee State. Selection Sunday is finally here. The Furman Paladins men's basketball team earned its spot in the NCAA Tournament after winning the Southern Conference tournament championship on March 9. Furman (22-12) will learn its first-round opponent at 6 p.m. ET on March 15 on CBS or Paramount+ . The bracket reveal show can be streamed on Fubo , which carries CBS and ... [truncated 1604 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.greenvilleonline.com/story/sports/college/furman/2026/03/15/furman-basketball-march-madness-bracketology/89100596007/",
         "text": "Furman March Madness bracket predictions for 2026 NCAA tournament Skip to main content Home Sports High Schools Clemson USC Furman Paladins Greenville Drive Swamp Rabbits Fantasy Sports SAIL Swimming USA TODAY Sports Where Furman basketball stands in March Madness bracket predictions on Selection Sunday Zachary Huber Hendersonville Times-News Show Caption Hide Caption Watch coach Bob Richey react to Furman basketball's March Madness bid Furman men's basketball coach Bob Richey speaks at the team's Selection Sunday watch party. \"We'll see you at Philly!\" The Furman Paladins men's basketball team has secured a spot in the NCAA Tournament. Bracketology experts project Furman will likely be a No. 15 seed in the tournament. Furman earned its bid by winning the Southern Conference tournament championship against East Tennessee State. Selection Sunday is finally here. The Furman Paladins men's basketball team earned its spot in the NCAA Tournament after winning the Southern Conference tournament championship on March 9. Furman (22-12) will learn its first-round opponent at 6 p.m. ET on March 15 on CBS or Paramount+ . The bracket reveal show can be streamed on Fubo , which carries CBS and offers a free trial to new subscribers. FUBO FREE TRIAL: Watch March Madness games on Fubo Furman will play in March Madness for the first time since 2023 after it defeated East Tennessee State 76-61 in the SoCon tournament final. Paladins forward Cooper Bowser turned in a double-double against the Buccanneers with 21 points and 11 rebounds. Bowser's performance was critical, as leading scorer Alex Wilkins had an off night shooting the ball, scoring only 12 points on 4-of-12 shooting from the field and 2-for-8 from the 3-point line. SLING TV: Watch Furman vs. UConn on Sling TV Furman learns its seed Furman earned a No. 15 seed and will face No. 2 UConn in Philadelphia on March 20 at 10 p.m. on TBS . The Paladins were placed in the East Region. Furman men's basketball March Madness projections Most bracketology updates predict that the Paladins will be a No. 15 seed in March Madness. ESPN's Joe Lunardi has Furman as the No. 15 seed in the East Region, going against No. 2 Iowa State in St. Louis. CBS has the Paladins as a No. 15 seed facing Houston. The last time Furman reached March Madness, it pulled one of the biggest upsets of the tournament. JP Pegues made a last-second 3-pointer for No. 13 Furman to knock off No. 4 Virginia. Zachary Huber is a high school sports reporter for the Hendersonville Times-News. Email him at zhuber@gannett.com or follow him on X @zacharyahuber. Facebook Twitter Email Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your Privacy Choices © Copyright Gannett 2026"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.greenvilleonline.com/story/sports/college/furman/2026/03/15/furman-basketball-march-madness-bracketology/89100596007/\",\n    \"text\": \"Furman March Madness bracket predictions for 2026 NCAA tournament Skip to main content Home Sports High Schools Clemson USC Furman Paladins Greenville Drive Swamp Rabbits Fantasy Sports SAIL Swimming USA TODAY Sports Where Furman basketball stands in March Madness bracket predictions on Selection Sunday Zachary Huber Hendersonville Times-News Show Caption Hide Caption Watch coach Bob Richey react to Furman basketball's March Madness bid Furman men's basketball coach Bob Richey speaks at the team's Selection Sunday watch party. \\\"We'll see you at Philly!\\\" The Furman Paladins men's basketball team has secured a spot in the NCAA Tournament. Bracketology experts project Furman will likely be a No. 15 seed in the tournament. Furman earned its bid by winning the Southern Conference tournament championship against East Tennessee State. Selection Sunday is finally here. The Furman Paladins men's basketball team earned its spot in the NCAA Tournament after winning the Southern Conference tournament championship on March 9. Furman (22-12) will learn its first-round opponent at 6 p.m. ET on March 15 on CBS or Paramount+ . The bracket reveal show can be streamed on Fubo , which carries CBS and ... [truncated 1604 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-8-assistant-8",
@@ -729,17 +731,18 @@
       "id": "r64-east-8-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:41:44.819Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "UConn KenPom 2026 ranking",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:41:45.805Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings - kenpom.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php%3Fy%3D2026&rut=9b34804cfad35b5cbae634e02c885605bfcfae75be908d7c292f7ca6ce29df20\",\n      \"snippet\": \"2026 Pomeroy College Basketball Ratings help 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26 Data includes 9 of 10 games played on Tuesday, March 17\"\n    },\n    {\n      \"title\": \"Latest KenPom Rankings for the 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcleatz.com%2Flatest%2Dkenpom%2Drankings%2F&rut=e00d44a1d343d8c4cdc7d4399fbe5850fe5a668cbfaaf2fc09179eadd61a9cf4\",\n      \"snippet\": \"Understand KenPom Rankings : how teams are rated by adjusted offensive and defensive efficiencies for college basketball.\"\n    },\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2F&rut=1636b708046365e7f731055a345a1f52ea136a5bcf72dbbd510009a96960c4be\",\n      \"snippet\": \"Check out our instructional course, Basketball Analytics for Coaches. Use code MARCH for $50 off!\"\n    },\n    {\n      \"title\": \"March Madness predictions 2026: Using KenPom to pick NCAA bracket ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dpredictions%2D2026%2Dkenpom%2Dbracket%2F945668cd2309e4f4a2cdecdb&rut=fd632fcedecc78dd3b64eea57044b96c92877148adbe3fe257ae3a0a724266ea\",\n      \"snippet\": \"Sporting News&#x27; Vinnie Iyer uses KenPom rankings to predict the 2026 NCAA Tournament from the first round all the way through the national championship game.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -767,8 +770,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.formulabot.com%2Fdatasets%2Fkenpom%2Dmarch%2Dmadness&rut=407adeb44f4eb358b6482ddc1ff0847e4abe6f6931b5e55a451fd203afc34039",
           "snippet": "KenPom College Basketball Rating - March Madness KenPom efficiency ratings for every Division I college basketball team from 2000 to 2026 . Includes adjusted offensive and defensive efficiency, tempo, overall efficiency margin, national rankings for each metric, and NCAA Tournament seed where applicable. KenPom ratings are widely regarded as the gold standard for evaluating college basketball ..."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings - kenpom.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php%3Fy%3D2026&rut=9b34804cfad35b5cbae634e02c885605bfcfae75be908d7c292f7ca6ce29df20\",\n      \"snippet\": \"2026 Pomeroy College Basketball Ratings help 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26 Data includes 9 of 10 games played on Tuesday, March 17\"\n    },\n    {\n      \"title\": \"Latest KenPom Rankings for the 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcleatz.com%2Flatest%2Dkenpom%2Drankings%2F&rut=e00d44a1d343d8c4cdc7d4399fbe5850fe5a668cbfaaf2fc09179eadd61a9cf4\",\n      \"snippet\": \"Understand KenPom Rankings : how teams are rated by adjusted offensive and defensive efficiencies for college basketball.\"\n    },\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2F&rut=1636b708046365e7f731055a345a1f52ea136a5bcf72dbbd510009a96960c4be\",\n      \"snippet\": \"Check out our instructional course, Basketball Analytics for Coaches. Use code MARCH for $50 off!\"\n    },\n    {\n      \"title\": \"March Madness predictions 2026: Using KenPom to pick NCAA bracket ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dpredictions%2D2026%2Dkenpom%2Dbracket%2F945668cd2309e4f4a2cdecdb&rut=fd632fcedecc78dd3b64eea57044b96c92877148adbe3fe257ae3a0a724266ea\",\n      \"snippet\": \"Sporting News&#x27; Vinnie Iyer uses KenPom rankings to predict the 2026 NCAA Tournament from the first round all the way through the national championship game.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-8-assistant-9",
@@ -780,22 +782,22 @@
       "id": "r64-east-8-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:41:52.138Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-predictions-2026-kenpom-bracket/945668cd2309e4f4a2cdecdb"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-8-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:41:52.358Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-predictions-2026-kenpom-bracket/945668cd2309e4f4a2cdecdb\",\n    \"text\": \"March Madness predictions 2026: Using KenPom to pick NCAA bracket upsets, Final Four | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlo... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-predictions-2026-kenpom-bracket/945668cd2309e4f4a2cdecdb",
         "text": "March Madness predictions 2026: Using KenPom to pick NCAA bracket upsets, Final Four | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Str"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-predictions-2026-kenpom-bracket/945668cd2309e4f4a2cdecdb\",\n    \"text\": \"March Madness predictions 2026: Using KenPom to pick NCAA bracket upsets, Final Four | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlo... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-8-final-json",

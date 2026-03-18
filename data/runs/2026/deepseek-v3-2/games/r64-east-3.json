@@ -13,34 +13,14 @@
   "pick": {
     "gameId": "r64-east-3",
     "winnerId": "st-john-s",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "St. John's elite defense, ranked 12th nationally, should overwhelm Northern Iowa's mediocre offense and create transition opportunities. The Red Storm's significant advantage in efficiency metrics reflects their superior talent and Big East-tested resilience. While 12-seed upsets are possible, Northern Iowa's offensive limitations make it difficult for them to score enough to pull off the shocker."
   },
   "reasoningStep": {
     "id": "analysis-r64-east-3",
     "title": "5-12 Matchup Analysis",
     "summary": "Evaluated team ratings, defensive strengths, and upset potential based on efficiency metrics and conference strength.",
-    "evidence": {
-      "stJohnsRatings": {
-        "torvikRank": 18,
-        "kenpomRank": 20,
-        "adjEM": 24.8,
-        "adjORank": 46,
-        "adjDRank": 12,
-        "record": "27-6",
-        "conference": "Big East"
-      },
-      "northernIowaRatings": {
-        "torvikRank": 70,
-        "kenpomRank": 71,
-        "adjEM": 11.86,
-        "adjORank": 153,
-        "adjDRank": 26,
-        "record": "23-12",
-        "conference": "MVC"
-      },
-      "keyTakeaway": "St. John's holds a substantial edge in overall efficiency (+13 adjEM) and boasts a top-15 defense that matches up well against Northern Iowa's struggling offense (ranked 151st)."
-    }
+    "evidence": []
   },
   "toolCalls": [
     {
@@ -463,19 +443,20 @@
       "id": "r64-east-3-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:32:40.535Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "st-john-s",
           "northern-iowa"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-3-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:32:40.544Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"st-john-s\",\n      \"teamName\": \"St. John's\",\n      \"torvik\": {\n        \"rank\": 18,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adjoe\": 119.42892421267956,\n        \"oe Rank\": 47,\n        \"adjde\": 94.83902875441956,\n        \"de Rank\": 12\n      },\n      \"kenpom\": {\n        \"rank\": 20,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adj_em\": 24.8,\n        \"adj_o\": 119.9,\n        \"adj_o_rank\": 46,\n        \"adj_d\": 95.1\n      }\n    },\n    {\n      \"teamId\": \"northern-iowa\",\n      \"teamName\": \"Northern Iowa\",\n      \"torvik\": {\n        \"rank\": 70,\n        \"team\": \"Northern Iowa\",\n        \"conf\": \"MVC\",\n        \"record\": \"23-12\",\n        \"adjoe\": 109.659067210004,\n        \"oe Rank\": 151,\n        \"adjde\": 98.53563210898326,\n        \"de Rank\": 26\n      },\n      \"kenpom\": {\n        \"rank\": 71,\n        \"team\": \"Northern Iowa\",\n        \"conf\": \"MVC\",\n        \"record\": \"23-12\",\n        \"adj_em\": 11.86,\n        \"adj_o\": 110.1,\n        \"adj_o_rank\": 153,\n        \"adj_d\": 98.2\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -626,8 +607,7 @@
             "ncsos_adj_em_rank": 206
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"st-john-s\",\n      \"teamName\": \"St. John's\",\n      \"torvik\": {\n        \"rank\": 18,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adjoe\": 119.42892421267956,\n        \"oe Rank\": 47,\n        \"adjde\": 94.83902875441956,\n        \"de Rank\": 12\n      },\n      \"kenpom\": {\n        \"rank\": 20,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adj_em\": 24.8,\n        \"adj_o\": 119.9,\n        \"adj_o_rank\": 46,\n        \"adj_d\": 95.1\n      }\n    },\n    {\n      \"teamId\": \"northern-iowa\",\n      \"teamName\": \"Northern Iowa\",\n      \"torvik\": {\n        \"rank\": 70,\n        \"team\": \"Northern Iowa\",\n        \"conf\": \"MVC\",\n        \"record\": \"23-12\",\n        \"adjoe\": 109.659067210004,\n        \"oe Rank\": 151,\n        \"adjde\": 98.53563210898326,\n        \"de Rank\": 26\n      },\n      \"kenpom\": {\n        \"rank\": 71,\n        \"team\": \"Northern Iowa\",\n        \"conf\": \"MVC\",\n        \"record\": \"23-12\",\n        \"adj_em\": 11.86,\n        \"adj_o\": 110.1,\n        \"adj_o_rank\": 153,\n        \"adj_d\": 98.2\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-3-assistant-1",
@@ -639,22 +619,22 @@
       "id": "r64-east-3-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:32:49.064Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "St. John's basketball March Madness 2026 injury",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-3-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:32:49.699Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-3-assistant-2",
@@ -666,22 +646,22 @@
       "id": "r64-east-3-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:32:53.521Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "St. John's basketball 2026 NCAA tournament injury news",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-3-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:32:54.169Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-3-assistant-3",
@@ -693,22 +673,22 @@
       "id": "r64-east-3-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:32:58.642Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Northern Iowa 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-3-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:32:59.359Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-east-3-assistant-4",
@@ -720,18 +700,19 @@
       "id": "r64-east-3-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:33:29.652Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-east-3"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-3-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:33:29.652Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-east-3\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 5/12\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"st-john-s\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"northern-iowa\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -748,8 +729,7 @@
             "teamId": "northern-iowa"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-east-3\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 5/12\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"st-john-s\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"northern-iowa\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-3-assistant-5",
@@ -761,19 +741,20 @@
       "id": "r64-east-3-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:33:33.282Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "st-john-s",
           "northern-iowa"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-east-3-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:33:33.287Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"st-john-s\",\n      \"teamName\": \"St. John's\",\n      \"torvik\": {\n        \"rank\": 18,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adjoe\": 119.42892421267956,\n        \"oe Rank\": 47,\n        \"adjde\": 94.83902875441956,\n        \"de Rank\": 12\n      },\n      \"kenpom\": {\n        \"rank\": 20,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adj_em\": 24.8,\n        \"adj_o\": 119.9,\n        \"adj_o_rank\": 46,\n        \"adj_d\": 95.1\n      }\n    },\n    {\n      \"teamId\": \"northern-iowa\",\n      \"teamName\": \"Northern Iowa\",\n      \"torvik\": {\n        \"rank\": 70,\n        \"team\": \"Northern Iowa\",\n        \"conf\": \"MVC\",\n        \"record\": \"23-12\",\n        \"adjoe\": 109.659067210004,\n        \"oe Rank\": 151,\n        \"adjde\": 98.53563210898326,\n        \"de Rank\": 26\n      },\n      \"kenpom\": {\n        \"rank\": 71,\n        \"team\": \"Northern Iowa\",\n        \"conf\": \"MVC\",\n        \"record\": \"23-12\",\n        \"adj_em\": 11.86,\n        \"adj_o\": 110.1,\n        \"adj_o_rank\": 153,\n        \"adj_d\": 98.2\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -924,8 +905,7 @@
             "ncsos_adj_em_rank": 206
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"st-john-s\",\n      \"teamName\": \"St. John's\",\n      \"torvik\": {\n        \"rank\": 18,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adjoe\": 119.42892421267956,\n        \"oe Rank\": 47,\n        \"adjde\": 94.83902875441956,\n        \"de Rank\": 12\n      },\n      \"kenpom\": {\n        \"rank\": 20,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adj_em\": 24.8,\n        \"adj_o\": 119.9,\n        \"adj_o_rank\": 46,\n        \"adj_d\": 95.1\n      }\n    },\n    {\n      \"teamId\": \"northern-iowa\",\n      \"teamName\": \"Northern Iowa\",\n      \"torvik\": {\n        \"rank\": 70,\n        \"team\": \"Northern Iowa\",\n        \"conf\": \"MVC\",\n        \"record\": \"23-12\",\n        \"adjoe\": 109.659067210004,\n        \"oe Rank\": 151,\n        \"adjde\": 98.53563210898326,\n        \"de Rank\": 26\n      },\n      \"kenpom\": {\n        \"rank\": 71,\n        \"team\": \"Northern Iowa\",\n        \"conf\": \"MVC\",\n        \"record\": \"23-12\",\n        \"adj_em\": 11.86,\n        \"adj_o\": 110.1,\n        \"adj_o_rank\": 153,\n        \"adj_d\": 98.2\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-east-3-assistant-final-6",

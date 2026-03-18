@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r32-east-4",
     "winnerId": "uconn",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "UConn's superior record (29-5) and higher national ranking reflect a more consistent performance against high-level competition, including multiple ranked wins. The Huskies' balanced attack and interior defense, led by Tarris Reed Jr., should challenge UCLA's offense, which relies heavily on Tyler Bilodeau. While UCLA is capable of pulling an upset with its top-20 offense, UConn's overall team quality and tournament experience give them the edge to advance to the Sweet 16."
   },
   "reasoningStep": {
     "id": "r32-east-4-analysis",
     "title": "UConn vs UCLA Round of 32 Analysis",
     "summary": "Evaluated team records, efficiency ratings, key players, and tournament context to determine UConn holds a clear advantage.",
-    "evidence": "UConn: 29-5 record, AP rank #7, strong non-conference wins, balanced scoring. UCLA: 23-11, Torvik rank #24, KenPom #27, top-20 offense but defense ranked 49th. No major injury concerns for either team. Prior picks showed both advanced comfortably in Round of 64."
+    "evidence": [
+      "UConn: 29-5 record, AP rank #7, strong non-conference wins, balanced scoring. UCLA: 23-11, Torvik rank #24, KenPom #27, top-20 offense but defense ranked 49th. No major injury concerns for either team. Prior picks showed both advanced comfortably in Round of 64."
+    ]
   },
   "toolCalls": [
     {
@@ -275,19 +277,20 @@
       "id": "r32-east-4-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:28:24.706Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "ucla",
           "uconn"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:28:24.716Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"uconn\",\n      \"teamName\": \"UConn\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"ucla\",\n      \"teamName\": \"UCLA\",\n      \"torvik\": {\n        \"rank\": 24,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.49524577151492,\n        \"oe Rank\": 17,\n        \"adjde\": 101.73772797460148,\n        \"de Rank\": 49\n      },\n      \"kenpom\": {\n        \"rank\": 27,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adj_em\": 21.64,\n        \"adj_o\": 123.8,\n        \"adj_o_rank\": 22,\n        \"adj_d\": 102.1\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -370,8 +373,7 @@
             "ncsos_adj_em_rank": 248
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"uconn\",\n      \"teamName\": \"UConn\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"ucla\",\n      \"teamName\": \"UCLA\",\n      \"torvik\": {\n        \"rank\": 24,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adjoe\": 124.49524577151492,\n        \"oe Rank\": 17,\n        \"adjde\": 101.73772797460148,\n        \"de Rank\": 49\n      },\n      \"kenpom\": {\n        \"rank\": 27,\n        \"team\": \"UCLA\",\n        \"conf\": \"B10\",\n        \"record\": \"23-11\",\n        \"adj_em\": 21.64,\n        \"adj_o\": 123.8,\n        \"adj_o_rank\": 22,\n        \"adj_d\": 102.1\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-east-4-assistant-1",
@@ -383,22 +385,22 @@
       "id": "r32-east-4-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:28:30.672Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "2026 UConn basketball ratings Bart Torvik KenPom",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:28:31.386Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-4-assistant-2",
@@ -410,22 +412,22 @@
       "id": "r32-east-4-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:28:35.565Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "UConn 2026 basketball",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:28:36.177Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-4-assistant-3",
@@ -437,23 +439,23 @@
       "id": "r32-east-4-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:28:51.946Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.espn.com/mens-college-basketball/team/_/id/41/uconn-huskies",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:28:52.314Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/_/id/41/uconn-huskies\",\n    \"text\": \"UConn Huskies Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search 7 UConn Huskies 29-5 2nd in Big East Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 15 Furman 3/20 10:00 pm TBS Regular Season vs New Haven W 79-55 vs UMass Lowell W 110-47 vs Columbia W 89-62 vs 7 BYU W 86-84 vs 4 Arizona L 71-67 vs Bryant W 72-49 vs 13 Illinois W 74-61 @ 21 Kansas W 61-56 vs E Texas A&M W 83-59 vs 18 Florida W 77-73 vs Texas W 71-63 vs Butler W 79-60 @ DePaul W 72-54 @ Xavier W 90-67 vs Marquette W 73-57 @ Providence W 103-98 vs DePaul W 72-60 @ 25 Seton Hall W 69-64 @ Georgetown W 64-62 vs Villanova W 75-67 vs Providence W 87-81 @ Creighton W 85-58 vs Xavier W 92-60 @ 22 St John&#x27;s L 81-72 @ Butler W 80-70 vs Georgetown W 79-75 vs Creighton L 91-84 @ Villanova W 73-63 vs 15 St John&#x27;s W 72-40 vs Seton Hall W 71-67 @ Marquette L 68-62 vs Xavier W 93-68 vs Georgetown W 67-51 @ 13 St John&#x27;s L 72-52 Full Schedule Huskies NCAAM Joe ... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.espn.com/mens-college-basketball/team/_/id/41/uconn-huskies",
         "text": "UConn Huskies Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search 7 UConn Huskies 29-5 2nd in Big East Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 15 Furman 3/20 10:00 pm TBS Regular Season vs New Haven W 79-55 vs UMass Lowell W 110-47 vs Columbia W 89-62 vs 7 BYU W 86-84 vs 4 Arizona L 71-67 vs Bryant W 72-49 vs 13 Illinois W 74-61 @ 21 Kansas W 61-56 vs E Texas A&M W 83-59 vs 18 Florida W 77-73 vs Texas W 71-63 vs Butler W 79-60 @ DePaul W 72-54 @ Xavier W 90-67 vs Marquette W 73-57 @ Providence W 103-98 vs DePaul W 72-60 @ 25 Seton Hall W 69-64 @ Georgetown W 64-62 vs Villanova W 75-67 vs Providence W 87-81 @ Creighton W 85-58 vs Xavier W 92-60 @ 22 St John&#x27;s L 81-72 @ Butler W 80-70 vs Georgetown W 79-75 vs Creighton L 91-84 @ Villanova W 73-63 vs 15 St John&#x27;s W 72-40 vs Seton Hall W 71-67 @ Marquette L 68-62 vs Xavier W 93-68 vs Georgetown W 67-51 @ 13 St John&#x27;s L 72-52 Full Schedule Huskies NCAAM Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026 21h Joe Lunardi Illustration by ESPN Men&#x27;s tournament odds: Duke ahead of Michigan, Arizona to win tournament 21h Doug Greenberg Lance King/Getty Images Huskies NCAAM Ament, Dybantsa, and co. - Nine African players to watch at March Madness 1d Leonard Solms (AP Photo/Tony Gutierrez) Huskies NCAAM No. 2 UConn vs. No. 15 Furman game preview 21h Huskies NCAAM Men&#x27;s basketball coaching carousel tracker: Who could be up next at Butler? 2d Jeff Borzello Zach Bolinger/Icon Sportswire Hour 1: World Baseball Classic, plus ESPN College Basketball Analyst Seth Greenberg Rich Eisen reacts to TEAM USA defeating the Dominican Republic to advance to the finals of the WBC where they will face either Italy or Venezuela. ESPN College B"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/_/id/41/uconn-huskies\",\n    \"text\": \"UConn Huskies Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search 7 UConn Huskies 29-5 2nd in Big East Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 15 Furman 3/20 10:00 pm TBS Regular Season vs New Haven W 79-55 vs UMass Lowell W 110-47 vs Columbia W 89-62 vs 7 BYU W 86-84 vs 4 Arizona L 71-67 vs Bryant W 72-49 vs 13 Illinois W 74-61 @ 21 Kansas W 61-56 vs E Texas A&M W 83-59 vs 18 Florida W 77-73 vs Texas W 71-63 vs Butler W 79-60 @ DePaul W 72-54 @ Xavier W 90-67 vs Marquette W 73-57 @ Providence W 103-98 vs DePaul W 72-60 @ 25 Seton Hall W 69-64 @ Georgetown W 64-62 vs Villanova W 75-67 vs Providence W 87-81 @ Creighton W 85-58 vs Xavier W 92-60 @ 22 St John&#x27;s L 81-72 @ Butler W 80-70 vs Georgetown W 79-75 vs Creighton L 91-84 @ Villanova W 73-63 vs 15 St John&#x27;s W 72-40 vs Seton Hall W 71-67 @ Marquette L 68-62 vs Xavier W 93-68 vs Georgetown W 67-51 @ 13 St John&#x27;s L 72-52 Full Schedule Huskies NCAAM Joe ... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-4-assistant-4",
@@ -465,23 +467,23 @@
       "id": "r32-east-4-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:28:59.960Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.espn.com/mens-college-basketball/team/_/id/26/ucla-bruins",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:00.192Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/_/id/26/ucla-bruins\",\n    \"text\": \"UCLA Bruins Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UCLA Bruins 23-11 6th in Big Ten Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 10 UCF 3/20 7:25 pm TBS Regular Season vs E Washington W 80-74 vs Pepperdine W 74-63 vs West Georgia W 83-62 vs 5 Arizona L 69-65 vs Sacramento St W 79-48 vs Presbyterian W 86-46 vs California L 80-72 @ Washington W 82-80 vs Oregon W 74-63 vs 8 Gonzaga L 82-72 vs Arizona St W 90-77 vs Cal Poly W 108-87 vs UC Riverside W 97-65 @ 25 Iowa L 74-61 @ Wisconsin L 80-72 vs Maryland W 67-55 @ Penn State W 71-60 @ Ohio State L 86-74 vs 4 Purdue W 69-67 vs Northwestern W 71-64 @ Oregon W 73-57 vs Indiana L 98-97 vs Rutgers W 98-66 vs Washington W 77-73 @ 2 Michigan L 86-56 @ 15 Michigan St L 82-59 vs 10 Illinois W 95-94 vs USC W 81-62 @ Minnesota L 78-73 vs 9 Nebraska W 72-52 @ USC W 89-68 vs Rutgers W 72-59 vs 8 Michigan St W 88-84 vs 18 Purdue L 73-66 Full Schedule Bruins NCAAM Joe Lunardi&#... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.espn.com/mens-college-basketball/team/_/id/26/ucla-bruins",
         "text": "UCLA Bruins Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UCLA Bruins 23-11 6th in Big Ten Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 10 UCF 3/20 7:25 pm TBS Regular Season vs E Washington W 80-74 vs Pepperdine W 74-63 vs West Georgia W 83-62 vs 5 Arizona L 69-65 vs Sacramento St W 79-48 vs Presbyterian W 86-46 vs California L 80-72 @ Washington W 82-80 vs Oregon W 74-63 vs 8 Gonzaga L 82-72 vs Arizona St W 90-77 vs Cal Poly W 108-87 vs UC Riverside W 97-65 @ 25 Iowa L 74-61 @ Wisconsin L 80-72 vs Maryland W 67-55 @ Penn State W 71-60 @ Ohio State L 86-74 vs 4 Purdue W 69-67 vs Northwestern W 71-64 @ Oregon W 73-57 vs Indiana L 98-97 vs Rutgers W 98-66 vs Washington W 77-73 @ 2 Michigan L 86-56 @ 15 Michigan St L 82-59 vs 10 Illinois W 95-94 vs USC W 81-62 @ Minnesota L 78-73 vs 9 Nebraska W 72-52 @ USC W 89-68 vs Rutgers W 72-59 vs 8 Michigan St W 88-84 vs 18 Purdue L 73-66 Full Schedule Bruins NCAAM Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026 21h Joe Lunardi Illustration by ESPN Hour 1: World Baseball Classic, plus ESPN College Basketball Analyst Seth Greenberg Rich Eisen reacts to TEAM USA defeating the Dominican Republic to advance to the finals of the WBC where they will face either Italy or Venezuela. ESPN College Basketball Analyst Seth Greenberg joins Rich and discusses the seeding in the regions, coach Rick Pitino and John Calipari turning around programs at St. John’s and Arkansas, some upset specials in the tournament, if Miami of Ohio deserves to get the seeding that they did, Dan Hurley and UConn squaring off against UCLA and Mick Cronin, who he likes to see in the Final Four. Learn more about your ad choices. Visit podcastchoices.com/adchoices 2d Bruins NCAAM UCL"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/_/id/26/ucla-bruins\",\n    \"text\": \"UCLA Bruins Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UCLA Bruins 23-11 6th in Big Ten Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 10 UCF 3/20 7:25 pm TBS Regular Season vs E Washington W 80-74 vs Pepperdine W 74-63 vs West Georgia W 83-62 vs 5 Arizona L 69-65 vs Sacramento St W 79-48 vs Presbyterian W 86-46 vs California L 80-72 @ Washington W 82-80 vs Oregon W 74-63 vs 8 Gonzaga L 82-72 vs Arizona St W 90-77 vs Cal Poly W 108-87 vs UC Riverside W 97-65 @ 25 Iowa L 74-61 @ Wisconsin L 80-72 vs Maryland W 67-55 @ Penn State W 71-60 @ Ohio State L 86-74 vs 4 Purdue W 69-67 vs Northwestern W 71-64 @ Oregon W 73-57 vs Indiana L 98-97 vs Rutgers W 98-66 vs Washington W 77-73 @ 2 Michigan L 86-56 @ 15 Michigan St L 82-59 vs 10 Illinois W 95-94 vs USC W 81-62 @ Minnesota L 78-73 vs 9 Nebraska W 72-52 @ USC W 89-68 vs Rutgers W 72-59 vs 8 Michigan St W 88-84 vs 18 Purdue L 73-66 Full Schedule Bruins NCAAM Joe Lunardi&#... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-4-assistant-5",
@@ -493,23 +495,23 @@
       "id": "r32-east-4-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:09.486Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://barttorvik.com/team.php?team=UConn",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:10.131Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://barttorvik.com/team.php?team=UConn\",\n    \"text\": \"Verifying Browser... Verifying your browser, please wait...\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://barttorvik.com/team.php?team=UConn",
         "text": "Verifying Browser... Verifying your browser, please wait..."
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://barttorvik.com/team.php?team=UConn\",\n    \"text\": \"Verifying Browser... Verifying your browser, please wait...\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-4-assistant-6",
@@ -521,23 +523,23 @@
       "id": "r32-east-4-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:23.271Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.espn.com/mens-college-basketball/team/_/id/26/ucla-bruins/news",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:23.690Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/_/id/26/ucla-bruins/news\",\n    \"text\": \"UCLA Bruins Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UCLA Bruins 23-11 6th in Big Ten Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 10 UCF 3/20 7:25 pm TBS Regular Season vs E Washington W 80-74 vs Pepperdine W 74-63 vs West Georgia W 83-62 vs 5 Arizona L 69-65 vs Sacramento St W 79-48 vs Presbyterian W 86-46 vs California L 80-72 @ Washington W 82-80 vs Oregon W 74-63 vs 8 Gonzaga L 82-72 vs Arizona St W 90-77 vs Cal Poly W 108-87 vs UC Riverside W 97-65 @ 25 Iowa L 74-61 @ Wisconsin L 80-72 vs Maryland W 67-55 @ Penn State W 71-60 @ Ohio State L 86-74 vs 4 Purdue W 69-67 vs Northwestern W 71-64 @ Oregon W 73-57 vs Indiana L 98-97 vs Rutgers W 98-66 vs Washington W 77-73 @ 2 Michigan L 86-56 @ 15 Michigan St L 82-59 vs 10 Illinois W 95-94 vs USC W 81-62 @ Minnesota L 78-73 vs 9 Nebraska W 72-52 @ USC W 89-68 vs Rutgers W 72-59 vs 8 Michigan St W 88-84 vs 18 Purdue L 73-66 Full Schedule Bruins NCAAM Joe Lunardi&#... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.espn.com/mens-college-basketball/team/_/id/26/ucla-bruins/news",
         "text": "UCLA Bruins Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UCLA Bruins 23-11 6th in Big Ten Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 10 UCF 3/20 7:25 pm TBS Regular Season vs E Washington W 80-74 vs Pepperdine W 74-63 vs West Georgia W 83-62 vs 5 Arizona L 69-65 vs Sacramento St W 79-48 vs Presbyterian W 86-46 vs California L 80-72 @ Washington W 82-80 vs Oregon W 74-63 vs 8 Gonzaga L 82-72 vs Arizona St W 90-77 vs Cal Poly W 108-87 vs UC Riverside W 97-65 @ 25 Iowa L 74-61 @ Wisconsin L 80-72 vs Maryland W 67-55 @ Penn State W 71-60 @ Ohio State L 86-74 vs 4 Purdue W 69-67 vs Northwestern W 71-64 @ Oregon W 73-57 vs Indiana L 98-97 vs Rutgers W 98-66 vs Washington W 77-73 @ 2 Michigan L 86-56 @ 15 Michigan St L 82-59 vs 10 Illinois W 95-94 vs USC W 81-62 @ Minnesota L 78-73 vs 9 Nebraska W 72-52 @ USC W 89-68 vs Rutgers W 72-59 vs 8 Michigan St W 88-84 vs 18 Purdue L 73-66 Full Schedule Bruins NCAAM Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026 21h Joe Lunardi Illustration by ESPN Hour 1: World Baseball Classic, plus ESPN College Basketball Analyst Seth Greenberg Rich Eisen reacts to TEAM USA defeating the Dominican Republic to advance to the finals of the WBC where they will face either Italy or Venezuela. ESPN College Basketball Analyst Seth Greenberg joins Rich and discusses the seeding in the regions, coach Rick Pitino and John Calipari turning around programs at St. John’s and Arkansas, some upset specials in the tournament, if Miami of Ohio deserves to get the seeding that they did, Dan Hurley and UConn squaring off against UCLA and Mick Cronin, who he likes to see in the Final Four. Learn more about your ad choices. Visit podcastchoices.com/adchoices 2d Bruins NCAAM UCL"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/_/id/26/ucla-bruins/news\",\n    \"text\": \"UCLA Bruins Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UCLA Bruins 23-11 6th in Big Ten Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 10 UCF 3/20 7:25 pm TBS Regular Season vs E Washington W 80-74 vs Pepperdine W 74-63 vs West Georgia W 83-62 vs 5 Arizona L 69-65 vs Sacramento St W 79-48 vs Presbyterian W 86-46 vs California L 80-72 @ Washington W 82-80 vs Oregon W 74-63 vs 8 Gonzaga L 82-72 vs Arizona St W 90-77 vs Cal Poly W 108-87 vs UC Riverside W 97-65 @ 25 Iowa L 74-61 @ Wisconsin L 80-72 vs Maryland W 67-55 @ Penn State W 71-60 @ Ohio State L 86-74 vs 4 Purdue W 69-67 vs Northwestern W 71-64 @ Oregon W 73-57 vs Indiana L 98-97 vs Rutgers W 98-66 vs Washington W 77-73 @ 2 Michigan L 86-56 @ 15 Michigan St L 82-59 vs 10 Illinois W 95-94 vs USC W 81-62 @ Minnesota L 78-73 vs 9 Nebraska W 72-52 @ USC W 89-68 vs Rutgers W 72-59 vs 8 Michigan St W 88-84 vs 18 Purdue L 73-66 Full Schedule Bruins NCAAM Joe Lunardi&#... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-4-assistant-7",
@@ -549,23 +551,23 @@
       "id": "r32-east-4-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:30.885Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.espn.com/mens-college-basketball/team/_/id/41/uconn-huskies/news",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:31.482Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/_/id/41/uconn-huskies/news\",\n    \"text\": \"UConn Huskies Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search 7 UConn Huskies 29-5 2nd in Big East Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 15 Furman 3/20 10:00 pm TBS Regular Season vs New Haven W 79-55 vs UMass Lowell W 110-47 vs Columbia W 89-62 vs 7 BYU W 86-84 vs 4 Arizona L 71-67 vs Bryant W 72-49 vs 13 Illinois W 74-61 @ 21 Kansas W 61-56 vs E Texas A&M W 83-59 vs 18 Florida W 77-73 vs Texas W 71-63 vs Butler W 79-60 @ DePaul W 72-54 @ Xavier W 90-67 vs Marquette W 73-57 @ Providence W 103-98 vs DePaul W 72-60 @ 25 Seton Hall W 69-64 @ Georgetown W 64-62 vs Villanova W 75-67 vs Providence W 87-81 @ Creighton W 85-58 vs Xavier W 92-60 @ 22 St John&#x27;s L 81-72 @ Butler W 80-70 vs Georgetown W 79-75 vs Creighton L 91-84 @ Villanova W 73-63 vs 15 St John&#x27;s W 72-40 vs Seton Hall W 71-67 @ Marquette L 68-62 vs Xavier W 93-68 vs Georgetown W 67-51 @ 13 St John&#x27;s L 72-52 Full Schedule Huskies NCAAM Joe ... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.espn.com/mens-college-basketball/team/_/id/41/uconn-huskies/news",
         "text": "UConn Huskies Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search 7 UConn Huskies 29-5 2nd in Big East Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 15 Furman 3/20 10:00 pm TBS Regular Season vs New Haven W 79-55 vs UMass Lowell W 110-47 vs Columbia W 89-62 vs 7 BYU W 86-84 vs 4 Arizona L 71-67 vs Bryant W 72-49 vs 13 Illinois W 74-61 @ 21 Kansas W 61-56 vs E Texas A&M W 83-59 vs 18 Florida W 77-73 vs Texas W 71-63 vs Butler W 79-60 @ DePaul W 72-54 @ Xavier W 90-67 vs Marquette W 73-57 @ Providence W 103-98 vs DePaul W 72-60 @ 25 Seton Hall W 69-64 @ Georgetown W 64-62 vs Villanova W 75-67 vs Providence W 87-81 @ Creighton W 85-58 vs Xavier W 92-60 @ 22 St John&#x27;s L 81-72 @ Butler W 80-70 vs Georgetown W 79-75 vs Creighton L 91-84 @ Villanova W 73-63 vs 15 St John&#x27;s W 72-40 vs Seton Hall W 71-67 @ Marquette L 68-62 vs Xavier W 93-68 vs Georgetown W 67-51 @ 13 St John&#x27;s L 72-52 Full Schedule Huskies NCAAM Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026 21h Joe Lunardi Illustration by ESPN Men&#x27;s tournament odds: Duke ahead of Michigan, Arizona to win tournament 21h Doug Greenberg Lance King/Getty Images Huskies NCAAM Ament, Dybantsa, and co. - Nine African players to watch at March Madness 1d Leonard Solms (AP Photo/Tony Gutierrez) Huskies NCAAM No. 2 UConn vs. No. 15 Furman game preview 21h Huskies NCAAM Men&#x27;s basketball coaching carousel tracker: Who could be up next at Butler? 2d Jeff Borzello Zach Bolinger/Icon Sportswire Hour 1: World Baseball Classic, plus ESPN College Basketball Analyst Seth Greenberg Rich Eisen reacts to TEAM USA defeating the Dominican Republic to advance to the finals of the WBC where they will face either Italy or Venezuela. ESPN College B"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/_/id/41/uconn-huskies/news\",\n    \"text\": \"UConn Huskies Scores, Stats and Highlights - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search 7 UConn Huskies 29-5 2nd in Big East Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator 2025-26 Schedule Postseason vs 15 Furman 3/20 10:00 pm TBS Regular Season vs New Haven W 79-55 vs UMass Lowell W 110-47 vs Columbia W 89-62 vs 7 BYU W 86-84 vs 4 Arizona L 71-67 vs Bryant W 72-49 vs 13 Illinois W 74-61 @ 21 Kansas W 61-56 vs E Texas A&M W 83-59 vs 18 Florida W 77-73 vs Texas W 71-63 vs Butler W 79-60 @ DePaul W 72-54 @ Xavier W 90-67 vs Marquette W 73-57 @ Providence W 103-98 vs DePaul W 72-60 @ 25 Seton Hall W 69-64 @ Georgetown W 64-62 vs Villanova W 75-67 vs Providence W 87-81 @ Creighton W 85-58 vs Xavier W 92-60 @ 22 St John&#x27;s L 81-72 @ Butler W 80-70 vs Georgetown W 79-75 vs Creighton L 91-84 @ Villanova W 73-63 vs 15 St John&#x27;s W 72-40 vs Seton Hall W 71-67 @ Marquette L 68-62 vs Xavier W 93-68 vs Georgetown W 67-51 @ 13 St John&#x27;s L 72-52 Full Schedule Huskies NCAAM Joe ... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-4-assistant-8",
@@ -577,23 +579,23 @@
       "id": "r32-east-4-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:46.962Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.espn.com/mens-college-basketball/team/stats/_/id/41",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:47.331Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/stats/_/id/41\",\n    \"text\": \"UConn Huskies 2025-26 Men&#x27;s College Basketball Stats - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search 7 UConn Huskies 29-5 2nd in Big East Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator UConn Huskies Stats 2025-26 2025-26 2024-25 2023-24 2022-23 2021-22 2020-21 2019-20 2018-19 2017-18 2016-17 2015-16 2014-15 2013-14 2012-13 2011-12 2010-11 2009-10 2008-09 2007-08 2006-07 2005-06 2004-05 2003-04 2002-03 hidden Team leaders Points Tarris Reed Jr. C 13.7 Rebounds Tarris Reed Jr. C 8.1 Assists Silas Demary Jr. G 6.2 Steals Silas Demary Jr. G 1.6 Blocks Tarris Reed Jr. C 2.1 Per Game Stats Name Tarris Reed Jr. C Solo Ball G Alex Karaban F Braylon Mullins G Silas Demary Jr. G Eric Reibe C Jayden Ross F Jaylin Stewart F Malachi Smith G Dwayne Koroma F Alec Millender G Jacob Furphy G Uroš Paunovic G Rrezon Elezaj C Total GP MIN PTS REB AST STL BLK TO FG% FT% 3P% 29 26.2 13.7 8.1 2.3 0.9 2.1 1.9 62.5 56.1 0.0 33 29.1 13.5 3.3 1.6 0.4 0.2 1.2 40.1 84.9 30.6 34 33.8 12.6 5.2 2.3 0.8 0.8... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.espn.com/mens-college-basketball/team/stats/_/id/41",
         "text": "UConn Huskies 2025-26 Men&#x27;s College Basketball Stats - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search 7 UConn Huskies 29-5 2nd in Big East Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator UConn Huskies Stats 2025-26 2025-26 2024-25 2023-24 2022-23 2021-22 2020-21 2019-20 2018-19 2017-18 2016-17 2015-16 2014-15 2013-14 2012-13 2011-12 2010-11 2009-10 2008-09 2007-08 2006-07 2005-06 2004-05 2003-04 2002-03 hidden Team leaders Points Tarris Reed Jr. C 13.7 Rebounds Tarris Reed Jr. C 8.1 Assists Silas Demary Jr. G 6.2 Steals Silas Demary Jr. G 1.6 Blocks Tarris Reed Jr. C 2.1 Per Game Stats Name Tarris Reed Jr. C Solo Ball G Alex Karaban F Braylon Mullins G Silas Demary Jr. G Eric Reibe C Jayden Ross F Jaylin Stewart F Malachi Smith G Dwayne Koroma F Alec Millender G Jacob Furphy G Uroš Paunovic G Rrezon Elezaj C Total GP MIN PTS REB AST STL BLK TO FG% FT% 3P% 29 26.2 13.7 8.1 2.3 0.9 2.1 1.9 62.5 56.1 0.0 33 29.1 13.5 3.3 1.6 0.4 0.2 1.2 40.1 84.9 30.6 34 33.8 12.6 5.2 2.3 0.8 0.8 1.1 47.4 83.8 38.6 27 27.5 12.0 3.5 1.4 1.0 0.7 1.1 43.5 85.2 34.5 34 29.1 10.9 4.5 6.2 1.6 0.2 2.4 46.1 80.6 41.6 34 15.0 6.8 3.8 0.5 0.3 0.8 0.6 66.0 54.3 30.8 32 16.9 4.7 2.4 0.8 0.7 0.4 0.7 51.9 70.4 36.8 28 17.7 4.5 2.8 1.2 0.5 0.3 0.8 44.8 60.0 34.7 34 15.0 3.5 1.5 2.7 0.6 0.1 1.0 36.1 53.5 47.5 16 5.6 1.5 0.9 0.2 0.4 0.1 0.3 56.3 54.5 0.0 16 3.1 0.6 0.3 0.4 0.2 0.0 0.2 30.0 100.0 14.3 13 2.5 0.5 0.1 0.0 0.1 0.0 0.2 42.9 0.0 0.0 13 1.0 0.2 0.1 0.1 0.0 0.0 0.0 50.0 0.0 0.0 4 1.0 0.0 0.8 0.0 0.0 0.3 0.0 0.0 0.0 0.0 34 77.5 36.6 18.4 6.9 5.3 11.2 48.2 71.6 35.2 Season Totals Name Tarris Reed Jr. C Solo Ball G Alex Karaban F Braylon Mullins G Silas Demary Jr. G Eric Reibe C Jayden Ross F Jaylin Stewart F Malachi Smith G Dwayne Koroma F Alec Millender G Jacob Furphy G Uroš Paunovic G Rre"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/stats/_/id/41\",\n    \"text\": \"UConn Huskies 2025-26 Men&#x27;s College Basketball Stats - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search 7 UConn Huskies 29-5 2nd in Big East Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator UConn Huskies Stats 2025-26 2025-26 2024-25 2023-24 2022-23 2021-22 2020-21 2019-20 2018-19 2017-18 2016-17 2015-16 2014-15 2013-14 2012-13 2011-12 2010-11 2009-10 2008-09 2007-08 2006-07 2005-06 2004-05 2003-04 2002-03 hidden Team leaders Points Tarris Reed Jr. C 13.7 Rebounds Tarris Reed Jr. C 8.1 Assists Silas Demary Jr. G 6.2 Steals Silas Demary Jr. G 1.6 Blocks Tarris Reed Jr. C 2.1 Per Game Stats Name Tarris Reed Jr. C Solo Ball G Alex Karaban F Braylon Mullins G Silas Demary Jr. G Eric Reibe C Jayden Ross F Jaylin Stewart F Malachi Smith G Dwayne Koroma F Alec Millender G Jacob Furphy G Uroš Paunovic G Rrezon Elezaj C Total GP MIN PTS REB AST STL BLK TO FG% FT% 3P% 29 26.2 13.7 8.1 2.3 0.9 2.1 1.9 62.5 56.1 0.0 33 29.1 13.5 3.3 1.6 0.4 0.2 1.2 40.1 84.9 30.6 34 33.8 12.6 5.2 2.3 0.8 0.8... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-4-assistant-9",
@@ -605,23 +607,23 @@
       "id": "r32-east-4-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:29:52.897Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.espn.com/mens-college-basketball/team/stats/_/id/26",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-4-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:29:53.442Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/stats/_/id/26\",\n    \"text\": \"UCLA Bruins 2025-26 Men&#x27;s College Basketball Stats - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UCLA Bruins 23-11 6th in Big Ten Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator UCLA Bruins Stats 2025-26 2025-26 2024-25 2023-24 2022-23 2021-22 2020-21 2019-20 2018-19 2017-18 2016-17 2015-16 2014-15 2013-14 2012-13 2011-12 2010-11 2009-10 2008-09 2007-08 2006-07 2005-06 2004-05 2003-04 2002-03 hidden Team leaders Points Tyler Bilodeau F 17.6 Rebounds Eric Dailey Jr. G 5.8 Assists Donovan Dent G 7.6 Steals Donovan Dent G 1.6 Blocks Xavier Booker F 1.1 Per Game Stats Name Tyler Bilodeau F Donovan Dent G Trent Perry G Skyy Clark G Eric Dailey Jr. G Xavier Booker F Jamar Brown G Brandon Williams G Eric Freeny G Steven Jamerson II F Jack Seidler G Anthony Peoples Jr. F Christian Horry G Total GP MIN PTS REB AST STL BLK TO FG% FT% 3P% 31 30.2 17.6 5.6 1.1 0.5 0.4 1.3 51.8 87.3 46.4 33 34.2 13.5 2.9 7.6 1.6 0.3 1.9 42.0 63.6 26.2 33 29.6 12.7 2.9 2.9 0.9 0.1 1.3 44.6 87.4 41.2 24 2... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.espn.com/mens-college-basketball/team/stats/_/id/26",
         "text": "UCLA Bruins 2025-26 Men&#x27;s College Basketball Stats - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UCLA Bruins 23-11 6th in Big Ten Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator UCLA Bruins Stats 2025-26 2025-26 2024-25 2023-24 2022-23 2021-22 2020-21 2019-20 2018-19 2017-18 2016-17 2015-16 2014-15 2013-14 2012-13 2011-12 2010-11 2009-10 2008-09 2007-08 2006-07 2005-06 2004-05 2003-04 2002-03 hidden Team leaders Points Tyler Bilodeau F 17.6 Rebounds Eric Dailey Jr. G 5.8 Assists Donovan Dent G 7.6 Steals Donovan Dent G 1.6 Blocks Xavier Booker F 1.1 Per Game Stats Name Tyler Bilodeau F Donovan Dent G Trent Perry G Skyy Clark G Eric Dailey Jr. G Xavier Booker F Jamar Brown G Brandon Williams G Eric Freeny G Steven Jamerson II F Jack Seidler G Anthony Peoples Jr. F Christian Horry G Total GP MIN PTS REB AST STL BLK TO FG% FT% 3P% 31 30.2 17.6 5.6 1.1 0.5 0.4 1.3 51.8 87.3 46.4 33 34.2 13.5 2.9 7.6 1.6 0.3 1.9 42.0 63.6 26.2 33 29.6 12.7 2.9 2.9 0.9 0.1 1.3 44.6 87.4 41.2 24 28.7 11.7 2.3 2.1 1.2 0.1 0.8 46.0 86.1 43.2 33 27.5 11.3 5.8 1.3 0.9 0.2 1.4 49.0 70.5 31.1 34 19.6 6.9 3.3 0.8 0.2 1.1 0.7 55.0 69.7 41.7 34 16.1 3.9 2.8 0.5 0.6 0.1 0.4 42.7 100.0 32.9 32 12.3 2.7 1.8 0.3 0.4 0.2 0.2 42.7 63.0 24.0 26 10.8 2.2 1.6 0.4 0.3 0.2 0.3 39.6 50.0 37.0 33 9.6 1.8 2.0 0.5 0.6 0.4 0.6 73.3 63.0 0.0 6 1.2 0.3 0.7 0.0 0.0 0.0 0.2 20.0 0.0 0.0 6 1.7 0.3 0.8 0.0 0.0 0.0 0.0 50.0 0.0 0.0 4 1.8 0.0 0.0 0.3 0.0 0.0 0.0 0.0 0.0 0.0 34 77.7 32.3 16.3 6.6 2.9 8.9 47.1 76.7 38.2 Season Totals Name Tyler Bilodeau F Donovan Dent G Trent Perry G Skyy Clark G Eric Dailey Jr. G Xavier Booker F Jamar Brown G Brandon Williams G Eric Freeny G Steven Jamerson II F Jack Seidler G Anthony Peoples Jr. F Christian Horry G Total MIN FGM FGA FTM FTA 3PM 3PA PTS OR DR REB AST TO STL BLK 935"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/stats/_/id/26\",\n    \"text\": \"UCLA Bruins 2025-26 Men&#x27;s College Basketball Stats - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search UCLA Bruins 23-11 6th in Big Ten Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator UCLA Bruins Stats 2025-26 2025-26 2024-25 2023-24 2022-23 2021-22 2020-21 2019-20 2018-19 2017-18 2016-17 2015-16 2014-15 2013-14 2012-13 2011-12 2010-11 2009-10 2008-09 2007-08 2006-07 2005-06 2004-05 2003-04 2002-03 hidden Team leaders Points Tyler Bilodeau F 17.6 Rebounds Eric Dailey Jr. G 5.8 Assists Donovan Dent G 7.6 Steals Donovan Dent G 1.6 Blocks Xavier Booker F 1.1 Per Game Stats Name Tyler Bilodeau F Donovan Dent G Trent Perry G Skyy Clark G Eric Dailey Jr. G Xavier Booker F Jamar Brown G Brandon Williams G Eric Freeny G Steven Jamerson II F Jack Seidler G Anthony Peoples Jr. F Christian Horry G Total GP MIN PTS REB AST STL BLK TO FG% FT% 3P% 31 30.2 17.6 5.6 1.1 0.5 0.4 1.3 51.8 87.3 46.4 33 34.2 13.5 2.9 7.6 1.6 0.3 1.9 42.0 63.6 26.2 33 29.6 12.7 2.9 2.9 0.9 0.1 1.3 44.6 87.4 41.2 24 2... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-4-final-json",

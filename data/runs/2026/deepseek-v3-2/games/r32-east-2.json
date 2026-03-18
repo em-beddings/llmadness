@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r32-east-2",
     "winnerId": "st-john-s",
-    "confidence": "Medium",
+    "confidence": 0.68,
     "rationale": "St. John's earns a narrow edge due to slightly better offensive efficiency, a superior 27-6 record, and a marginally higher overall rating in both Torvik and KenPom. Both teams possess elite top-12 defenses, but the Red Storm's offensive versatility and ability to create scoring opportunities against a similarly stout Kansas defense will be the difference. In a tightly contested matchup where each possession matters, St. John's slightly more potent offense should allow them to advance to the Sweet 16."
   },
   "reasoningStep": {
     "id": "analysis-r32-east-2",
     "title": "Matchup Analysis: St. John's vs Kansas",
     "summary": "Evaluated team ratings, records, defensive strengths, and offensive profiles to assess this toss-up Round of 32 game.",
-    "evidence": "Ratings show St. John's (Torvik #18, KenPom #20, 27-6) with a slight edge over Kansas (Torvik #22, KenPom #21, 23-10). Both have elite defenses (Kansas DE rank 10, St. John's DE rank 12), but St. John's offensive efficiency ranks 47 vs Kansas's 56 (Torvik). The teams are closely matched, giving St. John's a narrow advantage based on overall profile and record."
+    "evidence": [
+      "Ratings show St. John's (Torvik #18, KenPom #20, 27-6) with a slight edge over Kansas (Torvik #22, KenPom #21, 23-10). Both have elite defenses (Kansas DE rank 10, St. John's DE rank 12), but St. John's offensive efficiency ranks 47 vs Kansas's 56 (Torvik). The teams are closely matched, giving St. John's a narrow advantage based on overall profile and record."
+    ]
   },
   "toolCalls": [
     {
@@ -443,19 +445,20 @@
       "id": "r32-east-2-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:24:31.852Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "st-john-s",
           "kansas"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-2-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:24:31.860Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"kansas\",\n      \"teamName\": \"Kansas\",\n      \"torvik\": {\n        \"rank\": 22,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adjoe\": 117.9504990311845,\n        \"oe Rank\": 56,\n        \"adjde\": 94.37707528872744,\n        \"de Rank\": 10\n      },\n      \"kenpom\": {\n        \"rank\": 21,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adj_em\": 24.48,\n        \"adj_o\": 118.4,\n        \"adj_o_rank\": 57,\n        \"adj_d\": 94\n      }\n    },\n    {\n      \"teamId\": \"st-john-s\",\n      \"teamName\": \"St. John's\",\n      \"torvik\": {\n        \"rank\": 18,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adjoe\": 119.42892421267956,\n        \"oe Rank\": 47,\n        \"adjde\": 94.83902875441956,\n        \"de Rank\": 12\n      },\n      \"kenpom\": {\n        \"rank\": 20,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adj_em\": 24.8,\n        \"adj_o\": 119.9,\n        \"adj_o_rank\": 46,\n        \"adj_d\": 95.1\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -606,8 +609,7 @@
             "ncsos_adj_em_rank": 44
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"kansas\",\n      \"teamName\": \"Kansas\",\n      \"torvik\": {\n        \"rank\": 22,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adjoe\": 117.9504990311845,\n        \"oe Rank\": 56,\n        \"adjde\": 94.37707528872744,\n        \"de Rank\": 10\n      },\n      \"kenpom\": {\n        \"rank\": 21,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adj_em\": 24.48,\n        \"adj_o\": 118.4,\n        \"adj_o_rank\": 57,\n        \"adj_d\": 94\n      }\n    },\n    {\n      \"teamId\": \"st-john-s\",\n      \"teamName\": \"St. John's\",\n      \"torvik\": {\n        \"rank\": 18,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adjoe\": 119.42892421267956,\n        \"oe Rank\": 47,\n        \"adjde\": 94.83902875441956,\n        \"de Rank\": 12\n      },\n      \"kenpom\": {\n        \"rank\": 20,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adj_em\": 24.8,\n        \"adj_o\": 119.9,\n        \"adj_o_rank\": 46,\n        \"adj_d\": 95.1\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-east-2-assistant-1",
@@ -619,22 +621,22 @@
       "id": "r32-east-2-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:24:40.344Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "St. John's basketball March 2026 tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-2-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:24:40.952Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-2-assistant-2",
@@ -646,22 +648,22 @@
       "id": "r32-east-2-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:24:45.091Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "St. John's Kansas 2026 March Madness matchup preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-2-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:24:45.797Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-2-assistant-3",
@@ -673,22 +675,22 @@
       "id": "r32-east-2-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:24:52.563Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "St. John's injury 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-2-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:24:53.253Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-2-assistant-4",
@@ -700,18 +702,19 @@
       "id": "r32-east-2-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:25:16.985Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r32-east-2"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-2-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:25:16.985Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r32-east-2\",\n      \"round\": \"Round of 32\",\n      \"region\": \"East\",\n      \"label\": \"East Round of 32 2\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-east-3\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-east-4\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -728,8 +731,7 @@
             "gameId": "r64-east-4"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r32-east-2\",\n      \"round\": \"Round of 32\",\n      \"region\": \"East\",\n      \"label\": \"East Round of 32 2\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-east-3\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-east-4\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-east-2-assistant-5",
@@ -741,19 +743,20 @@
       "id": "r32-east-2-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:25:22.042Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "st-john-s",
           "kansas"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-2-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:25:22.050Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"kansas\",\n      \"teamName\": \"Kansas\",\n      \"torvik\": {\n        \"rank\": 22,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adjoe\": 117.9504990311845,\n        \"oe Rank\": 56,\n        \"adjde\": 94.37707528872744,\n        \"de Rank\": 10\n      },\n      \"kenpom\": {\n        \"rank\": 21,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adj_em\": 24.48,\n        \"adj_o\": 118.4,\n        \"adj_o_rank\": 57,\n        \"adj_d\": 94\n      }\n    },\n    {\n      \"teamId\": \"st-john-s\",\n      \"teamName\": \"St. John's\",\n      \"torvik\": {\n        \"rank\": 18,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adjoe\": 119.42892421267956,\n        \"oe Rank\": 47,\n        \"adjde\": 94.83902875441956,\n        \"de Rank\": 12\n      },\n      \"kenpom\": {\n        \"rank\": 20,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adj_em\": 24.8,\n        \"adj_o\": 119.9,\n        \"adj_o_rank\": 46,\n        \"adj_d\": 95.1\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -904,8 +907,7 @@
             "ncsos_adj_em_rank": 44
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"kansas\",\n      \"teamName\": \"Kansas\",\n      \"torvik\": {\n        \"rank\": 22,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adjoe\": 117.9504990311845,\n        \"oe Rank\": 56,\n        \"adjde\": 94.37707528872744,\n        \"de Rank\": 10\n      },\n      \"kenpom\": {\n        \"rank\": 21,\n        \"team\": \"Kansas\",\n        \"conf\": \"B12\",\n        \"record\": \"23-10\",\n        \"adj_em\": 24.48,\n        \"adj_o\": 118.4,\n        \"adj_o_rank\": 57,\n        \"adj_d\": 94\n      }\n    },\n    {\n      \"teamId\": \"st-john-s\",\n      \"teamName\": \"St. John's\",\n      \"torvik\": {\n        \"rank\": 18,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adjoe\": 119.42892421267956,\n        \"oe Rank\": 47,\n        \"adjde\": 94.83902875441956,\n        \"de Rank\": 12\n      },\n      \"kenpom\": {\n        \"rank\": 20,\n        \"team\": \"St. John's\",\n        \"conf\": \"BE\",\n        \"record\": \"27-6\",\n        \"adj_em\": 24.8,\n        \"adj_o\": 119.9,\n        \"adj_o_rank\": 46,\n        \"adj_d\": 95.1\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-east-2-assistant-final-6",

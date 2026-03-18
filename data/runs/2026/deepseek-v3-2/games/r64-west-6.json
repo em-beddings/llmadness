@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-west-6",
     "winnerId": "gonzaga",
-    "confidence": "Very High",
+    "confidence": 0.93,
     "rationale": "Gonzaga's elite defensive efficiency, ranking 9th nationally, and a 30-3 record built against a strong schedule create an overwhelming mismatch against a Kennesaw State team lacking a comparable rating profile. The Bulldogs' high-major talent and consistent tournament pedigree provide the discipline to avoid a historic upset. While any 14-seed is capable of a shock, the vast gap in team quality and Gonzaga's defensive prowess makes a Kennesaw State victory highly improbable."
   },
   "reasoningStep": {
     "id": "r64-west-6-analysis",
     "title": "Evaluating Gonzaga vs Kennesaw State matchup",
     "summary": "Gonzaga's top-10 defensive ratings and high seed contrast sharply with Kennesaw State's unranked profile, indicating a substantial talent and experience gap that heavily favors the Bulldogs.",
-    "evidence": "Gonzaga ranks 11th in both Torvik and KenPom with a 30-3 record, a top-10 defense, and a top-30 offense. Kennesaw State lacks any rating in major efficiency systems, suggesting they are a low-major team outside the top 100. Historical 3-14 seed matchups show the higher seed wins approximately 85-90% of the time."
+    "evidence": [
+      "Gonzaga ranks 11th in both Torvik and KenPom with a 30-3 record, a top-10 defense, and a top-30 offense. Kennesaw State lacks any rating in major efficiency systems, suggesting they are a low-major team outside the top 100. Historical 3-14 seed matchups show the higher seed wins approximately 85-90% of the time."
+    ]
   },
   "toolCalls": [
     {
@@ -942,19 +944,20 @@
       "id": "r64-west-6-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:50:55.390Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "gonzaga",
           "kennesaw-state"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-6-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:50:55.397Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"gonzaga\",\n      \"teamName\": \"Gonzaga\",\n      \"torvik\": {\n        \"rank\": 11,\n        \"team\": \"Gonzaga\",\n        \"conf\": \"WCC\",\n        \"record\": \"30-3\",\n        \"adjoe\": 120.26205670050366,\n        \"oe Rank\": 37,\n        \"adjde\": 93.97461639541584,\n        \"de Rank\": 9\n      },\n      \"kenpom\": {\n        \"rank\": 11,\n        \"team\": \"Gonzaga\",\n        \"conf\": \"WCC\",\n        \"record\": \"30-3\",\n        \"adj_em\": 28.16,\n        \"adj_o\": 122.1,\n        \"adj_o_rank\": 30,\n        \"adj_d\": 93.9\n      }\n    },\n    {\n      \"teamId\": \"kennesaw-state\",\n      \"teamName\": \"Kennesaw State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -1037,8 +1040,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"gonzaga\",\n      \"teamName\": \"Gonzaga\",\n      \"torvik\": {\n        \"rank\": 11,\n        \"team\": \"Gonzaga\",\n        \"conf\": \"WCC\",\n        \"record\": \"30-3\",\n        \"adjoe\": 120.26205670050366,\n        \"oe Rank\": 37,\n        \"adjde\": 93.97461639541584,\n        \"de Rank\": 9\n      },\n      \"kenpom\": {\n        \"rank\": 11,\n        \"team\": \"Gonzaga\",\n        \"conf\": \"WCC\",\n        \"record\": \"30-3\",\n        \"adj_em\": 28.16,\n        \"adj_o\": 122.1,\n        \"adj_o_rank\": 30,\n        \"adj_d\": 93.9\n      }\n    },\n    {\n      \"teamId\": \"kennesaw-state\",\n      \"teamName\": \"Kennesaw State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-6-assistant-1",
@@ -1050,22 +1052,22 @@
       "id": "r64-west-6-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:51:02.148Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Gonzaga Kennesaw State March Madness 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-6-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:51:02.864Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-6-assistant-2",
@@ -1077,22 +1079,22 @@
       "id": "r64-west-6-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:51:06.941Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "2026 NCAA tournament Gonzaga vs Kennesaw State preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-6-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:51:07.657Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-6-assistant-3",
@@ -1104,16 +1106,17 @@
       "id": "r64-west-6-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:51:13.003Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "West"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-6-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:51:13.003Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"arizona\",\n      \"name\": \"Arizona\",\n      \"shortName\": \"ARIZ\",\n      \"seed\": 1,\n      \"region\": \"West\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"purdue\",\n      \"name\": \"Purdue\",\n      \"shortName\": \"PUR\",\n      \"seed\": 2,\n      \"region\": \"West\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"gonzaga\",\n      \"name\": \"Gonzaga\",\n      \"shortName\": \"GONZ\",\n      \"seed\": 3,\n      \"region\": \"West\",\n      \"conference\": \"WCC\"\n    },\n    {\n      \"id\": \"arkansas\",\n      \"name\": \"Arkansas\",\n      \"shortName\": \"ARK\",\n      \"seed\": 4,\n      \"region\": \"West\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1252,8 +1255,7 @@
           "region": "West",
           "conference": "SEC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"arizona\",\n      \"name\": \"Arizona\",\n      \"shortName\": \"ARIZ\",\n      \"seed\": 1,\n      \"region\": \"West\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"purdue\",\n      \"name\": \"Purdue\",\n      \"shortName\": \"PUR\",\n      \"seed\": 2,\n      \"region\": \"West\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"gonzaga\",\n      \"name\": \"Gonzaga\",\n      \"shortName\": \"GONZ\",\n      \"seed\": 3,\n      \"region\": \"West\",\n      \"conference\": \"WCC\"\n    },\n    {\n      \"id\": \"arkansas\",\n      \"name\": \"Arkansas\",\n      \"shortName\": \"ARK\",\n      \"seed\": 4,\n      \"region\": \"West\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-6-assistant-4",
@@ -1265,14 +1267,15 @@
       "id": "r64-west-6-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:51:16.178Z",
+      "content": "",
       "toolName": "list_teams",
-      "arguments": {},
-      "content": ""
+      "arguments": {}
     },
     {
       "id": "r64-west-6-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:51:16.179Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1819,8 +1822,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-6-assistant-5",
@@ -1832,22 +1834,22 @@
       "id": "r64-west-6-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:51:22.834Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Gonzaga Bulldogs 2026 NCAA tournament",
         "maxResults": 3
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-6-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:51:23.447Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-6-assistant-6",
@@ -1859,18 +1861,19 @@
       "id": "r64-west-6-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:51:39.740Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-west-6"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-6-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:51:39.740Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"gonzaga\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"kennesaw-state\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -1887,8 +1890,7 @@
             "teamId": "kennesaw-state"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"gonzaga\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"kennesaw-state\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-6-assistant-7",
@@ -1900,18 +1902,19 @@
       "id": "r64-west-6-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:51:42.833Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-west-6"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-6-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:51:42.833Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"gonzaga\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"kennesaw-state\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -1928,8 +1931,7 @@
             "teamId": "kennesaw-state"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"gonzaga\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"kennesaw-state\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-6-assistant-final-8",

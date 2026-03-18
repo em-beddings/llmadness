@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-midwest-4",
     "winnerId": "alabama",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Alabama's elite offense, ranked 3rd nationally in adjusted efficiency, should overwhelm Hofstra's average defense. The Crimson Tide's significant advantage in team quality, built against rigorous SEC competition, provides a level of high-major experience that Hofstra has not consistently faced from the CAA. While 13-seed upsets are possible, the substantial gap in offensive firepower and Alabama's ability to score in bunches makes a credible path to victory for the Pride unlikely."
   },
   "reasoningStep": {
     "id": "analysis-1",
     "title": "Efficiency Rating Comparison",
     "summary": "Alabama holds significant advantages in offensive and defensive efficiency metrics, with a top‑3 offense versus Hofstra's average units.",
-    "evidence": "Torvik ranks Alabama 17th overall (3rd in offense, 67th in defense) and Hofstra 92nd overall (98th in offense, 96th in defense). KenPom similarly rates Alabama 16th overall (3rd in offense) and Hofstra 87th overall. The efficiency margin between the teams is approximately 16–18 points in Alabama's favor, indicating a clear talent and quality disparity."
+    "evidence": [
+      "Torvik ranks Alabama 17th overall (3rd in offense, 67th in defense) and Hofstra 92nd overall (98th in offense, 96th in defense). KenPom similarly rates Alabama 16th overall (3rd in offense) and Hofstra 87th overall. The efficiency margin between the teams is approximately 16–18 points in Alabama's favor, indicating a clear talent and quality disparity."
+    ]
   },
   "toolCalls": [
     {
@@ -848,14 +850,15 @@
       "id": "r64-midwest-4-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:14:08.947Z",
+      "content": "",
       "toolName": "list_teams",
-      "arguments": {},
-      "content": ""
+      "arguments": {}
     },
     {
       "id": "r64-midwest-4-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:14:08.948Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1402,8 +1405,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-4-assistant-1",
@@ -1415,19 +1417,20 @@
       "id": "r64-midwest-4-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:14:13.493Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "alabama",
           "hofstra"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-4-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:14:13.503Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"alabama\",\n      \"teamName\": \"Alabama\",\n      \"torvik\": {\n        \"rank\": 17,\n        \"team\": \"Alabama\",\n        \"conf\": \"SEC\",\n        \"record\": \"23-9\",\n        \"adjoe\": 129.42508711343658,\n        \"oe Rank\": 3,\n        \"adjde\": 102.76885539714294,\n        \"de Rank\": 67\n      },\n      \"kenpom\": {\n        \"rank\": 16,\n        \"team\": \"Alabama\",\n        \"conf\": \"SEC\",\n        \"record\": \"23-9\",\n        \"adj_em\": 25.64,\n        \"adj_o\": 129,\n        \"adj_o_rank\": 3,\n        \"adj_d\": 103.4\n      }\n    },\n    {\n      \"teamId\": \"hofstra\",\n      \"teamName\": \"Hofstra\",\n      \"torvik\": {\n        \"rank\": 92,\n        \"team\": \"Hofstra\",\n        \"conf\": \"CAA\",\n        \"record\": \"24-10\",\n        \"adjoe\": 113.1634134831088,\n        \"oe Rank\": 98,\n        \"adjde\": 104.97063398952396,\n        \"de Rank\": 96\n      },\n      \"kenpom\": {\n        \"rank\": 87,\n        \"team\": \"Hofstra\",\n        \"conf\": \"CAA\",\n        \"record\": \"24-10\",\n        \"adj_em\": 9.46,\n        \"adj_o\": 114.6,\n        \"adj_o_rank\": 89,\n        \"adj_d\": 105.1\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -1578,8 +1581,7 @@
             "ncsos_adj_em_rank": 104
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"alabama\",\n      \"teamName\": \"Alabama\",\n      \"torvik\": {\n        \"rank\": 17,\n        \"team\": \"Alabama\",\n        \"conf\": \"SEC\",\n        \"record\": \"23-9\",\n        \"adjoe\": 129.42508711343658,\n        \"oe Rank\": 3,\n        \"adjde\": 102.76885539714294,\n        \"de Rank\": 67\n      },\n      \"kenpom\": {\n        \"rank\": 16,\n        \"team\": \"Alabama\",\n        \"conf\": \"SEC\",\n        \"record\": \"23-9\",\n        \"adj_em\": 25.64,\n        \"adj_o\": 129,\n        \"adj_o_rank\": 3,\n        \"adj_d\": 103.4\n      }\n    },\n    {\n      \"teamId\": \"hofstra\",\n      \"teamName\": \"Hofstra\",\n      \"torvik\": {\n        \"rank\": 92,\n        \"team\": \"Hofstra\",\n        \"conf\": \"CAA\",\n        \"record\": \"24-10\",\n        \"adjoe\": 113.1634134831088,\n        \"oe Rank\": 98,\n        \"adjde\": 104.97063398952396,\n        \"de Rank\": 96\n      },\n      \"kenpom\": {\n        \"rank\": 87,\n        \"team\": \"Hofstra\",\n        \"conf\": \"CAA\",\n        \"record\": \"24-10\",\n        \"adj_em\": 9.46,\n        \"adj_o\": 114.6,\n        \"adj_o_rank\": 89,\n        \"adj_d\": 105.1\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-4-assistant-2",
@@ -1591,22 +1593,22 @@
       "id": "r64-midwest-4-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:14:20.024Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Alabama basketball March Madness 2026 tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-4-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:14:20.631Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-4-assistant-3",
@@ -1618,22 +1620,22 @@
       "id": "r64-midwest-4-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:14:24.319Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Alabama Crimson Tide basketball 2026 NCAA tournament preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-4-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:14:24.950Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-4-assistant-4",
@@ -1645,22 +1647,22 @@
       "id": "r64-midwest-4-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:14:29.827Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Hofstra Pride 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-4-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:14:30.511Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-4-assistant-5",
@@ -1672,22 +1674,22 @@
       "id": "r64-midwest-4-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:14:42.869Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Alabama basketball injury report March 2026",
         "maxResults": 3
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-4-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:14:43.578Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-4-assistant-6",
@@ -1699,18 +1701,19 @@
       "id": "r64-midwest-4-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:14:56.071Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-midwest-4"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-4-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:14:56.071Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-4\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 4/13\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"alabama\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"hofstra\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -1727,8 +1730,7 @@
             "teamId": "hofstra"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-4\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 4/13\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"alabama\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"hofstra\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-4-assistant-final-7",

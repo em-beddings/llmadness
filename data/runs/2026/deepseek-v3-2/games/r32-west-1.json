@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r32-west-1",
     "winnerId": "arizona",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Arizona's elite efficiency on both ends of the floor, ranking 3rd nationally with a top-10 offense and top-3 defense, creates a substantial mismatch against Utah State. The Wildcats' 31-2 record was built against a rigorous Big 12 schedule, providing high-major experience that the Aggies' Mountain West campaign cannot match. While Utah State is a solid team with good metrics, they lack the firepower to keep pace with Arizona's balanced attack and defensive intensity over 40 minutes."
   },
   "reasoningStep": {
     "id": "r32-west-1-analysis",
     "title": "Compare team ratings and tournament performance",
     "summary": "Arizona's elite top-3 efficiency on both offense and defense, coupled with a 31-2 record from the rigorous Big 12, provides a significant advantage over Utah State, which is a solid team but ranks around 30th in efficiency metrics.",
-    "evidence": "Arizona's Torvik rank: 3, adjoe rank: 10, adjde rank: 3, record 31-2 (Big 12). Utah State's KenPom rank: 30, NET rank: 26, record 28-6, Mountain West champion, top-25 rebounding margin (per bracket breakdown)."
+    "evidence": [
+      "Arizona's Torvik rank: 3, adjoe rank: 10, adjde rank: 3, record 31-2 (Big 12). Utah State's KenPom rank: 30, NET rank: 26, record 28-6, Mountain West champion, top-25 rebounding margin (per bracket breakdown)."
+    ]
   },
   "toolCalls": [
     {
@@ -376,19 +378,20 @@
       "id": "r32-west-1-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:30:42.533Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "arizona",
           "utah-state"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:30:42.540Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"arizona\",\n      \"teamName\": \"Arizona\",\n      \"torvik\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adjoe\": 126.22482613026838,\n        \"oe Rank\": 10,\n        \"adjde\": 91.12598305356042,\n        \"de Rank\": 3\n      },\n      \"kenpom\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adj_em\": 37.56,\n        \"adj_o\": 127.2,\n        \"adj_o_rank\": 7,\n        \"adj_d\": 89.7\n      }\n    },\n    {\n      \"teamId\": \"utah-state\",\n      \"teamName\": \"Utah State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -471,8 +474,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"arizona\",\n      \"teamName\": \"Arizona\",\n      \"torvik\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adjoe\": 126.22482613026838,\n        \"oe Rank\": 10,\n        \"adjde\": 91.12598305356042,\n        \"de Rank\": 3\n      },\n      \"kenpom\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adj_em\": 37.56,\n        \"adj_o\": 127.2,\n        \"adj_o_rank\": 7,\n        \"adj_d\": 89.7\n      }\n    },\n    {\n      \"teamId\": \"utah-state\",\n      \"teamName\": \"Utah State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-west-1-assistant-1",
@@ -484,17 +486,18 @@
       "id": "r32-west-1-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:30:47.581Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "2026 NCAA tournament Utah State basketball ratings efficiency",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:30:48.479Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Power Ranking All 68 Teams in the 2026 Men&#x27;s NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Farticles%2F25406020%2Dpower%2Dranking%2Dall%2D68%2Dteams%2D2026%2Dmens%2Dncaa%2Dtournament&rut=1357351bb4450aba31ce6616ace0919f96ac11c13d59aaa5757404cb616012bf\",\n      \"snippet\": \"Selection Sunday has finally arrived, and with it the 2026 NCAA men&#x27;s basketball tournament field has been set. After months of arguing about NCAA Evaluation Tool (NET) rankings, KenPom ratings ...\"\n    },\n    {\n      \"title\": \"Utah State Aggies RPI Team Sheet 2026 Men&#x27;s Basketball | WarrenNolan.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fteam%2Dsheet%3Fteam%3DUtah%2DState&rut=715e62dbeb2b3c7c7c6b84849ba8d20f77758a25aabaf90b1274730154dfe50a\",\n      \"snippet\": \"The 2026 NCAA Men&#x27;s Basketball Tournament Selection Committee Team Sheet for Utah State Aggies with RPI, Strength of Schedule, Quadrant Records, and Every Game Result Ordered by RPI\"\n    },\n    {\n      \"title\": \"NCAA Basketball Standings & Ratings 2026 | Adjusted Efficiency, Elo ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fdeepmetricanalytics.com%2Fncaabb%2Fstandings%3Fseason%3D2026&rut=792099f12232e7a80067abab7e3b5353d8afc997aeb84641d04bdfa326baca2f\",\n      \"snippet\": \"College basketball standings and advanced ratings for 2026 . Composite ranks, Elo, offensive/defensive efficiency , strength of schedule and win-loss records for every team.\"\n    },\n    {\n      \"title\": \"Latest KenPom Rankings for the 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcleatz.com%2Flatest%2Dkenpom%2Drankings%2F&rut=e00d44a1d343d8c4cdc7d4399fbe5850fe5a668cbfaaf2fc09179eadd61a9cf4\",\n      \"snippet\": \"Understand KenPom Rankings: how teams are rated by adjusted offensive and defensive efficiencies for college basketball .\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -522,8 +525,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbballnet.com%2Fteams%2Futah%2Dstate&rut=b256054b2406ea82e03bc45429bd4bc8d5a7e8e044819f6ab0f11a6e9e0c518c",
           "snippet": "2026 Utah St. Quad wins for NCAA College Basketball . NET rankings and Quadrants are used to help select teams for the NCAA Tournament during March Madness."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Power Ranking All 68 Teams in the 2026 Men&#x27;s NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Farticles%2F25406020%2Dpower%2Dranking%2Dall%2D68%2Dteams%2D2026%2Dmens%2Dncaa%2Dtournament&rut=1357351bb4450aba31ce6616ace0919f96ac11c13d59aaa5757404cb616012bf\",\n      \"snippet\": \"Selection Sunday has finally arrived, and with it the 2026 NCAA men&#x27;s basketball tournament field has been set. After months of arguing about NCAA Evaluation Tool (NET) rankings, KenPom ratings ...\"\n    },\n    {\n      \"title\": \"Utah State Aggies RPI Team Sheet 2026 Men&#x27;s Basketball | WarrenNolan.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fteam%2Dsheet%3Fteam%3DUtah%2DState&rut=715e62dbeb2b3c7c7c6b84849ba8d20f77758a25aabaf90b1274730154dfe50a\",\n      \"snippet\": \"The 2026 NCAA Men&#x27;s Basketball Tournament Selection Committee Team Sheet for Utah State Aggies with RPI, Strength of Schedule, Quadrant Records, and Every Game Result Ordered by RPI\"\n    },\n    {\n      \"title\": \"NCAA Basketball Standings & Ratings 2026 | Adjusted Efficiency, Elo ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fdeepmetricanalytics.com%2Fncaabb%2Fstandings%3Fseason%3D2026&rut=792099f12232e7a80067abab7e3b5353d8afc997aeb84641d04bdfa326baca2f\",\n      \"snippet\": \"College basketball standings and advanced ratings for 2026 . Composite ranks, Elo, offensive/defensive efficiency , strength of schedule and win-loss records for every team.\"\n    },\n    {\n      \"title\": \"Latest KenPom Rankings for the 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcleatz.com%2Flatest%2Dkenpom%2Drankings%2F&rut=e00d44a1d343d8c4cdc7d4399fbe5850fe5a668cbfaaf2fc09179eadd61a9cf4\",\n      \"snippet\": \"Understand KenPom Rankings: how teams are rated by adjusted offensive and defensive efficiencies for college basketball .\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-west-1-assistant-2",
@@ -535,22 +537,22 @@
       "id": "r32-west-1-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:30:53.007Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://bleacherreport.com/articles/25406020-power-ranking-all-68-teams-2026-mens-ncaa-tournament"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:30:53.149Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://bleacherreport.com/articles/25406020-power-ranking-all-68-teams-2026-mens-ncaa-tournament\",\n    \"text\": \"Power Ranking All 68 Teams in the 2026 Men&#x27;s NCAA Tournament Bleacher Report MCBB Home Scores Teams Bracketology Recruiting Highlights nba world football nfl mlb nhl wnba tennis nascar mma boxing wwe all elite wrestling formula 1 golf college football womens college basketball moto gp atlantic ten basketball davidson basketball dayton basketball duquesne basketball fordham basketball george mason basketball gw basketball la salle basketball loyola il basketball rhode island rams basketball richmond spiders basketball st josephs basketball saint louis billikens basketball st bonaventure basketball virginia commonwealth basketball american athletic conference basketball charlotte 49ers basketball east carolina basketball florida atlantic basketball memphis tigers basketball north texas basketball rice owls basketball south florida bulls basketball temple basketball tulane basketball tulsa golden hurricane basketball uab basketball texas san antonio basketball wichita state basketball acc basketball boston college basketball cal bears basketball clemson basketball duke basketball florida state basketball georgia tech basketball louisville cardinals basketball miami hurricanes bas... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://bleacherreport.com/articles/25406020-power-ranking-all-68-teams-2026-mens-ncaa-tournament",
         "text": "Power Ranking All 68 Teams in the 2026 Men&#x27;s NCAA Tournament Bleacher Report MCBB Home Scores Teams Bracketology Recruiting Highlights nba world football nfl mlb nhl wnba tennis nascar mma boxing wwe all elite wrestling formula 1 golf college football womens college basketball moto gp atlantic ten basketball davidson basketball dayton basketball duquesne basketball fordham basketball george mason basketball gw basketball la salle basketball loyola il basketball rhode island rams basketball richmond spiders basketball st josephs basketball saint louis billikens basketball st bonaventure basketball virginia commonwealth basketball american athletic conference basketball charlotte 49ers basketball east carolina basketball florida atlantic basketball memphis tigers basketball north texas basketball rice owls basketball south florida bulls basketball temple basketball tulane basketball tulsa golden hurricane basketball uab basketball texas san antonio basketball wichita state basketball acc basketball boston college basketball cal bears basketball clemson basketball duke basketball florida state basketball georgia tech basketball louisville cardinals basketball miami hurricanes basketball nc state basketball unc basketball notre dame basketball pitt basketball smu basketball stanford basketball syracuse basketball uva basketball virginia tech basketball wake forest basketball america east basketball albany basketball binghamton basketball bryant university basketball maine basketball new hampshire basketball njit basketball umass lowell river hawks basketball umbc basketball vermont basketball atlantic sun basketball austin peay basketball bellarmine basketball central arkansas basketball eastern kentucky basketball florida gulf coast basketball jacksonville basketball lipscomb basketball north alabama basketball north florida basketball queens nc basketball stetson basketball west georgia basketball big 12 basketball arizona wildcats basketball arizona state basketball baylor basketball byu basketball cincinnati bearcats basketball colorado buffaloes basketball houston cougars basketball iowa state basketball kansas jayhawks basketball kansas state basketball oklahoma state basketball tcu basketball texas tech basketball ucf basketball utah utes basketball wvu basketball big east basketball butler basketball uconn basketball creighton basketball depaul basketball georgetown basketball marquette basketball providence friars basketball seton hall basketball st johns basketball villanova basketball xavier basketball big sky basketball eastern washington basketball idaho vandals basketball idaho state basketball montana basketball montana state basketball northern arizona basketball northern colorado basketball portland state basketball sacramento state basketball weber state basketball big south basketball charleston southern basketball gardner webb basketball high point basketball longwood basketball presbyterian basketball radford north carolina "
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://bleacherreport.com/articles/25406020-power-ranking-all-68-teams-2026-mens-ncaa-tournament\",\n    \"text\": \"Power Ranking All 68 Teams in the 2026 Men&#x27;s NCAA Tournament Bleacher Report MCBB Home Scores Teams Bracketology Recruiting Highlights nba world football nfl mlb nhl wnba tennis nascar mma boxing wwe all elite wrestling formula 1 golf college football womens college basketball moto gp atlantic ten basketball davidson basketball dayton basketball duquesne basketball fordham basketball george mason basketball gw basketball la salle basketball loyola il basketball rhode island rams basketball richmond spiders basketball st josephs basketball saint louis billikens basketball st bonaventure basketball virginia commonwealth basketball american athletic conference basketball charlotte 49ers basketball east carolina basketball florida atlantic basketball memphis tigers basketball north texas basketball rice owls basketball south florida bulls basketball temple basketball tulane basketball tulsa golden hurricane basketball uab basketball texas san antonio basketball wichita state basketball acc basketball boston college basketball cal bears basketball clemson basketball duke basketball florida state basketball georgia tech basketball louisville cardinals basketball miami hurricanes bas... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-west-1-assistant-3",
@@ -562,20 +564,20 @@
       "id": "r32-west-1-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:30:57.618Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Utah State basketball 2026 tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:30:57.756Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r32-west-1-assistant-4",
@@ -587,17 +589,18 @@
       "id": "r32-west-1-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:31:03.338Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Utah State KenPom 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:31:04.177Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php&rut=248fa670faa5f05321129c17644292b5e7bf8d2ee254a2c83c801268e2dbd1f3\",\n      \"snippet\": \"Check out our instructional course, Basketball Analytics for Coaches. Use code MARCH for $50 off!\"\n    },\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings - kenpom.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php%3Fy%3D2026&rut=9b34804cfad35b5cbae634e02c885605bfcfae75be908d7c292f7ca6ce29df20\",\n      \"snippet\": \"2026 Pomeroy College Basketball Ratings help 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26 Data includes 9 of 10 games played on Tuesday, March 17\"\n    },\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom%2Dplus.com%2F&rut=3e07313a62fc95d1c271f8273c34da2ea7e0214b7b2a8a52e734bb284ccd3672\",\n      \"snippet\": \"02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26\"\n    },\n    {\n      \"title\": \"Gymnastics Finishes Second at Arizona State Tri Meet\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Futahstateaggies.com%2Fnews%2F2026%2F3%2F15%2Fwomens%2Dgymnastics%2Dgymnastics%2Dfinishes%2Dsecond%2Dat%2Darizona%2Dstate%2Dtri%2Dmeet.aspx&rut=af16067d2436844ecd77a443815646456ac1428b0647a81141efb34a0ba36ec6\",\n      \"snippet\": \"TEMPE, Arizona - Utah State gymnastics scored 196.300 to finish second at the Arizona State Tri Meet held here inside Desert Financial Arena Sunday afternoon. The Aggies finish the regular season with a 16-5 record, which is tied for the fourth-most regular season wins in program history and most since 1986. It is the fifth straight meet that Utah State has scored 196.000 or better, tying ...\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -625,8 +628,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.deseret.com%2Fsports%2F2026%2F03%2F10%2Fbracketology%2Dupdate%2D2026%2Dncaa%2Dtournament%2Dbyu%2Dutah%2Dstate%2Dutah%2Dvalley%2F&rut=9b8f428be4c55983cf2a53ec9b0c2a285a9f2820c538a184dd629ac91108adae",
           "snippet": "The latest on what NCAA Tournament seeds BYU, Utah State and Utah Valley are being projected for during Championship Week."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php&rut=248fa670faa5f05321129c17644292b5e7bf8d2ee254a2c83c801268e2dbd1f3\",\n      \"snippet\": \"Check out our instructional course, Basketball Analytics for Coaches. Use code MARCH for $50 off!\"\n    },\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings - kenpom.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php%3Fy%3D2026&rut=9b34804cfad35b5cbae634e02c885605bfcfae75be908d7c292f7ca6ce29df20\",\n      \"snippet\": \"2026 Pomeroy College Basketball Ratings help 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26 Data includes 9 of 10 games played on Tuesday, March 17\"\n    },\n    {\n      \"title\": \"2026 Pomeroy College Basketball Ratings\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom%2Dplus.com%2F&rut=3e07313a62fc95d1c271f8273c34da2ea7e0214b7b2a8a52e734bb284ccd3672\",\n      \"snippet\": \"02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25 · 26\"\n    },\n    {\n      \"title\": \"Gymnastics Finishes Second at Arizona State Tri Meet\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Futahstateaggies.com%2Fnews%2F2026%2F3%2F15%2Fwomens%2Dgymnastics%2Dgymnastics%2Dfinishes%2Dsecond%2Dat%2Darizona%2Dstate%2Dtri%2Dmeet.aspx&rut=af16067d2436844ecd77a443815646456ac1428b0647a81141efb34a0ba36ec6\",\n      \"snippet\": \"TEMPE, Arizona - Utah State gymnastics scored 196.300 to finish second at the Arizona State Tri Meet held here inside Desert Financial Arena Sunday afternoon. The Aggies finish the regular season with a 16-5 record, which is tied for the fourth-most regular season wins in program history and most since 1986. It is the fifth straight meet that Utah State has scored 196.000 or better, tying ...\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-west-1-assistant-5",
@@ -638,17 +640,18 @@
       "id": "r32-west-1-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:31:10.773Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "\"Utah State\" adjusted efficiency 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:31:11.651Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Passes & fails: Here&#x27;s what happened in Utah&#x27;s 2026 legislative session\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kuer.org%2Fpolitics%2Dgovernment%2F2026%2D03%2D06%2Fpasses%2Dfails%2Dheres%2Dwhat%2Dhappened%2Din%2Dutahs%2D2026%2Dlegislative%2Dsession&rut=e806854d051a96d3a4e3799777bfa3442925eda6640475d3805d8a3561e8e92c\",\n      \"snippet\": \"The exterior of the Utah State Capitol on the first day of the 2026 Utah legislative session in Salt Lake City, Jan. 20, 2026 . Lawmakers adopted a steady pace of passing bills in 2026 , even with a record number of bills introduced.\"\n    },\n    {\n      \"title\": \"march-madness-ai-2026/predictions/gemini_3_1_pro.md at main ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgithub.com%2FRheingoldAI%2Fmarch%2Dmadness%2Dai%2D2026%2Fblob%2Fmain%2Fpredictions%2Fgemini_3_1_pro.md&rut=ff53b93da1df51776f93335a45a8d6e566b15305483666d12700e2361753462c\",\n      \"snippet\": \"(9) Utah State vs. (8) Villanova: Utah State wins (UPSET).Reconciliation: I picked the upset because Utah State boasts better efficiency numbers. Data points: Utah State has a superior KenPom Rank (30 vs. Villanova&#x27;s 33) and a significantly better Adjusted Offensive Efficiency (122.13 vs. 120.44).\"\n    },\n    {\n      \"title\": \"PDF 1st Sub. H.B. 549, ENERGY EFFICIENCY REBATE AMENDMENTS with the ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpf.utleg.gov%2Fpublic%2Dweb%2Fsessions%2F2026GS%2Fcomreport%2FHB0549H01.pdf&rut=b27422ea0e4a50c5c7d16b288f995a2eb4a0b79e88387d7e4b633e4e7ea985e7\",\n      \"snippet\": \"House of Representatives State of Utah UTAH STATE CAPITOL COMPLEX • 350 STATE CAPITOL P.O. BOX 145030 • SALT LAKE CITY, UTAH 84114-5030 • (801)538-1029 February 25, 2026 Mr. Speaker: The Public Utilities and Energy Committee recommends H.B. 549, ENERGY EFFICIENCY REBATE\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -666,8 +669,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fpf.utleg.gov%2Fpublic%2Dweb%2Fsessions%2F2026GS%2Fcomreport%2FHB0549H01.pdf&rut=b27422ea0e4a50c5c7d16b288f995a2eb4a0b79e88387d7e4b633e4e7ea985e7",
           "snippet": "House of Representatives State of Utah UTAH STATE CAPITOL COMPLEX • 350 STATE CAPITOL P.O. BOX 145030 • SALT LAKE CITY, UTAH 84114-5030 • (801)538-1029 February 25, 2026 Mr. Speaker: The Public Utilities and Energy Committee recommends H.B. 549, ENERGY EFFICIENCY REBATE"
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Passes & fails: Here&#x27;s what happened in Utah&#x27;s 2026 legislative session\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kuer.org%2Fpolitics%2Dgovernment%2F2026%2D03%2D06%2Fpasses%2Dfails%2Dheres%2Dwhat%2Dhappened%2Din%2Dutahs%2D2026%2Dlegislative%2Dsession&rut=e806854d051a96d3a4e3799777bfa3442925eda6640475d3805d8a3561e8e92c\",\n      \"snippet\": \"The exterior of the Utah State Capitol on the first day of the 2026 Utah legislative session in Salt Lake City, Jan. 20, 2026 . Lawmakers adopted a steady pace of passing bills in 2026 , even with a record number of bills introduced.\"\n    },\n    {\n      \"title\": \"march-madness-ai-2026/predictions/gemini_3_1_pro.md at main ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgithub.com%2FRheingoldAI%2Fmarch%2Dmadness%2Dai%2D2026%2Fblob%2Fmain%2Fpredictions%2Fgemini_3_1_pro.md&rut=ff53b93da1df51776f93335a45a8d6e566b15305483666d12700e2361753462c\",\n      \"snippet\": \"(9) Utah State vs. (8) Villanova: Utah State wins (UPSET).Reconciliation: I picked the upset because Utah State boasts better efficiency numbers. Data points: Utah State has a superior KenPom Rank (30 vs. Villanova&#x27;s 33) and a significantly better Adjusted Offensive Efficiency (122.13 vs. 120.44).\"\n    },\n    {\n      \"title\": \"PDF 1st Sub. H.B. 549, ENERGY EFFICIENCY REBATE AMENDMENTS with the ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpf.utleg.gov%2Fpublic%2Dweb%2Fsessions%2F2026GS%2Fcomreport%2FHB0549H01.pdf&rut=b27422ea0e4a50c5c7d16b288f995a2eb4a0b79e88387d7e4b633e4e7ea985e7\",\n      \"snippet\": \"House of Representatives State of Utah UTAH STATE CAPITOL COMPLEX • 350 STATE CAPITOL P.O. BOX 145030 • SALT LAKE CITY, UTAH 84114-5030 • (801)538-1029 February 25, 2026 Mr. Speaker: The Public Utilities and Energy Committee recommends H.B. 549, ENERGY EFFICIENCY REBATE\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-west-1-assistant-6",
@@ -679,22 +681,22 @@
       "id": "r32-west-1-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:31:17.396Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://github.com/RheingoldAI/march-madness-ai-2026/blob/main/predictions/gemini_3_1_pro.md"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:31:18.094Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://github.com/RheingoldAI/march-madness-ai-2026/blob/main/predictions/gemini_3_1_pro.md\",\n    \"text\": \"march-madness-ai-2026/predictions/gemini_3_1_pro.md at main · RheingoldAI/march-madness-ai-2026 · GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights Git... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://github.com/RheingoldAI/march-madness-ai-2026/blob/main/predictions/gemini_3_1_pro.md",
         "text": "march-madness-ai-2026/predictions/gemini_3_1_pro.md at main · RheingoldAI/march-madness-ai-2026 · GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners View all resources Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community Accelerator GitHub Stars Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search or jump to... Search code, repositories, users, issues, pull requests... --> Search Clear Search syntax tips Provide feedback --> We read every piece of feedback, and take your input very seriously. Include my email address so I can be contacted Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly --> Name Query To see all available qualifiers, see our documentation . Cancel Create saved search Sign in Sign up Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} RheingoldAI / march-madness-ai-2026 Public Notifications You must be signed in to change notification settings Fork 0 Star 0 Code Issues 0 Pull requests 0 Actions Projects Security 0 Insights Additional navigation options Code Issues Pull requests Actions Projects Security Insights Files Expand file tree main Breadcrumbs march-madness-ai-2026 / predictions / gemini_3_1_pro.md Copy path Blame More file actions Blame More file actions Latest commit History History History "
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://github.com/RheingoldAI/march-madness-ai-2026/blob/main/predictions/gemini_3_1_pro.md\",\n    \"text\": \"march-madness-ai-2026/predictions/gemini_3_1_pro.md at main · RheingoldAI/march-madness-ai-2026 · GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights Git... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-west-1-assistant-7",
@@ -706,17 +708,18 @@
       "id": "r32-west-1-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:31:23.218Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "\"Utah State\" KenPom rank 30",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:31:23.993Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Bracket Breakdown: The West Region - Hammer and Rails\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hammerandrails.com%2Fmens%2Dbasketball%2F58910%2Fbracket%2Dbreakdown%2Dthe%2Dwest%2Dregion&rut=c2daf0ab3d2feb36d6fe7bd424392765597a60c02c75212ebd822aba64018ac2\",\n      \"snippet\": \"No. 9 Utah State (28-6): The Aggies won the Mountain West Tournament to secure an automatic bid in a conference that always seems to be very strong. They are highly ranked in both the NET and Kenpom , going #26 and # 30 , respectively. They have 12 wins against the top 100 and rank in the top 25 for rebounding margin.\"\n    },\n    {\n      \"title\": \"KenPom Rankings (2025-26) - 247Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2F247sports.com%2Fcollege%2Fwest%2Dvirginia%2Fboard%2F105475%2Fcontents%2Fkenpom%2Drankings%2D2025%2D26%2D257327394%2F&rut=1a2e5f1e1333cb908e1857fc87be355c0fa349795bf24445d56d614e2e1515df\",\n      \"snippet\": \"39. Texas 44. Georgia 56. LSU 58. Oklahoma 86. South Carolina TOP 10 OTHERS 8. Gonzaga 30 . San Diego State 42. Utah State 52. Memphis 53. Boise State 54. Dayton 55. Saint Mary&#x27;s 60. VCU 65 ...\"\n    },\n    {\n      \"title\": \"march-madness-ai-2026/predictions/gemini_3_1_pro.md at main ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgithub.com%2FRheingoldAI%2Fmarch%2Dmadness%2Dai%2D2026%2Fblob%2Fmain%2Fpredictions%2Fgemini_3_1_pro.md&rut=ff53b93da1df51776f93335a45a8d6e566b15305483666d12700e2361753462c\",\n      \"snippet\": \"Data points: Utah State has a superior KenPom Rank ( 30 vs. Villanova&#x27;s 33) and a significantly better Adjusted Offensive Efficiency (122.13 vs. 120.44). (5) Wisconsin vs. (12) High Point: Wisconsin wins.\"\n    },\n    {\n      \"title\": \"Boise State makes big jump in KenPom ahead of rematch with Grand Canyon\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fboise%2Dstate%2Fbasketball%2Fboise%2Dstate%2Dmakes%2Dbig%2Djump%2Din%2Dkenpom%2Dahead%2Dof%2Drematch%2Dwith%2Dgrand%2Dcanyon&rut=d9a21f788c1c1f9187df898cbfc79cbe91e67cf4f5bedfdfced3a779103959fc\",\n      \"snippet\": \"Here is a look at each Mountain West team&#x27;s KenPom resume: Utah State Overall rating: 30 Overall record: 17-3 Net rating: +20.87 Offensive rating: 30 Defensive rating: 49 Strength of schedule ...\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -744,8 +747,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fkenpom%2Drankings%2Dboise%2Dstate%2Dshoots%2Dup%2Dafter%2Dutah%2Dstate%2Dvictory%2Far%2DAA1zZYSx&rut=fdf2ecfd4e3ab9c33cf89e04fd525dccadca169393ccf6f90c006e2abb47a633",
           "snippet": "Coming off an 82-65 dismantling of Utah State , the Boise State men&#x27;s basketball team is up to No. 44 in the latest KenPom rankings. The Broncos (20-8, 12-5 Mountain West) rank 42nd nationally in ..."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Bracket Breakdown: The West Region - Hammer and Rails\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hammerandrails.com%2Fmens%2Dbasketball%2F58910%2Fbracket%2Dbreakdown%2Dthe%2Dwest%2Dregion&rut=c2daf0ab3d2feb36d6fe7bd424392765597a60c02c75212ebd822aba64018ac2\",\n      \"snippet\": \"No. 9 Utah State (28-6): The Aggies won the Mountain West Tournament to secure an automatic bid in a conference that always seems to be very strong. They are highly ranked in both the NET and Kenpom , going #26 and # 30 , respectively. They have 12 wins against the top 100 and rank in the top 25 for rebounding margin.\"\n    },\n    {\n      \"title\": \"KenPom Rankings (2025-26) - 247Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2F247sports.com%2Fcollege%2Fwest%2Dvirginia%2Fboard%2F105475%2Fcontents%2Fkenpom%2Drankings%2D2025%2D26%2D257327394%2F&rut=1a2e5f1e1333cb908e1857fc87be355c0fa349795bf24445d56d614e2e1515df\",\n      \"snippet\": \"39. Texas 44. Georgia 56. LSU 58. Oklahoma 86. South Carolina TOP 10 OTHERS 8. Gonzaga 30 . San Diego State 42. Utah State 52. Memphis 53. Boise State 54. Dayton 55. Saint Mary&#x27;s 60. VCU 65 ...\"\n    },\n    {\n      \"title\": \"march-madness-ai-2026/predictions/gemini_3_1_pro.md at main ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgithub.com%2FRheingoldAI%2Fmarch%2Dmadness%2Dai%2D2026%2Fblob%2Fmain%2Fpredictions%2Fgemini_3_1_pro.md&rut=ff53b93da1df51776f93335a45a8d6e566b15305483666d12700e2361753462c\",\n      \"snippet\": \"Data points: Utah State has a superior KenPom Rank ( 30 vs. Villanova&#x27;s 33) and a significantly better Adjusted Offensive Efficiency (122.13 vs. 120.44). (5) Wisconsin vs. (12) High Point: Wisconsin wins.\"\n    },\n    {\n      \"title\": \"Boise State makes big jump in KenPom ahead of rematch with Grand Canyon\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fboise%2Dstate%2Fbasketball%2Fboise%2Dstate%2Dmakes%2Dbig%2Djump%2Din%2Dkenpom%2Dahead%2Dof%2Drematch%2Dwith%2Dgrand%2Dcanyon&rut=d9a21f788c1c1f9187df898cbfc79cbe91e67cf4f5bedfdfced3a779103959fc\",\n      \"snippet\": \"Here is a look at each Mountain West team&#x27;s KenPom resume: Utah State Overall rating: 30 Overall record: 17-3 Net rating: +20.87 Offensive rating: 30 Defensive rating: 49 Strength of schedule ...\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-west-1-assistant-8",
@@ -757,22 +759,22 @@
       "id": "r32-west-1-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:31:29.105Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.hammerandrails.com/mens-basketball/58910/bracket-breakdown-the-west-region"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:31:29.227Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.hammerandrails.com/mens-basketball/58910/bracket-breakdown-the-west-region\",\n    \"text\": \"Bracket Breakdown: The West Region | Hammer and Rails Skip to main content SB Nation SB Nation logo A Purdue Boilermakers Community Hammer and Rails March 18, 2026 Hammer and Rails Notifications Notifications The Feed Sections Purdue Men’s Basketball Purdue Football Purdue Men’s Basketball Recruiting The H&R Column Purdue Football Recruiting Betting FanDuel College Football Odds FanDuel College Basketball Odds Purdue Football Odds Purdue Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Newsletters About Navigation Drawer Login / Sign Up close Close Search The Feed Sections Expand Purdue Men’s Basketball Purdue Football Purdue Men’s Basketball Recruiting The H&R Column Purdue Football Recruiting Betting Expand FanDuel College Football Odds FanDuel College Basketball Odds Purdue Football Odds Purdue Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Newsletters About Community Guidelines All communities Facebook Twitter Youtube RSS Hammer and Rails Bracket Breakdown: The West Region Notifications Notifications Purdue Men&#x27;s Basketball Bracket Breakdown: The West Region by Jed Wilkinson Mar... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.hammerandrails.com/mens-basketball/58910/bracket-breakdown-the-west-region",
         "text": "Bracket Breakdown: The West Region | Hammer and Rails Skip to main content SB Nation SB Nation logo A Purdue Boilermakers Community Hammer and Rails March 18, 2026 Hammer and Rails Notifications Notifications The Feed Sections Purdue Men’s Basketball Purdue Football Purdue Men’s Basketball Recruiting The H&R Column Purdue Football Recruiting Betting FanDuel College Football Odds FanDuel College Basketball Odds Purdue Football Odds Purdue Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Newsletters About Navigation Drawer Login / Sign Up close Close Search The Feed Sections Expand Purdue Men’s Basketball Purdue Football Purdue Men’s Basketball Recruiting The H&R Column Purdue Football Recruiting Betting Expand FanDuel College Football Odds FanDuel College Basketball Odds Purdue Football Odds Purdue Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Newsletters About Community Guidelines All communities Facebook Twitter Youtube RSS Hammer and Rails Bracket Breakdown: The West Region Notifications Notifications Purdue Men&#x27;s Basketball Bracket Breakdown: The West Region by Jed Wilkinson Mar 16, 2026, 11:30 AM UTC Facebook Link Following their victory in the B1G Tournament against the Michigan Wolverines, Purdue was able to elevate themselves into the 2-seed in the West Region. The Boilers set themselves up as well as they ever have for a run in the NCAA Tourney and will first square off against 15-seeded Queens. With the first stop in St. Louis, if Purdue wins their round-1 matchup, they will face off against either 7-seeded Miami (FL) or 10-seeded Missouri. Let’s take a look at the West Region overall. No. 1 Arizona (32-2): After capturing the Big 12 tournament title, the Wildcats enter the tournament as one of the favorites to win the whole tourney. The Wildcats have a NET ranking of #3 and a matching KenPom rank of #2 with the 5th best adjusted offense and 3rd best adjusted defense. They boast 16 Quadrant 1 victories, led by potential top-five NBA pick Brayden Burries. Arizona is one of the most well balanced teams in the country, similarly statistically to Michigan and Duke. No. 2 Purdue (27-8): Purdue secured the No. 2 seed by winning the Big Ten Tournament with a dominating performance against Michigan. They hold a NET ranking of #9 and are #8 in KenPom, supported by 11 wins over the NET top 100. The Boilers had a mid-season struggle but used the B1G Tourney to vault themselves into their 2-seed with a renewed effort on defense and the best offense in the country. No. 3 Gonzaga (30-3): The Zags swept through the WCC to finish with 30 wins. The Bulldogs are ranked in the N ET at #6 and a KenPom rank of #10. Despite injuries to star Braden Huff and Jalen Warley, they maintain 7 wins against the top 100 and one of the best defenses in the country. They don’t have the guards they once did but their frontline, when healthy, is one of the best in the coun"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.hammerandrails.com/mens-basketball/58910/bracket-breakdown-the-west-region\",\n    \"text\": \"Bracket Breakdown: The West Region | Hammer and Rails Skip to main content SB Nation SB Nation logo A Purdue Boilermakers Community Hammer and Rails March 18, 2026 Hammer and Rails Notifications Notifications The Feed Sections Purdue Men’s Basketball Purdue Football Purdue Men’s Basketball Recruiting The H&R Column Purdue Football Recruiting Betting FanDuel College Football Odds FanDuel College Basketball Odds Purdue Football Odds Purdue Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Newsletters About Navigation Drawer Login / Sign Up close Close Search The Feed Sections Expand Purdue Men’s Basketball Purdue Football Purdue Men’s Basketball Recruiting The H&R Column Purdue Football Recruiting Betting Expand FanDuel College Football Odds FanDuel College Basketball Odds Purdue Football Odds Purdue Basketball Odds College Football Picks and Predictions College Basketball Picks and Predictions Newsletters About Community Guidelines All communities Facebook Twitter Youtube RSS Hammer and Rails Bracket Breakdown: The West Region Notifications Notifications Purdue Men&#x27;s Basketball Bracket Breakdown: The West Region by Jed Wilkinson Mar... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-west-1-assistant-9",
@@ -784,17 +786,18 @@
       "id": "r32-west-1-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:31:35.737Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Arizona vs Utah State 2026 NCAA tournament preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-west-1-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:31:36.741Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Villanova or Utah State? How to pick 8 vs. 9 matchup in 2026 March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fvillanova%2Dutah%2Dstate%2Dmarch%2Dmadness%2Dbracket%2Dpick%2F4e082134bc80c23a7452a825&rut=e50a9fe7f771e4f4b80696ecb2aefc07dc3f2bf2c714ec7e31b62badbecfdf09\",\n      \"snippet\": \"Here is a complete guide to picking No. 8 Villanova and No. 9 Utah State in your 2026 March Madness bracket, including updated odds and our expert predictions for the West Region game.\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament West Region bracket preview ... - CBS Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Dwest%2Dregion%2Dbracket%2Dpreview%2F&rut=3b8339dd4022e5e253af7657a8a5c9f9254e9bb0b1db6ec79c5237e0692e766d\",\n      \"snippet\": \"2026 NCAA Tournament West Region bracket preview : Predictions, sleepers, players to watch Arizona headlines a West Region featuring Purdue&#x27;s elite offense, Gonzaga&#x27;s postseason pedigree and a ...\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament Schedule, Predictions and Picks\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Dschedule%2Dpredictions%2Dpicks&rut=e7af8236e248b8fc5c70537a45741a4874ab4ff36914e8d4efa5f43229a7fda9\",\n      \"snippet\": \"The 2026 NCAA Tournament full schedule, game previews , predictions, and betting lines for every game from the First Four through the national championship.\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament .\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -822,8 +825,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Dwest%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=7b231d9f9fc6603ab29cd90f17776a1e57c08d60abd55e65315e36130c44e281",
           "snippet": "I&#x27;m breaking down my March Madness West Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament ."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Villanova or Utah State? How to pick 8 vs. 9 matchup in 2026 March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fvillanova%2Dutah%2Dstate%2Dmarch%2Dmadness%2Dbracket%2Dpick%2F4e082134bc80c23a7452a825&rut=e50a9fe7f771e4f4b80696ecb2aefc07dc3f2bf2c714ec7e31b62badbecfdf09\",\n      \"snippet\": \"Here is a complete guide to picking No. 8 Villanova and No. 9 Utah State in your 2026 March Madness bracket, including updated odds and our expert predictions for the West Region game.\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament West Region bracket preview ... - CBS Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Dwest%2Dregion%2Dbracket%2Dpreview%2F&rut=3b8339dd4022e5e253af7657a8a5c9f9254e9bb0b1db6ec79c5237e0692e766d\",\n      \"snippet\": \"2026 NCAA Tournament West Region bracket preview : Predictions, sleepers, players to watch Arizona headlines a West Region featuring Purdue&#x27;s elite offense, Gonzaga&#x27;s postseason pedigree and a ...\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament Schedule, Predictions and Picks\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Dschedule%2Dpredictions%2Dpicks&rut=e7af8236e248b8fc5c70537a45741a4874ab4ff36914e8d4efa5f43229a7fda9\",\n      \"snippet\": \"The 2026 NCAA Tournament full schedule, game previews , predictions, and betting lines for every game from the First Four through the national championship.\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament .\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-west-1-final-json",

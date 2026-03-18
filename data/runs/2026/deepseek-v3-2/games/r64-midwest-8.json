@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-midwest-8",
     "winnerId": "iowa-state",
-    "confidence": "Very High",
+    "confidence": 0.93,
     "rationale": "Iowa State's high seeding and power conference pedigree provide a significant advantage over Tennessee State, which is making its first tournament appearance in over three decades. The Cyclones' talent and experience against top competition should overwhelm the Tigers, leading to a comfortable victory."
   },
   "reasoningStep": {
     "id": "analysis-r64-midwest-8",
     "title": "2-15 Seed Mismatch Analysis",
     "summary": "Evaluated team profiles, tournament context, and upset potential based on available information, concluding Iowa State is a heavy favorite.",
-    "evidence": "Iowa State is a 2-seed from the Big 12 with a 25-6 record, while Tennessee State is a 15-seed from the OVC with a 23-9 record, making their first NCAA tournament appearance since 1994. Historical trends show 2-seeds win over 15-seeds in over 99% of games. No injury concerns or specific weaknesses for Iowa State were found, and Tennessee State's underdog story does not provide a credible path to victory given the talent and experience gap."
+    "evidence": [
+      "Iowa State is a 2-seed from the Big 12 with a 25-6 record, while Tennessee State is a 15-seed from the OVC with a 23-9 record, making their first NCAA tournament appearance since 1994. Historical trends show 2-seeds win over 15-seeds in over 99% of games. No injury concerns or specific weaknesses for Iowa State were found, and Tennessee State's underdog story does not provide a credible path to victory given the talent and experience gap."
+    ]
   },
   "toolCalls": [
     {
@@ -240,19 +242,20 @@
       "id": "r64-midwest-8-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:21:25.402Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "iowa-state",
           "tennessee-state"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:21:25.409Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"iowa-state\",\n      \"teamName\": \"Iowa State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"tennessee-state\",\n      \"teamName\": \"Tennessee State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -267,8 +270,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"iowa-state\",\n      \"teamName\": \"Iowa State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"tennessee-state\",\n      \"teamName\": \"Tennessee State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-8-assistant-1",
@@ -280,20 +282,20 @@
       "id": "r64-midwest-8-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:21:31.459Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Iowa State basketball 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:21:31.588Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-midwest-8-assistant-2",
@@ -305,17 +307,18 @@
       "id": "r64-midwest-8-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:21:35.465Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Iowa State Cyclones 2026 NCAA tournament preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:21:36.243Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Analyzing Iowa State&#x27;s path to the Sweet 16 - Cyclone Fanatic\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcyclonefanatic.com%2F2026%2F03%2Fiowa%2Dstates%2D2026%2Dncaa%2Dtournament%2Dpreview%2F&rut=43e41ee5df056e256d48fb82e56ce77f2ad0287e0f1e27879480b5c96db230f4\",\n      \"snippet\": \"Iowa State enters the 2026 NCAA Tournament as a 2‑seed in St. Louis against 15‑seed Tennessee State on Friday (1:50 CT, CBS). A win sets up a Sunday matchup with either 7‑seed Kentucky or 10‑seed Santa Clara. Here&#x27;s everything Cyclone fans need to know about the three teams in the Cyclones&#x27; pod.\"\n    },\n    {\n      \"title\": \"Iowa State Cyclones Receive Bold NCAA Tournament Prediction From Jay Bilas\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fiowa%2Dstate%2Fbasketball%2Fiowa%2Dstate%2Dcyclones%2Dreceive%2Dbold%2Dncaa%2Dtournament%2Dprediction%2Dfrom%2Djay%2Dbilas&rut=96c376c081e90348c26a59ee2d6174ba77f33ba1d1ab49d7a571a4fe74ea1bf9\",\n      \"snippet\": \"The 2026 NCAA Tournament could be a special one for the Iowa State Cyclones in the opinion of analyst, Jay Bilas.\"\n    },\n    {\n      \"title\": \"Why Iowa State basketball will win 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fwhy%2Diowa%2Dstate%2Dbasketball%2Dwill%2Dwin%2D2026%2Dncaa%2Dtournament&rut=c6d801270998dbdfafe935c29e53b16e84b1f6ae3ca6e85f470d3943eec7894a\",\n      \"snippet\": \"Explore our analysis explaining exactly why the Iowa State Cyclones will win the 2026 NCAA College Basketball Tournament .\"\n    },\n    {\n      \"title\": \"Check out NCAA Tournament projection for Iowa State basketball\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.desmoinesregister.com%2Fstory%2Fsports%2Fcollege%2Fiowa%2Dstate%2Fbasketball%2Dmens%2F2026%2F03%2F10%2Fiowa%2Dstate%2Dbasketball%2Dbracketology%2Dprojection%2F89085427007%2F&rut=274a802d2c1f1c9472c63eb1c62bf2d368f60bfbba6d22f677c520bdf14d6606\",\n      \"snippet\": \"Iowa State basketball continues to be a major player on the national scene. The Cyclones (25-6) were a No. 3 seed in ESPN&#x27;s March 9 projected men&#x27;s field of the 2026 NCAA Tournament .\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -343,8 +346,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fstories%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Dprojections%2Diowa%2Dstate%2Dsurges%2Dmichigan%2Dstate%2Dfalls&rut=5e30a006661c8e56f52895b9b90daba50ec150f2e01c7c2fc4bd372c4f6b13bf",
           "snippet": "The Iowa State Cyclones are surging in Mike DeCourcy&#x27;s latest NCAA Tournament projections after a statement week that included a 70-67 win over the No. 2-ranked Houston Cougars — sealed by a ..."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Analyzing Iowa State&#x27;s path to the Sweet 16 - Cyclone Fanatic\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcyclonefanatic.com%2F2026%2F03%2Fiowa%2Dstates%2D2026%2Dncaa%2Dtournament%2Dpreview%2F&rut=43e41ee5df056e256d48fb82e56ce77f2ad0287e0f1e27879480b5c96db230f4\",\n      \"snippet\": \"Iowa State enters the 2026 NCAA Tournament as a 2‑seed in St. Louis against 15‑seed Tennessee State on Friday (1:50 CT, CBS). A win sets up a Sunday matchup with either 7‑seed Kentucky or 10‑seed Santa Clara. Here&#x27;s everything Cyclone fans need to know about the three teams in the Cyclones&#x27; pod.\"\n    },\n    {\n      \"title\": \"Iowa State Cyclones Receive Bold NCAA Tournament Prediction From Jay Bilas\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fiowa%2Dstate%2Fbasketball%2Fiowa%2Dstate%2Dcyclones%2Dreceive%2Dbold%2Dncaa%2Dtournament%2Dprediction%2Dfrom%2Djay%2Dbilas&rut=96c376c081e90348c26a59ee2d6174ba77f33ba1d1ab49d7a571a4fe74ea1bf9\",\n      \"snippet\": \"The 2026 NCAA Tournament could be a special one for the Iowa State Cyclones in the opinion of analyst, Jay Bilas.\"\n    },\n    {\n      \"title\": \"Why Iowa State basketball will win 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fwhy%2Diowa%2Dstate%2Dbasketball%2Dwill%2Dwin%2D2026%2Dncaa%2Dtournament&rut=c6d801270998dbdfafe935c29e53b16e84b1f6ae3ca6e85f470d3943eec7894a\",\n      \"snippet\": \"Explore our analysis explaining exactly why the Iowa State Cyclones will win the 2026 NCAA College Basketball Tournament .\"\n    },\n    {\n      \"title\": \"Check out NCAA Tournament projection for Iowa State basketball\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.desmoinesregister.com%2Fstory%2Fsports%2Fcollege%2Fiowa%2Dstate%2Fbasketball%2Dmens%2F2026%2F03%2F10%2Fiowa%2Dstate%2Dbasketball%2Dbracketology%2Dprojection%2F89085427007%2F&rut=274a802d2c1f1c9472c63eb1c62bf2d368f60bfbba6d22f677c520bdf14d6606\",\n      \"snippet\": \"Iowa State basketball continues to be a major player on the national scene. The Cyclones (25-6) were a No. 3 seed in ESPN&#x27;s March 9 projected men&#x27;s field of the 2026 NCAA Tournament .\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-8-assistant-3",
@@ -356,17 +358,18 @@
       "id": "r64-midwest-8-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:21:40.748Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Tennessee State Tigers 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:21:41.704Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"TSU Returns to NCAA Tournament, Reconnecting with a Historic Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Ftsutigers.com%2Fnews%2F2026%2F3%2F17%2Fmens%2Dbasketball%2Dtsu%2Dreturns%2Dto%2Dncaa%2Dtournament%2Dreconnecting%2Dwith%2Da%2Dhistoric%2Dbasketball%2Dlegacy.aspx&rut=428868662381f99aee4af7b56af0e3b5557c2fc4862d3bc4369e332bf3191dbb\",\n      \"snippet\": \"Tennessee State&#x27;s return to the NCAA Tournament represents more than the end of a long postseason drought. It reconnects the Tigers to one of college basketball&#x27;s most historically significant programs — a legacy built on national championships, pioneering coaches, NBA talent and decades of influence that stretch far beyond Nashville. Tennessee State will take the floor in the 2026 NCAA ...\"\n    },\n    {\n      \"title\": \"Tennessee State March Madness opponent is Iowa State in 2026 NCAA bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tennessean.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F15%2Ftennessee%2Dstate%2Diowa%2Dstate%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2D2026%2F89091960007%2F&rut=ed6bee761a1f35d6a07402c8f0fa806784d0cfd7edd7d87988c78473f84e555f\",\n      \"snippet\": \"Tennessee State basketball will face Iowa State in the first round of the NCAA Tournament . The Tigers (23-9) earned an automatic berth in March Madness by winning the Ohio Valley Conference ...\"\n    },\n    {\n      \"title\": \"Tennessee State Tigers Make Historic NCAA Tournament Return in 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbvmsports.com%2F2026%2F03%2F17%2Ftennessee%2Dstate%2Dtigers%2Dmake%2Dhistoric%2Dncaa%2Dtournament%2Dreturn%2Din%2D2026%2F&rut=48274e797b145b9ee51347c7990beca961b4b75bf2789d3149e223710852f687\",\n      \"snippet\": \"Tennessee State University (TSU) makes its long-awaited return to the NCAA Tournament after 32 years, rekindling a historic basketball legacy steeped in national championships and notable NBA talent.\"\n    },\n    {\n      \"title\": \"Ticket Punched: Previewing the Tennessee State Tigers for the 2026 NCAA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dtennessee%2Dstate%2Dtigers%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=f65f6404790f8999592f5b485ce2c5a9808e21f1234019654c82420c7eb58a7f\",\n      \"snippet\": \"Ticket Punched: Previewing the Tennessee State Tigers for the 2026 NCAA Tournament Tennessee State earned its first trip to the NCAA Tournament in 32 years by knocking off Morehead State in the OVC Championship Game.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -394,8 +397,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fovcsports.com%2Fnews%2F2026%2F3%2F13%2Ftennessee%2Dstate%2Dto%2Dplay%2Din%2Dncaa%2Dmens%2Dbasketball%2Dtournament.aspx&rut=ffb71e1469dddeba165d28c02c8106cf2f3bc2a036aff5ed428c641bf7642465",
           "snippet": "The Tennessee State men&#x27;s basketball team will be a No. 15 seed and play No. 2 seed Iowa State in the First Round of the 2026 NCAA Division I Men&#x27;s Basketball Championship."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"TSU Returns to NCAA Tournament, Reconnecting with a Historic Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Ftsutigers.com%2Fnews%2F2026%2F3%2F17%2Fmens%2Dbasketball%2Dtsu%2Dreturns%2Dto%2Dncaa%2Dtournament%2Dreconnecting%2Dwith%2Da%2Dhistoric%2Dbasketball%2Dlegacy.aspx&rut=428868662381f99aee4af7b56af0e3b5557c2fc4862d3bc4369e332bf3191dbb\",\n      \"snippet\": \"Tennessee State&#x27;s return to the NCAA Tournament represents more than the end of a long postseason drought. It reconnects the Tigers to one of college basketball&#x27;s most historically significant programs — a legacy built on national championships, pioneering coaches, NBA talent and decades of influence that stretch far beyond Nashville. Tennessee State will take the floor in the 2026 NCAA ...\"\n    },\n    {\n      \"title\": \"Tennessee State March Madness opponent is Iowa State in 2026 NCAA bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tennessean.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F15%2Ftennessee%2Dstate%2Diowa%2Dstate%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2D2026%2F89091960007%2F&rut=ed6bee761a1f35d6a07402c8f0fa806784d0cfd7edd7d87988c78473f84e555f\",\n      \"snippet\": \"Tennessee State basketball will face Iowa State in the first round of the NCAA Tournament . The Tigers (23-9) earned an automatic berth in March Madness by winning the Ohio Valley Conference ...\"\n    },\n    {\n      \"title\": \"Tennessee State Tigers Make Historic NCAA Tournament Return in 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbvmsports.com%2F2026%2F03%2F17%2Ftennessee%2Dstate%2Dtigers%2Dmake%2Dhistoric%2Dncaa%2Dtournament%2Dreturn%2Din%2D2026%2F&rut=48274e797b145b9ee51347c7990beca961b4b75bf2789d3149e223710852f687\",\n      \"snippet\": \"Tennessee State University (TSU) makes its long-awaited return to the NCAA Tournament after 32 years, rekindling a historic basketball legacy steeped in national championships and notable NBA talent.\"\n    },\n    {\n      \"title\": \"Ticket Punched: Previewing the Tennessee State Tigers for the 2026 NCAA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.basketunderreview.com%2Fticket%2Dpunched%2Dpreviewing%2Dthe%2Dtennessee%2Dstate%2Dtigers%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2F&rut=f65f6404790f8999592f5b485ce2c5a9808e21f1234019654c82420c7eb58a7f\",\n      \"snippet\": \"Ticket Punched: Previewing the Tennessee State Tigers for the 2026 NCAA Tournament Tennessee State earned its first trip to the NCAA Tournament in 32 years by knocking off Morehead State in the OVC Championship Game.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-8-assistant-4",
@@ -407,23 +409,23 @@
       "id": "r64-midwest-8-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:21:47.841Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://cyclonefanatic.com/2026/03/iowa-states-2026-ncaa-tournament-preview/",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:21:48.623Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://cyclonefanatic.com/2026/03/iowa-states-2026-ncaa-tournament-preview/\",\n    \"text\": \"Analyzing Iowa State&#039;s path to the Sweet 16 - Cyclone Fanatic --> Sign in Home News Football Men&#8217;s Basketball Women&#8217;s Basketball Wrestling Podcasts Forums Shop About Us Sign in Welcome! Log into your account your username your password Forgot your password? Password recovery Recover your password your email Search Cyclone Fanatic Reel News Home News Football Men&#8217;s Basketball Women&#8217;s Basketball Wrestling Podcasts Forums Shop About Us More Search Home Men&#039;s Sports Basketball Analyzing Iowa State&#039;s path to the Sweet 16 Men's Sports Basketball Analyzing Iowa State&#8217;s path to the Sweet 16 big 12 basketball featured Headline Iowa State men's basketball Kentucky men's basketball NCAA Tournament Santa Clara Tennessee State By: Jackson Pence Date: March 15, 2026 Related stories Basketball Joshua Jefferson earns AP All-American Second-Team honors Senior forward Joshua Jefferson was recognized by the Associated... Basketball Samantha Lipsey&#8217;s Dreams Come True Tamin & Samantha Lipsey take photos during their recent... Basketball Big 12 Buzz: Bring on the Madness! Welcome to the Big 12 Buzz! Things are going... Men's Sports Kevin Dresser, Stevo ... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://cyclonefanatic.com/2026/03/iowa-states-2026-ncaa-tournament-preview/",
         "text": "Analyzing Iowa State&#039;s path to the Sweet 16 - Cyclone Fanatic --> Sign in Home News Football Men&#8217;s Basketball Women&#8217;s Basketball Wrestling Podcasts Forums Shop About Us Sign in Welcome! Log into your account your username your password Forgot your password? Password recovery Recover your password your email Search Cyclone Fanatic Reel News Home News Football Men&#8217;s Basketball Women&#8217;s Basketball Wrestling Podcasts Forums Shop About Us More Search Home Men&#039;s Sports Basketball Analyzing Iowa State&#039;s path to the Sweet 16 Men's Sports Basketball Analyzing Iowa State&#8217;s path to the Sweet 16 big 12 basketball featured Headline Iowa State men's basketball Kentucky men's basketball NCAA Tournament Santa Clara Tennessee State By: Jackson Pence Date: March 15, 2026 Related stories Basketball Joshua Jefferson earns AP All-American Second-Team honors Senior forward Joshua Jefferson was recognized by the Associated... Basketball Samantha Lipsey&#8217;s Dreams Come True Tamin & Samantha Lipsey take photos during their recent... Basketball Big 12 Buzz: Bring on the Madness! Welcome to the Big 12 Buzz! Things are going... Men's Sports Kevin Dresser, Stevo Poulin and Rocky Elam preview the NCAA Championships AMES — Iowa State is will hit the road... Basketball Monday Musings: No complaints after Selection Sunday Mar 13, 2026; Kansas City, MO, USA; Iowa State... Iowa State enters the 2026 NCAA Tournament as a 2‑seed in St. Louis against 15‑seed Tennessee State on Friday (1:50 CT, CBS). A win sets up a Sunday matchup with either 7‑seed Kentucky or 10‑seed Santa Clara. Here’s everything Cyclone fans need to know about the three teams in the Cyclones&#8217; pod. --> Tennessee State Tigers (15‑seed) Tennessee State comes in very confident as the Ohio Valley Conference champion, riding a 23–9 season built on pace, physicality, and a surprisingly efficient offense. The Tigers averaged 80.5 points per game while shooting 46% from the field, and they"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://cyclonefanatic.com/2026/03/iowa-states-2026-ncaa-tournament-preview/\",\n    \"text\": \"Analyzing Iowa State&#039;s path to the Sweet 16 - Cyclone Fanatic --> Sign in Home News Football Men&#8217;s Basketball Women&#8217;s Basketball Wrestling Podcasts Forums Shop About Us Sign in Welcome! Log into your account your username your password Forgot your password? Password recovery Recover your password your email Search Cyclone Fanatic Reel News Home News Football Men&#8217;s Basketball Women&#8217;s Basketball Wrestling Podcasts Forums Shop About Us More Search Home Men&#039;s Sports Basketball Analyzing Iowa State&#039;s path to the Sweet 16 Men's Sports Basketball Analyzing Iowa State&#8217;s path to the Sweet 16 big 12 basketball featured Headline Iowa State men's basketball Kentucky men's basketball NCAA Tournament Santa Clara Tennessee State By: Jackson Pence Date: March 15, 2026 Related stories Basketball Joshua Jefferson earns AP All-American Second-Team honors Senior forward Joshua Jefferson was recognized by the Associated... Basketball Samantha Lipsey&#8217;s Dreams Come True Tamin & Samantha Lipsey take photos during their recent... Basketball Big 12 Buzz: Bring on the Madness! Welcome to the Big 12 Buzz! Things are going... Men's Sports Kevin Dresser, Stevo ... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-8-assistant-5",
@@ -435,20 +437,20 @@
       "id": "r64-midwest-8-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:21:54.244Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "\"Iowa State\" \"Tennessee State\" 2026 NCAA tournament preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:21:54.703Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-midwest-8-assistant-6",
@@ -460,23 +462,23 @@
       "id": "r64-midwest-8-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:22:01.139Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.tennessean.com/story/sports/college/2026/03/15/tennessee-state-iowa-state-march-madness-bracket-ncaa-tournament-2026/89091960007/",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:22:02.201Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.tennessean.com/story/sports/college/2026/03/15/tennessee-state-iowa-state-march-madness-bracket-ncaa-tournament-2026/89091960007/\",\n    \"text\": \"Tennessee State March Madness opponent is Iowa State in 2026 NCAA bracket Skip to main content Home Sports Titans Predators Nashville SC Vanderbilt UT High Schools Other Colleges Sports Columnist Joe Rexrode NFL Draft Odds SportsbookWire Golfweek MMA TSU basketball’s March Madness opponent is Iowa State to open NCAA tournament bracket Mike Organ Nashville Tennessean Show Caption Hide Caption Tennessee State's basketball reacts to hearing name on Selection Show Tennessee State's basketball players, surrounded by fans at Gentry Center, cheered after hearing they will face Iowa State in the NCAA Tournament. Tennessee State will play Iowa State in the first round of the NCAA Tournament. TSU secured its spot by winning the Ohio Valley Conference Tournament against Morehead State. This is the Tigers' first NCAA Tournament appearance since the 1993-94 season. Tennessee State basketball will face Iowa State in the first round of the NCAA Tournament. The Tigers (23-9) earned an automatic berth in March Madness by winning the Ohio Valley Conference Tournament . TSU defeated Morehead State 93-67 after earning a double-bye into the conference tournament by winning the regular season championsh... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.tennessean.com/story/sports/college/2026/03/15/tennessee-state-iowa-state-march-madness-bracket-ncaa-tournament-2026/89091960007/",
         "text": "Tennessee State March Madness opponent is Iowa State in 2026 NCAA bracket Skip to main content Home Sports Titans Predators Nashville SC Vanderbilt UT High Schools Other Colleges Sports Columnist Joe Rexrode NFL Draft Odds SportsbookWire Golfweek MMA TSU basketball’s March Madness opponent is Iowa State to open NCAA tournament bracket Mike Organ Nashville Tennessean Show Caption Hide Caption Tennessee State's basketball reacts to hearing name on Selection Show Tennessee State's basketball players, surrounded by fans at Gentry Center, cheered after hearing they will face Iowa State in the NCAA Tournament. Tennessee State will play Iowa State in the first round of the NCAA Tournament. TSU secured its spot by winning the Ohio Valley Conference Tournament against Morehead State. This is the Tigers' first NCAA Tournament appearance since the 1993-94 season. Tennessee State basketball will face Iowa State in the first round of the NCAA Tournament. The Tigers (23-9) earned an automatic berth in March Madness by winning the Ohio Valley Conference Tournament . TSU defeated Morehead State 93-67 after earning a double-bye into the conference tournament by winning the regular season championship. Iowa State (27-7) is the No. 2 seed in the Midwest Region. TSU (23-9) is the No. 15 seed. They will play on March 20 (1:50 p.m. CT, CBS) in St. Louis. BUY TSU BASKETBALL TICKETS FOR MARCH MADNESS This is TSU's first time in the NCAA Tournament since 1993-94 and only its third time since becoming an NCAA Division I program. In his first year as Tennessee State's coach, Nolan Smith was the OVC Co-Coach of the Year after leading the Tigers to their best regular season record as an NCAA Division I team. TSU heads into March Madness on a six-game win streak, its longest since the 2017-18 season. The Tigers have won nine of their last 10 games. Reach Mike Organ at 615-259-8021 or on X @MikeOrganWriter. Our team of savvy editors independently handpicks all recommendations. If you purchase thr"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.tennessean.com/story/sports/college/2026/03/15/tennessee-state-iowa-state-march-madness-bracket-ncaa-tournament-2026/89091960007/\",\n    \"text\": \"Tennessee State March Madness opponent is Iowa State in 2026 NCAA bracket Skip to main content Home Sports Titans Predators Nashville SC Vanderbilt UT High Schools Other Colleges Sports Columnist Joe Rexrode NFL Draft Odds SportsbookWire Golfweek MMA TSU basketball’s March Madness opponent is Iowa State to open NCAA tournament bracket Mike Organ Nashville Tennessean Show Caption Hide Caption Tennessee State's basketball reacts to hearing name on Selection Show Tennessee State's basketball players, surrounded by fans at Gentry Center, cheered after hearing they will face Iowa State in the NCAA Tournament. Tennessee State will play Iowa State in the first round of the NCAA Tournament. TSU secured its spot by winning the Ohio Valley Conference Tournament against Morehead State. This is the Tigers' first NCAA Tournament appearance since the 1993-94 season. Tennessee State basketball will face Iowa State in the first round of the NCAA Tournament. The Tigers (23-9) earned an automatic berth in March Madness by winning the Ohio Valley Conference Tournament . TSU defeated Morehead State 93-67 after earning a double-bye into the conference tournament by winning the regular season championsh... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-8-assistant-7",
@@ -488,20 +490,20 @@
       "id": "r64-midwest-8-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:22:09.780Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Iowa State injury 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:22:10.353Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-midwest-8-assistant-8",
@@ -513,20 +515,20 @@
       "id": "r64-midwest-8-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:22:14.970Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Iowa State Cyclones 2025-26 basketball roster",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:22:15.104Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-midwest-8-assistant-9",
@@ -538,20 +540,20 @@
       "id": "r64-midwest-8-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:22:22.433Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Tennessee State Tigers basketball strengths 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-8-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:22:22.560Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-midwest-8-final-json",

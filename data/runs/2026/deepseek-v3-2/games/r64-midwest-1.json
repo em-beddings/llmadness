@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-midwest-1",
     "winnerId": "michigan",
-    "confidence": "Very High",
+    "confidence": 0.93,
     "rationale": "Michigan's status as a No. 1 seed with elite efficiency on both ends of the floor creates an overwhelming mismatch against Howard. The Wolverines' top-10 offense and second-ranked defense, built against rigorous Big Ten competition, provide a level of team quality that the MEAC champion has not faced. While 16-seed upsets are historic, the vast disparity in talent and Michigan's balanced dominance makes a credible path to victory for Howard highly improbable."
   },
   "reasoningStep": {
     "id": "analysis-michigan-howard",
     "title": "1 vs 16 Seed Analysis",
     "summary": "Michigan's elite efficiency metrics create overwhelming mismatch",
-    "evidence": "Michigan ranks #2 in Torvik and KenPom with top-10 offense (7th adjOE) and #2 defense; Howard ranks 206/207 with poor offensive efficiency (276th adjOE) and mediocre defense (123rd adjDE)."
+    "evidence": [
+      "Michigan ranks #2 in Torvik and KenPom with top-10 offense (7th adjOE) and #2 defense; Howard ranks 206/207 with poor offensive efficiency (276th adjOE) and mediocre defense (123rd adjDE)."
+    ]
   },
   "toolCalls": [
     {
@@ -252,19 +254,20 @@
       "id": "r64-midwest-1-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:09:12.414Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "michigan",
           "howard"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-1-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:09:12.421Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"michigan\",\n      \"teamName\": \"Michigan\",\n      \"torvik\": {\n        \"rank\": 2,\n        \"team\": \"Michigan\",\n        \"conf\": \"B10\",\n        \"record\": \"31-2\",\n        \"adjoe\": 127.67488457862952,\n        \"oe Rank\": 7,\n        \"adjde\": 90.51451038034816,\n        \"de Rank\": 2\n      },\n      \"kenpom\": {\n        \"rank\": 2,\n        \"team\": \"Michigan\",\n        \"conf\": \"B10\",\n        \"record\": \"31-2\",\n        \"adj_em\": 38.38,\n        \"adj_o\": 126.7,\n        \"adj_o_rank\": 8,\n        \"adj_d\": 88.4\n      }\n    },\n    {\n      \"teamId\": \"howard\",\n      \"teamName\": \"Howard\",\n      \"torvik\": {\n        \"rank\": 206,\n        \"team\": \"Howard\",\n        \"conf\": \"MEAC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 103.41612619063604,\n        \"oe Rank\": 276,\n        \"adjde\": 106.21885293459086,\n        \"de Rank\": 123\n      },\n      \"kenpom\": {\n        \"rank\": 207,\n        \"team\": \"Howard\",\n        \"conf\": \"MEAC\",\n        \"record\": \"23-10\",\n        \"adj_em\": -3.17,\n        \"adj_o\": 103.2,\n        \"adj_o_rank\": 283,\n        \"adj_d\": 106.4\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -415,8 +418,7 @@
             "ncsos_adj_em_rank": 230
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"michigan\",\n      \"teamName\": \"Michigan\",\n      \"torvik\": {\n        \"rank\": 2,\n        \"team\": \"Michigan\",\n        \"conf\": \"B10\",\n        \"record\": \"31-2\",\n        \"adjoe\": 127.67488457862952,\n        \"oe Rank\": 7,\n        \"adjde\": 90.51451038034816,\n        \"de Rank\": 2\n      },\n      \"kenpom\": {\n        \"rank\": 2,\n        \"team\": \"Michigan\",\n        \"conf\": \"B10\",\n        \"record\": \"31-2\",\n        \"adj_em\": 38.38,\n        \"adj_o\": 126.7,\n        \"adj_o_rank\": 8,\n        \"adj_d\": 88.4\n      }\n    },\n    {\n      \"teamId\": \"howard\",\n      \"teamName\": \"Howard\",\n      \"torvik\": {\n        \"rank\": 206,\n        \"team\": \"Howard\",\n        \"conf\": \"MEAC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 103.41612619063604,\n        \"oe Rank\": 276,\n        \"adjde\": 106.21885293459086,\n        \"de Rank\": 123\n      },\n      \"kenpom\": {\n        \"rank\": 207,\n        \"team\": \"Howard\",\n        \"conf\": \"MEAC\",\n        \"record\": \"23-10\",\n        \"adj_em\": -3.17,\n        \"adj_o\": 103.2,\n        \"adj_o_rank\": 283,\n        \"adj_d\": 106.4\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-1-assistant-1",
@@ -428,22 +430,22 @@
       "id": "r64-midwest-1-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:09:20.093Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Michigan basketball March Madness 2026 injury",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-1-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:09:20.808Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-1-assistant-2",
@@ -455,22 +457,22 @@
       "id": "r64-midwest-1-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:09:25.214Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Michigan basketball 2026 NCAA tournament injury update",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-1-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:09:25.919Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-1-assistant-3",
@@ -482,22 +484,22 @@
       "id": "r64-midwest-1-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:09:35.750Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "2026 Michigan Wolverines basketball roster",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-1-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:09:36.440Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-1-assistant-final-4",

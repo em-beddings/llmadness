@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-south-4",
     "winnerId": "nebraska",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Nebraska's elite defense, ranked 7th nationally in adjusted efficiency, should overwhelm Troy's mediocre offense and control the game. The Cornhuskers' significant advantage in team quality, built against a rigorous Big Ten schedule, provides a level of competition that Troy has not consistently faced. While 13-seed upsets are possible, Troy's defensive limitations and lower efficiency ratings make a credible path to victory unlikely."
   },
   "reasoningStep": {
     "id": "r64-south-4-analysis",
     "title": "Analysis of Nebraska vs Troy Matchup",
     "summary": "Evaluated efficiency ratings, betting odds, and contextual factors to conclude Nebraska is the strong favorite due to superior defensive prowess and overall team quality.",
-    "evidence": "Nebraska ranks 19th in Torvik and 14th in KenPom with a top-10 defense (adjde rank 7), while Troy ranks 142nd and 143rd with a weak defense (adjde rank 181). Betting markets favor Nebraska by 12.5 points, indicating high confidence in their victory. No major injuries were reported, and Nebraska's high-major experience contrasts with Troy's Sun Belt competition."
+    "evidence": [
+      "Nebraska ranks 19th in Torvik and 14th in KenPom with a top-10 defense (adjde rank 7), while Troy ranks 142nd and 143rd with a weak defense (adjde rank 181). Betting markets favor Nebraska by 12.5 points, indicating high confidence in their victory. No major injuries were reported, and Nebraska's high-major experience contrasts with Troy's Sun Belt competition."
+    ]
   },
   "toolCalls": [
     {
@@ -434,19 +436,20 @@
       "id": "r64-south-4-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:00:37.574Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "nebraska",
           "troy"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:00:37.579Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"nebraska\",\n      \"teamName\": \"Nebraska\",\n      \"torvik\": {\n        \"rank\": 19,\n        \"team\": \"Nebraska\",\n        \"conf\": \"B10\",\n        \"record\": \"26-6\",\n        \"adjoe\": 117.27796684737694,\n        \"oe Rank\": 62,\n        \"adjde\": 93.46840021311463,\n        \"de Rank\": 7\n      },\n      \"kenpom\": {\n        \"rank\": 14,\n        \"team\": \"Nebraska\",\n        \"conf\": \"B10\",\n        \"record\": \"26-6\",\n        \"adj_em\": 26.12,\n        \"adj_o\": 118.6,\n        \"adj_o_rank\": 55,\n        \"adj_d\": 92.5\n      }\n    },\n    {\n      \"teamId\": \"troy\",\n      \"teamName\": \"Troy\",\n      \"torvik\": {\n        \"rank\": 142,\n        \"team\": \"Troy\",\n        \"conf\": \"SB\",\n        \"record\": \"22-11\",\n        \"adjoe\": 110.7086544119471,\n        \"oe Rank\": 136,\n        \"adjde\": 109.016307286961,\n        \"de Rank\": 181\n      },\n      \"kenpom\": {\n        \"rank\": 143,\n        \"team\": \"Troy\",\n        \"conf\": \"SB\",\n        \"record\": \"22-11\",\n        \"adj_em\": 1.74,\n        \"adj_o\": 110.8,\n        \"adj_o_rank\": 141,\n        \"adj_d\": 109\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -597,8 +600,7 @@
             "ncsos_adj_em_rank": 84
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"nebraska\",\n      \"teamName\": \"Nebraska\",\n      \"torvik\": {\n        \"rank\": 19,\n        \"team\": \"Nebraska\",\n        \"conf\": \"B10\",\n        \"record\": \"26-6\",\n        \"adjoe\": 117.27796684737694,\n        \"oe Rank\": 62,\n        \"adjde\": 93.46840021311463,\n        \"de Rank\": 7\n      },\n      \"kenpom\": {\n        \"rank\": 14,\n        \"team\": \"Nebraska\",\n        \"conf\": \"B10\",\n        \"record\": \"26-6\",\n        \"adj_em\": 26.12,\n        \"adj_o\": 118.6,\n        \"adj_o_rank\": 55,\n        \"adj_d\": 92.5\n      }\n    },\n    {\n      \"teamId\": \"troy\",\n      \"teamName\": \"Troy\",\n      \"torvik\": {\n        \"rank\": 142,\n        \"team\": \"Troy\",\n        \"conf\": \"SB\",\n        \"record\": \"22-11\",\n        \"adjoe\": 110.7086544119471,\n        \"oe Rank\": 136,\n        \"adjde\": 109.016307286961,\n        \"de Rank\": 181\n      },\n      \"kenpom\": {\n        \"rank\": 143,\n        \"team\": \"Troy\",\n        \"conf\": \"SB\",\n        \"record\": \"22-11\",\n        \"adj_em\": 1.74,\n        \"adj_o\": 110.8,\n        \"adj_o_rank\": 141,\n        \"adj_d\": 109\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-4-assistant-1",
@@ -610,20 +612,20 @@
       "id": "r64-south-4-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:00:44.761Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Nebraska basketball injury March 2026 tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:00:44.897Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-south-4-assistant-2",
@@ -635,17 +637,18 @@
       "id": "r64-south-4-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:00:49.316Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Nebraska basketball 2026 NCAA tournament roster injury update",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:00:50.240Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Nebraska Cornhuskers Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fnebraska%2Dcornhuskers%2Finjuries&rut=ab1778712e7db13eff2c0a8ba4ac84472660e215aff3b09ec769580fc80f214e\",\n      \"snippet\": \"Stay In the Know: Check Out Nebraska Cornhuskers Injuries Impacting The 2025- 2026 NCAAB Season.\"\n    },\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295\",\n      \"snippet\": \"March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks.\"\n    },\n    {\n      \"title\": \"College Basketball Injury Report - Latest NCAAB Injuries\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=f1413f8111203286478c533d2ba7092871ce85212817bc623e72e492ebffe4d4\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report.\"\n    },\n    {\n      \"title\": \"Nebraska Cornhuskers News, Schedule, Stats and Roster - USA TODAY Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fnebraska%2Dcornhuskers%2F1527&rut=d504ec5bb0eefba379bd19f169ab2ad46082befb5336548cfaed311b3b572b19\",\n      \"snippet\": \"Latest Nebraska Cornhuskers news, schedule, stats, depth chart, roster , injuries, transactions and more from USA TODAY Sports.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -673,8 +676,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fnebraska%2Dbasketball%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios&rut=f2f116691e08fa737990d591a58cd02de726aca4f2ddeacc41b872ce50463881",
           "snippet": "Nebraska basketball&#x27;s nightmare 2026 March Madness bracket scenarios Nebraska&#x27;s lack of a go-to scorer and struggles on the glass will come back to haunt it in the 2026 NCAA Tournament March ..."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Nebraska Cornhuskers Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fnebraska%2Dcornhuskers%2Finjuries&rut=ab1778712e7db13eff2c0a8ba4ac84472660e215aff3b09ec769580fc80f214e\",\n      \"snippet\": \"Stay In the Know: Check Out Nebraska Cornhuskers Injuries Impacting The 2025- 2026 NCAAB Season.\"\n    },\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295\",\n      \"snippet\": \"March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks.\"\n    },\n    {\n      \"title\": \"College Basketball Injury Report - Latest NCAAB Injuries\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=f1413f8111203286478c533d2ba7092871ce85212817bc623e72e492ebffe4d4\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report.\"\n    },\n    {\n      \"title\": \"Nebraska Cornhuskers News, Schedule, Stats and Roster - USA TODAY Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fnebraska%2Dcornhuskers%2F1527&rut=d504ec5bb0eefba379bd19f169ab2ad46082befb5336548cfaed311b3b572b19\",\n      \"snippet\": \"Latest Nebraska Cornhuskers news, schedule, stats, depth chart, roster , injuries, transactions and more from USA TODAY Sports.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-4-assistant-3",
@@ -686,23 +688,23 @@
       "id": "r64-south-4-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:00:55.262Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/nebraska-cornhuskers/injuries",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:00:55.698Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/teams/main/nebraska-cornhuskers/injuries\",\n    \"text\": \"Nebraska Cornhuskers Injuries 2025-2026 - Updated NCAAB Injury Report Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker ... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/nebraska-cornhuskers/injuries",
         "text": "Nebraska Cornhuskers Injuries 2025-2026 - Updated NCAAB Injury Report Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK Intern"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/teams/main/nebraska-cornhuskers/injuries\",\n    \"text\": \"Nebraska Cornhuskers Injuries 2025-2026 - Updated NCAAB Injury Report Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker ... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-4-assistant-4",
@@ -714,17 +716,18 @@
       "id": "r64-south-4-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:01:00.308Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Troy basketball injury March 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:01:01.027Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"NBA Injury Status - 2025-26 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65\",\n      \"snippet\": \"Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Troy Trojans Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2653%2Ftroy%2Dtrojans&rut=d42f8dae0e6279867150c93c3fbe701ee0e41886ca48e072f42ab9a98aed0fa4\",\n      \"snippet\": \"Visit ESPN for Troy Trojans live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Troy Trojans 2025-26 Men&#x27;s College Basketball Stats - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fstats%2F_%2Fid%2F2653%2Ftroy&rut=eef8338ace90b0f6c4fd53eebe7c1c233f117916352d8fb311f0d1ada063d12b\",\n      \"snippet\": \"Visit ESPN for Troy Trojans live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Troy Trojans Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Ftroy&rut=1797925c234a4815993a403dad9c612e8319e73869089e141fa9f57d7b73e11e\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2026 Troy Trojans. Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve.\"\n    }\n  ]\n}",
       "toolName": "search_espn_news",
       "result": [
         {
@@ -752,8 +755,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fncb%2Finjuries%2Findex.html&rut=f3167e7dc8b5befef6322d3d7e7dacfb0589d800de5ecd7c1c8688bb1732dcc3",
           "snippet": "ESPN.com - Men&#x27;s College Basketball Injuries Men&#x27;s College Basketball Slants Dick Vitale Andy Katz Broadcast TV Schedule Video Highlights Audio Highlights SportsMall NikeTown TeamStore Sport ..."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"NBA Injury Status - 2025-26 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65\",\n      \"snippet\": \"Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Troy Trojans Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F2653%2Ftroy%2Dtrojans&rut=d42f8dae0e6279867150c93c3fbe701ee0e41886ca48e072f42ab9a98aed0fa4\",\n      \"snippet\": \"Visit ESPN for Troy Trojans live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Troy Trojans 2025-26 Men&#x27;s College Basketball Stats - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fstats%2F_%2Fid%2F2653%2Ftroy&rut=eef8338ace90b0f6c4fd53eebe7c1c233f117916352d8fb311f0d1ada063d12b\",\n      \"snippet\": \"Visit ESPN for Troy Trojans live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Troy Trojans Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Ftroy&rut=1797925c234a4815993a403dad9c612e8319e73869089e141fa9f57d7b73e11e\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2026 Troy Trojans. Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-4-assistant-5",
@@ -765,17 +767,18 @@
       "id": "r64-south-4-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:01:06.417Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Nebraska Troy NCAA tournament preview 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:01:07.238Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Nebraska vs Troy picks, predictions, odds for NCAA March Madness game\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.azcentral.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F16%2Fnebraska%2Dtroy%2Dpicks%2Dpredictions%2Dodds%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2F88419658007%2F&rut=12e1d9f909271b74044f83bcc742a77b95e182630ec16f45be4018014cebec4a\",\n      \"snippet\": \"March Madness picks, predictions, odds for Troy vs Nebraska NCAA Tournament first-round South Region game on Thursday, March 19, 2026 . Who wins game?\"\n    },\n    {\n      \"title\": \"Nebraska or Troy? How to pick 4 vs. 13 matchup in 2026 March Madness ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fnebraska%2Dtroy%2Dmarch%2Dmadness%2Dbracket%2Dpick%2Fa23a8326d173123962dddf0f&rut=6ec398a9dff99dcc8147104b3e4d45f2dcd3772cb406e8937d0f79ebbe72b69b\",\n      \"snippet\": \"Here is a complete guide to picking No. 4 Nebraska and No. 13 Troy in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game.\"\n    },\n    {\n      \"title\": \"Nebraska vs. Troy NCAA Tournament Preview: Why the Huskers can&#x27;t ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.wowt.com%2F2026%2F03%2F17%2Fnebraska%2Dvs%2Dtroy%2Dncaa%2Dtournament%2Dpreview%2Dwhy%2Dhuskers%2Dcant%2Doverlook%2Dno%2D13%2Dtrojans%2F&rut=e9953024fa10f1bda73f4c76644021e7f141a33e88d1dc9f034fcfb13df5a468\",\n      \"snippet\": \"4-Seed Nebraska drew 13-Seed Troy for its first-round matchup. The Huskers are significant favorites (-12.5), but cannot take the Trojans lightly if they hope to win the first NCAA Tournament game ...\"\n    },\n    {\n      \"title\": \"Nebraska vs Troy Prediction and Preview: NCAA Tournament First Round\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fnebraska%2Dvs%2Dtroy%2Dprediction%2Dpreview%2D051206312.html&rut=0ce9b2144bc1d98997668f584fbeb13a1dba9aefb93506b7e77d103b295a02fb\",\n      \"snippet\": \"Either Nebraska or Troy will make program history with its first ever NCAA Tournament win. Here&#x27;s the CFN first round prediction and preview .\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -803,8 +806,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fnebraska%2Dvs%2Dtroy%2Dncaa%2Dtournament%2Dpicks%2Dodds%2F&rut=8b8b63d061ee1d41329c76de1242a75b57cc288679c450f182d2f76b3aa2ecaf",
           "snippet": "Nebraska 2026 NCAA Tournament Preview The 2025-26 Cornhuskers are the best team Fred Hoiberg has ever put on the floor in Lincoln, arguably the best in school history."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Nebraska vs Troy picks, predictions, odds for NCAA March Madness game\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.azcentral.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F16%2Fnebraska%2Dtroy%2Dpicks%2Dpredictions%2Dodds%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2F88419658007%2F&rut=12e1d9f909271b74044f83bcc742a77b95e182630ec16f45be4018014cebec4a\",\n      \"snippet\": \"March Madness picks, predictions, odds for Troy vs Nebraska NCAA Tournament first-round South Region game on Thursday, March 19, 2026 . Who wins game?\"\n    },\n    {\n      \"title\": \"Nebraska or Troy? How to pick 4 vs. 13 matchup in 2026 March Madness ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fnebraska%2Dtroy%2Dmarch%2Dmadness%2Dbracket%2Dpick%2Fa23a8326d173123962dddf0f&rut=6ec398a9dff99dcc8147104b3e4d45f2dcd3772cb406e8937d0f79ebbe72b69b\",\n      \"snippet\": \"Here is a complete guide to picking No. 4 Nebraska and No. 13 Troy in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game.\"\n    },\n    {\n      \"title\": \"Nebraska vs. Troy NCAA Tournament Preview: Why the Huskers can&#x27;t ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.wowt.com%2F2026%2F03%2F17%2Fnebraska%2Dvs%2Dtroy%2Dncaa%2Dtournament%2Dpreview%2Dwhy%2Dhuskers%2Dcant%2Doverlook%2Dno%2D13%2Dtrojans%2F&rut=e9953024fa10f1bda73f4c76644021e7f141a33e88d1dc9f034fcfb13df5a468\",\n      \"snippet\": \"4-Seed Nebraska drew 13-Seed Troy for its first-round matchup. The Huskers are significant favorites (-12.5), but cannot take the Trojans lightly if they hope to win the first NCAA Tournament game ...\"\n    },\n    {\n      \"title\": \"Nebraska vs Troy Prediction and Preview: NCAA Tournament First Round\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fnebraska%2Dvs%2Dtroy%2Dprediction%2Dpreview%2D051206312.html&rut=0ce9b2144bc1d98997668f584fbeb13a1dba9aefb93506b7e77d103b295a02fb\",\n      \"snippet\": \"Either Nebraska or Troy will make program history with its first ever NCAA Tournament win. Here&#x27;s the CFN first round prediction and preview .\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-4-assistant-6",
@@ -816,23 +818,23 @@
       "id": "r64-south-4-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:01:13.435Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.azcentral.com/story/sports/college/2026/03/16/nebraska-troy-picks-predictions-odds-march-madness-ncaa-tournament/88419658007/",
         "maxChars": 3000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:01:13.622Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.azcentral.com/story/sports/college/2026/03/16/nebraska-troy-picks-predictions-odds-march-madness-ncaa-tournament/88419658007/\",\n    \"text\": \"Nebraska vs Troy picks, predictions, odds for March Madness NCAA game Skip to main content Home Sports Cardinals & NFL Suns & NBA ASU Sun Devils UA Wildcats GCU Antelopes High Schools Sports On TV D-Backs & MLB Cactus League Nebraska vs Troy picks, predictions, odds for NCAA March Madness game Jeremy Cluff Arizona Republic Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. No. 4 seed Nebraska and No. 13 seed Troy play Thursday, March 19, in a March Madness NCAA Tournament first-round game . The South Region game is scheduled for 9:40 a.m. MST and can be seen on truTV ( stream with Sling TV ). Who will win the March Madness game and advance to the second round in the NCAA Tournament bracket ? Check out these March Madness picks and March Madness predictions for the men's college basketball NCAA Tournament matchup . Nebraska is a 12.5-point favorite over Troy in the game in March Madness odds provided by BetMGM Sportsbook . The Cornhuskers are -1100 on the moneyline. The Trojans are +650. The over/under for the game is set at 137.5 po... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.azcentral.com/story/sports/college/2026/03/16/nebraska-troy-picks-predictions-odds-march-madness-ncaa-tournament/88419658007/",
         "text": "Nebraska vs Troy picks, predictions, odds for March Madness NCAA game Skip to main content Home Sports Cardinals & NFL Suns & NBA ASU Sun Devils UA Wildcats GCU Antelopes High Schools Sports On TV D-Backs & MLB Cactus League Nebraska vs Troy picks, predictions, odds for NCAA March Madness game Jeremy Cluff Arizona Republic Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. No. 4 seed Nebraska and No. 13 seed Troy play Thursday, March 19, in a March Madness NCAA Tournament first-round game . The South Region game is scheduled for 9:40 a.m. MST and can be seen on truTV ( stream with Sling TV ). Who will win the March Madness game and advance to the second round in the NCAA Tournament bracket ? Check out these March Madness picks and March Madness predictions for the men's college basketball NCAA Tournament matchup . Nebraska is a 12.5-point favorite over Troy in the game in March Madness odds provided by BetMGM Sportsbook . The Cornhuskers are -1100 on the moneyline. The Trojans are +650. The over/under for the game is set at 137.5 points. March Madness picks: Ohio State-TCU | Nebraska-Troy | Louisville-South Florida | Wisconsin-High Point | Duke-Siena | Vanderbilt-McNeese | Michigan State-North Dakota State | Arkansas-Hawaii | North Carolina-VCU | Saint Mary's-Texas A&M | Illinois-Penn | Georgia-Saint Louis | Gonzaga-Kennesaw State | Houston-Idaho | Kentucky-Santa Clara | Texas Tech-Akron | Arizona-Long Island | Virginia-Wright State | Iowa State-Tennessee State | Alabama-Hofstra | Villanova-Utah State | Clemson-Iowa | St. John's-UNI | UCLA-UCF | Purdue-Queens | Kansas-Cal Baptist | UConn-Furman | Miami-Missouri | The Republic's score predictions Watch Nebraska vs Troy on Sling The Arizona Republic : Nebraska 71, Troy 67 Jeremy Cluff writes: \"This game could be much closer than the point spread suggests. The Trojans won't be intimidated, but they will fall short of the upset against the Cornhuskers.\" March Madness picks: Predictions for NCAA Tournament first-round games Dimers : Nebraska 76, Troy 63 It writes: \"After extensive simulations, our model gives Troy a win probability of 11%, while Nebraska has a win probability of 89%.\" How to watch March Madness: Ohio State-TCU | Nebraska-Troy | Louisville-South Florida | Wisconsin-High Point | Duke-Siena | Vanderbilt-McNeese | Michigan State-North Dakota State | Arkansas-Hawaii | North Carolina-VCU | Saint Mary's-Texas A&M | Illinois-Penn | Georgia-Saint Louis | Gonzaga-Kennesaw State | Houston-Idaho | Kentucky-Santa Clara | Texas Tech-Akron | Arizona-Long Island | Virginia-Wright State | Iowa State-Tennessee State | Alabama-Hofstra | Villanova-Utah State | Clemson-Iowa | St. John's-UNI | UCLA-UCF | Purdue-Queens | Kansas-Cal Baptist | UConn-Furman | Miami-Missouri | Schedule | TV channels | Announcers ESPN : Nebraska has a 92.7% chance to beat Troy Th"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.azcentral.com/story/sports/college/2026/03/16/nebraska-troy-picks-predictions-odds-march-madness-ncaa-tournament/88419658007/\",\n    \"text\": \"Nebraska vs Troy picks, predictions, odds for March Madness NCAA game Skip to main content Home Sports Cardinals & NFL Suns & NBA ASU Sun Devils UA Wildcats GCU Antelopes High Schools Sports On TV D-Backs & MLB Cactus League Nebraska vs Troy picks, predictions, odds for NCAA March Madness game Jeremy Cluff Arizona Republic Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. No. 4 seed Nebraska and No. 13 seed Troy play Thursday, March 19, in a March Madness NCAA Tournament first-round game . The South Region game is scheduled for 9:40 a.m. MST and can be seen on truTV ( stream with Sling TV ). Who will win the March Madness game and advance to the second round in the NCAA Tournament bracket ? Check out these March Madness picks and March Madness predictions for the men's college basketball NCAA Tournament matchup . Nebraska is a 12.5-point favorite over Troy in the game in March Madness odds provided by BetMGM Sportsbook . The Cornhuskers are -1100 on the moneyline. The Trojans are +650. The over/under for the game is set at 137.5 po... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-4-assistant-7",
@@ -844,23 +846,23 @@
       "id": "r64-south-4-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:01:20.352Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.sportingnews.com/us/ncaa-basketball/news/nebraska-troy-march-madness-bracket-pick/a23a8326d173123962dddf0f",
         "maxChars": 3000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:01:20.478Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/nebraska-troy-march-madness-bracket-pick/a23a8326d173123962dddf0f\",\n    \"text\": \"Nebraska or Troy? How to pick 4 vs. 13 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Horn... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.sportingnews.com/us/ncaa-basketball/news/nebraska-troy-march-madness-bracket-pick/a23a8326d173123962dddf0f",
         "text": "Nebraska or Troy? How to pick 4 vs. 13 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Streaming S"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/nebraska-troy-march-madness-bracket-pick/a23a8326d173123962dddf0f\",\n    \"text\": \"Nebraska or Troy? How to pick 4 vs. 13 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Horn... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-4-assistant-8",
@@ -872,23 +874,23 @@
       "id": "r64-south-4-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:01:25.830Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://sports.yahoo.com/articles/nebraska-vs-troy-prediction-preview-051206312.html",
         "maxChars": 3000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:01:26.911Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://sports.yahoo.com/articles/nebraska-vs-troy-prediction-preview-051206312.html\",\n    \"text\": \"Nebraska vs Troy Prediction and Preview: NCAA Tournament First Round - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Strea... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://sports.yahoo.com/articles/nebraska-vs-troy-prediction-preview-051206312.html",
         "text": "Nebraska vs Troy Prediction and Preview: NCAA Tournament First Round - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Streaming TVs Gift ideas Best gifts for men Best gift cards Best gifts for mom Best gifts for teens Best gifts for couples Best gifts for sister-in-law Best gifts for girlfriends Best gifts for grandma Best gifts for sisters Best gifts for husbands Best birthday gifts for her Best get well soon gifts Best travel gifts Best gifts for mother-in-law Best anniversary gifts for wife Stores Amazon Best Buy Coach Outlet Home Depot Kate Spade New York Lowes Macy&#x27;s Nordstrom Sephora Sur La Table Target Ulta Walmart Wayfair Zappos Shopping Guides Best cordless stick vacuums Best water bottles Best vacuums Best air fryers Best luggage Best jeans Best bras Best nontoxic nail polish Best under eye cream Best skin tightening creams Best coffee makers Best comforters Best mops Best Hoka shoes for walking Best instant pot Deals Toys and games General Food Travel Autos EV & Future Tech Classic & Collector Deals & Buying Guides Ownership Safety & Recalls Policy & Environment New Vehicles & Reviews Auto Shows General People & Culture Gift ideas Buying guides Amazon Spring Sale deals Amazon Spring Sale tech deals Entertainment Celebrity TV Movies Music How to Watch Interviews Videos Finance My portfolio News Latest Originals Newsletters Stock market Crypto Earnings Tariffs Economics Tech Housing Fed meeting Markets Most active stocks Top stock gainers Biggest stock losers Trending tickers Highest dividend stocks Crypto Prediction markets Options Sectors Futures World indices Research Equities screener Penny stock screener Most shorted screener Undervalued growth screener Financial calendar Earnings calendar Stock comparison Currency converter Advanced charts Community Personal finance My Money Credit cards Banking Mortgages Mortgage calculator Insurance Taxes Student Loans Personal Loans V"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://sports.yahoo.com/articles/nebraska-vs-troy-prediction-preview-051206312.html\",\n    \"text\": \"Nebraska vs Troy Prediction and Preview: NCAA Tournament First Round - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Strea... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-4-assistant-9",
@@ -900,17 +902,18 @@
       "id": "r64-south-4-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:01:31.710Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Troy Trojans 2026 basketball strengths weaknesses",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-4-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:01:32.555Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025-26 Troy Trojans Men&#x27;s Roster and Stats | College Basketball at ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Ftroy%2Fmen%2F2026.html&rut=f4b7d3fcbb8cfa823977b25d3cf431098e86021f406a5ceccade58885a0b00ee\",\n      \"snippet\": \"Check out the detailed 2025-26 Troy Trojans Roster and Stats for College Basketball at Sports-Reference.com\"\n    },\n    {\n      \"title\": \"Meet the NCAA Tournament No. 13 Seeds: Cal Baptist, Hawaii, Hofstra, Troy\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2Fncaa%2Dtournament%2D13%2Dseeds%2Dcal%2Dbaptist%2Dhawaii%2Dhofstra%2Dtroy&rut=d7c31867f5cf771dd40ea63d5a35cf9030487444f6d77352f211b0fb5bca626b\",\n      \"snippet\": \"California Baptist, Hawaii, Hofstra, and Troy are the 2026 NCAA Tournament No. 13 seeds. Here&#x27;s CFN&#x27;s breakdown of every team&#x27;s strengths , concerns, and expectations.\"\n    },\n    {\n      \"title\": \"2026 Troy Trojans RPI Team Sheet - WarrenNolan.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fteam%2Dsheet%3Fteam%3DTroy&rut=908b40b457972d60eb80cf589dfad38ca3e7c47377cc8fa08a9c3f8ffa8d9dde\",\n      \"snippet\": \"The 2026 NCAA Men&#x27;s Basketball Tournament Selection Committee Team Sheet for Troy Trojans with RPI, Strength of Schedule, Quadrant Records, and Every Game Result Ordered by RPI\"\n    },\n    {\n      \"title\": \"2025-26 Troy Trojans men&#x27;s basketball team - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025%25E2%2580%259326_Troy_Trojans_men%2527s_basketball_team&rut=b22376d50b5f9654f2c886d1120bf33bde00b2eaa79766c60091829146859edc\",\n      \"snippet\": \"The 2025-26 Troy Trojans men&#x27;s basketball team represents Troy University in the 2025-26 NCAA Division I men&#x27;s basketball season. The Trojans , led by seventh-year head coach Scott Cross, play their home games at Trojan Arena in Troy , Alabama as members of the Sun Belt Conference.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -938,8 +941,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ftroytrojans.com%2Fsports%2Fmens%2Dbasketball&rut=d1599b39493e1cd29f8cb69ac5000891fde30ff81986c48edd97447cf9ced391",
           "snippet": "The official page for Troy University Men&#x27;s Basketball , featuring team news, schedules, and updates."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025-26 Troy Trojans Men&#x27;s Roster and Stats | College Basketball at ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Ftroy%2Fmen%2F2026.html&rut=f4b7d3fcbb8cfa823977b25d3cf431098e86021f406a5ceccade58885a0b00ee\",\n      \"snippet\": \"Check out the detailed 2025-26 Troy Trojans Roster and Stats for College Basketball at Sports-Reference.com\"\n    },\n    {\n      \"title\": \"Meet the NCAA Tournament No. 13 Seeds: Cal Baptist, Hawaii, Hofstra, Troy\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2Fncaa%2Dtournament%2D13%2Dseeds%2Dcal%2Dbaptist%2Dhawaii%2Dhofstra%2Dtroy&rut=d7c31867f5cf771dd40ea63d5a35cf9030487444f6d77352f211b0fb5bca626b\",\n      \"snippet\": \"California Baptist, Hawaii, Hofstra, and Troy are the 2026 NCAA Tournament No. 13 seeds. Here&#x27;s CFN&#x27;s breakdown of every team&#x27;s strengths , concerns, and expectations.\"\n    },\n    {\n      \"title\": \"2026 Troy Trojans RPI Team Sheet - WarrenNolan.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.warrennolan.com%2Fbasketball%2F2026%2Fteam%2Dsheet%3Fteam%3DTroy&rut=908b40b457972d60eb80cf589dfad38ca3e7c47377cc8fa08a9c3f8ffa8d9dde\",\n      \"snippet\": \"The 2026 NCAA Men&#x27;s Basketball Tournament Selection Committee Team Sheet for Troy Trojans with RPI, Strength of Schedule, Quadrant Records, and Every Game Result Ordered by RPI\"\n    },\n    {\n      \"title\": \"2025-26 Troy Trojans men&#x27;s basketball team - Wikipedia\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025%25E2%2580%259326_Troy_Trojans_men%2527s_basketball_team&rut=b22376d50b5f9654f2c886d1120bf33bde00b2eaa79766c60091829146859edc\",\n      \"snippet\": \"The 2025-26 Troy Trojans men&#x27;s basketball team represents Troy University in the 2025-26 NCAA Division I men&#x27;s basketball season. The Trojans , led by seventh-year head coach Scott Cross, play their home games at Trojan Arena in Troy , Alabama as members of the Sun Belt Conference.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-4-final-json",

@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-midwest-6",
     "winnerId": "virginia",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Virginia's elite defense, ranked 14th nationally, and efficient offense should overwhelm Wright State. The Cavaliers' 29-4 record against rigorous ACC competition provides a level of high-major experience that the Horizon League champion has not faced. While 14-seed upsets are possible, the substantial gap in team quality and Virginia's disciplined style makes a credible path to victory for Wright State unlikely."
   },
   "reasoningStep": {
     "id": "analysis-r64-midwest-6",
     "title": "Evaluate 3-14 matchup: Virginia vs Wright State",
     "summary": "Virginia is a top-15 team with strong offense and elite defense; Wright State is a mid-major with no available efficiency ratings, indicating a large talent gap.",
-    "evidence": "Virginia's Torvik rank 14, KenPom rank 13, record 29-4, adjde rank 14. Wright State ratings not found, typical for a 14-seed."
+    "evidence": [
+      "Virginia's Torvik rank 14, KenPom rank 13, record 29-4, adjde rank 14. Wright State ratings not found, typical for a 14-seed."
+    ]
   },
   "toolCalls": [
     {
@@ -1051,19 +1053,20 @@
       "id": "r64-midwest-6-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:17:02.914Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "virginia",
           "wright-state"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-6-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:17:02.921Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"virginia\",\n      \"teamName\": \"Virginia\",\n      \"torvik\": {\n        \"rank\": 14,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adjoe\": 121.7500345084046,\n        \"oe Rank\": 31,\n        \"adjde\": 95.6707532519653,\n        \"de Rank\": 14\n      },\n      \"kenpom\": {\n        \"rank\": 13,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adj_em\": 26.49,\n        \"adj_o\": 122.2,\n        \"adj_o_rank\": 28,\n        \"adj_d\": 95.7\n      }\n    },\n    {\n      \"teamId\": \"wright-state\",\n      \"teamName\": \"Wright State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -1146,8 +1149,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"virginia\",\n      \"teamName\": \"Virginia\",\n      \"torvik\": {\n        \"rank\": 14,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adjoe\": 121.7500345084046,\n        \"oe Rank\": 31,\n        \"adjde\": 95.6707532519653,\n        \"de Rank\": 14\n      },\n      \"kenpom\": {\n        \"rank\": 13,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adj_em\": 26.49,\n        \"adj_o\": 122.2,\n        \"adj_o_rank\": 28,\n        \"adj_d\": 95.7\n      }\n    },\n    {\n      \"teamId\": \"wright-state\",\n      \"teamName\": \"Wright State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-6-assistant-1",
@@ -1159,14 +1161,15 @@
       "id": "r64-midwest-6-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:17:10.013Z",
+      "content": "",
       "toolName": "list_teams",
-      "arguments": {},
-      "content": ""
+      "arguments": {}
     },
     {
       "id": "r64-midwest-6-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:17:10.013Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1713,8 +1716,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"duke\",\n      \"name\": \"Duke\",\n      \"shortName\": \"DUKE\",\n      \"seed\": 1,\n      \"region\": \"East\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"uconn\",\n      \"name\": \"UConn\",\n      \"shortName\": \"UCONN\",\n      \"seed\": 2,\n      \"region\": \"East\",\n      \"conference\": \"Big East\"\n    },\n    {\n      \"id\": \"michigan-state\",\n      \"name\": \"Michigan State\",\n      \"shortName\": \"MSU\",\n      \"seed\": 3,\n      \"region\": \"East\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"kansas\",\n      \"name\": \"Kansas\",\n      \"shortName\": \"KU\",\n      \"seed\": 4,\n      \"region\": \"East\",\n      \"conference\": \"Big 12\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-6-assistant-2",
@@ -1726,22 +1728,22 @@
       "id": "r64-midwest-6-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:17:15.792Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Virginia basketball 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-6-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:17:16.415Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-6-assistant-3",
@@ -1753,22 +1755,22 @@
       "id": "r64-midwest-6-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:17:20.339Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "2026 NCAA tournament Virginia Wright State matchup",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-6-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:17:20.990Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-6-assistant-4",
@@ -1780,22 +1782,22 @@
       "id": "r64-midwest-6-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:17:26.707Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Virginia Cavaliers basketball 2026 season",
         "maxResults": 3
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-6-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:17:27.421Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-6-assistant-5",
@@ -1807,16 +1809,17 @@
       "id": "r64-midwest-6-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:17:36.921Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "Midwest"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-6-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:17:36.921Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"michigan\",\n      \"name\": \"Michigan\",\n      \"shortName\": \"MICH\",\n      \"seed\": 1,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"iowa-state\",\n      \"name\": \"Iowa State\",\n      \"shortName\": \"ISU\",\n      \"seed\": 2,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"virginia\",\n      \"name\": \"Virginia\",\n      \"shortName\": \"UVA\",\n      \"seed\": 3,\n      \"region\": \"Midwest\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"alabama\",\n      \"name\": \"Alabama\",\n      \"shortName\": \"BAMA\",\n      \"seed\": 4,\n      \"region\": \"Midwest\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -1963,8 +1966,7 @@
           "region": "Midwest",
           "conference": "America East"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"michigan\",\n      \"name\": \"Michigan\",\n      \"shortName\": \"MICH\",\n      \"seed\": 1,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"iowa-state\",\n      \"name\": \"Iowa State\",\n      \"shortName\": \"ISU\",\n      \"seed\": 2,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"virginia\",\n      \"name\": \"Virginia\",\n      \"shortName\": \"UVA\",\n      \"seed\": 3,\n      \"region\": \"Midwest\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"alabama\",\n      \"name\": \"Alabama\",\n      \"shortName\": \"BAMA\",\n      \"seed\": 4,\n      \"region\": \"Midwest\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-6-assistant-6",
@@ -1976,18 +1978,19 @@
       "id": "r64-midwest-6-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:17:44.317Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-midwest-6"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-6-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:17:44.317Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"virginia\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"wright-state\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -2004,8 +2007,7 @@
             "teamId": "wright-state"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-6\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 3/14\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"virginia\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"wright-state\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-6-assistant-7",
@@ -2017,18 +2019,19 @@
       "id": "r64-midwest-6-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:17:55.106Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamNames": [
           "Wright State"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-6-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:17:55.111Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"wright-state\",\n      \"teamName\": \"Wright State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -2037,8 +2040,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"wright-state\",\n      \"teamName\": \"Wright State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-6-assistant-8",
@@ -2050,22 +2052,22 @@
       "id": "r64-midwest-6-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:18:23.987Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Wright State Raiders basketball 2026",
         "maxResults": 3
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-6-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:18:24.682Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-6-assistant-9",
@@ -2077,19 +2079,20 @@
       "id": "r64-midwest-6-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:18:40.611Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "wright-state",
           "virginia"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-6-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:18:40.620Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"virginia\",\n      \"teamName\": \"Virginia\",\n      \"torvik\": {\n        \"rank\": 14,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adjoe\": 121.7500345084046,\n        \"oe Rank\": 31,\n        \"adjde\": 95.6707532519653,\n        \"de Rank\": 14\n      },\n      \"kenpom\": {\n        \"rank\": 13,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adj_em\": 26.49,\n        \"adj_o\": 122.2,\n        \"adj_o_rank\": 28,\n        \"adj_d\": 95.7\n      }\n    },\n    {\n      \"teamId\": \"wright-state\",\n      \"teamName\": \"Wright State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -2172,8 +2175,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"virginia\",\n      \"teamName\": \"Virginia\",\n      \"torvik\": {\n        \"rank\": 14,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adjoe\": 121.7500345084046,\n        \"oe Rank\": 31,\n        \"adjde\": 95.6707532519653,\n        \"de Rank\": 14\n      },\n      \"kenpom\": {\n        \"rank\": 13,\n        \"team\": \"Virginia\",\n        \"conf\": \"ACC\",\n        \"record\": \"29-4\",\n        \"adj_em\": 26.49,\n        \"adj_o\": 122.2,\n        \"adj_o_rank\": 28,\n        \"adj_d\": 95.7\n      }\n    },\n    {\n      \"teamId\": \"wright-state\",\n      \"teamName\": \"Wright State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-6-final-json",

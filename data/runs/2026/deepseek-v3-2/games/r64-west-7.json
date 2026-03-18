@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-west-7",
     "winnerId": "miami-fl",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Miami's superior efficiency metrics, particularly a top-45 defense that contrasts with Missouri's vulnerable unit, provide a clear edge in this 7-10 matchup. The Hurricanes' 25-8 record against rigorous ACC competition demonstrates their readiness for tournament play, while Missouri's weaker defensive ranking (68th in Torvik) may struggle to contain Miami's balanced offensive attack. Although 10-seed upsets are common, Miami's overall team quality and defensive discipline should secure a victory."
   },
   "reasoningStep": {
     "id": "r64-west-7-analysis",
     "title": "Miami's defensive edge over Missouri",
     "summary": "Analysis of efficiency ratings shows Miami holds advantages on both ends, with a particularly significant defensive edge that should control the game.",
-    "evidence": "Torvik ratings: Miami 35th overall (offense 35th, defense 45th), Missouri 46th overall (offense 42nd, defense 68th). KenPom: Miami 30th overall (adjEM +20.67), Missouri 52nd overall (adjEM +15.36). Miami's 25-8 record vs Missouri's 20-12. Both power conference teams, but Miami's superior defensive efficiency and overall metrics favor them."
+    "evidence": [
+      "Torvik ratings: Miami 35th overall (offense 35th, defense 45th), Missouri 46th overall (offense 42nd, defense 68th). KenPom: Miami 30th overall (adjEM +20.67), Missouri 52nd overall (adjEM +15.36). Miami's 25-8 record vs Missouri's 20-12. Both power conference teams, but Miami's superior defensive efficiency and overall metrics favor them."
+    ]
   },
   "toolCalls": [
     {
@@ -266,19 +268,20 @@
       "id": "r64-west-7-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:52:31.568Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "miami-fl",
           "missouri"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-7-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:52:31.574Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"miami-fl\",\n      \"teamName\": \"Miami (FL)\",\n      \"torvik\": {\n        \"rank\": 35,\n        \"team\": \"Miami FL\",\n        \"conf\": \"ACC\",\n        \"record\": \"25-8\",\n        \"adjoe\": 121.0605733464184,\n        \"oe Rank\": 35,\n        \"adjde\": 101.45584753256782,\n        \"de Rank\": 45\n      },\n      \"kenpom\": {\n        \"rank\": 30,\n        \"team\": \"Miami FL\",\n        \"conf\": \"ACC\",\n        \"record\": \"25-8\",\n        \"adj_em\": 20.67,\n        \"adj_o\": 121.4,\n        \"adj_o_rank\": 34,\n        \"adj_d\": 100.7\n      }\n    },\n    {\n      \"teamId\": \"missouri\",\n      \"teamName\": \"Missouri\",\n      \"torvik\": {\n        \"rank\": 46,\n        \"team\": \"Missouri\",\n        \"conf\": \"SEC\",\n        \"record\": \"20-12\",\n        \"adjoe\": 119.8509049224362,\n        \"oe Rank\": 42,\n        \"adjde\": 102.98717398625944,\n        \"de Rank\": 68\n      },\n      \"kenpom\": {\n        \"rank\": 52,\n        \"team\": \"Missouri\",\n        \"conf\": \"SEC\",\n        \"record\": \"20-12\",\n        \"adj_em\": 15.36,\n        \"adj_o\": 119.5,\n        \"adj_o_rank\": 50,\n        \"adj_d\": 104.1\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -429,8 +432,7 @@
             "ncsos_adj_em_rank": 345
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"miami-fl\",\n      \"teamName\": \"Miami (FL)\",\n      \"torvik\": {\n        \"rank\": 35,\n        \"team\": \"Miami FL\",\n        \"conf\": \"ACC\",\n        \"record\": \"25-8\",\n        \"adjoe\": 121.0605733464184,\n        \"oe Rank\": 35,\n        \"adjde\": 101.45584753256782,\n        \"de Rank\": 45\n      },\n      \"kenpom\": {\n        \"rank\": 30,\n        \"team\": \"Miami FL\",\n        \"conf\": \"ACC\",\n        \"record\": \"25-8\",\n        \"adj_em\": 20.67,\n        \"adj_o\": 121.4,\n        \"adj_o_rank\": 34,\n        \"adj_d\": 100.7\n      }\n    },\n    {\n      \"teamId\": \"missouri\",\n      \"teamName\": \"Missouri\",\n      \"torvik\": {\n        \"rank\": 46,\n        \"team\": \"Missouri\",\n        \"conf\": \"SEC\",\n        \"record\": \"20-12\",\n        \"adjoe\": 119.8509049224362,\n        \"oe Rank\": 42,\n        \"adjde\": 102.98717398625944,\n        \"de Rank\": 68\n      },\n      \"kenpom\": {\n        \"rank\": 52,\n        \"team\": \"Missouri\",\n        \"conf\": \"SEC\",\n        \"record\": \"20-12\",\n        \"adj_em\": 15.36,\n        \"adj_o\": 119.5,\n        \"adj_o_rank\": 50,\n        \"adj_d\": 104.1\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-7-assistant-1",
@@ -442,22 +444,22 @@
       "id": "r64-west-7-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:52:39.889Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Miami Hurricanes basketball 2026 tournament",
         "maxResults": 3
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-7-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:52:40.556Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-7-assistant-2",
@@ -469,22 +471,22 @@
       "id": "r64-west-7-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:52:44.576Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Miami Hurricanes basketball 2026 NCAA tournament preview",
         "maxResults": 3
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-7-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:52:45.368Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-7-assistant-3",
@@ -496,18 +498,19 @@
       "id": "r64-west-7-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:53:02.164Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-west-7"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-7-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:53:02.164Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-7\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 7/10\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"miami-fl\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"missouri\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -524,8 +527,7 @@
             "teamId": "missouri"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-west-7\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 7/10\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"miami-fl\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"missouri\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-7-assistant-final-4",

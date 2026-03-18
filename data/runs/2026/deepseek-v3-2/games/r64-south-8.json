@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-south-8",
     "winnerId": "houston",
-    "confidence": "Very High",
+    "confidence": 0.93,
     "rationale": "Houston's elite defense, ranked 4th nationally, and top-20 offense create an overwhelming mismatch against Idaho's lower efficiency ratings. The Cougars' 28-5 record was built against rigorous Big 12 competition, providing high-major experience that Idaho lacks from the Big Sky. While 15-seed upsets occasionally happen, the vast disparity in team quality and Houston's defensive prowess makes a credible path to victory for Idaho highly unlikely."
   },
   "reasoningStep": {
     "id": "r64-south-8-analysis",
     "title": "Houston vs Idaho matchup analysis",
     "summary": "Houston's elite defense and high-major experience create an overwhelming mismatch",
-    "evidence": "Houston ranks 5th in both Torvik and KenPom with a 28-5 record, featuring the 4th-ranked defense nationally. Idaho ranks 136th in Torvik and 145th in KenPom with a 21-14 record and mediocre efficiency metrics on both ends."
+    "evidence": [
+      "Houston ranks 5th in both Torvik and KenPom with a 28-5 record, featuring the 4th-ranked defense nationally. Idaho ranks 136th in Torvik and 145th in KenPom with a 21-14 record and mediocre efficiency metrics on both ends."
+    ]
   },
   "toolCalls": [
     {
@@ -452,19 +454,20 @@
       "id": "r64-south-8-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:07:42.402Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "houston",
           "idaho"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-8-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:07:42.409Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"houston\",\n      \"teamName\": \"Houston\",\n      \"torvik\": {\n        \"rank\": 5,\n        \"team\": \"Houston\",\n        \"conf\": \"B12\",\n        \"record\": \"28-5\",\n        \"adjoe\": 125.0975167715807,\n        \"oe Rank\": 13,\n        \"adjde\": 91.8530836031741,\n        \"de Rank\": 4\n      },\n      \"kenpom\": {\n        \"rank\": 5,\n        \"team\": \"Houston\",\n        \"conf\": \"B12\",\n        \"record\": \"28-5\",\n        \"adj_em\": 33.55,\n        \"adj_o\": 124.6,\n        \"adj_o_rank\": 16,\n        \"adj_d\": 91\n      }\n    },\n    {\n      \"teamId\": \"idaho\",\n      \"teamName\": \"Idaho\",\n      \"torvik\": {\n        \"rank\": 136,\n        \"team\": \"Idaho\",\n        \"conf\": \"BSky\",\n        \"record\": \"21-14\",\n        \"adjoe\": 108.80755053232986,\n        \"oe Rank\": 166,\n        \"adjde\": 106.16513499233696,\n        \"de Rank\": 122\n      },\n      \"kenpom\": {\n        \"rank\": 145,\n        \"team\": \"Idaho\",\n        \"conf\": \"BSky\",\n        \"record\": \"21-14\",\n        \"adj_em\": 1.54,\n        \"adj_o\": 108.9,\n        \"adj_o_rank\": 176,\n        \"adj_d\": 107.4\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -615,8 +618,7 @@
             "ncsos_adj_em_rank": 162
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"houston\",\n      \"teamName\": \"Houston\",\n      \"torvik\": {\n        \"rank\": 5,\n        \"team\": \"Houston\",\n        \"conf\": \"B12\",\n        \"record\": \"28-5\",\n        \"adjoe\": 125.0975167715807,\n        \"oe Rank\": 13,\n        \"adjde\": 91.8530836031741,\n        \"de Rank\": 4\n      },\n      \"kenpom\": {\n        \"rank\": 5,\n        \"team\": \"Houston\",\n        \"conf\": \"B12\",\n        \"record\": \"28-5\",\n        \"adj_em\": 33.55,\n        \"adj_o\": 124.6,\n        \"adj_o_rank\": 16,\n        \"adj_d\": 91\n      }\n    },\n    {\n      \"teamId\": \"idaho\",\n      \"teamName\": \"Idaho\",\n      \"torvik\": {\n        \"rank\": 136,\n        \"team\": \"Idaho\",\n        \"conf\": \"BSky\",\n        \"record\": \"21-14\",\n        \"adjoe\": 108.80755053232986,\n        \"oe Rank\": 166,\n        \"adjde\": 106.16513499233696,\n        \"de Rank\": 122\n      },\n      \"kenpom\": {\n        \"rank\": 145,\n        \"team\": \"Idaho\",\n        \"conf\": \"BSky\",\n        \"record\": \"21-14\",\n        \"adj_em\": 1.54,\n        \"adj_o\": 108.9,\n        \"adj_o_rank\": 176,\n        \"adj_d\": 107.4\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-8-assistant-1",
@@ -628,22 +630,22 @@
       "id": "r64-south-8-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:07:50.695Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Houston basketball injury 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-8-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:07:51.413Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-8-assistant-2",
@@ -655,20 +657,20 @@
       "id": "r64-south-8-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:07:56.199Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Houston Cougars 2026 NCAA tournament injury updates",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-8-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:07:56.336Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-south-8-assistant-3",
@@ -680,20 +682,20 @@
       "id": "r64-south-8-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:08:00.589Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Houston Cougars 2026 March Madness",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-8-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:08:00.727Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-south-8-assistant-4",
@@ -705,22 +707,22 @@
       "id": "r64-south-8-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:08:05.207Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Idaho Vandals 2026 NCAA tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-8-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:08:05.903Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-8-assistant-5",
@@ -732,22 +734,22 @@
       "id": "r64-south-8-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:08:10.334Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "\"Houston\" \"Idaho\" 2026 NCAA",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-8-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:08:10.961Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-south-8-assistant-6",
@@ -759,18 +761,19 @@
       "id": "r64-south-8-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:08:27.666Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-south-8"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-8-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:08:27.666Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-south-8\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 2/15\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"houston\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"idaho\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -787,8 +790,7 @@
             "teamId": "idaho"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-south-8\",\n      \"round\": \"Round of 64\",\n      \"region\": \"South\",\n      \"label\": \"South 2/15\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"houston\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"idaho\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-8-assistant-7",
@@ -800,16 +802,17 @@
       "id": "r64-south-8-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:08:31.246Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "South"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-south-8-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:08:31.246Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"florida\",\n      \"name\": \"Florida\",\n      \"shortName\": \"FLA\",\n      \"seed\": 1,\n      \"region\": \"South\",\n      \"conference\": \"SEC\"\n    },\n    {\n      \"id\": \"houston\",\n      \"name\": \"Houston\",\n      \"shortName\": \"HOU\",\n      \"seed\": 2,\n      \"region\": \"South\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"illinois\",\n      \"name\": \"Illinois\",\n      \"shortName\": \"ILL\",\n      \"seed\": 3,\n      \"region\": \"South\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"nebraska\",\n      \"name\": \"Nebraska\",\n      \"shortName\": \"NEB\",\n      \"seed\": 4,\n      \"region\": \"South\",\n      \"conference\": \"Big Ten\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -948,8 +951,7 @@
           "region": "South",
           "conference": "SWAC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"florida\",\n      \"name\": \"Florida\",\n      \"shortName\": \"FLA\",\n      \"seed\": 1,\n      \"region\": \"South\",\n      \"conference\": \"SEC\"\n    },\n    {\n      \"id\": \"houston\",\n      \"name\": \"Houston\",\n      \"shortName\": \"HOU\",\n      \"seed\": 2,\n      \"region\": \"South\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"illinois\",\n      \"name\": \"Illinois\",\n      \"shortName\": \"ILL\",\n      \"seed\": 3,\n      \"region\": \"South\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"nebraska\",\n      \"name\": \"Nebraska\",\n      \"shortName\": \"NEB\",\n      \"seed\": 4,\n      \"region\": \"South\",\n      \"conference\": \"Big Ten\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-south-8-assistant-final-8",

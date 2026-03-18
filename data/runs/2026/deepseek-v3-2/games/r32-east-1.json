@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r32-east-1",
     "winnerId": "duke",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Duke's elite defense, ranked best in the nation, should contain Ohio State's offense and control the game. Even without injured starters Caleb Foster and potentially Patrick Ngongba, the Blue Devils' depth and offensive efficiency, built against a rigorous ACC schedule, provide a significant edge. Ohio State is a solid opponent, but the overall No. 1 seed has demonstrated the ability to win without key players and should advance to the Sweet 16."
   },
   "reasoningStep": {
     "id": "r32-east-1-analysis",
     "title": "Duke vs Ohio State Round of 32 Assessment",
     "summary": "Evaluated Duke's team quality, injury status, and Ohio State's profile to determine the likely outcome.",
-    "evidence": "Duke is the No. 1 overall seed with the nation's top defense (1st in Torvik) and a top-5 offense. Injuries: Caleb Foster is out with a fractured foot; Patrick Ngongba is day-to-day but improving and trending toward playing. Duke won the ACC Tournament without both, showing depth. Ohio State has a top-30 offense but lacks comparable efficiency ratings to Duke. The Blue Devils' defensive prowess and high-major experience are expected to prevail."
+    "evidence": [
+      "Duke is the No. 1 overall seed with the nation's top defense (1st in Torvik) and a top-5 offense. Injuries: Caleb Foster is out with a fractured foot; Patrick Ngongba is day-to-day but improving and trending toward playing. Duke won the ACC Tournament without both, showing depth. Ohio State has a top-30 offense but lacks comparable efficiency ratings to Duke. The Blue Devils' defensive prowess and high-major experience are expected to prevail."
+    ]
   },
   "toolCalls": [
     {
@@ -366,19 +368,20 @@
       "id": "r32-east-1-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:22:52.630Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "duke",
           "ohio-state"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:22:52.638Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"duke\",\n      \"teamName\": \"Duke\",\n      \"torvik\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adjoe\": 128.01924984850498,\n        \"oe Rank\": 4,\n        \"adjde\": 90.44607016864468,\n        \"de Rank\": 1\n      },\n      \"kenpom\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adj_em\": 39.17,\n        \"adj_o\": 127.9,\n        \"adj_o_rank\": 4,\n        \"adj_d\": 88.7\n      }\n    },\n    {\n      \"teamId\": \"ohio-state\",\n      \"teamName\": \"Ohio State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -461,8 +464,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"duke\",\n      \"teamName\": \"Duke\",\n      \"torvik\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adjoe\": 128.01924984850498,\n        \"oe Rank\": 4,\n        \"adjde\": 90.44607016864468,\n        \"de Rank\": 1\n      },\n      \"kenpom\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adj_em\": 39.17,\n        \"adj_o\": 127.9,\n        \"adj_o_rank\": 4,\n        \"adj_d\": 88.7\n      }\n    },\n    {\n      \"teamId\": \"ohio-state\",\n      \"teamName\": \"Ohio State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-east-1-assistant-1",
@@ -474,17 +476,18 @@
       "id": "r32-east-1-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:22:59.310Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Duke Ohio State 2026 NCAA tournament Round of 32 matchup",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:23:00.730Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 NCAA Tournament bracket, seedings, matchups for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgatorswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fgators%2Fmens%2Dbasketball%2F2026%2F03%2F15%2Fmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2D2026%2Dschedule%2Dseedings%2F89170517007%2F&rut=a88002d5257b585a0de79a36dd8b48c11719779a5e290a17f91d0c4bc51a8f40\",\n      \"snippet\": \"Here&#x27;s the full 2026 NCAA Tournament bracket, along with matchups and locations for all four regions of play, as March Madness kicks into high gear.\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament bracket: March Madness schedule and scores by ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fncaa%2Dtournament%2Dbracket%2D2026%2Dmarch%2Dmadness%2Dschedule%2Dscores%2Dregion%2Dchannels%2Dtimes%2F&rut=0938937c0d5a703b166ad9ab02c25d7ae7e93c3f71b130570b1cb49c28a2f677\",\n      \"snippet\": \"2026 NCAA Tournament bracket: March Madness schedule and scores by region, TV channels and tip times Follow the Road to the Final Four all month long with an updating bracket and TV schedule\"\n    },\n    {\n      \"title\": \"2026 NCAA tournament printable bracket, schedule for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Fmml%2Dofficial%2Dbracket%2F2026%2D03%2D15%2F2026%2Dncaa%2Dtournament%2Dprintable%2Dbracket%2Dschedule%2Dmarch%2Dmadness&rut=50391b23e8b569b93915408c90165a17fdc4823f2288c8537b99ef3bffd34b53\",\n      \"snippet\": \"Here is the official, printable 2026 NCAA bracket for the March Madness men&#x27;s tournament , along with the tournament schedule, dates and locations.\"\n    },\n    {\n      \"title\": \"Complete March Madness schedule for the men&#x27;s 2026 NCAA tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sbnation.com%2Fcollege%2Dbasketball%2F1106119%2Fmarch%2Dmadness%2Dschedule%2Dmens%2D2026%2Dncaa%2Dtournament&rut=b76ac24132be0e49f6ba34b9f34de78e7252f16986df25757cdb45aacf28c771\",\n      \"snippet\": \"The 2026 men&#x27;s NCAA tournament bracket was revealed on March 15 during Selection Sunday. March Madness always brings the upsets, buzzer-beaters, Cinderellas and memorable moments.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -512,8 +515,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.latimes.com%2Fsports%2Fstory%2F2026%2D03%2D15%2Fmarch%2Dmadness%2Dbrackets%2D2026%2Dncaa%2Dtournament&rut=4c9f086e4cabe152855feeb5cbd3ce4a8f912f91daaaa7fa70584a540854a76d",
           "snippet": "A look at the brackets for the 2026 NCAA men&#x27;s and women&#x27;s basketball tournaments , with the UCLA women taking the No. 1 seed in Region 2."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 NCAA Tournament bracket, seedings, matchups for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgatorswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fgators%2Fmens%2Dbasketball%2F2026%2F03%2F15%2Fmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2D2026%2Dschedule%2Dseedings%2F89170517007%2F&rut=a88002d5257b585a0de79a36dd8b48c11719779a5e290a17f91d0c4bc51a8f40\",\n      \"snippet\": \"Here&#x27;s the full 2026 NCAA Tournament bracket, along with matchups and locations for all four regions of play, as March Madness kicks into high gear.\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament bracket: March Madness schedule and scores by ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fncaa%2Dtournament%2Dbracket%2D2026%2Dmarch%2Dmadness%2Dschedule%2Dscores%2Dregion%2Dchannels%2Dtimes%2F&rut=0938937c0d5a703b166ad9ab02c25d7ae7e93c3f71b130570b1cb49c28a2f677\",\n      \"snippet\": \"2026 NCAA Tournament bracket: March Madness schedule and scores by region, TV channels and tip times Follow the Road to the Final Four all month long with an updating bracket and TV schedule\"\n    },\n    {\n      \"title\": \"2026 NCAA tournament printable bracket, schedule for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Fmml%2Dofficial%2Dbracket%2F2026%2D03%2D15%2F2026%2Dncaa%2Dtournament%2Dprintable%2Dbracket%2Dschedule%2Dmarch%2Dmadness&rut=50391b23e8b569b93915408c90165a17fdc4823f2288c8537b99ef3bffd34b53\",\n      \"snippet\": \"Here is the official, printable 2026 NCAA bracket for the March Madness men&#x27;s tournament , along with the tournament schedule, dates and locations.\"\n    },\n    {\n      \"title\": \"Complete March Madness schedule for the men&#x27;s 2026 NCAA tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sbnation.com%2Fcollege%2Dbasketball%2F1106119%2Fmarch%2Dmadness%2Dschedule%2Dmens%2D2026%2Dncaa%2Dtournament&rut=b76ac24132be0e49f6ba34b9f34de78e7252f16986df25757cdb45aacf28c771\",\n      \"snippet\": \"The 2026 men&#x27;s NCAA tournament bracket was revealed on March 15 during Selection Sunday. March Madness always brings the upsets, buzzer-beaters, Cinderellas and memorable moments.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-east-1-assistant-2",
@@ -525,20 +527,20 @@
       "id": "r32-east-1-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:23:05.634Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Ohio State basketball 2026 season",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:23:05.779Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r32-east-1-assistant-3",
@@ -550,17 +552,18 @@
       "id": "r32-east-1-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:23:10.700Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Duke basketball 2026 NCAA tournament injury",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:23:11.969Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Duke basketball injury update for March Madness tournament | Raleigh ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fduke%2Farticle315059036.html&rut=e7af8cca5273659c22bc0f655e11af9d4a22b3dfe263cd4faf23b264c8d53e17\",\n      \"snippet\": \"Duke&#x27;s Patrick Ngongba II and Caleb Foster take selfies with fans before Duke&#x27;s game against Florida State in the quarterfinals of the 2026 ACC Men&#x27;s Basketball Tournament at the Spectrum ...\"\n    },\n    {\n      \"title\": \"Duke Basketball: Injury update on Caleb Foster, Patrick Ngongba\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegesportswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fcollege%2Dbasketball%2F2026%2F03%2F08%2Fcollege%2Dbasketball%2Dduke%2Dcaleb%2Dfoster%2Dpatrick%2Dngongba%2Dinjury%2F89052546007%2F&rut=0dc7c9b50776e1e4667a4d9416aeb1574058ea273e10a5dbe24179a76de972bb\",\n      \"snippet\": \"The Duke Blue Devils finished their regular season with a 76-61 win over rival North Carolina on Saturday and refocused on the ACC Tournament . It was an impressive win, especially given starting center Patrick Ngbonga II sat out and starting guard Caleb Foster played just 11 minutes.\"\n    },\n    {\n      \"title\": \"Key March Madness injuries to know while filling out your men&#x27;s NCAA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed\",\n      \"snippet\": \"From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries.\"\n    },\n    {\n      \"title\": \"Why Duke basketball is on upset alert in 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fwhy%2Dduke%2Dbasketball%2Dupset%2Dalert%2D2026%2Dncaa%2Dtournament&rut=c15ec328cbe50e91b8f2e0dc478b6d864d59bdbe3146371a883555c0ce92e5bc\",\n      \"snippet\": \"Why Duke basketball is on upset alert in 2026 NCAA Tournament The Duke basketball team is hoping to win a national championship, for the first time with Jon Scheyer as head coach.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -588,8 +591,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
           "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Duke basketball injury update for March Madness tournament | Raleigh ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fduke%2Farticle315059036.html&rut=e7af8cca5273659c22bc0f655e11af9d4a22b3dfe263cd4faf23b264c8d53e17\",\n      \"snippet\": \"Duke&#x27;s Patrick Ngongba II and Caleb Foster take selfies with fans before Duke&#x27;s game against Florida State in the quarterfinals of the 2026 ACC Men&#x27;s Basketball Tournament at the Spectrum ...\"\n    },\n    {\n      \"title\": \"Duke Basketball: Injury update on Caleb Foster, Patrick Ngongba\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegesportswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fcollege%2Dbasketball%2F2026%2F03%2F08%2Fcollege%2Dbasketball%2Dduke%2Dcaleb%2Dfoster%2Dpatrick%2Dngongba%2Dinjury%2F89052546007%2F&rut=0dc7c9b50776e1e4667a4d9416aeb1574058ea273e10a5dbe24179a76de972bb\",\n      \"snippet\": \"The Duke Blue Devils finished their regular season with a 76-61 win over rival North Carolina on Saturday and refocused on the ACC Tournament . It was an impressive win, especially given starting center Patrick Ngbonga II sat out and starting guard Caleb Foster played just 11 minutes.\"\n    },\n    {\n      \"title\": \"Key March Madness injuries to know while filling out your men&#x27;s NCAA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed\",\n      \"snippet\": \"From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries.\"\n    },\n    {\n      \"title\": \"Why Duke basketball is on upset alert in 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fwhy%2Dduke%2Dbasketball%2Dupset%2Dalert%2D2026%2Dncaa%2Dtournament&rut=c15ec328cbe50e91b8f2e0dc478b6d864d59bdbe3146371a883555c0ce92e5bc\",\n      \"snippet\": \"Why Duke basketball is on upset alert in 2026 NCAA Tournament The Duke basketball team is hoping to win a national championship, for the first time with Jon Scheyer as head coach.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-east-1-assistant-4",
@@ -601,23 +603,23 @@
       "id": "r32-east-1-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:23:17.129Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.newsobserver.com/sports/college/acc/duke/article315059036.html",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:23:17.225Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.newsobserver.com/sports/college/acc/duke/article315059036.html\",\n    \"text\": \"Duke basketball injury update for March Madness tournament | Raleigh News & Observer Read today&#39;s Edition Log In | Subscribe Welcome Back! Edit Profile My Subscriptions { document.cookie = `${cookieName}=; domain=${domain}; path=/; max-age=-1000`; }); window.location.href = this.href;\\\"> Sign Out 30°F Helene Recovery News Sports Business Living Politics Games Obituaries Finance Classifieds Raleigh&#39;s Best Home Customer Service About Us Archives Cancel Subscription Contact Us Customer Service Subscribe Sponsorship Advertise Contact McClatchy Advertising Stay Connected Mobile & Apps Newsletters Advertise Facebook Twitter Instagram YouTube Read today&#39;s Edition Raleigh&#39;s Best Detour Travel Local Events News Local Crime Counties Durham County Johnston County Orange County Wake County More News Education Weather News Transportation North Carolina National Databases Sports All Sports Canes High Schools NASCAR & Auto Racing Panthers Colleges Duke NC State North Carolina Columnists Luke DeCock Scott Fowler FIFA World Cup Politics Politics & Government Election Business & Real Estate All Business Real Estate Personal Finance Living & Entertainment Living Entertainment Food + Dr... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.newsobserver.com/sports/college/acc/duke/article315059036.html",
         "text": "Duke basketball injury update for March Madness tournament | Raleigh News & Observer Read today&#39;s Edition Log In | Subscribe Welcome Back! Edit Profile My Subscriptions { document.cookie = `${cookieName}=; domain=${domain}; path=/; max-age=-1000`; }); window.location.href = this.href;\"> Sign Out 30°F Helene Recovery News Sports Business Living Politics Games Obituaries Finance Classifieds Raleigh&#39;s Best Home Customer Service About Us Archives Cancel Subscription Contact Us Customer Service Subscribe Sponsorship Advertise Contact McClatchy Advertising Stay Connected Mobile & Apps Newsletters Advertise Facebook Twitter Instagram YouTube Read today&#39;s Edition Raleigh&#39;s Best Detour Travel Local Events News Local Crime Counties Durham County Johnston County Orange County Wake County More News Education Weather News Transportation North Carolina National Databases Sports All Sports Canes High Schools NASCAR & Auto Racing Panthers Colleges Duke NC State North Carolina Columnists Luke DeCock Scott Fowler FIFA World Cup Politics Politics & Government Election Business & Real Estate All Business Real Estate Personal Finance Living & Entertainment Living Entertainment Food + Drink Comics Horoscopes Puzzles & Games Happiness is a Warm TV Wellness Travel Opinion All Opinion Editorials Letters to the Editor Submit a Letter Submit an Op-ed Obituaries View Obituaries Place an Obituary Video Featured Reality Check Uniquely Herald Sun Detour Travel Raleigh’s Best Guides Guides Black Friday Shopping/Reviews Product Reviews Health and Wellness Software and Business Shopping Shop With Us Deals & Offers Amazon Prime Daily Deals Press Releases Sponsored Content Paid Content by BrandPoint Sponsored Articles Family Features Classifieds Place a Classified Ad Post a Job Browse Classifieds Place an Ad - Celebrations Search Jobs Search Legal Notices Advertising Place an Ad Staffing Solutions Political | Advocacy Advertising Duke How are Duke’s injured players entering NCAA Tourna"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.newsobserver.com/sports/college/acc/duke/article315059036.html\",\n    \"text\": \"Duke basketball injury update for March Madness tournament | Raleigh News & Observer Read today&#39;s Edition Log In | Subscribe Welcome Back! Edit Profile My Subscriptions { document.cookie = `${cookieName}=; domain=${domain}; path=/; max-age=-1000`; }); window.location.href = this.href;\\\"> Sign Out 30°F Helene Recovery News Sports Business Living Politics Games Obituaries Finance Classifieds Raleigh&#39;s Best Home Customer Service About Us Archives Cancel Subscription Contact Us Customer Service Subscribe Sponsorship Advertise Contact McClatchy Advertising Stay Connected Mobile & Apps Newsletters Advertise Facebook Twitter Instagram YouTube Read today&#39;s Edition Raleigh&#39;s Best Detour Travel Local Events News Local Crime Counties Durham County Johnston County Orange County Wake County More News Education Weather News Transportation North Carolina National Databases Sports All Sports Canes High Schools NASCAR & Auto Racing Panthers Colleges Duke NC State North Carolina Columnists Luke DeCock Scott Fowler FIFA World Cup Politics Politics & Government Election Business & Real Estate All Business Real Estate Personal Finance Living & Entertainment Living Entertainment Food + Dr... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-1-assistant-5",
@@ -629,23 +631,23 @@
       "id": "r32-east-1-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:23:23.163Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://collegesportswire.usatoday.com/story/sports/college/college-basketball/2026/03/08/college-basketball-duke-caleb-foster-patrick-ngongba-injury/89052546007/",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:23:23.337Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://collegesportswire.usatoday.com/story/sports/college/college-basketball/2026/03/08/college-basketball-duke-caleb-foster-patrick-ngongba-injury/89052546007/\",\n    \"text\": \"Duke Basketball: Injury update on Caleb Foster, Patrick Ngongba Skip to main content Home Football Basketball ACC Big 12 Big Ten Pac-12 SEC Newsletter USA TODAY Sports Jon Scheyer gives injury update on Caleb Foster, Patrick Ngongba JD McCarthy College Sports Wire The Duke Blue Devils finished their regular season with a 76-61 win over rival North Carolina on Saturday and refocused on the ACC Tournament. It was an impressive win, especially given starting center Patrick Ngbonga II sat out and starting guard Caleb Foster played just 11 minutes. Duke coach Jon Scheyer provided an injury update after the game, stating he does not expect either to play in the ACC Tournament. \\\"I’d be shocked if both of them are playing next week,\\\" he said . He did not say what their status would be for the NCAA Tournament, where the Blue Devils (29-2) are expected to be a No. 1 seed. Ngbonga has not played since March 2 and is averaging 10.7 points, 6.0 rebounds, and 1.1 blocks per game. He is third on the team in scoring, second in rebounding and first in blocks. Foster started against North Carolina before suffering an apparent foot injury. He returned to the bench with a boot on his right foot. He is... [truncated 715 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://collegesportswire.usatoday.com/story/sports/college/college-basketball/2026/03/08/college-basketball-duke-caleb-foster-patrick-ngongba-injury/89052546007/",
         "text": "Duke Basketball: Injury update on Caleb Foster, Patrick Ngongba Skip to main content Home Football Basketball ACC Big 12 Big Ten Pac-12 SEC Newsletter USA TODAY Sports Jon Scheyer gives injury update on Caleb Foster, Patrick Ngongba JD McCarthy College Sports Wire The Duke Blue Devils finished their regular season with a 76-61 win over rival North Carolina on Saturday and refocused on the ACC Tournament. It was an impressive win, especially given starting center Patrick Ngbonga II sat out and starting guard Caleb Foster played just 11 minutes. Duke coach Jon Scheyer provided an injury update after the game, stating he does not expect either to play in the ACC Tournament. \"I’d be shocked if both of them are playing next week,\" he said . He did not say what their status would be for the NCAA Tournament, where the Blue Devils (29-2) are expected to be a No. 1 seed. Ngbonga has not played since March 2 and is averaging 10.7 points, 6.0 rebounds, and 1.1 blocks per game. He is third on the team in scoring, second in rebounding and first in blocks. Foster started against North Carolina before suffering an apparent foot injury. He returned to the bench with a boot on his right foot. He is averaging 8.5 points, 2.8 assists and 3.6 rebounds for the Blue Devils. Duke is the No. 1 seed in the ACC Tournament, and its first game will be in the quarterfinals on Thursday in Charlotte, North Carolina. The Blue Devils are looking to finish as both the conference regular-season and tournament champions for the second time in three years. Contact/Follow @College_Wire on X and @College_Wires on Threads. Like our page on Facebook to follow ongoing coverage of college sports news, notes and opinions . Facebook Twitter Email Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your Privacy Choices © Copyright Gannett 2026"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://collegesportswire.usatoday.com/story/sports/college/college-basketball/2026/03/08/college-basketball-duke-caleb-foster-patrick-ngongba-injury/89052546007/\",\n    \"text\": \"Duke Basketball: Injury update on Caleb Foster, Patrick Ngongba Skip to main content Home Football Basketball ACC Big 12 Big Ten Pac-12 SEC Newsletter USA TODAY Sports Jon Scheyer gives injury update on Caleb Foster, Patrick Ngongba JD McCarthy College Sports Wire The Duke Blue Devils finished their regular season with a 76-61 win over rival North Carolina on Saturday and refocused on the ACC Tournament. It was an impressive win, especially given starting center Patrick Ngbonga II sat out and starting guard Caleb Foster played just 11 minutes. Duke coach Jon Scheyer provided an injury update after the game, stating he does not expect either to play in the ACC Tournament. \\\"I’d be shocked if both of them are playing next week,\\\" he said . He did not say what their status would be for the NCAA Tournament, where the Blue Devils (29-2) are expected to be a No. 1 seed. Ngbonga has not played since March 2 and is averaging 10.7 points, 6.0 rebounds, and 1.1 blocks per game. He is third on the team in scoring, second in rebounding and first in blocks. Foster started against North Carolina before suffering an apparent foot injury. He returned to the bench with a boot on his right foot. He is... [truncated 715 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-1-assistant-6",
@@ -657,17 +659,18 @@
       "id": "r32-east-1-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:23:31.047Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Duke Caleb Foster Patrick Ngongba NCAA tournament availability 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:23:31.780Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Jon Scheyer updates status of Caleb Foster, Patrick Ngongba\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fdukewire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fduke%2Fmens%2Dbasketball%2F2026%2F03%2F16%2Fjon%2Dscheyer%2Dupdates%2Dstatus%2Dcaleb%2Dfoster%2Dpatrick%2Dngongba%2F89183971007%2F&rut=b95bf6a51a7b1c79dc766d64307c14c1dc53ac78a9d6cf59bac0d88cf42afece\",\n      \"snippet\": \"Duke enters the NCAA Tournament on an 11-game winning streak after securing its second straight ACC title. Coach Jon Scheyer stated that guard Caleb Foster will remain out for \\\"a little while\\\" with a fractured foot. Freshman center Patrick Ngongba is considered day-to-day and is improving from his injury.\"\n    },\n    {\n      \"title\": \"Duke basketball injury update for March Madness tournament | Raleigh ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fduke%2Farticle315059036.html&rut=e7af8cca5273659c22bc0f655e11af9d4a22b3dfe263cd4faf23b264c8d53e17\",\n      \"snippet\": \"Duke&#x27;s Patrick Ngongba II and Caleb Foster take selfies with fans before Duke&#x27;s game against Florida State in the quarterfinals of the 2026 ACC Men&#x27;s Basketball Tournament at the Spectrum ...\"\n    },\n    {\n      \"title\": \"Duke&#x27;s Foster to miss at least several weeks with fracture in foot ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.wral.com%2Fsports%2Fduke%2Dmens%2Dbasketball%2Dcaleb%2Dfoster%2Dpatrick%2Dngongba%2Dinjury%2Dupdate%2Dmarch%2D2026%2F&rut=20c6380e4eba9c0640f8649251d031e78bae2b5c24b4e4ced9a4fe8a35fbf04f\",\n      \"snippet\": \"No. 1 Duke is the top seed in the ACC Tournament , but will be without starting point guard Caleb Foster and starting center Patrick Ngongba for the event in Charlotte.\"\n    },\n    {\n      \"title\": \"Top-Ranked Duke Down Two Starters Entering ACC Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Dbasketball%2Ftop%2Dranked%2Dduke%2Ddown%2Dtwo%2Dstarters%2Dentering%2Dacc%2Dtournament&rut=86b4de091043af2348de085e33006dfbb9dadb1d297f87062267824e623497b4\",\n      \"snippet\": \"Caleb Foster and Patrick Ngongba II will both miss the conference tournament .\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -695,8 +698,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsnet.ca%2Fncaa%2Dmens%2Dbasketball%2Farticle%2Ftop%2Dranked%2Dduke%2Dloses%2Dcaleb%2Dfoster%2Dpatrick%2Dngongba%2Dto%2Dinjury%2F&rut=817ff672eef3d5c4d82d1df5e7a52149cf81170d78ae514c44e0d45c0fb571d9",
           "snippet": "Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won&#x27;t play in this week&#x27;s ..."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Jon Scheyer updates status of Caleb Foster, Patrick Ngongba\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fdukewire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fduke%2Fmens%2Dbasketball%2F2026%2F03%2F16%2Fjon%2Dscheyer%2Dupdates%2Dstatus%2Dcaleb%2Dfoster%2Dpatrick%2Dngongba%2F89183971007%2F&rut=b95bf6a51a7b1c79dc766d64307c14c1dc53ac78a9d6cf59bac0d88cf42afece\",\n      \"snippet\": \"Duke enters the NCAA Tournament on an 11-game winning streak after securing its second straight ACC title. Coach Jon Scheyer stated that guard Caleb Foster will remain out for \\\"a little while\\\" with a fractured foot. Freshman center Patrick Ngongba is considered day-to-day and is improving from his injury.\"\n    },\n    {\n      \"title\": \"Duke basketball injury update for March Madness tournament | Raleigh ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fduke%2Farticle315059036.html&rut=e7af8cca5273659c22bc0f655e11af9d4a22b3dfe263cd4faf23b264c8d53e17\",\n      \"snippet\": \"Duke&#x27;s Patrick Ngongba II and Caleb Foster take selfies with fans before Duke&#x27;s game against Florida State in the quarterfinals of the 2026 ACC Men&#x27;s Basketball Tournament at the Spectrum ...\"\n    },\n    {\n      \"title\": \"Duke&#x27;s Foster to miss at least several weeks with fracture in foot ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.wral.com%2Fsports%2Fduke%2Dmens%2Dbasketball%2Dcaleb%2Dfoster%2Dpatrick%2Dngongba%2Dinjury%2Dupdate%2Dmarch%2D2026%2F&rut=20c6380e4eba9c0640f8649251d031e78bae2b5c24b4e4ced9a4fe8a35fbf04f\",\n      \"snippet\": \"No. 1 Duke is the top seed in the ACC Tournament , but will be without starting point guard Caleb Foster and starting center Patrick Ngongba for the event in Charlotte.\"\n    },\n    {\n      \"title\": \"Top-Ranked Duke Down Two Starters Entering ACC Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Dbasketball%2Ftop%2Dranked%2Dduke%2Ddown%2Dtwo%2Dstarters%2Dentering%2Dacc%2Dtournament&rut=86b4de091043af2348de085e33006dfbb9dadb1d297f87062267824e623497b4\",\n      \"snippet\": \"Caleb Foster and Patrick Ngongba II will both miss the conference tournament .\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-east-1-assistant-7",
@@ -708,23 +710,23 @@
       "id": "r32-east-1-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:23:37.540Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://dukewire.usatoday.com/story/sports/college/duke/mens-basketball/2026/03/16/jon-scheyer-updates-status-caleb-foster-patrick-ngongba/89183971007/",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:23:37.710Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://dukewire.usatoday.com/story/sports/college/duke/mens-basketball/2026/03/16/jon-scheyer-updates-status-caleb-foster-patrick-ngongba/89183971007/\",\n    \"text\": \"Jon Scheyer updates status of Caleb Foster, Patrick Ngongba Skip to main content Home Schedule Football Basketball Recruiting Odds Newsletter College Sports Wire USA TODAY Sports Jon Scheyer updates status of Caleb Foster, Patrick Ngongba Brian Stultz Duke Wire Duke has won 11 straight games entering the NCAA Tournament, including running through the ACC tourney for its second straight title. That run was capped by a 74-70 victory over Virginia on Saturday despite being without two starters: Caleb Foster and Patrick Ngongba. As the Blue Devils start the NCAA Tournament on Thursday against Siena as the top overall seed, Jon Scheyer gave an update on the status of the two players. \\\"Caleb is going to be a little while still,\\\" Scheyer said on Sunday. \\\"Again, he's progressing well.” Foster fractured his foot in the final regular-season game against North Carolina and has been out since. Still, his impact on the bench continues to help the Blue Devils. \\\"Caleb, I've never seen a guy shoot so much in a scooter,\\\" Scheyer said. \\\"Multiple times a game, I have to ask him to shut up for one second just to get in a few coaching points. While Foster is out for some time, the news seems better on ... [truncated 702 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://dukewire.usatoday.com/story/sports/college/duke/mens-basketball/2026/03/16/jon-scheyer-updates-status-caleb-foster-patrick-ngongba/89183971007/",
         "text": "Jon Scheyer updates status of Caleb Foster, Patrick Ngongba Skip to main content Home Schedule Football Basketball Recruiting Odds Newsletter College Sports Wire USA TODAY Sports Jon Scheyer updates status of Caleb Foster, Patrick Ngongba Brian Stultz Duke Wire Duke has won 11 straight games entering the NCAA Tournament, including running through the ACC tourney for its second straight title. That run was capped by a 74-70 victory over Virginia on Saturday despite being without two starters: Caleb Foster and Patrick Ngongba. As the Blue Devils start the NCAA Tournament on Thursday against Siena as the top overall seed, Jon Scheyer gave an update on the status of the two players. \"Caleb is going to be a little while still,\" Scheyer said on Sunday. \"Again, he's progressing well.” Foster fractured his foot in the final regular-season game against North Carolina and has been out since. Still, his impact on the bench continues to help the Blue Devils. \"Caleb, I've never seen a guy shoot so much in a scooter,\" Scheyer said. \"Multiple times a game, I have to ask him to shut up for one second just to get in a few coaching points. While Foster is out for some time, the news seems better on Ngongba’s potential return. \"As far as Pat goes, I think he's been doing his therapy, working with the medical team,” Scheyer said. “They're just benchmarks. He just has to continue to take it – it's a day-by-day thing to see how he can handle the next step and whether that soreness goes away. I can tell you he's improving. I feel very positive about it, but I can't say what that means as far as later in the week in terms of timing or readiness, because we have to take it step by step.\" SMS Facebook Twitter Email Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your Privacy Choices © Copyright Gannett 2026"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://dukewire.usatoday.com/story/sports/college/duke/mens-basketball/2026/03/16/jon-scheyer-updates-status-caleb-foster-patrick-ngongba/89183971007/\",\n    \"text\": \"Jon Scheyer updates status of Caleb Foster, Patrick Ngongba Skip to main content Home Schedule Football Basketball Recruiting Odds Newsletter College Sports Wire USA TODAY Sports Jon Scheyer updates status of Caleb Foster, Patrick Ngongba Brian Stultz Duke Wire Duke has won 11 straight games entering the NCAA Tournament, including running through the ACC tourney for its second straight title. That run was capped by a 74-70 victory over Virginia on Saturday despite being without two starters: Caleb Foster and Patrick Ngongba. As the Blue Devils start the NCAA Tournament on Thursday against Siena as the top overall seed, Jon Scheyer gave an update on the status of the two players. \\\"Caleb is going to be a little while still,\\\" Scheyer said on Sunday. \\\"Again, he's progressing well.” Foster fractured his foot in the final regular-season game against North Carolina and has been out since. Still, his impact on the bench continues to help the Blue Devils. \\\"Caleb, I've never seen a guy shoot so much in a scooter,\\\" Scheyer said. \\\"Multiple times a game, I have to ask him to shut up for one second just to get in a few coaching points. While Foster is out for some time, the news seems better on ... [truncated 702 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-1-assistant-8",
@@ -736,17 +738,18 @@
       "id": "r32-east-1-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:23:43.634Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Patrick Ngongba day-to-day NCAA tournament 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:23:44.464Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Jon Scheyer updates status of Caleb Foster, Patrick Ngongba\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fdukewire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fduke%2Fmens%2Dbasketball%2F2026%2F03%2F16%2Fjon%2Dscheyer%2Dupdates%2Dstatus%2Dcaleb%2Dfoster%2Dpatrick%2Dngongba%2F89183971007%2F&rut=b95bf6a51a7b1c79dc766d64307c14c1dc53ac78a9d6cf59bac0d88cf42afece\",\n      \"snippet\": \"Duke enters the NCAA Tournament on an 11-game winning streak after securing its second straight ACC title. Coach Jon Scheyer stated that guard Caleb Foster will remain out for \\\"a little while\\\" with a fractured foot. Freshman center Patrick Ngongba is considered day-to-day and is improving from his injury.\"\n    },\n    {\n      \"title\": \"Duke basketball injury update for March Madness tournament | Raleigh ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fduke%2Farticle315059036.html&rut=e7af8cca5273659c22bc0f655e11af9d4a22b3dfe263cd4faf23b264c8d53e17\",\n      \"snippet\": \"Duke&#x27;s Patrick Ngongba II and Caleb Foster take selfies with fans before Duke&#x27;s game against Florida State in the quarterfinals of the 2026 ACC Men&#x27;s Basketball Tournament at the Spectrum ...\"\n    },\n    {\n      \"title\": \"Patrick Ngongba injury: Jon Scheyer provides great news after knee ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fballdurham.com%2Fpatrick%2Dngongba%2Dinjury%2Djon%2Dscheyer%2Dprovides%2Dgreat%2Dnews%2Dafter%2Dknee%2Dscooter%2Dscare&rut=dc01ef787c7751f21f45be50aadc8d6060a6fc3bab980ccf3ce20e74df45536c\",\n      \"snippet\": \"Duke coach Jon Scheyer says center Patrick Ngongba took a good step with the team&#x27;s medical staff today , and is still trending well to be able to play in the NCAA Tournament (like Scheyer announced earlier this week). — Brendan Marks (@BrendanRMarks) March 14, 2026 Duke star Patrick Ngongba is trending towards playing in the NCAA Tournament\"\n    },\n    {\n      \"title\": \"Patrick Ngongba II Injury Update: Duke HC Jon Scheyer Announces Latest ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fpatrick%2Dngongba%2Dii%2Dinjury%2Dupdate%2Dstatus%2Dncaa%2Dtournament%2F&rut=dcbcf7bd58f387294507877df2e3b07d82f9b7bad94665af734965c44a401f8f\",\n      \"snippet\": \"Duke HC Jon Scheyer offered an update on injured center Patrick Ngongba II as the Blue Devils get ready for NCAA Tournament play.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -774,8 +777,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fduke%2Dbasketball%2Dnews%2Dcaleb%2Dfoster%2Dundergoes%2Dfoot%2Dsurgery%2Dpatrick%2Dngongba%2Dout%2Dacc%2Dtournament&rut=ce6a95a431e0918c28ae3383db74406c2fdb04107290214eb6f82fbad05121d8",
           "snippet": "Duke will be missing two key players for the ACC tournament , as Caleb Foster and Patrick Ngongba are both out with an injury."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Jon Scheyer updates status of Caleb Foster, Patrick Ngongba\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fdukewire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fduke%2Fmens%2Dbasketball%2F2026%2F03%2F16%2Fjon%2Dscheyer%2Dupdates%2Dstatus%2Dcaleb%2Dfoster%2Dpatrick%2Dngongba%2F89183971007%2F&rut=b95bf6a51a7b1c79dc766d64307c14c1dc53ac78a9d6cf59bac0d88cf42afece\",\n      \"snippet\": \"Duke enters the NCAA Tournament on an 11-game winning streak after securing its second straight ACC title. Coach Jon Scheyer stated that guard Caleb Foster will remain out for \\\"a little while\\\" with a fractured foot. Freshman center Patrick Ngongba is considered day-to-day and is improving from his injury.\"\n    },\n    {\n      \"title\": \"Duke basketball injury update for March Madness tournament | Raleigh ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fduke%2Farticle315059036.html&rut=e7af8cca5273659c22bc0f655e11af9d4a22b3dfe263cd4faf23b264c8d53e17\",\n      \"snippet\": \"Duke&#x27;s Patrick Ngongba II and Caleb Foster take selfies with fans before Duke&#x27;s game against Florida State in the quarterfinals of the 2026 ACC Men&#x27;s Basketball Tournament at the Spectrum ...\"\n    },\n    {\n      \"title\": \"Patrick Ngongba injury: Jon Scheyer provides great news after knee ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fballdurham.com%2Fpatrick%2Dngongba%2Dinjury%2Djon%2Dscheyer%2Dprovides%2Dgreat%2Dnews%2Dafter%2Dknee%2Dscooter%2Dscare&rut=dc01ef787c7751f21f45be50aadc8d6060a6fc3bab980ccf3ce20e74df45536c\",\n      \"snippet\": \"Duke coach Jon Scheyer says center Patrick Ngongba took a good step with the team&#x27;s medical staff today , and is still trending well to be able to play in the NCAA Tournament (like Scheyer announced earlier this week). — Brendan Marks (@BrendanRMarks) March 14, 2026 Duke star Patrick Ngongba is trending towards playing in the NCAA Tournament\"\n    },\n    {\n      \"title\": \"Patrick Ngongba II Injury Update: Duke HC Jon Scheyer Announces Latest ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fpatrick%2Dngongba%2Dii%2Dinjury%2Dupdate%2Dstatus%2Dncaa%2Dtournament%2F&rut=dcbcf7bd58f387294507877df2e3b07d82f9b7bad94665af734965c44a401f8f\",\n      \"snippet\": \"Duke HC Jon Scheyer offered an update on injured center Patrick Ngongba II as the Blue Devils get ready for NCAA Tournament play.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r32-east-1-assistant-9",
@@ -787,23 +789,23 @@
       "id": "r32-east-1-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:23:49.888Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://balldurham.com/patrick-ngongba-injury-jon-scheyer-provides-great-news-after-knee-scooter-scare",
         "maxChars": 2000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r32-east-1-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:23:50.843Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://balldurham.com/patrick-ngongba-injury-jon-scheyer-provides-great-news-after-knee-scooter-scare\",\n    \"text\": \"Patrick Ngongba injury: Jon Scheyer provides great news after knee scooter scare Skip to main content About Duke Basketball Duke Women&#39;s Basketball Duke Football FanSided NCAA Sites Follow Us Share on X About Duke Basketball Duke Basketball Duke Basketball All-Time Lists Duke Basketball Recruiting Blue Devils in the NBA Duke Women&#39;s Basketball Duke Football Duke Football Duke Football Recruiting FanSided NCAA Sites Share on X Patrick Ngongba injury: Jon Scheyer provides great news after knee scooter scare The big man keeps progressing well. Will he be ready for the NCAA Tournament? By Braulio Perez | Share on Facebook Share on X Share on Reddit Copy Article Add us as a preferred source Mar 2, 2026; Raleigh, North Carolina, USA; Duke Blue Devils center Patrick Ngongba II (21) reacts after scoring against the NC State Wolfpack during the first half at Lenovo Center. Mandatory Credit: Zachary Taft-Imagn Images | Zachary Taft-Imagn Images What a difference two games can make. Against Florida State, Duke struggled and barely pulled off a win in the ACC Tournament quarterfinals. Then in the semifinals, the Blue Devils cruised to a win over Clemson, with fans feeling confident aga... [truncated 800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://balldurham.com/patrick-ngongba-injury-jon-scheyer-provides-great-news-after-knee-scooter-scare",
         "text": "Patrick Ngongba injury: Jon Scheyer provides great news after knee scooter scare Skip to main content About Duke Basketball Duke Women&#39;s Basketball Duke Football FanSided NCAA Sites Follow Us Share on X About Duke Basketball Duke Basketball Duke Basketball All-Time Lists Duke Basketball Recruiting Blue Devils in the NBA Duke Women&#39;s Basketball Duke Football Duke Football Duke Football Recruiting FanSided NCAA Sites Share on X Patrick Ngongba injury: Jon Scheyer provides great news after knee scooter scare The big man keeps progressing well. Will he be ready for the NCAA Tournament? By Braulio Perez | Share on Facebook Share on X Share on Reddit Copy Article Add us as a preferred source Mar 2, 2026; Raleigh, North Carolina, USA; Duke Blue Devils center Patrick Ngongba II (21) reacts after scoring against the NC State Wolfpack during the first half at Lenovo Center. Mandatory Credit: Zachary Taft-Imagn Images | Zachary Taft-Imagn Images What a difference two games can make. Against Florida State, Duke struggled and barely pulled off a win in the ACC Tournament quarterfinals. Then in the semifinals, the Blue Devils cruised to a win over Clemson, with fans feeling confident again. --> What a difference two games can make. Against Florida State, Duke struggled and barely pulled off a win in the ACC Tournament quarterfinals. Then in the semifinals, the Blue Devils cruised to a win over Clemson, with fans feeling confident again. Cayden Boozer&#39;s smile vs. Clemson speaks volumes as he finds his footing as a starter --> Cayden Boozer&#39;s smile vs. Clemson speaks volumes as he finds his footing as a starter However, that doesn&#39;t take away from the fact that Duke has looked totally different due to Caleb Foster and Patrick Ngongba being injured. Foster&#39;s status is a bit worse, as Scheyer has said he won&#39;t be able to potentially return unless Duke makes the Final Four. --> However, that doesn&#39;t take away from the fact that Duke has looked totally d"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://balldurham.com/patrick-ngongba-injury-jon-scheyer-provides-great-news-after-knee-scooter-scare\",\n    \"text\": \"Patrick Ngongba injury: Jon Scheyer provides great news after knee scooter scare Skip to main content About Duke Basketball Duke Women&#39;s Basketball Duke Football FanSided NCAA Sites Follow Us Share on X About Duke Basketball Duke Basketball Duke Basketball All-Time Lists Duke Basketball Recruiting Blue Devils in the NBA Duke Women&#39;s Basketball Duke Football Duke Football Duke Football Recruiting FanSided NCAA Sites Share on X Patrick Ngongba injury: Jon Scheyer provides great news after knee scooter scare The big man keeps progressing well. Will he be ready for the NCAA Tournament? By Braulio Perez | Share on Facebook Share on X Share on Reddit Copy Article Add us as a preferred source Mar 2, 2026; Raleigh, North Carolina, USA; Duke Blue Devils center Patrick Ngongba II (21) reacts after scoring against the NC State Wolfpack during the first half at Lenovo Center. Mandatory Credit: Zachary Taft-Imagn Images | Zachary Taft-Imagn Images What a difference two games can make. Against Florida State, Duke struggled and barely pulled off a win in the ACC Tournament quarterfinals. Then in the semifinals, the Blue Devils cruised to a win over Clemson, with fans feeling confident aga... [truncated 800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r32-east-1-final-json",

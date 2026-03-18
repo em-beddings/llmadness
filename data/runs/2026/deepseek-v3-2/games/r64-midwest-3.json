@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-midwest-3",
     "winnerId": "texas-tech",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Texas Tech's elite offensive efficiency, built against a rigorous Big 12 schedule, should exploit Akron's below-average defense and control the game. The Red Raiders' significant advantage in adjusted efficiency metrics and high-major experience provides a tangible edge over a MAC champion that has not consistently faced top competition. While 12-seed upsets are always a possibility, the substantial gap in team quality and Texas Tech's balanced attack makes them a reliable pick to advance."
   },
   "reasoningStep": {
     "id": "analysis-r64-midwest-3",
     "title": "Efficiency ratings and matchup evaluation",
     "summary": "Examined Torvik and KenPom ratings, conference strength, and typical 5/12 upset dynamics to assess Texas Tech's clear edge.",
-    "evidence": "Texas Tech ranks 12th in Torvik and 19th in KenPom with a top-12 offense and top-27 defense, facing an Akron team ranked 68th in Torvik and 64th in KenPom with a 60th-ranked offense and 99th-ranked defense. The Red Raiders' 22-10 record came against Big 12 competition, while Akron's 28-5 mark was built in the MAC. The adjusted efficiency margin difference of approximately 12 points suggests Texas Tech is a substantial favorite on a neutral court."
+    "evidence": [
+      "Texas Tech ranks 12th in Torvik and 19th in KenPom with a top-12 offense and top-27 defense, facing an Akron team ranked 68th in Torvik and 64th in KenPom with a 60th-ranked offense and 99th-ranked defense. The Red Raiders' 22-10 record came against Big 12 competition, while Akron's 28-5 mark was built in the MAC. The adjusted efficiency margin difference of approximately 12 points suggests Texas Tech is a substantial favorite on a neutral court."
+    ]
   },
   "toolCalls": [
     {
@@ -461,19 +463,20 @@
       "id": "r64-midwest-3-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:12:30.610Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "texas-tech",
           "akron"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-3-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:12:30.620Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"texas-tech\",\n      \"teamName\": \"Texas Tech\",\n      \"torvik\": {\n        \"rank\": 12,\n        \"team\": \"Texas Tech\",\n        \"conf\": \"B12\",\n        \"record\": \"22-10\",\n        \"adjoe\": 126.322082319787,\n        \"oe Rank\": 9,\n        \"adjde\": 98.77280745091622,\n        \"de Rank\": 27\n      },\n      \"kenpom\": {\n        \"rank\": 19,\n        \"team\": \"Texas Tech\",\n        \"conf\": \"B12\",\n        \"record\": \"22-10\",\n        \"adj_em\": 25.19,\n        \"adj_o\": 125.1,\n        \"adj_o_rank\": 12,\n        \"adj_d\": 99.9\n      }\n    },\n    {\n      \"teamId\": \"akron\",\n      \"teamName\": \"Akron\",\n      \"torvik\": {\n        \"rank\": 68,\n        \"team\": \"Akron\",\n        \"conf\": \"MAC\",\n        \"record\": \"28-5\",\n        \"adjoe\": 117.38226910939184,\n        \"oe Rank\": 60,\n        \"adjde\": 105.15691360963388,\n        \"de Rank\": 99\n      },\n      \"kenpom\": {\n        \"rank\": 64,\n        \"team\": \"Akron\",\n        \"conf\": \"MAC\",\n        \"record\": \"28-5\",\n        \"adj_em\": 13.02,\n        \"adj_o\": 119.1,\n        \"adj_o_rank\": 52,\n        \"adj_d\": 106.1\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -624,8 +627,7 @@
             "ncsos_adj_em_rank": 267
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"texas-tech\",\n      \"teamName\": \"Texas Tech\",\n      \"torvik\": {\n        \"rank\": 12,\n        \"team\": \"Texas Tech\",\n        \"conf\": \"B12\",\n        \"record\": \"22-10\",\n        \"adjoe\": 126.322082319787,\n        \"oe Rank\": 9,\n        \"adjde\": 98.77280745091622,\n        \"de Rank\": 27\n      },\n      \"kenpom\": {\n        \"rank\": 19,\n        \"team\": \"Texas Tech\",\n        \"conf\": \"B12\",\n        \"record\": \"22-10\",\n        \"adj_em\": 25.19,\n        \"adj_o\": 125.1,\n        \"adj_o_rank\": 12,\n        \"adj_d\": 99.9\n      }\n    },\n    {\n      \"teamId\": \"akron\",\n      \"teamName\": \"Akron\",\n      \"torvik\": {\n        \"rank\": 68,\n        \"team\": \"Akron\",\n        \"conf\": \"MAC\",\n        \"record\": \"28-5\",\n        \"adjoe\": 117.38226910939184,\n        \"oe Rank\": 60,\n        \"adjde\": 105.15691360963388,\n        \"de Rank\": 99\n      },\n      \"kenpom\": {\n        \"rank\": 64,\n        \"team\": \"Akron\",\n        \"conf\": \"MAC\",\n        \"record\": \"28-5\",\n        \"adj_em\": 13.02,\n        \"adj_o\": 119.1,\n        \"adj_o_rank\": 52,\n        \"adj_d\": 106.1\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-3-assistant-1",
@@ -637,22 +639,22 @@
       "id": "r64-midwest-3-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:12:39.775Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Texas Tech Akron NCAA tournament 2026 matchup preview injury news",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-3-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:12:40.486Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-3-assistant-2",
@@ -664,22 +666,22 @@
       "id": "r64-midwest-3-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:12:44.845Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Texas Tech Akron March Madness 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-3-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:12:45.605Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-3-assistant-3",
@@ -691,20 +693,20 @@
       "id": "r64-midwest-3-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:12:53.572Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Texas Tech basketball injury March 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-3-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:12:53.706Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-midwest-3-assistant-4",
@@ -716,16 +718,17 @@
       "id": "r64-midwest-3-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:13:12.432Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "Midwest"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-3-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:13:12.433Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"michigan\",\n      \"name\": \"Michigan\",\n      \"shortName\": \"MICH\",\n      \"seed\": 1,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"iowa-state\",\n      \"name\": \"Iowa State\",\n      \"shortName\": \"ISU\",\n      \"seed\": 2,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"virginia\",\n      \"name\": \"Virginia\",\n      \"shortName\": \"UVA\",\n      \"seed\": 3,\n      \"region\": \"Midwest\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"alabama\",\n      \"name\": \"Alabama\",\n      \"shortName\": \"BAMA\",\n      \"seed\": 4,\n      \"region\": \"Midwest\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -872,8 +875,7 @@
           "region": "Midwest",
           "conference": "America East"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"michigan\",\n      \"name\": \"Michigan\",\n      \"shortName\": \"MICH\",\n      \"seed\": 1,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"iowa-state\",\n      \"name\": \"Iowa State\",\n      \"shortName\": \"ISU\",\n      \"seed\": 2,\n      \"region\": \"Midwest\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"virginia\",\n      \"name\": \"Virginia\",\n      \"shortName\": \"UVA\",\n      \"seed\": 3,\n      \"region\": \"Midwest\",\n      \"conference\": \"ACC\"\n    },\n    {\n      \"id\": \"alabama\",\n      \"name\": \"Alabama\",\n      \"shortName\": \"BAMA\",\n      \"seed\": 4,\n      \"region\": \"Midwest\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-3-assistant-5",
@@ -885,18 +887,19 @@
       "id": "r64-midwest-3-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:13:16.055Z",
+      "content": "",
       "toolName": "get_games",
       "arguments": {
         "gameIds": [
           "r64-midwest-3"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-3-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:13:16.055Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-3\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 5/12\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"texas-tech\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"akron\"\n      }\n    }\n  ]\n}",
       "toolName": "get_games",
       "result": [
         {
@@ -913,8 +916,7 @@
             "teamId": "akron"
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"r64-midwest-3\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 5/12\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"texas-tech\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"akron\"\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-3-assistant-6",
@@ -926,23 +928,23 @@
       "id": "r64-midwest-3-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:13:20.325Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://barttorvik.com/",
         "maxChars": 1000
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-3-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:13:20.955Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://barttorvik.com/\",\n    \"text\": \"Verifying Browser... Verifying your browser, please wait...\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://barttorvik.com/",
         "text": "Verifying Browser... Verifying your browser, please wait..."
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://barttorvik.com/\",\n    \"text\": \"Verifying Browser... Verifying your browser, please wait...\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-3-assistant-7",
@@ -954,20 +956,20 @@
       "id": "r64-midwest-3-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:13:25.140Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "5 seed vs 12 seed upset rate",
         "maxResults": 3
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-3-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:13:25.288Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-midwest-3-assistant-final-8",

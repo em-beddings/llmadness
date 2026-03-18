@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-midwest-7",
     "winnerId": "kentucky",
-    "confidence": "Medium",
+    "confidence": 0.68,
     "rationale": "Kentucky's defensive efficiency, ranked 32nd nationally, should help contain Santa Clara's elite offense, while the Wildcats can exploit the Broncos' weaker defense. Despite Santa Clara's impressive season and upset potential, Kentucky's experience in the rigorous SEC provides a tangible edge in a close game. The slight favoritism in the odds and Kentucky's balanced profile make them the pick to advance in a competitive matchup."
   },
   "reasoningStep": {
     "id": "reasoning-r64-midwest-7",
     "title": "Analysis of Kentucky vs Santa Clara 7/10 Matchup",
     "summary": "Evaluated efficiency ratings, recent team news, and betting odds to assess the close game, noting Santa Clara's offensive strength but defensive vulnerabilities and Kentucky's conference-tested balance.",
-    "evidence": "Ratings show Santa Clara with Torvik rank 28 and elite offense (adjoe rank 15) but weak defense (adjde rank 76), while Kentucky has Torvik rank 32 with better defense (adjde rank 32) and average offense (adjoe rank 40). Articles highlight Santa Clara as a popular upset pick after a 26-8 season but note their lack of interior presence. Odds indicate Kentucky as a slight favorite (e.g., -1.5 spread), supporting a narrow win prediction."
+    "evidence": [
+      "Ratings show Santa Clara with Torvik rank 28 and elite offense (adjoe rank 15) but weak defense (adjde rank 76), while Kentucky has Torvik rank 32 with better defense (adjde rank 32) and average offense (adjoe rank 40). Articles highlight Santa Clara as a popular upset pick after a 26-8 season but note their lack of interior presence. Odds indicate Kentucky as a slight favorite (e.g., -1.5 spread), supporting a narrow win prediction."
+    ]
   },
   "toolCalls": [
     {
@@ -454,19 +456,20 @@
       "id": "r64-midwest-7-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:19:27.269Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "kentucky",
           "santa-clara"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:19:27.276Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"kentucky\",\n      \"teamName\": \"Kentucky\",\n      \"torvik\": {\n        \"rank\": 32,\n        \"team\": \"Kentucky\",\n        \"conf\": \"SEC\",\n        \"record\": \"21-13\",\n        \"adjoe\": 119.85606007066336,\n        \"oe Rank\": 40,\n        \"adjde\": 99.94110481724763,\n        \"de Rank\": 32\n      },\n      \"kenpom\": {\n        \"rank\": 28,\n        \"team\": \"Kentucky\",\n        \"conf\": \"SEC\",\n        \"record\": \"21-13\",\n        \"adj_em\": 21.47,\n        \"adj_o\": 120.5,\n        \"adj_o_rank\": 39,\n        \"adj_d\": 99.1\n      }\n    },\n    {\n      \"teamId\": \"santa-clara\",\n      \"teamName\": \"Santa Clara\",\n      \"torvik\": {\n        \"rank\": 28,\n        \"team\": \"Santa Clara\",\n        \"conf\": \"WCC\",\n        \"record\": \"26-8\",\n        \"adjoe\": 124.9813866099338,\n        \"oe Rank\": 15,\n        \"adjde\": 103.65963030294128,\n        \"de Rank\": 76\n      },\n      \"kenpom\": {\n        \"rank\": 35,\n        \"team\": \"Santa Clara\",\n        \"conf\": \"WCC\",\n        \"record\": \"26-8\",\n        \"adj_em\": 19.42,\n        \"adj_o\": 123.7,\n        \"adj_o_rank\": 23,\n        \"adj_d\": 104.3\n      }\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -617,8 +620,7 @@
             "ncsos_adj_em_rank": 88
           }
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"kentucky\",\n      \"teamName\": \"Kentucky\",\n      \"torvik\": {\n        \"rank\": 32,\n        \"team\": \"Kentucky\",\n        \"conf\": \"SEC\",\n        \"record\": \"21-13\",\n        \"adjoe\": 119.85606007066336,\n        \"oe Rank\": 40,\n        \"adjde\": 99.94110481724763,\n        \"de Rank\": 32\n      },\n      \"kenpom\": {\n        \"rank\": 28,\n        \"team\": \"Kentucky\",\n        \"conf\": \"SEC\",\n        \"record\": \"21-13\",\n        \"adj_em\": 21.47,\n        \"adj_o\": 120.5,\n        \"adj_o_rank\": 39,\n        \"adj_d\": 99.1\n      }\n    },\n    {\n      \"teamId\": \"santa-clara\",\n      \"teamName\": \"Santa Clara\",\n      \"torvik\": {\n        \"rank\": 28,\n        \"team\": \"Santa Clara\",\n        \"conf\": \"WCC\",\n        \"record\": \"26-8\",\n        \"adjoe\": 124.9813866099338,\n        \"oe Rank\": 15,\n        \"adjde\": 103.65963030294128,\n        \"de Rank\": 76\n      },\n      \"kenpom\": {\n        \"rank\": 35,\n        \"team\": \"Santa Clara\",\n        \"conf\": \"WCC\",\n        \"record\": \"26-8\",\n        \"adj_em\": 19.42,\n        \"adj_o\": 123.7,\n        \"adj_o_rank\": 23,\n        \"adj_d\": 104.3\n      }\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-7-assistant-1",
@@ -630,17 +632,18 @@
       "id": "r64-midwest-7-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:19:35.738Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Kentucky basketball 2026 March Madness",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:19:36.474Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Sports Shows Online - Sports on ITVX - Live & On-Demand on ITVX\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Ditv.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DwGDqJJszMZtwAf%252DAe2EC_arBFNMH7sB3NUuvNNrr5mB3wZebZWEbqYqRm0WELSYP39KQUjx0oaINShbFm5FAyaCYXDm_Zr0z5j8wvR973SiZYHuNGnHrLpQyYnvrVhKoO6uC4IsorRMYGDdyicuVHUfnzXbncUXSKgc4f1rl3ww.r%252DPbMrkl3COlVxkdR2UivA%26rut%3Dbde3e1efd0a4e66ce586ae5a164c657a1e9a044e951a44abf2a31abe9f03095c%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8n629MeK_kOpPqam0qUiRdzVUCUxWI9FOoYhW2V77GvssOLhA72aQDrJ3wtbOOw8HhSsh243w78qmB9m003bMz7sVeFH1T5yPChYv_1o5avziycAZhWx4VAbi%252DrpDcw0jiUdoq9Dc71n5vCgzebYTlJ3LRBqn3xTPn1Eicxvqh6HeHrMHyfTQx9hlMTygOKoT_BML6pzxwGIo6JyN7RccS6Z2kQc%2526u%253DaHR0cHMlM2ElMmYlMmZ0cmFjay50cmFmZmljZ3VhcmQuYWklMmZpdHZ4X2NfciUyZmdvb2dsZS1hZHMlMmZ2MSUyZmNsaWNrJTJmJTNmcHJvcGVydHlfaWQlM2R0Zy0wMTgyNzctMDAxJTI2c291cmNlX2lkJTNkcyUyNmNyZWF0aXZlX2lkJTNkJTI2Y2FtcGFpZ25faWQlM2Q1MjI2MDUwNzklMjZjcmVhdGl2ZV9zZXRfaWQlM2QxMzIyNzE1MDIyMDQxMjA5JTI2cGxhY2VtZW50X2lkJTNkJTI2a2V5d29yZCUzZHdhdGNoJTI1MjBzcG9ydHMlMjZzZXNzaW9uX2lkJTNkJTI2ZmVlZGl0ZW1pZCUzZCUyNnRhcmdldGlkJTNka3dkLTgyNjcxMjMxMDQ5OTQxJTNhbG9jLTE4OCUyNmxvY19pbnRlcmVzdF9tcyUzZCUyNmxvY19waHlzaWNhbF9tcy... [truncated 1377 chars]\",\n      \"snippet\": \"All episodes in one place on ITVX. Watch sports for free now on ITVX. Sign up today or log back in\"\n    },\n    {\n      \"title\": \"Kentucky 87-82 LSU (Mar 11, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851557%2Flsu%2Dkentucky&rut=edd5dea9c8e8f429b086003d75c3920f95c5df08e70c9a62b0967d5886175c2f\",\n      \"snippet\": \"Game summary of the Kentucky Wildcats vs. LSU Tigers NCAAM game, final score 87-82, from March 11, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"Joe Lunardi&#x27;s men&#x27;s Bracketology March Madness watch guide\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47204818%2Fmens%2Dcollege%2Dbasketball%2Djoe%2Dlunardi%2Dbracketology%2Dwatch%2Dguide%2D2026%2Dmarch%2Dmadness&rut=3afe7978c207c2fc013cf4cff3e829c610690f2fc471ec822473de7a839dd5fe\",\n      \"snippet\": \"We&#x27;re fast approaching the hour in which we&#x27;ll find out the field for the 2026 men&#x27;s NCAA tournament. Until then, some movement in the projections is still possible. Joe Lunardi&#x27;s Bracketology has ...\"\n    },\n    {\n      \"title\": \"Kentucky Wildcats 2025-26 Postseason NCAAM Schedule - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F96%2Fkentucky%2Dwildcats&rut=0e48e295a2463828a7cfcfec2e7be069dba8a83432718aad22791fa62d82da30\",\n      \"snippet\": \"ESPN has the full 2025-26 Kentucky Wildcats Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Wildcats games.\"\n    }\n  ]\n}",
       "toolName": "search_espn_news",
       "result": [
         {
@@ -668,8 +671,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F96%2Fkentucky%2Dwildcats&rut=f5dcf3002085db0d881e864572675b1f46adea47993eb90b9d9ea784635f9de0",
           "snippet": "Visit ESPN for Kentucky Wildcats live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Sports Shows Online - Sports on ITVX - Live & On-Demand on ITVX\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Ditv.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DwGDqJJszMZtwAf%252DAe2EC_arBFNMH7sB3NUuvNNrr5mB3wZebZWEbqYqRm0WELSYP39KQUjx0oaINShbFm5FAyaCYXDm_Zr0z5j8wvR973SiZYHuNGnHrLpQyYnvrVhKoO6uC4IsorRMYGDdyicuVHUfnzXbncUXSKgc4f1rl3ww.r%252DPbMrkl3COlVxkdR2UivA%26rut%3Dbde3e1efd0a4e66ce586ae5a164c657a1e9a044e951a44abf2a31abe9f03095c%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8n629MeK_kOpPqam0qUiRdzVUCUxWI9FOoYhW2V77GvssOLhA72aQDrJ3wtbOOw8HhSsh243w78qmB9m003bMz7sVeFH1T5yPChYv_1o5avziycAZhWx4VAbi%252DrpDcw0jiUdoq9Dc71n5vCgzebYTlJ3LRBqn3xTPn1Eicxvqh6HeHrMHyfTQx9hlMTygOKoT_BML6pzxwGIo6JyN7RccS6Z2kQc%2526u%253DaHR0cHMlM2ElMmYlMmZ0cmFjay50cmFmZmljZ3VhcmQuYWklMmZpdHZ4X2NfciUyZmdvb2dsZS1hZHMlMmZ2MSUyZmNsaWNrJTJmJTNmcHJvcGVydHlfaWQlM2R0Zy0wMTgyNzctMDAxJTI2c291cmNlX2lkJTNkcyUyNmNyZWF0aXZlX2lkJTNkJTI2Y2FtcGFpZ25faWQlM2Q1MjI2MDUwNzklMjZjcmVhdGl2ZV9zZXRfaWQlM2QxMzIyNzE1MDIyMDQxMjA5JTI2cGxhY2VtZW50X2lkJTNkJTI2a2V5d29yZCUzZHdhdGNoJTI1MjBzcG9ydHMlMjZzZXNzaW9uX2lkJTNkJTI2ZmVlZGl0ZW1pZCUzZCUyNnRhcmdldGlkJTNka3dkLTgyNjcxMjMxMDQ5OTQxJTNhbG9jLTE4OCUyNmxvY19pbnRlcmVzdF9tcyUzZCUyNmxvY19waHlzaWNhbF9tcy... [truncated 1377 chars]\",\n      \"snippet\": \"All episodes in one place on ITVX. Watch sports for free now on ITVX. Sign up today or log back in\"\n    },\n    {\n      \"title\": \"Kentucky 87-82 LSU (Mar 11, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851557%2Flsu%2Dkentucky&rut=edd5dea9c8e8f429b086003d75c3920f95c5df08e70c9a62b0967d5886175c2f\",\n      \"snippet\": \"Game summary of the Kentucky Wildcats vs. LSU Tigers NCAAM game, final score 87-82, from March 11, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"Joe Lunardi&#x27;s men&#x27;s Bracketology March Madness watch guide\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47204818%2Fmens%2Dcollege%2Dbasketball%2Djoe%2Dlunardi%2Dbracketology%2Dwatch%2Dguide%2D2026%2Dmarch%2Dmadness&rut=3afe7978c207c2fc013cf4cff3e829c610690f2fc471ec822473de7a839dd5fe\",\n      \"snippet\": \"We&#x27;re fast approaching the hour in which we&#x27;ll find out the field for the 2026 men&#x27;s NCAA tournament. Until then, some movement in the projections is still possible. Joe Lunardi&#x27;s Bracketology has ...\"\n    },\n    {\n      \"title\": \"Kentucky Wildcats 2025-26 Postseason NCAAM Schedule - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F96%2Fkentucky%2Dwildcats&rut=0e48e295a2463828a7cfcfec2e7be069dba8a83432718aad22791fa62d82da30\",\n      \"snippet\": \"ESPN has the full 2025-26 Kentucky Wildcats Postseason NCAAM schedule. Includes game times, TV listings and ticket information for all Wildcats games.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-7-assistant-2",
@@ -681,17 +683,18 @@
       "id": "r64-midwest-7-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:19:41.157Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Kentucky Santa Clara 2026 NCAA tournament preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:19:41.901Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=9a974f0c48e88feeffacc4cebf866e55700106f933d0435f198442b05a7ec3a6\",\n      \"snippet\": \"Santa Clara 2026 NCAA Tournament Preview Herb Sendek&#x27;s Broncos had their best season in decades, finishing 26-8 overall and reaching the WCC Tournament championship game for the first time since 2007. Santa Clara lost to Gonzaga 79-68 in the final, but the run sent a clear message to the selection committee.\"\n    },\n    {\n      \"title\": \"Kentucky basketball vs Santa Clara prediction, pick for NCAA bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fftw.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fkentucky%2F2026%2F03%2F15%2Fkentucky%2Dsanta%2Dclara%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2Duk%2Dbasketball%2Dfirst%2Dround%2Dgame%2Dpick%2Dodds%2F88780010007%2F&rut=12f3b08933c42a0c6a97266254443de42c8550d635e10abb964fb19a41504d3a\",\n      \"snippet\": \"Santa Clara downed Saint Mary&#x27;s in the conference tournament semifinals, but couldn&#x27;t top Gonzaga in the title game. How far will Kentucky basketball go in March Madness bracket 2026 ?\"\n    },\n    {\n      \"title\": \"March Madness Picks: Kentucky vs. Santa Clara Prediction\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fvsin.com%2Fcollege%2Dbasketball%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dprediction%2Dncaa%2Dtournament%2Dmidwest%2Dregion%2Dno%2D7%2Dvs%2Dno%2D10%2Dmarch%2Dmadness%2Dpreview%2F&rut=09191b5572b80235cd9de6e6d0e57852300f25369a179d6ef73a2053ffc9c640\",\n      \"snippet\": \"College basketball betting odds, March Madness preview and NCAA Tournament prediction for Kentucky vs. Santa Clara on Friday, March 20th.\"\n    },\n    {\n      \"title\": \"Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fkentucky%2Dsanta%2Dclara%2Dmarch%2Dmadness%2Dbracket%2Dpick%2F5e9ab0508c1261fd9ce94b5f&rut=b6d8e0978d79baf32f6024c56e7f6a9e082f092f276fe446bef7cadc2b691372\",\n      \"snippet\": \"Here is a complete guide to picking No. 7 Kentucky and No. 10 Santa Clara in your 2026 March Madness bracket, including updated odds and our expert predictions for the Midwest Region game.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -719,8 +722,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fsanta%2Dclara%2Dvs%2Dkentucky%2Dprediction%2Dpicks%2Dodds%2Dmarch%2Dmadness%2D2026%2F&rut=de75f7ac9418e63869c6e45d178c7f58c6bac4d236979e9d0563e9d20fb132a9",
           "snippet": "My Santa Clara vs. Kentucky prediction breaks down the best bets, player props, and same-game parlay I&#x27;m betting for March Madness First Round."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=9a974f0c48e88feeffacc4cebf866e55700106f933d0435f198442b05a7ec3a6\",\n      \"snippet\": \"Santa Clara 2026 NCAA Tournament Preview Herb Sendek&#x27;s Broncos had their best season in decades, finishing 26-8 overall and reaching the WCC Tournament championship game for the first time since 2007. Santa Clara lost to Gonzaga 79-68 in the final, but the run sent a clear message to the selection committee.\"\n    },\n    {\n      \"title\": \"Kentucky basketball vs Santa Clara prediction, pick for NCAA bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fftw.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fkentucky%2F2026%2F03%2F15%2Fkentucky%2Dsanta%2Dclara%2Dmarch%2Dmadness%2Dprediction%2Dncaa%2Dbracket%2Duk%2Dbasketball%2Dfirst%2Dround%2Dgame%2Dpick%2Dodds%2F88780010007%2F&rut=12f3b08933c42a0c6a97266254443de42c8550d635e10abb964fb19a41504d3a\",\n      \"snippet\": \"Santa Clara downed Saint Mary&#x27;s in the conference tournament semifinals, but couldn&#x27;t top Gonzaga in the title game. How far will Kentucky basketball go in March Madness bracket 2026 ?\"\n    },\n    {\n      \"title\": \"March Madness Picks: Kentucky vs. Santa Clara Prediction\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fvsin.com%2Fcollege%2Dbasketball%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dprediction%2Dncaa%2Dtournament%2Dmidwest%2Dregion%2Dno%2D7%2Dvs%2Dno%2D10%2Dmarch%2Dmadness%2Dpreview%2F&rut=09191b5572b80235cd9de6e6d0e57852300f25369a179d6ef73a2053ffc9c640\",\n      \"snippet\": \"College basketball betting odds, March Madness preview and NCAA Tournament prediction for Kentucky vs. Santa Clara on Friday, March 20th.\"\n    },\n    {\n      \"title\": \"Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fkentucky%2Dsanta%2Dclara%2Dmarch%2Dmadness%2Dbracket%2Dpick%2F5e9ab0508c1261fd9ce94b5f&rut=b6d8e0978d79baf32f6024c56e7f6a9e082f092f276fe446bef7cadc2b691372\",\n      \"snippet\": \"Here is a complete guide to picking No. 7 Kentucky and No. 10 Santa Clara in your 2026 March Madness bracket, including updated odds and our expert predictions for the Midwest Region game.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-7-assistant-3",
@@ -732,22 +734,22 @@
       "id": "r64-midwest-7-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:19:46.940Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:19:47.726Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/\",\n    \"text\": \"Kentucky vs. Santa Clara: NCAA Tournament Predictions &#038; Preview | BettingPros to prevent flash of incorrect theme on page load --> Skip to main content Skip to navigation Skip to footer Click to go to homepage Picks Odds Tools Research Leaders Click to expand More menu Home Games Picks Upgrade Menu Click to Find a bet ... Contest Click to expand picks panel Click to open Sharp AI Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview by BettingPros Staff | @BettingPros | Mar 15, 2026 by BettingPros Staff | @BettingPros | Mar 15, 2026 The 2026 NCAA Tournament is officially here! The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#8217;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament! We&#8217;re here to help as we&#8217;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for Kentucky vs. Santa Clara. NCAA Tournament Odds NCAA Tournament Pick&#8217;Em Contest NCAA Tournament March Madness Bracket Optimizer NCAA Tournament Betting Trends 2026 NCAA Tournament Predictions & Preview: Kentucky vs. Santa Clara... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/",
         "text": "Kentucky vs. Santa Clara: NCAA Tournament Predictions &#038; Preview | BettingPros to prevent flash of incorrect theme on page load --> Skip to main content Skip to navigation Skip to footer Click to go to homepage Picks Odds Tools Research Leaders Click to expand More menu Home Games Picks Upgrade Menu Click to Find a bet ... Contest Click to expand picks panel Click to open Sharp AI Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview by BettingPros Staff | @BettingPros | Mar 15, 2026 by BettingPros Staff | @BettingPros | Mar 15, 2026 The 2026 NCAA Tournament is officially here! The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#8217;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament! We&#8217;re here to help as we&#8217;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for Kentucky vs. Santa Clara. NCAA Tournament Odds NCAA Tournament Pick&#8217;Em Contest NCAA Tournament March Madness Bracket Optimizer NCAA Tournament Betting Trends 2026 NCAA Tournament Predictions & Preview: Kentucky vs. Santa Clara Here are the odds for this opening-round matchup of the 2026 NCAA Tournament. Let&#8217;s dive into our preview and predictions for this NCAA Tournament matchup. Kentucky 2026 NCAA Tournament Preview Mark Pope&#8217;s second season in Lexington has been nothing but adversity management, and it didn&#8217;t quite produce the results the fanbase expected. Kentucky started the year ninth in the AP Preseason Poll, then it was seemingly all downhill from there with the injuries that have hit this squad. Kentucky went 9-4 with the 50th-ranked offense in non-conference play. Then, SEC play started, and the Wildcats ended up as a 9-seed in the conference tournament, playing in the first round against LSU. The problem is that the roster never found its footing for an entire month-long stretch. Injuries created lineup inconsistencies that made it hard to build any real continuity, and a 2-5 finish to the regular season raised fresh questions about this group&#8217;s ceiling. This is an all-around team propped up by Otega Oweh that has competed against one of the toughest schedules in hoops. Kentucky does everything reasonable well but nothing spectacularly, ranking in the top 75 in offensive turnover rate and offensive rebound rate, and 102nd in effective field goal percentage. Over their last month of play, the Wildcats went 4-5, ranking outside the top 40 on both ends of the court. Kentucky&#8217;s brand is bigger than this team, and the Wildcats lack the talent to make a deep run. Pope will have them ready to compete. Whether that&#8217;s enough to make it to the second weekend is left to be discovered. Santa Clara 2026 NCAA Tournament Preview Herb Sendek&#8217;s Broncos had their best season in decades, finishing 26-8 overall and reaching the WCC Tournament championship game"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/\",\n    \"text\": \"Kentucky vs. Santa Clara: NCAA Tournament Predictions &#038; Preview | BettingPros to prevent flash of incorrect theme on page load --> Skip to main content Skip to navigation Skip to footer Click to go to homepage Picks Odds Tools Research Leaders Click to expand More menu Home Games Picks Upgrade Menu Click to Find a bet ... Contest Click to expand picks panel Click to open Sharp AI Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview by BettingPros Staff | @BettingPros | Mar 15, 2026 by BettingPros Staff | @BettingPros | Mar 15, 2026 The 2026 NCAA Tournament is officially here! The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#8217;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament! We&#8217;re here to help as we&#8217;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for Kentucky vs. Santa Clara. NCAA Tournament Odds NCAA Tournament Pick&#8217;Em Contest NCAA Tournament March Madness Bracket Optimizer NCAA Tournament Betting Trends 2026 NCAA Tournament Predictions & Preview: Kentucky vs. Santa Clara... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-7-assistant-4",
@@ -759,22 +761,22 @@
       "id": "r64-midwest-7-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:19:52.318Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:19:52.465Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f\",\n    \"text\": \"Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlot... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f",
         "text": "Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Stre"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f\",\n    \"text\": \"Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlot... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-7-assistant-5",
@@ -786,17 +788,18 @@
       "id": "r64-midwest-7-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:19:56.672Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Kentucky injury March 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:19:57.402Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Kyrie Irving to miss rest of season, eyes return for 2026-27\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Fstory%2F_%2Fid%2F47964482%2Fkyrie%2Dirving%2Dmiss%2Drest%2Dseason%2Deyes%2Dreturn%2D2026%2D27&rut=54022eea336fdd73c319bb69c2eb507397f907a69e12e42b092520fead184c30\",\n      \"snippet\": \"Mavericks star Kyrie Irving will miss the remainder of the season as he continues to recover from knee surgery last March .\"\n    },\n    {\n      \"title\": \"NBA Injury Status - 2025-26 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65\",\n      \"snippet\": \"Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Kentucky Wildcats Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F96%2Fkentucky%2Dwildcats&rut=f5dcf3002085db0d881e864572675b1f46adea47993eb90b9d9ea784635f9de0\",\n      \"snippet\": \"Visit ESPN for Kentucky Wildcats live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"MLB Injury Status - 2026 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmlb%2Finjuries&rut=c4ce26656883d809ea454865749bd8396c6729bcc4eeb293c38b07f484f38e76\",\n      \"snippet\": \"Visit ESPN for the 2026 MLB season injury status per team, with details on players that are out, day-to-day, or on the injured reserve.\"\n    }\n  ]\n}",
       "toolName": "search_espn_news",
       "result": [
         {
@@ -824,8 +827,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Fstory%2F_%2Fid%2F44418114%2Fsources%2Dmavericks%2Dkyrie%2Dirving%2Dsurgery%2Dtorn%2Dacl&rut=b55eedef0855112bc35fb1a3582bed4c5cdb813bdf0d52377936a5476a6b554b",
           "snippet": "Mavericks All-Star Kyrie Irving underwent successful surgery to repair his torn left ACL on Wednesday at Hospital for Special Surgery in New York City, the team announced."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Kyrie Irving to miss rest of season, eyes return for 2026-27\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Fstory%2F_%2Fid%2F47964482%2Fkyrie%2Dirving%2Dmiss%2Drest%2Dseason%2Deyes%2Dreturn%2D2026%2D27&rut=54022eea336fdd73c319bb69c2eb507397f907a69e12e42b092520fead184c30\",\n      \"snippet\": \"Mavericks star Kyrie Irving will miss the remainder of the season as he continues to recover from knee surgery last March .\"\n    },\n    {\n      \"title\": \"NBA Injury Status - 2025-26 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65\",\n      \"snippet\": \"Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Kentucky Wildcats Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F96%2Fkentucky%2Dwildcats&rut=f5dcf3002085db0d881e864572675b1f46adea47993eb90b9d9ea784635f9de0\",\n      \"snippet\": \"Visit ESPN for Kentucky Wildcats live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"MLB Injury Status - 2026 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmlb%2Finjuries&rut=c4ce26656883d809ea454865749bd8396c6729bcc4eeb293c38b07f484f38e76\",\n      \"snippet\": \"Visit ESPN for the 2026 MLB season injury status per team, with details on players that are out, day-to-day, or on the injured reserve.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-7-assistant-6",
@@ -837,20 +839,20 @@
       "id": "r64-midwest-7-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:20:01.505Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Santa Clara basketball injury 2026",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:20:01.643Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
       "toolName": "search_espn_news",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-midwest-7-assistant-7",
@@ -862,17 +864,18 @@
       "id": "r64-midwest-7-tool-call-7-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:20:05.949Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Santa Clara Broncos 2026 NCAA tournament team preview",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-7-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:20:06.986Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"March Madness 2026 Midwest Region Preview: Santa Clara Emerges as ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tournaments.com%2Fnews%2Fmarch%2Dmadness%2D2026%2Dmidwest%2Dregion%2Dpreview%2Dsanta%2Dclara%2Danalytics%2Ddarling%2Dmiami&rut=d9fc92d294775010b0ae93761cf15223616b71a9ffc3ba3cbda658fd66d56246\",\n      \"snippet\": \"The 2026 NCAA Tournament&#x27;s Midwest Region presents a fascinating blend of analytical darlings and statistical anomalies, with 10th-seeded Santa Clara earning widespread computer model respect while 11th-seeded Miami defies every metric despite their undefeated regular season.\"\n    },\n    {\n      \"title\": \"March Madness 2026 Sleeper Picks: Santa Clara, Miami (Ohio), And Other ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.stadiumrant.com%2Fmarch%2Dmadness%2D2026%2Dsleeper%2Dpicks%2Dsanta%2Dclara%2F&rut=a549b4fe496d9a935b36bbb3c6227760c618f4e32d84447e3b6b647e876a6898\",\n      \"snippet\": \"Santa Clara Broncos : Back After 30 Years The Santa Clara Broncos are back in the NCAA Tournament for the first time since 1996 and have quickly become one of this year&#x27;s most popular upset picks. They&#x27;ll take on the Kentucky Wildcats, and many experts believe the Broncos have what it takes to pull off the surprise.\"\n    },\n    {\n      \"title\": \"Broncos Headed to NCAA Tournament for First Time Since 1996\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsantaclarabroncos.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dbroncos%2Dheaded%2Dto%2Dncaa%2Dtournament%2Dfor%2Dfirst%2Dtime%2Dsince%2D1996.aspx&rut=cd2a9633207ff7f98f98cf596802863e360a4c6608d4459cf8b7e5a131c6a9c3\",\n      \"snippet\": \"Santa Clara will be a 10 seed in the Midwest Region. This will be the 12 th appearance all-time in the NCAA Tournament for the Broncos . The 1996 team was the last of three teams led by head coach Dick Davey and future Naismith Basketball Hall of Famer Steve Nash that made the tournament over a four-year stretch.\"\n    },\n    {\n      \"title\": \"Santa Clara returns to March Madness for first time in three decades\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mercurynews.com%2F2026%2F03%2F15%2Fsanta%2Dclara%2Dmarch%2Dmadness%2Ddrought%2Dkentucky%2Dbracket%2F&rut=ea32be896818df9b3b52fcb7479ae4ff21cf35c298d7071846b5cbd103c10506\",\n      \"snippet\": \"Members of the Santa Clara University mens basketball team react to their selection in the NCAA March Madness tournament on Sunday, March 15, 2026 , in Santa Clara , Calif. (Aric Crabb/Bay Area News ...\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -900,8 +903,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.betmgm.com%2Fen%2Fblog%2Fncaab%2Fwill%2Dsanta%2Dclara%2Dmake%2Dthe%2Dncaa%2Dtournament%2Dmarch%2D9%2D2026%2Dbm06%2F&rut=5c1c5e79cb20e3a7f6252f756f6d468acc4a82f974d72270749d8469c6288cb7",
           "snippet": "The Broncos are a bubble team on the verge of an at-large bid to the NCAA Tournament . The safest path forward for Santa Clara would be to win the West Coast Conference&#x27;s automatic berth to the NCAA Tournament ."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"March Madness 2026 Midwest Region Preview: Santa Clara Emerges as ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tournaments.com%2Fnews%2Fmarch%2Dmadness%2D2026%2Dmidwest%2Dregion%2Dpreview%2Dsanta%2Dclara%2Danalytics%2Ddarling%2Dmiami&rut=d9fc92d294775010b0ae93761cf15223616b71a9ffc3ba3cbda658fd66d56246\",\n      \"snippet\": \"The 2026 NCAA Tournament&#x27;s Midwest Region presents a fascinating blend of analytical darlings and statistical anomalies, with 10th-seeded Santa Clara earning widespread computer model respect while 11th-seeded Miami defies every metric despite their undefeated regular season.\"\n    },\n    {\n      \"title\": \"March Madness 2026 Sleeper Picks: Santa Clara, Miami (Ohio), And Other ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.stadiumrant.com%2Fmarch%2Dmadness%2D2026%2Dsleeper%2Dpicks%2Dsanta%2Dclara%2F&rut=a549b4fe496d9a935b36bbb3c6227760c618f4e32d84447e3b6b647e876a6898\",\n      \"snippet\": \"Santa Clara Broncos : Back After 30 Years The Santa Clara Broncos are back in the NCAA Tournament for the first time since 1996 and have quickly become one of this year&#x27;s most popular upset picks. They&#x27;ll take on the Kentucky Wildcats, and many experts believe the Broncos have what it takes to pull off the surprise.\"\n    },\n    {\n      \"title\": \"Broncos Headed to NCAA Tournament for First Time Since 1996\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsantaclarabroncos.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dbroncos%2Dheaded%2Dto%2Dncaa%2Dtournament%2Dfor%2Dfirst%2Dtime%2Dsince%2D1996.aspx&rut=cd2a9633207ff7f98f98cf596802863e360a4c6608d4459cf8b7e5a131c6a9c3\",\n      \"snippet\": \"Santa Clara will be a 10 seed in the Midwest Region. This will be the 12 th appearance all-time in the NCAA Tournament for the Broncos . The 1996 team was the last of three teams led by head coach Dick Davey and future Naismith Basketball Hall of Famer Steve Nash that made the tournament over a four-year stretch.\"\n    },\n    {\n      \"title\": \"Santa Clara returns to March Madness for first time in three decades\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mercurynews.com%2F2026%2F03%2F15%2Fsanta%2Dclara%2Dmarch%2Dmadness%2Ddrought%2Dkentucky%2Dbracket%2F&rut=ea32be896818df9b3b52fcb7479ae4ff21cf35c298d7071846b5cbd103c10506\",\n      \"snippet\": \"Members of the Santa Clara University mens basketball team react to their selection in the NCAA March Madness tournament on Sunday, March 15, 2026 , in Santa Clara , Calif. (Aric Crabb/Bay Area News ...\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-7-assistant-8",
@@ -913,22 +915,22 @@
       "id": "r64-midwest-7-tool-call-8-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:20:11.683Z",
+      "content": "",
       "toolName": "fetch_webpage",
       "arguments": {
         "url": "https://www.stadiumrant.com/march-madness-2026-sleeper-picks-santa-clara/"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-8-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:20:12.379Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.stadiumrant.com/march-madness-2026-sleeper-picks-santa-clara/\",\n    \"text\": \"March Madness 2026 Sleeper Picks: Santa Clara, Miami (Ohio), And Other Teams To Watch” Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE About Us Newsletter Sign Up Join Our Team Partnerships Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE About Us Newsletter Sign Up Join Our Team Partnerships About Us Newsletter Sign Up Join Our Team Partnerships Shop About Us Newsletter Sign Up Join Our Team Partnerships Shop &#36; 0.00 0 Cart Search College Basketball , Featured , Opinion March Madness 2026 Sleeper Picks: Santa Clara, Miami (Ohio), And Other Teams To Watch” Jon Hammons March 16, 2026 3 min The best part of March Madness is picking the sleeper teams—the underdogs that pull off shocking upsets and bust brackets across the country. Whether it’s on opening day or deep into the second round, there’s always at least one surprise team that captures the spotlight. Every year, fans hunt for that next Cinderella story when filling out their March Madness brackets. Santa Clara Broncos: Back After 30 Years The Santa Cla... [truncated 1800 chars]\"\n  }\n}",
       "toolName": "fetch_webpage",
       "result": {
         "url": "https://www.stadiumrant.com/march-madness-2026-sleeper-picks-santa-clara/",
         "text": "March Madness 2026 Sleeper Picks: Santa Clara, Miami (Ohio), And Other Teams To Watch” Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE About Us Newsletter Sign Up Join Our Team Partnerships Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE About Us Newsletter Sign Up Join Our Team Partnerships About Us Newsletter Sign Up Join Our Team Partnerships Shop About Us Newsletter Sign Up Join Our Team Partnerships Shop &#36; 0.00 0 Cart Search College Basketball , Featured , Opinion March Madness 2026 Sleeper Picks: Santa Clara, Miami (Ohio), And Other Teams To Watch” Jon Hammons March 16, 2026 3 min The best part of March Madness is picking the sleeper teams—the underdogs that pull off shocking upsets and bust brackets across the country. Whether it’s on opening day or deep into the second round, there’s always at least one surprise team that captures the spotlight. Every year, fans hunt for that next Cinderella story when filling out their March Madness brackets. Santa Clara Broncos: Back After 30 Years The Santa Clara Broncos are back in the NCAA Tournament for the first time since 1996 and have quickly become one of this year’s most popular upset picks. They’ll take on the Kentucky Wildcats, and many experts believe the Broncos have what it takes to pull off the surprise. Here is my favorite stat on Santa Clara head coach Herb Sendek: He is a conference Coach of the Year in FOUR. DIFFERENT. conferences. MAC (1995 with Miami (OH)) ACC (NC State in 2004) Pac-12 (Arizona State in 2010) WCC (Santa Clara in 2026) HIGHLY impressive résumé. #BBN &mdash; Alex Frank (@frankie_nnati) March 15, 2026 This year&#8217;s squad is led by former Kentucky assistant Herb Sendek. Santa Clara&#8217;s&#8217; run in the West Coast Conference tournament was one of the season&#8217;s biggest stories, highlighted by knocking off Saint Mary&#8217;s Gaels twice in the regular season. Christian Hammond: Stats : 15.8 PPG, 4.2 APG The Broncos’ go-to scorer and primary shot creator. Hammond can attack the basket, hit pull-up jumpers, and run the offense in crucial moments. Elijah Mahi: Stats: 13.9 PPG, 6.0 RPG A versatile scorer who can stretch the floor and contribute efficiently from multiple spots. Mahi’s shooting and rebounding make him a key matchup problem. Miami (Ohio) RedHawks: Mid-Major Threat Another team drawing national attention is the Miami (Ohio) RedHawks. They finished the regular season undefeated before falling short in the conference tournament. The RedHawks enter March Madness as one of the top mid-major threats. Standout player Peter Suder averages 14.6 points per game and serves as the engine of the team. Miami (Ohio) faces the SMU Mustangs in the play-in game in Dayton, with the winner earning a matchup against the Tennessee Volunteers. NCAA Tournament committee chair Keith Gill: &quot;Mi"
-      },
-      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.stadiumrant.com/march-madness-2026-sleeper-picks-santa-clara/\",\n    \"text\": \"March Madness 2026 Sleeper Picks: Santa Clara, Miami (Ohio), And Other Teams To Watch” Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE About Us Newsletter Sign Up Join Our Team Partnerships Home NFL NBA Soccer MLB College Sports Hockey Combat Sports UFC WWE About Us Newsletter Sign Up Join Our Team Partnerships About Us Newsletter Sign Up Join Our Team Partnerships Shop About Us Newsletter Sign Up Join Our Team Partnerships Shop &#36; 0.00 0 Cart Search College Basketball , Featured , Opinion March Madness 2026 Sleeper Picks: Santa Clara, Miami (Ohio), And Other Teams To Watch” Jon Hammons March 16, 2026 3 min The best part of March Madness is picking the sleeper teams—the underdogs that pull off shocking upsets and bust brackets across the country. Whether it’s on opening day or deep into the second round, there’s always at least one surprise team that captures the spotlight. Every year, fans hunt for that next Cinderella story when filling out their March Madness brackets. Santa Clara Broncos: Back After 30 Years The Santa Cla... [truncated 1800 chars]\"\n  }\n}"
+      }
     },
     {
       "id": "r64-midwest-7-assistant-9",
@@ -940,17 +942,18 @@
       "id": "r64-midwest-7-tool-call-9-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T10:20:16.830Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Kentucky vs Santa Clara odds 2026 March Madness",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-midwest-7-tool-result-9-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T10:20:17.731Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Santa Clara vs Kentucky odds for March Madness NCAA Tournament betting\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F15%2Fsanta%2Dclara%2Dkentucky%2Dodds%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dbracket%2Dbetting%2F88448816007%2F&rut=86cb01d028ac7ee8988ab82cd3893d43718cc4886c2f91b04991ce6ca2781b21\",\n      \"snippet\": \"March Madness odds for Kentucky vs Santa Clara NCAA Tournament first-round game, with point spread, moneyline, over/under for Friday, March 20 game.\"\n    },\n    {\n      \"title\": \"Santa Clara Broncos vs Kentucky Wildcats Odds - Friday March 20 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.oddsshark.com%2Fncaab%2Fsanta%2Dclara%2Dkentucky%2Dodds%2Dmarch%2D20%2D2026%2D2518374&rut=f76c0df2ce922c2810105cee5ed94f3c66f1e239de31aeb4b906dce1dcb9daa7\",\n      \"snippet\": \"Santa Clara Broncos vs Kentucky Wildcats Odds - Friday March 20 2026 . Live betting odds and lines, betting trends, against the spread and over/under trends, injury reports and matchup stats for bettors.\"\n    },\n    {\n      \"title\": \"Kentucky vs Santa Clara picks, predictions, odds for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tennessean.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F16%2Fkentucky%2Dsanta%2Dclara%2Dpicks%2Dpredictions%2Dodds%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2F88420304007%2F&rut=7c13e6ab304501e15816bb7372f373cd6d0b29c3fabf8155421fee902dfa755f\",\n      \"snippet\": \"March Madness picks, predictions, odds for Santa Clara vs Kentucky NCAA Tournament first-round Midwest Region game Friday, March 20, 2026 . Who wins?\"\n    },\n    {\n      \"title\": \"2026 March Madness odds and predictions: Breakdown of First Round in ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nbcsports.com%2Fbetting%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dmarch%2Dmadness%2Dodds%2Dand%2Dpredictions%2Dbreakdown%2Dof%2Devery%2Dgame%2Din%2Dthe%2Dmidwest%2Dregion%2Dincluding%2Dupsets&rut=38d96f01b1d6ec3afd342e1d8f9040b7d90c39f56f9401dd45bc5a8dda74fcda\",\n      \"snippet\": \"This game opened Kentucky -1.5 with the Total set at 161.5. Santa Clara&#x27;s lineup is unselfish and littered with good shooters. Their issue is they have no presence in the paint. Kentucky is on the verge of adding this 22 million-dollar campaign to the list of recent disappointing seasons, but they do play well when allowed to play downhill.\"\n    }\n  ]\n}",
       "toolName": "search_web",
       "result": [
         {
@@ -978,8 +981,7 @@
           "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fsanta%2Dclara%2Dvs%2Dkentucky%2Dprediction%2Dpicks%2Dodds%2Dmarch%2Dmadness%2D2026%2F&rut=de75f7ac9418e63869c6e45d178c7f58c6bac4d236979e9d0563e9d20fb132a9",
           "snippet": "My Santa Clara vs . Kentucky prediction breaks down the best bets, player props, and same-game parlay I&#x27;m betting for March Madness First Round."
         }
-      ],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Santa Clara vs Kentucky odds for March Madness NCAA Tournament betting\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F15%2Fsanta%2Dclara%2Dkentucky%2Dodds%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dbracket%2Dbetting%2F88448816007%2F&rut=86cb01d028ac7ee8988ab82cd3893d43718cc4886c2f91b04991ce6ca2781b21\",\n      \"snippet\": \"March Madness odds for Kentucky vs Santa Clara NCAA Tournament first-round game, with point spread, moneyline, over/under for Friday, March 20 game.\"\n    },\n    {\n      \"title\": \"Santa Clara Broncos vs Kentucky Wildcats Odds - Friday March 20 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.oddsshark.com%2Fncaab%2Fsanta%2Dclara%2Dkentucky%2Dodds%2Dmarch%2D20%2D2026%2D2518374&rut=f76c0df2ce922c2810105cee5ed94f3c66f1e239de31aeb4b906dce1dcb9daa7\",\n      \"snippet\": \"Santa Clara Broncos vs Kentucky Wildcats Odds - Friday March 20 2026 . Live betting odds and lines, betting trends, against the spread and over/under trends, injury reports and matchup stats for bettors.\"\n    },\n    {\n      \"title\": \"Kentucky vs Santa Clara picks, predictions, odds for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tennessean.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F16%2Fkentucky%2Dsanta%2Dclara%2Dpicks%2Dpredictions%2Dodds%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2F88420304007%2F&rut=7c13e6ab304501e15816bb7372f373cd6d0b29c3fabf8155421fee902dfa755f\",\n      \"snippet\": \"March Madness picks, predictions, odds for Santa Clara vs Kentucky NCAA Tournament first-round Midwest Region game Friday, March 20, 2026 . Who wins?\"\n    },\n    {\n      \"title\": \"2026 March Madness odds and predictions: Breakdown of First Round in ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nbcsports.com%2Fbetting%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dmarch%2Dmadness%2Dodds%2Dand%2Dpredictions%2Dbreakdown%2Dof%2Devery%2Dgame%2Din%2Dthe%2Dmidwest%2Dregion%2Dincluding%2Dupsets&rut=38d96f01b1d6ec3afd342e1d8f9040b7d90c39f56f9401dd45bc5a8dda74fcda\",\n      \"snippet\": \"This game opened Kentucky -1.5 with the Total set at 161.5. Santa Clara&#x27;s lineup is unselfish and littered with good shooters. Their issue is they have no presence in the paint. Kentucky is on the verge of adding this 22 million-dollar campaign to the list of recent disappointing seasons, but they do play well when allowed to play downhill.\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-midwest-7-final-json",

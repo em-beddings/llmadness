@@ -13,14 +13,16 @@
   "pick": {
     "gameId": "r64-west-4",
     "winnerId": "arkansas",
-    "confidence": "High",
+    "confidence": 0.82,
     "rationale": "Arkansas's elite top-5 offense, built against rigorous SEC competition, provides a significant advantage over Hawai'i's likely weaker defensive capabilities. The Razorbacks' high-major talent and experience in close games should overwhelm the Rainbow Warriors, who lack comparable firepower and face a substantial gap in team quality. While 13-seed upsets are possible, Arkansas's offensive efficiency and defensive solidity make them a reliable pick to advance."
   },
   "reasoningStep": {
     "id": "analysis-west-4-13",
     "title": "Evaluating Arkansas vs Hawai'i matchup",
     "summary": "Analyzed team ratings, seed mismatch, and historical context to determine Arkansas's advantage.",
-    "evidence": "Arkansas ranks 20th in Torvik and 17th in KenPom with a top-5 offense (adjOE rank 5) and a defense ranked around 50. Hawai'i lacks advanced metrics in the available ratings, indicating a typical 13-seed profile. Historical 4-seed win rate in the Round of 64 is approximately 78%."
+    "evidence": [
+      "Arkansas ranks 20th in Torvik and 17th in KenPom with a top-5 offense (adjOE rank 5) and a defense ranked around 50. Hawai'i lacks advanced metrics in the available ratings, indicating a typical 13-seed profile. Historical 4-seed win rate in the Round of 64 is approximately 78%."
+    ]
   },
   "toolCalls": [
     {
@@ -356,19 +358,20 @@
       "id": "r64-west-4-tool-call-0-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:47:03.785Z",
+      "content": "",
       "toolName": "lookup_cbb_ratings",
       "arguments": {
         "teamIds": [
           "arkansas",
           "hawai-i"
         ]
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-4-tool-result-0-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:47:03.793Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"arkansas\",\n      \"teamName\": \"Arkansas\",\n      \"torvik\": {\n        \"rank\": 20,\n        \"team\": \"Arkansas\",\n        \"conf\": \"SEC\",\n        \"record\": \"25-8\",\n        \"adjoe\": 127.76966892346266,\n        \"oe Rank\": 5,\n        \"adjde\": 101.98209935982086,\n        \"de Rank\": 50\n      },\n      \"kenpom\": {\n        \"rank\": 17,\n        \"team\": \"Arkansas\",\n        \"conf\": \"SEC\",\n        \"record\": \"25-8\",\n        \"adj_em\": 25.43,\n        \"adj_o\": 127.6,\n        \"adj_o_rank\": 5,\n        \"adj_d\": 102.1\n      }\n    },\n    {\n      \"teamId\": \"hawai-i\",\n      \"teamName\": \"Hawai'i\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}",
       "toolName": "lookup_cbb_ratings",
       "result": [
         {
@@ -451,8 +454,7 @@
           "torvik": null,
           "kenpom": null
         }
-      ],
-      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"arkansas\",\n      \"teamName\": \"Arkansas\",\n      \"torvik\": {\n        \"rank\": 20,\n        \"team\": \"Arkansas\",\n        \"conf\": \"SEC\",\n        \"record\": \"25-8\",\n        \"adjoe\": 127.76966892346266,\n        \"oe Rank\": 5,\n        \"adjde\": 101.98209935982086,\n        \"de Rank\": 50\n      },\n      \"kenpom\": {\n        \"rank\": 17,\n        \"team\": \"Arkansas\",\n        \"conf\": \"SEC\",\n        \"record\": \"25-8\",\n        \"adj_em\": 25.43,\n        \"adj_o\": 127.6,\n        \"adj_o_rank\": 5,\n        \"adj_d\": 102.1\n      }\n    },\n    {\n      \"teamId\": \"hawai-i\",\n      \"teamName\": \"Hawai'i\",\n      \"torvik\": null,\n      \"kenpom\": null\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-4-assistant-1",
@@ -464,20 +466,20 @@
       "id": "r64-west-4-tool-call-1-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:47:10.156Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "2026 Hawai'i basketball KenPom rating",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-4-tool-result-1-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:47:10.270Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-west-4-assistant-2",
@@ -489,22 +491,22 @@
       "id": "r64-west-4-tool-call-2-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:47:14.889Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Hawai'i basketball 2026 tournament",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-4-tool-result-2-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:47:15.501Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-4-assistant-3",
@@ -516,20 +518,20 @@
       "id": "r64-west-4-tool-call-3-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:47:19.924Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "Arkansas basketball 2026 NCAA tournament news",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-4-tool-result-3-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:47:20.062Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}",
       "toolName": "search_web",
-      "result": [],
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": []\n}"
+      "result": []
     },
     {
       "id": "r64-west-4-assistant-4",
@@ -541,16 +543,17 @@
       "id": "r64-west-4-tool-call-4-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:47:25.282Z",
+      "content": "",
       "toolName": "list_teams",
       "arguments": {
         "region": "West"
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-4-tool-result-4-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:47:25.283Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"arizona\",\n      \"name\": \"Arizona\",\n      \"shortName\": \"ARIZ\",\n      \"seed\": 1,\n      \"region\": \"West\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"purdue\",\n      \"name\": \"Purdue\",\n      \"shortName\": \"PUR\",\n      \"seed\": 2,\n      \"region\": \"West\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"gonzaga\",\n      \"name\": \"Gonzaga\",\n      \"shortName\": \"GONZ\",\n      \"seed\": 3,\n      \"region\": \"West\",\n      \"conference\": \"WCC\"\n    },\n    {\n      \"id\": \"arkansas\",\n      \"name\": \"Arkansas\",\n      \"shortName\": \"ARK\",\n      \"seed\": 4,\n      \"region\": \"West\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}",
       "toolName": "list_teams",
       "result": [
         {
@@ -689,8 +692,7 @@
           "region": "West",
           "conference": "SEC"
         }
-      ],
-      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"arizona\",\n      \"name\": \"Arizona\",\n      \"shortName\": \"ARIZ\",\n      \"seed\": 1,\n      \"region\": \"West\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"purdue\",\n      \"name\": \"Purdue\",\n      \"shortName\": \"PUR\",\n      \"seed\": 2,\n      \"region\": \"West\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"gonzaga\",\n      \"name\": \"Gonzaga\",\n      \"shortName\": \"GONZ\",\n      \"seed\": 3,\n      \"region\": \"West\",\n      \"conference\": \"WCC\"\n    },\n    {\n      \"id\": \"arkansas\",\n      \"name\": \"Arkansas\",\n      \"shortName\": \"ARK\",\n      \"seed\": 4,\n      \"region\": \"West\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}"
+      ]
     },
     {
       "id": "r64-west-4-assistant-5",
@@ -702,22 +704,22 @@
       "id": "r64-west-4-tool-call-5-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:47:31.098Z",
+      "content": "",
       "toolName": "search_web",
       "arguments": {
         "query": "\"Hawai'i\" \"Rainbow Warriors\" 2026 basketball",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-4-tool-result-5-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:47:31.817Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_web",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-4-assistant-6",
@@ -729,22 +731,22 @@
       "id": "r64-west-4-tool-call-6-0",
       "type": "tool_call",
       "createdAt": "2026-03-18T09:47:46.474Z",
+      "content": "",
       "toolName": "search_espn_news",
       "arguments": {
         "query": "Arkansas basketball injury",
         "maxResults": 5
-      },
-      "content": ""
+      }
     },
     {
       "id": "r64-west-4-tool-result-6-0",
       "type": "tool_result",
       "createdAt": "2026-03-18T09:47:47.212Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}",
       "toolName": "search_espn_news",
       "result": {
         "error": "search_web failed: 403 If this persists, please <a href=\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\">email us</a>.<br />\nOur support email address includes an anonymized error code that helps us understand the context of your search.\n"
-      },
-      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": {\n    \"error\": \"search_web failed: 403 If this persists, please <a href=\\\"mailto:error-lite+9318@duckduckgo.com?subject=Error getting results\\\">email us</a>.<br />\\nOur support email address includes an anonymized error code that helps us understand the context of your search.\\n\"\n  }\n}"
+      }
     },
     {
       "id": "r64-west-4-assistant-final-7",
