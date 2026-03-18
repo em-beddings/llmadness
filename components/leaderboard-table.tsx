@@ -6,6 +6,16 @@ function getSummary(modelId: string, submissions: SubmissionSummary[]) {
   return submissions.find((entry) => entry.modelId === modelId);
 }
 
+function getProviderLabel(summary?: SubmissionSummary) {
+  const description = summary?.description;
+  if (!description) {
+    return null;
+  }
+
+  const [provider] = description.split("•").map((part) => part.trim());
+  return provider || null;
+}
+
 export function LeaderboardTable({
   leaderboard,
   modelHrefBase,
@@ -39,6 +49,7 @@ export function LeaderboardTable({
       <div className="podium-grid">
         {podium.map((entry, index) => {
           const summary = getSummary(entry.modelId, submissions);
+          const providerLabel = getProviderLabel(summary);
           return (
             <Link
               className={`podium-card podium-card-${index + 1}`}
@@ -47,7 +58,12 @@ export function LeaderboardTable({
             >
               <div className="podium-rank">#{index + 1}</div>
               <div>
-                <h3>{entry.modelLabel}</h3>
+                <h3>
+                  {entry.modelLabel}
+                  {providerLabel ? (
+                    <span className="leader-provider">{providerLabel}</span>
+                  ) : null}
+                </h3>
               </div>
               <div className="podium-score">
                 <strong>{entry.totalPoints}</strong>
@@ -86,6 +102,7 @@ export function LeaderboardTable({
       <div className="leaderboard-cards">
         {field.map((entry, index) => {
           const summary = getSummary(entry.modelId, submissions);
+          const providerLabel = getProviderLabel(summary);
           return (
             <Link
               className="leader-card"
@@ -94,7 +111,12 @@ export function LeaderboardTable({
             >
               <div className="leader-rank">#{index + 4}</div>
               <div className="leader-topline">
-                <strong>{entry.modelLabel}</strong>
+                <strong>
+                  {entry.modelLabel}
+                  {providerLabel ? (
+                    <span className="leader-provider">{providerLabel}</span>
+                  ) : null}
+                </strong>
               </div>
               <div className="leader-points">
                 <strong>{entry.totalPoints}</strong>
