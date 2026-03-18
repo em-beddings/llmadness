@@ -15,7 +15,12 @@ interface RateLimitState {
 }
 
 type ChatMessage =
-  | { role: "system" | "user" | "assistant"; content: string | null; tool_calls?: ToolCall[] }
+  | {
+      role: "system" | "user" | "assistant";
+      content: string | null;
+      tool_calls?: ToolCall[];
+      reasoning_content?: string | null;
+    }
   | { role: "tool"; content: string; tool_call_id: string };
 
 interface ToolCall {
@@ -388,6 +393,7 @@ async function createChatCompletion(
         role?: "assistant";
         content?: string | null;
         tool_calls?: ToolCall[];
+        reasoning_content?: string | null;
       };
     }>;
   };
@@ -509,13 +515,16 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
       if (message.tool_calls && message.tool_calls.length > 0) {
         trace.push(
           traceEvent(`${currentGameId}-assistant-${step}`, "assistant_message", {
-            content: message.content ?? null
+            content: message.reasoning_content
+              ? `${message.reasoning_content}\n\n${message.content ?? ""}`.trim()
+              : message.content ?? null
           })
         );
         messages.push({
           role: "assistant",
           content: message.content ?? null,
-          tool_calls: message.tool_calls
+          tool_calls: message.tool_calls,
+          reasoning_content: message.reasoning_content ?? null
         });
 
         for (const [toolIndex, toolCall] of message.tool_calls.entries()) {
@@ -587,7 +596,9 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
 
       trace.push(
         traceEvent(`${currentGameId}-assistant-final-${step}`, "assistant_message", {
-          content: message.content ?? ""
+          content: message.reasoning_content
+            ? `${message.reasoning_content}\n\n${message.content ?? ""}`.trim()
+            : message.content ?? ""
         })
       );
 
