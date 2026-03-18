@@ -1,0 +1,960 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "grok-4-2",
+    "label": "Grok 4.2",
+    "provider": "xai",
+    "model": "grok-4.20-beta-0309-reasoning",
+    "description": "xAI • Large reasoning model designed for real-time information access, coding, and general problem solving."
+  },
+  "gameId": "r32-south-3",
+  "generatedAt": "2026-03-17T21:32:36.950Z",
+  "pick": {
+    "gameId": "r32-south-3",
+    "winnerId": "illinois",
+    "confidence": 83,
+    "rationale": "Illinois ranks 6th in Torvik and 7th in KenPom with an elite top-2 offense and top-25 defense from a tough Big Ten schedule, creating a substantial quality gap over North Carolina at 27-29th in both systems. The Illini advanced dominantly as the 3-seed while UNC is missing star forward Caleb Wilson to a season-ending thumb injury after an earlier hand fracture, further widening the efficiency disparity in this neutral-site game. North Carolina's solid ACC metrics offer no credible upset path against Illinois' superior adjusted offense that should exploit any defensive lapses."
+  },
+  "reasoningStep": {
+    "id": "metrics-and-injuries",
+    "title": "Ratings, Injuries, and Matchup Analysis",
+    "summary": "Advanced stats heavily favor Illinois over UNC, compounded by key UNC injury.",
+    "evidence": [
+      "Lookup ratings show Illinois #6-7 with elite offense (adj o ~131-132, rank 1-2) vs UNC #27-29 (adj o ~121-122, rank 32-33)",
+      "Web searches confirm Caleb Wilson out for UNC with thumb injury after hand fracture",
+      "No major Illinois injuries reported",
+      "Prior first-round picks align with this seeding (UNC 6-seed, Illinois 3-seed)"
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-9jn431ls",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "north-carolina",
+          "illinois"
+        ]
+      },
+      "startedAt": "2026-03-17T21:31:49.843Z",
+      "completedAt": "2026-03-17T21:31:49.850Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "illinois",
+          "teamName": "Illinois",
+          "torvik": {
+            "rank": 6,
+            "team": "Illinois",
+            "conf": "B10",
+            "record": "24-8",
+            "adjoe": 131.9558297057279,
+            "oe Rank": 2,
+            "adjde": 98.14121578057112,
+            "de Rank": 24,
+            "barthag": 0.967850725437318,
+            "rank.1": 6,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 15,
+            "Pro Con L": 5,
+            "Con Rec.": "15-5",
+            "sos": 0.739253463827645,
+            "ncsos": 0.5770367888238636,
+            "consos": 0.8189497162759354,
+            "Proj. SOS": 0.739253463827645,
+            "Proj. Noncon SOS": 0.5770367888238636,
+            "Proj. Con SOS": 0.8189497162759354,
+            "elite SOS": 0.6156226523073656,
+            "elite noncon SOS": 0.7195630799150993,
+            "Opp OE": 117.21764983772788,
+            "Opp DE": 103.33501358608063,
+            "Opp Proj. OE": 117.21764983772788,
+            "Opp Proj DE": 103.33501358608063,
+            "Con Adj OE": 133.31878722636355,
+            "Con Adj DE": 99.21288548504164,
+            "Qual O": 133.7529373251816,
+            "Qual D": 99.8291132021184,
+            "Qual Barthag": 0.9665650435707692,
+            "Qual Games": 18,
+            "FUN": -0.0487975834947566,
+            "ConPF": 1633,
+            "ConPA": 1416,
+            "ConPoss": 1312.4,
+            "ConOE": 1.244285278878391,
+            "ConDE": 1.0789393477598292,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.75,
+            "WAB": 6.54832481389591,
+            "WAB Rk": 15,
+            "Fun Rk": 297,
+            "adjt": 65.68345759687386
+          },
+          "kenpom": {
+            "rank": 7,
+            "team": "Illinois",
+            "conf": "B10",
+            "record": "24-8",
+            "adj_em": 32.14,
+            "adj_o": 131.2,
+            "adj_o_rank": 1,
+            "adj_d": 99.1,
+            "adj_d_rank": 28,
+            "adj_t": 65.6,
+            "adj_t_rank": 278,
+            "luck": -0.05,
+            "luck_rank": 306,
+            "sos_adj_em": 13.62,
+            "sos_adj_em_rank": 23,
+            "sos_opp_o": 117.1,
+            "sos_opp_o_rank": 22,
+            "sos_opp_d": 103.5,
+            "sos_opp_d_rank": 25,
+            "ncsos_adj_em": 3.78,
+            "ncsos_adj_em_rank": 91
+          }
+        },
+        {
+          "teamId": "north-carolina",
+          "teamName": "North Carolina",
+          "torvik": {
+            "rank": 27,
+            "team": "North Carolina",
+            "conf": "ACC",
+            "record": "24-8",
+            "adjoe": 121.51548156694172,
+            "oe Rank": 32,
+            "adjde": 100.0466013429838,
+            "de Rank": 34,
+            "barthag": 0.9034067661597543,
+            "rank.1": 27,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 12,
+            "Pro Con L": 6,
+            "Con Rec.": "12-6",
+            "sos": 0.7030515873839742,
+            "ncsos": 0.5336496022136061,
+            "consos": 0.8148332127774081,
+            "Proj. SOS": 0.7030515873839742,
+            "Proj. Noncon SOS": 0.5336496022136061,
+            "Proj. Con SOS": 0.8148332127774081,
+            "elite SOS": 0.6650502084048928,
+            "elite noncon SOS": 0.7853591158892972,
+            "Opp OE": 115.2717099471416,
+            "Opp DE": 103.97156037036872,
+            "Opp Proj. OE": 115.2717099471416,
+            "Opp Proj DE": 103.97156037036872,
+            "Con Adj OE": 123.08536132281272,
+            "Con Adj DE": 102.25960970040924,
+            "Qual O": 121.34303851221192,
+            "Qual D": 102.2986209970086,
+            "Qual Barthag": 0.8768941529281491,
+            "Qual Games": 14,
+            "FUN": 0.0789698688462062,
+            "ConPF": 1416,
+            "ConPA": 1376,
+            "ConPoss": 1232,
+            "ConOE": 1.1493506493506491,
+            "ConDE": 1.1168831168831168,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6666666666666666,
+            "WAB": 4.889821360936529,
+            "WAB Rk": 21,
+            "Fun Rk": 28,
+            "adjt": 67.96717619133527
+          },
+          "kenpom": {
+            "rank": 29,
+            "team": "North Carolina",
+            "conf": "ACC",
+            "record": "24-8",
+            "adj_em": 20.86,
+            "adj_o": 121.5,
+            "adj_o_rank": 33,
+            "adj_d": 100.6,
+            "adj_d_rank": 37,
+            "adj_t": 68,
+            "adj_t_rank": 144,
+            "luck": 0.057,
+            "luck_rank": 52,
+            "sos_adj_em": 11.43,
+            "sos_adj_em_rank": 43,
+            "sos_opp_o": 115.4,
+            "sos_opp_o_rank": 49,
+            "sos_opp_d": 104,
+            "sos_opp_d_rank": 38,
+            "ncsos_adj_em": 1.29,
+            "ncsos_adj_em_rank": 141
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-3nzg7jpy",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Carolina vs Illinois NCAA 2026 injuries news",
+        "maxResults": 10
+      },
+      "startedAt": "2026-03-17T21:31:51.827Z",
+      "completedAt": "2026-03-17T21:31:52.608Z",
+      "summary": "Returned 10 search results for \"North Carolina vs Illinois NCAA 2026 injuries news\".",
+      "result": [
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=06c6eb9f632ce722feb3d90942368ad1186f9f671e22ffd99e6b129a27764235",
+          "snippet": "From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries ."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "How far can UNC basketball go in March Madness bracket? | Raleigh News ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Func%2Farticle315066910.html&rut=1d88d61e2c9e7590f994ee1afe18c273b84daf5c4a2803b043261b95391f4480",
+          "snippet": "Having adjusted to Caleb Wilson&#x27;s season-ending injury, UNC enters the NCAA Tournament as a No. 6 seed in the Midwest Region."
+        },
+        {
+          "title": "North Carolina basketball&#x27;s nightmare 2026 March Madness bracket scenarios",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnorth%2Dcarolina%2Dbasketball%2Ds%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios%2Far%2DAA1Yqva3&rut=dda94f5b67444eea9894a4564b4765921842cbed130e6833d2c1f7265d1baa33",
+          "snippet": "North Carolina has endured the highs and lows of the 2025- 2026 college basketball season, but is at a tricky position in that ride as March Madness approaches."
+        },
+        {
+          "title": "COLLEGEBASKETBALL Injury Report and Status 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=df57f8830206e81dda0ff15128d95afeeb505a38e15cd0a8964fb73c134f0084",
+          "snippet": "Stay updated with the latest COLLEGEBASKETBALL injuries and player statuses on CBS Sports."
+        },
+        {
+          "title": "Bracket Reveal Takeaways: UNC&#x27;s NCAA Tournament path is not easy",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ftarheelswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Ftarheels%2Fmens%2Dbasketball%2F2026%2F03%2F16%2Func%2Dbasketball%2Dwhat%2Dto%2Dtake%2Daway%2Dfrom%2Duncs%2Dchallenging%2Dtournament%2Dpath%2F89174815007%2F&rut=c237af6f716f56e7f33053ea54da018cb1c66942eb1ab8a24d7789246e9568d3",
+          "snippet": "The NCAA Tournament bracket has been released, and North Carolina is the No. 6 seed in the South Region. The Tar Heels do not have an easy region by any means, as their first game is against NCAA Tournament regular No. 11 VCU and a potential matchup against No. 3 seed Illinois in the Round of 32 if both teams make it that far."
+        },
+        {
+          "title": "ESPN.com - Men&#x27;s College Basketball Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fncb%2Finjuries%2Findex.html&rut=1a5a94f745da371bc015d1d810f5f3d717156827f2673cb273adf6d41a24e58f",
+          "snippet": "East Carolina C Moussa Badiane Ineligible Out Wed. vs Rutgers. 11/14 F Gabriel Mikulas Ineligible Out Wed. vs Rutgers. 11/14 G Fred Primus Ankle Probable Wed. vs Rutgers. 11/14 G Jimmy Bishop Foot ..."
+        },
+        {
+          "title": "NCAAB Injuries 2026 - Find the Latest NCAAB Player Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.vegasinsider.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=ae72fffb5e2c8aaa5efb300f52e81403fdb74b5afaf311589406527e1780674b",
+          "snippet": "Find NCAAB Injury reports for the 2026 season provided by VegasInsider, along with more NCAAB betting information to assist your sports handicapping."
+        },
+        {
+          "title": "Caleb Wilson injury update: Dick Vitale hints at North Carolina star ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fcollege%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Fnews%2Fcaleb%2Dwilson%2Dinjury%2Dupdate%2Ddick%2Dvitale%2Dhints%2Dat%2Dnorth%2Dcarolina%2Dstar%2Dnot%2Dreturning%2Dagain%2Din%2D2026%2F&rut=c543c6d709456ee5db2b13f8f06ae962d16e8a0598c5ef8b3b8440089aed4831",
+          "snippet": "ESPN&#x27;s Dick Vitale hinted that North Carolina star Caleb Wilson may be out longer than expected with his injury."
+        }
+      ]
+    },
+    {
+      "id": "tool-qa363n3i",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Carolina basketball recent news 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:31:52.608Z",
+      "completedAt": "2026-03-17T21:31:53.327Z",
+      "summary": "Returned 5 search results for \"North Carolina basketball recent news 2026\".",
+      "result": [
+        {
+          "title": "North Carolina Tar Heels Basketball - Tar Heel Times",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tarheeltimes.com%2Funcbasketball.aspx&rut=2dbbb116347e13abfc0eaf799cbf02eb68e1f9abaa73e48c210779807d155b89",
+          "snippet": "North Carolina Men&#x27;s Basketball Falls To No. 21 In AP Poll UNC Men&#x27;s Basketball fell two spots to No. 21 in this week&#x27;s Associated Press Top 25 Poll, released on Monday. Nine days after topping Clemson in its final home game of the regular season, the Tar Heels fell to the fifth-seeded Tigers in the ACC Tournament quarterfinals on Thursday."
+        },
+        {
+          "title": "North Carolina lands first 2026 recruit in four-star Adams - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F46967601%2Fnorth%2Dcarolina%2Dlands%2Dfirst%2D2026%2Drecruit%2Dfour%2Dstar%2Dadams&rut=07c8c7672d54864117edbd8a7fb304a26d0e55f9a90c3d6d6c1883a1ab05dc64",
+          "snippet": "Top-30 men&#x27;s basketball senior Maximo Adams announced his commitment to North Carolina on Friday, becoming the Tar Heels&#x27; first recruit in the 2026 class."
+        },
+        {
+          "title": "North Carolina Basketball News - Latest on The UNC Tar Heels",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.saturdaydownsouth.com%2Fcollege%2Dbasketball%2Fteams%2Fnorth%2Dcarolina%2F&rut=485996076b8544c4aabbd5b81196807ec6ed8ad4f644ff843fbb39d61f2c0925",
+          "snippet": "North Carolina basketball is a college basketball blue-blood. Follow this page for the latest news , scores and more about the Tar Heels."
+        },
+        {
+          "title": "Duke 76-61 North Carolina (Mar 7, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401820788%2Fnorth%2Dcarolina%2Dduke&rut=dceb403f4272de45b22a6b7f1b8f84cc151d79679f30f8c4f107a6ecbd996ffc",
+          "snippet": "Game summary of the Duke Blue Devils vs. North Carolina Tar Heels NCAAM game, final score 76-61, from March 7, 2026 on ESPN."
+        },
+        {
+          "title": "North Carolina Tar Heels Basketball News - On3.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fcollege%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Fcategory%2Fbasketball%2Fnews%2F&rut=39d01c6bafbc28d3ac979b2c713b39bda33960281fa03c3d832db6e6464dca38",
+          "snippet": "Nick Kosko 03/11/26 On3 NIL College Basketball TV Ratings: Duke vs. North Carolina rematch averages 3.4 million viewers Nick Schultz 03/10/26 On3 Basketball 2026 NCAA Tournament Predictions: Bracketology changes as high-major conference tournaments begin James Fletcher III 03/10/26"
+        }
+      ]
+    },
+    {
+      "id": "tool-c0ppavju",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Illinois basketball recent news 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:31:53.327Z",
+      "completedAt": "2026-03-17T21:31:54.145Z",
+      "summary": "Returned 5 search results for \"Illinois basketball recent news 2026\".",
+      "result": [
+        {
+          "title": "Illini Earn Sixth Straight NCAA Tournament Bid - University of Illinois ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ffightingillini.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dillini%2Dearn%2Dsixth%2Dstraight%2Dncaa%2Dtournament%2Dbid.aspx&rut=8222b60796042fafc686639cce2b1284d5f98f56220b7aebaf2c6ef38d0d6a3e",
+          "snippet": "News Ticket Info | Bracket | Tournament Central CHAMPAIGN, Ill. -- The bracket is officially set for the 2026 NCAA Men&#x27;s Basketball Tournament. Illinois (24-8) is an at-large selection, earning the program&#x27;s sixth consecutive bid under head coach Brad Underwood. Illinois is the No. 3 seed in the South region."
+        },
+        {
+          "title": "Why Illinois basketball is on upset alert in 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fwhy%2Dillinois%2Dbasketball%2Dis%2Don%2Dupset%2Dalert%2Din%2D2026%2Dncaa%2Dtournament&rut=9083eb1afb0f00520ed506332cfc8c765f7568063e2ccbda9757977a9ce39e99",
+          "snippet": "Why Illinois basketball is on upset alert in 2026 NCAA Tournament Illinois basketball looks like its geared for a Final Four run. But here&#x27;s why Penn could stun them in March Madness."
+        },
+        {
+          "title": "Illinois basketball plays Penn in the 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fillinois%2Dbasketball%2Dmarch%2Dmadness%2Dselection%2D190220786.html&rut=a78ba00a65c3f4cce7ba9fc8f695f598e3f7287cd4bb9536917056a9e887ffd1",
+          "snippet": "The Illinois basketball team starts its March Madness journey with a game against No. 14 seed Penn."
+        },
+        {
+          "title": "Projecting Illinois&#x27; 2026-27 Lineup After the Lucas Morillo Signing",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fillinois%2Fbasketball%2Fillinois%2Dbasketball%2D2026%2D27%2Dlineup%2Dprojection%2Dlucas%2Dmorillo&rut=692d51dac398c8ad7f231dc027ad4ac2d3a773f9e4a70c830d8f3ae0c5e45f98",
+          "snippet": "Illinois finally made a splash in the 2026 recruiting cycle, reeling in four-star guard Lucas Morillo on Friday to significantly bolster the program&#x27;s foundation for at least the next year or two."
+        },
+        {
+          "title": "Illinois basketball&#x27;s nightmare 2026 March Madness bracket scenarios",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fillinois%2Dbasketball%2Ds%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios%2Far%2DAA1YvGpf&rut=097f55a844a2bee5ccd8581aadc37252d13e23e8ba321f94f8c5d931d50d4677",
+          "snippet": "Despite its shaky end to the 2025- 2026 college basketball regular season, Illinois remains poised to enter March Madness with a top-three seed. The Illini have only advanced past opening weekend ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-2ikjdz8w",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "\"North Carolina\" \"Illinois\" March Madness 2026",
+        "maxResults": 10
+      },
+      "startedAt": "2026-03-17T21:31:57.865Z",
+      "completedAt": "2026-03-17T21:31:58.547Z",
+      "summary": "Returned 1 search results for \"\"North Carolina\" \"Illinois\" March Madness 2026\".",
+      "result": [
+        {
+          "title": "Greenville to Host Top Teams in 2026 March Madness South Region",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fsc%2Fgreenville%2Fnews%2F2026%2F03%2F15%2Fgreenville%2Dto%2Dhost%2Dtop%2Dteams%2Din%2D2026%2Dmarch%2Dmadness%2Dsouth%2Dregion%2F&rut=0f018633b2ab65463fce1ff1ef1760d05ef736b8877599cef33e434b164526f1",
+          "snippet": "Greenville, South Carolina will host first- and second-round games of the 2026 NCAA Men&#x27;s Basketball Tournament, with the South Region matchups taking place at Bon Secours Wellness Arena. The top teams coming to the city include No. 3 seed Illinois , No. 6 North Carolina , and No. 11 VCU."
+        }
+      ]
+    },
+    {
+      "id": "tool-qtx1wll4",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "North Carolina Illinois injuries NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:31:58.547Z",
+      "completedAt": "2026-03-17T21:31:59.265Z",
+      "summary": "Returned 5 search results for \"North Carolina Illinois injuries NCAA tournament\".",
+      "result": [
+        {
+          "title": "Illinois Fighting Illini Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fill&rut=3c6e43dcea6431e607696e96ffc7a2461e3179b55819d5504b4ae94dc11f648d",
+          "snippet": "Visit ESPN for the current injury situation of the 2026 Illinois Fighting Illini. Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=e320c0f76f951d39ae78cd7c77866b1b3dcd2f222c10e26aa8b4fe6732f56db2",
+          "snippet": "The North Carolina -based Royals made the most of their first year of eligibility for the NCAA tournament after transitioning up from Division II, with Chris Ashby (34 points) leading all scorers ..."
+        },
+        {
+          "title": "North Carolina 75-70 Illinois (Apr 4, 2005) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F254000063%2Fnorth%2Dcarolina%2Dillinois&rut=e16d9b51848b9055c9f825dee2c59d5e94501f694ab55638f01dd13b4ae88c91",
+          "snippet": "Game summary of the North Carolina Tar Heels vs. Illinois Fighting Illini NCAAM game, final score 75-70, from April 4, 2005 on ESPN."
+        },
+        {
+          "title": "Illinois Fighting Illini Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F356%2Fillinois%2Dfighting%2Dillini&rut=8f1de5450924128f9a940022dfaa0da9bb28054607fa96e5bcd43a22430b413e",
+          "snippet": "Visit ESPN for Illinois Fighting Illini live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "The world the last time Illinois was in the Elite Eight - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F39835091%2Fillinois%2Dfighting%2Dillini%2Dncaa%2Dtournament%2Delite%2Deight%2D2005&rut=606fe8c126730e26f8fe1f42dd8eddd95e50c4658ad5ee976be26e9db40e7d94",
+          "snippet": "The No. 3 Illinois Fighting Illini defeated the No. 2 Iowa State Cyclones 72-69 on Thursday in Boston to advance to the Elite Eight in the men&#x27;s NCAA tournament for the first time since 2005."
+        }
+      ]
+    },
+    {
+      "id": "tool-ljf0w3qb",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "maxChars": 500
+      },
+      "startedAt": "2026-03-17T21:32:12.956Z",
+      "completedAt": "2026-03-17T21:32:13.604Z",
+      "summary": "Fetched https://www.rotowire.com/cbasketball/injury-report.php and extracted 500 characters of text.",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "text": "2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tenni"
+      }
+    },
+    {
+      "id": "tool-7f3on9a1",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Caleb Wilson injury UNC 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:32:13.605Z",
+      "completedAt": "2026-03-17T21:32:14.421Z",
+      "summary": "Returned 5 search results for \"Caleb Wilson injury UNC 2026\".",
+      "result": [
+        {
+          "title": "Caleb Wilson Injury Update: Is North Carolina Star Forward Playing in ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fcaleb%2Dwilson%2Dinjury%2Dupdate%2Dmarch%2Dmadness%2F&rut=ecf9a3891dffdb702a27f490c02c177c06042f6c1bf48113205d6278a92dd067",
+          "snippet": "The North Carolina Tar Heels became accustomed to the idea of not having Caleb Wilson over the last week. The player, who last played on February 10 against Miami when he fractured his left hand, was nearing a regular-season finale return against Duke a couple of weeks back, when he suffered a season-ending injury in his right thumb during non-contact drills ahead of the rivalry game."
+        },
+        {
+          "title": "How UNC Can Survive Caleb Wilson&#x27;s Absence in NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Func%2Ftar%2Dheels%2Dhow%2Dcan%2Dsurvive%2Dcaleb%2Dwilson%2Dabsence%2Dncaa%2Dtournament&rut=718d88e08279388aedbda1fdda3917943c911869bef346f26c3a3e436f9d8517",
+          "snippet": "Feb 23, 2026 ; Chapel Hill, North Carolina, USA; North Carolina Tar Heels forward Caleb Wilson (8) and the bench react in the second half at Dean E. Smith Center."
+        },
+        {
+          "title": "North Carolina Announces Caleb Wilson News Before NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fathlonsports.com%2Fcollege%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Fnorth%2Dcarolina%2Dannounces%2Dcaleb%2Dwilson%2Dnews%2Dbefore%2Dncaa%2Dtournament&rut=bc4d729646d6187dff6dc4e649d07438ae5389ba3a95ae49b6c3d9a2e631571f",
+          "snippet": "UNC Tar Heels star Caleb Wilson will miss the NCAA Tournament with a thumb injury ."
+        },
+        {
+          "title": "Caleb Wilson discusses injury after UNC loss to Clemson in ACC tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fayobserver.com%2Fstory%2Fsports%2Fcollege%2Facc%2F2026%2F03%2F13%2Fcaleb%2Dwilson%2Dinjury%2Dunc%2Dbasketball%2Dclemson%2Dacc%2Dtournament%2F89036682007%2F&rut=320897dae9e153e7f73b6c36aad774d5f0a32952079606de0c65923738b380d8",
+          "snippet": "Following UNC basketball&#x27;s loss to Clemson in the 2026 ACC Tournament, freshman Caleb Wilson was briefly in the locker room. Here&#x27;s what he said."
+        },
+        {
+          "title": "UNC opens NCAA Tournament without Caleb Wilson vs. surging VCU",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.wral.com%2Fsports%2Func%2Dhomecourt%2Dadvantage%2Dgreenville%2Dsc%2Dcaleb%2Dwilson%2Dout%2Dmarch%2D2026%2F&rut=925c3752d66cd82740008831075680e51cd3a3dd5a726535d734bc992eed4fdb",
+          "snippet": "North Carolina will have somewhat of a homecourt advantage in the opening weekend of the 2026 NCAA Tournament if the Tar Heels can manage without star freshman Caleb Wilson ."
+        }
+      ]
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r32-south-3-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T21:31:45.853Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r32-south-3\nCurrent game label: South Round of 32 3\nRound: Round of 32\nResolved teams: North Carolina (north-carolina) vs Illinois (illinois)\nPrior committed picks: 46"
+    },
+    {
+      "id": "r32-south-3-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T21:31:45.853Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r32-south-3\",\n      \"round\": \"Round of 32\",\n      \"region\": \"South\",\n      \"label\": \"South Round of 32 3\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-south-5\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-south-6\"\n      }\n    },\n    \"slotAName\": \"North Carolina\",\n    \"slotBName\": \"Illinois\",\n    \"slotATeamId\": \"north-carolina\",\n    \"slotBTeamId\": \"illinois\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 62,\n        \"rationale\": \"Texas holds solid top-40 rankings in both KenPom and Torvik with elite adjusted offense, despite defensive shortcomings. The Longhorns recently defeated NC State 102-97 in a neutral-site game where they were slight underdogs, showing they can exploit the Wolfpack's style. While NC State owns a marginally better record and is reportedly a small betting favorite, Texas's experience in the tougher SEC and head-to-head success provide a credible edge in this close First Four matchup.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 74,\n        \"rationale\": \"SMU ranks significantly higher than Miami (OH) in both KenPom (42 vs 93) and Torvik (42 vs 87), boasting elite adjusted offense from a much tougher ACC schedule compared to the MAC. Miami (OH)'s 31-1 record is impressive but inflated by weak competition, while SMU's experience against high-major foes provides a clear advantage in this play-in game. Betting markets reflect this with SMU as a 6.5-point favorite, and no major injuries or recent news alter the metrics favoring the Mustangs.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 56,\n        \"rationale\": \"UMBC enters with superior overall metrics, ranking 185th in both KenPom and Torvik compared to Howard's 207th, driven by stronger adjusted offense despite comparable defensive efficiency. The Retrievers also own a better record (24-8 vs 23-10), defeated Howard 95-77 in last season's meeting, and are listed as a slight 1.5- to 2.5-point favorite by multiple sportsbooks. Howard boasts a strong 8-game win streak and productive guard duo, but UMBC's experience as America East champions and consistent edge in advanced stats provide the nod in this tightly contested First Four play-in.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 59,\n        \"rationale\": \"Lehigh enters with marginally superior advanced metrics, ranking 282nd in Torvik and 284th in KenPom compared to Prairie View A&M's 292nd and 291st, driven by slightly better adjusted offense from a stronger conference schedule. The Mountain Hawks' 18-16 record includes quality wins in the Patriot League, while the Panthers sit at 17-17 from the SWAC with weaker overall efficiency. Betting markets list Lehigh as a 2.5-point favorite with no significant injury concerns reported for either side, giving the Mountain Hawks the edge in this low-major First Four clash despite the upset risk from Prairie View's defensive metrics.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 94,\n        \"rationale\": \"Duke enters as the overwhelming No. 1 overall seed with elite rankings in both KenPom and Torvik, boasting the top defense and a top-5 offense from a strong ACC schedule. Siena ranks around 190th in both metrics with middling efficiency from the MAAC, making this a classic 1-16 mismatch where the Blue Devils are 29-point favorites. While Duke is dealing with a foot fracture to starting guard Caleb Foster and other health questions, the team is shrugging them off and the depth and talent gap remains far too large for any credible Siena upset path.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"ohio-state\",\n        \"confidence\": 57,\n        \"rationale\": \"Ohio State holds a clear offensive advantage with the No. 17 national ranking in adjusted offensive efficiency, exploiting a TCU defense that is solid but ranks outside the top 30. The Buckeyes finished the season strong at 21-12 and enter as slight 2.5-point favorites with no significant injuries reported, while TCU's 22-11 mark comes from a tough Big 12 slate but features weaker overall metrics around KenPom rank 43. Although 8/9 games carry upset risk given TCU's defensive potential and experience, the matchup specifics and betting market lean toward Ohio State's higher-quality offense prevailing in a neutral-site environment.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 76,\n        \"rationale\": \"St. John's holds top-20 rankings in both KenPom and Torvik with elite defense from a tough Big East schedule, outweighing Northern Iowa's respectable but lower-ranked defense around 70th overall. The Red Storm's 27-6 record and superior adjusted offense provide a clear quality edge over UNI's 23-12 mark from the MVC, with no significant injuries or recent news altering the outlook. While 5-12 games carry some upset risk given Northern Iowa's defensive capabilities, the metrics gap and St. John's experience against stronger competition make a credible path for the underdog unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 81,\n        \"rationale\": \"Kansas ranks top-25 in both KenPom and Torvik with elite defense from a strong Big 12 schedule, creating an enormous quality gap over unranked California Baptist from the WAC. Despite noted injuries to players like Darryn Peterson and a shaky recent stretch that has raised mild upset alerts, the talent and experience differential is too significant for a 4-13 game. California Baptist lacks any credible path to victory against this level of competition.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 65,\n        \"rationale\": \"Louisville holds top-20 rankings in both KenPom and Torvik with elite efficiency from a tough ACC schedule, creating a clear quality gap over South Florida's No. 50 metrics from the AAC despite the Bulls' 24-8 record. The Cardinals are navigating a significant injury to starting point guard Mikel Brown Jr. with his ongoing back issue, and South Florida arrives on an 11-game win streak with a high-powered offense that has made them a trendy upset pick among analysts like Bruce Pearl. While the underdog has a credible path through hot form and the typical 6-11 volatility, Louisville's superior adjusted offense and defense provide the edge to advance in a neutral-site environment.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 87,\n        \"rationale\": \"Michigan State enters as a top-15 team in both KenPom and Torvik projections with elite efficiency from a rugged Big Ten schedule, creating a massive quality gap over North Dakota State from the Summit League. The Spartans are installed as a 16.5-point favorite with no major injury concerns reported, while historical data shows 3-vs-14 matchups favor the higher seed over 85% of the time. North Dakota State has a respectable offense but lacks the defensive metrics or experience to exploit any credible upset path against this level of competition.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 65,\n        \"rationale\": \"UCLA holds superior advanced metrics with KenPom and Torvik rankings around 25-27 versus UCF's 54-58, reflecting better overall efficiency from a rugged Big Ten schedule. The Bruins' projected edge of 6+ points aligns with their status as a 5.5-point favorite, and key contributors Donovan Dent and Tyler Bilodeau are expected to be available after minor injuries. While UCF's Big 12 experience and guard play give them a credible upset path that has convinced some experts like Jay Bilas to pick them, the quality gap and neutral-site metrics favor UCLA advancing in this 7/10 matchup.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 96,\n        \"rationale\": \"UConn enters as the No. 2 seed with presumed elite metrics typical of a top-10 team, creating a massive quality gap over Furman ranked around 191-195 in both KenPom and Torvik with middling efficiency from the Southern Conference. The Huskies' depth and experience from a power conference schedule overwhelm a 15-seed that lacks any historical precedent for success in this matchup, as 2-vs-15 upsets have occurred only once in NCAA history. Minor injury concerns with Jaylin Stewart being uncertain do not alter the outcome given the talent disparity and lack of a credible path for Furman to keep it competitive.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 98,\n        \"rationale\": \"Arizona ranks No. 3 in both KenPom and Torvik with elite offense and defense from a rugged Big 12 schedule, while LIU sits around 216-234 with middling efficiency from the NEC. This creates a classic 1-16 mismatch where the Wildcats are installed as massive favorites, and historical precedent shows such games are won by the top seed over 99 percent of the time. No significant injuries or news reports give the underdog any credible path to victory.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"utah-state\",\n        \"confidence\": 56,\n        \"rationale\": \"Utah State enters as a slight 1.5-point betting favorite over Villanova in this 8/9 matchup, suggesting stronger current metrics and form despite the seeding. Villanova holds solid top-35 rankings in KenPom and Torvik with balanced efficiency from a tough Big East schedule, but the Aggies appear more complete overall and motivated after a first-round loss last season. No significant injuries were identified for either team, and while 8/9 games often feature upset volatility, Utah State possesses the credible edge to advance in a neutral site setting.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 76,\n        \"rationale\": \"Wisconsin holds top-25 rankings in both KenPom and Torvik with elite adjusted offense and solid defense honed against a tough Big Ten schedule, creating a substantial quality gap over High Point's metrics around 92-93 from the Big South. The Panthers' 30-4 record is impressive but inflated by weaker competition, offering no clear path to upset a higher-major team with superior efficiency on both ends. No significant injuries or recent news were found to change the outlook, and historical 5-12 trends do not outweigh the large metrics disparity here.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 85,\n        \"rationale\": \"Arkansas enters as a top-20 team in both KenPom and Torvik with an elite top-5 adjusted offense from a demanding SEC schedule, creating an enormous efficiency gap over unranked Hawai'i from a weaker conference. The Razorbacks' 25-8 record highlights their quality while the 13-seed lacks any comparable metrics or experience to compete. Historical trends show 4-13 games are won by the higher seed over 85% of the time, and no injuries or news give the underdog a credible path to victory.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 68,\n        \"rationale\": \"BYU enters with stronger overall metrics, ranking 23rd in KenPom and 33rd in Torvik versus Texas at 37th and 45th, driven by better defensive efficiency from a tough Big 12 schedule that counters the Longhorns' elite offense. The Cougars' 23-11 record reflects greater consistency than Texas's 18-14 mark in the SEC, and as the higher seed in this 6/11 matchup, BYU has no major reported injuries while the metrics show only a modest edge rather than a blowout. Texas demonstrated fight by winning the First Four over NC State but their defensive shortcomings create a credible but not overwhelming upset path that the data ultimately favors the Cougars to close out.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 89,\n        \"rationale\": \"Gonzaga enters ranked 11th in both KenPom and Torvik with a 30-3 record, elite defense ranking 9th in adjusted efficiency, and strong offense built from a solid WCC schedule. Kennesaw State lacks any comparable advanced metrics or ratings in the same systems, reflecting the typical massive gap in a 3-14 matchup where higher seeds prevail over 85% of the time historically. No major injuries or recent news were identified for Gonzaga, while the underdog from a lower conference has no credible path to victory against this quality of competition.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 67,\n        \"rationale\": \"Miami (FL) holds superior advanced metrics with KenPom rank 30 and Torvik 35 compared to Missouri's 52 and 46, featuring better adjusted offense and defense from their ACC schedule despite Missouri's SEC background. The Hurricanes' 25-8 record reflects greater consistency than Missouri's 20-12 mark, creating a quality edge in this 7/10 matchup without major reported injuries altering the outlook. While 7/10 games carry upset risk and Missouri has a respectable offense that could exploit defensive lapses, the metrics gap and neutral-site projection favor Miami advancing.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 96,\n        \"rationale\": \"Purdue ranks 8th in both KenPom and Torvik with an elite top-2 adjusted offense and solid defense from a tough Big Ten schedule, creating a massive quality gap over Queens ranked around 180-200 from the ASUN. Queens has a respectable offense but poor defensive metrics that will be exploited by Purdue's efficient attack in this 2-15 matchup. Historical trends show 2-vs-15 games are won by the higher seed over 99% of the time, and no significant injuries or news reports give the underdog any credible path to an upset.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 97,\n        \"rationale\": \"Florida ranks 4th in both KenPom and Torvik with elite offense and top-5 defense built from a tough SEC schedule, creating a massive efficiency gap over Lehigh's bottom-280 metrics and middling efficiency from the Patriot League. The Gators' 26-7 record reflects their quality as a top overall seed while the 16-seed Mountain Hawks lack the talent or experience to compete, with historical trends showing 1-vs-16 games won by the higher seed over 99% of the time. No significant injuries or news alter the outlook, and Lehigh has no credible path to an upset in this classic mismatch.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 57,\n        \"rationale\": \"Iowa holds slightly higher rankings in both KenPom (25 vs 36) and Torvik (26 vs 29) with elite adjusted offense ranking top-30 nationally, built from a rugged Big Ten schedule that gives them an edge over Clemson's strong but lower-ranked defense. The Hawkeyes' offensive firepower creates a credible path to neutralize the Tigers' defensive strengths in this neutral-site 8/9 game, where the metrics gap is modest but consistent across systems despite Clemson's 24-10 record from the ACC. No significant injuries or recent news alter the outlook, leading to Iowa advancing in a matchup with typical upset volatility.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 79,\n        \"rationale\": \"Vanderbilt ranks 10th in Torvik and 12th in KenPom with elite adjusted offense (top-6 nationally) and strong defense (top-28) from a rugged SEC schedule, creating a substantial quality gap over McNeese at KenPom 67 with more modest efficiency from the Southland. The Commodores' 26-7 record reflects their high-major success while the Cowboys' 28-5 mark is built against weaker competition, offering no clear path to exploit Vanderbilt in this 5-12 matchup. No major injuries or news emerged to alter the outlook, and historical trends favor the higher seed here given the metrics disparity.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 86,\n        \"rationale\": \"Nebraska ranks 14th in KenPom and 19th in Torvik with an elite defense from a tough Big Ten schedule, creating a massive quality gap over Troy ranked around 143rd in both systems from the weaker Sun Belt. The Cornhuskers' superior efficiency on both ends and 26-6 record make them heavy favorites in this 4-13 matchup, where historical trends favor the higher seed over 85% of the time. Troy lacks any credible path to victory given the metrics disparity and absence of notable injuries or news favoring the underdog.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 71,\n        \"rationale\": \"North Carolina holds clear advantages in both KenPom (29th) and Torvik (27th) over VCU (46th and 51st), with superior adjusted offense and especially defense from a tougher ACC schedule versus the A-10. The Tar Heels' top-35 efficiency on both ends projects a 4+ point edge in a neutral-site game, outweighing VCU's strong 26-7 record that was built against weaker competition. While 6/11 games carry some upset risk, VCU shows no credible path to exploit UNC given the consistent metrics gap and lack of reported health concerns altering the outlook.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 93,\n        \"rationale\": \"Illinois ranks 6th in Torvik and 7th in KenPom with an elite top-2 offense and top-25 defense from a tough Big Ten schedule, creating a massive quality gap over Penn ranked 153-159 with mediocre efficiency from the Ivy League. The 3-vs-14 matchup historically favors the higher seed over 85% of the time, and Penn lacks the offensive firepower or defensive metrics to create any credible upset path despite their conference title. No injury or news concerns were identified to alter the outlook, making this a straightforward advance for the Illini.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 67,\n        \"rationale\": \"Saint Mary's enters with stronger advanced metrics, ranking 24th in KenPom and 25th in Torvik versus Texas A&M's 39th in both, featuring superior defensive efficiency and a much better 27-5 record compared to the Aggies' 21-11 mark from the SEC. The Gaels' balanced efficiency from their conference schedule projects a clear edge in this neutral-site 7/10 matchup without reported major injuries altering the outlook for either side. While Texas A&M's offense offers some upset potential typical of these games, the underdog lacks a fully credible path against Saint Mary's consistent quality and defensive strength.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 96,\n        \"rationale\": \"Houston ranks 5th in both KenPom and Torvik with elite offense and top-5 defense built from a demanding Big 12 schedule, creating an enormous efficiency gap over Idaho's 136-145 rankings and middling metrics from the Big Sky. The Cougars' 28-5 record reflects their status as a top overall seed while the 15-seed Vandals lack the talent or experience to compete in this classic mismatch. Historical trends show 2-vs-15 games are won by the higher seed over 98% of the time, and Idaho has no credible path to an upset.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 97,\n        \"rationale\": \"Michigan ranks No. 2 in both KenPom and Torvik with elite offense and the second-best defense in the country from a tough Big Ten schedule, creating a massive quality gap over UMBC's 185th-ranked metrics and negative efficiency margin from the America East. This is a textbook 1-16 matchup where the top seed wins over 99% of the time historically, and UMBC's play-in victory provides no credible path to an upset against this level of competition. No major injuries or news alter the overwhelming metrics favoring Michigan to advance easily.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 59,\n        \"rationale\": \"Georgia holds a slight edge in both KenPom (31 vs 41) and Torvik (37 vs 44) with superior adjusted offense from a tougher SEC schedule, despite Saint Louis boasting a better record and stronger defense from the A-10. The metrics project a modest 2-4 point advantage for the Bulldogs in a neutral-site environment, aligning with typical 8/9 game volatility where the higher-ranked team often prevails. Saint Louis has no clear credible upset path beyond their hot season record, as Georgia's offensive firepower should exploit defensive gaps without major reported health concerns for either side.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 79,\n        \"rationale\": \"Texas Tech ranks far higher in both Torvik (12th) and KenPom (19th) than Akron (68th and 64th), with elite adjusted offense and solid defense honed against a demanding Big 12 schedule. Akron's strong 28-5 record comes from the weaker MAC and does not translate to a credible path against the Red Raiders' efficiency edge in this standard 5-12 game. No significant injury reports or news alter the metrics-driven outlook favoring Texas Tech to advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 76,\n        \"rationale\": \"Alabama holds top-20 rankings in both KenPom and Torvik with an elite top-3 adjusted offense from a demanding SEC schedule, creating a substantial efficiency gap over Hofstra's metrics around 87-92 from the CAA. Even without second-leading scorer Aden Holloway due to his recent arrest and suspension, the Crimson Tide's depth, experience, and overall quality make them heavy favorites as a 4-seed, with betting markets listing them around a 12.5-point spread. Hofstra arrives hot after winning the CAA title and features a capable mid-major guard, but the underdog lacks a fully credible path against this level of competition in a matchup where 4-13 favorites prevail over 85% historically.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 69,\n        \"rationale\": \"Tennessee enters with top-15 efficiency in both major systems compared to SMU's top-45 marks, boasting a stifling defense that counters the Mustangs' offensive strengths. Coming from the deeper SEC, the Volunteers are better prepared for March than SMU from the ACC, and with Nate Ament likely available, they hold a decisive edge. While 6/11 games invite some volatility and SMU showed resilience in the First Four, the metrics do not support a credible underdog path here.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-6\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 89,\n        \"rationale\": \"Virginia ranks top-15 in both KenPom and Torvik with elite defense and a 29-4 record from the ACC, creating an enormous quality gap over Wright State as the 14-seed with much weaker metrics from a lower conference. This is a classic 3-14 matchup where the higher seed prevails over 85% historically, and Virginia is an 18.5-point favorite with no major injuries reported. Wright State lacks any credible path to an upset given the metrics disparity and experience difference.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-7\",\n        \"winnerId\": \"kentucky\",\n        \"confidence\": 61,\n        \"rationale\": \"Kentucky holds a slight edge in KenPom (28 vs 35) with superior defensive efficiency from a much tougher SEC schedule, offsetting Santa Clara's better Torvik rank (28 vs 32) and elite offense. The Wildcats' experience against high-major competition provides a clear advantage over the Broncos' WCC slate despite Santa Clara's stronger 26-8 record, with no major injuries reported for either side. While the metrics are close enough to create legitimate 7/10 upset volatility and Santa Clara's offense could exploit defensive lapses, Kentucky's overall quality and neutral-site projection make them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-8\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 95,\n        \"rationale\": \"Iowa State enters as the No. 2 seed with presumed elite metrics from a competitive Big 12 schedule, creating a massive quality gap over Tennessee State from a low-major conference with far inferior efficiency and experience. This is a standard 2-vs-15 matchup where the higher seed prevails over 98% of the time historically, and the Tigers lack any credible path to victory or even competitiveness against this level of talent. No significant injuries or recent news were identified to alter the overwhelming advantage.\"\n      },\n      {\n        \"gameId\": \"r32-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 87,\n        \"rationale\": \"Duke is the overwhelming No. 1 seed and ranks first in both KenPom and Torvik with elite offense and the nation's top defense from a tough ACC schedule. Ohio State possesses a strong adjusted offense but falls short in overall quality and defensive metrics, making this a significant mismatch despite their first-round win. Duke is managing minor injuries like Caleb Foster's foot issue without major impact given their depth, leaving Ohio State with no credible upset path in this neutral-site Round of 32 game.\"\n      },\n      {\n        \"gameId\": \"r32-east-2\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 57,\n        \"rationale\": \"St. John's holds slightly better rankings in both KenPom (20th) and Torvik (18th) than Kansas (21st and 22nd), paired with a superior 27-6 record against Kansas's 23-10 mark from the Big 12. Both feature elite defenses ranked in the top 12 nationally, but St. John's edges out in adjusted offense while benefiting from a strong Big East slate and no major injury concerns. Kansas has been hampered by injuries to players like Darryn Peterson and a shaky recent stretch, limiting their ability to exploit any matchup edges.\"\n      },\n      {\n        \"gameId\": \"r32-east-3\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 63,\n        \"rationale\": \"Michigan State enters with top-15 rankings in both KenPom and Torvik from a rugged Big Ten schedule, holding a slight edge over Louisville's top-20 metrics despite both teams boasting strong efficiency on offense and defense. The Spartans have no major injury concerns and advanced comfortably as a 3-seed, while Louisville continues to navigate the ongoing back injury to starting point guard Mikel Brown Jr. that impacted their seeding and first-round performance. In this effective 3-6 matchup, Michigan State's depth and experience against high-major competition limit any credible upset path for the Cardinals.\"\n      },\n      {\n        \"gameId\": \"r32-east-4\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 84,\n        \"rationale\": \"UConn enters as the No. 2 seed with elite metrics typical of a top-10 team, creating a massive quality gap over UCLA ranked around 25th in both KenPom and Torvik from their Big Ten schedule. The Huskies' superior efficiency, depth, and experience overwhelm the Bruins despite UCLA's respectable first-round win and available key players like Donovan Dent. Minor injury questions for UConn such as Jaylin Stewart do not change the outlook, as the 2-vs-7 historical trends and matchup specifics leave UCLA without a credible upset path.\"\n      },\n      {\n        \"gameId\": \"r32-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 87,\n        \"rationale\": \"Arizona ranks No. 3 in both KenPom and Torvik with elite offense and defense from a tough Big 12 schedule, creating a massive quality gap over Utah State which advanced via a narrow 8/9 upset over Villanova. The Wildcats have no significant injuries impacting their core rotation while Utah State's metrics do not support a credible path to contain Arizona's efficiency on either end in a neutral site game. Historical data shows top seeds dominate this round against 8/9 winners over 80% of the time, making this a low-upset-risk matchup.\"\n      },\n      {\n        \"gameId\": \"r32-west-2\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 58,\n        \"rationale\": \"Arkansas holds a slight edge in both KenPom (17th) and Torvik (20th) over Wisconsin (22nd and 21st), with a markedly superior adjusted offense ranking top-5 nationally from a demanding SEC schedule that prepares them well for March. The Razorbacks' 25-8 record and efficiency on both ends create a modest but consistent advantage in this neutral-site Round of 32 game against Wisconsin's solid but slightly lower-ranked Big Ten metrics. While Wisconsin's shooting big men offer a credible upset path that has drawn praise from analysts like Jay Bilas, the overall quality gap and lack of major reported injuries tilt toward Arkansas advancing.\"\n      },\n      {\n        \"gameId\": \"r32-west-3\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 75,\n        \"rationale\": \"Gonzaga ranks 11th in both KenPom and Torvik with a dominant 30-3 record and elite defense (9th in adjusted efficiency), creating a clear quality edge over BYU's 23rd/33rd rankings and weaker defense around 88th despite the Cougars' strong offense. BYU advanced past Texas in the prior round but faces a much tougher test against Gonzaga's balanced attack and experience from a power-conference equivalent schedule. No significant injuries or news alter the outlook for either side, and the metrics leave the underdog without a fully credible path to an upset in this 3-6 style Round of 32 game.\"\n      },\n      {\n        \"gameId\": \"r32-west-4\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 79,\n        \"rationale\": \"Purdue ranks 8th in both KenPom and Torvik with an elite top-2 adjusted offense and solid defense from a tough Big Ten schedule, creating a clear quality gap over Miami (FL) at 30th and 35th respectively despite the Hurricanes' strong 25-8 record from the ACC. Miami advanced past Missouri as a 7-seed but lacks the offensive firepower to consistently counter Purdue's efficiency, with no major injuries reported for either team that would alter the outlook. While analysts like Jay Williams have noted Miami as a potential challenge to Purdue's bracket path, the metrics show only a modest upset risk and no fully credible path for the underdog to prevail in this neutral-site Round of 32 game.\"\n      },\n      {\n        \"gameId\": \"r32-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 86,\n        \"rationale\": \"Florida ranks No. 4 in both KenPom and Torvik with elite offense and top-5 defense from a tough SEC schedule, creating a massive quality gap over Iowa's 25-26 rankings and weaker defensive metrics around 35th. The Gators' 26-7 record and efficiency on both ends should overwhelm Iowa's strong but vulnerable offense in this neutral-site game, with no major injuries or news altering the outlook. While Iowa advanced past Clemson and possesses credible offensive firepower that creates modest upset volatility in 1-8/9 matchups, the metrics disparity leaves the Hawkeyes without a fully realistic path to victory.\"\n      },\n      {\n        \"gameId\": \"r32-south-2\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 61,\n        \"rationale\": \"Vanderbilt holds slightly superior overall rankings at 12th in KenPom and 10th in Torvik versus Nebraska's 14th and 19th, driven by an elite top-6 adjusted offense that can test the Cornhuskers' top-10 defense from a rugged SEC schedule. Nebraska's offense ranks outside the top 50 and faces a Vanderbilt defense ranked 28th, limiting their scoring potential in this neutral-site matchup of two 26-win teams. Injury concerns for Vanderbilt's Duke Miles and Frankie Collins appear non-critical entering March, with no major issues flagged for Nebraska. The metrics give Vanderbilt a modest but credible edge without a strong upset path for the Big Ten representative.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-midwest-7\",\n      \"winnerId\": \"kentucky\",\n      \"confidence\": 61,\n      \"rationale\": \"Kentucky holds a slight edge in KenPom (28 vs 35) with superior defensive efficiency from a much tougher SEC schedule, offsetting Santa Clara's better Torvik rank (28 vs 32) and elite offense. The Wildcats' experience against high-major competition provides a clear advantage over the Broncos' WCC slate despite Santa Clara's stronger 26-8 record, with no major injuries reported for either side. While the metrics are close enough to create legitimate 7/10 upset volatility and Santa Clara's offense could exploit defensive lapses, Kentucky's overall quality and neutral-site projection make them the pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-8\",\n      \"winnerId\": \"iowa-state\",\n      \"confidence\": 95,\n      \"rationale\": \"Iowa State enters as the No. 2 seed with presumed elite metrics from a competitive Big 12 schedule, creating a massive quality gap over Tennessee State from a low-major conference with far inferior efficiency and experience. This is a standard 2-vs-15 matchup where the higher seed prevails over 98% of the time historically, and the Tigers lack any credible path to victory or even competitiveness against this level of talent. No significant injuries or recent news were identified to alter the overwhelming advantage.\"\n    },\n    {\n      \"gameId\": \"r32-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 87,\n      \"rationale\": \"Duke is the overwhelming No. 1 seed and ranks first in both KenPom and Torvik with elite offense and the nation's top defense from a tough ACC schedule. Ohio State possesses a strong adjusted offense but falls short in overall quality and defensive metrics, making this a significant mismatch despite their first-round win. Duke is managing minor injuries like Caleb Foster's foot issue without major impact given their depth, leaving Ohio State with no credible upset path in this neutral-site Round of 32 game.\"\n    },\n    {\n      \"gameId\": \"r32-east-2\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 57,\n      \"rationale\": \"St. John's holds slightly better rankings in both KenPom (20th) and Torvik (18th) than Kansas (21st and 22nd), paired with a superior 27-6 record against Kansas's 23-10 mark from the Big 12. Both feature elite defenses ranked in the top 12 nationally, but St. John's edges out in adjusted offense while benefiting from a strong Big East slate and no major injury concerns. Kansas has been hampered by injuries to players like Darryn Peterson and a shaky recent stretch, limiting their ability to exploit any matchup edges.\"\n    },\n    {\n      \"gameId\": \"r32-east-3\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": 63,\n      \"rationale\": \"Michigan State enters with top-15 rankings in both KenPom and Torvik from a rugged Big Ten schedule, holding a slight edge over Louisville's top-20 metrics despite both teams boasting strong efficiency on offense and defense. The Spartans have no major injury concerns and advanced comfortably as a 3-seed, while Louisville continues to navigate the ongoing back injury to starting point guard Mikel Brown Jr. that impacted their seeding and first-round performance. In this effective 3-6 matchup, Michigan State's depth and experience against high-major competition limit any credible upset path for the Cardinals.\"\n    },\n    {\n      \"gameId\": \"r32-east-4\",\n      \"winnerId\": \"uconn\",\n      \"confidence\": 84,\n      \"rationale\": \"UConn enters as the No. 2 seed with elite metrics typical of a top-10 team, creating a massive quality gap over UCLA ranked around 25th in both KenPom and Torvik from their Big Ten schedule. The Huskies' superior efficiency, depth, and experience overwhelm the Bruins despite UCLA's respectable first-round win and available key players like Donovan Dent. Minor injury questions for UConn such as Jaylin Stewart do not change the outlook, as the 2-vs-7 historical trends and matchup specifics leave UCLA without a credible upset path.\"\n    },\n    {\n      \"gameId\": \"r32-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 87,\n      \"rationale\": \"Arizona ranks No. 3 in both KenPom and Torvik with elite offense and defense from a tough Big 12 schedule, creating a massive quality gap over Utah State which advanced via a narrow 8/9 upset over Villanova. The Wildcats have no significant injuries impacting their core rotation while Utah State's metrics do not support a credible path to contain Arizona's efficiency on either end in a neutral site game. Historical data shows top seeds dominate this round against 8/9 winners over 80% of the time, making this a low-upset-risk matchup.\"\n    },\n    {\n      \"gameId\": \"r32-west-2\",\n      \"winnerId\": \"arkansas\",\n      \"confidence\": 58,\n      \"rationale\": \"Arkansas holds a slight edge in both KenPom (17th) and Torvik (20th) over Wisconsin (22nd and 21st), with a markedly superior adjusted offense ranking top-5 nationally from a demanding SEC schedule that prepares them well for March. The Razorbacks' 25-8 record and efficiency on both ends create a modest but consistent advantage in this neutral-site Round of 32 game against Wisconsin's solid but slightly lower-ranked Big Ten metrics. While Wisconsin's shooting big men offer a credible upset path that has drawn praise from analysts like Jay Bilas, the overall quality gap and lack of major reported injuries tilt toward Arkansas advancing.\"\n    },\n    {\n      \"gameId\": \"r32-west-3\",\n      \"winnerId\": \"gonzaga\",\n      \"confidence\": 75,\n      \"rationale\": \"Gonzaga ranks 11th in both KenPom and Torvik with a dominant 30-3 record and elite defense (9th in adjusted efficiency), creating a clear quality edge over BYU's 23rd/33rd rankings and weaker defense around 88th despite the Cougars' strong offense. BYU advanced past Texas in the prior round but faces a much tougher test against Gonzaga's balanced attack and experience from a power-conference equivalent schedule. No significant injuries or news alter the outlook for either side, and the metrics leave the underdog without a fully credible path to an upset in this 3-6 style Round of 32 game.\"\n    },\n    {\n      \"gameId\": \"r32-west-4\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 79,\n      \"rationale\": \"Purdue ranks 8th in both KenPom and Torvik with an elite top-2 adjusted offense and solid defense from a tough Big Ten schedule, creating a clear quality gap over Miami (FL) at 30th and 35th respectively despite the Hurricanes' strong 25-8 record from the ACC. Miami advanced past Missouri as a 7-seed but lacks the offensive firepower to consistently counter Purdue's efficiency, with no major injuries reported for either team that would alter the outlook. While analysts like Jay Williams have noted Miami as a potential challenge to Purdue's bracket path, the metrics show only a modest upset risk and no fully credible path for the underdog to prevail in this neutral-site Round of 32 game.\"\n    },\n    {\n      \"gameId\": \"r32-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 86,\n      \"rationale\": \"Florida ranks No. 4 in both KenPom and Torvik with elite offense and top-5 defense from a tough SEC schedule, creating a massive quality gap over Iowa's 25-26 rankings and weaker defensive metrics around 35th. The Gators' 26-7 record and efficiency on both ends should overwhelm Iowa's strong but vulnerable offense in this neutral-site game, with no major injuries or news altering the outlook. While Iowa advanced past Clemson and possesses credible offensive firepower that creates modest upset volatility in 1-8/9 matchups, the metrics disparity leaves the Hawkeyes without a fully realistic path to victory.\"\n    },\n    {\n      \"gameId\": \"r32-south-2\",\n      \"winnerId\": \"vanderbilt\",\n      \"confidence\": 61,\n      \"rationale\": \"Vanderbilt holds slightly superior overall rankings at 12th in KenPom and 10th in Torvik versus Nebraska's 14th and 19th, driven by an elite top-6 adjusted offense that can test the Cornhuskers' top-10 defense from a rugged SEC schedule. Nebraska's offense ranks outside the top 50 and faces a Vanderbilt defense ranked 28th, limiting their scoring potential in this neutral-site matchup of two 26-win teams. Injury concerns for Vanderbilt's Duke Miles and Frankie Collins appear non-critical entering March, with no major issues flagged for Nebraska. The metrics give Vanderbilt a modest but credible edge without a strong upset path for the Big Ten representative.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r32-south-3-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:31:49.843Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:31:49.843Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "north-carolina",
+          "illinois"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:31:49.850Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "illinois",
+          "teamName": "Illinois",
+          "torvik": {
+            "rank": 6,
+            "team": "Illinois",
+            "conf": "B10",
+            "record": "24-8",
+            "adjoe": 131.9558297057279,
+            "oe Rank": 2,
+            "adjde": 98.14121578057112,
+            "de Rank": 24,
+            "barthag": 0.967850725437318,
+            "rank.1": 6,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 15,
+            "Pro Con L": 5,
+            "Con Rec.": "15-5",
+            "sos": 0.739253463827645,
+            "ncsos": 0.5770367888238636,
+            "consos": 0.8189497162759354,
+            "Proj. SOS": 0.739253463827645,
+            "Proj. Noncon SOS": 0.5770367888238636,
+            "Proj. Con SOS": 0.8189497162759354,
+            "elite SOS": 0.6156226523073656,
+            "elite noncon SOS": 0.7195630799150993,
+            "Opp OE": 117.21764983772788,
+            "Opp DE": 103.33501358608063,
+            "Opp Proj. OE": 117.21764983772788,
+            "Opp Proj DE": 103.33501358608063,
+            "Con Adj OE": 133.31878722636355,
+            "Con Adj DE": 99.21288548504164,
+            "Qual O": 133.7529373251816,
+            "Qual D": 99.8291132021184,
+            "Qual Barthag": 0.9665650435707692,
+            "Qual Games": 18,
+            "FUN": -0.0487975834947566,
+            "ConPF": 1633,
+            "ConPA": 1416,
+            "ConPoss": 1312.4,
+            "ConOE": 1.244285278878391,
+            "ConDE": 1.0789393477598292,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.75,
+            "WAB": 6.54832481389591,
+            "WAB Rk": 15,
+            "Fun Rk": 297,
+            "adjt": 65.68345759687386
+          },
+          "kenpom": {
+            "rank": 7,
+            "team": "Illinois",
+            "conf": "B10",
+            "record": "24-8",
+            "adj_em": 32.14,
+            "adj_o": 131.2,
+            "adj_o_rank": 1,
+            "adj_d": 99.1,
+            "adj_d_rank": 28,
+            "adj_t": 65.6,
+            "adj_t_rank": 278,
+            "luck": -0.05,
+            "luck_rank": 306,
+            "sos_adj_em": 13.62,
+            "sos_adj_em_rank": 23,
+            "sos_opp_o": 117.1,
+            "sos_opp_o_rank": 22,
+            "sos_opp_d": 103.5,
+            "sos_opp_d_rank": 25,
+            "ncsos_adj_em": 3.78,
+            "ncsos_adj_em_rank": 91
+          }
+        },
+        {
+          "teamId": "north-carolina",
+          "teamName": "North Carolina",
+          "torvik": {
+            "rank": 27,
+            "team": "North Carolina",
+            "conf": "ACC",
+            "record": "24-8",
+            "adjoe": 121.51548156694172,
+            "oe Rank": 32,
+            "adjde": 100.0466013429838,
+            "de Rank": 34,
+            "barthag": 0.9034067661597543,
+            "rank.1": 27,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 12,
+            "Pro Con L": 6,
+            "Con Rec.": "12-6",
+            "sos": 0.7030515873839742,
+            "ncsos": 0.5336496022136061,
+            "consos": 0.8148332127774081,
+            "Proj. SOS": 0.7030515873839742,
+            "Proj. Noncon SOS": 0.5336496022136061,
+            "Proj. Con SOS": 0.8148332127774081,
+            "elite SOS": 0.6650502084048928,
+            "elite noncon SOS": 0.7853591158892972,
+            "Opp OE": 115.2717099471416,
+            "Opp DE": 103.97156037036872,
+            "Opp Proj. OE": 115.2717099471416,
+            "Opp Proj DE": 103.97156037036872,
+            "Con Adj OE": 123.08536132281272,
+            "Con Adj DE": 102.25960970040924,
+            "Qual O": 121.34303851221192,
+            "Qual D": 102.2986209970086,
+            "Qual Barthag": 0.8768941529281491,
+            "Qual Games": 14,
+            "FUN": 0.0789698688462062,
+            "ConPF": 1416,
+            "ConPA": 1376,
+            "ConPoss": 1232,
+            "ConOE": 1.1493506493506491,
+            "ConDE": 1.1168831168831168,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6666666666666666,
+            "WAB": 4.889821360936529,
+            "WAB Rk": 21,
+            "Fun Rk": 28,
+            "adjt": 67.96717619133527
+          },
+          "kenpom": {
+            "rank": 29,
+            "team": "North Carolina",
+            "conf": "ACC",
+            "record": "24-8",
+            "adj_em": 20.86,
+            "adj_o": 121.5,
+            "adj_o_rank": 33,
+            "adj_d": 100.6,
+            "adj_d_rank": 37,
+            "adj_t": 68,
+            "adj_t_rank": 144,
+            "luck": 0.057,
+            "luck_rank": 52,
+            "sos_adj_em": 11.43,
+            "sos_adj_em_rank": 43,
+            "sos_opp_o": 115.4,
+            "sos_opp_o_rank": 49,
+            "sos_opp_d": 104,
+            "sos_opp_d_rank": 38,
+            "ncsos_adj_em": 1.29,
+            "ncsos_adj_em_rank": 141
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"illinois\",\n      \"teamName\": \"Illinois\",\n      \"torvik\": {\n        \"rank\": 6,\n        \"team\": \"Illinois\",\n        \"conf\": \"B10\",\n        \"record\": \"24-8\",\n        \"adjoe\": 131.9558297057279,\n        \"oe Rank\": 2,\n        \"adjde\": 98.14121578057112,\n        \"de Rank\": 24\n      },\n      \"kenpom\": {\n        \"rank\": 7,\n        \"team\": \"Illinois\",\n        \"conf\": \"B10\",\n        \"record\": \"24-8\",\n        \"adj_em\": 32.14,\n        \"adj_o\": 131.2,\n        \"adj_o_rank\": 1,\n        \"adj_d\": 99.1\n      }\n    },\n    {\n      \"teamId\": \"north-carolina\",\n      \"teamName\": \"North Carolina\",\n      \"torvik\": {\n        \"rank\": 27,\n        \"team\": \"North Carolina\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-8\",\n        \"adjoe\": 121.51548156694172,\n        \"oe Rank\": 32,\n        \"adjde\": 100.0466013429838,\n        \"de Rank\": 34\n      },\n      \"kenpom\": {\n        \"rank\": 29,\n        \"team\": \"North Carolina\",\n        \"conf\": \"ACC\",\n        \"record\": \"24-8\",\n        \"adj_em\": 20.86,\n        \"adj_o\": 121.5,\n        \"adj_o_rank\": 33,\n        \"adj_d\": 100.6\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-3-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:31:51.827Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:31:51.827Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Carolina vs Illinois NCAA 2026 injuries news",
+        "maxResults": 10
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:31:52.608Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=06c6eb9f632ce722feb3d90942368ad1186f9f671e22ffd99e6b129a27764235",
+          "snippet": "From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries ."
+        },
+        {
+          "title": "College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa",
+          "snippet": "See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA ."
+        },
+        {
+          "title": "How far can UNC basketball go in March Madness bracket? | Raleigh News ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Func%2Farticle315066910.html&rut=1d88d61e2c9e7590f994ee1afe18c273b84daf5c4a2803b043261b95391f4480",
+          "snippet": "Having adjusted to Caleb Wilson&#x27;s season-ending injury, UNC enters the NCAA Tournament as a No. 6 seed in the Midwest Region."
+        },
+        {
+          "title": "North Carolina basketball&#x27;s nightmare 2026 March Madness bracket scenarios",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnorth%2Dcarolina%2Dbasketball%2Ds%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios%2Far%2DAA1Yqva3&rut=dda94f5b67444eea9894a4564b4765921842cbed130e6833d2c1f7265d1baa33",
+          "snippet": "North Carolina has endured the highs and lows of the 2025- 2026 college basketball season, but is at a tricky position in that ride as March Madness approaches."
+        },
+        {
+          "title": "COLLEGEBASKETBALL Injury Report and Status 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=df57f8830206e81dda0ff15128d95afeeb505a38e15cd0a8964fb73c134f0084",
+          "snippet": "Stay updated with the latest COLLEGEBASKETBALL injuries and player statuses on CBS Sports."
+        },
+        {
+          "title": "Bracket Reveal Takeaways: UNC&#x27;s NCAA Tournament path is not easy",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ftarheelswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Ftarheels%2Fmens%2Dbasketball%2F2026%2F03%2F16%2Func%2Dbasketball%2Dwhat%2Dto%2Dtake%2Daway%2Dfrom%2Duncs%2Dchallenging%2Dtournament%2Dpath%2F89174815007%2F&rut=c237af6f716f56e7f33053ea54da018cb1c66942eb1ab8a24d7789246e9568d3",
+          "snippet": "The NCAA Tournament bracket has been released, and North Carolina is the No. 6 seed in the South Region. The Tar Heels do not have an easy region by any means, as their first game is against NCAA Tournament regular No. 11 VCU and a potential matchup against No. 3 seed Illinois in the Round of 32 if both teams make it that far."
+        },
+        {
+          "title": "ESPN.com - Men&#x27;s College Basketball Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fncb%2Finjuries%2Findex.html&rut=1a5a94f745da371bc015d1d810f5f3d717156827f2673cb273adf6d41a24e58f",
+          "snippet": "East Carolina C Moussa Badiane Ineligible Out Wed. vs Rutgers. 11/14 F Gabriel Mikulas Ineligible Out Wed. vs Rutgers. 11/14 G Fred Primus Ankle Probable Wed. vs Rutgers. 11/14 G Jimmy Bishop Foot ..."
+        },
+        {
+          "title": "NCAAB Injuries 2026 - Find the Latest NCAAB Player Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.vegasinsider.com%2Fcollege%2Dbasketball%2Finjuries%2F&rut=ae72fffb5e2c8aaa5efb300f52e81403fdb74b5afaf311589406527e1780674b",
+          "snippet": "Find NCAAB Injury reports for the 2026 season provided by VegasInsider, along with more NCAAB betting information to assist your sports handicapping."
+        },
+        {
+          "title": "Caleb Wilson injury update: Dick Vitale hints at North Carolina star ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fcollege%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Fnews%2Fcaleb%2Dwilson%2Dinjury%2Dupdate%2Ddick%2Dvitale%2Dhints%2Dat%2Dnorth%2Dcarolina%2Dstar%2Dnot%2Dreturning%2Dagain%2Din%2D2026%2F&rut=c543c6d709456ee5db2b13f8f06ae962d16e8a0598c5ef8b3b8440089aed4831",
+          "snippet": "ESPN&#x27;s Dick Vitale hinted that North Carolina star Caleb Wilson may be out longer than expected with his injury."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=bd6dccd20fd5d7770c7466545851eecbb7515dbe235132f31004f0807a3ef267\",\n      \"snippet\": \"Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report.\"\n    },\n    {\n      \"title\": \"Key March Madness injuries to know while filling out your men&#x27;s NCAA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=06c6eb9f632ce722feb3d90942368ad1186f9f671e22ffd99e6b129a27764235\",\n      \"snippet\": \"From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries .\"\n    },\n    {\n      \"title\": \"College Basketball Injuries 2025-2026 - Full Report for Mar 17, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Finjuries&rut=1893cf0658aa1a5d4242e1e73542349c60bb05a449a29c5f88160886ed1ddaaa\",\n      \"snippet\": \"See which college basketball players are injured today and get the latest NCAA basketball injury news with our injury report for every team in the NCAA .\"\n    },\n    {\n      \"title\": \"How far can UNC basketball go in March Madness bracket? | Raleigh News ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Func%2Farticle315066910.html&rut=1d88d61e2c9e7590f994ee1afe18c273b84daf5c4a2803b043261b95391f4480\",\n      \"snippet\": \"Having adjusted to Caleb Wilson&#x27;s season-ending injury, UNC enters the NCAA Tournament as a No. 6 seed in the Midwest Region.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-3-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:31:52.608Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "North Carolina basketball recent news 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:31:53.327Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "North Carolina Tar Heels Basketball - Tar Heel Times",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tarheeltimes.com%2Funcbasketball.aspx&rut=2dbbb116347e13abfc0eaf799cbf02eb68e1f9abaa73e48c210779807d155b89",
+          "snippet": "North Carolina Men&#x27;s Basketball Falls To No. 21 In AP Poll UNC Men&#x27;s Basketball fell two spots to No. 21 in this week&#x27;s Associated Press Top 25 Poll, released on Monday. Nine days after topping Clemson in its final home game of the regular season, the Tar Heels fell to the fifth-seeded Tigers in the ACC Tournament quarterfinals on Thursday."
+        },
+        {
+          "title": "North Carolina lands first 2026 recruit in four-star Adams - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F46967601%2Fnorth%2Dcarolina%2Dlands%2Dfirst%2D2026%2Drecruit%2Dfour%2Dstar%2Dadams&rut=07c8c7672d54864117edbd8a7fb304a26d0e55f9a90c3d6d6c1883a1ab05dc64",
+          "snippet": "Top-30 men&#x27;s basketball senior Maximo Adams announced his commitment to North Carolina on Friday, becoming the Tar Heels&#x27; first recruit in the 2026 class."
+        },
+        {
+          "title": "North Carolina Basketball News - Latest on The UNC Tar Heels",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.saturdaydownsouth.com%2Fcollege%2Dbasketball%2Fteams%2Fnorth%2Dcarolina%2F&rut=485996076b8544c4aabbd5b81196807ec6ed8ad4f644ff843fbb39d61f2c0925",
+          "snippet": "North Carolina basketball is a college basketball blue-blood. Follow this page for the latest news , scores and more about the Tar Heels."
+        },
+        {
+          "title": "Duke 76-61 North Carolina (Mar 7, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401820788%2Fnorth%2Dcarolina%2Dduke&rut=dceb403f4272de45b22a6b7f1b8f84cc151d79679f30f8c4f107a6ecbd996ffc",
+          "snippet": "Game summary of the Duke Blue Devils vs. North Carolina Tar Heels NCAAM game, final score 76-61, from March 7, 2026 on ESPN."
+        },
+        {
+          "title": "North Carolina Tar Heels Basketball News - On3.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fcollege%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Fcategory%2Fbasketball%2Fnews%2F&rut=39d01c6bafbc28d3ac979b2c713b39bda33960281fa03c3d832db6e6464dca38",
+          "snippet": "Nick Kosko 03/11/26 On3 NIL College Basketball TV Ratings: Duke vs. North Carolina rematch averages 3.4 million viewers Nick Schultz 03/10/26 On3 Basketball 2026 NCAA Tournament Predictions: Bracketology changes as high-major conference tournaments begin James Fletcher III 03/10/26"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"North Carolina Tar Heels Basketball - Tar Heel Times\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tarheeltimes.com%2Funcbasketball.aspx&rut=2dbbb116347e13abfc0eaf799cbf02eb68e1f9abaa73e48c210779807d155b89\",\n      \"snippet\": \"North Carolina Men&#x27;s Basketball Falls To No. 21 In AP Poll UNC Men&#x27;s Basketball fell two spots to No. 21 in this week&#x27;s Associated Press Top 25 Poll, released on Monday. Nine days after topping Clemson in its final home game of the regular season, the Tar Heels fell to the fifth-seeded Tigers in the ACC Tournament quarterfinals on Thursday.\"\n    },\n    {\n      \"title\": \"North Carolina lands first 2026 recruit in four-star Adams - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F46967601%2Fnorth%2Dcarolina%2Dlands%2Dfirst%2D2026%2Drecruit%2Dfour%2Dstar%2Dadams&rut=07c8c7672d54864117edbd8a7fb304a26d0e55f9a90c3d6d6c1883a1ab05dc64\",\n      \"snippet\": \"Top-30 men&#x27;s basketball senior Maximo Adams announced his commitment to North Carolina on Friday, becoming the Tar Heels&#x27; first recruit in the 2026 class.\"\n    },\n    {\n      \"title\": \"North Carolina Basketball News - Latest on The UNC Tar Heels\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.saturdaydownsouth.com%2Fcollege%2Dbasketball%2Fteams%2Fnorth%2Dcarolina%2F&rut=485996076b8544c4aabbd5b81196807ec6ed8ad4f644ff843fbb39d61f2c0925\",\n      \"snippet\": \"North Carolina basketball is a college basketball blue-blood. Follow this page for the latest news , scores and more about the Tar Heels.\"\n    },\n    {\n      \"title\": \"Duke 76-61 North Carolina (Mar 7, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401820788%2Fnorth%2Dcarolina%2Dduke&rut=dceb403f4272de45b22a6b7f1b8f84cc151d79679f30f8c4f107a6ecbd996ffc\",\n      \"snippet\": \"Game summary of the Duke Blue Devils vs. North Carolina Tar Heels NCAAM game, final score 76-61, from March 7, 2026 on ESPN.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-3-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:31:53.327Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Illinois basketball recent news 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:31:54.145Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Illini Earn Sixth Straight NCAA Tournament Bid - University of Illinois ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ffightingillini.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dillini%2Dearn%2Dsixth%2Dstraight%2Dncaa%2Dtournament%2Dbid.aspx&rut=8222b60796042fafc686639cce2b1284d5f98f56220b7aebaf2c6ef38d0d6a3e",
+          "snippet": "News Ticket Info | Bracket | Tournament Central CHAMPAIGN, Ill. -- The bracket is officially set for the 2026 NCAA Men&#x27;s Basketball Tournament. Illinois (24-8) is an at-large selection, earning the program&#x27;s sixth consecutive bid under head coach Brad Underwood. Illinois is the No. 3 seed in the South region."
+        },
+        {
+          "title": "Why Illinois basketball is on upset alert in 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fwhy%2Dillinois%2Dbasketball%2Dis%2Don%2Dupset%2Dalert%2Din%2D2026%2Dncaa%2Dtournament&rut=9083eb1afb0f00520ed506332cfc8c765f7568063e2ccbda9757977a9ce39e99",
+          "snippet": "Why Illinois basketball is on upset alert in 2026 NCAA Tournament Illinois basketball looks like its geared for a Final Four run. But here&#x27;s why Penn could stun them in March Madness."
+        },
+        {
+          "title": "Illinois basketball plays Penn in the 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fillinois%2Dbasketball%2Dmarch%2Dmadness%2Dselection%2D190220786.html&rut=a78ba00a65c3f4cce7ba9fc8f695f598e3f7287cd4bb9536917056a9e887ffd1",
+          "snippet": "The Illinois basketball team starts its March Madness journey with a game against No. 14 seed Penn."
+        },
+        {
+          "title": "Projecting Illinois&#x27; 2026-27 Lineup After the Lucas Morillo Signing",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fillinois%2Fbasketball%2Fillinois%2Dbasketball%2D2026%2D27%2Dlineup%2Dprojection%2Dlucas%2Dmorillo&rut=692d51dac398c8ad7f231dc027ad4ac2d3a773f9e4a70c830d8f3ae0c5e45f98",
+          "snippet": "Illinois finally made a splash in the 2026 recruiting cycle, reeling in four-star guard Lucas Morillo on Friday to significantly bolster the program&#x27;s foundation for at least the next year or two."
+        },
+        {
+          "title": "Illinois basketball&#x27;s nightmare 2026 March Madness bracket scenarios",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fillinois%2Dbasketball%2Ds%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios%2Far%2DAA1YvGpf&rut=097f55a844a2bee5ccd8581aadc37252d13e23e8ba321f94f8c5d931d50d4677",
+          "snippet": "Despite its shaky end to the 2025- 2026 college basketball regular season, Illinois remains poised to enter March Madness with a top-three seed. The Illini have only advanced past opening weekend ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Illini Earn Sixth Straight NCAA Tournament Bid - University of Illinois ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Ffightingillini.com%2Fnews%2F2026%2F3%2F15%2Fmens%2Dbasketball%2Dillini%2Dearn%2Dsixth%2Dstraight%2Dncaa%2Dtournament%2Dbid.aspx&rut=8222b60796042fafc686639cce2b1284d5f98f56220b7aebaf2c6ef38d0d6a3e\",\n      \"snippet\": \"News Ticket Info | Bracket | Tournament Central CHAMPAIGN, Ill. -- The bracket is officially set for the 2026 NCAA Men&#x27;s Basketball Tournament. Illinois (24-8) is an at-large selection, earning the program&#x27;s sixth consecutive bid under head coach Brad Underwood. Illinois is the No. 3 seed in the South region.\"\n    },\n    {\n      \"title\": \"Why Illinois basketball is on upset alert in 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fwhy%2Dillinois%2Dbasketball%2Dis%2Don%2Dupset%2Dalert%2Din%2D2026%2Dncaa%2Dtournament&rut=9083eb1afb0f00520ed506332cfc8c765f7568063e2ccbda9757977a9ce39e99\",\n      \"snippet\": \"Why Illinois basketball is on upset alert in 2026 NCAA Tournament Illinois basketball looks like its geared for a Final Four run. But here&#x27;s why Penn could stun them in March Madness.\"\n    },\n    {\n      \"title\": \"Illinois basketball plays Penn in the 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fillinois%2Dbasketball%2Dmarch%2Dmadness%2Dselection%2D190220786.html&rut=a78ba00a65c3f4cce7ba9fc8f695f598e3f7287cd4bb9536917056a9e887ffd1\",\n      \"snippet\": \"The Illinois basketball team starts its March Madness journey with a game against No. 14 seed Penn.\"\n    },\n    {\n      \"title\": \"Projecting Illinois&#x27; 2026-27 Lineup After the Lucas Morillo Signing\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fillinois%2Fbasketball%2Fillinois%2Dbasketball%2D2026%2D27%2Dlineup%2Dprojection%2Dlucas%2Dmorillo&rut=692d51dac398c8ad7f231dc027ad4ac2d3a773f9e4a70c830d8f3ae0c5e45f98\",\n      \"snippet\": \"Illinois finally made a splash in the 2026 recruiting cycle, reeling in four-star guard Lucas Morillo on Friday to significantly bolster the program&#x27;s foundation for at least the next year or two.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-3-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:31:57.865Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:31:57.865Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "\"North Carolina\" \"Illinois\" March Madness 2026",
+        "maxResults": 10
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:31:58.547Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Greenville to Host Top Teams in 2026 March Madness South Region",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fsc%2Fgreenville%2Fnews%2F2026%2F03%2F15%2Fgreenville%2Dto%2Dhost%2Dtop%2Dteams%2Din%2D2026%2Dmarch%2Dmadness%2Dsouth%2Dregion%2F&rut=0f018633b2ab65463fce1ff1ef1760d05ef736b8877599cef33e434b164526f1",
+          "snippet": "Greenville, South Carolina will host first- and second-round games of the 2026 NCAA Men&#x27;s Basketball Tournament, with the South Region matchups taking place at Bon Secours Wellness Arena. The top teams coming to the city include No. 3 seed Illinois , No. 6 North Carolina , and No. 11 VCU."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Greenville to Host Top Teams in 2026 March Madness South Region\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fsc%2Fgreenville%2Fnews%2F2026%2F03%2F15%2Fgreenville%2Dto%2Dhost%2Dtop%2Dteams%2Din%2D2026%2Dmarch%2Dmadness%2Dsouth%2Dregion%2F&rut=0f018633b2ab65463fce1ff1ef1760d05ef736b8877599cef33e434b164526f1\",\n      \"snippet\": \"Greenville, South Carolina will host first- and second-round games of the 2026 NCAA Men&#x27;s Basketball Tournament, with the South Region matchups taking place at Bon Secours Wellness Arena. The top teams coming to the city include No. 3 seed Illinois , No. 6 North Carolina , and No. 11 VCU.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-3-tool-call-2-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:31:58.547Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "North Carolina Illinois injuries NCAA tournament",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-result-2-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:31:59.266Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Illinois Fighting Illini Injury Status - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fill&rut=3c6e43dcea6431e607696e96ffc7a2461e3179b55819d5504b4ae94dc11f648d",
+          "snippet": "Visit ESPN for the current injury situation of the 2026 Illinois Fighting Illini. Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=e320c0f76f951d39ae78cd7c77866b1b3dcd2f222c10e26aa8b4fe6732f56db2",
+          "snippet": "The North Carolina -based Royals made the most of their first year of eligibility for the NCAA tournament after transitioning up from Division II, with Chris Ashby (34 points) leading all scorers ..."
+        },
+        {
+          "title": "North Carolina 75-70 Illinois (Apr 4, 2005) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F254000063%2Fnorth%2Dcarolina%2Dillinois&rut=e16d9b51848b9055c9f825dee2c59d5e94501f694ab55638f01dd13b4ae88c91",
+          "snippet": "Game summary of the North Carolina Tar Heels vs. Illinois Fighting Illini NCAAM game, final score 75-70, from April 4, 2005 on ESPN."
+        },
+        {
+          "title": "Illinois Fighting Illini Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F356%2Fillinois%2Dfighting%2Dillini&rut=8f1de5450924128f9a940022dfaa0da9bb28054607fa96e5bcd43a22430b413e",
+          "snippet": "Visit ESPN for Illinois Fighting Illini live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "The world the last time Illinois was in the Elite Eight - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F39835091%2Fillinois%2Dfighting%2Dillini%2Dncaa%2Dtournament%2Delite%2Deight%2D2005&rut=606fe8c126730e26f8fe1f42dd8eddd95e50c4658ad5ee976be26e9db40e7d94",
+          "snippet": "The No. 3 Illinois Fighting Illini defeated the No. 2 Iowa State Cyclones 72-69 on Thursday in Boston to advance to the Elite Eight in the men&#x27;s NCAA tournament for the first time since 2005."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Illinois Fighting Illini Injury Status - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fcollege%2Dfootball%2Fteam%2Finjuries%2F_%2Fname%2Fill&rut=3c6e43dcea6431e607696e96ffc7a2461e3179b55819d5504b4ae94dc11f648d\",\n      \"snippet\": \"Visit ESPN for the current injury situation of the 2026 Illinois Fighting Illini. Latest news from the NCAAF on players that are out, day-by-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=e320c0f76f951d39ae78cd7c77866b1b3dcd2f222c10e26aa8b4fe6732f56db2\",\n      \"snippet\": \"The North Carolina -based Royals made the most of their first year of eligibility for the NCAA tournament after transitioning up from Division II, with Chris Ashby (34 points) leading all scorers ...\"\n    },\n    {\n      \"title\": \"North Carolina 75-70 Illinois (Apr 4, 2005) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F254000063%2Fnorth%2Dcarolina%2Dillinois&rut=e16d9b51848b9055c9f825dee2c59d5e94501f694ab55638f01dd13b4ae88c91\",\n      \"snippet\": \"Game summary of the North Carolina Tar Heels vs. Illinois Fighting Illini NCAAM game, final score 75-70, from April 4, 2005 on ESPN.\"\n    },\n    {\n      \"title\": \"Illinois Fighting Illini Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F356%2Fillinois%2Dfighting%2Dillini&rut=8f1de5450924128f9a940022dfaa0da9bb28054607fa96e5bcd43a22430b413e\",\n      \"snippet\": \"Visit ESPN for Illinois Fighting Illini live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-3-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:32:12.956Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:32:12.956Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "maxChars": 500
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:32:13.604Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/injury-report.php",
+        "text": "2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tenni"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.rotowire.com/cbasketball/injury-report.php\",\n    \"text\": \"2026 College Basketball Injuries - Latest NCAAB Injury Report | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tenni\"\n  }\n}"
+    },
+    {
+      "id": "r32-south-3-tool-call-3-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:32:13.604Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Caleb Wilson injury UNC 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-3-tool-result-3-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:32:14.421Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Caleb Wilson Injury Update: Is North Carolina Star Forward Playing in ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fcaleb%2Dwilson%2Dinjury%2Dupdate%2Dmarch%2Dmadness%2F&rut=ecf9a3891dffdb702a27f490c02c177c06042f6c1bf48113205d6278a92dd067",
+          "snippet": "The North Carolina Tar Heels became accustomed to the idea of not having Caleb Wilson over the last week. The player, who last played on February 10 against Miami when he fractured his left hand, was nearing a regular-season finale return against Duke a couple of weeks back, when he suffered a season-ending injury in his right thumb during non-contact drills ahead of the rivalry game."
+        },
+        {
+          "title": "How UNC Can Survive Caleb Wilson&#x27;s Absence in NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Func%2Ftar%2Dheels%2Dhow%2Dcan%2Dsurvive%2Dcaleb%2Dwilson%2Dabsence%2Dncaa%2Dtournament&rut=718d88e08279388aedbda1fdda3917943c911869bef346f26c3a3e436f9d8517",
+          "snippet": "Feb 23, 2026 ; Chapel Hill, North Carolina, USA; North Carolina Tar Heels forward Caleb Wilson (8) and the bench react in the second half at Dean E. Smith Center."
+        },
+        {
+          "title": "North Carolina Announces Caleb Wilson News Before NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fathlonsports.com%2Fcollege%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Fnorth%2Dcarolina%2Dannounces%2Dcaleb%2Dwilson%2Dnews%2Dbefore%2Dncaa%2Dtournament&rut=bc4d729646d6187dff6dc4e649d07438ae5389ba3a95ae49b6c3d9a2e631571f",
+          "snippet": "UNC Tar Heels star Caleb Wilson will miss the NCAA Tournament with a thumb injury ."
+        },
+        {
+          "title": "Caleb Wilson discusses injury after UNC loss to Clemson in ACC tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fayobserver.com%2Fstory%2Fsports%2Fcollege%2Facc%2F2026%2F03%2F13%2Fcaleb%2Dwilson%2Dinjury%2Dunc%2Dbasketball%2Dclemson%2Dacc%2Dtournament%2F89036682007%2F&rut=320897dae9e153e7f73b6c36aad774d5f0a32952079606de0c65923738b380d8",
+          "snippet": "Following UNC basketball&#x27;s loss to Clemson in the 2026 ACC Tournament, freshman Caleb Wilson was briefly in the locker room. Here&#x27;s what he said."
+        },
+        {
+          "title": "UNC opens NCAA Tournament without Caleb Wilson vs. surging VCU",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.wral.com%2Fsports%2Func%2Dhomecourt%2Dadvantage%2Dgreenville%2Dsc%2Dcaleb%2Dwilson%2Dout%2Dmarch%2D2026%2F&rut=925c3752d66cd82740008831075680e51cd3a3dd5a726535d734bc992eed4fdb",
+          "snippet": "North Carolina will have somewhat of a homecourt advantage in the opening weekend of the 2026 NCAA Tournament if the Tar Heels can manage without star freshman Caleb Wilson ."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Caleb Wilson Injury Update: Is North Carolina Star Forward Playing in ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fcaleb%2Dwilson%2Dinjury%2Dupdate%2Dmarch%2Dmadness%2F&rut=ecf9a3891dffdb702a27f490c02c177c06042f6c1bf48113205d6278a92dd067\",\n      \"snippet\": \"The North Carolina Tar Heels became accustomed to the idea of not having Caleb Wilson over the last week. The player, who last played on February 10 against Miami when he fractured his left hand, was nearing a regular-season finale return against Duke a couple of weeks back, when he suffered a season-ending injury in his right thumb during non-contact drills ahead of the rivalry game.\"\n    },\n    {\n      \"title\": \"How UNC Can Survive Caleb Wilson&#x27;s Absence in NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Func%2Ftar%2Dheels%2Dhow%2Dcan%2Dsurvive%2Dcaleb%2Dwilson%2Dabsence%2Dncaa%2Dtournament&rut=718d88e08279388aedbda1fdda3917943c911869bef346f26c3a3e436f9d8517\",\n      \"snippet\": \"Feb 23, 2026 ; Chapel Hill, North Carolina, USA; North Carolina Tar Heels forward Caleb Wilson (8) and the bench react in the second half at Dean E. Smith Center.\"\n    },\n    {\n      \"title\": \"North Carolina Announces Caleb Wilson News Before NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fathlonsports.com%2Fcollege%2Fnorth%2Dcarolina%2Dtar%2Dheels%2Fnorth%2Dcarolina%2Dannounces%2Dcaleb%2Dwilson%2Dnews%2Dbefore%2Dncaa%2Dtournament&rut=bc4d729646d6187dff6dc4e649d07438ae5389ba3a95ae49b6c3d9a2e631571f\",\n      \"snippet\": \"UNC Tar Heels star Caleb Wilson will miss the NCAA Tournament with a thumb injury .\"\n    },\n    {\n      \"title\": \"Caleb Wilson discusses injury after UNC loss to Clemson in ACC tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fayobserver.com%2Fstory%2Fsports%2Fcollege%2Facc%2F2026%2F03%2F13%2Fcaleb%2Dwilson%2Dinjury%2Dunc%2Dbasketball%2Dclemson%2Dacc%2Dtournament%2F89036682007%2F&rut=320897dae9e153e7f73b6c36aad774d5f0a32952079606de0c65923738b380d8\",\n      \"snippet\": \"Following UNC basketball&#x27;s loss to Clemson in the 2026 ACC Tournament, freshman Caleb Wilson was briefly in the locker room. Here&#x27;s what he said.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-3-assistant-final-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:32:33.670Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r32-south-3\",\n    \"winnerId\": \"illinois\",\n    \"confidence\": 83,\n    \"rationale\": \"Illinois ranks 6th in Torvik and 7th in KenPom with an elite top-2 offense and top-25 defense from a tough Big Ten schedule, creating a substantial quality gap over North Carolina at 27-29th in both systems. The Illini advanced dominantly as the 3-seed while UNC is missing star forward Caleb Wilson to a season-ending thumb injury after an earlier hand fracture, further widening the efficiency disparity in this neutral-site game. North Carolina's solid ACC metrics offer no credible upset path against Illinois' superior adjusted offense that should exploit any defensive lapses.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"metrics-and-injuries\",\n    \"title\": \"Ratings, Injuries, and Matchup Analysis\",\n    \"summary\": \"Advanced stats heavily favor Illinois over UNC, compounded by key UNC injury.\",\n    \"evidence\": \"Lookup ratings show Illinois #6-7 with elite offense (adj o ~131-132, rank 1-2) vs UNC #27-29 (adj o ~121-122, rank 32-33); web searches confirm Caleb Wilson out for UNC with thumb injury after hand fracture; no major Illinois injuries reported; prior first-round picks align with this seeding (UNC 6-seed, Illinois 3-seed).\"\n  }\n}"
+    },
+    {
+      "id": "r32-south-3-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T21:32:36.950Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r32-south-3\",\n    \"winnerId\": \"illinois\",\n    \"confidence\": 83,\n    \"rationale\": \"Illinois ranks 6th in Torvik and 7th in KenPom with an elite top-2 offense and top-25 defense from a tough Big Ten schedule, creating a substantial quality gap over North Carolina at 27-29th in both systems. The Illini advanced dominantly as the 3-seed while UNC is missing star forward Caleb Wilson to a season-ending thumb injury after an earlier hand fracture, further widening the efficiency disparity in this neutral-site game. North Carolina's solid ACC metrics offer no credible upset path against Illinois' superior adjusted offense that should exploit any defensive lapses.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"metrics-and-injuries\",\n    \"title\": \"Ratings, Injuries, and Matchup Analysis\",\n    \"summary\": \"Advanced stats heavily favor Illinois over UNC, compounded by key UNC injury.\",\n    \"evidence\": [\n      \"Lookup ratings show Illinois #6-7 with elite offense (adj o ~131-132, rank 1-2) vs UNC #27-29 (adj o ~121-122, rank 32-33)\",\n      \"Web searches confirm Caleb Wilson out for UNC with thumb injury after hand fracture\",\n      \"No major Illinois injuries reported\",\n      \"Prior first-round picks align with this seeding (UNC 6-seed, Illinois 3-seed)\"\n    ]\n  }\n}"
+    }
+  ]
+}

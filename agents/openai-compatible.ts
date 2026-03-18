@@ -543,6 +543,45 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
           });
         }
 
+        if (step === maxToolRounds - 1) {
+          const finalPayload = await requestFinalJson(
+            {
+              definition: model,
+              model: model.model,
+              temperature: Number(model.settings?.temperature ?? 0.2),
+              messages
+            },
+            runtime
+          );
+
+          const content = finalPayload.choices?.[0]?.message?.content;
+          if (!content) {
+            throw new Error("Model returned no final JSON content after max tool rounds.");
+          }
+
+          trace.push(traceEvent(`${currentGameId}-final-json`, "final_json", { content }));
+
+          const parsed = JSON.parse(extractJsonObject(content)) as {
+            pick: {
+              gameId: string;
+              winnerId: string;
+              confidence: number;
+              rationale: string;
+            };
+            reasoningStep?: {
+              id: string;
+              title: string;
+              summary: string;
+              evidence: string[];
+            };
+          };
+
+          return {
+            ...parsed,
+            modelTrace: trace
+          };
+        }
+
         continue;
       }
 

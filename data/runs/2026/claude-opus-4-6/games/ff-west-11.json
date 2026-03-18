@@ -1,0 +1,1526 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "claude-opus-4-6",
+    "label": "Claude Opus 4.6",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "description": "Anthropic • Hybrid reasoning model that pushes the frontier for coding and AI agents, featuring a 1M context window."
+  },
+  "gameId": "ff-west-11",
+  "generatedAt": "2026-03-17T21:13:10.947Z",
+  "pick": {
+    "gameId": "ff-west-11",
+    "winnerId": "nc-state",
+    "confidence": 0.56,
+    "rationale": "NC State holds a slight edge in both KenPom (#34 vs #37) and Torvik (#38 vs #45) rankings, driven primarily by a meaningfully better adjusted defense (104.5 vs 106.0). While the Wolfpack have struggled down the stretch, losing seven of their last nine, Texas has been equally inconsistent with an 18-14 record and an early SEC Tournament exit as a 10-seed to Ole Miss. NC State's superior defensive efficiency and better overall record, combined with their proven tournament pedigree from their 2024 Final Four run as an 11-seed, give them a narrow but real advantage in this play-in matchup."
+  },
+  "reasoningStep": {
+    "id": "ff-west-11-analysis",
+    "title": "NC State vs Texas First Four Analysis",
+    "summary": "NC State edges Texas in advanced metrics and defensive efficiency despite both teams entering with late-season struggles. The Wolfpack's slightly higher KenPom and Torvik rankings, better defensive numbers, and tournament experience tip the balance in a close matchup.",
+    "evidence": [
+      "NC State KenPom #34 (AdjEM +19.58, AdjO 124.1 #19, AdjD 104.5), Torvik #38, record 20-13 ACC",
+      "Texas KenPom #37 (AdjEM +19.06, AdjO 125.0 #13, AdjD 106.0), Torvik #45, record 18-14 SEC",
+      "NC State lost 7 of last 9 but beat Pittsburgh 98-88 in ACC Tournament before falling to Virginia 81-74",
+      "Texas lost to Ole Miss 76-66 as 10-seed in SEC Tournament; ranks 259th in points allowed (76.8 PPG)",
+      "NC State's defensive edge (AdjD 104.5 vs 106.0) is the key differentiator in an otherwise tight matchup"
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-1npxz8fk",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "nc-state",
+          "texas"
+        ],
+        "teamNames": [
+          "NC State",
+          "Texas"
+        ]
+      },
+      "startedAt": "2026-03-17T21:11:38.614Z",
+      "completedAt": "2026-03-17T21:11:38.620Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "nc-state",
+          "teamName": "NC State",
+          "torvik": null,
+          "kenpom": null
+        },
+        {
+          "teamId": "texas",
+          "teamName": "Texas",
+          "torvik": {
+            "rank": 45,
+            "team": "Texas",
+            "conf": "SEC",
+            "record": "18-14",
+            "adjoe": 124.07462361953156,
+            "oe Rank": 21,
+            "adjde": 106.33467387240466,
+            "de Rank": 125,
+            "barthag": 0.8549984619424512,
+            "rank.1": 45,
+            "proj. W": 18,
+            "Proj. L": 14,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.6720865157151653,
+            "ncsos": 0.412277676911223,
+            "consos": 0.8531351325806701,
+            "Proj. SOS": 0.6720865157151653,
+            "Proj. Noncon SOS": 0.412277676911223,
+            "Proj. Con SOS": 0.8531351325806701,
+            "elite SOS": 0.6341347383139722,
+            "elite noncon SOS": 0.7694719637451559,
+            "Opp OE": 116.19011000954512,
+            "Opp DE": 105.0861491332151,
+            "Opp Proj. OE": 116.19011000954512,
+            "Opp Proj DE": 105.0861491332151,
+            "Con Adj OE": 126.40616016051996,
+            "Con Adj DE": 106.73610405157712,
+            "Qual O": 125.2919635105071,
+            "Qual D": 105.59265782448207,
+            "Qual Barthag": 0.8773063483327939,
+            "Qual Games": 18,
+            "FUN": -0.0072864331866986,
+            "ConPF": 1472,
+            "ConPA": 1455,
+            "ConPoss": 1231.5875,
+            "ConOE": 1.1952053751763478,
+            "ConDE": 1.1814020522293385,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": -0.2348223832620721,
+            "WAB Rk": 48,
+            "Fun Rk": 193,
+            "adjt": 67.0608431124123
+          },
+          "kenpom": {
+            "rank": 37,
+            "team": "Texas",
+            "conf": "SEC",
+            "record": "18-14",
+            "adj_em": 19.06,
+            "adj_o": 125,
+            "adj_o_rank": 13,
+            "adj_d": 106,
+            "adj_d_rank": 111,
+            "adj_t": 66.9,
+            "adj_t_rank": 206,
+            "luck": -0.083,
+            "luck_rank": 345,
+            "sos_adj_em": 13.67,
+            "sos_adj_em_rank": 20,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 17,
+            "sos_opp_d": 103.7,
+            "sos_opp_d_rank": 31,
+            "ncsos_adj_em": -6.34,
+            "ncsos_adj_em_rank": 320
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-2f8y46wv",
+      "toolName": "get_games",
+      "arguments": {
+        "gameIds": [
+          "ff-west-11"
+        ]
+      },
+      "startedAt": "2026-03-17T21:11:38.620Z",
+      "completedAt": "2026-03-17T21:11:38.620Z",
+      "summary": "Returned 1 games.",
+      "result": [
+        {
+          "id": "ff-west-11",
+          "round": "First Four",
+          "region": "West",
+          "label": "West 11 play-in",
+          "slotA": {
+            "kind": "team",
+            "teamId": "nc-state"
+          },
+          "slotB": {
+            "kind": "team",
+            "teamId": "texas"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-djnnin9d",
+      "toolName": "list_teams",
+      "arguments": {
+        "region": "West"
+      },
+      "startedAt": "2026-03-17T21:11:38.620Z",
+      "completedAt": "2026-03-17T21:11:38.620Z",
+      "summary": "Returned 17 teams for region West.",
+      "result": [
+        {
+          "id": "arizona",
+          "name": "Arizona",
+          "shortName": "ARIZ",
+          "seed": 1,
+          "region": "West",
+          "conference": "Big 12"
+        },
+        {
+          "id": "purdue",
+          "name": "Purdue",
+          "shortName": "PUR",
+          "seed": 2,
+          "region": "West",
+          "conference": "Big Ten"
+        },
+        {
+          "id": "gonzaga",
+          "name": "Gonzaga",
+          "shortName": "GONZ",
+          "seed": 3,
+          "region": "West",
+          "conference": "WCC"
+        },
+        {
+          "id": "arkansas",
+          "name": "Arkansas",
+          "shortName": "ARK",
+          "seed": 4,
+          "region": "West",
+          "conference": "SEC"
+        },
+        {
+          "id": "wisconsin",
+          "name": "Wisconsin",
+          "shortName": "WIS",
+          "seed": 5,
+          "region": "West",
+          "conference": "Big Ten"
+        },
+        {
+          "id": "byu",
+          "name": "BYU",
+          "shortName": "BYU",
+          "seed": 6,
+          "region": "West",
+          "conference": "Big 12"
+        },
+        {
+          "id": "miami-fl",
+          "name": "Miami (FL)",
+          "shortName": "MIA",
+          "seed": 7,
+          "region": "West",
+          "conference": "ACC"
+        },
+        {
+          "id": "villanova",
+          "name": "Villanova",
+          "shortName": "NOVA",
+          "seed": 8,
+          "region": "West",
+          "conference": "Big East"
+        },
+        {
+          "id": "utah-state",
+          "name": "Utah State",
+          "shortName": "USU",
+          "seed": 9,
+          "region": "West",
+          "conference": "MWC"
+        },
+        {
+          "id": "missouri",
+          "name": "Missouri",
+          "shortName": "MIZZ",
+          "seed": 10,
+          "region": "West",
+          "conference": "SEC"
+        },
+        {
+          "id": "high-point",
+          "name": "High Point",
+          "shortName": "HPU",
+          "seed": 12,
+          "region": "West",
+          "conference": "Big South"
+        },
+        {
+          "id": "hawai-i",
+          "name": "Hawai'i",
+          "shortName": "HAW",
+          "seed": 13,
+          "region": "West",
+          "conference": "Big West"
+        },
+        {
+          "id": "kennesaw-state",
+          "name": "Kennesaw State",
+          "shortName": "KENN",
+          "seed": 14,
+          "region": "West",
+          "conference": "Conference USA"
+        },
+        {
+          "id": "queens",
+          "name": "Queens",
+          "shortName": "QUE",
+          "seed": 15,
+          "region": "West",
+          "conference": "ASUN"
+        },
+        {
+          "id": "liu",
+          "name": "LIU",
+          "shortName": "LIU",
+          "seed": 16,
+          "region": "West",
+          "conference": "NEC"
+        },
+        {
+          "id": "nc-state",
+          "name": "NC State",
+          "shortName": "NCSU",
+          "seed": 11,
+          "region": "West",
+          "conference": "ACC"
+        },
+        {
+          "id": "texas",
+          "name": "Texas",
+          "shortName": "TEX",
+          "seed": 11,
+          "region": "West",
+          "conference": "SEC"
+        }
+      ]
+    },
+    {
+      "id": "tool-2f6eazrf",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamNames": [
+          "N.C. State",
+          "NC St"
+        ]
+      },
+      "startedAt": "2026-03-17T21:11:42.850Z",
+      "completedAt": "2026-03-17T21:11:42.859Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 1 team.",
+      "result": [
+        {
+          "teamId": null,
+          "teamName": "n c state",
+          "torvik": {
+            "rank": 38,
+            "team": "N.C. State",
+            "conf": "ACC",
+            "record": "20-13",
+            "adjoe": 124.06960609472424,
+            "oe Rank": 22,
+            "adjde": 104.62134239763014,
+            "de Rank": 90,
+            "barthag": 0.8766080993795531,
+            "rank.1": 38,
+            "proj. W": 20,
+            "Proj. L": 13,
+            "Pro Con W": 10,
+            "Pro Con L": 8,
+            "Con Rec.": "10-8",
+            "sos": 0.7183001993651092,
+            "ncsos": 0.5806782921860315,
+            "consos": 0.8075295532439207,
+            "Proj. SOS": 0.7183001993651092,
+            "Proj. Noncon SOS": 0.5806782921860315,
+            "Proj. Con SOS": 0.8075295532439207,
+            "elite SOS": 0.6726662992486109,
+            "elite noncon SOS": 0.7854976866502068,
+            "Opp OE": 115.48351227965424,
+            "Opp DE": 104.2461052919212,
+            "Opp Proj. OE": 115.48351227965424,
+            "Opp Proj DE": 104.2461052919212,
+            "Con Adj OE": 123.51125479131537,
+            "Con Adj DE": 104.48811009098112,
+            "Qual O": 122.83217661624842,
+            "Qual D": 105.09916620902082,
+            "Qual Barthag": 0.8572969678627441,
+            "Qual Games": 13,
+            "FUN": -0.0254703716361401,
+            "ConPF": 1442,
+            "ConPA": 1418,
+            "ConPoss": 1253.9125,
+            "ConOE": 1.1500004984398833,
+            "ConDE": 1.1308604069263206,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5555555555555556,
+            "WAB": 0.2568222652515392,
+            "WAB Rk": 45,
+            "Fun Rk": 240,
+            "adjt": 69.06960359141047
+          },
+          "kenpom": {
+            "rank": 34,
+            "team": "N.C. State",
+            "conf": "ACC",
+            "record": "20-13",
+            "adj_em": 19.58,
+            "adj_o": 124.1,
+            "adj_o_rank": 19,
+            "adj_d": 104.5,
+            "adj_d_rank": 86,
+            "adj_t": 69.1,
+            "adj_t_rank": 86,
+            "luck": -0.029,
+            "luck_rank": 261,
+            "sos_adj_em": 11.9,
+            "sos_adj_em_rank": 37,
+            "sos_opp_o": 116,
+            "sos_opp_o_rank": 39,
+            "sos_opp_d": 104.1,
+            "sos_opp_d_rank": 41,
+            "ncsos_adj_em": 4.03,
+            "ncsos_adj_em_rank": 85
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-2hv087wf",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "NC State Wolfpack basketball 2025-26 season KenPom Torvik ratings",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:11:42.860Z",
+      "completedAt": "2026-03-17T21:11:43.579Z",
+      "summary": "Returned 5 search results for \"NC State Wolfpack basketball 2025-26 season KenPom Torvik ratings\".",
+      "result": [
+        {
+          "title": "Where Does KenPom, Bart Torvik & Evan Miya Rank NC State After Their",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fpackinsider.com%2F2025%2F11%2F04%2Fwhere%2Ddoes%2Dkenpom%2Dbart%2Dtorvik%2Devan%2Dmiya%2Drank%2Dnc%2Dstate%2Dafter%2Dtheir%2Dseason%2Dopening%2Dwin%2Dover%2Dnccu%2F&rut=90a4d856561d1f289b795548b926f5ada4e4b7733a92af5a3128805429ec3822",
+          "snippet": "NC State defeated North Carolina Central 114-66 last night in their season opener at the Lenovo Center. How much did the Wolfpack climb in the stat gurus&#x27; rankings? NC State jumped from 26th to 21st in Evan Miya&#x27;s Team Ratings . The Wolfpack jumped from 38th to 31st in KenPom&#x27;s Rankings. Bart Torvik moved NC State up from 39th to 35th."
+        },
+        {
+          "title": "2025 Pomeroy College Basketball Ratings - kenpom.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php%3Fy%3D2025&rut=2528b405f03d82f7117335c40c369a1ff6ca3d38f0084233c1a8ade0292d3d81",
+          "snippet": "2025 Pomeroy College Basketball Ratings help 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25· 26"
+        },
+        {
+          "title": "Bart Torvik - Verifying Browser...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.barttorvik.com%2F&rut=c7dca4b3c0ff168cb7b6dcf97e019a17aaf1875fa77b1e7f3cdbc4729a20a85f",
+          "snippet": "Explore college basketball ratings , rankings, and statistics with Bart Torvik&#x27;s innovative tools and insights."
+        },
+        {
+          "title": "2025-26 NC State Wolfpack Men&#x27;s Roster and Stats | College Basketball ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fnorth%2Dcarolina%2Dstate%2Fmen%2F2026.html&rut=19d7b636ed0fef12b191a6e612bddfd0b1bb593df65d83bace915041c5b89a13",
+          "snippet": "Check out the detailed 2025-26 NC State Wolfpack Roster and Stats for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "2025-26 NC State Wolfpack men&#x27;s basketball team - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025%25E2%2580%259326_NC_State_Wolfpack_men%2527s_basketball_team&rut=5f71e143d460951377ba0c6f1020e4913660cebd9576bfa016c49644718d27ed",
+          "snippet": "The 2025-26 NC State Wolfpack men&#x27;s basketball team represents North Carolina State University during the 2025-26 NCAA Division I men&#x27;s basketball season . The Wolfpack are led by first-year head coach Will Wade and play their home games at Lenovo Center in Raleigh, North Carolina as members of the Atlantic Coast Conference (ACC)."
+        }
+      ]
+    },
+    {
+      "id": "tool-034nrw1m",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Texas Longhorns basketball 2025-26 season March Madness injuries news",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:11:43.579Z",
+      "completedAt": "2026-03-17T21:11:44.287Z",
+      "summary": "Returned 5 search results for \"Texas Longhorns basketball 2025-26 season March Madness injuries news\".",
+      "result": [
+        {
+          "title": "Texas Longhorns News, Scores and Stats 2025-26 - CBS Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fteams%2FTEXAS%2Ftexas%2Dlonghorns%2F&rut=a49998170068dfd613fb22ee403b7c64a8dd928acd46ed7ca6dcedefd5a87f3a",
+          "snippet": "CBS Sports has the latest Texas Longhorns news and information, including team scores, stats, highlights and more for the 2025 College Basketball season ."
+        },
+        {
+          "title": "Texas Longhorns Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F251%2Ftexas%2Dlonghorns&rut=d038d037076f4146083388c7b5309fce572f8025eb00feff0e1a178b39ad718e",
+          "snippet": "Visit ESPN for Texas Longhorns live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Texas Longhorns men&#x27;s basketball: Big men recovering from injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kxan.com%2Fsports%2Dgeneral%2Fhorns%2Dreport%2Ftexas%2Dmens%2Dbasketball%2Dstrides%2Dtoward%2Dseason%2Dtip%2Doff%2Dagainst%2Dduke%2Din%2Dspite%2Dof%2Dinjuries%2F&rut=7668ee514f06cdc644969d67e06269a634a2f855984ec1580f51548e33d52daf",
+          "snippet": "AUSTIN (KXAN) — Texas basketball is dealing with multiple injuries as the team approaches the start of the 2025-26 season , having lost two big men over the past few weeks. \"We ran into two ..."
+        },
+        {
+          "title": "Men&#x27;s Basketball - University of Texas Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ftexaslonghorns.com%2Fsports%2Fmens%2Dbasketball&rut=48d48c6138d334a67d444551da0d52ce2f3d8ba5d8dc1af28e94d59cb8f4f286",
+          "snippet": "The official Men&#x27;s Basketball page for the University of Texas Longhorns"
+        },
+        {
+          "title": "Texas Longhorns Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Ftexas%2Dlonghorns%2Finjuries&rut=6a7b85af95377accdd674458a0895588df2143b380ca7ff8a2460c87fde03eca",
+          "snippet": "Stay In the Know: Check Out Texas Longhorns Injuries Impacting The 2025 -2026 NCAAB Season ."
+        }
+      ]
+    },
+    {
+      "id": "tool-wzt2ukjx",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "NC State Wolfpack basketball 2026 March Madness tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:11:49.399Z",
+      "completedAt": "2026-03-17T21:11:50.093Z",
+      "summary": "Returned 5 search results for \"NC State Wolfpack basketball 2026 March Madness tournament\".",
+      "result": [
+        {
+          "title": "NC State 98-88 Pittsburgh (Mar 11, 2026) Game Recap - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%3FgameId%3D401851173&rut=04f563ca867cec3ce0de5f337f7b8002b3bf9f22d9c38f01bdef3195b7a0f42c",
+          "snippet": "Expert recap and game analysis of the NC State Wolfpack vs. Pittsburgh Panthers NCAAM game from March 11, 2026 on ESPN."
+        },
+        {
+          "title": "NC State 98-88 Pittsburgh (Mar 11, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851173%2Fpitt%2Dnc%2Dstate&rut=bb92d123f24bf8fb0205c9d0d9cec9302d79d02dc0e91801927ae7766c3465fd",
+          "snippet": "Game summary of the NC State Wolfpack vs. Pittsburgh Panthers NCAAM game, final score 98-88, from March 11, 2026 on ESPN."
+        },
+        {
+          "title": "Virginia 81-74 NC State (Mar 12, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851177%2Fnc%2Dstate%2Dvirginia&rut=d97f5c30087991750d88ba9c60d6a1fe739741d8c26ae095a6f28b1a41f1bade",
+          "snippet": "Game summary of the Virginia Cavaliers vs. NC State Wolfpack NCAAM game, final score 81-74, from March 12, 2026 on ESPN."
+        },
+        {
+          "title": "Most probable first-round upsets in the men&#x27;s 2026 NCAA tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48223542%2Fncaa%2Dtournament%2Dupsets%2Dfirst%2Dround%2Dgiant%2Dkillers%2Dmarch%2Dmadness%2D2026&rut=bf48d55e9238edc9a5c52fee89b588d4579e5a4ff90426d06008621c69a1bab6",
+          "snippet": "Potential matchup: 7:25 p.m. ET on Thursday NC State enters the tournament having lost seven of its past nine games. But just two years ago, the Wolfpack made a run to the Final Four as an 11-seed."
+        },
+        {
+          "title": "Stanford 85-84 NC State (Mar 7, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401820791%2Fstanford%2Dnc%2Dstate&rut=d5375a7e14327de40999b06500f61aa28e18ad5cbb17522d1f8b6a644b7fa581",
+          "snippet": "Game summary of the Stanford Cardinal vs. NC State Wolfpack NCAAM game, final score 85-84, from March 7, 2026 on ESPN."
+        }
+      ]
+    },
+    {
+      "id": "tool-782pbud8",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Texas Longhorns basketball 2026 injuries roster updates",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:11:50.093Z",
+      "completedAt": "2026-03-17T21:11:50.155Z",
+      "summary": "Returned 0 search results for \"Texas Longhorns basketball 2026 injuries roster updates\".",
+      "result": []
+    },
+    {
+      "id": "tool-0xka8grn",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.kxan.com/sports-general/horns-report/texas-mens-basketball-strides-toward-season-tip-off-against-duke-in-spite-of-injuries/",
+        "maxChars": 3000
+      },
+      "startedAt": "2026-03-17T21:11:50.156Z",
+      "completedAt": "2026-03-17T21:11:50.353Z",
+      "summary": "fetch_webpage failed: 403  <!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"description\" content=\"px-captcha\" />\n    <title>Access to this page has been denied</title>\n    \n  </head>\n  <body>\n    <script>\n      window._pxVid = '';\n      window._pxUuid = 'ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96';\n      window._pxAppId = 'PXCvbtpUrj';\n      window._pxHostUrl = '/CvbtpUrj/xhr';\n      window._pxCustomLogo = '';\n      window._pxJsClientSrc = '/CvbtpUrj/init.js';\n      window._pxFirstPartyEnabled =\n        'true';\n      var script = document.createElement(\"script\");\n      script.src = '/CvbtpUrj/captcha/captcha.js?a=c&u=ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&v=&m=0&h=R0VU';\n      document.head.appendChild(script);\n      script.onerror = function () {\n        script = document.createElement(\"script\");\n        script.src = 'https://captcha.px-cloud.net/PXCvbtpUrj/captcha.js?a=c&u=ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&v=&m=0&h=R0VU';\n        script.onerror = window._pxDisplayErrorMessage;\n        document.head.appendChild(script);\n      };\n\n\n      window._pxDisplayErrorMessage = function () {\n        var t = document.createElement(\"style\");\n        t.innerText =\n          \"@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);body{background-color:#fafbfc}@media (max-width:480px){body{background-color:#fff}}.px-captcha-error-container{position:fixed;height:328px;background-color:#fff;font-family:Roboto,sans-serif}.px-captcha-error-header{color:#f0f1f2;font-size:29px;margin:67px 0 33px;font-weight:500;line-height:.83;text-align:center}.px-captcha-error-message{color:#f0f1f2;font-size:18px;margin:0 0 29px;line-height:1.33;text-align:center}div.px-captcha-error-button{text-align:center;line-height:50px;width:253px;margin:auto;border-radius:25px;border:solid 1px #f0f1f2;font-size:20px;color:#f0f1f2}div.px-captcha-error-wrapper{margin:23px 0 0}div.px-captcha-error{margin:auto;text-align:center;width:500px;height:86px;font-size:12px;background-color:#fcf0f2;color:#ce0e2d}img.px-captcha-error{margin:6px 10px -2px 0}@media (min-width:620px){.px-captcha-error-container{width:528px;top:50%;left:50%;margin-top:-164px;margin-left:-264px;border-radius:3px;box-shadow:0 2px 9px -1px rgba(0,0,0,.13)}}@media (min-width:481px) and (max-width:620px){.px-captcha-error-container{width:85%;top:50%;left:50%;margin-top:-164px;margin-left:-42.5%;border-radius:3px;box-shadow:0 2px 9px -1px rgba(0,0,0,.13)}}@media (max-width:480px){.px-captcha-error-container{width:528px;top:50%;left:50%;margin-top:-164px;margin-left:-264px}}\";\n        document.head.appendChild(t);\n        var r = document.createElement(\"div\");\n        r.className = \"px-captcha-error-container\";\n        r.innerHTML =\n          '<div class=\"px-captcha-error-header\">Before we continue...</div><div class=\"px-captcha-error-message\">Press & Hold to confirm you are<br>a human (and not a bot).</div><div class=\"px-captcha-error-button\">Press & Hold</div><div class=\"px-captcha-error-wrapper\"><div class=\"px-captcha-error\"><img class=\"px-captcha-error\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABFUExURUdwTNYELOEGONQILd0AONwALtwEL+AAL9MFLfkJSNQGLdMJLdQJLdQGLdQKLtYFLNcELdUGLdcBL9gFL88OLdUFLNEOLglBhT4AAAAXdFJOUwC8CqgNIRgRoAS1dWWuR4RTjzgryZpYblfkcAAAAI9JREFUGNNdj+sWhCAIhAdvqGVa1r7/oy6RZ7eaH3D4ZACBIed9wlOOMtUnSrEmZ6cHa9YAIfsbCkWrdpi/c50Bk2CO9mNLdMAu03wJA3HpEnfpxbyOg6ruyx8JJi6KNstnslp1dbPd9GnqmuYq7mmcv1zjnbQw8cV0xzkqo+fX1zkjUOO7wnrInUTxJiruC3vtBNRoQQn2AAAAAElFTkSuQmCC\">Please check your network connection or disable your ad-blocker.<br/><br/>Please allow-list the domain <b>captcha.px-cloud.net</b> in your ad-blocker.<br/><br/>For instructions on how to add to the allow-list or disable your ad-blocker please <a style=\"color:darkred;\" target=\"_blank\" href=\"https://instructions.humandemo.zone/disableadblockers.html\">click here</a>.</div></div>';\n        document.body.appendChild(r);\n      };\n\n      var cip = '94.10.246.230';\n      var ets = 'Tue, 17 Mar 2026 21:11:50 GMT';\n      setTimeout(function () {\n        try {\n          document.getElementsByClassName(\"px-captcha-error-wrapper\")[0].innerHTML = document.getElementsByClassName(\"px-captcha-error-wrapper\")[0].innerHTML + '<div style=\"text-align:center\"><br/>If you have any issues, please contact us at <a style=\"color:#626364;font-weight:bold;\" href=\"mailto:' + 'challengehelp' + '@' + 'humansecurity.com?subject=Bot Challenge Issue - Reference ID #' + window._pxUuid + '&body=Client IP: ' + cip + '%0D%0ATimestamp: ' + ets + '%0D%0A---Please describe the issue you experienced below this line---\">' + 'challengehelp' + '@' + 'humansecurity.com' + '</a></div>';\n        } catch(ex) {\n\n        }\n      }, 500);\n    </script>\n    \n    <noscript>\n      <div style=\"text-align:center;position:absolute;top:50%;left:50%;width:500px;height:300px;margin-left:-250px;margin-top:-150px;\">\n        <font style=\"font-family:Calibri, sans-serif;\">\n          Your browser appears to have Javascript disabled.<br/><br/>For instructions on how to enable Javascript please <a target=\"_blank\" style=\"color:#626364;font-weight:bold;\" href=\"https://instructions.humandemo.zone/enablejavascript.html\">click here</a>.<br/><br/>If you have any issues, please contact us at <a style=\"color:#626364;font-weight:bold;\" href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#104;&#97;&#108;&#108;&#101;&#110;&#103;&#101;&#104;&#101;&#108;&#112;&#64;&#104;&#117;&#109;&#97;&#110;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#66;&#111;&#116;&#37;&#50;&#48;&#67;&#104;&#97;&#108;&#108;&#101;&#110;&#103;&#101;&#37;&#50;&#48;&#73;&#115;&#115;&#117;&#101;&#37;&#50;&#48;&#45;&#37;&#50;&#48;&#74;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#37;&#50;&#48;&#68;&#105;&#115;&#97;&#98;&#108;&#101;&#100; - Reference ID #ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&#38;&#98;&#111;&#100;&#121;&#61;Client IP: 94.10.246.230%0D%0ATimestamp: Tue, 17 Mar 2026 21:11:50 GMT%0D%0A---Please describe the issue you experienced below this line---\">&#99;&#104;&#97;&#108;&#108;&#101;&#110;&#103;&#101;&#104;&#101;&#108;&#112;&#64;&#104;&#117;&#109;&#97;&#110;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#46;&#99;&#111;&#109;</a>\n        </font>\n      </div>\n    </noscript>\n  </body>\n</html>\n ",
+      "result": {
+        "error": "fetch_webpage failed: 403  <!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"description\" content=\"px-captcha\" />\n    <title>Access to this page has been denied</title>\n    \n  </head>\n  <body>\n    <script>\n      window._pxVid = '';\n      window._pxUuid = 'ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96';\n      window._pxAppId = 'PXCvbtpUrj';\n      window._pxHostUrl = '/CvbtpUrj/xhr';\n      window._pxCustomLogo = '';\n      window._pxJsClientSrc = '/CvbtpUrj/init.js';\n      window._pxFirstPartyEnabled =\n        'true';\n      var script = document.createElement(\"script\");\n      script.src = '/CvbtpUrj/captcha/captcha.js?a=c&u=ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&v=&m=0&h=R0VU';\n      document.head.appendChild(script);\n      script.onerror = function () {\n        script = document.createElement(\"script\");\n        script.src = 'https://captcha.px-cloud.net/PXCvbtpUrj/captcha.js?a=c&u=ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&v=&m=0&h=R0VU';\n        script.onerror = window._pxDisplayErrorMessage;\n        document.head.appendChild(script);\n      };\n\n\n      window._pxDisplayErrorMessage = function () {\n        var t = document.createElement(\"style\");\n        t.innerText =\n          \"@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);body{background-color:#fafbfc}@media (max-width:480px){body{background-color:#fff}}.px-captcha-error-container{position:fixed;height:328px;background-color:#fff;font-family:Roboto,sans-serif}.px-captcha-error-header{color:#f0f1f2;font-size:29px;margin:67px 0 33px;font-weight:500;line-height:.83;text-align:center}.px-captcha-error-message{color:#f0f1f2;font-size:18px;margin:0 0 29px;line-height:1.33;text-align:center}div.px-captcha-error-button{text-align:center;line-height:50px;width:253px;margin:auto;border-radius:25px;border:solid 1px #f0f1f2;font-size:20px;color:#f0f1f2}div.px-captcha-error-wrapper{margin:23px 0 0}div.px-captcha-error{margin:auto;text-align:center;width:500px;height:86px;font-size:12px;background-color:#fcf0f2;color:#ce0e2d}img.px-captcha-error{margin:6px 10px -2px 0}@media (min-width:620px){.px-captcha-error-container{width:528px;top:50%;left:50%;margin-top:-164px;margin-left:-264px;border-radius:3px;box-shadow:0 2px 9px -1px rgba(0,0,0,.13)}}@media (min-width:481px) and (max-width:620px){.px-captcha-error-container{width:85%;top:50%;left:50%;margin-top:-164px;margin-left:-42.5%;border-radius:3px;box-shadow:0 2px 9px -1px rgba(0,0,0,.13)}}@media (max-width:480px){.px-captcha-error-container{width:528px;top:50%;left:50%;margin-top:-164px;margin-left:-264px}}\";\n        document.head.appendChild(t);\n        var r = document.createElement(\"div\");\n        r.className = \"px-captcha-error-container\";\n        r.innerHTML =\n          '<div class=\"px-captcha-error-header\">Before we continue...</div><div class=\"px-captcha-error-message\">Press & Hold to confirm you are<br>a human (and not a bot).</div><div class=\"px-captcha-error-button\">Press & Hold</div><div class=\"px-captcha-error-wrapper\"><div class=\"px-captcha-error\"><img class=\"px-captcha-error\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABFUExURUdwTNYELOEGONQILd0AONwALtwEL+AAL9MFLfkJSNQGLdMJLdQJLdQGLdQKLtYFLNcELdUGLdcBL9gFL88OLdUFLNEOLglBhT4AAAAXdFJOUwC8CqgNIRgRoAS1dWWuR4RTjzgryZpYblfkcAAAAI9JREFUGNNdj+sWhCAIhAdvqGVa1r7/oy6RZ7eaH3D4ZACBIed9wlOOMtUnSrEmZ6cHa9YAIfsbCkWrdpi/c50Bk2CO9mNLdMAu03wJA3HpEnfpxbyOg6ruyx8JJi6KNstnslp1dbPd9GnqmuYq7mmcv1zjnbQw8cV0xzkqo+fX1zkjUOO7wnrInUTxJiruC3vtBNRoQQn2AAAAAElFTkSuQmCC\">Please check your network connection or disable your ad-blocker.<br/><br/>Please allow-list the domain <b>captcha.px-cloud.net</b> in your ad-blocker.<br/><br/>For instructions on how to add to the allow-list or disable your ad-blocker please <a style=\"color:darkred;\" target=\"_blank\" href=\"https://instructions.humandemo.zone/disableadblockers.html\">click here</a>.</div></div>';\n        document.body.appendChild(r);\n      };\n\n      var cip = '94.10.246.230';\n      var ets = 'Tue, 17 Mar 2026 21:11:50 GMT';\n      setTimeout(function () {\n        try {\n          document.getElementsByClassName(\"px-captcha-error-wrapper\")[0].innerHTML = document.getElementsByClassName(\"px-captcha-error-wrapper\")[0].innerHTML + '<div style=\"text-align:center\"><br/>If you have any issues, please contact us at <a style=\"color:#626364;font-weight:bold;\" href=\"mailto:' + 'challengehelp' + '@' + 'humansecurity.com?subject=Bot Challenge Issue - Reference ID #' + window._pxUuid + '&body=Client IP: ' + cip + '%0D%0ATimestamp: ' + ets + '%0D%0A---Please describe the issue you experienced below this line---\">' + 'challengehelp' + '@' + 'humansecurity.com' + '</a></div>';\n        } catch(ex) {\n\n        }\n      }, 500);\n    </script>\n    \n    <noscript>\n      <div style=\"text-align:center;position:absolute;top:50%;left:50%;width:500px;height:300px;margin-left:-250px;margin-top:-150px;\">\n        <font style=\"font-family:Calibri, sans-serif;\">\n          Your browser appears to have Javascript disabled.<br/><br/>For instructions on how to enable Javascript please <a target=\"_blank\" style=\"color:#626364;font-weight:bold;\" href=\"https://instructions.humandemo.zone/enablejavascript.html\">click here</a>.<br/><br/>If you have any issues, please contact us at <a style=\"color:#626364;font-weight:bold;\" href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#104;&#97;&#108;&#108;&#101;&#110;&#103;&#101;&#104;&#101;&#108;&#112;&#64;&#104;&#117;&#109;&#97;&#110;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#66;&#111;&#116;&#37;&#50;&#48;&#67;&#104;&#97;&#108;&#108;&#101;&#110;&#103;&#101;&#37;&#50;&#48;&#73;&#115;&#115;&#117;&#101;&#37;&#50;&#48;&#45;&#37;&#50;&#48;&#74;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#37;&#50;&#48;&#68;&#105;&#115;&#97;&#98;&#108;&#101;&#100; - Reference ID #ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&#38;&#98;&#111;&#100;&#121;&#61;Client IP: 94.10.246.230%0D%0ATimestamp: Tue, 17 Mar 2026 21:11:50 GMT%0D%0A---Please describe the issue you experienced below this line---\">&#99;&#104;&#97;&#108;&#108;&#101;&#110;&#103;&#101;&#104;&#101;&#108;&#112;&#64;&#104;&#117;&#109;&#97;&#110;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#46;&#99;&#111;&#109;</a>\n        </font>\n      </div>\n    </noscript>\n  </body>\n</html>\n "
+      }
+    },
+    {
+      "id": "tool-m21ymgwj",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48223542/ncaa-tournament-upsets-first-round-giant-killers-march-madness-2026",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-17T21:11:54.303Z",
+      "completedAt": "2026-03-17T21:11:54.772Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/story/_/id/48223542/ncaa-tournament-upsets-first-round-giant-killers-march-madness-2026 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48223542/ncaa-tournament-upsets-first-round-giant-killers-march-madness-2026",
+        "text": "Most probable first-round upsets in the men's 2026 NCAA tournament - ESPN Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 9h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 2d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 1d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 23h Sach Chandan Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 5h Mark Zinno Six tips on how to bet the men's tournament like a veteran 2d Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 13h Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 1d Jeff Borzello Most probable first-round upsets in the men's 2026 NCAA tournament play VCU's NCAA tournament preview (0:36) Joe Lunardi breaks down the VCU Rams' NCAA tournament prospects. (0:36) Keith Lipscomb Mar 17, 2026, 08:30 AM ET Close Keith Lipscomb is a senior editor for ESPN Fantasy and a contributing writer for men's college basketball at ESPN. Follow on X Multiple Authors Email Print Open Extended Reactions Cinderella hasn't shown her face much of late. Only five double-digit seeds won in the first round of the 2025 men's NCAA tournament, and two were 10-seeds, which don't qualify as Giant Killers for the purposes of this column. The Elite Eight was tied for the chalkiest of all time -- all top-three seeds or better -- and the Final Four was just the second ever to feature four 1-seeds. But we know that part of what makes March Madness so fun is the upsets and trying to identify them before they happen. Editor's Picks Joe Lunardi's ultimate guide to men's March Madness 2026 Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Jay Bilas Men's March Madness 2026 bracket: Get to know all 68 teams Myron Medcalf 2 Related To find this year's potential candidates, we consulted ESPN's BPI projections to find the matchups with the highest upset probabilities. Just keep in mind that probability does not mean predictability when filling out your brackets . And the probability of there being"
+      }
+    },
+    {
+      "id": "tool-gkmfhkjw",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "NC State vs Texas 2026 NCAA tournament First Four play-in game preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:11:54.772Z",
+      "completedAt": "2026-03-17T21:11:55.585Z",
+      "summary": "Returned 5 search results for \"NC State vs Texas 2026 NCAA tournament First Four play-in game preview\".",
+      "result": [
+        {
+          "title": "How to Watch the Texas Longhorns vs. NC State Wolfpack 2026 First Four Game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fhow%2Dto%2Dwatch%2Dtexas%2Dnc%2Dstate%2Dfirst%2Dfour%2Dmarch%2D2026%2F&rut=182cf4c86216b884ee98b79c55ef91d51ecc7c2f5bd4dab728a54db35363f5e5",
+          "snippet": "Find out how to watch the Texas Longhorns play the NC State Wolfpack in the 2026 NCAA Tournament First Four on truTV and Sling."
+        },
+        {
+          "title": "Where to watch Texas vs NC State game tonight: 2026 NCAA tournament ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.indystar.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fnc%2Dstate%2Dtexas%2Dchannel%2Dtoday%2Dmarch%2Dmadness%2D2026%2Dncaa%2Dtournament%2Dgame%2Dplay%2Din%2Dbracket%2Dschedule%2Dwatch%2F89195283007%2F&rut=f467c4fc8faa5b5aad841638f30c0c33c735a6cfc03f8d8541f31b38a2babf2d",
+          "snippet": "March Madness 2026 NCAA tournament play-in action continues tonight. Start time, how to watch, odds, predictions, and more for NC State - Texas game ."
+        },
+        {
+          "title": "How to watch Texas Longhorns vs. NC State Wolfpack: NCAA Tournament ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Flonghornswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Flonghorns%2F2026%2F03%2F17%2Ftexas%2Dlonghorns%2Dvs%2Dnc%2Dstate%2Dwolfpack%2D17%2D2026%2Dncaa%2Dmens%2Dbasketball%2Dhow%2Dto%2Dwatch%2Dlive%2Dstream%2Dgame%2Dtime%2F89190592007%2F&rut=45711e9bec36cb51bd37b9e8f60c104a8af40945953e6ef7e260498ef671f2e0",
+          "snippet": "Preview the Texas Longhorns&#x27; NCAA Tournament First Four matchup with NC State Wolfpack, including live stream, TV channel, odds, and game information."
+        },
+        {
+          "title": "What channel is Texas vs. NC State on? Time, TV schedule, live stream ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fcollege%2Dsports%2Fwhat%2Dchannel%2Dis%2Dtexas%2Dvs%2Dnc%2Dstate%2Don%2Dtime%2Dtv%2Dschedule%2Dlive%2Dstream%2Dto%2Dwatch%2D2026%2Dncaa%2Dfirst%2Dfour%2Dgame%2Far%2DAA1YNu4e&rut=f63390ebde6d555cd0233a1c3a80353d2200cc0b6439d4c1b6ef35564a337ac7",
+          "snippet": "Here is a complete guide to watching Texas vs . NC State , including the start time, TV schedule and live stream information for the 2026 NCAA Tournament game ."
+        },
+        {
+          "title": "NC State basketball vs. Texas channel for 2026 NCAA Tournament First ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.thecalifornian.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fnc%2Dstate%2Dbasketball%2Dvs%2Dtexas%2Dchannel%2Dfor%2D2026%2Dncaa%2Dtournament%2Dfirst%2Dfour%2Dgame%2F89137011007%2F&rut=e319c60e8d619ff97bc63d363aa9b760ed0ba17b261cc1f420395b37fb13b86f",
+          "snippet": "NC State basketball faces Pittsburgh in a 2026 NCAA Tournament First Four matchup. Find out how to watch the game , including TV channel and time."
+        }
+      ]
+    },
+    {
+      "id": "tool-pl60yw2k",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://longhornswire.usatoday.com/story/sports/college/longhorns/2026/03/17/texas-longhorns-vs-nc-state-wolfpack-17-2026-ncaa-mens-basketball-how-to-watch-live-stream-game-time/89190592007/",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-17T21:12:00.456Z",
+      "completedAt": "2026-03-17T21:12:00.978Z",
+      "summary": "Fetched https://longhornswire.usatoday.com/story/sports/college/longhorns/2026/03/17/texas-longhorns-vs-nc-state-wolfpack-17-2026-ncaa-mens-basketball-how-to-watch-live-stream-game-time/89190592007/ and extracted 2527 characters of text.",
+      "result": {
+        "url": "https://longhornswire.usatoday.com/story/sports/college/longhorns/2026/03/17/texas-longhorns-vs-nc-state-wolfpack-17-2026-ncaa-mens-basketball-how-to-watch-live-stream-game-time/89190592007/",
+        "text": "How to watch Texas Longhorns vs. NC State Wolfpack: NCAA Tournament First Four live stream info, TV channel, game time | March 17 Skip to main content Home Schedule Football Basketball Recruiting SEC Sports Odds Newsletter College Sports Wire USA TODAY Sports How to watch Texas Longhorns: NCAA Tournament First Four live stream info, TV channel, game time | March 17 Data Skrive Watch as the NC State Wolfpack (20-13) try to earn a spot in the Round of 64 in the NCAA Tournament bracket in their First Four matchup with the Texas Longhorns (18-14) on Tuesday at UD Arena, tipping off at 9:15 p.m. ET, airing on truTV. Ahead of watching this matchup, here's what you need to know about Tuesday's college basketball action. NC State vs. Texas: How to watch on TV or live stream Game day: Tuesday, March 17, 2026 Game time: 9:15 p.m. ET Location: Dayton, Ohio Arena: UD Arena TV Channel: truTV Live Stream: Sling - Watch Now! Check out: USA TODAY Sports Coaches Poll Watch the NCAA Tournament on Sling! NC State vs. Texas stats and trends Texas scores 83.8 points per game and allow 76.8, making them 26th in college basketball on offense and 259th defensively. In 2025-26, the Longhorns are 50th in college basketball in rebounds (34.8 per game) and 10th-best in rebounds allowed (26.9). This season Texas is ranked 290th in the nation in assists at 12.3 per game. The Longhorns are 159th in the country in turnovers per game (10.7) and 17th-worst in turnovers forced (9). Texas is 208th in the nation in 3-pointers made (7.4 per game) and 99th in 3-point percentage (35.4%). In 2025-26, the Longhorns are 82nd in the country in 3-pointers conceded (7 per game) and 321st in defensive 3-point percentage (36%). Texas attempts 35.9% percent of its shots from beyond the arc, and 26.2% of its made baskets are from there. Inside the arc, it attempts 64.1% of its shots, with 73.8% of its makes coming from there. NC State vs. Texas Odds and Spread Spread Favorite: Wolfpack (-1.5) Moneyline: NC State (-123), Texas (+101) Total: 158 points NCAA Basketball odds courtesy of BetMGM Sportsbook . Odds updated Tuesday at 4:46 p.m. ET. For a full list of sports betting odds, access USA TODAY Sports Betting Scores Odds Hub . Watch the NCAA Tournament on Sling! Follow the latest college sports coverage at College Sports Wire . Facebook Twitter Email Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your Privacy Choices © Copyright Gannett 2026"
+      }
+    },
+    {
+      "id": "tool-mcny9y2f",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.indystar.com/story/sports/college/2026/03/17/nc-state-texas-channel-today-march-madness-2026-ncaa-tournament-game-play-in-bracket-schedule-watch/89195283007/",
+        "maxChars": 4000
+      },
+      "startedAt": "2026-03-17T21:12:00.979Z",
+      "completedAt": "2026-03-17T21:12:01.188Z",
+      "summary": "Fetched https://www.indystar.com/story/sports/college/2026/03/17/nc-state-texas-channel-today-march-madness-2026-ncaa-tournament-game-play-in-bracket-schedule-watch/89195283007/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.indystar.com/story/sports/college/2026/03/17/nc-state-texas-channel-today-march-madness-2026-ncaa-tournament-game-play-in-bracket-schedule-watch/89195283007/",
+        "text": "Where to watch Texas vs NC State game tonight: 2026 NCAA tournament schedule Skip to main content Home Sports Gregg Doyel Colts Pacers Hoosiers Boilermakers Bulldogs Motor Sports Fighting Irish High Schools Indy 500 SportsbookWire What channel is NC State-Texas game today? March Madness 2026 NCAA tournament play-in time, stream Chris Sims Indianapolis Star Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. The Texas Longhorns will face the NC State Wolfpack in a 2026 NCAA men's basketball tournament play-in game. The game is scheduled for Tuesday, March 17, 2026, at 9:15 p.m. ET. Viewers can watch the matchup on truTV or stream it via SlingTV. The article also provides the full schedule for the 2026 March Madness tournament. The Texas Longhorns battle the NC State Wolfpack in the second play-in game of the NCAA men's basketball tournament in March Madness action today on truTV . Here's what you need to know about tonight's matchup , how to watch , the 2026 March Madness bracket , odds , picks and predictions : What channel is NC State Wolfpack vs Texas Longhorns game on TV tonight, Tuesday, March 17? How to watch Texas-NC State March Madness 2026 NCAA tournament play-in game today live The NC State Wolfpack and Texas Longhorns will air on truTV Tuesday, March 17, 2026. Watch NCAA tournament action on Sling TV What time is Texas Longhorns vs NC State Wolfpack game start today, Tuesday, March 17? When is NC State-Texas March Madness 2026 NCAA tournament game tonight live The NC State Wolfpack and Texas Longhorns will play on truTV at 9:15 p.m. ET, Tuesday, March 17, 2026, 2026. Watch March Madness live on Sling TV How to stream NC State vs Texas game tonight, Tuesday, March 17. Where to watch Texas-NC State March Madness 2026 NCAA tournament game today live The NC State Wolfpack and Texas Longhorns will stream via SlingTV at 9:15 p.m. ET, Tuesday, March 17, 2026. Fans can download SlingTV in the Apple App Store or on Google Play . Watch NCAA tournament action on Sling TV 2025-2026 Texas Longhorns regular season record, SEC conference record Texas : (18-14, 9-9) 2025-2026 North Carolina State Wolfpack regular season record, ACC conference record NC State : (20-13, 10-8) NCAA tournament schedule 2026 today: March Madness First Four start time, TV channel, where to watch, stream every men's basketball game tonight 2026 NCAA tournament First Four March Madness games today: Tuesday, March 17 (16) UMBC vs. (16) Howard , 6:40 p.m. ET, truTV | Preview / box score (11) Texas vs. (11) NC State , 9:15 p.m. ET, truTV | Preview / box score Watch March Madness on Sling TV 2026 NCAA tournament First Four March Madness games: Wednesday, March 18 (16) Prairie View A&M vs. (16) Lehigh , 6:40 p.m. ET, truTV | Preview (11) Miami (Ohio) vs. (11) SMU , 9:15 p.m. ET, truTV | Preview Watch NCAA men's basketball tournament "
+      }
+    },
+    {
+      "id": "tool-ksiuoktn",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "NC State Wolfpack basketball late season form injuries March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:12:05.251Z",
+      "completedAt": "2026-03-17T21:12:06.178Z",
+      "summary": "Returned 5 search results for \"NC State Wolfpack basketball late season form injuries March 2026\".",
+      "result": [
+        {
+          "title": "Narrow losses defined the late-season issues for NC State - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnarrow%2Dlosses%2Ddefined%2Dthe%2Dlate%2Dseason%2Dissues%2Dfor%2Dnc%2Dstate%2Far%2DAA1XPHgU&rut=6d1574aaff7141bb3db12b25f7b655693f0efaf166469e993508e473439f3d83",
+          "snippet": "NC State Wolfpack head coach Will Wade and Clemson Tigers head coach Brad Brownell look down court Tuesday, Jan. 20, 2026 , during the NCAA men&#x27;s basketball game at Littlejohn Coliseum in Clemson ..."
+        },
+        {
+          "title": "NC State Basketball News - Inside Pack Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Finsidepacksports.com%2Fnc%2Dstate%2Dbasketball&rut=da113d9091bdc97a895ca5be7e1adf87ab410207a2ff79895da9213b768aa8b2",
+          "snippet": "The latest NC State Wolfpack , Basketball news, video, in-depth analysis, rumors and more from our Wolfpack , Basketball experts."
+        },
+        {
+          "title": "North Carolina State Wolfpack Injuries 2025-2026 - Updated NCAAB Injury ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fnorth%2Dcarolina%2Dstate%2Dwolfpack%2Finjuries&rut=f4c6393d68501e13c7a4c94b384a4bd16d319dacc8b09a0b8e07651933e09cb2",
+          "snippet": "Stay In the Know: Check Out North Carolina State Wolfpack Injuries Impacting The 2025- 2026 NCAAB Season ."
+        },
+        {
+          "title": "North Carolina State Wolfpack News, Schedule, Stats and Roster - USA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fnorth%2Dcarolina%2Dstate%2Dwolfpack%2F1538&rut=af9f05781b2bd4b7f956eb5bda47645de553def0791b81887e329643413836b7",
+          "snippet": "Latest North Carolina State Wolfpack news, schedule, stats, depth chart, roster, injuries , transactions and more from USA TODAY Sports."
+        },
+        {
+          "title": "Will Wade laments missed chances as NC State drops third straight ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fnc%2Dstate%2Farticle314782573.html&rut=4a6c2325b638115609242a8ac107a71be5e5ce6fc3f160db205b3defea244def",
+          "snippet": "NC State head coach Will Wade watches from the sideline during the second half of the Wolfpack&#x27;s 93-64 loss to Duke on Monday, March 2, 2026 , at Lenovo Center in Raleigh, N.C . Kaitlin McKeown ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-yiq3x5c7",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Texas Longhorns basketball SEC tournament 2026 results",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-17T21:12:06.178Z",
+      "completedAt": "2026-03-17T21:12:07.547Z",
+      "summary": "Returned 5 search results for \"Texas Longhorns basketball SEC tournament 2026 results\".",
+      "result": [
+        {
+          "title": "2026 SEC tournament: Bracket, schedule, scores for men&#x27;s basketball",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Farticle%2F2026%2D03%2D14%2F2026%2Dsec%2Dtournament%2Dbracket%2Dschedule%2Dscores%2Dmens%2Dbasketball&rut=6ebbe43ec005353c0ce2cd870893033110871226cf3a25b8285eea779b75656e",
+          "snippet": "Here&#x27;s everything you need to know for the 2026 SEC men&#x27;s basketball tournament . Games are Wednesday, March 11 through Sunday, March 15."
+        },
+        {
+          "title": "SEC basketball tournament 2026 scores, bracket as Arkansas rolls to ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fsec%2Dtournament%2D2026%2Dbracket%2Dschedule%2Dscores%2F&rut=82987236c49a05ac1ebaae492722d6e1eafcac6d02689e5be562552e969d8f88",
+          "snippet": "2026 SEC Tournament scores, results , bracket: Arkansas outlasts Vanderbilt to take home conference ccrown The Razorbacks completed an impressive run through the SEC Tournament with a victory over ..."
+        },
+        {
+          "title": "2026 SEC Men&#x27;s Basketball Tournament: Updated bracket, results ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fnews%2F2026%2Dsec%2Dmens%2Dbasketball%2Dtournament%2Dupdated%2Dbracket%2Dresults%2Dschedule%2Dtv%2F&rut=4083a32e5acfa732d69ba42bd563c4e4f5b2b2a83ccfe722f0c945053d0ed5dc",
+          "snippet": "Ole Miss took a 41-30 lead over Texas into halftime, but the Longhorns mounted the charge and got as close as three points in the second half. However, the Rebels pulled away to get the wire-to-wire, 76-66 victory and send No. 10-seeded Texas home from the SEC men&#x27;s basketball tournament ."
+        },
+        {
+          "title": "2026 SEC Men&#x27;s Basketball Tournament: Bracket, results, schedule, and ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportskeeda.com%2Fcollege%2Dbasketball%2F2026%2Dsec%2Dmen%2Ds%2Dbasketball%2Dtournament%2Dbracket%2Dresults%2Dschedule%2Dwatch&rut=5320832617ba51a9adcfcb5cf7a2410bb1150f8ec072e6add42fe517f9dd93fa",
+          "snippet": "The SEC men&#x27;s basketball tournament is underway. The top teams in the conference have converged in Nashville to compete for top honors."
+        },
+        {
+          "title": "SEC Tournament Results: Ole Miss Basketball Stun Texas Longhorns in ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Folemiss%2Fbasketball%2Fsec%2Dtournament%2Dresults%2Dole%2Dmiss%2Dbasketball%2Dstun%2Dtexas%2Dlonghorns%2Din%2Dthrilling%2Dwin%2D01kkfzx2wwdx&rut=a27db562ffee4825bfaacbcad8a0da0dfc0de6b150ef007cc660232582f68bf6",
+          "snippet": "NASHVILLE, Tenn. - The Ole Miss defense proved to be too much as it downed Texas 76-66 on Wednesday night in the First Round of the SEC Tournament at Bridgeston"
+        }
+      ]
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "ff-west-11-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-17T21:11:35.186Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: ff-west-11\nCurrent game label: West 11 play-in\nRound: First Four\nResolved teams: NC State (nc-state) vs Texas (texas)\nPrior committed picks: 0"
+    },
+    {
+      "id": "ff-west-11-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-17T21:11:35.186Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"ff-west-11\",\n      \"round\": \"First Four\",\n      \"region\": \"West\",\n      \"label\": \"West 11 play-in\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"nc-state\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"texas\"\n      }\n    },\n    \"slotAName\": \"NC State\",\n    \"slotBName\": \"Texas\",\n    \"slotATeamId\": \"nc-state\",\n    \"slotBTeamId\": \"texas\",\n    \"priorPicks\": []\n  },\n  \"priorPicks\": [],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "ff-west-11-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:11:38.614Z",
+      "content": "\n\nI'll investigate this matchup thoroughly before making my prediction."
+    },
+    {
+      "id": "ff-west-11-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:38.614Z",
+      "content": "\n\nI'll investigate this matchup thoroughly before making my prediction.",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "nc-state",
+          "texas"
+        ],
+        "teamNames": [
+          "NC State",
+          "Texas"
+        ]
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:38.620Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"nc-state\",\n      \"teamName\": \"NC State\",\n      \"torvik\": null,\n      \"kenpom\": null\n    },\n    {\n      \"teamId\": \"texas\",\n      \"teamName\": \"Texas\",\n      \"torvik\": {\n        \"rank\": 45,\n        \"team\": \"Texas\",\n        \"conf\": \"SEC\",\n        \"record\": \"18-14\",\n        \"adjoe\": 124.07462361953156,\n        \"oe Rank\": 21,\n        \"adjde\": 106.33467387240466,\n        \"de Rank\": 125\n      },\n      \"kenpom\": {\n        \"rank\": 37,\n        \"team\": \"Texas\",\n        \"conf\": \"SEC\",\n        \"record\": \"18-14\",\n        \"adj_em\": 19.06,\n        \"adj_o\": 125,\n        \"adj_o_rank\": 13,\n        \"adj_d\": 106\n      }\n    }\n  ]\n}",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "nc-state",
+          "teamName": "NC State",
+          "torvik": null,
+          "kenpom": null
+        },
+        {
+          "teamId": "texas",
+          "teamName": "Texas",
+          "torvik": {
+            "rank": 45,
+            "team": "Texas",
+            "conf": "SEC",
+            "record": "18-14",
+            "adjoe": 124.07462361953156,
+            "oe Rank": 21,
+            "adjde": 106.33467387240466,
+            "de Rank": 125,
+            "barthag": 0.8549984619424512,
+            "rank.1": 45,
+            "proj. W": 18,
+            "Proj. L": 14,
+            "Pro Con W": 9,
+            "Pro Con L": 9,
+            "Con Rec.": "9-9",
+            "sos": 0.6720865157151653,
+            "ncsos": 0.412277676911223,
+            "consos": 0.8531351325806701,
+            "Proj. SOS": 0.6720865157151653,
+            "Proj. Noncon SOS": 0.412277676911223,
+            "Proj. Con SOS": 0.8531351325806701,
+            "elite SOS": 0.6341347383139722,
+            "elite noncon SOS": 0.7694719637451559,
+            "Opp OE": 116.19011000954512,
+            "Opp DE": 105.0861491332151,
+            "Opp Proj. OE": 116.19011000954512,
+            "Opp Proj DE": 105.0861491332151,
+            "Con Adj OE": 126.40616016051996,
+            "Con Adj DE": 106.73610405157712,
+            "Qual O": 125.2919635105071,
+            "Qual D": 105.59265782448207,
+            "Qual Barthag": 0.8773063483327939,
+            "Qual Games": 18,
+            "FUN": -0.0072864331866986,
+            "ConPF": 1472,
+            "ConPA": 1455,
+            "ConPoss": 1231.5875,
+            "ConOE": 1.1952053751763478,
+            "ConDE": 1.1814020522293385,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5,
+            "WAB": -0.2348223832620721,
+            "WAB Rk": 48,
+            "Fun Rk": 193,
+            "adjt": 67.0608431124123
+          },
+          "kenpom": {
+            "rank": 37,
+            "team": "Texas",
+            "conf": "SEC",
+            "record": "18-14",
+            "adj_em": 19.06,
+            "adj_o": 125,
+            "adj_o_rank": 13,
+            "adj_d": 106,
+            "adj_d_rank": 111,
+            "adj_t": 66.9,
+            "adj_t_rank": 206,
+            "luck": -0.083,
+            "luck_rank": 345,
+            "sos_adj_em": 13.67,
+            "sos_adj_em_rank": 20,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 17,
+            "sos_opp_d": 103.7,
+            "sos_opp_d_rank": 31,
+            "ncsos_adj_em": -6.34,
+            "ncsos_adj_em_rank": 320
+          }
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-tool-call-0-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:38.620Z",
+      "content": "\n\nI'll investigate this matchup thoroughly before making my prediction.",
+      "toolName": "get_games",
+      "arguments": {
+        "gameIds": [
+          "ff-west-11"
+        ]
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-0-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:38.620Z",
+      "content": "{\n  \"toolName\": \"get_games\",\n  \"result\": [\n    {\n      \"id\": \"ff-west-11\",\n      \"round\": \"First Four\",\n      \"region\": \"West\",\n      \"label\": \"West 11 play-in\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"nc-state\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"texas\"\n      }\n    }\n  ]\n}",
+      "toolName": "get_games",
+      "result": [
+        {
+          "id": "ff-west-11",
+          "round": "First Four",
+          "region": "West",
+          "label": "West 11 play-in",
+          "slotA": {
+            "kind": "team",
+            "teamId": "nc-state"
+          },
+          "slotB": {
+            "kind": "team",
+            "teamId": "texas"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-tool-call-0-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:38.620Z",
+      "content": "\n\nI'll investigate this matchup thoroughly before making my prediction.",
+      "toolName": "list_teams",
+      "arguments": {
+        "region": "West"
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-0-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:38.620Z",
+      "content": "{\n  \"toolName\": \"list_teams\",\n  \"result\": [\n    {\n      \"id\": \"arizona\",\n      \"name\": \"Arizona\",\n      \"shortName\": \"ARIZ\",\n      \"seed\": 1,\n      \"region\": \"West\",\n      \"conference\": \"Big 12\"\n    },\n    {\n      \"id\": \"purdue\",\n      \"name\": \"Purdue\",\n      \"shortName\": \"PUR\",\n      \"seed\": 2,\n      \"region\": \"West\",\n      \"conference\": \"Big Ten\"\n    },\n    {\n      \"id\": \"gonzaga\",\n      \"name\": \"Gonzaga\",\n      \"shortName\": \"GONZ\",\n      \"seed\": 3,\n      \"region\": \"West\",\n      \"conference\": \"WCC\"\n    },\n    {\n      \"id\": \"arkansas\",\n      \"name\": \"Arkansas\",\n      \"shortName\": \"ARK\",\n      \"seed\": 4,\n      \"region\": \"West\",\n      \"conference\": \"SEC\"\n    }\n  ]\n}",
+      "toolName": "list_teams",
+      "result": [
+        {
+          "id": "arizona",
+          "name": "Arizona",
+          "shortName": "ARIZ",
+          "seed": 1,
+          "region": "West",
+          "conference": "Big 12"
+        },
+        {
+          "id": "purdue",
+          "name": "Purdue",
+          "shortName": "PUR",
+          "seed": 2,
+          "region": "West",
+          "conference": "Big Ten"
+        },
+        {
+          "id": "gonzaga",
+          "name": "Gonzaga",
+          "shortName": "GONZ",
+          "seed": 3,
+          "region": "West",
+          "conference": "WCC"
+        },
+        {
+          "id": "arkansas",
+          "name": "Arkansas",
+          "shortName": "ARK",
+          "seed": 4,
+          "region": "West",
+          "conference": "SEC"
+        },
+        {
+          "id": "wisconsin",
+          "name": "Wisconsin",
+          "shortName": "WIS",
+          "seed": 5,
+          "region": "West",
+          "conference": "Big Ten"
+        },
+        {
+          "id": "byu",
+          "name": "BYU",
+          "shortName": "BYU",
+          "seed": 6,
+          "region": "West",
+          "conference": "Big 12"
+        },
+        {
+          "id": "miami-fl",
+          "name": "Miami (FL)",
+          "shortName": "MIA",
+          "seed": 7,
+          "region": "West",
+          "conference": "ACC"
+        },
+        {
+          "id": "villanova",
+          "name": "Villanova",
+          "shortName": "NOVA",
+          "seed": 8,
+          "region": "West",
+          "conference": "Big East"
+        },
+        {
+          "id": "utah-state",
+          "name": "Utah State",
+          "shortName": "USU",
+          "seed": 9,
+          "region": "West",
+          "conference": "MWC"
+        },
+        {
+          "id": "missouri",
+          "name": "Missouri",
+          "shortName": "MIZZ",
+          "seed": 10,
+          "region": "West",
+          "conference": "SEC"
+        },
+        {
+          "id": "high-point",
+          "name": "High Point",
+          "shortName": "HPU",
+          "seed": 12,
+          "region": "West",
+          "conference": "Big South"
+        },
+        {
+          "id": "hawai-i",
+          "name": "Hawai'i",
+          "shortName": "HAW",
+          "seed": 13,
+          "region": "West",
+          "conference": "Big West"
+        },
+        {
+          "id": "kennesaw-state",
+          "name": "Kennesaw State",
+          "shortName": "KENN",
+          "seed": 14,
+          "region": "West",
+          "conference": "Conference USA"
+        },
+        {
+          "id": "queens",
+          "name": "Queens",
+          "shortName": "QUE",
+          "seed": 15,
+          "region": "West",
+          "conference": "ASUN"
+        },
+        {
+          "id": "liu",
+          "name": "LIU",
+          "shortName": "LIU",
+          "seed": 16,
+          "region": "West",
+          "conference": "NEC"
+        },
+        {
+          "id": "nc-state",
+          "name": "NC State",
+          "shortName": "NCSU",
+          "seed": 11,
+          "region": "West",
+          "conference": "ACC"
+        },
+        {
+          "id": "texas",
+          "name": "Texas",
+          "shortName": "TEX",
+          "seed": 11,
+          "region": "West",
+          "conference": "SEC"
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:11:42.850Z",
+      "content": "NC State's ratings didn't return. Let me search for their data specifically and also look for recent news on both teams."
+    },
+    {
+      "id": "ff-west-11-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:42.850Z",
+      "content": "NC State's ratings didn't return. Let me search for their data specifically and also look for recent news on both teams.",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamNames": [
+          "N.C. State",
+          "NC St"
+        ]
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:42.860Z",
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": null,\n      \"teamName\": \"n c state\",\n      \"torvik\": {\n        \"rank\": 38,\n        \"team\": \"N.C. State\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adjoe\": 124.06960609472424,\n        \"oe Rank\": 22,\n        \"adjde\": 104.62134239763014,\n        \"de Rank\": 90\n      },\n      \"kenpom\": {\n        \"rank\": 34,\n        \"team\": \"N.C. State\",\n        \"conf\": \"ACC\",\n        \"record\": \"20-13\",\n        \"adj_em\": 19.58,\n        \"adj_o\": 124.1,\n        \"adj_o_rank\": 19,\n        \"adj_d\": 104.5\n      }\n    }\n  ]\n}",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": null,
+          "teamName": "n c state",
+          "torvik": {
+            "rank": 38,
+            "team": "N.C. State",
+            "conf": "ACC",
+            "record": "20-13",
+            "adjoe": 124.06960609472424,
+            "oe Rank": 22,
+            "adjde": 104.62134239763014,
+            "de Rank": 90,
+            "barthag": 0.8766080993795531,
+            "rank.1": 38,
+            "proj. W": 20,
+            "Proj. L": 13,
+            "Pro Con W": 10,
+            "Pro Con L": 8,
+            "Con Rec.": "10-8",
+            "sos": 0.7183001993651092,
+            "ncsos": 0.5806782921860315,
+            "consos": 0.8075295532439207,
+            "Proj. SOS": 0.7183001993651092,
+            "Proj. Noncon SOS": 0.5806782921860315,
+            "Proj. Con SOS": 0.8075295532439207,
+            "elite SOS": 0.6726662992486109,
+            "elite noncon SOS": 0.7854976866502068,
+            "Opp OE": 115.48351227965424,
+            "Opp DE": 104.2461052919212,
+            "Opp Proj. OE": 115.48351227965424,
+            "Opp Proj DE": 104.2461052919212,
+            "Con Adj OE": 123.51125479131537,
+            "Con Adj DE": 104.48811009098112,
+            "Qual O": 122.83217661624842,
+            "Qual D": 105.09916620902082,
+            "Qual Barthag": 0.8572969678627441,
+            "Qual Games": 13,
+            "FUN": -0.0254703716361401,
+            "ConPF": 1442,
+            "ConPA": 1418,
+            "ConPoss": 1253.9125,
+            "ConOE": 1.1500004984398833,
+            "ConDE": 1.1308604069263206,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5555555555555556,
+            "WAB": 0.2568222652515392,
+            "WAB Rk": 45,
+            "Fun Rk": 240,
+            "adjt": 69.06960359141047
+          },
+          "kenpom": {
+            "rank": 34,
+            "team": "N.C. State",
+            "conf": "ACC",
+            "record": "20-13",
+            "adj_em": 19.58,
+            "adj_o": 124.1,
+            "adj_o_rank": 19,
+            "adj_d": 104.5,
+            "adj_d_rank": 86,
+            "adj_t": 69.1,
+            "adj_t_rank": 86,
+            "luck": -0.029,
+            "luck_rank": 261,
+            "sos_adj_em": 11.9,
+            "sos_adj_em_rank": 37,
+            "sos_opp_o": 116,
+            "sos_opp_o_rank": 39,
+            "sos_opp_d": 104.1,
+            "sos_opp_d_rank": 41,
+            "ncsos_adj_em": 4.03,
+            "ncsos_adj_em_rank": 85
+          }
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:42.860Z",
+      "content": "NC State's ratings didn't return. Let me search for their data specifically and also look for recent news on both teams.",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "NC State Wolfpack basketball 2025-26 season KenPom Torvik ratings",
+        "maxResults": 5
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:43.579Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Where Does KenPom, Bart Torvik & Evan Miya Rank NC State After Their\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fpackinsider.com%2F2025%2F11%2F04%2Fwhere%2Ddoes%2Dkenpom%2Dbart%2Dtorvik%2Devan%2Dmiya%2Drank%2Dnc%2Dstate%2Dafter%2Dtheir%2Dseason%2Dopening%2Dwin%2Dover%2Dnccu%2F&rut=90a4d856561d1f289b795548b926f5ada4e4b7733a92af5a3128805429ec3822\",\n      \"snippet\": \"NC State defeated North Carolina Central 114-66 last night in their season opener at the Lenovo Center. How much did the Wolfpack climb in the stat gurus&#x27; rankings? NC State jumped from 26th to 21st in Evan Miya&#x27;s Team Ratings . The Wolfpack jumped from 38th to 31st in KenPom&#x27;s Rankings. Bart Torvik moved NC State up from 39th to 35th.\"\n    },\n    {\n      \"title\": \"2025 Pomeroy College Basketball Ratings - kenpom.com\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php%3Fy%3D2025&rut=2528b405f03d82f7117335c40c369a1ff6ca3d38f0084233c1a8ade0292d3d81\",\n      \"snippet\": \"2025 Pomeroy College Basketball Ratings help 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25· 26\"\n    },\n    {\n      \"title\": \"Bart Torvik - Verifying Browser...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.barttorvik.com%2F&rut=c7dca4b3c0ff168cb7b6dcf97e019a17aaf1875fa77b1e7f3cdbc4729a20a85f\",\n      \"snippet\": \"Explore college basketball ratings , rankings, and statistics with Bart Torvik&#x27;s innovative tools and insights.\"\n    },\n    {\n      \"title\": \"2025-26 NC State Wolfpack Men&#x27;s Roster and Stats | College Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fnorth%2Dcarolina%2Dstate%2Fmen%2F2026.html&rut=19d7b636ed0fef12b191a6e612bddfd0b1bb593df65d83bace915041c5b89a13\",\n      \"snippet\": \"Check out the detailed 2025-26 NC State Wolfpack Roster and Stats for College Basketball at Sports-Reference.com\"\n    }\n  ]\n}",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Where Does KenPom, Bart Torvik & Evan Miya Rank NC State After Their",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fpackinsider.com%2F2025%2F11%2F04%2Fwhere%2Ddoes%2Dkenpom%2Dbart%2Dtorvik%2Devan%2Dmiya%2Drank%2Dnc%2Dstate%2Dafter%2Dtheir%2Dseason%2Dopening%2Dwin%2Dover%2Dnccu%2F&rut=90a4d856561d1f289b795548b926f5ada4e4b7733a92af5a3128805429ec3822",
+          "snippet": "NC State defeated North Carolina Central 114-66 last night in their season opener at the Lenovo Center. How much did the Wolfpack climb in the stat gurus&#x27; rankings? NC State jumped from 26th to 21st in Evan Miya&#x27;s Team Ratings . The Wolfpack jumped from 38th to 31st in KenPom&#x27;s Rankings. Bart Torvik moved NC State up from 39th to 35th."
+        },
+        {
+          "title": "2025 Pomeroy College Basketball Ratings - kenpom.com",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fkenpom.com%2Findex.php%3Fy%3D2025&rut=2528b405f03d82f7117335c40c369a1ff6ca3d38f0084233c1a8ade0292d3d81",
+          "snippet": "2025 Pomeroy College Basketball Ratings help 02 · 03 · 04 · 05 · 06 · 07 · 08 · 09 · 10 · 11 · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24 · 25· 26"
+        },
+        {
+          "title": "Bart Torvik - Verifying Browser...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.barttorvik.com%2F&rut=c7dca4b3c0ff168cb7b6dcf97e019a17aaf1875fa77b1e7f3cdbc4729a20a85f",
+          "snippet": "Explore college basketball ratings , rankings, and statistics with Bart Torvik&#x27;s innovative tools and insights."
+        },
+        {
+          "title": "2025-26 NC State Wolfpack Men&#x27;s Roster and Stats | College Basketball ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fnorth%2Dcarolina%2Dstate%2Fmen%2F2026.html&rut=19d7b636ed0fef12b191a6e612bddfd0b1bb593df65d83bace915041c5b89a13",
+          "snippet": "Check out the detailed 2025-26 NC State Wolfpack Roster and Stats for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "2025-26 NC State Wolfpack men&#x27;s basketball team - Wikipedia",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2F2025%25E2%2580%259326_NC_State_Wolfpack_men%2527s_basketball_team&rut=5f71e143d460951377ba0c6f1020e4913660cebd9576bfa016c49644718d27ed",
+          "snippet": "The 2025-26 NC State Wolfpack men&#x27;s basketball team represents North Carolina State University during the 2025-26 NCAA Division I men&#x27;s basketball season . The Wolfpack are led by first-year head coach Will Wade and play their home games at Lenovo Center in Raleigh, North Carolina as members of the Atlantic Coast Conference (ACC)."
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-tool-call-1-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:43.579Z",
+      "content": "NC State's ratings didn't return. Let me search for their data specifically and also look for recent news on both teams.",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Texas Longhorns basketball 2025-26 season March Madness injuries news",
+        "maxResults": 5
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-1-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:44.287Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Texas Longhorns News, Scores and Stats 2025-26 - CBS Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fteams%2FTEXAS%2Ftexas%2Dlonghorns%2F&rut=a49998170068dfd613fb22ee403b7c64a8dd928acd46ed7ca6dcedefd5a87f3a\",\n      \"snippet\": \"CBS Sports has the latest Texas Longhorns news and information, including team scores, stats, highlights and more for the 2025 College Basketball season .\"\n    },\n    {\n      \"title\": \"Texas Longhorns Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F251%2Ftexas%2Dlonghorns&rut=d038d037076f4146083388c7b5309fce572f8025eb00feff0e1a178b39ad718e\",\n      \"snippet\": \"Visit ESPN for Texas Longhorns live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Texas Longhorns men&#x27;s basketball: Big men recovering from injuries ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kxan.com%2Fsports%2Dgeneral%2Fhorns%2Dreport%2Ftexas%2Dmens%2Dbasketball%2Dstrides%2Dtoward%2Dseason%2Dtip%2Doff%2Dagainst%2Dduke%2Din%2Dspite%2Dof%2Dinjuries%2F&rut=7668ee514f06cdc644969d67e06269a634a2f855984ec1580f51548e33d52daf\",\n      \"snippet\": \"AUSTIN (KXAN) — Texas basketball is dealing with multiple injuries as the team approaches the start of the 2025-26 season , having lost two big men over the past few weeks. \\\"We ran into two ...\"\n    },\n    {\n      \"title\": \"Men&#x27;s Basketball - University of Texas Athletics\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Ftexaslonghorns.com%2Fsports%2Fmens%2Dbasketball&rut=48d48c6138d334a67d444551da0d52ce2f3d8ba5d8dc1af28e94d59cb8f4f286\",\n      \"snippet\": \"The official Men&#x27;s Basketball page for the University of Texas Longhorns\"\n    }\n  ]\n}",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Texas Longhorns News, Scores and Stats 2025-26 - CBS Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fteams%2FTEXAS%2Ftexas%2Dlonghorns%2F&rut=a49998170068dfd613fb22ee403b7c64a8dd928acd46ed7ca6dcedefd5a87f3a",
+          "snippet": "CBS Sports has the latest Texas Longhorns news and information, including team scores, stats, highlights and more for the 2025 College Basketball season ."
+        },
+        {
+          "title": "Texas Longhorns Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F251%2Ftexas%2Dlonghorns&rut=d038d037076f4146083388c7b5309fce572f8025eb00feff0e1a178b39ad718e",
+          "snippet": "Visit ESPN for Texas Longhorns live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Texas Longhorns men&#x27;s basketball: Big men recovering from injuries ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kxan.com%2Fsports%2Dgeneral%2Fhorns%2Dreport%2Ftexas%2Dmens%2Dbasketball%2Dstrides%2Dtoward%2Dseason%2Dtip%2Doff%2Dagainst%2Dduke%2Din%2Dspite%2Dof%2Dinjuries%2F&rut=7668ee514f06cdc644969d67e06269a634a2f855984ec1580f51548e33d52daf",
+          "snippet": "AUSTIN (KXAN) — Texas basketball is dealing with multiple injuries as the team approaches the start of the 2025-26 season , having lost two big men over the past few weeks. \"We ran into two ..."
+        },
+        {
+          "title": "Men&#x27;s Basketball - University of Texas Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Ftexaslonghorns.com%2Fsports%2Fmens%2Dbasketball&rut=48d48c6138d334a67d444551da0d52ce2f3d8ba5d8dc1af28e94d59cb8f4f286",
+          "snippet": "The official Men&#x27;s Basketball page for the University of Texas Longhorns"
+        },
+        {
+          "title": "Texas Longhorns Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Ftexas%2Dlonghorns%2Finjuries&rut=6a7b85af95377accdd674458a0895588df2143b380ca7ff8a2460c87fde03eca",
+          "snippet": "Stay In the Know: Check Out Texas Longhorns Injuries Impacting The 2025 -2026 NCAAB Season ."
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:11:49.399Z",
+      "content": "Let me get more details on Texas injuries and NC State's recent form."
+    },
+    {
+      "id": "ff-west-11-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:49.399Z",
+      "content": "Let me get more details on Texas injuries and NC State's recent form.",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "NC State Wolfpack basketball 2026 March Madness tournament",
+        "maxResults": 5
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:50.093Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"NC State 98-88 Pittsburgh (Mar 11, 2026) Game Recap - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%3FgameId%3D401851173&rut=04f563ca867cec3ce0de5f337f7b8002b3bf9f22d9c38f01bdef3195b7a0f42c\",\n      \"snippet\": \"Expert recap and game analysis of the NC State Wolfpack vs. Pittsburgh Panthers NCAAM game from March 11, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"NC State 98-88 Pittsburgh (Mar 11, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851173%2Fpitt%2Dnc%2Dstate&rut=bb92d123f24bf8fb0205c9d0d9cec9302d79d02dc0e91801927ae7766c3465fd\",\n      \"snippet\": \"Game summary of the NC State Wolfpack vs. Pittsburgh Panthers NCAAM game, final score 98-88, from March 11, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"Virginia 81-74 NC State (Mar 12, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851177%2Fnc%2Dstate%2Dvirginia&rut=d97f5c30087991750d88ba9c60d6a1fe739741d8c26ae095a6f28b1a41f1bade\",\n      \"snippet\": \"Game summary of the Virginia Cavaliers vs. NC State Wolfpack NCAAM game, final score 81-74, from March 12, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"Most probable first-round upsets in the men&#x27;s 2026 NCAA tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48223542%2Fncaa%2Dtournament%2Dupsets%2Dfirst%2Dround%2Dgiant%2Dkillers%2Dmarch%2Dmadness%2D2026&rut=bf48d55e9238edc9a5c52fee89b588d4579e5a4ff90426d06008621c69a1bab6\",\n      \"snippet\": \"Potential matchup: 7:25 p.m. ET on Thursday NC State enters the tournament having lost seven of its past nine games. But just two years ago, the Wolfpack made a run to the Final Four as an 11-seed.\"\n    }\n  ]\n}",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "NC State 98-88 Pittsburgh (Mar 11, 2026) Game Recap - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%3FgameId%3D401851173&rut=04f563ca867cec3ce0de5f337f7b8002b3bf9f22d9c38f01bdef3195b7a0f42c",
+          "snippet": "Expert recap and game analysis of the NC State Wolfpack vs. Pittsburgh Panthers NCAAM game from March 11, 2026 on ESPN."
+        },
+        {
+          "title": "NC State 98-88 Pittsburgh (Mar 11, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851173%2Fpitt%2Dnc%2Dstate&rut=bb92d123f24bf8fb0205c9d0d9cec9302d79d02dc0e91801927ae7766c3465fd",
+          "snippet": "Game summary of the NC State Wolfpack vs. Pittsburgh Panthers NCAAM game, final score 98-88, from March 11, 2026 on ESPN."
+        },
+        {
+          "title": "Virginia 81-74 NC State (Mar 12, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401851177%2Fnc%2Dstate%2Dvirginia&rut=d97f5c30087991750d88ba9c60d6a1fe739741d8c26ae095a6f28b1a41f1bade",
+          "snippet": "Game summary of the Virginia Cavaliers vs. NC State Wolfpack NCAAM game, final score 81-74, from March 12, 2026 on ESPN."
+        },
+        {
+          "title": "Most probable first-round upsets in the men&#x27;s 2026 NCAA tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48223542%2Fncaa%2Dtournament%2Dupsets%2Dfirst%2Dround%2Dgiant%2Dkillers%2Dmarch%2Dmadness%2D2026&rut=bf48d55e9238edc9a5c52fee89b588d4579e5a4ff90426d06008621c69a1bab6",
+          "snippet": "Potential matchup: 7:25 p.m. ET on Thursday NC State enters the tournament having lost seven of its past nine games. But just two years ago, the Wolfpack made a run to the Final Four as an 11-seed."
+        },
+        {
+          "title": "Stanford 85-84 NC State (Mar 7, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%2F_%2FgameId%2F401820791%2Fstanford%2Dnc%2Dstate&rut=d5375a7e14327de40999b06500f61aa28e18ad5cbb17522d1f8b6a644b7fa581",
+          "snippet": "Game summary of the Stanford Cardinal vs. NC State Wolfpack NCAAM game, final score 85-84, from March 7, 2026 on ESPN."
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-tool-call-2-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:50.093Z",
+      "content": "Let me get more details on Texas injuries and NC State's recent form.",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Texas Longhorns basketball 2026 injuries roster updates",
+        "maxResults": 5
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-2-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:50.156Z",
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}",
+      "toolName": "search_espn_news",
+      "result": []
+    },
+    {
+      "id": "ff-west-11-tool-call-2-2",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:50.156Z",
+      "content": "Let me get more details on Texas injuries and NC State's recent form.",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.kxan.com/sports-general/horns-report/texas-mens-basketball-strides-toward-season-tip-off-against-duke-in-spite-of-injuries/",
+        "maxChars": 3000
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-2-2",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:50.354Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"error\": \"fetch_webpage failed: 403  <!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n  <head>\\n    <meta charset=\\\"utf-8\\\" />\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\" />\\n    <meta name=\\\"description\\\" content=\\\"px-captcha\\\" />\\n    <title>Access to this page has been denied</title>\\n    \\n  </head>\\n  <body>\\n    <script>\\n      window._pxVid = '';\\n      window._pxUuid = 'ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96';\\n      window._pxAppId = 'PXCvbtpUrj';\\n      window._pxHostUrl = '/CvbtpUrj/xhr';\\n      window._pxCustomLogo = '';\\n      window._pxJsClientSrc = '/CvbtpUrj/init.js';\\n      window._pxFirstPartyEnabled =\\n        'true';\\n      var script = document.createElement(\\\"script\\\");\\n      script.src = '/CvbtpUrj/captcha/captcha.js?a=c&u=ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&v=&m=0&h=R0VU';\\n      document.head.appendChild(script);\\n      script.onerror = function () {\\n        script = document.createElement(\\\"script\\\");\\n        script.src = 'https://captcha.px-cloud.net/PXCvbtpUrj/captcha.js?a=c&u=ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&v=&m=0&h=R0VU';\\n        script.onerror = window._pxDisplayErrorMessage;\\n        document.head.appendChild(script);\\n      };\\n\\n\\n      window._pxDisplayErrorMessage = functi... [truncated 5345 chars]\"\n  }\n}",
+      "toolName": "fetch_webpage",
+      "result": {
+        "error": "fetch_webpage failed: 403  <!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"description\" content=\"px-captcha\" />\n    <title>Access to this page has been denied</title>\n    \n  </head>\n  <body>\n    <script>\n      window._pxVid = '';\n      window._pxUuid = 'ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96';\n      window._pxAppId = 'PXCvbtpUrj';\n      window._pxHostUrl = '/CvbtpUrj/xhr';\n      window._pxCustomLogo = '';\n      window._pxJsClientSrc = '/CvbtpUrj/init.js';\n      window._pxFirstPartyEnabled =\n        'true';\n      var script = document.createElement(\"script\");\n      script.src = '/CvbtpUrj/captcha/captcha.js?a=c&u=ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&v=&m=0&h=R0VU';\n      document.head.appendChild(script);\n      script.onerror = function () {\n        script = document.createElement(\"script\");\n        script.src = 'https://captcha.px-cloud.net/PXCvbtpUrj/captcha.js?a=c&u=ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&v=&m=0&h=R0VU';\n        script.onerror = window._pxDisplayErrorMessage;\n        document.head.appendChild(script);\n      };\n\n\n      window._pxDisplayErrorMessage = function () {\n        var t = document.createElement(\"style\");\n        t.innerText =\n          \"@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);body{background-color:#fafbfc}@media (max-width:480px){body{background-color:#fff}}.px-captcha-error-container{position:fixed;height:328px;background-color:#fff;font-family:Roboto,sans-serif}.px-captcha-error-header{color:#f0f1f2;font-size:29px;margin:67px 0 33px;font-weight:500;line-height:.83;text-align:center}.px-captcha-error-message{color:#f0f1f2;font-size:18px;margin:0 0 29px;line-height:1.33;text-align:center}div.px-captcha-error-button{text-align:center;line-height:50px;width:253px;margin:auto;border-radius:25px;border:solid 1px #f0f1f2;font-size:20px;color:#f0f1f2}div.px-captcha-error-wrapper{margin:23px 0 0}div.px-captcha-error{margin:auto;text-align:center;width:500px;height:86px;font-size:12px;background-color:#fcf0f2;color:#ce0e2d}img.px-captcha-error{margin:6px 10px -2px 0}@media (min-width:620px){.px-captcha-error-container{width:528px;top:50%;left:50%;margin-top:-164px;margin-left:-264px;border-radius:3px;box-shadow:0 2px 9px -1px rgba(0,0,0,.13)}}@media (min-width:481px) and (max-width:620px){.px-captcha-error-container{width:85%;top:50%;left:50%;margin-top:-164px;margin-left:-42.5%;border-radius:3px;box-shadow:0 2px 9px -1px rgba(0,0,0,.13)}}@media (max-width:480px){.px-captcha-error-container{width:528px;top:50%;left:50%;margin-top:-164px;margin-left:-264px}}\";\n        document.head.appendChild(t);\n        var r = document.createElement(\"div\");\n        r.className = \"px-captcha-error-container\";\n        r.innerHTML =\n          '<div class=\"px-captcha-error-header\">Before we continue...</div><div class=\"px-captcha-error-message\">Press & Hold to confirm you are<br>a human (and not a bot).</div><div class=\"px-captcha-error-button\">Press & Hold</div><div class=\"px-captcha-error-wrapper\"><div class=\"px-captcha-error\"><img class=\"px-captcha-error\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABFUExURUdwTNYELOEGONQILd0AONwALtwEL+AAL9MFLfkJSNQGLdMJLdQJLdQGLdQKLtYFLNcELdUGLdcBL9gFL88OLdUFLNEOLglBhT4AAAAXdFJOUwC8CqgNIRgRoAS1dWWuR4RTjzgryZpYblfkcAAAAI9JREFUGNNdj+sWhCAIhAdvqGVa1r7/oy6RZ7eaH3D4ZACBIed9wlOOMtUnSrEmZ6cHa9YAIfsbCkWrdpi/c50Bk2CO9mNLdMAu03wJA3HpEnfpxbyOg6ruyx8JJi6KNstnslp1dbPd9GnqmuYq7mmcv1zjnbQw8cV0xzkqo+fX1zkjUOO7wnrInUTxJiruC3vtBNRoQQn2AAAAAElFTkSuQmCC\">Please check your network connection or disable your ad-blocker.<br/><br/>Please allow-list the domain <b>captcha.px-cloud.net</b> in your ad-blocker.<br/><br/>For instructions on how to add to the allow-list or disable your ad-blocker please <a style=\"color:darkred;\" target=\"_blank\" href=\"https://instructions.humandemo.zone/disableadblockers.html\">click here</a>.</div></div>';\n        document.body.appendChild(r);\n      };\n\n      var cip = '94.10.246.230';\n      var ets = 'Tue, 17 Mar 2026 21:11:50 GMT';\n      setTimeout(function () {\n        try {\n          document.getElementsByClassName(\"px-captcha-error-wrapper\")[0].innerHTML = document.getElementsByClassName(\"px-captcha-error-wrapper\")[0].innerHTML + '<div style=\"text-align:center\"><br/>If you have any issues, please contact us at <a style=\"color:#626364;font-weight:bold;\" href=\"mailto:' + 'challengehelp' + '@' + 'humansecurity.com?subject=Bot Challenge Issue - Reference ID #' + window._pxUuid + '&body=Client IP: ' + cip + '%0D%0ATimestamp: ' + ets + '%0D%0A---Please describe the issue you experienced below this line---\">' + 'challengehelp' + '@' + 'humansecurity.com' + '</a></div>';\n        } catch(ex) {\n\n        }\n      }, 500);\n    </script>\n    \n    <noscript>\n      <div style=\"text-align:center;position:absolute;top:50%;left:50%;width:500px;height:300px;margin-left:-250px;margin-top:-150px;\">\n        <font style=\"font-family:Calibri, sans-serif;\">\n          Your browser appears to have Javascript disabled.<br/><br/>For instructions on how to enable Javascript please <a target=\"_blank\" style=\"color:#626364;font-weight:bold;\" href=\"https://instructions.humandemo.zone/enablejavascript.html\">click here</a>.<br/><br/>If you have any issues, please contact us at <a style=\"color:#626364;font-weight:bold;\" href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#104;&#97;&#108;&#108;&#101;&#110;&#103;&#101;&#104;&#101;&#108;&#112;&#64;&#104;&#117;&#109;&#97;&#110;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#66;&#111;&#116;&#37;&#50;&#48;&#67;&#104;&#97;&#108;&#108;&#101;&#110;&#103;&#101;&#37;&#50;&#48;&#73;&#115;&#115;&#117;&#101;&#37;&#50;&#48;&#45;&#37;&#50;&#48;&#74;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#37;&#50;&#48;&#68;&#105;&#115;&#97;&#98;&#108;&#101;&#100; - Reference ID #ea3c4cd9-2245-11f1-ad2f-3dbe4dcdba96&#38;&#98;&#111;&#100;&#121;&#61;Client IP: 94.10.246.230%0D%0ATimestamp: Tue, 17 Mar 2026 21:11:50 GMT%0D%0A---Please describe the issue you experienced below this line---\">&#99;&#104;&#97;&#108;&#108;&#101;&#110;&#103;&#101;&#104;&#101;&#108;&#112;&#64;&#104;&#117;&#109;&#97;&#110;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#46;&#99;&#111;&#109;</a>\n        </font>\n      </div>\n    </noscript>\n  </body>\n</html>\n "
+      }
+    },
+    {
+      "id": "ff-west-11-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:11:54.303Z",
+      "content": ""
+    },
+    {
+      "id": "ff-west-11-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:54.303Z",
+      "content": "",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48223542/ncaa-tournament-upsets-first-round-giant-killers-march-madness-2026",
+        "maxChars": 4000
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:54.772Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/story/_/id/48223542/ncaa-tournament-upsets-first-round-giant-killers-march-madness-2026\",\n    \"text\": \"Most probable first-round upsets in the men's 2026 NCAA tournament - ESPN Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 9h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 2d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 1d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 23h Sach Chandan Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 5h Mark Zinno Si... [truncated 1800 chars]\"\n  }\n}",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48223542/ncaa-tournament-upsets-first-round-giant-killers-march-madness-2026",
+        "text": "Most probable first-round upsets in the men's 2026 NCAA tournament - ESPN Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 9h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 2d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 1d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 23h Sach Chandan Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 5h Mark Zinno Six tips on how to bet the men's tournament like a veteran 2d Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 13h Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 1d Jeff Borzello Most probable first-round upsets in the men's 2026 NCAA tournament play VCU's NCAA tournament preview (0:36) Joe Lunardi breaks down the VCU Rams' NCAA tournament prospects. (0:36) Keith Lipscomb Mar 17, 2026, 08:30 AM ET Close Keith Lipscomb is a senior editor for ESPN Fantasy and a contributing writer for men's college basketball at ESPN. Follow on X Multiple Authors Email Print Open Extended Reactions Cinderella hasn't shown her face much of late. Only five double-digit seeds won in the first round of the 2025 men's NCAA tournament, and two were 10-seeds, which don't qualify as Giant Killers for the purposes of this column. The Elite Eight was tied for the chalkiest of all time -- all top-three seeds or better -- and the Final Four was just the second ever to feature four 1-seeds. But we know that part of what makes March Madness so fun is the upsets and trying to identify them before they happen. Editor's Picks Joe Lunardi's ultimate guide to men's March Madness 2026 Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Jay Bilas Men's March Madness 2026 bracket: Get to know all 68 teams Myron Medcalf 2 Related To find this year's potential candidates, we consulted ESPN's BPI projections to find the matchups with the highest upset probabilities. Just keep in mind that probability does not mean predictability when filling out your brackets . And the probability of there being"
+      }
+    },
+    {
+      "id": "ff-west-11-tool-call-3-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:11:54.772Z",
+      "content": "",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "NC State vs Texas 2026 NCAA tournament First Four play-in game preview",
+        "maxResults": 5
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-3-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:11:55.585Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"How to Watch the Texas Longhorns vs. NC State Wolfpack 2026 First Four Game\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fhow%2Dto%2Dwatch%2Dtexas%2Dnc%2Dstate%2Dfirst%2Dfour%2Dmarch%2D2026%2F&rut=182cf4c86216b884ee98b79c55ef91d51ecc7c2f5bd4dab728a54db35363f5e5\",\n      \"snippet\": \"Find out how to watch the Texas Longhorns play the NC State Wolfpack in the 2026 NCAA Tournament First Four on truTV and Sling.\"\n    },\n    {\n      \"title\": \"Where to watch Texas vs NC State game tonight: 2026 NCAA tournament ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.indystar.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fnc%2Dstate%2Dtexas%2Dchannel%2Dtoday%2Dmarch%2Dmadness%2D2026%2Dncaa%2Dtournament%2Dgame%2Dplay%2Din%2Dbracket%2Dschedule%2Dwatch%2F89195283007%2F&rut=f467c4fc8faa5b5aad841638f30c0c33c735a6cfc03f8d8541f31b38a2babf2d\",\n      \"snippet\": \"March Madness 2026 NCAA tournament play-in action continues tonight. Start time, how to watch, odds, predictions, and more for NC State - Texas game .\"\n    },\n    {\n      \"title\": \"How to watch Texas Longhorns vs. NC State Wolfpack: NCAA Tournament ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Flonghornswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Flonghorns%2F2026%2F03%2F17%2Ftexas%2Dlonghorns%2Dvs%2Dnc%2Dstate%2Dwolfpack%2D17%2D2026%2Dncaa%2Dmens%2Dbasketball%2Dhow%2Dto%2Dwatch%2Dlive%2Dstream%2Dgame%2Dtime%2F89190592007%2F&rut=45711e9bec36cb51bd37b9e8f60c104a8af40945953e6ef7e260498ef671f2e0\",\n      \"snippet\": \"Preview the Texas Longhorns&#x27; NCAA Tournament First Four matchup with NC State Wolfpack, including live stream, TV channel, odds, and game information.\"\n    },\n    {\n      \"title\": \"What channel is Texas vs. NC State on? Time, TV schedule, live stream ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fcollege%2Dsports%2Fwhat%2Dchannel%2Dis%2Dtexas%2Dvs%2Dnc%2Dstate%2Don%2Dtime%2Dtv%2Dschedule%2Dlive%2Dstream%2Dto%2Dwatch%2D2026%2Dncaa%2Dfirst%2Dfour%2Dgame%2Far%2DAA1YNu4e&rut=f63390ebde6d555cd0233a1c3a80353d2200cc0b6439d4c1b6ef35564a337ac7\",\n      \"snippet\": \"Here is a complete guide to watching Texas vs . NC State , including the start time, TV schedule and live stream information for the 2026 NCAA Tournament game .\"\n    }\n  ]\n}",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "How to Watch the Texas Longhorns vs. NC State Wolfpack 2026 First Four Game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fhow%2Dto%2Dwatch%2Dtexas%2Dnc%2Dstate%2Dfirst%2Dfour%2Dmarch%2D2026%2F&rut=182cf4c86216b884ee98b79c55ef91d51ecc7c2f5bd4dab728a54db35363f5e5",
+          "snippet": "Find out how to watch the Texas Longhorns play the NC State Wolfpack in the 2026 NCAA Tournament First Four on truTV and Sling."
+        },
+        {
+          "title": "Where to watch Texas vs NC State game tonight: 2026 NCAA tournament ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.indystar.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fnc%2Dstate%2Dtexas%2Dchannel%2Dtoday%2Dmarch%2Dmadness%2D2026%2Dncaa%2Dtournament%2Dgame%2Dplay%2Din%2Dbracket%2Dschedule%2Dwatch%2F89195283007%2F&rut=f467c4fc8faa5b5aad841638f30c0c33c735a6cfc03f8d8541f31b38a2babf2d",
+          "snippet": "March Madness 2026 NCAA tournament play-in action continues tonight. Start time, how to watch, odds, predictions, and more for NC State - Texas game ."
+        },
+        {
+          "title": "How to watch Texas Longhorns vs. NC State Wolfpack: NCAA Tournament ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Flonghornswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Flonghorns%2F2026%2F03%2F17%2Ftexas%2Dlonghorns%2Dvs%2Dnc%2Dstate%2Dwolfpack%2D17%2D2026%2Dncaa%2Dmens%2Dbasketball%2Dhow%2Dto%2Dwatch%2Dlive%2Dstream%2Dgame%2Dtime%2F89190592007%2F&rut=45711e9bec36cb51bd37b9e8f60c104a8af40945953e6ef7e260498ef671f2e0",
+          "snippet": "Preview the Texas Longhorns&#x27; NCAA Tournament First Four matchup with NC State Wolfpack, including live stream, TV channel, odds, and game information."
+        },
+        {
+          "title": "What channel is Texas vs. NC State on? Time, TV schedule, live stream ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fcollege%2Dsports%2Fwhat%2Dchannel%2Dis%2Dtexas%2Dvs%2Dnc%2Dstate%2Don%2Dtime%2Dtv%2Dschedule%2Dlive%2Dstream%2Dto%2Dwatch%2D2026%2Dncaa%2Dfirst%2Dfour%2Dgame%2Far%2DAA1YNu4e&rut=f63390ebde6d555cd0233a1c3a80353d2200cc0b6439d4c1b6ef35564a337ac7",
+          "snippet": "Here is a complete guide to watching Texas vs . NC State , including the start time, TV schedule and live stream information for the 2026 NCAA Tournament game ."
+        },
+        {
+          "title": "NC State basketball vs. Texas channel for 2026 NCAA Tournament First ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.thecalifornian.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F17%2Fnc%2Dstate%2Dbasketball%2Dvs%2Dtexas%2Dchannel%2Dfor%2D2026%2Dncaa%2Dtournament%2Dfirst%2Dfour%2Dgame%2F89137011007%2F&rut=e319c60e8d619ff97bc63d363aa9b760ed0ba17b261cc1f420395b37fb13b86f",
+          "snippet": "NC State basketball faces Pittsburgh in a 2026 NCAA Tournament First Four matchup. Find out how to watch the game , including TV channel and time."
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:12:00.456Z",
+      "content": ""
+    },
+    {
+      "id": "ff-west-11-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:12:00.456Z",
+      "content": "",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://longhornswire.usatoday.com/story/sports/college/longhorns/2026/03/17/texas-longhorns-vs-nc-state-wolfpack-17-2026-ncaa-mens-basketball-how-to-watch-live-stream-game-time/89190592007/",
+        "maxChars": 4000
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:12:00.979Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://longhornswire.usatoday.com/story/sports/college/longhorns/2026/03/17/texas-longhorns-vs-nc-state-wolfpack-17-2026-ncaa-mens-basketball-how-to-watch-live-stream-game-time/89190592007/\",\n    \"text\": \"How to watch Texas Longhorns vs. NC State Wolfpack: NCAA Tournament First Four live stream info, TV channel, game time | March 17 Skip to main content Home Schedule Football Basketball Recruiting SEC Sports Odds Newsletter College Sports Wire USA TODAY Sports How to watch Texas Longhorns: NCAA Tournament First Four live stream info, TV channel, game time | March 17 Data Skrive Watch as the NC State Wolfpack (20-13) try to earn a spot in the Round of 64 in the NCAA Tournament bracket in their First Four matchup with the Texas Longhorns (18-14) on Tuesday at UD Arena, tipping off at 9:15 p.m. ET, airing on truTV. Ahead of watching this matchup, here's what you need to know about Tuesday's college basketball action. NC State vs. Texas: How to watch on TV or live stream Game day: Tuesday, March 17, 2026 Game time: 9:15 p.m. ET Location: Dayton, Ohio Arena: UD Arena TV Channel: truTV Live Stream: Sling - Watch Now! Check out: USA TODAY Sports Coaches Poll Watch the NCAA Tournament on Sling! NC State vs. Texas stats and trends Texas scores 83.8 points per game and allow 76.8, making them 26th in college basketball on offense and 259th defensively. In 2025-26, the Longhorns are 50th in co... [truncated 1327 chars]\"\n  }\n}",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://longhornswire.usatoday.com/story/sports/college/longhorns/2026/03/17/texas-longhorns-vs-nc-state-wolfpack-17-2026-ncaa-mens-basketball-how-to-watch-live-stream-game-time/89190592007/",
+        "text": "How to watch Texas Longhorns vs. NC State Wolfpack: NCAA Tournament First Four live stream info, TV channel, game time | March 17 Skip to main content Home Schedule Football Basketball Recruiting SEC Sports Odds Newsletter College Sports Wire USA TODAY Sports How to watch Texas Longhorns: NCAA Tournament First Four live stream info, TV channel, game time | March 17 Data Skrive Watch as the NC State Wolfpack (20-13) try to earn a spot in the Round of 64 in the NCAA Tournament bracket in their First Four matchup with the Texas Longhorns (18-14) on Tuesday at UD Arena, tipping off at 9:15 p.m. ET, airing on truTV. Ahead of watching this matchup, here's what you need to know about Tuesday's college basketball action. NC State vs. Texas: How to watch on TV or live stream Game day: Tuesday, March 17, 2026 Game time: 9:15 p.m. ET Location: Dayton, Ohio Arena: UD Arena TV Channel: truTV Live Stream: Sling - Watch Now! Check out: USA TODAY Sports Coaches Poll Watch the NCAA Tournament on Sling! NC State vs. Texas stats and trends Texas scores 83.8 points per game and allow 76.8, making them 26th in college basketball on offense and 259th defensively. In 2025-26, the Longhorns are 50th in college basketball in rebounds (34.8 per game) and 10th-best in rebounds allowed (26.9). This season Texas is ranked 290th in the nation in assists at 12.3 per game. The Longhorns are 159th in the country in turnovers per game (10.7) and 17th-worst in turnovers forced (9). Texas is 208th in the nation in 3-pointers made (7.4 per game) and 99th in 3-point percentage (35.4%). In 2025-26, the Longhorns are 82nd in the country in 3-pointers conceded (7 per game) and 321st in defensive 3-point percentage (36%). Texas attempts 35.9% percent of its shots from beyond the arc, and 26.2% of its made baskets are from there. Inside the arc, it attempts 64.1% of its shots, with 73.8% of its makes coming from there. NC State vs. Texas Odds and Spread Spread Favorite: Wolfpack (-1.5) Moneyline: NC State (-123), Texas (+101) Total: 158 points NCAA Basketball odds courtesy of BetMGM Sportsbook . Odds updated Tuesday at 4:46 p.m. ET. For a full list of sports betting odds, access USA TODAY Sports Betting Scores Odds Hub . Watch the NCAA Tournament on Sling! Follow the latest college sports coverage at College Sports Wire . Facebook Twitter Email Help Terms of Service Subscription Terms & Conditions Privacy Policy Site Map Accessibility Our Ethical Principles Responsible Disclosure Your Privacy Choices © Copyright Gannett 2026"
+      }
+    },
+    {
+      "id": "ff-west-11-tool-call-4-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:12:00.979Z",
+      "content": "",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.indystar.com/story/sports/college/2026/03/17/nc-state-texas-channel-today-march-madness-2026-ncaa-tournament-game-play-in-bracket-schedule-watch/89195283007/",
+        "maxChars": 4000
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-4-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:12:01.188Z",
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.indystar.com/story/sports/college/2026/03/17/nc-state-texas-channel-today-march-madness-2026-ncaa-tournament-game-play-in-bracket-schedule-watch/89195283007/\",\n    \"text\": \"Where to watch Texas vs NC State game tonight: 2026 NCAA tournament schedule Skip to main content Home Sports Gregg Doyel Colts Pacers Hoosiers Boilermakers Bulldogs Motor Sports Fighting Irish High Schools Indy 500 SportsbookWire What channel is NC State-Texas game today? March Madness 2026 NCAA tournament play-in time, stream Chris Sims Indianapolis Star Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. The Texas Longhorns will face the NC State Wolfpack in a 2026 NCAA men's basketball tournament play-in game. The game is scheduled for Tuesday, March 17, 2026, at 9:15 p.m. ET. Viewers can watch the matchup on truTV or stream it via SlingTV. The article also provides the full schedule for the 2026 March Madness tournament. The Texas Longhorns battle the NC State Wolfpack in the second play-in game of the NCAA men's basketball tournament in March Madness action today on truTV . Here's what you need to know about tonight's matchup , how to watch , the 2026 March Madness bracket , odds , picks and predictions : What channel is NC Sta... [truncated 1800 chars]\"\n  }\n}",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.indystar.com/story/sports/college/2026/03/17/nc-state-texas-channel-today-march-madness-2026-ncaa-tournament-game-play-in-bracket-schedule-watch/89195283007/",
+        "text": "Where to watch Texas vs NC State game tonight: 2026 NCAA tournament schedule Skip to main content Home Sports Gregg Doyel Colts Pacers Hoosiers Boilermakers Bulldogs Motor Sports Fighting Irish High Schools Indy 500 SportsbookWire What channel is NC State-Texas game today? March Madness 2026 NCAA tournament play-in time, stream Chris Sims Indianapolis Star Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. The Texas Longhorns will face the NC State Wolfpack in a 2026 NCAA men's basketball tournament play-in game. The game is scheduled for Tuesday, March 17, 2026, at 9:15 p.m. ET. Viewers can watch the matchup on truTV or stream it via SlingTV. The article also provides the full schedule for the 2026 March Madness tournament. The Texas Longhorns battle the NC State Wolfpack in the second play-in game of the NCAA men's basketball tournament in March Madness action today on truTV . Here's what you need to know about tonight's matchup , how to watch , the 2026 March Madness bracket , odds , picks and predictions : What channel is NC State Wolfpack vs Texas Longhorns game on TV tonight, Tuesday, March 17? How to watch Texas-NC State March Madness 2026 NCAA tournament play-in game today live The NC State Wolfpack and Texas Longhorns will air on truTV Tuesday, March 17, 2026. Watch NCAA tournament action on Sling TV What time is Texas Longhorns vs NC State Wolfpack game start today, Tuesday, March 17? When is NC State-Texas March Madness 2026 NCAA tournament game tonight live The NC State Wolfpack and Texas Longhorns will play on truTV at 9:15 p.m. ET, Tuesday, March 17, 2026, 2026. Watch March Madness live on Sling TV How to stream NC State vs Texas game tonight, Tuesday, March 17. Where to watch Texas-NC State March Madness 2026 NCAA tournament game today live The NC State Wolfpack and Texas Longhorns will stream via SlingTV at 9:15 p.m. ET, Tuesday, March 17, 2026. Fans can download SlingTV in the Apple App Store or on Google Play . Watch NCAA tournament action on Sling TV 2025-2026 Texas Longhorns regular season record, SEC conference record Texas : (18-14, 9-9) 2025-2026 North Carolina State Wolfpack regular season record, ACC conference record NC State : (20-13, 10-8) NCAA tournament schedule 2026 today: March Madness First Four start time, TV channel, where to watch, stream every men's basketball game tonight 2026 NCAA tournament First Four March Madness games today: Tuesday, March 17 (16) UMBC vs. (16) Howard , 6:40 p.m. ET, truTV | Preview / box score (11) Texas vs. (11) NC State , 9:15 p.m. ET, truTV | Preview / box score Watch March Madness on Sling TV 2026 NCAA tournament First Four March Madness games: Wednesday, March 18 (16) Prairie View A&M vs. (16) Lehigh , 6:40 p.m. ET, truTV | Preview (11) Miami (Ohio) vs. (11) SMU , 9:15 p.m. ET, truTV | Preview Watch NCAA men's basketball tournament "
+      }
+    },
+    {
+      "id": "ff-west-11-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:12:05.251Z",
+      "content": ""
+    },
+    {
+      "id": "ff-west-11-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:12:05.251Z",
+      "content": "",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "NC State Wolfpack basketball late season form injuries March 2026",
+        "maxResults": 5
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:12:06.178Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Narrow losses defined the late-season issues for NC State - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnarrow%2Dlosses%2Ddefined%2Dthe%2Dlate%2Dseason%2Dissues%2Dfor%2Dnc%2Dstate%2Far%2DAA1XPHgU&rut=6d1574aaff7141bb3db12b25f7b655693f0efaf166469e993508e473439f3d83\",\n      \"snippet\": \"NC State Wolfpack head coach Will Wade and Clemson Tigers head coach Brad Brownell look down court Tuesday, Jan. 20, 2026 , during the NCAA men&#x27;s basketball game at Littlejohn Coliseum in Clemson ...\"\n    },\n    {\n      \"title\": \"NC State Basketball News - Inside Pack Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Finsidepacksports.com%2Fnc%2Dstate%2Dbasketball&rut=da113d9091bdc97a895ca5be7e1adf87ab410207a2ff79895da9213b768aa8b2\",\n      \"snippet\": \"The latest NC State Wolfpack , Basketball news, video, in-depth analysis, rumors and more from our Wolfpack , Basketball experts.\"\n    },\n    {\n      \"title\": \"North Carolina State Wolfpack Injuries 2025-2026 - Updated NCAAB Injury ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fnorth%2Dcarolina%2Dstate%2Dwolfpack%2Finjuries&rut=f4c6393d68501e13c7a4c94b384a4bd16d319dacc8b09a0b8e07651933e09cb2\",\n      \"snippet\": \"Stay In the Know: Check Out North Carolina State Wolfpack Injuries Impacting The 2025- 2026 NCAAB Season .\"\n    },\n    {\n      \"title\": \"North Carolina State Wolfpack News, Schedule, Stats and Roster - USA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fnorth%2Dcarolina%2Dstate%2Dwolfpack%2F1538&rut=af9f05781b2bd4b7f956eb5bda47645de553def0791b81887e329643413836b7\",\n      \"snippet\": \"Latest North Carolina State Wolfpack news, schedule, stats, depth chart, roster, injuries , transactions and more from USA TODAY Sports.\"\n    }\n  ]\n}",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Narrow losses defined the late-season issues for NC State - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnarrow%2Dlosses%2Ddefined%2Dthe%2Dlate%2Dseason%2Dissues%2Dfor%2Dnc%2Dstate%2Far%2DAA1XPHgU&rut=6d1574aaff7141bb3db12b25f7b655693f0efaf166469e993508e473439f3d83",
+          "snippet": "NC State Wolfpack head coach Will Wade and Clemson Tigers head coach Brad Brownell look down court Tuesday, Jan. 20, 2026 , during the NCAA men&#x27;s basketball game at Littlejohn Coliseum in Clemson ..."
+        },
+        {
+          "title": "NC State Basketball News - Inside Pack Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Finsidepacksports.com%2Fnc%2Dstate%2Dbasketball&rut=da113d9091bdc97a895ca5be7e1adf87ab410207a2ff79895da9213b768aa8b2",
+          "snippet": "The latest NC State Wolfpack , Basketball news, video, in-depth analysis, rumors and more from our Wolfpack , Basketball experts."
+        },
+        {
+          "title": "North Carolina State Wolfpack Injuries 2025-2026 - Updated NCAAB Injury ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fnorth%2Dcarolina%2Dstate%2Dwolfpack%2Finjuries&rut=f4c6393d68501e13c7a4c94b384a4bd16d319dacc8b09a0b8e07651933e09cb2",
+          "snippet": "Stay In the Know: Check Out North Carolina State Wolfpack Injuries Impacting The 2025- 2026 NCAAB Season ."
+        },
+        {
+          "title": "North Carolina State Wolfpack News, Schedule, Stats and Roster - USA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Fnorth%2Dcarolina%2Dstate%2Dwolfpack%2F1538&rut=af9f05781b2bd4b7f956eb5bda47645de553def0791b81887e329643413836b7",
+          "snippet": "Latest North Carolina State Wolfpack news, schedule, stats, depth chart, roster, injuries , transactions and more from USA TODAY Sports."
+        },
+        {
+          "title": "Will Wade laments missed chances as NC State drops third straight ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fnc%2Dstate%2Farticle314782573.html&rut=4a6c2325b638115609242a8ac107a71be5e5ce6fc3f160db205b3defea244def",
+          "snippet": "NC State head coach Will Wade watches from the sideline during the second half of the Wolfpack&#x27;s 93-64 loss to Duke on Monday, March 2, 2026 , at Lenovo Center in Raleigh, N.C . Kaitlin McKeown ..."
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-tool-call-5-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-17T21:12:06.178Z",
+      "content": "",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Texas Longhorns basketball SEC tournament 2026 results",
+        "maxResults": 5
+      }
+    },
+    {
+      "id": "ff-west-11-tool-result-5-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-17T21:12:07.547Z",
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 SEC tournament: Bracket, schedule, scores for men&#x27;s basketball\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Farticle%2F2026%2D03%2D14%2F2026%2Dsec%2Dtournament%2Dbracket%2Dschedule%2Dscores%2Dmens%2Dbasketball&rut=6ebbe43ec005353c0ce2cd870893033110871226cf3a25b8285eea779b75656e\",\n      \"snippet\": \"Here&#x27;s everything you need to know for the 2026 SEC men&#x27;s basketball tournament . Games are Wednesday, March 11 through Sunday, March 15.\"\n    },\n    {\n      \"title\": \"SEC basketball tournament 2026 scores, bracket as Arkansas rolls to ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fsec%2Dtournament%2D2026%2Dbracket%2Dschedule%2Dscores%2F&rut=82987236c49a05ac1ebaae492722d6e1eafcac6d02689e5be562552e969d8f88\",\n      \"snippet\": \"2026 SEC Tournament scores, results , bracket: Arkansas outlasts Vanderbilt to take home conference ccrown The Razorbacks completed an impressive run through the SEC Tournament with a victory over ...\"\n    },\n    {\n      \"title\": \"2026 SEC Men&#x27;s Basketball Tournament: Updated bracket, results ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fnews%2F2026%2Dsec%2Dmens%2Dbasketball%2Dtournament%2Dupdated%2Dbracket%2Dresults%2Dschedule%2Dtv%2F&rut=4083a32e5acfa732d69ba42bd563c4e4f5b2b2a83ccfe722f0c945053d0ed5dc\",\n      \"snippet\": \"Ole Miss took a 41-30 lead over Texas into halftime, but the Longhorns mounted the charge and got as close as three points in the second half. However, the Rebels pulled away to get the wire-to-wire, 76-66 victory and send No. 10-seeded Texas home from the SEC men&#x27;s basketball tournament .\"\n    },\n    {\n      \"title\": \"2026 SEC Men&#x27;s Basketball Tournament: Bracket, results, schedule, and ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportskeeda.com%2Fcollege%2Dbasketball%2F2026%2Dsec%2Dmen%2Ds%2Dbasketball%2Dtournament%2Dbracket%2Dresults%2Dschedule%2Dwatch&rut=5320832617ba51a9adcfcb5cf7a2410bb1150f8ec072e6add42fe517f9dd93fa\",\n      \"snippet\": \"The SEC men&#x27;s basketball tournament is underway. The top teams in the conference have converged in Nashville to compete for top honors.\"\n    }\n  ]\n}",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 SEC tournament: Bracket, schedule, scores for men&#x27;s basketball",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Farticle%2F2026%2D03%2D14%2F2026%2Dsec%2Dtournament%2Dbracket%2Dschedule%2Dscores%2Dmens%2Dbasketball&rut=6ebbe43ec005353c0ce2cd870893033110871226cf3a25b8285eea779b75656e",
+          "snippet": "Here&#x27;s everything you need to know for the 2026 SEC men&#x27;s basketball tournament . Games are Wednesday, March 11 through Sunday, March 15."
+        },
+        {
+          "title": "SEC basketball tournament 2026 scores, bracket as Arkansas rolls to ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fsec%2Dtournament%2D2026%2Dbracket%2Dschedule%2Dscores%2F&rut=82987236c49a05ac1ebaae492722d6e1eafcac6d02689e5be562552e969d8f88",
+          "snippet": "2026 SEC Tournament scores, results , bracket: Arkansas outlasts Vanderbilt to take home conference ccrown The Razorbacks completed an impressive run through the SEC Tournament with a victory over ..."
+        },
+        {
+          "title": "2026 SEC Men&#x27;s Basketball Tournament: Updated bracket, results ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.on3.com%2Fnews%2F2026%2Dsec%2Dmens%2Dbasketball%2Dtournament%2Dupdated%2Dbracket%2Dresults%2Dschedule%2Dtv%2F&rut=4083a32e5acfa732d69ba42bd563c4e4f5b2b2a83ccfe722f0c945053d0ed5dc",
+          "snippet": "Ole Miss took a 41-30 lead over Texas into halftime, but the Longhorns mounted the charge and got as close as three points in the second half. However, the Rebels pulled away to get the wire-to-wire, 76-66 victory and send No. 10-seeded Texas home from the SEC men&#x27;s basketball tournament ."
+        },
+        {
+          "title": "2026 SEC Men&#x27;s Basketball Tournament: Bracket, results, schedule, and ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportskeeda.com%2Fcollege%2Dbasketball%2F2026%2Dsec%2Dmen%2Ds%2Dbasketball%2Dtournament%2Dbracket%2Dresults%2Dschedule%2Dwatch&rut=5320832617ba51a9adcfcb5cf7a2410bb1150f8ec072e6add42fe517f9dd93fa",
+          "snippet": "The SEC men&#x27;s basketball tournament is underway. The top teams in the conference have converged in Nashville to compete for top honors."
+        },
+        {
+          "title": "SEC Tournament Results: Ole Miss Basketball Stun Texas Longhorns in ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Folemiss%2Fbasketball%2Fsec%2Dtournament%2Dresults%2Dole%2Dmiss%2Dbasketball%2Dstun%2Dtexas%2Dlonghorns%2Din%2Dthrilling%2Dwin%2D01kkfzx2wwdx&rut=a27db562ffee4825bfaacbcad8a0da0dfc0de6b150ef007cc660232582f68bf6",
+          "snippet": "NASHVILLE, Tenn. - The Ole Miss defense proved to be too much as it downed Texas 76-66 on Wednesday night in the First Round of the SEC Tournament at Bridgeston"
+        }
+      ]
+    },
+    {
+      "id": "ff-west-11-assistant-final-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-17T21:13:03.944Z",
+      "content": "Now I have a comprehensive picture. Let me compile my analysis:\n\n**NC State (20-13, ACC)**\n- KenPom: #34, AdjEM +19.58, AdjO 124.1 (#19), AdjD 104.5\n- Torvik: #38, AdjOE 124.1 (#22), AdjDE 104.6 (#90)\n- Lost 7 of last 9 games per ESPN\n- Beat Pittsburgh 98-88 in ACC Tournament, then lost to Virginia 81-74\n- 20-13 record, ACC conference\n\n**Texas (18-14, SEC)**\n- KenPom: #37, AdjEM +19.06, AdjO 125 (#13), AdjD 106\n- Torvik: #45, AdjOE 124.1 (#21), AdjDE 106.3 (#125)\n- Lost to Ole Miss 76-66 in SEC Tournament (10th seed)\n- 18-14 record, SEC conference\n- Early-season injury concerns with big men\n- Scores 83.8 PPG, allows 76.8 PPG (259th defensively)\n\nKey observations:\n- NC State has slightly better overall ratings (KenPom #34 vs #37, Torvik #38 vs #45)\n- NC State has notably better defense (AdjD 104.5 vs 106.0)\n- Both teams have similar offensive efficiency\n- NC State has a better record (20-13 vs 18-14)\n- NC State is struggling late (7 of last 9 losses) but Texas also lost early in SEC Tournament\n- Texas plays in the stronger conference (SEC) but was a 10-seed there\n- NC State has recent tournament pedigree (2024 Final Four as 11-seed)\n\n```json\n{\n  \"pick\": {\n    \"gameId\": \"ff-west-11\",\n    \"winnerId\": \"nc-state\",\n    \"confidence\": 56,\n    \"rationale\": \"NC State holds a slight edge in both KenPom (#34 vs #37) and Torvik (#38 vs #45) rankings, driven primarily by a meaningfully better adjusted defense (104.5 vs 106.0). While the Wolfpack have struggled down the stretch, losing seven of their last nine, Texas has been equally inconsistent with an 18-14 record and an early SEC Tournament exit as a 10-seed to Ole Miss. NC State's superior defensive efficiency and better overall record, combined with their proven tournament pedigree from their 2024 Final Four run as an 11-seed, give them a narrow but real advantage in this play-in matchup.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"ff-west-11-analysis\",\n    \"title\": \"NC State vs Texas First Four Analysis\",\n    \"summary\": \"NC State edges Texas in advanced metrics and defensive efficiency despite both teams entering with late-season struggles. The Wolfpack's slightly higher KenPom and Torvik rankings, better defensive numbers, and tournament experience tip the balance in a close matchup.\",\n    \"evidence\": \"NC State: KenPom #34 (AdjEM +19.58, AdjO 124.1, AdjD 104.5), Torvik #38, record 20-13. Texas: KenPom #37 (AdjEM +19.06, AdjO 125.0, AdjD 106.0), Torvik #45, record 18-14. NC State lost 7 of last 9 but beat Pittsburgh 98-88 in ACC Tournament. Texas lost to Ole Miss 76-66 as 10-seed in SEC Tournament. Texas ranks 259th in points allowed (76.8 PPG). NC State's defensive edge (AdjD 104.5 vs 106.0) is the key differentiator in an otherwise tight matchup.\"\n  }\n}\n```"
+    },
+    {
+      "id": "ff-west-11-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-17T21:13:10.947Z",
+      "content": "{\"pick\":{\"gameId\":\"ff-west-11\",\"winnerId\":\"nc-state\",\"confidence\":56,\"rationale\":\"NC State holds a slight edge in both KenPom (#34 vs #37) and Torvik (#38 vs #45) rankings, driven primarily by a meaningfully better adjusted defense (104.5 vs 106.0). While the Wolfpack have struggled down the stretch, losing seven of their last nine, Texas has been equally inconsistent with an 18-14 record and an early SEC Tournament exit as a 10-seed to Ole Miss. NC State's superior defensive efficiency and better overall record, combined with their proven tournament pedigree from their 2024 Final Four run as an 11-seed, give them a narrow but real advantage in this play-in matchup.\"},\"reasoningStep\":{\"id\":\"ff-west-11-analysis\",\"title\":\"NC State vs Texas First Four Analysis\",\"summary\":\"NC State edges Texas in advanced metrics and defensive efficiency despite both teams entering with late-season struggles. The Wolfpack's slightly higher KenPom and Torvik rankings, better defensive numbers, and tournament experience tip the balance in a close matchup.\",\"evidence\":[\"NC State KenPom #34 (AdjEM +19.58, AdjO 124.1 #19, AdjD 104.5), Torvik #38, record 20-13 ACC\",\"Texas KenPom #37 (AdjEM +19.06, AdjO 125.0 #13, AdjD 106.0), Torvik #45, record 18-14 SEC\",\"NC State lost 7 of last 9 but beat Pittsburgh 98-88 in ACC Tournament before falling to Virginia 81-74\",\"Texas lost to Ole Miss 76-66 as 10-seed in SEC Tournament; ranks 259th in points allowed (76.8 PPG)\",\"NC State's defensive edge (AdjD 104.5 vs 106.0) is the key differentiator in an otherwise tight matchup\"]}}"
+    }
+  ]
+}
