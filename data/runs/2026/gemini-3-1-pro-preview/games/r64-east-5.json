@@ -1,0 +1,1040 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "gemini-3-1-pro-preview",
+    "label": "Gemini 3.1 Pro Preview",
+    "provider": "google-gemini",
+    "model": "gemini-3.1-pro-preview",
+    "description": "Google DeepMind • Preview Gemini model tuned for high-end multimodal reasoning and long-context analysis."
+  },
+  "gameId": "r64-east-5",
+  "generatedAt": "2026-03-18T06:58:50.572Z",
+  "pick": {
+    "gameId": "r64-east-5",
+    "winnerId": "louisville",
+    "confidence": 0.6,
+    "rationale": "Louisville enters this 6/11 matchup with a significant statistical advantage, ranking inside the top 20 in both KenPom and Torvik compared to South Florida's standing at 50th. The Cardinals boast an elite offense that ranks in the top 25 nationally, though their ceiling may be impacted by the questionable status of star point guard Mikel Brown Jr. due to a lingering back injury. While the Bulls are a capable and balanced squad that could capitalize if Louisville is shorthanded, the Cardinals' overall talent depth and superior defensive efficiency should provide enough of a cushion to survive a potential upset bid and advance."
+  },
+  "reasoningStep": {
+    "id": "analyze-louisville-usf",
+    "title": "Analyze Louisville vs South Florida Matchup and Injury Context",
+    "summary": "Evaluated the statistical profiles of both teams and investigated the injury status of Louisville's Mikel Brown Jr.",
+    "evidence": [
+      "Louisville ranks 18th in KenPom and 16th in Torvik, featuring a top-25 adjusted offense.",
+      "South Florida ranks 50th in both KenPom and Torvik, presenting a balanced but less efficient profile.",
+      "Louisville star point guard Mikel Brown Jr. is questionable with a back injury; the team went 7-5 in games he missed this season.",
+      "Despite the injury concern, Louisville's nearly 10-point advantage in adjusted efficiency margin makes them the favorite."
+    ]
+  },
+  "toolCalls": [
+    {
+      "id": "tool-qu54x4gs",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "louisville",
+          "south-florida"
+        ]
+      },
+      "startedAt": "2026-03-18T06:58:04.983Z",
+      "completedAt": "2026-03-18T06:58:04.989Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "louisville",
+          "teamName": "Louisville",
+          "torvik": {
+            "rank": 16,
+            "team": "Louisville",
+            "conf": "ACC",
+            "record": "23-10",
+            "adjoe": 124.033765527537,
+            "oe Rank": 23,
+            "adjde": 98.13789253332496,
+            "de Rank": 23,
+            "barthag": 0.9366166675468518,
+            "rank.1": 16,
+            "proj. W": 23,
+            "Proj. L": 10,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7087696465073728,
+            "ncsos": 0.5538659774704985,
+            "consos": 0.802380575091942,
+            "Proj. SOS": 0.7087696465073728,
+            "Proj. Noncon SOS": 0.5538659774704985,
+            "Proj. Con SOS": 0.802380575091942,
+            "elite SOS": 0.6472610353299876,
+            "elite noncon SOS": 0.7412377287153631,
+            "Opp OE": 115.40795559390706,
+            "Opp DE": 103.7681312373706,
+            "Opp Proj. OE": 115.40795559390706,
+            "Opp Proj DE": 103.7681312373706,
+            "Con Adj OE": 125.77085330943557,
+            "Con Adj DE": 99.4847566040504,
+            "Qual O": 122.34578757391589,
+            "Qual D": 101.0746941737713,
+            "Qual Barthag": 0.8999260388959681,
+            "Qual Games": 17,
+            "FUN": -0.0279050206246417,
+            "ConPF": 1481,
+            "ConPA": 1357,
+            "ConPoss": 1260.2875,
+            "ConOE": 1.175128690874106,
+            "ConDE": 1.07673844261726,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 3.9476048938913606,
+            "WAB Rk": 25,
+            "Fun Rk": 244,
+            "adjt": 69.69049412007061
+          },
+          "kenpom": {
+            "rank": 18,
+            "team": "Louisville",
+            "conf": "ACC",
+            "record": "23-10",
+            "adj_em": 25.42,
+            "adj_o": 124.1,
+            "adj_o_rank": 20,
+            "adj_d": 98.7,
+            "adj_d_rank": 26,
+            "adj_t": 69.7,
+            "adj_t_rank": 63,
+            "luck": -0.02,
+            "luck_rank": 239,
+            "sos_adj_em": 12.49,
+            "sos_adj_em_rank": 30,
+            "sos_opp_o": 115.9,
+            "sos_opp_o_rank": 41,
+            "sos_opp_d": 103.4,
+            "sos_opp_d_rank": 23,
+            "ncsos_adj_em": 2.33,
+            "ncsos_adj_em_rank": 117
+          }
+        },
+        {
+          "teamId": "south-florida",
+          "teamName": "South Florida",
+          "torvik": {
+            "rank": 50,
+            "team": "South Florida",
+            "conf": "Amer",
+            "record": "24-8",
+            "adjoe": 117.15762730139662,
+            "oe Rank": 65,
+            "adjde": 102.25096061592896,
+            "de Rank": 60,
+            "barthag": 0.8270747880410942,
+            "rank.1": 50,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.5414264681467835,
+            "ncsos": 0.5367058301346924,
+            "consos": 0.5480048859064056,
+            "Proj. SOS": 0.5414264681467835,
+            "Proj. Noncon SOS": 0.5367058301346924,
+            "Proj. Con SOS": 0.5480048859064056,
+            "elite SOS": 0.8259461147976077,
+            "elite noncon SOS": 0.7943956953770474,
+            "Opp OE": 110.68885527192852,
+            "Opp DE": 108.15466625077204,
+            "Opp Proj. OE": 110.68885527192852,
+            "Opp Proj DE": 108.15466625077204,
+            "Con Adj OE": 117.32534823188716,
+            "Con Adj DE": 102.2978985536163,
+            "Qual O": 123.46110398184489,
+            "Qual D": 92.92050680218009,
+            "Qual Barthag": 0.9633177618425702,
+            "Qual Games": 3,
+            "FUN": 0.0108590790000382,
+            "ConPF": 1555,
+            "ConPA": 1354,
+            "ConPoss": 1323.9749999999997,
+            "ConOE": 1.174493476085274,
+            "ConDE": 1.0226779206556018,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": -0.65222832280004,
+            "WAB Rk": 56,
+            "Fun Rk": 145,
+            "adjt": 71.45950455637717
+          },
+          "kenpom": {
+            "rank": 50,
+            "team": "South Florida",
+            "conf": "Amer",
+            "record": "24-8",
+            "adj_em": 15.77,
+            "adj_o": 117.7,
+            "adj_o_rank": 58,
+            "adj_d": 101.9,
+            "adj_d_rank": 48,
+            "adj_t": 71.7,
+            "adj_t_rank": 12,
+            "luck": -0.027,
+            "luck_rank": 254,
+            "sos_adj_em": 2.72,
+            "sos_adj_em_rank": 107,
+            "sos_opp_o": 111.2,
+            "sos_opp_o_rank": 98,
+            "sos_opp_d": 108.5,
+            "sos_opp_d_rank": 138,
+            "ncsos_adj_em": 4.76,
+            "ncsos_adj_em_rank": 74
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-hwi7uv0o",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Louisville basketball injury"
+      },
+      "startedAt": "2026-03-18T06:58:08.457Z",
+      "completedAt": "2026-03-18T06:58:08.594Z",
+      "summary": "Returned 0 search results for \"Louisville basketball injury\".",
+      "result": []
+    },
+    {
+      "id": "tool-7n8qiumc",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "South Florida basketball injury"
+      },
+      "startedAt": "2026-03-18T06:58:08.594Z",
+      "completedAt": "2026-03-18T06:58:08.742Z",
+      "summary": "Returned 0 search results for \"South Florida basketball injury\".",
+      "result": []
+    },
+    {
+      "id": "tool-mq4d1w7y",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Louisville basketball injury news"
+      },
+      "startedAt": "2026-03-18T06:58:11.426Z",
+      "completedAt": "2026-03-18T06:58:12.128Z",
+      "summary": "Returned 5 search results for \"Louisville basketball injury news\".",
+      "result": [
+        {
+          "title": "Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F16%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dlouisville%2Dsouth%2Dflorida%2Dncaa%2Dtournament%2Dbracket%2Dusf%2Duofl%2Dmarch%2Dmadness%2Dgame%2F88482968007%2F&rut=a00601ff8e05a952ff49784c84bbcabe2024005cf46d31b6e2054ae17719fccb",
+          "snippet": "Here&#x27;s the latest update. Will Louisville basketball &#x27;s starting point guard, Mikel Brown Jr., return from a reaggravated back injury to play in its NCAA Tournament opener against South Florida?"
+        },
+        {
+          "title": "Is Mikel Brown Jr. Playing? Latest on Louisville Star&#x27;s Injury Status ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fmikel%2Dbrown%2Djr%2Dlouisville%2Dinjury%2Dupdate%2Dmarch%2D2026%2F&rut=f88d8d2d515fa1ae6b84100a84df5774d23b8c7ad711a26d5a05863abec4122d",
+          "snippet": "Mikel Brown Jr. is questionable for Louisville&#x27;s NCAA Tournament opener as Pat Kelsey reports encouraging progress on the star&#x27;s back."
+        },
+        {
+          "title": "Louisville basketball can blame Mikel Brown Jr.&#x27;s injury for March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcolumnists%2Fc%2Dl%2Dbrown%2F2026%2F03%2F15%2Flouisville%2Dsouth%2Dflorida%2Dbasketball%2Dmarch%2Dmadness%2Dseed%2Dmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dncaa%2Dtournament%2F88787115007%2F&rut=fbed99033ac2e0c5b0fdd3c9441288d4c6057701b70281180a393b2bef8ff6b1",
+          "snippet": "Louisville basketball received a No. 6 seed in the NCAA Tournament on Selection Sunday. The Cardinals rated well in many key metrics, but they went just 7-5 in games Mikel Brown Jr. missed due to ..."
+        },
+        {
+          "title": "Louisville basketball news: Pat Kelsey&#x27;s encouraging Mikel Brown Jr. update",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Flouisville%2Dbasketball%2Dnews%2Dpat%2Dkelsey%2Dmikel%2Dbrown%2Djr%2Dupdate%2Dacc%2Dtourney%2Dabsence&rut=ca01ac52ece49b839852235a8fb54287dcb7258779dcd02488a6eeb0ea65a568",
+          "snippet": "Louisville HC Pat Kelsey gives encouraging Mikel Brown Jr. update despite ACC tourney absence Louisville head coach Pat Kelsey says star point guard Mikel Brown Jr. is \"close\" to returning but ..."
+        },
+        {
+          "title": "Mikel Brown Jr. working on rehab with back injury in hopes of playing ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fapnews.com%2Farticle%2Flouisville%2Dmikel%2Dbrown%2Djr%2Dde799b0cf4665058d2d7d83db1964ccc&rut=b6a4bb855a17c409f27fdfdacc311d0fdb0eae9de4e34266b42bd9a6ad1a38ac",
+          "snippet": "Louisville freshman Mikel Brown Jr. is hoping he&#x27;ll be ready to play in March Madness. The high-end NBA prospect is sitting out the Atlantic Coast Conference Tournament due to a back injury ."
+        }
+      ]
+    },
+    {
+      "id": "tool-xbtob9vt",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "South Florida basketball injury news"
+      },
+      "startedAt": "2026-03-18T06:58:12.128Z",
+      "completedAt": "2026-03-18T06:58:12.766Z",
+      "summary": "Returned 5 search results for \"South Florida basketball injury news\".",
+      "result": [
+        {
+          "title": "Louisville basketball can blame Mikel Brown Jr.&#x27;s injury for March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcolumnists%2Fc%2Dl%2Dbrown%2F2026%2F03%2F15%2Flouisville%2Dsouth%2Dflorida%2Dbasketball%2Dmarch%2Dmadness%2Dseed%2Dmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dncaa%2Dtournament%2F88787115007%2F&rut=fbed99033ac2e0c5b0fdd3c9441288d4c6057701b70281180a393b2bef8ff6b1",
+          "snippet": "Louisville basketball , a No. 6 seed, will face USF in the NCAA Tournament, but is left to wonder where it&#x27;d be had Mikel Brown Jr. stayed healthy."
+        },
+        {
+          "title": "South Florida Bulls Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fsouth%2Dflorida%2Dbulls%2Finjuries&rut=c43a873a138b2c134ef870adfd8fb9447be5521606d95ff870bb248e41c4b10f",
+          "snippet": "Stay In the Know: Check Out South Florida Bulls Injuries Impacting The 2025-2026 NCAAB Season."
+        },
+        {
+          "title": "Men&#x27;s Basketball - USF Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgousfbulls.com%2Fsports%2Fmens%2Dbasketball&rut=5e1afc55f6906630381bbe340f1d05590a07f1e0c68efef82dfe877af757e955",
+          "snippet": "The official Men&#x27;s Basketball page for the University of South Florida Bulls"
+        },
+        {
+          "title": "Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F16%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dlouisville%2Dsouth%2Dflorida%2Dncaa%2Dtournament%2Dbracket%2Dusf%2Duofl%2Dmarch%2Dmadness%2Dgame%2F88482968007%2F&rut=a00601ff8e05a952ff49784c84bbcabe2024005cf46d31b6e2054ae17719fccb",
+          "snippet": "Here&#x27;s the latest update. Will Louisville basketball &#x27;s starting point guard, Mikel Brown Jr., return from a reaggravated back injury to play in its NCAA Tournament opener against South Florida ?"
+        },
+        {
+          "title": "South Florida Bulls News, Scores and Stats 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fteams%2FSFLA%2Fsouth%2Dflorida%2Dbulls%2F&rut=872de480bbcf288aff889b5578c08efb3608ca3c59b36280e3e0293058814438",
+          "snippet": "CBS Sports has the latest South Florida Bulls news and information, including team scores, stats, highlights and more for the 2025 College Basketball season."
+        }
+      ]
+    },
+    {
+      "id": "tool-8yx6431b",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.profootballnetwork.com/mens-cbb/mikel-brown-jr-louisville-injury-update-march-2026/",
+        "maxChars": 2000
+      },
+      "startedAt": "2026-03-18T06:58:15.657Z",
+      "completedAt": "2026-03-18T06:58:15.792Z",
+      "summary": "Fetched https://www.profootballnetwork.com/mens-cbb/mikel-brown-jr-louisville-injury-update-march-2026/ and extracted 2000 characters of text.",
+      "result": {
+        "url": "https://www.profootballnetwork.com/mens-cbb/mikel-brown-jr-louisville-injury-update-march-2026/",
+        "text": "Is Mikel Brown Jr. Playing? Latest on Louisville Star’s Injury Status for March Madness Tournament Opener Facebook Flipboard Instagram Mail RSS TikTok Twitter Youtube Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Where The Game Never Ends PFSN Where The Game Never Ends Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Search Get Started in PFSN's Free CBB Bracket Predictor! Set Bracket Now! Is Mikel Brown Jr. Playing? Latest on Louisville Star’s Injury Status for March Madness Tournament Opener Men&#x27;s CBB Is Mikel Brown Jr. Playing? Latest on Louisville Star’s Injury Status for March Madness Tournament Opener Mikel Brown Jr. is questionable for Louisville's NCAA T"
+      }
+    },
+    {
+      "id": "tool-h4mg9pts",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "maxChars": 2000,
+        "url": "https://www.usatoday.com/story/sports/columnists/c-l-brown/2026/03/15/louisville-south-florida-basketball-march-madness-seed-mikel-brown-jr-injury-update-ncaa-tournament/88787115007/"
+      },
+      "startedAt": "2026-03-18T06:58:18.386Z",
+      "completedAt": "2026-03-18T06:58:19.214Z",
+      "summary": "Fetched https://www.usatoday.com/story/sports/columnists/c-l-brown/2026/03/15/louisville-south-florida-basketball-march-madness-seed-mikel-brown-jr-injury-update-ncaa-tournament/88787115007/ and extracted 2000 characters of text.",
+      "result": {
+        "url": "https://www.usatoday.com/story/sports/columnists/c-l-brown/2026/03/15/louisville-south-florida-basketball-march-madness-seed-mikel-brown-jr-injury-update-ncaa-tournament/88787115007/",
+        "text": "Louisville basketball can blame Mikel Brown Jr. for March Madness seed Skip to main content Home NCAAB NCAAW MLB Women's Sports NFL NBA NCAAF WNBA Sports Betting Big Ten Sports SEC Sports Boxing Coaches Salaries Draft Hub Fantasy Football For The Win Formula 1 Golfweek High School Sports High School Sports Awards IndyCar MMA NASCAR National Signing Day NHL Olympics Soccer Sports Business Sports Pulse Sports Seriously Tennis WWE Youth Sports Outdoors Fantasy Bet With the People Clear Play Arizona Sports Indiana Sports Michigan Sports Ohio Sports Tennessee Sports Wisconsin Teams For Subscribers Louisville basketball can blame Mikel Brown Jr.'s injury for March Madness seed C.L. Brown Louisville Courier Journal Show Caption Hide Caption Louisville basketball's Mikel Brown Jr. provides back injury update Mikel Brown Jr. breaks down the back injury keeping him out of the ACC Tournament and gives an update on his recovery for the NCAA Tournament. Louisville basketball received a No. 6 seed in the NCAA Tournament on Selection Sunday. The Cardinals rated well in many key metrics, but they went just 7-5 in games Mikel Brown Jr. missed due to injury. UofL will need its star point guard healthy to navigate its challenging path for a deep March Madness run. Louisville basketball , in a season of many what-ifs, just had another on Selection Sunday with the NCAA’s release of the tournament bracket . The Cardinals received a No. 6 seed in the East Region and will face No. 11-seed and American Conference champion South Florida on Thursday at 1:30 p.m. in the first round. That’s at least one seed line higher than they should be. As much as the fate of how long they last in the nation’s best championship tournament will be determined by the availability of star freshman guard Mikel Brown Jr. , their position as a 6-seed can be attributed to him too. Through no fault of his own, the back injury that forced Brown to miss 10 regular-season games and kept him sidelined for the entire ACC"
+      }
+    },
+    {
+      "id": "tool-kol4r0jc",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket"
+      },
+      "startedAt": "2026-03-18T06:58:21.658Z",
+      "completedAt": "2026-03-18T06:58:22.896Z",
+      "summary": "Returned 5 search results for \"Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket\".",
+      "result": [
+        {
+          "title": "Louisville basketball can blame Mikel Brown Jr.&#x27;s injury for March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcolumnists%2Fc%2Dl%2Dbrown%2F2026%2F03%2F15%2Flouisville%2Dsouth%2Dflorida%2Dbasketball%2Dmarch%2Dmadness%2Dseed%2Dmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dncaa%2Dtournament%2F88787115007%2F&rut=fbed99033ac2e0c5b0fdd3c9441288d4c6057701b70281180a393b2bef8ff6b1",
+          "snippet": "Louisville basketball, a No. 6 seed, will face USF in the NCAA Tournament, but is left to wonder where it&#x27;d be had Mikel Brown Jr. stayed healthy."
+        },
+        {
+          "title": "Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F16%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dlouisville%2Dsouth%2Dflorida%2Dncaa%2Dtournament%2Dbracket%2Dusf%2Duofl%2Dmarch%2Dmadness%2Dgame%2F88482968007%2F&rut=a00601ff8e05a952ff49784c84bbcabe2024005cf46d31b6e2054ae17719fccb",
+          "snippet": "Here&#x27;s the latest update . Will Louisville basketball &#x27;s starting point guard, Mikel Brown Jr ., return from a reaggravated back injury to play in its NCAA Tournament opener against South Florida ?"
+        },
+        {
+          "title": "Is Mikel Brown Jr. Playing? Latest on Louisville Star&#x27;s Injury Status ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fmikel%2Dbrown%2Djr%2Dlouisville%2Dinjury%2Dupdate%2Dmarch%2D2026%2F&rut=f88d8d2d515fa1ae6b84100a84df5774d23b8c7ad711a26d5a05863abec4122d",
+          "snippet": "Mikel Brown Jr. is questionable for Louisville&#x27;s NCAA Tournament opener as Pat Kelsey reports encouraging progress on the star&#x27;s back."
+        },
+        {
+          "title": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fmikel%2Dbrown%2Djr%2Din%2Dquestion%2Das%2Dno%2D6%2Dseed%2Dlouisville%2Dtips%2Doff%2Dvs%2Dno%2D11%2Dusf%2F&rut=0219854a509830d9b3dafc4795508f2d4fb5cd55be8bcaec286c3d85875bfd0d",
+          "snippet": "After Brown missed last week&#x27;s ACC tournament, it remains to be seen if he&#x27;ll be available on Thursday afternoon when Louisville (23-10) faces No. 11 seed South Florida (25-8) in Buffalo, N.Y."
+        },
+        {
+          "title": "Mikel Brown Jr. injury update for Louisville basketball vs Miami",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F06%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dlouisville%2Dbasketball%2Dmiami%2Dgame%2Dpat%2Dkelsey%2Duofl%2Dcardinals%2Dacc%2F88592974007%2F&rut=db40faa97376bbdbc1243a47087ce78022865d9dbecba56ee665adbf339ba572",
+          "snippet": "Will Mikel Brown Jr. play in Louisville basketball&#x27;s final game of the regular season Saturday at Miami? Latest UofL basketball injury update :"
+        }
+      ]
+    },
+    {
+      "id": "tool-2jq32jr6",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "South Florida basketball recent games 2026"
+      },
+      "startedAt": "2026-03-18T06:58:26.959Z",
+      "completedAt": "2026-03-18T06:58:27.728Z",
+      "summary": "Returned 5 search results for \"South Florida basketball recent games 2026\".",
+      "result": [
+        {
+          "title": "2025-26 Men&#x27;s Basketball Schedule - USF Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgousfbulls.com%2Fsports%2Fmens%2Dbasketball%2Fschedule%2F2025%2D26&rut=2d0b23150b6528c76c31040828a4dc5506c4cac0561de397da3ed8ed3056c4bb",
+          "snippet": "The official 2025-26 Men&#x27;s Basketball schedule for the University of South Florida Bulls"
+        },
+        {
+          "title": "South Florida Bulls 2025-26 Regular Season NCAAM Fixtures - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F58%2Fseason%2F2026&rut=48f1973847039939bd076be2421cc209634459f0babef3cca06558a7b01f9356",
+          "snippet": "ESPN (UK) has the full 2025-26 South Florida Bulls Regular Season NCAAM fixtures. Includes game times, TV listings and ticket information for all Bulls games ."
+        },
+        {
+          "title": "South Florida Bulls Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F58%2Fsouth%2Dflorida%2Dbulls&rut=2da4ad292aa3aed51a0e57ca467ea4d8cdbfb0cae045efb5848bd3b78da8bc5e",
+          "snippet": "Visit ESPN for South Florida Bulls live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "2025-26 South Florida Bulls Men&#x27;s Schedule and Results | College ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fsouth%2Dflorida%2Fmen%2F2026%2Dschedule.html&rut=bb43806e41396b9e47fb7345418c0e985d9f75ccf5bc1a88dad6deddbbf28052",
+          "snippet": "Check out the detailed 2025-26 South Florida Bulls Schedule and Results for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "Where South Florida basketball stands in March Madness bracket predictions",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fpackerswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fbasketball%2F2026%2F03%2F15%2Fsouth%2Dflorida%2Dmarch%2Dmadness%2Dbracket%2Dpredictions%2Dncaa%2Dtournament%2F89144700007%2F&rut=0bcbad430429be950e7a03e22f5641b1fb0739d9a51345e51e166c247e82145c",
+          "snippet": "(Editor&#x27;s note: Story updated to reflect most recent bracketology projections.) Several teams from the state of Florida are expected to be named when the 2026 NCAA tournament brackets are unveiled on March 15. One of those teams may be the South Florida Bulls. They have spent this week in Birmingham ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-30yy79jy",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "maxChars": 2000,
+        "url": "https://www.cbssports.com/college-basketball/news/mikel-brown-jr-in-question-as-no-6-seed-louisville-tips-off-vs-no-11-usf/"
+      },
+      "startedAt": "2026-03-18T06:58:30.367Z",
+      "completedAt": "2026-03-18T06:58:30.561Z",
+      "summary": "Fetched https://www.cbssports.com/college-basketball/news/mikel-brown-jr-in-question-as-no-6-seed-louisville-tips-off-vs-no-11-usf/ and extracted 2000 characters of text.",
+      "result": {
+        "url": "https://www.cbssports.com/college-basketball/news/mikel-brown-jr-in-question-as-no-6-seed-louisville-tips-off-vs-no-11-usf/",
+        "text": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF - CBS Sports site: media | arena: collegebasketball | pageType: stories | section: | slug: mikel-brown-jr-in-question-as-no-6-seed-louisville-tips-off-vs-no-11-usf | sport: collegebasketball | route: article_single.us | 6-keys: media/spln/collegebasketball/reg/free/stories Skip to Main Content Close Menu All Sports Menu Sports Watch Fantasy Betting Featured NFL Bracket Brackets NCAA BB NCAA WBB NBA Golf UFC SportsSoccer Soccer MLB Explore More NCAA FB NHL Champions League SportsWwe WWE WNBA Boxing NASCAR Motor Sports NWSL UFL Horse Racing Northeast Tennis BIG3 High School Olympics Podcasts Shop Northeast Promotions PBR Northeast MLV Northeast 3ICE Northeast Play Golf NFL Explore NFL NFL News Free Agency Tracker Scores Schedule Standings Super Bowl Playoff Bracket Teams Stats NFL Draft Prospect Rankings Mock Drafts Power Rankings Video Players Injuries Transactions NFL Betting Fantasy Paramount + NFL Shop NFL Teams See All ArrowForward AFC East Bills Dolphins Jets Patriots AFC North Bengals Browns Ravens Steelers AFC South Colts Jaguars Texans Titans AFC West Broncos Chargers Chiefs Raiders NFC East Commanders Cowboys Eagles Giants NFC North Bears Lions Packers Vikings NFC South Buccaneers Falcons Panthers Saints NFC West 49ers Cardinals Rams Seahawks Brackets NCAA BB Explore NCAA BB College Basketball News Scores NCAA Tournament Bracket Games Live Bracket Printable Bracket March Madness Live Expert Brackets Expert Picks Schedule NIT Bracket Standings Rankings Expert Picks Odds Stats Teams Players College Basketball Betting Women's BB NBA Draft Prospect Rankings 2026 Top Recruits 2026 Top Classes CBS Sports Classic College Shop Shows & Podcasts See All ArrowForward NCAA WBB Explore NCAA WBB Women's College Basketball News Scores NCAA Tournament Live Bracket Printable Bracket Women's Bracket Games Schedule Expert Brackets WNIT WBIT Standings Rankings Teams Video College Shop Northeast NBA Exp"
+      }
+    },
+    {
+      "id": "tool-qdptdig5",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "\"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF\""
+      },
+      "startedAt": "2026-03-18T06:58:33.003Z",
+      "completedAt": "2026-03-18T06:58:33.831Z",
+      "summary": "Returned 2 search results for \"\"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF\"\".",
+      "result": [
+        {
+          "title": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fmikel%2Dbrown%2Djr%2Din%2Dquestion%2Das%2Dno%2D6%2Dseed%2Dlouisville%2Dtips%2Doff%2Dvs%2Dno%2D11%2Dusf%2F&rut=0219854a509830d9b3dafc4795508f2d4fb5cd55be8bcaec286c3d85875bfd0d",
+          "snippet": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF It&#x27;s safe to say Pat Kelsey&#x27;s second season at Louisville hasn&#x27;t gone entirely to plan."
+        },
+        {
+          "title": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Farticle.wn.com%2Fview%2F2026%2F03%2F17%2FMikel_Brown_Jr_in_question_as_No_6_seed_Louisville_tips_off_%2F&rut=afeb66378dc8fd2510b2d88628d26c062327ff63ee26afa4e2c772d5bba3c1ad",
+          "snippet": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF Posted 2026-03-17, Gwinnett Daily Post"
+        }
+      ]
+    },
+    {
+      "id": "tool-w159nb86",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "\"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF\" \"Gwinnett Daily Post\""
+      },
+      "startedAt": "2026-03-18T06:58:36.351Z",
+      "completedAt": "2026-03-18T06:58:37.014Z",
+      "summary": "Returned 2 search results for \"\"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF\" \"Gwinnett Daily Post\"\".",
+      "result": [
+        {
+          "title": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Farticle.wn.com%2Fview%2F2026%2F03%2F17%2FMikel_Brown_Jr_in_question_as_No_6_seed_Louisville_tips_off_%2F&rut=afeb66378dc8fd2510b2d88628d26c062327ff63ee26afa4e2c772d5bba3c1ad",
+          "snippet": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF Posted 2026-03-17, Gwinnett Daily Post"
+        },
+        {
+          "title": "Louisville basketball can blame Mikel Brown Jr. for its March Madness ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Farticle.wn.com%2Fview%2Dlemonde%2F2026%2F03%2F15%2FLouisville_basketball_can_blame_Mikel_Brown_Jr_for_its_March%2F&rut=3378c1dd0ba6fce7970f71b2c741830cd98677844a0ab72be6606958035b6049",
+          "snippet": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF Gwinnett Daily Post 2026-03-17 Alabama basketball gets ideal draw for NCAA March Madness | Goodbread The Gadsden Times 2026-03-16 WATCH: Rhode Island Women Draw Alabama for March Madness in Louisville The Newport Daily News 2026-03-16"
+        }
+      ]
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-east-5-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T06:58:02.635Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-east-5\nCurrent game label: East 6/11\nRound: Round of 64\nResolved teams: Louisville (louisville) vs South Florida (south-florida)\nPrior committed picks: 8"
+    },
+    {
+      "id": "r64-east-5-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T06:58:02.635Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-east-5\",\n      \"round\": \"Round of 64\",\n      \"region\": \"East\",\n      \"label\": \"East 6/11\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"louisville\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"south-florida\"\n      }\n    },\n    \"slotAName\": \"Louisville\",\n    \"slotBName\": \"South Florida\",\n    \"slotATeamId\": \"louisville\",\n    \"slotBTeamId\": \"south-florida\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"nc-state\",\n        \"confidence\": 0.6,\n        \"rationale\": \"NC State enters this First Four matchup with a slight edge in both KenPom and Torvik ratings, driven by a more reliable defense. While Texas boasts a potent offense that matches the Wolfpack's output, the Longhorns' defensive efficiency lags behind, making them vulnerable in a tight game. NC State's stronger overall record and balanced profile give them the upper hand to advance.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Despite Miami (OH)'s sparkling 31-1 record, SMU enters this First Four matchup with a significant advantage in overall efficiency. The Mustangs boast a top-30 offense that should consistently exploit a vulnerable RedHawks defense ranked outside the top 140 nationally. SMU's battle-tested resume in the ACC has prepared them for postseason play, and their nearly 10-point edge in KenPom's adjusted efficiency margin makes them the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"umbc\",\n        \"confidence\": 0.55,\n        \"rationale\": \"In this First Four matchup, UMBC holds a slight edge over Howard in overall efficiency, ranking 185th in KenPom compared to the Bison's 207th. The game presents a classic clash of styles, pitting UMBC's superior offense against Howard's stouter defense. However, the Retrievers' more balanced profile and higher offensive ceiling give them the necessary firepower to break through and secure the victory in a tight contest.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.55,\n        \"rationale\": \"In this First Four matchup between two evenly matched 16-seeds, Lehigh holds a slight statistical edge over Prairie View A&M. The Mountain Hawks rank slightly higher in both KenPom and Torvik, driven by a more efficient offense that should be able to navigate the Panthers' defense. While Prairie View A&M boasts a marginally better defensive rating, Lehigh's overall balance and stronger offensive execution give them the upper hand to advance to the main bracket.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.99,\n        \"rationale\": \"Duke enters this 1 vs. 16 matchup as the top-ranked team in the nation across both KenPom and Torvik, boasting an elite combination of a top-five offense and the number one defense. Siena, ranked outside the top 180 in both metrics, lacks the offensive firepower or defensive resistance to challenge the Blue Devils. With a massive 41-point advantage in adjusted efficiency margin, Duke's overwhelming talent and balanced execution make them a near certainty to advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"ohio-state\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Ohio State enters this 8/9 matchup with a clear statistical advantage, ranking inside the top 30 in both KenPom and Torvik compared to TCU's standing in the mid-40s. The Buckeyes boast an elite offense that ranks in the top 20 nationally, which should provide enough firepower to navigate the Horned Frogs' stout defense. While TCU is solid defensively, their 81st-ranked offense may struggle to keep pace, giving Ohio State the edge to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.8,\n        \"rationale\": \"St. John's enters this 5/12 matchup as a clear favorite, boasting top-20 rankings in both KenPom and Torvik. The Red Storm feature an elite defense that ranks 12th nationally, which should stifle a Northern Iowa offense that struggles to score efficiently. While the Panthers are solid defensively, their 153rd-ranked offense lacks the firepower to keep pace with St. John's balanced attack, making the Red Storm the confident pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Kansas enters this 4/13 matchup as a heavy favorite, boasting a top-10 adjusted defense and a top-25 overall ranking in both KenPom and Torvik. While California Baptist has had a strong season to earn a 13 seed, they lack the high-end talent and size to consistently score against the Jayhawks' elite defensive unit. Kansas's significant advantage in overall efficiency and battle-tested resume in the Big 12 make them a highly confident pick to advance comfortably.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"nc-state\",\n      \"confidence\": 0.6,\n      \"rationale\": \"NC State enters this First Four matchup with a slight edge in both KenPom and Torvik ratings, driven by a more reliable defense. While Texas boasts a potent offense that matches the Wolfpack's output, the Longhorns' defensive efficiency lags behind, making them vulnerable in a tight game. NC State's stronger overall record and balanced profile give them the upper hand to advance.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": 0.75,\n      \"rationale\": \"Despite Miami (OH)'s sparkling 31-1 record, SMU enters this First Four matchup with a significant advantage in overall efficiency. The Mustangs boast a top-30 offense that should consistently exploit a vulnerable RedHawks defense ranked outside the top 140 nationally. SMU's battle-tested resume in the ACC has prepared them for postseason play, and their nearly 10-point edge in KenPom's adjusted efficiency margin makes them the clear favorite to advance.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-16\",\n      \"winnerId\": \"umbc\",\n      \"confidence\": 0.55,\n      \"rationale\": \"In this First Four matchup, UMBC holds a slight edge over Howard in overall efficiency, ranking 185th in KenPom compared to the Bison's 207th. The game presents a classic clash of styles, pitting UMBC's superior offense against Howard's stouter defense. However, the Retrievers' more balanced profile and higher offensive ceiling give them the necessary firepower to break through and secure the victory in a tight contest.\"\n    },\n    {\n      \"gameId\": \"ff-south-16\",\n      \"winnerId\": \"lehigh\",\n      \"confidence\": 0.55,\n      \"rationale\": \"In this First Four matchup between two evenly matched 16-seeds, Lehigh holds a slight statistical edge over Prairie View A&M. The Mountain Hawks rank slightly higher in both KenPom and Torvik, driven by a more efficient offense that should be able to navigate the Panthers' defense. While Prairie View A&M boasts a marginally better defensive rating, Lehigh's overall balance and stronger offensive execution give them the upper hand to advance to the main bracket.\"\n    },\n    {\n      \"gameId\": \"r64-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.99,\n      \"rationale\": \"Duke enters this 1 vs. 16 matchup as the top-ranked team in the nation across both KenPom and Torvik, boasting an elite combination of a top-five offense and the number one defense. Siena, ranked outside the top 180 in both metrics, lacks the offensive firepower or defensive resistance to challenge the Blue Devils. With a massive 41-point advantage in adjusted efficiency margin, Duke's overwhelming talent and balanced execution make them a near certainty to advance comfortably.\"\n    },\n    {\n      \"gameId\": \"r64-east-2\",\n      \"winnerId\": \"ohio-state\",\n      \"confidence\": 0.65,\n      \"rationale\": \"Ohio State enters this 8/9 matchup with a clear statistical advantage, ranking inside the top 30 in both KenPom and Torvik compared to TCU's standing in the mid-40s. The Buckeyes boast an elite offense that ranks in the top 20 nationally, which should provide enough firepower to navigate the Horned Frogs' stout defense. While TCU is solid defensively, their 81st-ranked offense may struggle to keep pace, giving Ohio State the edge to advance.\"\n    },\n    {\n      \"gameId\": \"r64-east-3\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 0.8,\n      \"rationale\": \"St. John's enters this 5/12 matchup as a clear favorite, boasting top-20 rankings in both KenPom and Torvik. The Red Storm feature an elite defense that ranks 12th nationally, which should stifle a Northern Iowa offense that struggles to score efficiently. While the Panthers are solid defensively, their 153rd-ranked offense lacks the firepower to keep pace with St. John's balanced attack, making the Red Storm the confident pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-east-4\",\n      \"winnerId\": \"kansas\",\n      \"confidence\": 0.85,\n      \"rationale\": \"Kansas enters this 4/13 matchup as a heavy favorite, boasting a top-10 adjusted defense and a top-25 overall ranking in both KenPom and Torvik. While California Baptist has had a strong season to earn a 13 seed, they lack the high-end talent and size to consistently score against the Jayhawks' elite defensive unit. Kansas's significant advantage in overall efficiency and battle-tested resume in the Big 12 make them a highly confident pick to advance comfortably.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:04.983Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:04.983Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "louisville",
+          "south-florida"
+        ]
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:04.989Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "louisville",
+          "teamName": "Louisville",
+          "torvik": {
+            "rank": 16,
+            "team": "Louisville",
+            "conf": "ACC",
+            "record": "23-10",
+            "adjoe": 124.033765527537,
+            "oe Rank": 23,
+            "adjde": 98.13789253332496,
+            "de Rank": 23,
+            "barthag": 0.9366166675468518,
+            "rank.1": 16,
+            "proj. W": 23,
+            "Proj. L": 10,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7087696465073728,
+            "ncsos": 0.5538659774704985,
+            "consos": 0.802380575091942,
+            "Proj. SOS": 0.7087696465073728,
+            "Proj. Noncon SOS": 0.5538659774704985,
+            "Proj. Con SOS": 0.802380575091942,
+            "elite SOS": 0.6472610353299876,
+            "elite noncon SOS": 0.7412377287153631,
+            "Opp OE": 115.40795559390706,
+            "Opp DE": 103.7681312373706,
+            "Opp Proj. OE": 115.40795559390706,
+            "Opp Proj DE": 103.7681312373706,
+            "Con Adj OE": 125.77085330943557,
+            "Con Adj DE": 99.4847566040504,
+            "Qual O": 122.34578757391589,
+            "Qual D": 101.0746941737713,
+            "Qual Barthag": 0.8999260388959681,
+            "Qual Games": 17,
+            "FUN": -0.0279050206246417,
+            "ConPF": 1481,
+            "ConPA": 1357,
+            "ConPoss": 1260.2875,
+            "ConOE": 1.175128690874106,
+            "ConDE": 1.07673844261726,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 3.9476048938913606,
+            "WAB Rk": 25,
+            "Fun Rk": 244,
+            "adjt": 69.69049412007061
+          },
+          "kenpom": {
+            "rank": 18,
+            "team": "Louisville",
+            "conf": "ACC",
+            "record": "23-10",
+            "adj_em": 25.42,
+            "adj_o": 124.1,
+            "adj_o_rank": 20,
+            "adj_d": 98.7,
+            "adj_d_rank": 26,
+            "adj_t": 69.7,
+            "adj_t_rank": 63,
+            "luck": -0.02,
+            "luck_rank": 239,
+            "sos_adj_em": 12.49,
+            "sos_adj_em_rank": 30,
+            "sos_opp_o": 115.9,
+            "sos_opp_o_rank": 41,
+            "sos_opp_d": 103.4,
+            "sos_opp_d_rank": 23,
+            "ncsos_adj_em": 2.33,
+            "ncsos_adj_em_rank": 117
+          }
+        },
+        {
+          "teamId": "south-florida",
+          "teamName": "South Florida",
+          "torvik": {
+            "rank": 50,
+            "team": "South Florida",
+            "conf": "Amer",
+            "record": "24-8",
+            "adjoe": 117.15762730139662,
+            "oe Rank": 65,
+            "adjde": 102.25096061592896,
+            "de Rank": 60,
+            "barthag": 0.8270747880410942,
+            "rank.1": 50,
+            "proj. W": 24,
+            "Proj. L": 8,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.5414264681467835,
+            "ncsos": 0.5367058301346924,
+            "consos": 0.5480048859064056,
+            "Proj. SOS": 0.5414264681467835,
+            "Proj. Noncon SOS": 0.5367058301346924,
+            "Proj. Con SOS": 0.5480048859064056,
+            "elite SOS": 0.8259461147976077,
+            "elite noncon SOS": 0.7943956953770474,
+            "Opp OE": 110.68885527192852,
+            "Opp DE": 108.15466625077204,
+            "Opp Proj. OE": 110.68885527192852,
+            "Opp Proj DE": 108.15466625077204,
+            "Con Adj OE": 117.32534823188716,
+            "Con Adj DE": 102.2978985536163,
+            "Qual O": 123.46110398184489,
+            "Qual D": 92.92050680218009,
+            "Qual Barthag": 0.9633177618425702,
+            "Qual Games": 3,
+            "FUN": 0.0108590790000382,
+            "ConPF": 1555,
+            "ConPA": 1354,
+            "ConPoss": 1323.9749999999997,
+            "ConOE": 1.174493476085274,
+            "ConDE": 1.0226779206556018,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": -0.65222832280004,
+            "WAB Rk": 56,
+            "Fun Rk": 145,
+            "adjt": 71.45950455637717
+          },
+          "kenpom": {
+            "rank": 50,
+            "team": "South Florida",
+            "conf": "Amer",
+            "record": "24-8",
+            "adj_em": 15.77,
+            "adj_o": 117.7,
+            "adj_o_rank": 58,
+            "adj_d": 101.9,
+            "adj_d_rank": 48,
+            "adj_t": 71.7,
+            "adj_t_rank": 12,
+            "luck": -0.027,
+            "luck_rank": 254,
+            "sos_adj_em": 2.72,
+            "sos_adj_em_rank": 107,
+            "sos_opp_o": 111.2,
+            "sos_opp_o_rank": 98,
+            "sos_opp_d": 108.5,
+            "sos_opp_d_rank": 138,
+            "ncsos_adj_em": 4.76,
+            "ncsos_adj_em_rank": 74
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"louisville\",\n      \"teamName\": \"Louisville\",\n      \"torvik\": {\n        \"rank\": 16,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adjoe\": 124.033765527537,\n        \"oe Rank\": 23,\n        \"adjde\": 98.13789253332496,\n        \"de Rank\": 23\n      },\n      \"kenpom\": {\n        \"rank\": 18,\n        \"team\": \"Louisville\",\n        \"conf\": \"ACC\",\n        \"record\": \"23-10\",\n        \"adj_em\": 25.42,\n        \"adj_o\": 124.1,\n        \"adj_o_rank\": 20,\n        \"adj_d\": 98.7\n      }\n    },\n    {\n      \"teamId\": \"south-florida\",\n      \"teamName\": \"South Florida\",\n      \"torvik\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adjoe\": 117.15762730139662,\n        \"oe Rank\": 65,\n        \"adjde\": 102.25096061592896,\n        \"de Rank\": 60\n      },\n      \"kenpom\": {\n        \"rank\": 50,\n        \"team\": \"South Florida\",\n        \"conf\": \"Amer\",\n        \"record\": \"24-8\",\n        \"adj_em\": 15.77,\n        \"adj_o\": 117.7,\n        \"adj_o_rank\": 58,\n        \"adj_d\": 101.9\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:08.457Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:08.457Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Louisville basketball injury"
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:08.594Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-east-5-tool-call-1-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:08.594Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "South Florida basketball injury"
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-1-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:08.742Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:11.426Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:11.426Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Louisville basketball injury news"
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:12.128Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F16%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dlouisville%2Dsouth%2Dflorida%2Dncaa%2Dtournament%2Dbracket%2Dusf%2Duofl%2Dmarch%2Dmadness%2Dgame%2F88482968007%2F&rut=a00601ff8e05a952ff49784c84bbcabe2024005cf46d31b6e2054ae17719fccb",
+          "snippet": "Here&#x27;s the latest update. Will Louisville basketball &#x27;s starting point guard, Mikel Brown Jr., return from a reaggravated back injury to play in its NCAA Tournament opener against South Florida?"
+        },
+        {
+          "title": "Is Mikel Brown Jr. Playing? Latest on Louisville Star&#x27;s Injury Status ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fmikel%2Dbrown%2Djr%2Dlouisville%2Dinjury%2Dupdate%2Dmarch%2D2026%2F&rut=f88d8d2d515fa1ae6b84100a84df5774d23b8c7ad711a26d5a05863abec4122d",
+          "snippet": "Mikel Brown Jr. is questionable for Louisville&#x27;s NCAA Tournament opener as Pat Kelsey reports encouraging progress on the star&#x27;s back."
+        },
+        {
+          "title": "Louisville basketball can blame Mikel Brown Jr.&#x27;s injury for March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcolumnists%2Fc%2Dl%2Dbrown%2F2026%2F03%2F15%2Flouisville%2Dsouth%2Dflorida%2Dbasketball%2Dmarch%2Dmadness%2Dseed%2Dmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dncaa%2Dtournament%2F88787115007%2F&rut=fbed99033ac2e0c5b0fdd3c9441288d4c6057701b70281180a393b2bef8ff6b1",
+          "snippet": "Louisville basketball received a No. 6 seed in the NCAA Tournament on Selection Sunday. The Cardinals rated well in many key metrics, but they went just 7-5 in games Mikel Brown Jr. missed due to ..."
+        },
+        {
+          "title": "Louisville basketball news: Pat Kelsey&#x27;s encouraging Mikel Brown Jr. update",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Flouisville%2Dbasketball%2Dnews%2Dpat%2Dkelsey%2Dmikel%2Dbrown%2Djr%2Dupdate%2Dacc%2Dtourney%2Dabsence&rut=ca01ac52ece49b839852235a8fb54287dcb7258779dcd02488a6eeb0ea65a568",
+          "snippet": "Louisville HC Pat Kelsey gives encouraging Mikel Brown Jr. update despite ACC tourney absence Louisville head coach Pat Kelsey says star point guard Mikel Brown Jr. is \"close\" to returning but ..."
+        },
+        {
+          "title": "Mikel Brown Jr. working on rehab with back injury in hopes of playing ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fapnews.com%2Farticle%2Flouisville%2Dmikel%2Dbrown%2Djr%2Dde799b0cf4665058d2d7d83db1964ccc&rut=b6a4bb855a17c409f27fdfdacc311d0fdb0eae9de4e34266b42bd9a6ad1a38ac",
+          "snippet": "Louisville freshman Mikel Brown Jr. is hoping he&#x27;ll be ready to play in March Madness. The high-end NBA prospect is sitting out the Atlantic Coast Conference Tournament due to a back injury ."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F16%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dlouisville%2Dsouth%2Dflorida%2Dncaa%2Dtournament%2Dbracket%2Dusf%2Duofl%2Dmarch%2Dmadness%2Dgame%2F88482968007%2F&rut=a00601ff8e05a952ff49784c84bbcabe2024005cf46d31b6e2054ae17719fccb\",\n      \"snippet\": \"Here&#x27;s the latest update. Will Louisville basketball &#x27;s starting point guard, Mikel Brown Jr., return from a reaggravated back injury to play in its NCAA Tournament opener against South Florida?\"\n    },\n    {\n      \"title\": \"Is Mikel Brown Jr. Playing? Latest on Louisville Star&#x27;s Injury Status ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fmikel%2Dbrown%2Djr%2Dlouisville%2Dinjury%2Dupdate%2Dmarch%2D2026%2F&rut=f88d8d2d515fa1ae6b84100a84df5774d23b8c7ad711a26d5a05863abec4122d\",\n      \"snippet\": \"Mikel Brown Jr. is questionable for Louisville&#x27;s NCAA Tournament opener as Pat Kelsey reports encouraging progress on the star&#x27;s back.\"\n    },\n    {\n      \"title\": \"Louisville basketball can blame Mikel Brown Jr.&#x27;s injury for March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcolumnists%2Fc%2Dl%2Dbrown%2F2026%2F03%2F15%2Flouisville%2Dsouth%2Dflorida%2Dbasketball%2Dmarch%2Dmadness%2Dseed%2Dmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dncaa%2Dtournament%2F88787115007%2F&rut=fbed99033ac2e0c5b0fdd3c9441288d4c6057701b70281180a393b2bef8ff6b1\",\n      \"snippet\": \"Louisville basketball received a No. 6 seed in the NCAA Tournament on Selection Sunday. The Cardinals rated well in many key metrics, but they went just 7-5 in games Mikel Brown Jr. missed due to ...\"\n    },\n    {\n      \"title\": \"Louisville basketball news: Pat Kelsey&#x27;s encouraging Mikel Brown Jr. update\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Flouisville%2Dbasketball%2Dnews%2Dpat%2Dkelsey%2Dmikel%2Dbrown%2Djr%2Dupdate%2Dacc%2Dtourney%2Dabsence&rut=ca01ac52ece49b839852235a8fb54287dcb7258779dcd02488a6eeb0ea65a568\",\n      \"snippet\": \"Louisville HC Pat Kelsey gives encouraging Mikel Brown Jr. update despite ACC tourney absence Louisville head coach Pat Kelsey says star point guard Mikel Brown Jr. is \\\"close\\\" to returning but ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-5-tool-call-2-1",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:12.128Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "South Florida basketball injury news"
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-2-1",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:12.766Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Louisville basketball can blame Mikel Brown Jr.&#x27;s injury for March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcolumnists%2Fc%2Dl%2Dbrown%2F2026%2F03%2F15%2Flouisville%2Dsouth%2Dflorida%2Dbasketball%2Dmarch%2Dmadness%2Dseed%2Dmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dncaa%2Dtournament%2F88787115007%2F&rut=fbed99033ac2e0c5b0fdd3c9441288d4c6057701b70281180a393b2bef8ff6b1",
+          "snippet": "Louisville basketball , a No. 6 seed, will face USF in the NCAA Tournament, but is left to wonder where it&#x27;d be had Mikel Brown Jr. stayed healthy."
+        },
+        {
+          "title": "South Florida Bulls Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fsouth%2Dflorida%2Dbulls%2Finjuries&rut=c43a873a138b2c134ef870adfd8fb9447be5521606d95ff870bb248e41c4b10f",
+          "snippet": "Stay In the Know: Check Out South Florida Bulls Injuries Impacting The 2025-2026 NCAAB Season."
+        },
+        {
+          "title": "Men&#x27;s Basketball - USF Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgousfbulls.com%2Fsports%2Fmens%2Dbasketball&rut=5e1afc55f6906630381bbe340f1d05590a07f1e0c68efef82dfe877af757e955",
+          "snippet": "The official Men&#x27;s Basketball page for the University of South Florida Bulls"
+        },
+        {
+          "title": "Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F16%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dlouisville%2Dsouth%2Dflorida%2Dncaa%2Dtournament%2Dbracket%2Dusf%2Duofl%2Dmarch%2Dmadness%2Dgame%2F88482968007%2F&rut=a00601ff8e05a952ff49784c84bbcabe2024005cf46d31b6e2054ae17719fccb",
+          "snippet": "Here&#x27;s the latest update. Will Louisville basketball &#x27;s starting point guard, Mikel Brown Jr., return from a reaggravated back injury to play in its NCAA Tournament opener against South Florida ?"
+        },
+        {
+          "title": "South Florida Bulls News, Scores and Stats 2025-26",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fteams%2FSFLA%2Fsouth%2Dflorida%2Dbulls%2F&rut=872de480bbcf288aff889b5578c08efb3608ca3c59b36280e3e0293058814438",
+          "snippet": "CBS Sports has the latest South Florida Bulls news and information, including team scores, stats, highlights and more for the 2025 College Basketball season."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Louisville basketball can blame Mikel Brown Jr.&#x27;s injury for March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcolumnists%2Fc%2Dl%2Dbrown%2F2026%2F03%2F15%2Flouisville%2Dsouth%2Dflorida%2Dbasketball%2Dmarch%2Dmadness%2Dseed%2Dmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dncaa%2Dtournament%2F88787115007%2F&rut=fbed99033ac2e0c5b0fdd3c9441288d4c6057701b70281180a393b2bef8ff6b1\",\n      \"snippet\": \"Louisville basketball , a No. 6 seed, will face USF in the NCAA Tournament, but is left to wonder where it&#x27;d be had Mikel Brown Jr. stayed healthy.\"\n    },\n    {\n      \"title\": \"South Florida Bulls Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fsouth%2Dflorida%2Dbulls%2Finjuries&rut=c43a873a138b2c134ef870adfd8fb9447be5521606d95ff870bb248e41c4b10f\",\n      \"snippet\": \"Stay In the Know: Check Out South Florida Bulls Injuries Impacting The 2025-2026 NCAAB Season.\"\n    },\n    {\n      \"title\": \"Men&#x27;s Basketball - USF Athletics\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgousfbulls.com%2Fsports%2Fmens%2Dbasketball&rut=5e1afc55f6906630381bbe340f1d05590a07f1e0c68efef82dfe877af757e955\",\n      \"snippet\": \"The official Men&#x27;s Basketball page for the University of South Florida Bulls\"\n    },\n    {\n      \"title\": \"Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F16%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dlouisville%2Dsouth%2Dflorida%2Dncaa%2Dtournament%2Dbracket%2Dusf%2Duofl%2Dmarch%2Dmadness%2Dgame%2F88482968007%2F&rut=a00601ff8e05a952ff49784c84bbcabe2024005cf46d31b6e2054ae17719fccb\",\n      \"snippet\": \"Here&#x27;s the latest update. Will Louisville basketball &#x27;s starting point guard, Mikel Brown Jr., return from a reaggravated back injury to play in its NCAA Tournament opener against South Florida ?\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:15.657Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:15.657Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.profootballnetwork.com/mens-cbb/mikel-brown-jr-louisville-injury-update-march-2026/",
+        "maxChars": 2000
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:15.792Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.profootballnetwork.com/mens-cbb/mikel-brown-jr-louisville-injury-update-march-2026/",
+        "text": "Is Mikel Brown Jr. Playing? Latest on Louisville Star’s Injury Status for March Madness Tournament Opener Facebook Flipboard Instagram Mail RSS TikTok Twitter Youtube Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Where The Game Never Ends PFSN Where The Game Never Ends Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Search Get Started in PFSN's Free CBB Bracket Predictor! Set Bracket Now! Is Mikel Brown Jr. Playing? Latest on Louisville Star’s Injury Status for March Madness Tournament Opener Men&#x27;s CBB Is Mikel Brown Jr. Playing? Latest on Louisville Star’s Injury Status for March Madness Tournament Opener Mikel Brown Jr. is questionable for Louisville's NCAA T"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.profootballnetwork.com/mens-cbb/mikel-brown-jr-louisville-injury-update-march-2026/\",\n    \"text\": \"Is Mikel Brown Jr. Playing? Latest on Louisville Star’s Injury Status for March Madness Tournament Opener Facebook Flipboard Instagram Mail RSS TikTok Twitter Youtube Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor CFB Transfer Portal Tracker Fantasy Football DFS Optimizer Mock Draft Simulator Start/Sit Optimizer Team Name Generator Trade Analyzer Waiver Wire Assistant Sports Free Tools &#038; Games CBB Bracket Predictor NASCAR Season Predictor NBA Player Guessing Game NBA Playoff Predictor NHL Card Matching Game NBA Mock Draft Simulator FIFA World Cup Simulator Tennis Simulator Men&#8217;s CBB Women&#8217;s CBB NASCAR NBA NHL Tennis WNBA Search PFSN Where The Game Never Ends PFSN Where The Game Never Ends Mock Draft Sim NFL NFL Draft CFB Fantasy Tools/Games NFL NFL Offseason Manager NFL Playoff Predictor NFL Ultimate GM Simulator NFL Connections NFL Player Guessing Game NFL Prospect Guessing Game NFL Word Fumble NFL Word Search College Football CFB Playoff Predictor ... [truncated 800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:18.386Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:18.386Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "maxChars": 2000,
+        "url": "https://www.usatoday.com/story/sports/columnists/c-l-brown/2026/03/15/louisville-south-florida-basketball-march-madness-seed-mikel-brown-jr-injury-update-ncaa-tournament/88787115007/"
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:19.215Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.usatoday.com/story/sports/columnists/c-l-brown/2026/03/15/louisville-south-florida-basketball-march-madness-seed-mikel-brown-jr-injury-update-ncaa-tournament/88787115007/",
+        "text": "Louisville basketball can blame Mikel Brown Jr. for March Madness seed Skip to main content Home NCAAB NCAAW MLB Women's Sports NFL NBA NCAAF WNBA Sports Betting Big Ten Sports SEC Sports Boxing Coaches Salaries Draft Hub Fantasy Football For The Win Formula 1 Golfweek High School Sports High School Sports Awards IndyCar MMA NASCAR National Signing Day NHL Olympics Soccer Sports Business Sports Pulse Sports Seriously Tennis WWE Youth Sports Outdoors Fantasy Bet With the People Clear Play Arizona Sports Indiana Sports Michigan Sports Ohio Sports Tennessee Sports Wisconsin Teams For Subscribers Louisville basketball can blame Mikel Brown Jr.'s injury for March Madness seed C.L. Brown Louisville Courier Journal Show Caption Hide Caption Louisville basketball's Mikel Brown Jr. provides back injury update Mikel Brown Jr. breaks down the back injury keeping him out of the ACC Tournament and gives an update on his recovery for the NCAA Tournament. Louisville basketball received a No. 6 seed in the NCAA Tournament on Selection Sunday. The Cardinals rated well in many key metrics, but they went just 7-5 in games Mikel Brown Jr. missed due to injury. UofL will need its star point guard healthy to navigate its challenging path for a deep March Madness run. Louisville basketball , in a season of many what-ifs, just had another on Selection Sunday with the NCAA’s release of the tournament bracket . The Cardinals received a No. 6 seed in the East Region and will face No. 11-seed and American Conference champion South Florida on Thursday at 1:30 p.m. in the first round. That’s at least one seed line higher than they should be. As much as the fate of how long they last in the nation’s best championship tournament will be determined by the availability of star freshman guard Mikel Brown Jr. , their position as a 6-seed can be attributed to him too. Through no fault of his own, the back injury that forced Brown to miss 10 regular-season games and kept him sidelined for the entire ACC"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.usatoday.com/story/sports/columnists/c-l-brown/2026/03/15/louisville-south-florida-basketball-march-madness-seed-mikel-brown-jr-injury-update-ncaa-tournament/88787115007/\",\n    \"text\": \"Louisville basketball can blame Mikel Brown Jr. for March Madness seed Skip to main content Home NCAAB NCAAW MLB Women's Sports NFL NBA NCAAF WNBA Sports Betting Big Ten Sports SEC Sports Boxing Coaches Salaries Draft Hub Fantasy Football For The Win Formula 1 Golfweek High School Sports High School Sports Awards IndyCar MMA NASCAR National Signing Day NHL Olympics Soccer Sports Business Sports Pulse Sports Seriously Tennis WWE Youth Sports Outdoors Fantasy Bet With the People Clear Play Arizona Sports Indiana Sports Michigan Sports Ohio Sports Tennessee Sports Wisconsin Teams For Subscribers Louisville basketball can blame Mikel Brown Jr.'s injury for March Madness seed C.L. Brown Louisville Courier Journal Show Caption Hide Caption Louisville basketball's Mikel Brown Jr. provides back injury update Mikel Brown Jr. breaks down the back injury keeping him out of the ACC Tournament and gives an update on his recovery for the NCAA Tournament. Louisville basketball received a No. 6 seed in the NCAA Tournament on Selection Sunday. The Cardinals rated well in many key metrics, but they went just 7-5 in games Mikel Brown Jr. missed due to injury. UofL will need its star point guard healt... [truncated 800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:21.658Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:21.658Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket"
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:22.897Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Louisville basketball can blame Mikel Brown Jr.&#x27;s injury for March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcolumnists%2Fc%2Dl%2Dbrown%2F2026%2F03%2F15%2Flouisville%2Dsouth%2Dflorida%2Dbasketball%2Dmarch%2Dmadness%2Dseed%2Dmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dncaa%2Dtournament%2F88787115007%2F&rut=fbed99033ac2e0c5b0fdd3c9441288d4c6057701b70281180a393b2bef8ff6b1",
+          "snippet": "Louisville basketball, a No. 6 seed, will face USF in the NCAA Tournament, but is left to wonder where it&#x27;d be had Mikel Brown Jr. stayed healthy."
+        },
+        {
+          "title": "Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F16%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dlouisville%2Dsouth%2Dflorida%2Dncaa%2Dtournament%2Dbracket%2Dusf%2Duofl%2Dmarch%2Dmadness%2Dgame%2F88482968007%2F&rut=a00601ff8e05a952ff49784c84bbcabe2024005cf46d31b6e2054ae17719fccb",
+          "snippet": "Here&#x27;s the latest update . Will Louisville basketball &#x27;s starting point guard, Mikel Brown Jr ., return from a reaggravated back injury to play in its NCAA Tournament opener against South Florida ?"
+        },
+        {
+          "title": "Is Mikel Brown Jr. Playing? Latest on Louisville Star&#x27;s Injury Status ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fmikel%2Dbrown%2Djr%2Dlouisville%2Dinjury%2Dupdate%2Dmarch%2D2026%2F&rut=f88d8d2d515fa1ae6b84100a84df5774d23b8c7ad711a26d5a05863abec4122d",
+          "snippet": "Mikel Brown Jr. is questionable for Louisville&#x27;s NCAA Tournament opener as Pat Kelsey reports encouraging progress on the star&#x27;s back."
+        },
+        {
+          "title": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fmikel%2Dbrown%2Djr%2Din%2Dquestion%2Das%2Dno%2D6%2Dseed%2Dlouisville%2Dtips%2Doff%2Dvs%2Dno%2D11%2Dusf%2F&rut=0219854a509830d9b3dafc4795508f2d4fb5cd55be8bcaec286c3d85875bfd0d",
+          "snippet": "After Brown missed last week&#x27;s ACC tournament, it remains to be seen if he&#x27;ll be available on Thursday afternoon when Louisville (23-10) faces No. 11 seed South Florida (25-8) in Buffalo, N.Y."
+        },
+        {
+          "title": "Mikel Brown Jr. injury update for Louisville basketball vs Miami",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F06%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dlouisville%2Dbasketball%2Dmiami%2Dgame%2Dpat%2Dkelsey%2Duofl%2Dcardinals%2Dacc%2F88592974007%2F&rut=db40faa97376bbdbc1243a47087ce78022865d9dbecba56ee665adbf339ba572",
+          "snippet": "Will Mikel Brown Jr. play in Louisville basketball&#x27;s final game of the regular season Saturday at Miami? Latest UofL basketball injury update :"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Louisville basketball can blame Mikel Brown Jr.&#x27;s injury for March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcolumnists%2Fc%2Dl%2Dbrown%2F2026%2F03%2F15%2Flouisville%2Dsouth%2Dflorida%2Dbasketball%2Dmarch%2Dmadness%2Dseed%2Dmikel%2Dbrown%2Djr%2Dinjury%2Dupdate%2Dncaa%2Dtournament%2F88787115007%2F&rut=fbed99033ac2e0c5b0fdd3c9441288d4c6057701b70281180a393b2bef8ff6b1\",\n      \"snippet\": \"Louisville basketball, a No. 6 seed, will face USF in the NCAA Tournament, but is left to wonder where it&#x27;d be had Mikel Brown Jr. stayed healthy.\"\n    },\n    {\n      \"title\": \"Mikel Brown Jr. injury update Louisville vs South Florida NCAA bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Flouisville%2F2026%2F03%2F16%2Fmikel%2Dbrown%2Djr%2Dinjury%2Dlouisville%2Dsouth%2Dflorida%2Dncaa%2Dtournament%2Dbracket%2Dusf%2Duofl%2Dmarch%2Dmadness%2Dgame%2F88482968007%2F&rut=a00601ff8e05a952ff49784c84bbcabe2024005cf46d31b6e2054ae17719fccb\",\n      \"snippet\": \"Here&#x27;s the latest update . Will Louisville basketball &#x27;s starting point guard, Mikel Brown Jr ., return from a reaggravated back injury to play in its NCAA Tournament opener against South Florida ?\"\n    },\n    {\n      \"title\": \"Is Mikel Brown Jr. Playing? Latest on Louisville Star&#x27;s Injury Status ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.profootballnetwork.com%2Fmens%2Dcbb%2Fmikel%2Dbrown%2Djr%2Dlouisville%2Dinjury%2Dupdate%2Dmarch%2D2026%2F&rut=f88d8d2d515fa1ae6b84100a84df5774d23b8c7ad711a26d5a05863abec4122d\",\n      \"snippet\": \"Mikel Brown Jr. is questionable for Louisville&#x27;s NCAA Tournament opener as Pat Kelsey reports encouraging progress on the star&#x27;s back.\"\n    },\n    {\n      \"title\": \"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fmikel%2Dbrown%2Djr%2Din%2Dquestion%2Das%2Dno%2D6%2Dseed%2Dlouisville%2Dtips%2Doff%2Dvs%2Dno%2D11%2Dusf%2F&rut=0219854a509830d9b3dafc4795508f2d4fb5cd55be8bcaec286c3d85875bfd0d\",\n      \"snippet\": \"After Brown missed last week&#x27;s ACC tournament, it remains to be seen if he&#x27;ll be available on Thursday afternoon when Louisville (23-10) faces No. 11 seed South Florida (25-8) in Buffalo, N.Y.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:26.959Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:26.959Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "South Florida basketball recent games 2026"
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:27.728Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2025-26 Men&#x27;s Basketball Schedule - USF Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgousfbulls.com%2Fsports%2Fmens%2Dbasketball%2Fschedule%2F2025%2D26&rut=2d0b23150b6528c76c31040828a4dc5506c4cac0561de397da3ed8ed3056c4bb",
+          "snippet": "The official 2025-26 Men&#x27;s Basketball schedule for the University of South Florida Bulls"
+        },
+        {
+          "title": "South Florida Bulls 2025-26 Regular Season NCAAM Fixtures - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F58%2Fseason%2F2026&rut=48f1973847039939bd076be2421cc209634459f0babef3cca06558a7b01f9356",
+          "snippet": "ESPN (UK) has the full 2025-26 South Florida Bulls Regular Season NCAAM fixtures. Includes game times, TV listings and ticket information for all Bulls games ."
+        },
+        {
+          "title": "South Florida Bulls Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F58%2Fsouth%2Dflorida%2Dbulls&rut=2da4ad292aa3aed51a0e57ca467ea4d8cdbfb0cae045efb5848bd3b78da8bc5e",
+          "snippet": "Visit ESPN for South Florida Bulls live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "2025-26 South Florida Bulls Men&#x27;s Schedule and Results | College ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fsouth%2Dflorida%2Fmen%2F2026%2Dschedule.html&rut=bb43806e41396b9e47fb7345418c0e985d9f75ccf5bc1a88dad6deddbbf28052",
+          "snippet": "Check out the detailed 2025-26 South Florida Bulls Schedule and Results for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "Where South Florida basketball stands in March Madness bracket predictions",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fpackerswire.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fbasketball%2F2026%2F03%2F15%2Fsouth%2Dflorida%2Dmarch%2Dmadness%2Dbracket%2Dpredictions%2Dncaa%2Dtournament%2F89144700007%2F&rut=0bcbad430429be950e7a03e22f5641b1fb0739d9a51345e51e166c247e82145c",
+          "snippet": "(Editor&#x27;s note: Story updated to reflect most recent bracketology projections.) Several teams from the state of Florida are expected to be named when the 2026 NCAA tournament brackets are unveiled on March 15. One of those teams may be the South Florida Bulls. They have spent this week in Birmingham ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2025-26 Men&#x27;s Basketball Schedule - USF Athletics\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgousfbulls.com%2Fsports%2Fmens%2Dbasketball%2Fschedule%2F2025%2D26&rut=2d0b23150b6528c76c31040828a4dc5506c4cac0561de397da3ed8ed3056c4bb\",\n      \"snippet\": \"The official 2025-26 Men&#x27;s Basketball schedule for the University of South Florida Bulls\"\n    },\n    {\n      \"title\": \"South Florida Bulls 2025-26 Regular Season NCAAM Fixtures - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.co.uk%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Fschedule%2F_%2Fid%2F58%2Fseason%2F2026&rut=48f1973847039939bd076be2421cc209634459f0babef3cca06558a7b01f9356\",\n      \"snippet\": \"ESPN (UK) has the full 2025-26 South Florida Bulls Regular Season NCAAM fixtures. Includes game times, TV listings and ticket information for all Bulls games .\"\n    },\n    {\n      \"title\": \"South Florida Bulls Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F58%2Fsouth%2Dflorida%2Dbulls&rut=2da4ad292aa3aed51a0e57ca467ea4d8cdbfb0cae045efb5848bd3b78da8bc5e\",\n      \"snippet\": \"Visit ESPN for South Florida Bulls live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"2025-26 South Florida Bulls Men&#x27;s Schedule and Results | College ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fsouth%2Dflorida%2Fmen%2F2026%2Dschedule.html&rut=bb43806e41396b9e47fb7345418c0e985d9f75ccf5bc1a88dad6deddbbf28052\",\n      \"snippet\": \"Check out the detailed 2025-26 South Florida Bulls Schedule and Results for College Basketball at Sports-Reference.com\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:30.367Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:30.367Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "maxChars": 2000,
+        "url": "https://www.cbssports.com/college-basketball/news/mikel-brown-jr-in-question-as-no-6-seed-louisville-tips-off-vs-no-11-usf/"
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:30.561Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.cbssports.com/college-basketball/news/mikel-brown-jr-in-question-as-no-6-seed-louisville-tips-off-vs-no-11-usf/",
+        "text": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF - CBS Sports site: media | arena: collegebasketball | pageType: stories | section: | slug: mikel-brown-jr-in-question-as-no-6-seed-louisville-tips-off-vs-no-11-usf | sport: collegebasketball | route: article_single.us | 6-keys: media/spln/collegebasketball/reg/free/stories Skip to Main Content Close Menu All Sports Menu Sports Watch Fantasy Betting Featured NFL Bracket Brackets NCAA BB NCAA WBB NBA Golf UFC SportsSoccer Soccer MLB Explore More NCAA FB NHL Champions League SportsWwe WWE WNBA Boxing NASCAR Motor Sports NWSL UFL Horse Racing Northeast Tennis BIG3 High School Olympics Podcasts Shop Northeast Promotions PBR Northeast MLV Northeast 3ICE Northeast Play Golf NFL Explore NFL NFL News Free Agency Tracker Scores Schedule Standings Super Bowl Playoff Bracket Teams Stats NFL Draft Prospect Rankings Mock Drafts Power Rankings Video Players Injuries Transactions NFL Betting Fantasy Paramount + NFL Shop NFL Teams See All ArrowForward AFC East Bills Dolphins Jets Patriots AFC North Bengals Browns Ravens Steelers AFC South Colts Jaguars Texans Titans AFC West Broncos Chargers Chiefs Raiders NFC East Commanders Cowboys Eagles Giants NFC North Bears Lions Packers Vikings NFC South Buccaneers Falcons Panthers Saints NFC West 49ers Cardinals Rams Seahawks Brackets NCAA BB Explore NCAA BB College Basketball News Scores NCAA Tournament Bracket Games Live Bracket Printable Bracket March Madness Live Expert Brackets Expert Picks Schedule NIT Bracket Standings Rankings Expert Picks Odds Stats Teams Players College Basketball Betting Women's BB NBA Draft Prospect Rankings 2026 Top Recruits 2026 Top Classes CBS Sports Classic College Shop Shows & Podcasts See All ArrowForward NCAA WBB Explore NCAA WBB Women's College Basketball News Scores NCAA Tournament Live Bracket Printable Bracket Women's Bracket Games Schedule Expert Brackets WNIT WBIT Standings Rankings Teams Video College Shop Northeast NBA Exp"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.cbssports.com/college-basketball/news/mikel-brown-jr-in-question-as-no-6-seed-louisville-tips-off-vs-no-11-usf/\",\n    \"text\": \"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF - CBS Sports site: media | arena: collegebasketball | pageType: stories | section: | slug: mikel-brown-jr-in-question-as-no-6-seed-louisville-tips-off-vs-no-11-usf | sport: collegebasketball | route: article_single.us | 6-keys: media/spln/collegebasketball/reg/free/stories Skip to Main Content Close Menu All Sports Menu Sports Watch Fantasy Betting Featured NFL Bracket Brackets NCAA BB NCAA WBB NBA Golf UFC SportsSoccer Soccer MLB Explore More NCAA FB NHL Champions League SportsWwe WWE WNBA Boxing NASCAR Motor Sports NWSL UFL Horse Racing Northeast Tennis BIG3 High School Olympics Podcasts Shop Northeast Promotions PBR Northeast MLV Northeast 3ICE Northeast Play Golf NFL Explore NFL NFL News Free Agency Tracker Scores Schedule Standings Super Bowl Playoff Bracket Teams Stats NFL Draft Prospect Rankings Mock Drafts Power Rankings Video Players Injuries Transactions NFL Betting Fantasy Paramount + NFL Shop NFL Teams See All ArrowForward AFC East Bills Dolphins Jets Patriots AFC North Bengals Browns Ravens Steelers AFC South Colts Jaguars Texans Titans AFC West Broncos Chargers Chiefs Raiders NFC East Command... [truncated 800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:33.003Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:33.003Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "\"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF\""
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:33.831Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fmikel%2Dbrown%2Djr%2Din%2Dquestion%2Das%2Dno%2D6%2Dseed%2Dlouisville%2Dtips%2Doff%2Dvs%2Dno%2D11%2Dusf%2F&rut=0219854a509830d9b3dafc4795508f2d4fb5cd55be8bcaec286c3d85875bfd0d",
+          "snippet": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF It&#x27;s safe to say Pat Kelsey&#x27;s second season at Louisville hasn&#x27;t gone entirely to plan."
+        },
+        {
+          "title": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Farticle.wn.com%2Fview%2F2026%2F03%2F17%2FMikel_Brown_Jr_in_question_as_No_6_seed_Louisville_tips_off_%2F&rut=afeb66378dc8fd2510b2d88628d26c062327ff63ee26afa4e2c772d5bba3c1ad",
+          "snippet": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF Posted 2026-03-17, Gwinnett Daily Post"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fmikel%2Dbrown%2Djr%2Din%2Dquestion%2Das%2Dno%2D6%2Dseed%2Dlouisville%2Dtips%2Doff%2Dvs%2Dno%2D11%2Dusf%2F&rut=0219854a509830d9b3dafc4795508f2d4fb5cd55be8bcaec286c3d85875bfd0d\",\n      \"snippet\": \"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF It&#x27;s safe to say Pat Kelsey&#x27;s second season at Louisville hasn&#x27;t gone entirely to plan.\"\n    },\n    {\n      \"title\": \"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Farticle.wn.com%2Fview%2F2026%2F03%2F17%2FMikel_Brown_Jr_in_question_as_No_6_seed_Louisville_tips_off_%2F&rut=afeb66378dc8fd2510b2d88628d26c062327ff63ee26afa4e2c772d5bba3c1ad\",\n      \"snippet\": \"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF Posted 2026-03-17, Gwinnett Daily Post\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-5-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T06:58:36.351Z",
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T06:58:36.351Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "\"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF\" \"Gwinnett Daily Post\""
+      },
+      "content": null
+    },
+    {
+      "id": "r64-east-5-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T06:58:37.014Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Farticle.wn.com%2Fview%2F2026%2F03%2F17%2FMikel_Brown_Jr_in_question_as_No_6_seed_Louisville_tips_off_%2F&rut=afeb66378dc8fd2510b2d88628d26c062327ff63ee26afa4e2c772d5bba3c1ad",
+          "snippet": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF Posted 2026-03-17, Gwinnett Daily Post"
+        },
+        {
+          "title": "Louisville basketball can blame Mikel Brown Jr. for its March Madness ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Farticle.wn.com%2Fview%2Dlemonde%2F2026%2F03%2F15%2FLouisville_basketball_can_blame_Mikel_Brown_Jr_for_its_March%2F&rut=3378c1dd0ba6fce7970f71b2c741830cd98677844a0ab72be6606958035b6049",
+          "snippet": "Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF Gwinnett Daily Post 2026-03-17 Alabama basketball gets ideal draw for NCAA March Madness | Goodbread The Gadsden Times 2026-03-16 WATCH: Rhode Island Women Draw Alabama for March Madness in Louisville The Newport Daily News 2026-03-16"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Farticle.wn.com%2Fview%2F2026%2F03%2F17%2FMikel_Brown_Jr_in_question_as_No_6_seed_Louisville_tips_off_%2F&rut=afeb66378dc8fd2510b2d88628d26c062327ff63ee26afa4e2c772d5bba3c1ad\",\n      \"snippet\": \"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF Posted 2026-03-17, Gwinnett Daily Post\"\n    },\n    {\n      \"title\": \"Louisville basketball can blame Mikel Brown Jr. for its March Madness ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Farticle.wn.com%2Fview%2Dlemonde%2F2026%2F03%2F15%2FLouisville_basketball_can_blame_Mikel_Brown_Jr_for_its_March%2F&rut=3378c1dd0ba6fce7970f71b2c741830cd98677844a0ab72be6606958035b6049\",\n      \"snippet\": \"Mikel Brown Jr. in question as No. 6 seed Louisville tips off vs. No. 11 USF Gwinnett Daily Post 2026-03-17 Alabama basketball gets ideal draw for NCAA March Madness | Goodbread The Gadsden Times 2026-03-16 WATCH: Rhode Island Women Draw Alabama for March Madness in Louisville The Newport Daily News 2026-03-16\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-east-5-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T06:58:50.571Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-east-5\",\n    \"winnerId\": \"louisville\",\n    \"confidence\": 0.6,\n    \"rationale\": \"Louisville enters this 6/11 matchup with a significant statistical advantage, ranking inside the top 20 in both KenPom and Torvik compared to South Florida's standing at 50th. The Cardinals boast an elite offense that ranks in the top 25 nationally, though their ceiling may be impacted by the questionable status of star point guard Mikel Brown Jr. due to a lingering back injury. While the Bulls are a capable and balanced squad that could capitalize if Louisville is shorthanded, the Cardinals' overall talent depth and superior defensive efficiency should provide enough of a cushion to survive a potential upset bid and advance.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"analyze-louisville-usf\",\n    \"title\": \"Analyze Louisville vs South Florida Matchup and Injury Context\",\n    \"summary\": \"Evaluated the statistical profiles of both teams and investigated the injury status of Louisville's Mikel Brown Jr.\",\n    \"evidence\": [\n      \"Louisville ranks 18th in KenPom and 16th in Torvik, featuring a top-25 adjusted offense.\",\n      \"South Florida ranks 50th in both KenPom and Torvik, presenting a balanced but less efficient profile.\",\n      \"Louisville star point guard Mikel Brown Jr. is questionable with a back injury; the team went 7-5 in games he missed this season.\",\n      \"Despite the injury concern, Louisville's nearly 10-point advantage in adjusted efficiency margin makes them the favorite.\"\n    ]\n  }\n}"
+    }
+  ]
+}
