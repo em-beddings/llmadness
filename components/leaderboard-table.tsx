@@ -133,6 +133,7 @@ export function LeaderboardTable({
               </div>
               <div className="leader-accuracy">
                 <span>{Math.round(entry.accuracy * 100)}%</span>
+                <span className="leader-accuracy-label">accuracy</span>
               </div>
               <div className="leader-remaining">
                 <strong>{entry.pointsRemaining}</strong>

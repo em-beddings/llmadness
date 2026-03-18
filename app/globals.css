@@ -210,6 +210,7 @@ h3 {
     font-size: 0.72rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .hero,
@@ -485,6 +486,14 @@ h3 {
     align-items: baseline;
 }
 
+.podium-meta {
+    flex-wrap: nowrap;
+}
+
+.podium-meta span {
+    white-space: nowrap;
+}
+
 .leader-topline {
     align-items: flex-start;
 }
@@ -595,6 +604,10 @@ h3 {
     color: var(--muted);
     white-space: nowrap;
     text-align: center;
+}
+
+.leader-accuracy-label {
+    display: none;
 }
 
 .leader-remaining {
@@ -1180,11 +1193,15 @@ h3 {
     .section-header,
     .leader-topline,
     .leader-bottomline,
-    .podium-meta,
     .region-header,
     .game-modal-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .podium-meta {
+        flex-direction: row;
+        align-items: baseline;
     }
 
     .leader-card {
@@ -1194,7 +1211,7 @@ h3 {
 
     .leader-rank {
         grid-column: 1;
-        grid-row: 1 / span 2;
+        grid-row: 1 / span 3;
     }
 
     .leader-topline {
@@ -1205,13 +1222,21 @@ h3 {
     .leader-points {
         grid-column: 2;
         grid-row: 2;
+        justify-self: start;
+        justify-content: flex-start;
+        text-align: left;
     }
 
     .leader-accuracy {
-        grid-column: 3;
-        grid-row: 1;
-        justify-self: end;
-        text-align: right;
+        grid-column: 2;
+        grid-row: 3;
+        justify-self: start;
+        text-align: left;
+    }
+
+    .leader-accuracy-label {
+        display: inline;
+        margin-left: 4px;
     }
 
     .leader-remaining {
@@ -1222,22 +1247,17 @@ h3 {
     }
 
     .leader-cost {
-        grid-column: 2;
-        grid-row: 3;
-        justify-self: start;
-        text-align: left;
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        text-align: right;
     }
 
     .leader-card .leader-bottomline {
         grid-column: 3;
         grid-row: 3;
-        justify-self: start;
-        text-align: left;
-    }
-
-    .site-footer {
-        flex-direction: column;
-        align-items: flex-start;
+        justify-self: end;
+        text-align: right;
     }
 
     .model-summary {
