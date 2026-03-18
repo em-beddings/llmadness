@@ -100,7 +100,8 @@ function isTraceExpandedByDefault(type: string) {
     type === "system_prompt" ||
     type === "user_prompt" ||
     type === "assistant_message" ||
-    type === "tool_call"
+    type === "tool_call" ||
+    type === "final_json"
   );
 }
 

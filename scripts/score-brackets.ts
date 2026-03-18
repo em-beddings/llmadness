@@ -103,7 +103,7 @@ async function main() {
   await writeJsonFile(path.join(process.cwd(), "data", "runs", runId, "manifest.json"), {
     ...manifest,
     leaderboardPath: path.join("data", "runs", runId, "leaderboard.json"),
-    actualResultsPath: path.join("data", "runs", runId, "actual-results.json")
+    actualResultsPath
   });
 }
 
