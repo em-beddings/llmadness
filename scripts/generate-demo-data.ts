@@ -319,7 +319,7 @@ function buildConfig(): BracketConfig {
   ];
 
   return {
-    id: "demo-2026-bracket",
+    id: "2026-bracket",
     title: "2026 NCAA Men's Tournament",
     year: 2026,
     division: "mens",

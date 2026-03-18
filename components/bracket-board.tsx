@@ -167,7 +167,9 @@ function RegionBracket({
 
   return (
     <section className="region-panel">
-      <div className={`region-header ${side === "right" ? "region-header-right" : ""}`}>
+      <div
+        className={`region-header ${side === "right" ? "region-header-right" : ""}`}
+      >
         <h3>{region}</h3>
       </div>
       <div
@@ -230,7 +232,7 @@ function FinalsBracket({
 
   return (
     <section className="finals-panel">
-        <div className="finals-stage-grid">
+      <div className="finals-stage-grid">
         <div className="final-four-section">
           <div className="region-header">
             <h3>Final Four</h3>
@@ -293,8 +295,12 @@ function FirstFourBracket({
 export function BracketBoard({ view }: { view: SubmissionView }) {
   const regions = getRegions(view);
   const [selectedGameId, setSelectedGameId] = useState<string | null>(null);
-  const [collapsedTraceEventIds, setCollapsedTraceEventIds] = useState<string[]>([]);
-  const [expandedTraceEventIds, setExpandedTraceEventIds] = useState<string[]>([]);
+  const [collapsedTraceEventIds, setCollapsedTraceEventIds] = useState<
+    string[]
+  >([]);
+  const [expandedTraceEventIds, setExpandedTraceEventIds] = useState<string[]>(
+    [],
+  );
 
   const selectedGame = useMemo(
     () =>
@@ -335,9 +341,7 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
     <>
       <section className="panel bracket-shell">
         <div className="section-header bracket-section-header">
-          <p>
-            Click any game for rationale, confidence, and the run transcript.
-          </p>
+          <p>Click any game for rationale, confidence, and the model trace.</p>
         </div>
         <div className="tournament-bracket">
           <FinalsBracket onSelect={setSelectedGameId} view={view} />
@@ -393,7 +397,7 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
               <div className="modal-stat">
                 <span>Confidence</span>
                 <strong>
-              {selectedGame.confidence !== null
+                  {selectedGame.confidence !== null
                     ? `${Math.round(selectedGame.confidence * 100)}%`
                     : "N/A"}
                 </strong>
@@ -433,7 +437,9 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
                   {selectedGame.modelTrace.map((event) => (
                     <article className="trace-card" key={event.id}>
                       {(() => {
-                        const defaultExpanded = isTraceExpandedByDefault(event.type);
+                        const defaultExpanded = isTraceExpandedByDefault(
+                          event.type,
+                        );
                         const isExpanded =
                           (defaultExpanded &&
                             !collapsedTraceEventIds.includes(event.id)) ||
@@ -445,43 +451,60 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
 
                         return (
                           <>
-                      <div className="leader-topline">
-                        <div>
-                          <strong>{event.type.replaceAll("_", " ")}</strong>
-                          {event.toolName ? <p>{event.toolName}</p> : null}
-                        </div>
-                        {hasExpandableContent ? (
-                          <button
-                            className="trace-toggle"
-                            onClick={() => toggleTraceEvent(event.id, defaultExpanded)}
-                            type="button"
-                          >
-                            {isExpanded ? "Minimize" : "Expand"}
-                          </button>
-                        ) : (
-                          <span>{new Date(event.createdAt).toLocaleTimeString()}</span>
-                        )}
-                      </div>
-                      {isExpanded ? (
-                        <div className="trace-expanded">
-                          <p>{new Date(event.createdAt).toLocaleTimeString()}</p>
-                          {event.arguments !== undefined ? (
-                            <pre className="code-block">
-                              {JSON.stringify(event.arguments, null, 2)}
-                            </pre>
-                          ) : null}
-                          {event.result !== undefined ? (
-                            <pre className="code-block">
-                              {JSON.stringify(event.result, null, 2)}
-                            </pre>
-                          ) : null}
-                          {event.content ? (
-                            <pre className="code-block">
-                              {formatTraceContent(event.type, event.content)}
-                            </pre>
-                          ) : null}
-                        </div>
-                      ) : null}
+                            <div className="leader-topline">
+                              <div>
+                                <strong>
+                                  {event.type.replaceAll("_", " ")}
+                                </strong>
+                                {event.toolName ? (
+                                  <p>{event.toolName}</p>
+                                ) : null}
+                              </div>
+                              {hasExpandableContent ? (
+                                <button
+                                  className="trace-toggle"
+                                  onClick={() =>
+                                    toggleTraceEvent(event.id, defaultExpanded)
+                                  }
+                                  type="button"
+                                >
+                                  {isExpanded ? "Minimize" : "Expand"}
+                                </button>
+                              ) : (
+                                <span>
+                                  {new Date(
+                                    event.createdAt,
+                                  ).toLocaleTimeString()}
+                                </span>
+                              )}
+                            </div>
+                            {isExpanded ? (
+                              <div className="trace-expanded">
+                                <p>
+                                  {new Date(
+                                    event.createdAt,
+                                  ).toLocaleTimeString()}
+                                </p>
+                                {event.arguments !== undefined ? (
+                                  <pre className="code-block">
+                                    {JSON.stringify(event.arguments, null, 2)}
+                                  </pre>
+                                ) : null}
+                                {event.result !== undefined ? (
+                                  <pre className="code-block">
+                                    {JSON.stringify(event.result, null, 2)}
+                                  </pre>
+                                ) : null}
+                                {event.content ? (
+                                  <pre className="code-block">
+                                    {formatTraceContent(
+                                      event.type,
+                                      event.content,
+                                    )}
+                                  </pre>
+                                ) : null}
+                              </div>
+                            ) : null}
                           </>
                         );
                       })()}
