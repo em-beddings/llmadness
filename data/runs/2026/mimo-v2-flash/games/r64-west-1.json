@@ -1,0 +1,905 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mimo",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "r64-west-1",
+  "generatedAt": "2026-03-18T10:03:42.400Z",
+  "pick": {
+    "gameId": "r64-west-1",
+    "winnerId": "arizona",
+    "confidence": 0.97,
+    "rationale": "Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while LIU, a 234th-ranked NEC champion, lacks the offensive firepower to compete. The Wildcats' top-10 adjusted offense and defense should overwhelm LIU's average attack, and there are no significant injury concerns for Arizona. Although LIU has momentum from its conference title, the talent gap is too wide for a credible upset path."
+  },
+  "reasoningStep": {
+    "id": "1",
+    "title": "Team Quality and Efficiency Analysis",
+    "summary": "Arizona's advanced metrics show a massive advantage over LIU, with the Wildcats ranking 3rd nationally in both KenPom and Torvik, while LIU sits outside the top 200.",
+    "evidence": "Arizona: KenPom rank 3, Torvik rank 3, adjoe 127.2, adjde 89.7. LIU: KenPom rank 216, Torvik rank 234, adjoe 105.7, adjde 109.6."
+  },
+  "toolCalls": [
+    {
+      "id": "tool-qwevxtgm",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "arizona",
+          "liu"
+        ]
+      },
+      "startedAt": "2026-03-18T10:02:57.433Z",
+      "completedAt": "2026-03-18T10:02:57.437Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "arizona",
+          "teamName": "Arizona",
+          "torvik": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adjoe": 126.22482613026838,
+            "oe Rank": 10,
+            "adjde": 91.12598305356042,
+            "de Rank": 3,
+            "barthag": 0.9769540425666804,
+            "rank.1": 3,
+            "proj. W": 31.54848779503724,
+            "Proj. L": 2.451512204962764,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.7321035008087977,
+            "ncsos": 0.5608968275917484,
+            "consos": 0.8383219215796915,
+            "Proj. SOS": 0.7391634605797618,
+            "Proj. Noncon SOS": 0.5608968275917484,
+            "Proj. Con SOS": 0.8383219215796915,
+            "elite SOS": 0.6107621530374404,
+            "elite noncon SOS": 0.7185030373892591,
+            "Opp OE": 116.77681864454006,
+            "Opp DE": 103.54326761743802,
+            "Opp Proj. OE": 117.0215450602533,
+            "Opp Proj DE": 103.19943867573676,
+            "Con Adj OE": 126.41731670872475,
+            "Con Adj DE": 91.4031269731425,
+            "Qual O": 126.51726928825438,
+            "Qual D": 91.07345061890346,
+            "Qual Barthag": 0.977690783748864,
+            "Qual Games": 18,
+            "FUN": 0.0953869115257397,
+            "ConPF": 1513,
+            "ConPA": 1265,
+            "ConPoss": 1284.0875,
+            "ConOE": 1.178268614872429,
+            "ConDE": 0.9851353587664392,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 12.797428549241603,
+            "WAB Rk": 3,
+            "Fun Rk": 12,
+            "adjt": 70.03680025527512
+          },
+          "kenpom": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adj_em": 37.56,
+            "adj_o": 127.2,
+            "adj_o_rank": 7,
+            "adj_d": 89.7,
+            "adj_d_rank": 3,
+            "adj_t": 69.9,
+            "adj_t_rank": 54,
+            "luck": 0.018,
+            "luck_rank": 133,
+            "sos_adj_em": 14.35,
+            "sos_adj_em_rank": 13,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 16,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 15,
+            "ncsos_adj_em": 3.29,
+            "ncsos_adj_em_rank": 100
+          }
+        },
+        {
+          "teamId": "liu",
+          "teamName": "LIU",
+          "torvik": {
+            "rank": 234,
+            "team": "LIU",
+            "conf": "NEC",
+            "record": "24-10",
+            "adjoe": 103.60491085105896,
+            "oe Rank": 269,
+            "adjde": 109.718789493818,
+            "de Rank": 196,
+            "barthag": 0.3408827463001779,
+            "rank.1": 234,
+            "proj. W": 24,
+            "Proj. L": 10,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.3033339021829628,
+            "ncsos": 0.5261713064967573,
+            "consos": 0.168237958093902,
+            "Proj. SOS": 0.3033339021829628,
+            "Proj. Noncon SOS": 0.5261713064967573,
+            "Proj. Con SOS": 0.168237958093902,
+            "elite SOS": 0.9030316459843692,
+            "elite noncon SOS": 0.7849419574086505,
+            "Opp OE": 104.048686739136,
+            "Opp DE": 112.70071149766692,
+            "Opp Proj. OE": 104.048686739136,
+            "Opp Proj DE": 112.70071149766692,
+            "Con Adj OE": 101.46481068072876,
+            "Con Adj DE": 108.38092530478484,
+            "Qual O": 103.40216456525638,
+            "Qual D": 102.91054160445316,
+            "Qual Barthag": 0.5136982837252784,
+            "Qual Games": 2,
+            "FUN": 0.131690518627465,
+            "ConPF": 1301,
+            "ConPA": 1161,
+            "ConPoss": 1192.2375,
+            "ConOE": 1.091225531825664,
+            "ConDE": 0.9737992639889284,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": -5.796371420948493,
+            "WAB Rk": 116,
+            "Fun Rk": 3,
+            "adjt": 67.8123382304927
+          },
+          "kenpom": {
+            "rank": 216,
+            "team": "LIU",
+            "conf": "NEC",
+            "record": "24-10",
+            "adj_em": -3.95,
+            "adj_o": 105.7,
+            "adj_o_rank": 239,
+            "adj_d": 109.6,
+            "adj_d_rank": 186,
+            "adj_t": 67.9,
+            "adj_t_rank": 154,
+            "luck": 0.104,
+            "luck_rank": 12,
+            "sos_adj_em": -10.03,
+            "sos_adj_em_rank": 350,
+            "sos_opp_o": 103.6,
+            "sos_opp_o_rank": 333,
+            "sos_opp_d": 113.6,
+            "sos_opp_d_rank": 343,
+            "ncsos_adj_em": 2.08,
+            "ncsos_adj_em_rank": 120
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-reyo5rk6",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Arizona basketball 2026 March Madness injury availability",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:02:58.959Z",
+      "completedAt": "2026-03-18T10:02:59.093Z",
+      "summary": "Returned 0 search results for \"Arizona basketball 2026 March Madness injury availability\".",
+      "result": []
+    },
+    {
+      "id": "tool-h7qbonl4",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona Wildcats 2026 March Madness injury news",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:03:00.052Z",
+      "completedAt": "2026-03-18T10:03:00.745Z",
+      "summary": "Returned 5 search results for \"Arizona Wildcats 2026 March Madness injury news\".",
+      "result": [
+        {
+          "title": "Arizona&#x27;s Top Seed Hides a Fracture: Injury Risk and a Flawed Win Could ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ainvest.com%2Fnews%2Farizona%2Dtop%2Dseed%2Dhides%2Dfracture%2Dinjury%2Drisk%2Dflawed%2Dwin%2Dundermine%2Dmarch%2Dmadness%2Dchances%2D2603%2F&rut=8bc0f94007696d7d15109c306705d2d70b38601aae09d9e3236cd18fe467fd73",
+          "snippet": "- Houston&#x27;s suffocating defense and Arizona&#x27;s reliance on rebounding highlight vulnerabilities, raising questions about the Wildcats&#x27; ability to sustain dominance. - The injury risk and close contest create a mispricing opportunity, as the top seed&#x27;s perceived strength may not match its exposed path in March Madness ."
+        },
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Arizona Wildcats News, Schedule, Stats and Roster - USA TODAY Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Farizona%2Dwildcats%2F1291&rut=35758a04d8d644a60e7c5a3be7ccd5295acb23e43a7bda935041cafec7ee7bb0",
+          "snippet": "March Madness bracket picks, predictions from The Arizona Republic Consider yourself a men&#x27;s college basketball expert? Prove it by joining our sports reporters in a free USA TODAY Bracket Challenge for March Madness . Mar. 16, 2026"
+        },
+        {
+          "title": "Arizona Wildcats basketball",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Farizonasports.com%2Fncaa%2Fuofa%2Dbasketball%2F&rut=243d65260b44afb1166387808de6c4fdb6c7382e0dddefd0db5a969347941f3f",
+          "snippet": "Arizona Wildcats men&#x27;s basketball news , analysis, features, injury updates, stats and more content from ArizonaSports.com."
+        },
+        {
+          "title": "2026 March Madness Bracket Predictions - Nate Silver",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.natesilver.net%2Fp%2F2026%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dpredictions&rut=98a187e94610ba3ba100f120ffa2271784efa698f702e302b58c0d5b677b71f0",
+          "snippet": "In the forecasts we issued last night, Arizona surprised us by being a slight overall favorite, but now that we&#x27;ve toned down the effect of injury adjustments (see above), it&#x27;s more of a three-way tie between the Wildcats , Duke and Michigan. We would argue that Arizona is a bit underrated. They are healthier than the other favorites, plus Arizona has a slight travel advantage, as teams ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-gnz6kc2f",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 2000
+      },
+      "startedAt": "2026-03-18T10:03:01.825Z",
+      "completedAt": "2026-03-18T10:03:01.937Z",
+      "summary": "Fetched https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/ and extracted 2000 characters of text.",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Underdog Fantasy Canada Canada Canada Sports Betting Alberta Betting Apps Ontario Betting Apps Brazil Promos Promos Sports Betting Promo Codes DraftKings Promo Code BetMGM Promo Code bet365 Bonus Code theScore Bet Promo Code ESPN BET Promo Code FanDuel Promo Code Fanatics Sportsbook Promo Code Caesars Sportsbook Promo Code Hard Rock Bet Promo Code BetRivers Promo Code Boosted Odds NFL Betting Promos Odds Odds NFL NBA MLB NHL NCAAF NCAAB Sports Sports NFL NFL NFL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Super Bowl MVP DPOY OROY DROY All NFL Futures NBA NBA NBA Betting Odds Props Public Betting Starting Lineups ATS Records News Playoff Bracket Scores Futures Futures Championship MVP DPOY ROY All NBA Futures MLB MLB MLB Betting Odds Props Public Be"
+      }
+    },
+    {
+      "id": "tool-ngrkjuds",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 5000
+      },
+      "startedAt": "2026-03-18T10:03:03.093Z",
+      "completedAt": "2026-03-18T10:03:03.127Z",
+      "summary": "Fetched https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Underdog Fantasy Canada Canada Canada Sports Betting Alberta Betting Apps Ontario Betting Apps Brazil Promos Promos Sports Betting Promo Codes DraftKings Promo Code BetMGM Promo Code bet365 Bonus Code theScore Bet Promo Code ESPN BET Promo Code FanDuel Promo Code Fanatics Sportsbook Promo Code Caesars Sportsbook Promo Code Hard Rock Bet Promo Code BetRivers Promo Code Boosted Odds NFL Betting Promos Odds Odds NFL NBA MLB NHL NCAAF NCAAB Sports Sports NFL NFL NFL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Super Bowl MVP DPOY OROY DROY All NFL Futures NBA NBA NBA Betting Odds Props Public Betting Starting Lineups ATS Records News Playoff Bracket Scores Futures Futures Championship MVP DPOY ROY All NBA Futures MLB MLB MLB Betting Odds Props Public Betting Lineups & Starting Pitchers ATS Records News Playoff Bracket Scores Futures Futures World Series MVP Cy Young Odds AL & NL ROY All MLB Futures NHL NHL NHL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Stanley Cup Hart Trophy Vezina Trophy All NHL Futures NCAAF NCAAF NCAAF Betting Odds Props Public Betting ATS Records Strength-of-Schedule CFP Bracket News Scores Futures Futures National Championship CFP Odds Heisman Trophy All NCAAF Futures NCAAB NCAAB NCAAB Betting Odds Props Public Betting ATS Records News Bracket Scores Futures Futures Championship Conference Wooden POY All NCAAB Futures College Baseball College Baseball College Baseball Betting News College World Series Odds More More Golf Tennis Boxing Mixed Martial Arts Politics Entertainment World Cup Soccer Horse Racing Racing WNBA News Picks Prediction Markets Prediction Markets &mdash; All Kalshi Referral Code Novig Promo Code ProphetX Promo Code Popular Prediction Market State"
+      }
+    },
+    {
+      "id": "tool-1074a2dx",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "LIU Sharks 2026 NEC tournament championship March Madness",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:03:04.169Z",
+      "completedAt": "2026-03-18T10:03:05.512Z",
+      "summary": "Returned 5 search results for \"LIU Sharks 2026 NEC tournament championship March Madness\".",
+      "result": [
+        {
+          "title": "LIU wins NEC championship, returns to March Madness for first time ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnypost.com%2F2026%2F03%2F10%2Fsports%2Fliu%2Dwins%2Dnec%2Dchampionship%2Dwith%2Dreturn%2Dto%2Dmarch%2Dmadness%2Dfor%2Dfirst%2Dtime%2Dsince%2D2018%2Dalready%2Dsecure%2F&rut=0510854eeebc6b7cd77b156c13a9ddab90ee89bec4eb048e461527488ab46d58",
+          "snippet": "Anticlimactics be damned, the Sharks of Long Island University put on a show in one of the strangest conference championships , having already clinched an automatic spot in March Madness before ..."
+        },
+        {
+          "title": "LIU Sharks earn March Madness matchup with No. 1 seed Arizona",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fny%2Fnew%2Dyork%2Fnews%2F2026%2F03%2F16%2Fliu%2Dsharks%2Dearn%2Dmarch%2Dmadness%2Dmatchup%2Dwith%2Dno%2D1%2Dseed%2Darizona%2F&rut=f53d073f56e62427ff1b239304275a81e5ffede1428c9dd78df31ed7751ea285",
+          "snippet": "The LIU Sharks men&#x27;s basketball team captured the NEC championship and earned an automatic bid to the NCAA Tournament , where they will face top-seeded Arizona in the first round in San Diego. Led by head coach Rod Strickland, the Sharks are making their first March Madness appearance since 2018 after going from just 3 wins in Strickland&#x27;s first season to 24 victories this year."
+        },
+        {
+          "title": "LIU Sharks become first team into 2026 NCAA Tournament after unusual ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fliu%2Dsharks%2Dbecome%2Dfirst%2Dteam%2D2026%2Dncaa%2Dtournament%2Dafter%2Dunusual%2Dnec%2Dsituation%2F6ab7e3f80c90dd310a6cc503&rut=e3cd5c1c9b3ab6ee3c2f3347b9ba59fdce052f1ab08f85267e7be4da2368861f",
+          "snippet": "The Sharks will still play the Mercyhurst Lakers in the NEC championship game Monday, but their spot in March Madness is already guaranteed."
+        },
+        {
+          "title": "Shark Scoop - March 8, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.liubknews.com%2Fpost%2Fshark%2Dscoop%2Dmarch%2D8%2D2026&rut=16fd3a71516a90f6be4754663f4fdf7b73eda6d6e4aeca71a413b3b1f034490d",
+          "snippet": "The LIU men&#x27;s basketball team has a lot to celebrate after winning against Mercyhurst 79-70 on Tuesday night, March 10. This win contributed to their 7th NEC Championship since the start of the basketball program, and marked their return to March Madness since 2018."
+        },
+        {
+          "title": "The Sharks are Dancing! LIU Men&#x27;s Hoops to Take on Arizona to Open NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnecsports.com%2Fnews%2F2026%2F3%2F16%2Fmens%2Dbasketball%2Dthe%2Dsharks%2Dare%2Ddancing%2Dliu%2Dmens%2Dhoops%2Dto%2Dtake%2Don%2Darizona%2Dto%2Dopen%2Dncaa%2Dtournament.aspx&rut=a68e23359a0b20f84fdec100f90e6b0bb3b9521fd8c368fc28cba4a032e7faa2",
+          "snippet": "LIU&#x27;s 24 wins are the most in the Sharks era of the program, and the first 20-plus win season since the 2016-17 campaign. The Sharks won their seventh NEC Men&#x27;s Basketball Tournament championship in program history on Tuesday, defeating No. 3 seed Mercyhurst 79-70 in Brooklyn."
+        }
+      ]
+    },
+    {
+      "id": "tool-pu5xgrdg",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nypost.com/2026/03/10/sports/liu-wins-nec-championship-with-return-to-march-madness-for-first-time-since-2018-already-secure/",
+        "maxChars": 2000
+      },
+      "startedAt": "2026-03-18T10:03:09.197Z",
+      "completedAt": "2026-03-18T10:03:10.158Z",
+      "summary": "Fetched https://nypost.com/2026/03/10/sports/liu-wins-nec-championship-with-return-to-march-madness-for-first-time-since-2018-already-secure/ and extracted 2000 characters of text.",
+      "result": {
+        "url": "https://nypost.com/2026/03/10/sports/liu-wins-nec-championship-with-return-to-march-madness-for-first-time-since-2018-already-secure/",
+        "text": "LIU wins NEC championship, returns to March Madness for first time since 2018 Primary Menu Sections US News Metro Long Island Politics World News Page Six Sports NFL MLB Olympics NBA NHL College Football College Basketball WNBA Post Sports+ Sports Betting Business Personal Finance Opinion Entertainment TV Movies Music Celebrities Awards Theater Shopping Lifestyle Weird But True Sex & Relationships Viral Trends Human Interest Parenting Fashion & Beauty Food & Drink Travel Health Wellness Fitness Health Care Medicine Men&#8217;s Health Women&#8217;s Health Mental Health Nutrition Real Estate Alexa Media Tech Science Space Environment Wildlife Archaeology Astrology Video Photos Pod Force One NY POSTcast Today&#8217;s Paper Covers Columnists Horoscopes Crosswords & Games Sports Odds Podcasts Careers Email Newsletters Official Store Home Delivery Tips Search Email New York Post Switch between CA and NY editions here. Got it Edition CA NY Open College Basketball navigation Sports Sports Sports Plus Sports Betting Columnists Olympics NFL MLB NBA NHL WNBA NWSL PWHL NCAAB NCAAF Sports Entertainment Golf Tennis Wrestling MMA Soccer NCAAB St. John&#8217;s Scores Stats Standings Teams Players Odds Injuries Search Search College Basketball LIU wins NEC championship with return to March Madness for first time since 2018 already secure By Alex Mitchell Published March 10, 2026, 11:01 p.m. ET They’re not fin-ished. Anticlimactics be damned, the Sharks of Long Island University put on a show in one of the strangest conference championships, having already clinched an automatic bid in March Madness before winning the NEC championship against the Mercyhurst Lakers 79-70 on Tuesday night in Brooklyn via an unusual technicality. The group feels its ticket to the NCAA Tournament is properly “earned,” and the team didn’t coast in a game with only pride on the line, said senior guard Malachi Davis. “We don’t shy away from anything,” added fellow senior guard Greg Gordon. “We don’t hide our"
+      }
+    },
+    {
+      "id": "tool-2f62qrfx",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nationaltoday.com/us/ny/new-york/news/2026/03/16/liu-sharks-earn-march-madness-matchup-with-no-1-seed-arizona/",
+        "maxChars": 2000
+      },
+      "startedAt": "2026-03-18T10:03:12.796Z",
+      "completedAt": "2026-03-18T10:03:14.450Z",
+      "summary": "Fetched https://nationaltoday.com/us/ny/new-york/news/2026/03/16/liu-sharks-earn-march-madness-matchup-with-no-1-seed-arizona/ and extracted 2000 characters of text.",
+      "result": {
+        "url": "https://nationaltoday.com/us/ny/new-york/news/2026/03/16/liu-sharks-earn-march-madness-matchup-with-no-1-seed-arizona/",
+        "text": "LIU Sharks earn March Madness matchup with No. 1 seed Arizona - NYC Today Skip to content National Today Menu National Today Today Holidays Animals Arts & Entertainment Cause Cultural Federal Food & Beverage Health Relationships Religious Special Interest Birthdays January February March April May June July August September October November December Reminders Cities Atlanta Austin Baltimore Berwyn Beverly Hills Birmingham Boston Brooklyn Buffalo Charlotte Chicago Cincinnati Cleveland Columbus Dallas Denver Detroit Fort Worth Houston Indianapolis Knoxville Las Vegas Los Angeles Louisville Madison Memphis Miami Milwaukee Minneapolis Nashville New Orleans New York Omaha Orlando Philadelphia Phoenix Pittsburgh Portland Raleigh Richmond Rutherford Sacramento Salt Lake City San Antonio San Diego San Francisco San Jose Seattle Tampa Tucson Washington Log in Sign up Search Search Cancel Search National Today Submit NYC Today By the People, for the People News Sports Basketball Baseball Body Building Boxing Cycling Equestrian eSports Extreme Sports Football Golf Gymnastics Hockey Ice Skating Mixed Martial Arts Motorsports Olympics Other Sports Rodeo Running Skiing Soccer Softball Surfing Swimming Tennis Track & Field Volleyball Wrestling More LIU Sharks earn March Madness matchup with No. 1 seed Arizona Rod Strickland's NEC champion Sharks will take their viral 'Fins Up' celebration to San Diego for the NCAA Tournament Mar. 16, 2026 at 1:04am Got story updates? Submit your updates here. › The LIU Sharks men's basketball team captured the NEC championship and earned an automatic bid to the NCAA Tournament, where they will face top-seeded Arizona in the first round in San Diego. Led by head coach Rod Strickland, the Sharks are making their first March Madness appearance since 2018 after going from just 3 wins in Strickland's first season to 24 victories this year. Why it matters The Sharks' remarkable turnaround under Strickland's leadership and the team's viral 'Fins Up' cele"
+      }
+    },
+    {
+      "id": "tool-6l0dcn6a",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona Wildcats 2026 roster injuries March Madness",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:03:16.726Z",
+      "completedAt": "2026-03-18T10:03:17.697Z",
+      "summary": "Returned 5 search results for \"Arizona Wildcats 2026 roster injuries March Madness\".",
+      "result": [
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed",
+          "snippet": "The Athletic has live coverage of the First Four from 2026 Men&#x27;s March Madness . Roster attrition is a factor during the postseason in any sport."
+        },
+        {
+          "title": "Arizona Wildcats News, Schedule, Stats and Roster - USA TODAY Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Farizona%2Dwildcats%2F1291&rut=35758a04d8d644a60e7c5a3be7ccd5295acb23e43a7bda935041cafec7ee7bb0",
+          "snippet": "Latest Arizona Wildcats news, schedule, stats, depth chart, roster , injuries , transactions and more from USA TODAY Sports."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "NCAA Tournament injuries to consider are reviewed. Discover which player are in, out or uncertain before filling out your brackets for March Madness 2026 ."
+        },
+        {
+          "title": "2025-26 Arizona Wildcats Men&#x27;s Roster and Stats | College Basketball at ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Farizona%2Fmen%2F2026.html&rut=f43d5acccd6f719a0904fe26ddae87dad40949aa0ca1c542185c6e7033822cc4",
+          "snippet": "Check out the detailed 2025-26 Arizona Wildcats Roster and Stats for College Basketball at Sports-Reference.com"
+        }
+      ]
+    },
+    {
+      "id": "tool-kbmxzpra",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144",
+        "maxChars": 3000
+      },
+      "startedAt": "2026-03-18T10:03:18.996Z",
+      "completedAt": "2026-03-18T10:03:19.593Z",
+      "summary": "Fetched https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144",
+        "text": "March Madness 2026 Injuries: Key News By Region in the NCAA Tournament | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injuries: March Madness First Round NCAA Tournament injuries to consider are reviewed. Discover which player are in, out or uncertain before filling out your brackets for March Madness 2026. Updated on March 17, 2026 5:33PM EST Share Share to X Share to Reddit Share to Facebook Share To BlueSky By: Ryan Andrade X logo @Roto_Ryan Updated on March 17, 2026 5:33PM EST SPECIAL OFFER Ge"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-west-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T10:02:56.608Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-west-1\nCurrent game label: West 1/16\nRound: Round of 64\nResolved teams: Arizona (arizona) vs LIU (liu)\nPrior committed picks: 12"
+    },
+    {
+      "id": "r64-west-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T10:02:56.608Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-west-1\",\n      \"round\": \"Round of 64\",\n      \"region\": \"West\",\n      \"label\": \"West 1/16\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"arizona\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"liu\"\n      }\n    },\n    \"slotAName\": \"Arizona\",\n    \"slotBName\": \"LIU\",\n    \"slotATeamId\": \"arizona\",\n    \"slotBTeamId\": \"liu\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Texas holds a clear edge in advanced metrics, ranking 37th in KenPom and 45th in Torvik compared to NC State's unranked status, and they just defeated the Wolfpack 68-66 in a tight First Four game where Tramon Mark hit a game-winning jumper. While NC State showed resilience and kept the game close, Texas's superior offensive efficiency and proven ability to execute in clutch moments give them the advantage in this rematch. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Texas's experience and recent head-to-head win make them the more reliable pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"SMU holds a significant edge in advanced metrics, ranking 42nd in KenPom and Torvik compared to Miami (OH)'s 87th-93rd range, with a stronger adjusted offensive efficiency (123 vs. 116.8) that should exploit the RedHawks' weaker defense. While Miami (OH) boasts an impressive 31-1 record, their competition level in the MAC is inferior, and SMU's experience in the ACC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but SMU's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"howard\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Howard enters this First Four matchup with a recent head-to-head victory over UMBC, having won 86-83 in the 2026 tournament, which demonstrates their ability to execute in clutch moments. While UMBC holds a slight edge in raw offensive efficiency metrics, Howard's balanced attack and superior defensive rebounding proved decisive in their previous encounter. The underdog's path relies on hot three-point shooting and forcing turnovers, but Howard's proven resilience and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Lehigh holds a slight edge in advanced metrics, ranking 284th in KenPom compared to Prairie View A&M's 291st, with a marginally better adjusted offensive efficiency that should exploit the Panthers' weaker defense. While Prairie View A&M has a balanced record, Lehigh's recent Patriot League championship demonstrates clutch performance and tournament readiness. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Lehigh's proven form and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Duke is the overwhelming favorite as the tournament's top-ranked team in both KenPom and Torvik, boasting a 31-2 record and elite efficiency on both ends of the floor. Siena, the MAAC champion, faces a massive talent gap, ranking 187th in Torvik and 192nd in KenPom, with no credible path to exploit Duke's weaknesses. While Siena's recent form and championship experience provide some intangible value, Duke's superior size, athleticism, and defensive prowess make this a near-certain outcome.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.68,\n        \"rationale\": \"TCU holds a clear edge in advanced metrics, ranking 43rd in KenPom and 48th in Torvik with a strong defensive efficiency (adjde 99.6) that should disrupt Ohio State's offense. While Ohio State is a traditional power, the lack of available ratings suggests they may be unranked or lower-tier this season, making their path to victory reliant on offensive execution against a disciplined Big 12 defense. TCU's experience in a tougher conference and proven defensive prowess give them the advantage in this matchup.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.82,\n        \"rationale\": \"St. John's holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 20th in KenPom and 18th in Torvik compared to Northern Iowa's 71st and 70th, respectively. Their elite defense (adjde 95.1) should effectively contain Northern Iowa's average offense (adjoe 110.1), while their own potent offense can exploit the Panthers' defense. While Northern Iowa has a credible path through disciplined play and rebounding, St. John's superior talent and efficiency make them the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Kansas is a top-25 team in both KenPom and Torvik with an elite defense ranked 10th in adjusted defensive efficiency, while California Baptist lacks any available advanced metrics, indicating they are a low-major automatic qualifier with a significant talent gap. The Jayhawks' experience in the Big 12 and proven ability to dominate defensively make them the overwhelming favorite, and the underdog's only path would require a perfect shooting night and Kansas having an off game, which is highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Louisville holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 18th in KenPom and 16th in Torvik compared to South Florida's 50th in both, with a significantly stronger adjusted offensive efficiency (124.1 vs. 117.7) that should exploit the Bulls' average defense. While South Florida has a solid 24-8 record and a credible path through disciplined play and rebounding, Louisville's superior talent, experience in the ACC, and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's path would require a perfect shooting night and Louisville having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State, a 3-seed from the Big Ten, holds a significant talent and experience advantage over 14-seed North Dakota State, a Summit League automatic qualifier. While specific advanced metrics are unavailable, the Spartans' conference strength and historical tournament pedigree provide a clear edge. North Dakota State's path relies on perimeter shooting and forcing turnovers, but Michigan State's disciplined defense and superior size should control the game. The underdog's upset potential is limited without a major shooting night from the Bison and a poor performance from the Spartans.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.78,\n        \"rationale\": \"UCLA holds a clear edge in advanced metrics, ranking 24th in Torvik and 27th in KenPom compared to UCF's 58th and 54th, with a stronger adjusted offensive efficiency and a defense that should contain the Knights' attack. While UCF has shown resilience in close games and plays in the tough Big 12, UCLA's superior talent, experience, and recent form—including a dominant sweep of USC—make them the more reliable pick. The underdog's path relies on hot three-point shooting and forcing turnovers, but UCLA's balanced attack and defensive prowess should control the tempo and secure the win.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.92,\n        \"rationale\": \"UConn is a top-tier program with a significant talent and efficiency advantage over Furman, which ranks outside the top 190 in both KenPom and Torvik metrics. While Furman has a credible upset path through disciplined play and three-point shooting, UConn's elite defense, physical frontcourt, and tournament experience make them the overwhelming favorite. The Huskies' ability to control the tempo and dominate the paint should neutralize Furman's strengths and secure a comfortable win.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"ff-west-11\",\n      \"winnerId\": \"texas\",\n      \"confidence\": 0.65,\n      \"rationale\": \"Texas holds a clear edge in advanced metrics, ranking 37th in KenPom and 45th in Torvik compared to NC State's unranked status, and they just defeated the Wolfpack 68-66 in a tight First Four game where Tramon Mark hit a game-winning jumper. While NC State showed resilience and kept the game close, Texas's superior offensive efficiency and proven ability to execute in clutch moments give them the advantage in this rematch. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Texas's experience and recent head-to-head win make them the more reliable pick.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-11\",\n      \"winnerId\": \"smu\",\n      \"confidence\": 0.72,\n      \"rationale\": \"SMU holds a significant edge in advanced metrics, ranking 42nd in KenPom and Torvik compared to Miami (OH)'s 87th-93rd range, with a stronger adjusted offensive efficiency (123 vs. 116.8) that should exploit the RedHawks' weaker defense. While Miami (OH) boasts an impressive 31-1 record, their competition level in the MAC is inferior, and SMU's experience in the ACC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but SMU's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"ff-midwest-16\",\n      \"winnerId\": \"howard\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Howard enters this First Four matchup with a recent head-to-head victory over UMBC, having won 86-83 in the 2026 tournament, which demonstrates their ability to execute in clutch moments. While UMBC holds a slight edge in raw offensive efficiency metrics, Howard's balanced attack and superior defensive rebounding proved decisive in their previous encounter. The underdog's path relies on hot three-point shooting and forcing turnovers, but Howard's proven resilience and recent form make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"ff-south-16\",\n      \"winnerId\": \"lehigh\",\n      \"confidence\": 0.62,\n      \"rationale\": \"Lehigh holds a slight edge in advanced metrics, ranking 284th in KenPom compared to Prairie View A&M's 291st, with a marginally better adjusted offensive efficiency that should exploit the Panthers' weaker defense. While Prairie View A&M has a balanced record, Lehigh's recent Patriot League championship demonstrates clutch performance and tournament readiness. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Lehigh's proven form and superior efficiency metrics make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.95,\n      \"rationale\": \"Duke is the overwhelming favorite as the tournament's top-ranked team in both KenPom and Torvik, boasting a 31-2 record and elite efficiency on both ends of the floor. Siena, the MAAC champion, faces a massive talent gap, ranking 187th in Torvik and 192nd in KenPom, with no credible path to exploit Duke's weaknesses. While Siena's recent form and championship experience provide some intangible value, Duke's superior size, athleticism, and defensive prowess make this a near-certain outcome.\"\n    },\n    {\n      \"gameId\": \"r64-east-2\",\n      \"winnerId\": \"tcu\",\n      \"confidence\": 0.68,\n      \"rationale\": \"TCU holds a clear edge in advanced metrics, ranking 43rd in KenPom and 48th in Torvik with a strong defensive efficiency (adjde 99.6) that should disrupt Ohio State's offense. While Ohio State is a traditional power, the lack of available ratings suggests they may be unranked or lower-tier this season, making their path to victory reliant on offensive execution against a disciplined Big 12 defense. TCU's experience in a tougher conference and proven defensive prowess give them the advantage in this matchup.\"\n    },\n    {\n      \"gameId\": \"r64-east-3\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 0.82,\n      \"rationale\": \"St. John's holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 20th in KenPom and 18th in Torvik compared to Northern Iowa's 71st and 70th, respectively. Their elite defense (adjde 95.1) should effectively contain Northern Iowa's average offense (adjoe 110.1), while their own potent offense can exploit the Panthers' defense. While Northern Iowa has a credible path through disciplined play and rebounding, St. John's superior talent and efficiency make them the clear favorite to advance.\"\n    },\n    {\n      \"gameId\": \"r64-east-4\",\n      \"winnerId\": \"kansas\",\n      \"confidence\": 0.95,\n      \"rationale\": \"Kansas is a top-25 team in both KenPom and Torvik with an elite defense ranked 10th in adjusted defensive efficiency, while California Baptist lacks any available advanced metrics, indicating they are a low-major automatic qualifier with a significant talent gap. The Jayhawks' experience in the Big 12 and proven ability to dominate defensively make them the overwhelming favorite, and the underdog's only path would require a perfect shooting night and Kansas having an off game, which is highly unlikely.\"\n    },\n    {\n      \"gameId\": \"r64-east-5\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.85,\n      \"rationale\": \"Louisville holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 18th in KenPom and 16th in Torvik compared to South Florida's 50th in both, with a significantly stronger adjusted offensive efficiency (124.1 vs. 117.7) that should exploit the Bulls' average defense. While South Florida has a solid 24-8 record and a credible path through disciplined play and rebounding, Louisville's superior talent, experience in the ACC, and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's path would require a perfect shooting night and Louisville having an off game, which is unlikely given the metrics and recent form.\"\n    },\n    {\n      \"gameId\": \"r64-east-6\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Michigan State, a 3-seed from the Big Ten, holds a significant talent and experience advantage over 14-seed North Dakota State, a Summit League automatic qualifier. While specific advanced metrics are unavailable, the Spartans' conference strength and historical tournament pedigree provide a clear edge. North Dakota State's path relies on perimeter shooting and forcing turnovers, but Michigan State's disciplined defense and superior size should control the game. The underdog's upset potential is limited without a major shooting night from the Bison and a poor performance from the Spartans.\"\n    },\n    {\n      \"gameId\": \"r64-east-7\",\n      \"winnerId\": \"ucla\",\n      \"confidence\": 0.78,\n      \"rationale\": \"UCLA holds a clear edge in advanced metrics, ranking 24th in Torvik and 27th in KenPom compared to UCF's 58th and 54th, with a stronger adjusted offensive efficiency and a defense that should contain the Knights' attack. While UCF has shown resilience in close games and plays in the tough Big 12, UCLA's superior talent, experience, and recent form—including a dominant sweep of USC—make them the more reliable pick. The underdog's path relies on hot three-point shooting and forcing turnovers, but UCLA's balanced attack and defensive prowess should control the tempo and secure the win.\"\n    },\n    {\n      \"gameId\": \"r64-east-8\",\n      \"winnerId\": \"uconn\",\n      \"confidence\": 0.92,\n      \"rationale\": \"UConn is a top-tier program with a significant talent and efficiency advantage over Furman, which ranks outside the top 190 in both KenPom and Torvik metrics. While Furman has a credible upset path through disciplined play and three-point shooting, UConn's elite defense, physical frontcourt, and tournament experience make them the overwhelming favorite. The Huskies' ability to control the tempo and dominate the paint should neutralize Furman's strengths and secure a comfortable win.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:02:57.433Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:02:57.433Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "arizona",
+          "liu"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:02:57.437Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "arizona",
+          "teamName": "Arizona",
+          "torvik": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adjoe": 126.22482613026838,
+            "oe Rank": 10,
+            "adjde": 91.12598305356042,
+            "de Rank": 3,
+            "barthag": 0.9769540425666804,
+            "rank.1": 3,
+            "proj. W": 31.54848779503724,
+            "Proj. L": 2.451512204962764,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.7321035008087977,
+            "ncsos": 0.5608968275917484,
+            "consos": 0.8383219215796915,
+            "Proj. SOS": 0.7391634605797618,
+            "Proj. Noncon SOS": 0.5608968275917484,
+            "Proj. Con SOS": 0.8383219215796915,
+            "elite SOS": 0.6107621530374404,
+            "elite noncon SOS": 0.7185030373892591,
+            "Opp OE": 116.77681864454006,
+            "Opp DE": 103.54326761743802,
+            "Opp Proj. OE": 117.0215450602533,
+            "Opp Proj DE": 103.19943867573676,
+            "Con Adj OE": 126.41731670872475,
+            "Con Adj DE": 91.4031269731425,
+            "Qual O": 126.51726928825438,
+            "Qual D": 91.07345061890346,
+            "Qual Barthag": 0.977690783748864,
+            "Qual Games": 18,
+            "FUN": 0.0953869115257397,
+            "ConPF": 1513,
+            "ConPA": 1265,
+            "ConPoss": 1284.0875,
+            "ConOE": 1.178268614872429,
+            "ConDE": 0.9851353587664392,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 12.797428549241603,
+            "WAB Rk": 3,
+            "Fun Rk": 12,
+            "adjt": 70.03680025527512
+          },
+          "kenpom": {
+            "rank": 3,
+            "team": "Arizona",
+            "conf": "B12",
+            "record": "31-2",
+            "adj_em": 37.56,
+            "adj_o": 127.2,
+            "adj_o_rank": 7,
+            "adj_d": 89.7,
+            "adj_d_rank": 3,
+            "adj_t": 69.9,
+            "adj_t_rank": 54,
+            "luck": 0.018,
+            "luck_rank": 133,
+            "sos_adj_em": 14.35,
+            "sos_adj_em_rank": 13,
+            "sos_opp_o": 117.4,
+            "sos_opp_o_rank": 16,
+            "sos_opp_d": 103.1,
+            "sos_opp_d_rank": 15,
+            "ncsos_adj_em": 3.29,
+            "ncsos_adj_em_rank": 100
+          }
+        },
+        {
+          "teamId": "liu",
+          "teamName": "LIU",
+          "torvik": {
+            "rank": 234,
+            "team": "LIU",
+            "conf": "NEC",
+            "record": "24-10",
+            "adjoe": 103.60491085105896,
+            "oe Rank": 269,
+            "adjde": 109.718789493818,
+            "de Rank": 196,
+            "barthag": 0.3408827463001779,
+            "rank.1": 234,
+            "proj. W": 24,
+            "Proj. L": 10,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.3033339021829628,
+            "ncsos": 0.5261713064967573,
+            "consos": 0.168237958093902,
+            "Proj. SOS": 0.3033339021829628,
+            "Proj. Noncon SOS": 0.5261713064967573,
+            "Proj. Con SOS": 0.168237958093902,
+            "elite SOS": 0.9030316459843692,
+            "elite noncon SOS": 0.7849419574086505,
+            "Opp OE": 104.048686739136,
+            "Opp DE": 112.70071149766692,
+            "Opp Proj. OE": 104.048686739136,
+            "Opp Proj DE": 112.70071149766692,
+            "Con Adj OE": 101.46481068072876,
+            "Con Adj DE": 108.38092530478484,
+            "Qual O": 103.40216456525638,
+            "Qual D": 102.91054160445316,
+            "Qual Barthag": 0.5136982837252784,
+            "Qual Games": 2,
+            "FUN": 0.131690518627465,
+            "ConPF": 1301,
+            "ConPA": 1161,
+            "ConPoss": 1192.2375,
+            "ConOE": 1.091225531825664,
+            "ConDE": 0.9737992639889284,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": -5.796371420948493,
+            "WAB Rk": 116,
+            "Fun Rk": 3,
+            "adjt": 67.8123382304927
+          },
+          "kenpom": {
+            "rank": 216,
+            "team": "LIU",
+            "conf": "NEC",
+            "record": "24-10",
+            "adj_em": -3.95,
+            "adj_o": 105.7,
+            "adj_o_rank": 239,
+            "adj_d": 109.6,
+            "adj_d_rank": 186,
+            "adj_t": 67.9,
+            "adj_t_rank": 154,
+            "luck": 0.104,
+            "luck_rank": 12,
+            "sos_adj_em": -10.03,
+            "sos_adj_em_rank": 350,
+            "sos_opp_o": 103.6,
+            "sos_opp_o_rank": 333,
+            "sos_opp_d": 113.6,
+            "sos_opp_d_rank": 343,
+            "ncsos_adj_em": 2.08,
+            "ncsos_adj_em_rank": 120
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"arizona\",\n      \"teamName\": \"Arizona\",\n      \"torvik\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adjoe\": 126.22482613026838,\n        \"oe Rank\": 10,\n        \"adjde\": 91.12598305356042,\n        \"de Rank\": 3\n      },\n      \"kenpom\": {\n        \"rank\": 3,\n        \"team\": \"Arizona\",\n        \"conf\": \"B12\",\n        \"record\": \"31-2\",\n        \"adj_em\": 37.56,\n        \"adj_o\": 127.2,\n        \"adj_o_rank\": 7,\n        \"adj_d\": 89.7\n      }\n    },\n    {\n      \"teamId\": \"liu\",\n      \"teamName\": \"LIU\",\n      \"torvik\": {\n        \"rank\": 234,\n        \"team\": \"LIU\",\n        \"conf\": \"NEC\",\n        \"record\": \"24-10\",\n        \"adjoe\": 103.60491085105896,\n        \"oe Rank\": 269,\n        \"adjde\": 109.718789493818,\n        \"de Rank\": 196\n      },\n      \"kenpom\": {\n        \"rank\": 216,\n        \"team\": \"LIU\",\n        \"conf\": \"NEC\",\n        \"record\": \"24-10\",\n        \"adj_em\": -3.95,\n        \"adj_o\": 105.7,\n        \"adj_o_rank\": 239,\n        \"adj_d\": 109.6\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:02:58.959Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:02:58.959Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Arizona basketball 2026 March Madness injury availability",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:02:59.093Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:03:00.052Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:03:00.052Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona Wildcats 2026 March Madness injury news",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:03:00.745Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Arizona&#x27;s Top Seed Hides a Fracture: Injury Risk and a Flawed Win Could ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ainvest.com%2Fnews%2Farizona%2Dtop%2Dseed%2Dhides%2Dfracture%2Dinjury%2Drisk%2Dflawed%2Dwin%2Dundermine%2Dmarch%2Dmadness%2Dchances%2D2603%2F&rut=8bc0f94007696d7d15109c306705d2d70b38601aae09d9e3236cd18fe467fd73",
+          "snippet": "- Houston&#x27;s suffocating defense and Arizona&#x27;s reliance on rebounding highlight vulnerabilities, raising questions about the Wildcats&#x27; ability to sustain dominance. - The injury risk and close contest create a mispricing opportunity, as the top seed&#x27;s perceived strength may not match its exposed path in March Madness ."
+        },
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Arizona Wildcats News, Schedule, Stats and Roster - USA TODAY Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Farizona%2Dwildcats%2F1291&rut=35758a04d8d644a60e7c5a3be7ccd5295acb23e43a7bda935041cafec7ee7bb0",
+          "snippet": "March Madness bracket picks, predictions from The Arizona Republic Consider yourself a men&#x27;s college basketball expert? Prove it by joining our sports reporters in a free USA TODAY Bracket Challenge for March Madness . Mar. 16, 2026"
+        },
+        {
+          "title": "Arizona Wildcats basketball",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Farizonasports.com%2Fncaa%2Fuofa%2Dbasketball%2F&rut=243d65260b44afb1166387808de6c4fdb6c7382e0dddefd0db5a969347941f3f",
+          "snippet": "Arizona Wildcats men&#x27;s basketball news , analysis, features, injury updates, stats and more content from ArizonaSports.com."
+        },
+        {
+          "title": "2026 March Madness Bracket Predictions - Nate Silver",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.natesilver.net%2Fp%2F2026%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dpredictions&rut=98a187e94610ba3ba100f120ffa2271784efa698f702e302b58c0d5b677b71f0",
+          "snippet": "In the forecasts we issued last night, Arizona surprised us by being a slight overall favorite, but now that we&#x27;ve toned down the effect of injury adjustments (see above), it&#x27;s more of a three-way tie between the Wildcats , Duke and Michigan. We would argue that Arizona is a bit underrated. They are healthier than the other favorites, plus Arizona has a slight travel advantage, as teams ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Arizona&#x27;s Top Seed Hides a Fracture: Injury Risk and a Flawed Win Could ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ainvest.com%2Fnews%2Farizona%2Dtop%2Dseed%2Dhides%2Dfracture%2Dinjury%2Drisk%2Dflawed%2Dwin%2Dundermine%2Dmarch%2Dmadness%2Dchances%2D2603%2F&rut=8bc0f94007696d7d15109c306705d2d70b38601aae09d9e3236cd18fe467fd73\",\n      \"snippet\": \"- Houston&#x27;s suffocating defense and Arizona&#x27;s reliance on rebounding highlight vulnerabilities, raising questions about the Wildcats&#x27; ability to sustain dominance. - The injury risk and close contest create a mispricing opportunity, as the top seed&#x27;s perceived strength may not match its exposed path in March Madness .\"\n    },\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295\",\n      \"snippet\": \"March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks.\"\n    },\n    {\n      \"title\": \"Arizona Wildcats News, Schedule, Stats and Roster - USA TODAY Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Farizona%2Dwildcats%2F1291&rut=35758a04d8d644a60e7c5a3be7ccd5295acb23e43a7bda935041cafec7ee7bb0\",\n      \"snippet\": \"March Madness bracket picks, predictions from The Arizona Republic Consider yourself a men&#x27;s college basketball expert? Prove it by joining our sports reporters in a free USA TODAY Bracket Challenge for March Madness . Mar. 16, 2026\"\n    },\n    {\n      \"title\": \"Arizona Wildcats basketball\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Farizonasports.com%2Fncaa%2Fuofa%2Dbasketball%2F&rut=243d65260b44afb1166387808de6c4fdb6c7382e0dddefd0db5a969347941f3f\",\n      \"snippet\": \"Arizona Wildcats men&#x27;s basketball news , analysis, features, injury updates, stats and more content from ArizonaSports.com.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:03:01.825Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:03:01.825Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 2000
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:03:01.937Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Underdog Fantasy Canada Canada Canada Sports Betting Alberta Betting Apps Ontario Betting Apps Brazil Promos Promos Sports Betting Promo Codes DraftKings Promo Code BetMGM Promo Code bet365 Bonus Code theScore Bet Promo Code ESPN BET Promo Code FanDuel Promo Code Fanatics Sportsbook Promo Code Caesars Sportsbook Promo Code Hard Rock Bet Promo Code BetRivers Promo Code Boosted Odds NFL Betting Promos Odds Odds NFL NBA MLB NHL NCAAF NCAAB Sports Sports NFL NFL NFL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Super Bowl MVP DPOY OROY DROY All NFL Futures NBA NBA NBA Betting Odds Props Public Betting Starting Lineups ATS Records News Playoff Bracket Scores Futures Futures Championship MVP DPOY ROY All NBA Futures MLB MLB MLB Betting Odds Props Public Be"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/\",\n    \"text\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Unde... [truncated 800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:03:03.093Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:03:03.093Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "maxChars": 5000
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:03:03.128Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/",
+        "text": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Underdog Fantasy Canada Canada Canada Sports Betting Alberta Betting Apps Ontario Betting Apps Brazil Promos Promos Sports Betting Promo Codes DraftKings Promo Code BetMGM Promo Code bet365 Bonus Code theScore Bet Promo Code ESPN BET Promo Code FanDuel Promo Code Fanatics Sportsbook Promo Code Caesars Sportsbook Promo Code Hard Rock Bet Promo Code BetRivers Promo Code Boosted Odds NFL Betting Promos Odds Odds NFL NBA MLB NHL NCAAF NCAAB Sports Sports NFL NFL NFL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Super Bowl MVP DPOY OROY DROY All NFL Futures NBA NBA NBA Betting Odds Props Public Betting Starting Lineups ATS Records News Playoff Bracket Scores Futures Futures Championship MVP DPOY ROY All NBA Futures MLB MLB MLB Betting Odds Props Public Betting Lineups & Starting Pitchers ATS Records News Playoff Bracket Scores Futures Futures World Series MVP Cy Young Odds AL & NL ROY All MLB Futures NHL NHL NHL Betting Odds Props Public Betting ATS Records News Playoff Bracket Scores Futures Futures Stanley Cup Hart Trophy Vezina Trophy All NHL Futures NCAAF NCAAF NCAAF Betting Odds Props Public Betting ATS Records Strength-of-Schedule CFP Bracket News Scores Futures Futures National Championship CFP Odds Heisman Trophy All NCAAF Futures NCAAB NCAAB NCAAB Betting Odds Props Public Betting ATS Records News Bracket Scores Futures Futures Championship Conference Wooden POY All NCAAB Futures College Baseball College Baseball College Baseball Betting News College World Series Odds More More Golf Tennis Boxing Mixed Martial Arts Politics Entertainment World Cup Soccer Horse Racing Racing WNBA News Picks Prediction Markets Prediction Markets &mdash; All Kalshi Referral Code Novig Promo Code ProphetX Promo Code Popular Prediction Market State"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportsbettingdime.com/news/college-basketball/march-madness-injuries-know-for-first-round-of-2026-ncaa-tournament/\",\n    \"text\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden Holloway Playing? Skip to content Sports Betting Sports Betting Sportsbooks Sportsbooks Best Betting Sites DraftKings Sportsbook FanDuel Sportsbook BetMGM Bet365 theScore Bet ESPN BET Fanatics Sportsbook Hard Rock Bet Caesars Sportsbook BetRivers Bet99 TonyBet Deposit Methods Deposit Methods All Deposit Methods Fast Payouts PayPal Apple Pay Visa Venmo Legal US Sports Betting Legal US Sports Betting All US Betting Sites Arizona Colorado Illinois Indiana Iowa Kansas Kentucky Kentucky Kentucky Betting Apps Louisiana Maryland Massachusetts Michigan Missouri Missouri &mdash; All DraftKings Missouri FanDuel Missouri BetMGM Missouri bet365 Missouri Caesars Sportsbook Missouri Fanatics Sportsbook Missouri New Jersey New York North Carolina North Carolina North Carolina Betting Apps DraftKings North Carolina FanDuel North Carolina bet365 North Carolina BetMGM North Carolina ESPN Bet North Carolina Caesars Sportsbook NC Ohio Pennsylvania Tennessee Virginia West Virginia Betting Apps Betting Apps Best Sports Betting Apps NFL NBA NHL MLB NCAAF NCAAB Soccer Tennis Golf Boxing UFC Horse Racing DFS DFS Best DFS Sites Dabble Unde... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:03:04.168Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:03:04.168Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "LIU Sharks 2026 NEC tournament championship March Madness",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:03:05.512Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "LIU wins NEC championship, returns to March Madness for first time ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnypost.com%2F2026%2F03%2F10%2Fsports%2Fliu%2Dwins%2Dnec%2Dchampionship%2Dwith%2Dreturn%2Dto%2Dmarch%2Dmadness%2Dfor%2Dfirst%2Dtime%2Dsince%2D2018%2Dalready%2Dsecure%2F&rut=0510854eeebc6b7cd77b156c13a9ddab90ee89bec4eb048e461527488ab46d58",
+          "snippet": "Anticlimactics be damned, the Sharks of Long Island University put on a show in one of the strangest conference championships , having already clinched an automatic spot in March Madness before ..."
+        },
+        {
+          "title": "LIU Sharks earn March Madness matchup with No. 1 seed Arizona",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fny%2Fnew%2Dyork%2Fnews%2F2026%2F03%2F16%2Fliu%2Dsharks%2Dearn%2Dmarch%2Dmadness%2Dmatchup%2Dwith%2Dno%2D1%2Dseed%2Darizona%2F&rut=f53d073f56e62427ff1b239304275a81e5ffede1428c9dd78df31ed7751ea285",
+          "snippet": "The LIU Sharks men&#x27;s basketball team captured the NEC championship and earned an automatic bid to the NCAA Tournament , where they will face top-seeded Arizona in the first round in San Diego. Led by head coach Rod Strickland, the Sharks are making their first March Madness appearance since 2018 after going from just 3 wins in Strickland&#x27;s first season to 24 victories this year."
+        },
+        {
+          "title": "LIU Sharks become first team into 2026 NCAA Tournament after unusual ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fliu%2Dsharks%2Dbecome%2Dfirst%2Dteam%2D2026%2Dncaa%2Dtournament%2Dafter%2Dunusual%2Dnec%2Dsituation%2F6ab7e3f80c90dd310a6cc503&rut=e3cd5c1c9b3ab6ee3c2f3347b9ba59fdce052f1ab08f85267e7be4da2368861f",
+          "snippet": "The Sharks will still play the Mercyhurst Lakers in the NEC championship game Monday, but their spot in March Madness is already guaranteed."
+        },
+        {
+          "title": "Shark Scoop - March 8, 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.liubknews.com%2Fpost%2Fshark%2Dscoop%2Dmarch%2D8%2D2026&rut=16fd3a71516a90f6be4754663f4fdf7b73eda6d6e4aeca71a413b3b1f034490d",
+          "snippet": "The LIU men&#x27;s basketball team has a lot to celebrate after winning against Mercyhurst 79-70 on Tuesday night, March 10. This win contributed to their 7th NEC Championship since the start of the basketball program, and marked their return to March Madness since 2018."
+        },
+        {
+          "title": "The Sharks are Dancing! LIU Men&#x27;s Hoops to Take on Arizona to Open NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnecsports.com%2Fnews%2F2026%2F3%2F16%2Fmens%2Dbasketball%2Dthe%2Dsharks%2Dare%2Ddancing%2Dliu%2Dmens%2Dhoops%2Dto%2Dtake%2Don%2Darizona%2Dto%2Dopen%2Dncaa%2Dtournament.aspx&rut=a68e23359a0b20f84fdec100f90e6b0bb3b9521fd8c368fc28cba4a032e7faa2",
+          "snippet": "LIU&#x27;s 24 wins are the most in the Sharks era of the program, and the first 20-plus win season since the 2016-17 campaign. The Sharks won their seventh NEC Men&#x27;s Basketball Tournament championship in program history on Tuesday, defeating No. 3 seed Mercyhurst 79-70 in Brooklyn."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"LIU wins NEC championship, returns to March Madness for first time ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnypost.com%2F2026%2F03%2F10%2Fsports%2Fliu%2Dwins%2Dnec%2Dchampionship%2Dwith%2Dreturn%2Dto%2Dmarch%2Dmadness%2Dfor%2Dfirst%2Dtime%2Dsince%2D2018%2Dalready%2Dsecure%2F&rut=0510854eeebc6b7cd77b156c13a9ddab90ee89bec4eb048e461527488ab46d58\",\n      \"snippet\": \"Anticlimactics be damned, the Sharks of Long Island University put on a show in one of the strangest conference championships , having already clinched an automatic spot in March Madness before ...\"\n    },\n    {\n      \"title\": \"LIU Sharks earn March Madness matchup with No. 1 seed Arizona\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Fny%2Fnew%2Dyork%2Fnews%2F2026%2F03%2F16%2Fliu%2Dsharks%2Dearn%2Dmarch%2Dmadness%2Dmatchup%2Dwith%2Dno%2D1%2Dseed%2Darizona%2F&rut=f53d073f56e62427ff1b239304275a81e5ffede1428c9dd78df31ed7751ea285\",\n      \"snippet\": \"The LIU Sharks men&#x27;s basketball team captured the NEC championship and earned an automatic bid to the NCAA Tournament , where they will face top-seeded Arizona in the first round in San Diego. Led by head coach Rod Strickland, the Sharks are making their first March Madness appearance since 2018 after going from just 3 wins in Strickland&#x27;s first season to 24 victories this year.\"\n    },\n    {\n      \"title\": \"LIU Sharks become first team into 2026 NCAA Tournament after unusual ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fliu%2Dsharks%2Dbecome%2Dfirst%2Dteam%2D2026%2Dncaa%2Dtournament%2Dafter%2Dunusual%2Dnec%2Dsituation%2F6ab7e3f80c90dd310a6cc503&rut=e3cd5c1c9b3ab6ee3c2f3347b9ba59fdce052f1ab08f85267e7be4da2368861f\",\n      \"snippet\": \"The Sharks will still play the Mercyhurst Lakers in the NEC championship game Monday, but their spot in March Madness is already guaranteed.\"\n    },\n    {\n      \"title\": \"Shark Scoop - March 8, 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.liubknews.com%2Fpost%2Fshark%2Dscoop%2Dmarch%2D8%2D2026&rut=16fd3a71516a90f6be4754663f4fdf7b73eda6d6e4aeca71a413b3b1f034490d\",\n      \"snippet\": \"The LIU men&#x27;s basketball team has a lot to celebrate after winning against Mercyhurst 79-70 on Tuesday night, March 10. This win contributed to their 7th NEC Championship since the start of the basketball program, and marked their return to March Madness since 2018.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:03:09.196Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:03:09.197Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nypost.com/2026/03/10/sports/liu-wins-nec-championship-with-return-to-march-madness-for-first-time-since-2018-already-secure/",
+        "maxChars": 2000
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:03:10.158Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://nypost.com/2026/03/10/sports/liu-wins-nec-championship-with-return-to-march-madness-for-first-time-since-2018-already-secure/",
+        "text": "LIU wins NEC championship, returns to March Madness for first time since 2018 Primary Menu Sections US News Metro Long Island Politics World News Page Six Sports NFL MLB Olympics NBA NHL College Football College Basketball WNBA Post Sports+ Sports Betting Business Personal Finance Opinion Entertainment TV Movies Music Celebrities Awards Theater Shopping Lifestyle Weird But True Sex & Relationships Viral Trends Human Interest Parenting Fashion & Beauty Food & Drink Travel Health Wellness Fitness Health Care Medicine Men&#8217;s Health Women&#8217;s Health Mental Health Nutrition Real Estate Alexa Media Tech Science Space Environment Wildlife Archaeology Astrology Video Photos Pod Force One NY POSTcast Today&#8217;s Paper Covers Columnists Horoscopes Crosswords & Games Sports Odds Podcasts Careers Email Newsletters Official Store Home Delivery Tips Search Email New York Post Switch between CA and NY editions here. Got it Edition CA NY Open College Basketball navigation Sports Sports Sports Plus Sports Betting Columnists Olympics NFL MLB NBA NHL WNBA NWSL PWHL NCAAB NCAAF Sports Entertainment Golf Tennis Wrestling MMA Soccer NCAAB St. John&#8217;s Scores Stats Standings Teams Players Odds Injuries Search Search College Basketball LIU wins NEC championship with return to March Madness for first time since 2018 already secure By Alex Mitchell Published March 10, 2026, 11:01 p.m. ET They’re not fin-ished. Anticlimactics be damned, the Sharks of Long Island University put on a show in one of the strangest conference championships, having already clinched an automatic bid in March Madness before winning the NEC championship against the Mercyhurst Lakers 79-70 on Tuesday night in Brooklyn via an unusual technicality. The group feels its ticket to the NCAA Tournament is properly “earned,” and the team didn’t coast in a game with only pride on the line, said senior guard Malachi Davis. “We don’t shy away from anything,” added fellow senior guard Greg Gordon. “We don’t hide our"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://nypost.com/2026/03/10/sports/liu-wins-nec-championship-with-return-to-march-madness-for-first-time-since-2018-already-secure/\",\n    \"text\": \"LIU wins NEC championship, returns to March Madness for first time since 2018 Primary Menu Sections US News Metro Long Island Politics World News Page Six Sports NFL MLB Olympics NBA NHL College Football College Basketball WNBA Post Sports+ Sports Betting Business Personal Finance Opinion Entertainment TV Movies Music Celebrities Awards Theater Shopping Lifestyle Weird But True Sex & Relationships Viral Trends Human Interest Parenting Fashion & Beauty Food & Drink Travel Health Wellness Fitness Health Care Medicine Men&#8217;s Health Women&#8217;s Health Mental Health Nutrition Real Estate Alexa Media Tech Science Space Environment Wildlife Archaeology Astrology Video Photos Pod Force One NY POSTcast Today&#8217;s Paper Covers Columnists Horoscopes Crosswords & Games Sports Odds Podcasts Careers Email Newsletters Official Store Home Delivery Tips Search Email New York Post Switch between CA and NY editions here. Got it Edition CA NY Open College Basketball navigation Sports Sports Sports Plus Sports Betting Columnists Olympics NFL MLB NBA NHL WNBA NWSL PWHL NCAAB NCAAF Sports Entertainment Golf Tennis Wrestling MMA Soccer NCAAB St. John&#8217;s Scores Stats Standings Teams Players ... [truncated 800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:03:12.796Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:03:12.796Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://nationaltoday.com/us/ny/new-york/news/2026/03/16/liu-sharks-earn-march-madness-matchup-with-no-1-seed-arizona/",
+        "maxChars": 2000
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:03:14.450Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://nationaltoday.com/us/ny/new-york/news/2026/03/16/liu-sharks-earn-march-madness-matchup-with-no-1-seed-arizona/",
+        "text": "LIU Sharks earn March Madness matchup with No. 1 seed Arizona - NYC Today Skip to content National Today Menu National Today Today Holidays Animals Arts & Entertainment Cause Cultural Federal Food & Beverage Health Relationships Religious Special Interest Birthdays January February March April May June July August September October November December Reminders Cities Atlanta Austin Baltimore Berwyn Beverly Hills Birmingham Boston Brooklyn Buffalo Charlotte Chicago Cincinnati Cleveland Columbus Dallas Denver Detroit Fort Worth Houston Indianapolis Knoxville Las Vegas Los Angeles Louisville Madison Memphis Miami Milwaukee Minneapolis Nashville New Orleans New York Omaha Orlando Philadelphia Phoenix Pittsburgh Portland Raleigh Richmond Rutherford Sacramento Salt Lake City San Antonio San Diego San Francisco San Jose Seattle Tampa Tucson Washington Log in Sign up Search Search Cancel Search National Today Submit NYC Today By the People, for the People News Sports Basketball Baseball Body Building Boxing Cycling Equestrian eSports Extreme Sports Football Golf Gymnastics Hockey Ice Skating Mixed Martial Arts Motorsports Olympics Other Sports Rodeo Running Skiing Soccer Softball Surfing Swimming Tennis Track & Field Volleyball Wrestling More LIU Sharks earn March Madness matchup with No. 1 seed Arizona Rod Strickland's NEC champion Sharks will take their viral 'Fins Up' celebration to San Diego for the NCAA Tournament Mar. 16, 2026 at 1:04am Got story updates? Submit your updates here. › The LIU Sharks men's basketball team captured the NEC championship and earned an automatic bid to the NCAA Tournament, where they will face top-seeded Arizona in the first round in San Diego. Led by head coach Rod Strickland, the Sharks are making their first March Madness appearance since 2018 after going from just 3 wins in Strickland's first season to 24 victories this year. Why it matters The Sharks' remarkable turnaround under Strickland's leadership and the team's viral 'Fins Up' cele"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://nationaltoday.com/us/ny/new-york/news/2026/03/16/liu-sharks-earn-march-madness-matchup-with-no-1-seed-arizona/\",\n    \"text\": \"LIU Sharks earn March Madness matchup with No. 1 seed Arizona - NYC Today Skip to content National Today Menu National Today Today Holidays Animals Arts & Entertainment Cause Cultural Federal Food & Beverage Health Relationships Religious Special Interest Birthdays January February March April May June July August September October November December Reminders Cities Atlanta Austin Baltimore Berwyn Beverly Hills Birmingham Boston Brooklyn Buffalo Charlotte Chicago Cincinnati Cleveland Columbus Dallas Denver Detroit Fort Worth Houston Indianapolis Knoxville Las Vegas Los Angeles Louisville Madison Memphis Miami Milwaukee Minneapolis Nashville New Orleans New York Omaha Orlando Philadelphia Phoenix Pittsburgh Portland Raleigh Richmond Rutherford Sacramento Salt Lake City San Antonio San Diego San Francisco San Jose Seattle Tampa Tucson Washington Log in Sign up Search Search Cancel Search National Today Submit NYC Today By the People, for the People News Sports Basketball Baseball Body Building Boxing Cycling Equestrian eSports Extreme Sports Football Golf Gymnastics Hockey Ice Skating Mixed Martial Arts Motorsports Olympics Other Sports Rodeo Running Skiing Soccer Softball Surfing Sw... [truncated 800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:03:16.726Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:03:16.726Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Arizona Wildcats 2026 roster injuries March Madness",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:03:17.697Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed",
+          "snippet": "The Athletic has live coverage of the First Four from 2026 Men&#x27;s March Madness . Roster attrition is a factor during the postseason in any sport."
+        },
+        {
+          "title": "Arizona Wildcats News, Schedule, Stats and Roster - USA TODAY Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Farizona%2Dwildcats%2F1291&rut=35758a04d8d644a60e7c5a3be7ccd5295acb23e43a7bda935041cafec7ee7bb0",
+          "snippet": "Latest Arizona Wildcats news, schedule, stats, depth chart, roster , injuries , transactions and more from USA TODAY Sports."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "NCAA Tournament injuries to consider are reviewed. Discover which player are in, out or uncertain before filling out your brackets for March Madness 2026 ."
+        },
+        {
+          "title": "2025-26 Arizona Wildcats Men&#x27;s Roster and Stats | College Basketball at ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Farizona%2Fmen%2F2026.html&rut=f43d5acccd6f719a0904fe26ddae87dad40949aa0ca1c542185c6e7033822cc4",
+          "snippet": "Check out the detailed 2025-26 Arizona Wildcats Roster and Stats for College Basketball at Sports-Reference.com"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295\",\n      \"snippet\": \"March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks.\"\n    },\n    {\n      \"title\": \"Key March Madness injuries to know while filling out your men&#x27;s ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed\",\n      \"snippet\": \"The Athletic has live coverage of the First Four from 2026 Men&#x27;s March Madness . Roster attrition is a factor during the postseason in any sport.\"\n    },\n    {\n      \"title\": \"Arizona Wildcats News, Schedule, Stats and Roster - USA TODAY Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsportsdata.usatoday.com%2Fbasketball%2Fncaab%2Fteams%2Farizona%2Dwildcats%2F1291&rut=35758a04d8d644a60e7c5a3be7ccd5295acb23e43a7bda935041cafec7ee7bb0\",\n      \"snippet\": \"Latest Arizona Wildcats news, schedule, stats, depth chart, roster , injuries , transactions and more from USA TODAY Sports.\"\n    },\n    {\n      \"title\": \"March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5\",\n      \"snippet\": \"NCAA Tournament injuries to consider are reviewed. Discover which player are in, out or uncertain before filling out your brackets for March Madness 2026 .\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-west-1-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:03:18.996Z",
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:03:18.996Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144",
+        "maxChars": 3000
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-west-1-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:03:19.593Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144",
+        "text": "March Madness 2026 Injuries: Key News By Region in the NCAA Tournament | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injuries: March Madness First Round NCAA Tournament injuries to consider are reviewed. Discover which player are in, out or uncertain before filling out your brackets for March Madness 2026. Updated on March 17, 2026 5:33PM EST Share Share to X Share to Reddit Share to Facebook Share To BlueSky By: Ryan Andrade X logo @Roto_Ryan Updated on March 17, 2026 5:33PM EST SPECIAL OFFER Ge"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144\",\n    \"text\": \"March Madness 2026 Injuries: Key News By Region in the NCAA Tournament | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fanta... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-west-1-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T10:03:42.400Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-west-1\",\n    \"winnerId\": \"arizona\",\n    \"confidence\": 0.97,\n    \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while LIU, a 234th-ranked NEC champion, lacks the offensive firepower to compete. The Wildcats' top-10 adjusted offense and defense should overwhelm LIU's average attack, and there are no significant injury concerns for Arizona. Although LIU has momentum from its conference title, the talent gap is too wide for a credible upset path.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"1\",\n    \"title\": \"Team Quality and Efficiency Analysis\",\n    \"summary\": \"Arizona's advanced metrics show a massive advantage over LIU, with the Wildcats ranking 3rd nationally in both KenPom and Torvik, while LIU sits outside the top 200.\",\n    \"evidence\": \"Arizona: KenPom rank 3, Torvik rank 3, adjoe 127.2, adjde 89.7. LIU: KenPom rank 216, Torvik rank 234, adjoe 105.7, adjde 109.6.\"\n  }\n}"
+    }
+  ]
+}

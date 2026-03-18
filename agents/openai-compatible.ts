@@ -275,6 +275,19 @@ function getNumericSetting(model: ModelDefinition, key: string) {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
 
+function resolveTemperature(model: ModelDefinition) {
+  const configured = getNumericSetting(model, "temperature");
+  if (configured !== null) {
+    return configured;
+  }
+
+  if (model.provider === "moonshot") {
+    return 1;
+  }
+
+  return 0.2;
+}
+
 function estimateInputTokens(body: Record<string, unknown>) {
   return Math.max(1, Math.ceil(JSON.stringify(body).length / TOKEN_ESTIMATE_DIVISOR));
 }
@@ -497,7 +510,7 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
         model,
         {
           model: model.model,
-          temperature: Number(model.settings?.temperature ?? 0.2),
+          temperature: resolveTemperature(model),
           messages,
           tools,
           tool_choice: "auto"
@@ -557,7 +570,7 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
             {
               definition: model,
               model: model.model,
-              temperature: Number(model.settings?.temperature ?? 0.2),
+              temperature: resolveTemperature(model),
               messages
             },
             runtime
@@ -606,7 +619,7 @@ export class OpenAICompatibleAdapter implements ModelAdapter {
         {
           definition: model,
           model: model.model,
-          temperature: Number(model.settings?.temperature ?? 0.2),
+          temperature: resolveTemperature(model),
           messages: [
             ...messages,
             {

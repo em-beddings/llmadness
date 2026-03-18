@@ -168,6 +168,14 @@ That checks:
 - provider base URL availability
 - environment-backed model ID resolution for every live model entry
 
+To smoke-test one live provider using the exact same env-loading path as `generate:brackets`, run:
+
+```bash
+npm run test:provider -- --models data/models/2026/kimi-k2-5.json
+```
+
+That is useful when direct `curl` works but the generator still fails, because it verifies the repo's actual `.env.local` resolution and model definition path.
+
 Generate a live run with:
 
 ```bash
