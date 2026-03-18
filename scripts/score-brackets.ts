@@ -20,6 +20,7 @@ function normalizeSubmission(submission: BracketSubmission): BracketSubmission {
     })),
     reasoning: submission.reasoning.map((step) => ({
       ...step,
+      id: String(step.id),
       evidence: Array.isArray(step.evidence)
         ? step.evidence
         : typeof step.evidence === "string"
@@ -35,6 +36,7 @@ function normalizeSubmission(submission: BracketSubmission): BracketSubmission {
       reasoningStep: gameRun.reasoningStep
         ? {
             ...gameRun.reasoningStep,
+            id: String(gameRun.reasoningStep.id),
             evidence: Array.isArray(gameRun.reasoningStep.evidence)
               ? gameRun.reasoningStep.evidence
               : typeof gameRun.reasoningStep.evidence === "string"

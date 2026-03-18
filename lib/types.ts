@@ -167,6 +167,7 @@ export interface LeaderboardEntry {
   modelLabel: string;
   totalPoints: number;
   maxPoints: number;
+  pointsRemaining: number;
   accuracy: number;
   gameScores: GameScore[];
 }

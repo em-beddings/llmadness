@@ -55,6 +55,10 @@ export function LeaderboardTable({
               </div>
               <div className="podium-meta">
                 <span>{Math.round(entry.accuracy * 100)}% accuracy</span>
+                <span>
+                  <span className="leader-meta-label">Max</span>{" "}
+                  {entry.pointsRemaining}
+                </span>
               </div>
               {summary?.championshipMatchup ? (
                 <div className="leaderboard-matchup">
@@ -98,6 +102,10 @@ export function LeaderboardTable({
               </div>
               <div className="leader-accuracy">
                 <span>{Math.round(entry.accuracy * 100)}%</span>
+              </div>
+              <div className="leader-remaining">
+                <strong>{entry.pointsRemaining}</strong>
+                <span className="leader-meta-label">Max</span>
               </div>
               <div className="leader-bottomline leader-bottomline-nowrap">
                 <strong>{summary?.championshipPick ?? "Unknown"}</strong>

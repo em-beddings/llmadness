@@ -345,6 +345,11 @@ h3 {
     align-items: flex-start;
 }
 
+.leader-card .leader-topline {
+    justify-content: flex-start;
+    text-align: left;
+}
+
 .leader-bottomline {
     min-width: 0;
     flex-wrap: nowrap;
@@ -353,6 +358,13 @@ h3 {
 .leader-bottomline strong {
     min-width: 0;
     white-space: nowrap;
+}
+
+.leader-meta-label {
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
 .leader-bottomline-nowrap span,
@@ -401,7 +413,9 @@ h3 {
 }
 
 .leader-card {
-    grid-template-columns: 48px minmax(0, 1.7fr) minmax(120px, 0.7fr) minmax(72px, 0.35fr) minmax(140px, 0.95fr);
+    grid-template-columns:
+        48px minmax(0, 1.55fr) minmax(120px, 0.7fr) minmax(88px, 0.45fr)
+        minmax(88px, 0.45fr) minmax(140px, 0.95fr);
     align-items: baseline;
     gap: 12px;
     padding: 12px 0;
@@ -420,12 +434,26 @@ h3 {
     display: flex;
     align-items: baseline;
     gap: 8px;
+    justify-content: center;
+    text-align: center;
 }
 
 .leader-accuracy {
     color: var(--muted);
     white-space: nowrap;
-    text-align: right;
+    text-align: center;
+}
+
+.leader-remaining {
+    color: var(--muted);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.leader-remaining strong {
+    color: var(--ink);
+    font-weight: 600;
+    margin-right: 4px;
 }
 
 .leader-card .leader-bottomline {
@@ -953,10 +981,17 @@ h3 {
         text-align: right;
     }
 
-    .leader-card .leader-bottomline {
+    .leader-remaining {
         grid-column: 3;
         grid-row: 2;
         justify-self: end;
         text-align: right;
+    }
+
+    .leader-card .leader-bottomline {
+        grid-column: 2;
+        grid-row: 3;
+        justify-self: start;
+        text-align: left;
     }
 }

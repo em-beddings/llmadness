@@ -1,0 +1,995 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mimo",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "f4-1",
+  "generatedAt": "2026-03-18T11:04:43.513Z",
+  "pick": {
+    "gameId": "f4-1",
+    "winnerId": "houston",
+    "confidence": 0.68,
+    "rationale": "Houston's elite defense, ranking 4th nationally in adjusted defensive efficiency, should disrupt Duke's offense, which has been compromised by the loss of starting point guard Caleb Foster to a foot fracture. While Duke remains the top-ranked team overall with the nation's best defense, the injury to Foster creates significant uncertainty in their backcourt execution against Houston's physical, disciplined style. The Cougars' experience in the Big 12 and proven ability to control tempo provide a reliable path to victory in this high-stakes Final Four matchup."
+  },
+  "reasoningStep": {
+    "id": "3",
+    "title": "Holistic decision with confidence calibration",
+    "summary": "Balanced team quality, matchup specifics, health, and form to finalize the pick.",
+    "evidence": "Duke is the overall top team but faces a major injury setback. Houston's defense and experience align well to challenge Duke in a Final Four setting. The underdog (Duke) has a credible path via their defense, but Houston's health and matchup advantage tilt the confidence slightly toward the Cougars."
+  },
+  "toolCalls": [
+    {
+      "id": "tool-qf7wo35e",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "duke",
+          "houston"
+        ]
+      },
+      "startedAt": "2026-03-18T11:02:44.534Z",
+      "completedAt": "2026-03-18T11:02:44.541Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "duke",
+          "teamName": "Duke",
+          "torvik": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adjoe": 128.01924984850498,
+            "oe Rank": 4,
+            "adjde": 90.44607016864468,
+            "de Rank": 1,
+            "barthag": 0.9819325227198022,
+            "rank.1": 1,
+            "proj. W": 31.77263480392547,
+            "Proj. L": 2.2273651960745293,
+            "Pro Con W": 17,
+            "Pro Con L": 1,
+            "Con Rec.": "17-1",
+            "sos": 0.7350779717539253,
+            "ncsos": 0.6248828246440576,
+            "consos": 0.8004871126999,
+            "Proj. SOS": 0.7411389942783231,
+            "Proj. Noncon SOS": 0.6248828246440576,
+            "Proj. Con SOS": 0.8004871126999,
+            "elite SOS": 0.6154338494473306,
+            "elite noncon SOS": 0.6350244038172387,
+            "Opp OE": 116.43303268254998,
+            "Opp DE": 103.17328486033144,
+            "Opp Proj. OE": 116.58941508909258,
+            "Opp Proj DE": 102.95262216602733,
+            "Con Adj OE": 129.25576212251133,
+            "Con Adj DE": 90.79514971478837,
+            "Qual O": 127.85704514358656,
+            "Qual D": 89.47568126665206,
+            "Qual Barthag": 0.9837755473959358,
+            "Qual Games": 19,
+            "FUN": 0.0627594166033986,
+            "ConPF": 1457,
+            "ConPA": 1123,
+            "ConPoss": 1174.9625,
+            "ConOE": 1.2400395757311404,
+            "ConDE": 0.9557751843143932,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.9444444444444444,
+            "WAB": 12.883073206764472,
+            "WAB Rk": 2,
+            "Fun Rk": 47,
+            "adjt": 65.82335494511732
+          },
+          "kenpom": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adj_em": 39.17,
+            "adj_o": 127.9,
+            "adj_o_rank": 4,
+            "adj_d": 88.7,
+            "adj_d_rank": 2,
+            "adj_t": 65.4,
+            "adj_t_rank": 287,
+            "luck": 0.042,
+            "luck_rank": 80,
+            "sos_adj_em": 13.78,
+            "sos_adj_em_rank": 19,
+            "sos_opp_o": 116.8,
+            "sos_opp_o_rank": 24,
+            "sos_opp_d": 103,
+            "sos_opp_d_rank": 13,
+            "ncsos_adj_em": 10,
+            "ncsos_adj_em_rank": 18
+          }
+        },
+        {
+          "teamId": "houston",
+          "teamName": "Houston",
+          "torvik": {
+            "rank": 5,
+            "team": "Houston",
+            "conf": "B12",
+            "record": "28-5",
+            "adjoe": 125.0975167715807,
+            "oe Rank": 13,
+            "adjde": 91.8530836031741,
+            "de Rank": 4,
+            "barthag": 0.9721421329914924,
+            "rank.1": 5,
+            "proj. W": 28.451512204962764,
+            "Proj. L": 5.548487795037236,
+            "Pro Con W": 14,
+            "Pro Con L": 4,
+            "Con Rec.": "14-4",
+            "sos": 0.7234356164310016,
+            "ncsos": 0.536556524973016,
+            "consos": 0.8379056201105163,
+            "Proj. SOS": 0.7308920407299491,
+            "Proj. Noncon SOS": 0.536556524973016,
+            "Proj. Con SOS": 0.8379056201105163,
+            "elite SOS": 0.6317400313710136,
+            "elite noncon SOS": 0.7923649040442717,
+            "Opp OE": 116.1174907836186,
+            "Opp DE": 104.0376269811524,
+            "Opp Proj. OE": 116.4147653528213,
+            "Opp Proj DE": 103.65787274782504,
+            "Con Adj OE": 127.27031138842572,
+            "Con Adj DE": 93.15229119421956,
+            "Qual O": 127.22619024373626,
+            "Qual D": 94.05360043861518,
+            "Qual Barthag": 0.969943807972222,
+            "Qual Games": 16,
+            "FUN": 0.009050451042042,
+            "ConPF": 1384,
+            "ConPA": 1165,
+            "ConPoss": 1162.3625000000002,
+            "ConOE": 1.1906784673456,
+            "ConDE": 1.0022690855907683,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.7777777777777778,
+            "WAB": 9.056959670548608,
+            "WAB Rk": 4,
+            "Fun Rk": 147,
+            "adjt": 63.34001963276259
+          },
+          "kenpom": {
+            "rank": 5,
+            "team": "Houston",
+            "conf": "B12",
+            "record": "28-5",
+            "adj_em": 33.55,
+            "adj_o": 124.6,
+            "adj_o_rank": 16,
+            "adj_d": 91,
+            "adj_d_rank": 4,
+            "adj_t": 63.4,
+            "adj_t_rank": 352,
+            "luck": 0.006,
+            "luck_rank": 176,
+            "sos_adj_em": 12.77,
+            "sos_adj_em_rank": 28,
+            "sos_opp_o": 116.6,
+            "sos_opp_o_rank": 28,
+            "sos_opp_d": 103.8,
+            "sos_opp_d_rank": 33,
+            "ncsos_adj_em": 0.8,
+            "ncsos_adj_em_rank": 156
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-wtabfudn",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Duke Houston Final Four injury news 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:03:02.453Z",
+      "completedAt": "2026-03-18T11:03:03.171Z",
+      "summary": "Returned 5 search results for \"Duke Houston Final Four injury news 2026\".",
+      "result": [
+        {
+          "title": "Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b",
+          "snippet": "Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won&#x27;t play in this week&#x27;s ..."
+        },
+        {
+          "title": "Duke Blue Devils Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=d6bcf80025b06743fd52d54637c63655e1dc2bb35b61c45c1a0db1de6957841b",
+          "snippet": "Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Duke&#x27;s Maliq Brown (shoulder) expects to play in Final Four",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F44535064%2Fduke%2Dmaliq%2Dbrown%2Dshoulder%2Dexpects%2Dplay%2Dfinal%2Dfour&rut=32bf097f419b598b8ed1aeba088e1c65f7e40a083d108cd7ad0c43a00ba242d5",
+          "snippet": "Duke&#x27;s Maliq Brown, after dislocating his left shoulder, said he&#x27;s ready for a bigger role in the Final Four following limited minutes in NCAA tournament wins last weekend."
+        },
+        {
+          "title": "NBA Injury Status - 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65",
+          "snippet": "Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 schedule, sites, locations - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F46583333%2Fmens%2Dcollege%2Dbasketball%2Dmarch%2Dmadness%2D2026%2Dschedule%2Dsites%2Dlocations%2Dselection%2Dsunday&rut=3a1021503fe29b694bd56e4971398249ce28335b26a7e626ca4e49a3eda7498b",
+          "snippet": "Everything to know about the 2026 men&#x27;s NCAA tournament, from Selection Sunday to the Final Four and championship game."
+        }
+      ]
+    },
+    {
+      "id": "tool-eqw82iv0",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-scaleb-foster-indefinitely-foot-fracture"
+      },
+      "startedAt": "2026-03-18T11:03:10.952Z",
+      "completedAt": "2026-03-18T11:03:11.204Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-scaleb-foster-indefinitely-foot-fracture and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-scaleb-foster-indefinitely-foot-fracture",
+        "text": "Duke's Caleb Foster out indefinitely with foot fracture - ESPN Duke's Foster out indefinitely with foot fracture --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Duke's Foster out indefinitely with foot fracture Duke Blue Devils 8d Mark saves day, sends Texas to NCAA first round Texas Longhorns 7h Adam Rittenberg Howard checks last box with first tourney win Howard Bison 10h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 19h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 19h EMU hires Clemson assistant Donlon as coach Clemson Tigers 11h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 15h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 18h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 21h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 22h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 3d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 7h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 18h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello Duke's Caleb Foster out indefinitely with foot fracture play Caleb Foster lays it in for a Duke bucket (0:21) Caleb Foster banks it in off the glass to extend Duke’s first-half lead. (0:21) Associated Press Multiple Authors Mar 10, 2026, 10:20 AM ET Email Print Open Extended Reactions Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won't play in this week's Atlantic Coast "
+      }
+    },
+    {
+      "id": "tool-su7i8ldx",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke Houston Final Four matchup analysis 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:03:28.359Z",
+      "completedAt": "2026-03-18T11:03:29.284Z",
+      "summary": "Returned 5 search results for \"Duke Houston Final Four matchup analysis 2026\".",
+      "result": [
+        {
+          "title": "2026 NCAA Men&#x27;s Basketball Tournament Breakdown | FOX Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fstories%2Fcollege%2Dbasketball%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dbreakdown%2Dtop%2Dmatchups%2Dupsets%2Dpredictions&rut=1181b071545d870a756388903ddafd9c82e07af1942bdeb07ad64378668ff901",
+          "snippet": "From upset picks to Final Four predictions, FOX Sports&#x27; Michael Cohen breaks down the complete NCAA Men&#x27;s Basketball Tournament bracket."
+        },
+        {
+          "title": "Expert March Madness picks for every game: Data analysts release ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cleveland.com%2Fbetting%2F2026%2F03%2Fexpert%2Dmarch%2Dmadness%2Dpicks%2Dfor%2Devery%2Dgame%2Ddata%2Danalysts%2Drelease%2Dcomplete%2D2026%2Dncaa%2Dtournament%2Dbracket%2Dfeaturing%2Dmultiple%2Dupsets.html&rut=df29448efb0e9dd80e63f03e2d6df181616dafab310a2bad2d2be8baed878e59",
+          "snippet": "The data analysts at Dimers.com have announced the free release of their complete 2026 NCAA Tournament bracket, featuring winning probabilities for every matchup ."
+        },
+        {
+          "title": "Seth Davis&#x27; NCAA Men&#x27;s 2026 Tournament Bracket Analysis - Hoops HQ",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hoopshq.com%2Fbracketology%2Fseth%2Ddavis%2Dncaa%2Dmens%2D2026%2Dtournament%2Dbracket&rut=086cf1cc96921078bc9ac7e13cff9b7df2c1b2811d0aea44aed5622c77a44016",
+          "snippet": "Hoops HQ Editor-In-Chief Seth Davis reveals his bracket for the 2026 NCAA Tournament, straight from the Selection Show studio set."
+        },
+        {
+          "title": "2026 NCAA Tournament Predictions: Final Four Picks - Houston Today",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Ftx%2Fhouston%2Fnews%2F2026%2F03%2F17%2F2026%2Dncaa%2Dtournament%2Dpredictions%2Dfinal%2Dfour%2Dpicks%2F&rut=f03efb280423b07c09b5caada04fe8241fa3b2cb22117a49f3d0480bf46599d0",
+          "snippet": "With March Madness in full swing, leading fantasy sports experts share their predictions for the 2026 NCAA Tournament Final Four . Analysts from FantasyPros and BettingPros provide their top picks and analysis on the teams they expect to advance to college basketball&#x27;s biggest stage."
+        },
+        {
+          "title": "NCAA bracket predictions: Final Four, upsets and is it Arizona&#x27;s year?",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F16%2Fmarch%2Dmadness%2Dpredictions%2Dupset%2Dpicks%2Dfinal%2Dfour%2Dncaa%2Dtournament%2Dbracket%2D2026%2F89064207007%2F&rut=cfaae64b53ddd6df1a96bd24f7a45cd2a461d46ab52b736e7701e2847da162d6",
+          "snippet": "Duke got the No. 1 overall seed in Men&#x27;s March Madness. Big whoop. The NCAA selection committee&#x27;s bracket did Duke dirty. Arizona must be loving it."
+        }
+      ]
+    },
+    {
+      "id": "tool-23i5wfhm",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.foxsports.com/stories/college-basketball/ncaa-mens-basketball-tournament-breakdown-top-matchups-upsets-predictions"
+      },
+      "startedAt": "2026-03-18T11:03:36.655Z",
+      "completedAt": "2026-03-18T11:03:36.836Z",
+      "summary": "Fetched https://www.foxsports.com/stories/college-basketball/ncaa-mens-basketball-tournament-breakdown-top-matchups-upsets-predictions and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.foxsports.com/stories/college-basketball/ncaa-mens-basketball-tournament-breakdown-top-matchups-upsets-predictions",
+        "text": "2026 NCAA Men&#x27;s Basketball Tournament Breakdown | FOX Sports my favs Access and manage your favorites here DISMISS Scores Watch Betting WBC ⚾ FOX Super 6 💰 Stories Search Sign In Account SPORTS & TEAMS PLAYERS SHOWS PERSONALITIES TOPICS POPULAR SEARCHES - No Data Available - BROWSE BY SPORTS & TEAMS PLAYERS SHOWS PERSONALITIES TOPICS Built on College Basketball College Basketball NCAA Men&#39;s Basketball Tournament Breakdown: Top Matchups, Upsets, Predictions Updated Mar. 15, 2026 11:03 p.m. ET share facebook x reddit link Michael Cohen College Football and College Basketball Writer At last, the madness is upon us. Five long months of buildup to Selection Sunday came to an end with another glorious reveal of this year’s NCAA Men's Basketball Tournament bracket. There are heavyweights at the top in 1-seeds Duke , Arizona , Michigan and Florida . There are newcomers like Queens and California Baptist. And there are more enticing storylines than fans can consume: from Miami (OH) in the First Four to potential No. 1 overall draft picks in BYU ’s AJ Dybantsa and Kansas’ Darryn Peterson, from Nebraska seeking the first March Madness win in program history to the all-important health of Duke’s two injured starters. Without further ado, let’s break down the field: [MARCH MADNESS: NCAA Men's Basketball Tournament Bracket ] 1. Of the No. 1 seeds, which team has the clearest path to the Final Four? Koa Peat #10 of the Arizona Wildcats reacts in front of Allen Mukeba #23 of the Arizona State Sun Devils. (Photo by Chris Coduto/Getty Images) Arizona. Given the legitimate injury questions surrounding Duke, a string of sluggish performances from Michigan in the Big Ten Tournament and a blowout loss by Florida in the SEC Tournament, there’s no question that Arizona enters the Big Dance with the most encouraging trajectory of the top seeds. The Wildcats are one of only two teams to rank among the top five nationally in both offensive and defensive efficiency at this point, alongside Duke, and they’ve won nine consecutive games ahead of a first-round matchup with No. 16 LIU. A roster littered with future NBA Draft picks, including two likely lottery picks in shooting guard Brayden Burries and power forward Koa Peat, gives head coach Tommy Lloyd his best chance of advancing beyond the Sweet 16 since taking over at Arizona. The Wildcats' potential path to the Final Four seems relatively friendly, too. Second-seeded Purdue only rose to the 2-line thanks to an upset over Michigan in the Big Ten title game, which means the Boilermakers’ overall profile is more in line with that of a 3-seed. Third-seeded Gonzaga , while talented, is not believed to be on the same level of classic Bulldogs teams under head coach Mark Few. Arkansas and Wisconsin, seeded fourth and fifth, respectively, also needed strong runs in their respective conference tournaments to land on those lines. The West feels like a region with a handful of overseeded teams trying to take down arguably "
+      }
+    },
+    {
+      "id": "tool-5ehqh3bv",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke Caleb Foster injury Final Four 2026 impact",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:03:38.293Z",
+      "completedAt": "2026-03-18T11:03:39.628Z",
+      "summary": "Returned 5 search results for \"Duke Caleb Foster injury Final Four 2026 impact\".",
+      "result": [
+        {
+          "title": "Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fuk%2Fncaa%2Dbasketball%2Fduke%2Fnews%2Fduke%2Dbasketball%2Djon%2Dscheyer%2Drealistic%2Dcaleb%2Dfoster%2Dinjury%2Dtimeline%2Dmarch%2Dmadness%2F0a8a315cad33eb46991c8423&rut=fc0977dbb1d041e9fe6fef4648f3663a668308d41227652f8ef81a492bd86a1d",
+          "snippet": "A lot of Duke fans are wondering if he will be ready for the ACC Tournament or March Madness. Coach Scheyer outlines that his veteran guard could come back during the NCAA Tournament&#x27;s Final Four ..."
+        },
+        {
+          "title": "Crucial Injury Updates Provided on Duke&#x27;s Foster and Ngongba",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fduke%2Fblue%2Ddevils%2Dcrucial%2Dinjury%2Dupdates%2Dprovided%2Don%2Dfoster%2Dngongba&rut=930812caa80ae65cb5071b650b4caea7b07ca52e4ef108c71df63125a5a5496f",
+          "snippet": "Jon Scheyer provided key injury updates on Caleb Foster and Patrick Ngongba following Duke&#x27;s win over North Carolina."
+        },
+        {
+          "title": "Caleb Foster injury updates: Will Duke star play in 2026 March ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fcaleb%2Dfoster%2Dinjury%2Dupdates%2Dwill%2Dduke%2Dstar%2Dplay%2Din%2D2026%2Dmarch%2Dmadness%2Dopener%2Far%2DAA1YK0tL&rut=98f8c47c5b24d64664a5c2eb71924b2c411cfd819c705ebb6ef016c4f7eb45c6",
+          "snippet": "While Ngongba is expected back, Foster&#x27;s status is much murkier. How long will Caleb Foster be out? Scheyer said Foster is expected to remain out until at least the Final Four . Even if Duke ..."
+        },
+        {
+          "title": "Duke won&#x27;t have Caleb Foster, Patrick Ngongba II for ACC Tournament ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fapnews.com%2Farticle%2Fduke%2Dfoster%2Dngongba%2Dinjuries%2D8de351d9d5e68200ea18ac01279f819f&rut=0cc2921f4e71c7343369dcb931a4d7fc604f908d321e90e06294e33ecc1b2283",
+          "snippet": "Duke&#x27;s Caleb Foster sits on the bench wearing a boot after suffering an injury during the first half of an NCAA college basketball game against North Carolina in Durham, N.C., Saturday, March 7, 2026 ."
+        },
+        {
+          "title": "Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b",
+          "snippet": "Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won&#x27;t play in this week&#x27;s ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-utwnkmr3",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/uk/ncaa-basketball/duke/news/duke-basketball-jon-scheyer-realistic-caleb-foster-injury-timeline-march-madness/0a8a315cad33eb46991c8423"
+      },
+      "startedAt": "2026-03-18T11:03:41.365Z",
+      "completedAt": "2026-03-18T11:03:41.634Z",
+      "summary": "Fetched https://www.sportingnews.com/uk/ncaa-basketball/duke/news/duke-basketball-jon-scheyer-realistic-caleb-foster-injury-timeline-march-madness/0a8a315cad33eb46991c8423 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportingnews.com/uk/ncaa-basketball/duke/news/duke-basketball-jon-scheyer-realistic-caleb-foster-injury-timeline-march-madness/0a8a315cad33eb46991c8423",
+        "text": "Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for March Madness | Sporting News United Kingdom Skip to main content The Archive Shop Tickets Football Football Home News 2026 FIFA World Cup Teams Leagues Scores Fixtures Tables EXPLORE FOOTBALL Leagues & Cups Premier League Champions League Europa League 2026 FIFA World Cup 2025 Club World Cup TOP TEAMS Arsenal Chelsea Liverpool Manchester City Manchester United Tottenham Hotspur Barcelona Real Madrid England Boxing Boxing News Cricket Cricket News Darts Darts News ••• Explore More NFL NBA F1 MMA WWE Golf Tennis Horse Racing More Sports Betting Watch Watch How to Watch Streaming Services TNT Sports DAZN NFL Game Pass Continue Without Login Featured Football Boxing Cricket Darts Sports Football NFL NBA Darts F1 Boxing MMA WWE Golf Tennis Horse Racing Cricket More Sports Explore More Betting Watch Editions United Kingdom Argentina Australia Brasil Canada India 日本 México 대한민국 España ไทย United States [English] United States [Español] Việt Nam About Us Careers Privacy Preferences Terms of Use Privacy Policy Cookie Policy Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for March Madness Jay Postrado • Add The Sporting News on Google div))]:my-4\" data-testid=\"advert--mobile_branded_logo\" id=\"Branded_Logo_Mobile\"> The Duke Blue Devils are gearing up to make a big run in the ACC Tournament. Eventually, the goal is to gain momentum during March Madness and then notch their first NCAA Tournament National Championship since 2015. Obviously, Coach Jon Scheyer will have to rely on his stars like Cam Boozer and Maliq Brown. Caleb Foster, on the other hand, still remains indefinitely out but it might not be long until he makes a return. Scheyer, Blue Devils target Final Four return for Foster Duke will need to stall for a lot of time before they get Foster back. He went down in the first half against the UNC Tar Heels and it was another injury on his right foot, the same one he has struggled with in seasons past. Foster was immediately taken to have surgery after the unfortunate incident at the rivalry game. A lot of Duke fans are wondering if he will be ready for the ACC Tournament or March Madness. Coach Scheyer outlines that his veteran guard could come back during the NCAA Tournament's Final Four, via ESPN. \"In his mind and our mind, we'll do everything we possibly can with our mindset to continue to advance where we can give him a shot to come back when it's all said and done. I think the reality of it is, we'd have to advance to a Final Four. Is there a chance earlier? I'm not going to eliminate that right now. But I think that's really difficult to try to even imagine that scenario. We're not going to have him the next couple of weeks, the next few weeks,\" the Blue Devils head coach declared. This now means that Foster's return for Duke's March Madness run will be a up in the air. Coach Scheyer will have to rely on his other guards after starting Foster throughou"
+      }
+    },
+    {
+      "id": "tool-98dbkyq2",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Houston Cougars Final Four 2026 injury news",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:04:02.459Z",
+      "completedAt": "2026-03-18T11:04:03.282Z",
+      "summary": "Returned 5 search results for \"Houston Cougars Final Four 2026 injury news\".",
+      "result": [
+        {
+          "title": "Houston Cougars Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fhouston%2Dcougars%2Finjuries&rut=36a3728f6d4b2adfe6a5526ab3ea3bf33c67a76626289ff93387eb585946a2ed",
+          "snippet": "Stay In the Know: Check Out Houston Cougars Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "Houston Cougars Injuries 2025-2026 - Updated NCAAF Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Ffootball%2Fncaaf%2Fteams%2Fmain%2Fhouston%2Dcougars%2Finjuries&rut=baa3c537a14d4bfd9cca0736e0a8e3cc3ca7d1c4e0aa7852058a49650b2c79bc",
+          "snippet": "Stay In the Know: Check Out Houston Cougars Injuries Impacting The 2025- 2026 NCAAF Season."
+        },
+        {
+          "title": "Houston Cougars News - College Basketball | FOX Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fcollege%2Dbasketball%2Fhouston%2Dcougars%2Dteam&rut=77c4b9ec2b983d79aa1d983442472a1cdbfa8681f86d597df7f11c21121e210b",
+          "snippet": "View the latest in Houston Cougars , NCAA basketball news here. Trending news , game recaps, highlights, player information, rumors, videos and more from FOX Sports."
+        },
+        {
+          "title": "Houston Cougars Football News | Latest News - NewsNow",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsnow.co.uk%2Fh%2FSport%2FUS%2BSports%2FNCAA%2BFootball%2FBig%2B12%2FHouston&rut=c372ccb94454c69d9976ba64513703c26b2104242977ff2ed2e1f31aef2460c5",
+          "snippet": "Stay informed about Houston Cougars Football through our comprehensive NewsNow feed, which provides real-time updates on recruiting developments, match results, injury reports, and Big 12 Conference standings."
+        },
+        {
+          "title": "Houston Cougars: Breaking News, Rumors & Highlights | Yardbarker",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.yardbarker.com%2Fcolleges%2Fhouston_cougars%2F114&rut=381420a548fc47f778f91825606da065bbceb824476f0d27c7de384cca63e0e4",
+          "snippet": "The Houston Cougars wrapped up their regular season in heartbreaking fashion, dropping the Big 12 championship game in a thriller to the Arizona Wildcats 79-74."
+        }
+      ]
+    },
+    {
+      "id": "tool-e8yk7hoh",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/houston-cougars/injuries"
+      },
+      "startedAt": "2026-03-18T11:04:11.264Z",
+      "completedAt": "2026-03-18T11:04:11.703Z",
+      "summary": "Fetched https://www.covers.com/sport/basketball/ncaab/teams/main/houston-cougars/injuries and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/houston-cougars/injuries",
+        "text": "Houston Cougars Injuries 2025-2026 - Updated NCAAB Injury Report Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Promos A"
+      }
+    },
+    {
+      "id": "tool-yp6gxbpf",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke vs Houston Final Four 2026 preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:04:28.774Z",
+      "completedAt": "2026-03-18T11:04:29.702Z",
+      "summary": "Returned 5 search results for \"Duke vs Houston Final Four 2026 preview\".",
+      "result": [
+        {
+          "title": "2026 NCAA Tournament Predictions: Final Four Picks",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fantasypros.com%2F2026%2F03%2F2026%2Dncaa%2Dtournament%2Dpredictions%2Dfinal%2Dfour%2Dpicks%2F&rut=bc274cb8bccc188c103b3d48951e27738f097acc260f394a830e1068585f6a4c",
+          "snippet": "Let&#x27;s dive into some of our favorite 2026 NCAA Tournament predictions. 2026 NCAA Tournament predictions for March Madness!"
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "NCAA bracket predictions: Final Four, upsets and is it Arizona&#x27;s year?",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F16%2Fmarch%2Dmadness%2Dpredictions%2Dupset%2Dpicks%2Dfinal%2Dfour%2Dncaa%2Dtournament%2Dbracket%2D2026%2F89064207007%2F&rut=cfaae64b53ddd6df1a96bd24f7a45cd2a461d46ab52b736e7701e2847da162d6",
+          "snippet": "Duke got the No. 1 overall seed in Men&#x27;s March Madness. Big whoop. The NCAA selection committee&#x27;s bracket did Duke dirty. Arizona must be loving it."
+        },
+        {
+          "title": "Instant men&#x27;s March Madness bracket: Predicting every game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48217204%2Fmarch%2Dmadness%2Dbracket%2Dpredictions%2Dpicks%2Dncaa%2Dtournament%2Dfinal%2Dfour%2D2026&rut=651ad27f689cc695cc431fe8a4c24e2ed85c839bad9c8d308f801ee096dec492",
+          "snippet": "Jeff Borzello makes his picks for the 2026 NCAA tournament, from the First Four through the Final Four ."
+        },
+        {
+          "title": "2026 NCAA Tournament Schedule, Predictions and Picks",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Dschedule%2Dpredictions%2Dpicks&rut=e7af8236e248b8fc5c70537a45741a4874ab4ff36914e8d4efa5f43229a7fda9",
+          "snippet": "The 2026 NCAA Tournament full schedule, game previews , predictions, and betting lines for every game from the First Four through the national championship."
+        }
+      ]
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "f4-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T11:02:43.103Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: f4-1\nCurrent game label: National semifinal 1\nRound: Final Four\nResolved teams: Duke (duke) vs Houston (houston)\nPrior committed picks: 64"
+    },
+    {
+      "id": "f4-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T11:02:43.103Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"f4-1\",\n      \"round\": \"Final Four\",\n      \"label\": \"National semifinal 1\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"e8-east-1\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"e8-south-1\"\n      }\n    },\n    \"slotAName\": \"Duke\",\n    \"slotBName\": \"Houston\",\n    \"slotATeamId\": \"duke\",\n    \"slotBTeamId\": \"houston\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Texas holds a clear edge in advanced metrics, ranking 37th in KenPom and 45th in Torvik compared to NC State's unranked status, and they just defeated the Wolfpack 68-66 in a tight First Four game where Tramon Mark hit a game-winning jumper. While NC State showed resilience and kept the game close, Texas's superior offensive efficiency and proven ability to execute in clutch moments give them the advantage in this rematch. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Texas's experience and recent head-to-head win make them the more reliable pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"SMU holds a significant edge in advanced metrics, ranking 42nd in KenPom and Torvik compared to Miami (OH)'s 87th-93rd range, with a stronger adjusted offensive efficiency (123 vs. 116.8) that should exploit the RedHawks' weaker defense. While Miami (OH) boasts an impressive 31-1 record, their competition level in the MAC is inferior, and SMU's experience in the ACC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but SMU's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"howard\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Howard enters this First Four matchup with a recent head-to-head victory over UMBC, having won 86-83 in the 2026 tournament, which demonstrates their ability to execute in clutch moments. While UMBC holds a slight edge in raw offensive efficiency metrics, Howard's balanced attack and superior defensive rebounding proved decisive in their previous encounter. The underdog's path relies on hot three-point shooting and forcing turnovers, but Howard's proven resilience and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Lehigh holds a slight edge in advanced metrics, ranking 284th in KenPom compared to Prairie View A&M's 291st, with a marginally better adjusted offensive efficiency that should exploit the Panthers' weaker defense. While Prairie View A&M has a balanced record, Lehigh's recent Patriot League championship demonstrates clutch performance and tournament readiness. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Lehigh's proven form and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Duke is the overwhelming favorite as the tournament's top-ranked team in both KenPom and Torvik, boasting a 31-2 record and elite efficiency on both ends of the floor. Siena, the MAAC champion, faces a massive talent gap, ranking 187th in Torvik and 192nd in KenPom, with no credible path to exploit Duke's weaknesses. While Siena's recent form and championship experience provide some intangible value, Duke's superior size, athleticism, and defensive prowess make this a near-certain outcome.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.68,\n        \"rationale\": \"TCU holds a clear edge in advanced metrics, ranking 43rd in KenPom and 48th in Torvik with a strong defensive efficiency (adjde 99.6) that should disrupt Ohio State's offense. While Ohio State is a traditional power, the lack of available ratings suggests they may be unranked or lower-tier this season, making their path to victory reliant on offensive execution against a disciplined Big 12 defense. TCU's experience in a tougher conference and proven defensive prowess give them the advantage in this matchup.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.82,\n        \"rationale\": \"St. John's holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 20th in KenPom and 18th in Torvik compared to Northern Iowa's 71st and 70th, respectively. Their elite defense (adjde 95.1) should effectively contain Northern Iowa's average offense (adjoe 110.1), while their own potent offense can exploit the Panthers' defense. While Northern Iowa has a credible path through disciplined play and rebounding, St. John's superior talent and efficiency make them the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Kansas is a top-25 team in both KenPom and Torvik with an elite defense ranked 10th in adjusted defensive efficiency, while California Baptist lacks any available advanced metrics, indicating they are a low-major automatic qualifier with a significant talent gap. The Jayhawks' experience in the Big 12 and proven ability to dominate defensively make them the overwhelming favorite, and the underdog's only path would require a perfect shooting night and Kansas having an off game, which is highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Louisville holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 18th in KenPom and 16th in Torvik compared to South Florida's 50th in both, with a significantly stronger adjusted offensive efficiency (124.1 vs. 117.7) that should exploit the Bulls' average defense. While South Florida has a solid 24-8 record and a credible path through disciplined play and rebounding, Louisville's superior talent, experience in the ACC, and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's path would require a perfect shooting night and Louisville having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State, a 3-seed from the Big Ten, holds a significant talent and experience advantage over 14-seed North Dakota State, a Summit League automatic qualifier. While specific advanced metrics are unavailable, the Spartans' conference strength and historical tournament pedigree provide a clear edge. North Dakota State's path relies on perimeter shooting and forcing turnovers, but Michigan State's disciplined defense and superior size should control the game. The underdog's upset potential is limited without a major shooting night from the Bison and a poor performance from the Spartans.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.78,\n        \"rationale\": \"UCLA holds a clear edge in advanced metrics, ranking 24th in Torvik and 27th in KenPom compared to UCF's 58th and 54th, with a stronger adjusted offensive efficiency and a defense that should contain the Knights' attack. While UCF has shown resilience in close games and plays in the tough Big 12, UCLA's superior talent, experience, and recent form—including a dominant sweep of USC—make them the more reliable pick. The underdog's path relies on hot three-point shooting and forcing turnovers, but UCLA's balanced attack and defensive prowess should control the tempo and secure the win.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.92,\n        \"rationale\": \"UConn is a top-tier program with a significant talent and efficiency advantage over Furman, which ranks outside the top 190 in both KenPom and Torvik metrics. While Furman has a credible upset path through disciplined play and three-point shooting, UConn's elite defense, physical frontcourt, and tournament experience make them the overwhelming favorite. The Huskies' ability to control the tempo and dominate the paint should neutralize Furman's strengths and secure a comfortable win.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while LIU, a 234th-ranked NEC champion, lacks the offensive firepower to compete. The Wildcats' top-10 adjusted offense and defense should overwhelm LIU's average attack, and there are no significant injury concerns for Arizona. Although LIU has momentum from its conference title, the talent gap is too wide for a credible upset path.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Villanova holds a clear advantage in advanced metrics, ranking 33rd in KenPom and 36th in Torvik with a balanced offensive and defensive efficiency that should exploit Utah State's lack of available ratings, indicating they are likely a lower-tier automatic qualifier. While Utah State's path relies on disciplined play and perimeter shooting, Villanova's experience in the Big East and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Villanova having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Wisconsin holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 21st in Torvik and 22nd in KenPom compared to High Point's 93rd and 92nd, with a top-11 adjusted offense that should overwhelm the Panthers' average defense. While High Point boasts a strong 30-4 record, their competition level in the Big South is inferior, and Wisconsin's experience in the Big Ten provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Wisconsin's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Arkansas holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 17th in KenPom and 20th in Torvik with a top-5 adjusted offense that should overwhelm Hawai'i, which lacks any available advanced ratings and is likely a low-major automatic qualifier. While Hawai'i's path relies on disciplined play and perimeter shooting, Arkansas's experience in the SEC and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Arkansas having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"BYU holds a clear edge in advanced metrics, ranking 23rd in KenPom and 33rd in Torvik with a top-10 adjusted offense that should exploit Texas's 125th-ranked defense. While Texas has a strong offense, their defensive struggles and a weaker 18-14 record suggest inconsistency, whereas BYU's 23-11 record and recent form in the Big 12 provide stability. The underdog's path relies on Texas's perimeter shooting and forcing turnovers, but BYU's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Gonzaga enters as a dominant 3-seed with elite efficiency metrics, ranking 11th in both KenPom and Torvik, while Kennesaw State lacks any available advanced ratings, indicating they are a low-major automatic qualifier with a significant talent gap. The Bulldogs' top-10 adjusted defense and potent offense should overwhelm the Owls, and there are no significant injury concerns for Gonzaga. Although Kennesaw State has momentum from its conference title, the talent gap is too wide for a credible upset path, making Gonzaga the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Miami (FL) holds a clear edge in advanced metrics, ranking 30th in KenPom and 35th in Torvik compared to Missouri's 52nd and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Tigers' attack. While Missouri plays in the tougher SEC, Miami's superior efficiency, balanced attack, and recent form in the ACC provide a more reliable path to victory. The underdog's upset potential is limited without a major shooting night from Missouri and a poor performance from Miami, which is unlikely given the metrics and matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team nationally with elite offensive efficiency (ranked 1st in Torvik offensive rating) and a strong defense, while Queens ranks outside the top 190 and has a significant talent gap as a lower-major automatic qualifier. The Boilermakers' experience in the Big Ten and proven ability to dominate physically should overwhelm Queens' average attack, and there are no reported injury concerns for Purdue. Although Queens has momentum from its conference title, the matchup dynamics and efficiency metrics make a credible upset path highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Florida is a top-5 team nationally with elite efficiency on both ends of the floor, ranking 4th in KenPom and Torvik, while Lehigh, a 284th-ranked Patriot League team, lacks the offensive firepower to compete. The Gators' top-10 adjusted offense and top-5 defense should overwhelm Lehigh's average attack, and there are no significant injury concerns for Florida. Although Lehigh has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Florida the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Iowa holds a slight edge in both offensive and defensive efficiency metrics, ranking 25th in KenPom and 26th in Torvik compared to Clemson's 36th and 29th, with a top-30 adjusted offense that can exploit Clemson's average attack. While Clemson's defense is solid, Iowa's superior offensive firepower and experience in the Big Ten provide a more reliable path to victory in a tight 8/9 matchup. The underdog's path relies on Clemson's defense forcing turnovers and winning the rebounding battle, but Iowa's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Vanderbilt holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 10th in Torvik and 12th in KenPom with a top-6 adjusted offense that should overwhelm McNeese's 91st-ranked attack. While McNeese boasts a strong 28-5 record, their competition level in the Southland Conference is inferior, and Vanderbilt's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Vanderbilt's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Nebraska, a 4-seed from the Big Ten, holds a decisive advantage over 13-seed Troy, ranking 14th in KenPom and 19th in Torvik with a top-7 adjusted defense that should stifle Troy's average offense. While Troy has Sun Belt championship momentum, the talent and efficiency gap is substantial, and Nebraska's recent form—including a 26-6 record and strong defensive metrics—makes them the reliable pick. The underdog's path would require a perfect shooting night and Nebraska having an off game, which is unlikely given the matchup dynamics and prior picks favoring higher-seeded teams in the South region.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.85,\n        \"rationale\": \"North Carolina holds a clear edge in advanced metrics, ranking 27th in Torvik and 29th in KenPom compared to VCU's 51st and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Rams' attack. While VCU has a solid 26-7 record and a credible path through disciplined play and forcing turnovers, North Carolina's superior talent, experience in the ACC, and recent form—including a win over Duke—make them the more reliable pick. The underdog's upset potential is limited without a major shooting night from VCU and a poor performance from the Tar Heels, which is unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Illinois is a top-10 team nationally with elite offensive efficiency, ranking 1st in KenPom adjusted offensive efficiency and 2nd in Torvik offensive rating, while Penn ranks outside the top 150 in both metrics. The Illini's top-25 defense should contain Penn's average attack, and there are no reported injury concerns for Illinois. Although Penn has Ivy League championship experience, the talent and efficiency gap is too wide for a credible upset path, making Illinois the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Saint Mary's holds a slight edge in both offensive and defensive efficiency metrics, ranking 24th in KenPom and 25th in Torvik compared to Texas A&M's 39th in both, with a superior adjusted defensive efficiency that should contain the Aggies' attack. While Texas A&M plays in the tougher SEC, Saint Mary's disciplined style, experience in the WCC, and recent form—including a 27-5 record—provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on Texas A&M's perimeter shooting and forcing turnovers, but Saint Mary's balanced attack and defensive prowess make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Houston is a top-5 team nationally with elite defensive efficiency (4th in KenPom adjD) and a potent offense, while Idaho ranks outside the top 130 and lacks the firepower to compete. The Cougars' experience in the Big 12 and recent form—including a 28-5 record—make them the overwhelming favorite, and there are no reported injury concerns. Idaho's only path would require a perfect shooting night and Houston having an off game, which is highly unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Michigan enters as a dominant 1-seed with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Howard, a 206th-ranked MEAC team, lacks the offensive firepower to compete. The Wolverines' top-2 offense and defense should overwhelm the Bison, and there are no significant injury concerns for Michigan. Although Howard has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Michigan the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Georgia holds a slight edge in advanced metrics, ranking 31st in KenPom and 37th in Torvik compared to Saint Louis's 41st and 44th, with a stronger adjusted offensive efficiency that should exploit the Billikens' average defense. While Saint Louis boasts an impressive 28-5 record, their competition in the A10 is inferior to the SEC's rigor, and Georgia's recent form in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Georgia's balanced attack and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Texas Tech holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 12th in Torvik and 19th in KenPom compared to Akron's 68th and 64th, with a top-10 adjusted offense that should overwhelm the Zips' average defense. While Akron boasts a strong 28-5 record, their competition in the MAC is inferior to the Big 12's rigor, and Texas Tech's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Texas Tech's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Alabama holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 16th in KenPom and 17th in Torvik with a top-3 adjusted offense that should overwhelm Hofstra's 87th-ranked defense. While Hofstra has a solid 24-10 record and CAA championship momentum, their competition level is inferior to the SEC's rigor, and Alabama's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Alabama's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Tennessee holds a decisive edge in overall team quality, ranking 15th in both KenPom and Torvik with a top-15 defense that should disrupt SMU's offense, which has shown recent vulnerability with a late-season slump and an injury to key guard BJ Edwards. While SMU's offense is potent on paper, their defensive rating is significantly weaker (95th in Torvik), and Tennessee's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on SMU's shooting and forcing turnovers, but Tennessee's disciplined defense and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-6\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-7\",\n        \"winnerId\": \"kentucky\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-8\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Iowa State enters as a 2-seed from the Big 12 with a proven track record under coach T.J. Otzelberger, having reached the Sweet 16 twice recently and earning a high seed due to strong conference play and defensive identity. Tennessee State, while riding momentum from an OVC championship and a 23-9 record, faces a significant talent and efficiency gap against a Power 5 opponent that regularly competes at a high level. The Tigers' path relies on hot three-point shooting and forcing turnovers, but Iowa State's disciplined defense, superior rebounding, and experience in high-stakes games make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Duke remains the superior team by a wide margin in efficiency metrics, ranking 1st nationally in both KenPom and Torvik, but the loss of starting point guard Caleb Foster to a foot fracture introduces meaningful uncertainty and could disrupt their offensive rhythm. TCU's defense is solid (30th in Torvik adjD) and could exploit Duke's backcourt vulnerability, but the Horned Frogs' offense is only 83rd in efficiency, making it difficult to fully capitalize. Ultimately, Duke's elite defense, depth, and talent advantage should still prevail, but the injury lowers confidence from the near-certain level of the first round.\"\n      },\n      {\n        \"gameId\": \"r32-east-2\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.68,\n        \"rationale\": \"St. John's holds a slight edge in overall efficiency metrics, ranking 18th in Torvik and 20th in KenPom compared to Kansas's 22nd and 21st, with a more balanced offensive attack and a defense that has proven elite all season. While Kansas boasts a top-10 adjusted defense, their offense is less potent (56th-57th in efficiency) and they have shown vulnerability in close games against top competition, whereas St. John's has won 27 games and the Big East title under Rick Pitino. The underdog's path for Kansas relies on their defense forcing turnovers and winning the rebounding battle, but St. John's superior form, experience in a tougher conference, and recent championship pedigree make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-east-3\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Louisville holds a clear edge in advanced metrics, ranking 18th in KenPom and 16th in Torvik with a top-20 offense and defense, while Michigan State's ratings are unavailable, suggesting they may be lower-tier this season. The Cardinals' recent form, including a 23-10 record and strong ACC play, provides a reliable path to victory, whereas Michigan State's path relies on tournament experience and defensive grit but lacks the statistical backing to overcome Louisville's efficiency. The underdog's upset potential is limited without a major shooting night from the Spartans and a poor performance from Louisville, which is unlikely given the matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r32-east-4\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.65,\n        \"rationale\": \"UCLA holds a clear edge in available advanced metrics, ranking 24th in Torvik and 27th in KenPom with a top-20 offense and solid defense, while UConn's ratings are unavailable, suggesting they may be lower-tier this season. The Bruins' recent form, including a strong finish to the Big Ten schedule and a first-round win over UCF, provides momentum and proven tournament readiness. UConn's path relies on their championship pedigree and defensive grit, but without statistical backing or clear health updates, UCLA's efficiency and balanced attack make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while Villanova ranks 33rd-36th, creating a significant talent gap. The Wildcats' top-10 adjusted offense and defense should overwhelm Villanova's balanced but less potent attack, and there are no reported injury concerns for either side. Villanova's path relies on disciplined play and perimeter shooting, but Arizona's superior efficiency, depth, and recent form—including a 31-2 record and wins over top teams—make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-2\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Arkansas holds a slight edge in overall efficiency metrics, ranking 17th in KenPom and 20th in Torvik compared to Wisconsin's 22nd and 21st, with a top-5 adjusted offense that can exploit the Badgers' defense. While Wisconsin's offense is potent, Arkansas's experience in the tougher SEC and superior defensive rebounding provide a more reliable path to victory in this neutral-site matchup. The underdog's path for Wisconsin relies on hot three-point shooting and forcing turnovers, but Arkansas's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-3\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Gonzaga holds a decisive edge in overall efficiency metrics, ranking 11th in both KenPom and Torvik with a top-10 defense that should contain BYU's high-powered offense, which ranks 10th in KenPom but 88th in defense. While BYU's offensive firepower is elite, Gonzaga's defensive prowess, experience in big games, and historical dominance in this rivalry (winning the last four WCC tournament finals) provide a more reliable path to victory. The underdog's path for BYU relies on hot three-point shooting and forcing turnovers, but Gonzaga's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-4\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Purdue holds a decisive edge in overall efficiency metrics, ranking 8th in both KenPom and Torvik with the nation's top-ranked adjusted offense (132.6 Torvik, 131 KenPom) that should overwhelm Miami's 35th-ranked attack. While Miami has a credible path through disciplined play and perimeter shooting, as noted by analysts, Purdue's elite offensive firepower, superior rebounding, and experience in the Big Ten provide a more reliable path to victory in this neutral-site matchup. The underdog's upset potential is limited without a major shooting night from Miami and a poor performance from Purdue, which is unlikely given the efficiency gap and recent form.\"\n      },\n      {\n        \"gameId\": \"r32-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Florida enters as the top-5 overall team with elite efficiency on both ends, ranking 4th in KenPom and Torvik, while Iowa's 25th-26th ranking shows a clear talent gap. The Gators' top-5 defense should disrupt Iowa's potent offense, and Florida's recent form—including a 26-7 record and dominant first-round win—provides momentum. Iowa's path relies on hot three-point shooting and forcing turnovers, but Florida's superior efficiency, depth, and matchup advantage make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-south-2\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Vanderbilt holds a decisive edge in offensive efficiency, ranking 6th in KenPom adjusted offense and 10th overall in Torvik, which should exploit Nebraska's weaker defense despite the Cornhuskers' top-10 defensive rating. While Nebraska's defense is elite, their offense is only 55th-62nd in efficiency, and they lack a consistent go-to scorer, which could limit their ability to keep pace with Vanderbilt's high-powered attack. Vanderbilt's recent form in the SEC and superior overall efficiency metrics make them the more reliable pick, though Nebraska's defensive prowess gives them a credible path if they can force turnovers and control tempo.\"\n      },\n      {\n        \"gameId\": \"r32-south-3\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Illinois holds a decisive edge in offensive efficiency, ranking 1st in KenPom adjusted offense and 2nd in Torvik offensive rating, which should exploit North Carolina's average defense. While North Carolina has a solid 24-8 record and ACC pedigree, Illinois's superior metrics, balanced attack, and recent form in the Big Ten provide a more reliable path to victory. The underdog's path relies on North Carolina's defense forcing turnovers and winning the rebounding battle, but Illinois's efficiency and matchup advantage make them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-south-4\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Houston holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 5th nationally in KenPom and Torvik with a top-5 defense that should stifle Saint Mary's methodical offense. While Saint Mary's is disciplined and capable of controlling tempo, Houston's elite defensive pressure and superior athleticism create a clear path to victory. The Gaels' upset potential relies on winning the rebounding battle and limiting turnovers, but Houston's proven ability to force mistakes and score in transition makes them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Michigan enters as the 2-seed nationally with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Georgia ranks 31st-37th, creating a significant talent gap. The Wolverines' top-2 offense and defense should overwhelm Georgia's average attack, and while there are minor injury concerns for Michigan's Yaxel Lendeborg, he is expected to play and the team's depth ensures no major drop-off. Georgia's path relies on hot three-point shooting and forcing turnovers, but Michigan's superior efficiency, balanced attack, and recent form make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-2\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.7,\n        \"rationale\": \"Alabama holds a slight edge in offensive firepower, ranking 3rd nationally in adjusted offensive efficiency, which should challenge Texas Tech's 27th-ranked defense. While Texas Tech boasts a stronger overall defensive rating and a more balanced efficiency profile, Alabama's experience in the SEC and proven ability to score in bunches provide a credible path to victory. The Red Raiders' upset potential relies on controlling tempo and limiting Alabama's transition opportunities, but the Crimson Tide's elite offense and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-3\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Virginia holds a slight edge in efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should disrupt Tennessee's offense, which has shown inconsistency with a 22-11 record and recent injury concerns for freshman forward Nate Ament. While Tennessee's defense is elite, their offensive efficiency is lower (35th in KenPom) and they lack the same depth as the Cavaliers, who boast a 29-4 record and superior rim protection. The underdog's path for Tennessee relies on hot three-point shooting and forcing turnovers, but Virginia's disciplined style, experience in the ACC, and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-4\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Iowa State holds a decisive defensive edge, ranking 1st nationally in KenPom adjusted defensive efficiency, which should disrupt Kentucky's potent but turnover-prone offense. While Kentucky's offensive metrics are strong, their 21-13 record and defensive inconsistencies suggest vulnerability against disciplined teams. Iowa State's experience in the Big 12 and proven ability to control tempo provide a reliable path to victory, making them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Duke enters as the tournament's top-ranked team with elite efficiency on both ends, boasting the nation's best defense and a top-5 offense, while St. John's, though a strong Big East champion, ranks 18th-20th overall and faces a significant talent gap. The Blue Devils' superior metrics, depth, and recent form—including a 31-2 record and wins over top competition—provide a clear advantage, and while St. John's has a credible path through disciplined play and Rick Pitino's coaching, Duke's defensive prowess and offensive firepower should control the game. The underdog's upset potential relies on hot shooting and forcing turnovers, but Duke's balanced attack and matchup edge make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-east-2\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Louisville holds a slight edge in overall efficiency metrics, ranking 16th in Torvik and 18th in KenPom compared to UCLA's 24th and 27th, with a more balanced offensive attack and a defense that has proven elite all season. While UCLA's offense is potent, their defensive rating is weaker (49th in Torvik), and Louisville's recent form—including a 23-10 record and strong ACC play—provides a reliable path to victory. The underdog's path for UCLA relies on hot three-point shooting and forcing turnovers, but Louisville's superior efficiency, depth, and matchup advantage make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Arizona enters as the superior team by a wide margin in efficiency metrics, ranking 3rd nationally in both KenPom and Torvik with a top-10 offense and elite defense, while Arkansas ranks 17th-20th with a potent offense but weaker defense. The Wildcats' balanced attack and defensive prowess should control the tempo and exploit Arkansas's defensive vulnerabilities, though the Razorbacks' offensive firepower gives them a credible upset path if they force turnovers and shoot well. Ultimately, Arizona's depth, recent form, and matchup advantage make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-west-2\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Purdue holds a decisive edge in offensive efficiency, ranking 1st nationally in adjusted offensive rating, which should challenge Gonzaga's elite defense. While Gonzaga boasts a top-10 defense and a strong 30-3 record, Purdue's rebounding dominance and experience in the Big Ten provide a reliable path to victory in this neutral-site matchup. The underdog's path for Gonzaga relies on forcing turnovers and winning the perimeter battle, but Purdue's superior efficiency metrics and balanced attack make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Florida holds a slight edge in overall efficiency metrics, ranking 4th in both KenPom and Torvik compared to Vanderbilt's 10th-12th, with a superior defense (5th in KenPom adjD) that should contain Vanderbilt's potent offense. While Vanderbilt's offense is elite (6th in KenPom adjO), Florida's balanced attack and defensive prowess provide a more reliable path to victory in this SEC showdown. The underdog's path for Vanderbilt relies on hot three-point shooting and forcing turnovers, but Florida's depth, recent form, and matchup advantage make them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-south-2\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Houston holds a decisive edge in defensive efficiency, ranking 4th nationally in adjusted defensive efficiency, which should disrupt Illinois's top-ranked offense and force turnovers in a high-stakes Sweet 16 matchup. While Illinois boasts the nation's best offensive rating and can score in bunches, Houston's elite defense, physicality, and experience in the Big 12 provide a more reliable path to victory in this neutral-site game. The underdog's path for Illinois relies on hot three-point shooting and winning the rebounding battle, but Houston's proven ability to control tempo and force mistakes makes them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Michigan enters as the superior team by a wide margin in efficiency metrics, ranking 2nd nationally in both KenPom and Torvik with elite defense and a top-10 offense, while Alabama ranks 16th-17th with a potent offense but a significantly weaker defense. The Wolverines' balanced attack and defensive prowess should control the tempo and exploit Alabama's defensive vulnerabilities, especially given the Crimson Tide's recent off-court issues with Aden Holloway's arrest, which could disrupt their backcourt depth and shooting. While Alabama's elite offense gives them a credible upset path if they force turnovers and shoot well, Michigan's superior metrics, depth, and matchup advantage make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"s16-midwest-2\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Virginia's elite defense, anchored by rim protector Ugonna Onyenso and ranking 14th nationally in adjusted defensive efficiency, should disrupt Iowa State's offense, which relies on guard play and can be vulnerable against physical interior teams. While Iowa State boasts the nation's top-ranked defense, their offensive efficiency is lower, and Virginia's disciplined, methodical style under coach Ryan Odom is built for tournament success. The Cavaliers' experience, recent form, and matchup advantage give them a credible path to control tempo and secure a low-scoring win.\"\n      },\n      {\n        \"gameId\": \"e8-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Duke enters as the tournament's top-ranked team with elite efficiency on both ends, boasting the nation's best defense and a top-5 offense, while Louisville ranks 16th-18th overall and faces a significant talent gap. The Blue Devils' superior metrics, depth, and recent form—including a 31-2 record and a head-to-head win over Louisville in January—provide a clear advantage, though the loss of Caleb Foster to a foot fracture introduces some uncertainty. Louisville's path relies on hot shooting and exploiting Duke's backcourt vulnerability, but Duke's defensive prowess and offensive firepower should control the game and secure the win.\"\n      },\n      {\n        \"gameId\": \"e8-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Arizona holds a decisive edge in overall efficiency metrics, ranking 3rd nationally in both KenPom and Torvik with a top-10 offense and elite defense, while Purdue ranks 8th with the nation's top offense but a significantly weaker defense. The Wildcats' balanced attack and defensive prowess should control the tempo and exploit Purdue's defensive vulnerabilities, especially in a neutral-site Elite Eight matchup. While Purdue's elite offense gives them a credible upset path if they force turnovers and shoot well, Arizona's superior metrics, depth, and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"e8-south-1\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Houston holds a decisive edge in defensive efficiency, ranking 4th nationally in adjusted defensive efficiency, which should disrupt Florida's potent offense and force turnovers in this high-stakes Elite Eight matchup. While Florida boasts a top-5 overall ranking and elite offensive firepower, Houston's physicality, experience in the Big 12, and proven ability to control tempo provide a more reliable path to victory in a neutral-site game. The underdog's path for Florida relies on hot three-point shooting and winning the rebounding battle, but Houston's disciplined defense and matchup advantage make them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"e8-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Michigan holds a decisive edge in efficiency metrics, ranking 2nd nationally in both KenPom and Torvik with elite defense and a top-10 offense, while Virginia ranks 13th-14th with a strong defense but a less potent attack. The Wolverines' balanced attack and defensive prowess should control the tempo and exploit Virginia's offensive limitations, especially given Michigan's depth and recent form. While Virginia's disciplined style and rim protection from Ugonna Onyenso give them a credible path in a low-scoring game, Michigan's superior talent and matchup advantage make them the more reliable pick to advance to the Final Four.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"s16-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.85,\n      \"rationale\": \"Duke enters as the tournament's top-ranked team with elite efficiency on both ends, boasting the nation's best defense and a top-5 offense, while St. John's, though a strong Big East champion, ranks 18th-20th overall and faces a significant talent gap. The Blue Devils' superior metrics, depth, and recent form—including a 31-2 record and wins over top competition—provide a clear advantage, and while St. John's has a credible path through disciplined play and Rick Pitino's coaching, Duke's defensive prowess and offensive firepower should control the game. The underdog's upset potential relies on hot shooting and forcing turnovers, but Duke's balanced attack and matchup edge make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-east-2\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.72,\n      \"rationale\": \"Louisville holds a slight edge in overall efficiency metrics, ranking 16th in Torvik and 18th in KenPom compared to UCLA's 24th and 27th, with a more balanced offensive attack and a defense that has proven elite all season. While UCLA's offense is potent, their defensive rating is weaker (49th in Torvik), and Louisville's recent form—including a 23-10 record and strong ACC play—provides a reliable path to victory. The underdog's path for UCLA relies on hot three-point shooting and forcing turnovers, but Louisville's superior efficiency, depth, and matchup advantage make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Arizona enters as the superior team by a wide margin in efficiency metrics, ranking 3rd nationally in both KenPom and Torvik with a top-10 offense and elite defense, while Arkansas ranks 17th-20th with a potent offense but weaker defense. The Wildcats' balanced attack and defensive prowess should control the tempo and exploit Arkansas's defensive vulnerabilities, though the Razorbacks' offensive firepower gives them a credible upset path if they force turnovers and shoot well. Ultimately, Arizona's depth, recent form, and matchup advantage make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-west-2\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Purdue holds a decisive edge in offensive efficiency, ranking 1st nationally in adjusted offensive rating, which should challenge Gonzaga's elite defense. While Gonzaga boasts a top-10 defense and a strong 30-3 record, Purdue's rebounding dominance and experience in the Big Ten provide a reliable path to victory in this neutral-site matchup. The underdog's path for Gonzaga relies on forcing turnovers and winning the perimeter battle, but Purdue's superior efficiency metrics and balanced attack make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Florida holds a slight edge in overall efficiency metrics, ranking 4th in both KenPom and Torvik compared to Vanderbilt's 10th-12th, with a superior defense (5th in KenPom adjD) that should contain Vanderbilt's potent offense. While Vanderbilt's offense is elite (6th in KenPom adjO), Florida's balanced attack and defensive prowess provide a more reliable path to victory in this SEC showdown. The underdog's path for Vanderbilt relies on hot three-point shooting and forcing turnovers, but Florida's depth, recent form, and matchup advantage make them the pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-south-2\",\n      \"winnerId\": \"houston\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Houston holds a decisive edge in defensive efficiency, ranking 4th nationally in adjusted defensive efficiency, which should disrupt Illinois's top-ranked offense and force turnovers in a high-stakes Sweet 16 matchup. While Illinois boasts the nation's best offensive rating and can score in bunches, Houston's elite defense, physicality, and experience in the Big 12 provide a more reliable path to victory in this neutral-site game. The underdog's path for Illinois relies on hot three-point shooting and winning the rebounding battle, but Houston's proven ability to control tempo and force mistakes makes them the pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-midwest-1\",\n      \"winnerId\": \"michigan\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Michigan enters as the superior team by a wide margin in efficiency metrics, ranking 2nd nationally in both KenPom and Torvik with elite defense and a top-10 offense, while Alabama ranks 16th-17th with a potent offense but a significantly weaker defense. The Wolverines' balanced attack and defensive prowess should control the tempo and exploit Alabama's defensive vulnerabilities, especially given the Crimson Tide's recent off-court issues with Aden Holloway's arrest, which could disrupt their backcourt depth and shooting. While Alabama's elite offense gives them a credible upset path if they force turnovers and shoot well, Michigan's superior metrics, depth, and matchup advantage make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"s16-midwest-2\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.75,\n      \"rationale\": \"Virginia's elite defense, anchored by rim protector Ugonna Onyenso and ranking 14th nationally in adjusted defensive efficiency, should disrupt Iowa State's offense, which relies on guard play and can be vulnerable against physical interior teams. While Iowa State boasts the nation's top-ranked defense, their offensive efficiency is lower, and Virginia's disciplined, methodical style under coach Ryan Odom is built for tournament success. The Cavaliers' experience, recent form, and matchup advantage give them a credible path to control tempo and secure a low-scoring win.\"\n    },\n    {\n      \"gameId\": \"e8-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Duke enters as the tournament's top-ranked team with elite efficiency on both ends, boasting the nation's best defense and a top-5 offense, while Louisville ranks 16th-18th overall and faces a significant talent gap. The Blue Devils' superior metrics, depth, and recent form—including a 31-2 record and a head-to-head win over Louisville in January—provide a clear advantage, though the loss of Caleb Foster to a foot fracture introduces some uncertainty. Louisville's path relies on hot shooting and exploiting Duke's backcourt vulnerability, but Duke's defensive prowess and offensive firepower should control the game and secure the win.\"\n    },\n    {\n      \"gameId\": \"e8-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Arizona holds a decisive edge in overall efficiency metrics, ranking 3rd nationally in both KenPom and Torvik with a top-10 offense and elite defense, while Purdue ranks 8th with the nation's top offense but a significantly weaker defense. The Wildcats' balanced attack and defensive prowess should control the tempo and exploit Purdue's defensive vulnerabilities, especially in a neutral-site Elite Eight matchup. While Purdue's elite offense gives them a credible upset path if they force turnovers and shoot well, Arizona's superior metrics, depth, and recent form make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"e8-south-1\",\n      \"winnerId\": \"houston\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Houston holds a decisive edge in defensive efficiency, ranking 4th nationally in adjusted defensive efficiency, which should disrupt Florida's potent offense and force turnovers in this high-stakes Elite Eight matchup. While Florida boasts a top-5 overall ranking and elite offensive firepower, Houston's physicality, experience in the Big 12, and proven ability to control tempo provide a more reliable path to victory in a neutral-site game. The underdog's path for Florida relies on hot three-point shooting and winning the rebounding battle, but Houston's disciplined defense and matchup advantage make them the pick to advance.\"\n    },\n    {\n      \"gameId\": \"e8-midwest-1\",\n      \"winnerId\": \"michigan\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Michigan holds a decisive edge in efficiency metrics, ranking 2nd nationally in both KenPom and Torvik with elite defense and a top-10 offense, while Virginia ranks 13th-14th with a strong defense but a less potent attack. The Wolverines' balanced attack and defensive prowess should control the tempo and exploit Virginia's offensive limitations, especially given Michigan's depth and recent form. While Virginia's disciplined style and rim protection from Ugonna Onyenso give them a credible path in a low-scoring game, Michigan's superior talent and matchup advantage make them the more reliable pick to advance to the Final Four.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "f4-1-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:02:44.533Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:02:44.534Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "duke",
+          "houston"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:02:44.541Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "duke",
+          "teamName": "Duke",
+          "torvik": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adjoe": 128.01924984850498,
+            "oe Rank": 4,
+            "adjde": 90.44607016864468,
+            "de Rank": 1,
+            "barthag": 0.9819325227198022,
+            "rank.1": 1,
+            "proj. W": 31.77263480392547,
+            "Proj. L": 2.2273651960745293,
+            "Pro Con W": 17,
+            "Pro Con L": 1,
+            "Con Rec.": "17-1",
+            "sos": 0.7350779717539253,
+            "ncsos": 0.6248828246440576,
+            "consos": 0.8004871126999,
+            "Proj. SOS": 0.7411389942783231,
+            "Proj. Noncon SOS": 0.6248828246440576,
+            "Proj. Con SOS": 0.8004871126999,
+            "elite SOS": 0.6154338494473306,
+            "elite noncon SOS": 0.6350244038172387,
+            "Opp OE": 116.43303268254998,
+            "Opp DE": 103.17328486033144,
+            "Opp Proj. OE": 116.58941508909258,
+            "Opp Proj DE": 102.95262216602733,
+            "Con Adj OE": 129.25576212251133,
+            "Con Adj DE": 90.79514971478837,
+            "Qual O": 127.85704514358656,
+            "Qual D": 89.47568126665206,
+            "Qual Barthag": 0.9837755473959358,
+            "Qual Games": 19,
+            "FUN": 0.0627594166033986,
+            "ConPF": 1457,
+            "ConPA": 1123,
+            "ConPoss": 1174.9625,
+            "ConOE": 1.2400395757311404,
+            "ConDE": 0.9557751843143932,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.9444444444444444,
+            "WAB": 12.883073206764472,
+            "WAB Rk": 2,
+            "Fun Rk": 47,
+            "adjt": 65.82335494511732
+          },
+          "kenpom": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adj_em": 39.17,
+            "adj_o": 127.9,
+            "adj_o_rank": 4,
+            "adj_d": 88.7,
+            "adj_d_rank": 2,
+            "adj_t": 65.4,
+            "adj_t_rank": 287,
+            "luck": 0.042,
+            "luck_rank": 80,
+            "sos_adj_em": 13.78,
+            "sos_adj_em_rank": 19,
+            "sos_opp_o": 116.8,
+            "sos_opp_o_rank": 24,
+            "sos_opp_d": 103,
+            "sos_opp_d_rank": 13,
+            "ncsos_adj_em": 10,
+            "ncsos_adj_em_rank": 18
+          }
+        },
+        {
+          "teamId": "houston",
+          "teamName": "Houston",
+          "torvik": {
+            "rank": 5,
+            "team": "Houston",
+            "conf": "B12",
+            "record": "28-5",
+            "adjoe": 125.0975167715807,
+            "oe Rank": 13,
+            "adjde": 91.8530836031741,
+            "de Rank": 4,
+            "barthag": 0.9721421329914924,
+            "rank.1": 5,
+            "proj. W": 28.451512204962764,
+            "Proj. L": 5.548487795037236,
+            "Pro Con W": 14,
+            "Pro Con L": 4,
+            "Con Rec.": "14-4",
+            "sos": 0.7234356164310016,
+            "ncsos": 0.536556524973016,
+            "consos": 0.8379056201105163,
+            "Proj. SOS": 0.7308920407299491,
+            "Proj. Noncon SOS": 0.536556524973016,
+            "Proj. Con SOS": 0.8379056201105163,
+            "elite SOS": 0.6317400313710136,
+            "elite noncon SOS": 0.7923649040442717,
+            "Opp OE": 116.1174907836186,
+            "Opp DE": 104.0376269811524,
+            "Opp Proj. OE": 116.4147653528213,
+            "Opp Proj DE": 103.65787274782504,
+            "Con Adj OE": 127.27031138842572,
+            "Con Adj DE": 93.15229119421956,
+            "Qual O": 127.22619024373626,
+            "Qual D": 94.05360043861518,
+            "Qual Barthag": 0.969943807972222,
+            "Qual Games": 16,
+            "FUN": 0.009050451042042,
+            "ConPF": 1384,
+            "ConPA": 1165,
+            "ConPoss": 1162.3625000000002,
+            "ConOE": 1.1906784673456,
+            "ConDE": 1.0022690855907683,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.7777777777777778,
+            "WAB": 9.056959670548608,
+            "WAB Rk": 4,
+            "Fun Rk": 147,
+            "adjt": 63.34001963276259
+          },
+          "kenpom": {
+            "rank": 5,
+            "team": "Houston",
+            "conf": "B12",
+            "record": "28-5",
+            "adj_em": 33.55,
+            "adj_o": 124.6,
+            "adj_o_rank": 16,
+            "adj_d": 91,
+            "adj_d_rank": 4,
+            "adj_t": 63.4,
+            "adj_t_rank": 352,
+            "luck": 0.006,
+            "luck_rank": 176,
+            "sos_adj_em": 12.77,
+            "sos_adj_em_rank": 28,
+            "sos_opp_o": 116.6,
+            "sos_opp_o_rank": 28,
+            "sos_opp_d": 103.8,
+            "sos_opp_d_rank": 33,
+            "ncsos_adj_em": 0.8,
+            "ncsos_adj_em_rank": 156
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"duke\",\n      \"teamName\": \"Duke\",\n      \"torvik\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adjoe\": 128.01924984850498,\n        \"oe Rank\": 4,\n        \"adjde\": 90.44607016864468,\n        \"de Rank\": 1\n      },\n      \"kenpom\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adj_em\": 39.17,\n        \"adj_o\": 127.9,\n        \"adj_o_rank\": 4,\n        \"adj_d\": 88.7\n      }\n    },\n    {\n      \"teamId\": \"houston\",\n      \"teamName\": \"Houston\",\n      \"torvik\": {\n        \"rank\": 5,\n        \"team\": \"Houston\",\n        \"conf\": \"B12\",\n        \"record\": \"28-5\",\n        \"adjoe\": 125.0975167715807,\n        \"oe Rank\": 13,\n        \"adjde\": 91.8530836031741,\n        \"de Rank\": 4\n      },\n      \"kenpom\": {\n        \"rank\": 5,\n        \"team\": \"Houston\",\n        \"conf\": \"B12\",\n        \"record\": \"28-5\",\n        \"adj_em\": 33.55,\n        \"adj_o\": 124.6,\n        \"adj_o_rank\": 16,\n        \"adj_d\": 91\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "f4-1-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:03:02.453Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:03:02.453Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Duke Houston Final Four injury news 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:03:03.171Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b",
+          "snippet": "Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won&#x27;t play in this week&#x27;s ..."
+        },
+        {
+          "title": "Duke Blue Devils Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=d6bcf80025b06743fd52d54637c63655e1dc2bb35b61c45c1a0db1de6957841b",
+          "snippet": "Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "Duke&#x27;s Maliq Brown (shoulder) expects to play in Final Four",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F44535064%2Fduke%2Dmaliq%2Dbrown%2Dshoulder%2Dexpects%2Dplay%2Dfinal%2Dfour&rut=32bf097f419b598b8ed1aeba088e1c65f7e40a083d108cd7ad0c43a00ba242d5",
+          "snippet": "Duke&#x27;s Maliq Brown, after dislocating his left shoulder, said he&#x27;s ready for a bigger role in the Final Four following limited minutes in NCAA tournament wins last weekend."
+        },
+        {
+          "title": "NBA Injury Status - 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65",
+          "snippet": "Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve."
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 schedule, sites, locations - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F46583333%2Fmens%2Dcollege%2Dbasketball%2Dmarch%2Dmadness%2D2026%2Dschedule%2Dsites%2Dlocations%2Dselection%2Dsunday&rut=3a1021503fe29b694bd56e4971398249ce28335b26a7e626ca4e49a3eda7498b",
+          "snippet": "Everything to know about the 2026 men&#x27;s NCAA tournament, from Selection Sunday to the Final Four and championship game."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b\",\n      \"snippet\": \"Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won&#x27;t play in this week&#x27;s ...\"\n    },\n    {\n      \"title\": \"Duke Blue Devils Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=d6bcf80025b06743fd52d54637c63655e1dc2bb35b61c45c1a0db1de6957841b\",\n      \"snippet\": \"Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"Duke&#x27;s Maliq Brown (shoulder) expects to play in Final Four\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F44535064%2Fduke%2Dmaliq%2Dbrown%2Dshoulder%2Dexpects%2Dplay%2Dfinal%2Dfour&rut=32bf097f419b598b8ed1aeba088e1c65f7e40a083d108cd7ad0c43a00ba242d5\",\n      \"snippet\": \"Duke&#x27;s Maliq Brown, after dislocating his left shoulder, said he&#x27;s ready for a bigger role in the Final Four following limited minutes in NCAA tournament wins last weekend.\"\n    },\n    {\n      \"title\": \"NBA Injury Status - 2025-26 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65\",\n      \"snippet\": \"Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "f4-1-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:03:10.951Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:03:10.952Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-scaleb-foster-indefinitely-foot-fracture"
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:03:11.204Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-scaleb-foster-indefinitely-foot-fracture",
+        "text": "Duke's Caleb Foster out indefinitely with foot fracture - ESPN Duke's Foster out indefinitely with foot fracture --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Duke's Foster out indefinitely with foot fracture Duke Blue Devils 8d Mark saves day, sends Texas to NCAA first round Texas Longhorns 7h Adam Rittenberg Howard checks last box with first tourney win Howard Bison 10h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 19h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 19h EMU hires Clemson assistant Donlon as coach Clemson Tigers 11h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 15h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 18h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 21h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 22h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 3d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 7h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 18h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello Duke's Caleb Foster out indefinitely with foot fracture play Caleb Foster lays it in for a Duke bucket (0:21) Caleb Foster banks it in off the glass to extend Duke’s first-half lead. (0:21) Associated Press Multiple Authors Mar 10, 2026, 10:20 AM ET Email Print Open Extended Reactions Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won't play in this week's Atlantic Coast "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-scaleb-foster-indefinitely-foot-fracture\",\n    \"text\": \"Duke's Caleb Foster out indefinitely with foot fracture - ESPN Duke's Foster out indefinitely with foot fracture --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Duke's Foster out indefinitely with foot fracture Duke Blue Devils 8d Mark saves day, sends Texas to NCAA first round Texas Longhorns 7h Adam Rittenberg Howard checks last box with first tourney win Howard Bison 10h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 19h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 19h EMU hires Clemson assistant Donlon as coach Clemson Tigers 11h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 15h Stephen Holder Charlotte fires coach Fearne... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "f4-1-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:03:28.359Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:03:28.359Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke Houston Final Four matchup analysis 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:03:29.284Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 NCAA Men&#x27;s Basketball Tournament Breakdown | FOX Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fstories%2Fcollege%2Dbasketball%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dbreakdown%2Dtop%2Dmatchups%2Dupsets%2Dpredictions&rut=1181b071545d870a756388903ddafd9c82e07af1942bdeb07ad64378668ff901",
+          "snippet": "From upset picks to Final Four predictions, FOX Sports&#x27; Michael Cohen breaks down the complete NCAA Men&#x27;s Basketball Tournament bracket."
+        },
+        {
+          "title": "Expert March Madness picks for every game: Data analysts release ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cleveland.com%2Fbetting%2F2026%2F03%2Fexpert%2Dmarch%2Dmadness%2Dpicks%2Dfor%2Devery%2Dgame%2Ddata%2Danalysts%2Drelease%2Dcomplete%2D2026%2Dncaa%2Dtournament%2Dbracket%2Dfeaturing%2Dmultiple%2Dupsets.html&rut=df29448efb0e9dd80e63f03e2d6df181616dafab310a2bad2d2be8baed878e59",
+          "snippet": "The data analysts at Dimers.com have announced the free release of their complete 2026 NCAA Tournament bracket, featuring winning probabilities for every matchup ."
+        },
+        {
+          "title": "Seth Davis&#x27; NCAA Men&#x27;s 2026 Tournament Bracket Analysis - Hoops HQ",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hoopshq.com%2Fbracketology%2Fseth%2Ddavis%2Dncaa%2Dmens%2D2026%2Dtournament%2Dbracket&rut=086cf1cc96921078bc9ac7e13cff9b7df2c1b2811d0aea44aed5622c77a44016",
+          "snippet": "Hoops HQ Editor-In-Chief Seth Davis reveals his bracket for the 2026 NCAA Tournament, straight from the Selection Show studio set."
+        },
+        {
+          "title": "2026 NCAA Tournament Predictions: Final Four Picks - Houston Today",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Ftx%2Fhouston%2Fnews%2F2026%2F03%2F17%2F2026%2Dncaa%2Dtournament%2Dpredictions%2Dfinal%2Dfour%2Dpicks%2F&rut=f03efb280423b07c09b5caada04fe8241fa3b2cb22117a49f3d0480bf46599d0",
+          "snippet": "With March Madness in full swing, leading fantasy sports experts share their predictions for the 2026 NCAA Tournament Final Four . Analysts from FantasyPros and BettingPros provide their top picks and analysis on the teams they expect to advance to college basketball&#x27;s biggest stage."
+        },
+        {
+          "title": "NCAA bracket predictions: Final Four, upsets and is it Arizona&#x27;s year?",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F16%2Fmarch%2Dmadness%2Dpredictions%2Dupset%2Dpicks%2Dfinal%2Dfour%2Dncaa%2Dtournament%2Dbracket%2D2026%2F89064207007%2F&rut=cfaae64b53ddd6df1a96bd24f7a45cd2a461d46ab52b736e7701e2847da162d6",
+          "snippet": "Duke got the No. 1 overall seed in Men&#x27;s March Madness. Big whoop. The NCAA selection committee&#x27;s bracket did Duke dirty. Arizona must be loving it."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 NCAA Men&#x27;s Basketball Tournament Breakdown | FOX Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fstories%2Fcollege%2Dbasketball%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dbreakdown%2Dtop%2Dmatchups%2Dupsets%2Dpredictions&rut=1181b071545d870a756388903ddafd9c82e07af1942bdeb07ad64378668ff901\",\n      \"snippet\": \"From upset picks to Final Four predictions, FOX Sports&#x27; Michael Cohen breaks down the complete NCAA Men&#x27;s Basketball Tournament bracket.\"\n    },\n    {\n      \"title\": \"Expert March Madness picks for every game: Data analysts release ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cleveland.com%2Fbetting%2F2026%2F03%2Fexpert%2Dmarch%2Dmadness%2Dpicks%2Dfor%2Devery%2Dgame%2Ddata%2Danalysts%2Drelease%2Dcomplete%2D2026%2Dncaa%2Dtournament%2Dbracket%2Dfeaturing%2Dmultiple%2Dupsets.html&rut=df29448efb0e9dd80e63f03e2d6df181616dafab310a2bad2d2be8baed878e59\",\n      \"snippet\": \"The data analysts at Dimers.com have announced the free release of their complete 2026 NCAA Tournament bracket, featuring winning probabilities for every matchup .\"\n    },\n    {\n      \"title\": \"Seth Davis&#x27; NCAA Men&#x27;s 2026 Tournament Bracket Analysis - Hoops HQ\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hoopshq.com%2Fbracketology%2Fseth%2Ddavis%2Dncaa%2Dmens%2D2026%2Dtournament%2Dbracket&rut=086cf1cc96921078bc9ac7e13cff9b7df2c1b2811d0aea44aed5622c77a44016\",\n      \"snippet\": \"Hoops HQ Editor-In-Chief Seth Davis reveals his bracket for the 2026 NCAA Tournament, straight from the Selection Show studio set.\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament Predictions: Final Four Picks - Houston Today\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Ftx%2Fhouston%2Fnews%2F2026%2F03%2F17%2F2026%2Dncaa%2Dtournament%2Dpredictions%2Dfinal%2Dfour%2Dpicks%2F&rut=f03efb280423b07c09b5caada04fe8241fa3b2cb22117a49f3d0480bf46599d0\",\n      \"snippet\": \"With March Madness in full swing, leading fantasy sports experts share their predictions for the 2026 NCAA Tournament Final Four . Analysts from FantasyPros and BettingPros provide their top picks and analysis on the teams they expect to advance to college basketball&#x27;s biggest stage.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "f4-1-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:03:36.655Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:03:36.655Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.foxsports.com/stories/college-basketball/ncaa-mens-basketball-tournament-breakdown-top-matchups-upsets-predictions"
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:03:36.836Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.foxsports.com/stories/college-basketball/ncaa-mens-basketball-tournament-breakdown-top-matchups-upsets-predictions",
+        "text": "2026 NCAA Men&#x27;s Basketball Tournament Breakdown | FOX Sports my favs Access and manage your favorites here DISMISS Scores Watch Betting WBC ⚾ FOX Super 6 💰 Stories Search Sign In Account SPORTS & TEAMS PLAYERS SHOWS PERSONALITIES TOPICS POPULAR SEARCHES - No Data Available - BROWSE BY SPORTS & TEAMS PLAYERS SHOWS PERSONALITIES TOPICS Built on College Basketball College Basketball NCAA Men&#39;s Basketball Tournament Breakdown: Top Matchups, Upsets, Predictions Updated Mar. 15, 2026 11:03 p.m. ET share facebook x reddit link Michael Cohen College Football and College Basketball Writer At last, the madness is upon us. Five long months of buildup to Selection Sunday came to an end with another glorious reveal of this year’s NCAA Men's Basketball Tournament bracket. There are heavyweights at the top in 1-seeds Duke , Arizona , Michigan and Florida . There are newcomers like Queens and California Baptist. And there are more enticing storylines than fans can consume: from Miami (OH) in the First Four to potential No. 1 overall draft picks in BYU ’s AJ Dybantsa and Kansas’ Darryn Peterson, from Nebraska seeking the first March Madness win in program history to the all-important health of Duke’s two injured starters. Without further ado, let’s break down the field: [MARCH MADNESS: NCAA Men's Basketball Tournament Bracket ] 1. Of the No. 1 seeds, which team has the clearest path to the Final Four? Koa Peat #10 of the Arizona Wildcats reacts in front of Allen Mukeba #23 of the Arizona State Sun Devils. (Photo by Chris Coduto/Getty Images) Arizona. Given the legitimate injury questions surrounding Duke, a string of sluggish performances from Michigan in the Big Ten Tournament and a blowout loss by Florida in the SEC Tournament, there’s no question that Arizona enters the Big Dance with the most encouraging trajectory of the top seeds. The Wildcats are one of only two teams to rank among the top five nationally in both offensive and defensive efficiency at this point, alongside Duke, and they’ve won nine consecutive games ahead of a first-round matchup with No. 16 LIU. A roster littered with future NBA Draft picks, including two likely lottery picks in shooting guard Brayden Burries and power forward Koa Peat, gives head coach Tommy Lloyd his best chance of advancing beyond the Sweet 16 since taking over at Arizona. The Wildcats' potential path to the Final Four seems relatively friendly, too. Second-seeded Purdue only rose to the 2-line thanks to an upset over Michigan in the Big Ten title game, which means the Boilermakers’ overall profile is more in line with that of a 3-seed. Third-seeded Gonzaga , while talented, is not believed to be on the same level of classic Bulldogs teams under head coach Mark Few. Arkansas and Wisconsin, seeded fourth and fifth, respectively, also needed strong runs in their respective conference tournaments to land on those lines. The West feels like a region with a handful of overseeded teams trying to take down arguably "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.foxsports.com/stories/college-basketball/ncaa-mens-basketball-tournament-breakdown-top-matchups-upsets-predictions\",\n    \"text\": \"2026 NCAA Men&#x27;s Basketball Tournament Breakdown | FOX Sports my favs Access and manage your favorites here DISMISS Scores Watch Betting WBC ⚾ FOX Super 6 💰 Stories Search Sign In Account SPORTS & TEAMS PLAYERS SHOWS PERSONALITIES TOPICS POPULAR SEARCHES - No Data Available - BROWSE BY SPORTS & TEAMS PLAYERS SHOWS PERSONALITIES TOPICS Built on College Basketball College Basketball NCAA Men&#39;s Basketball Tournament Breakdown: Top Matchups, Upsets, Predictions Updated Mar. 15, 2026 11:03 p.m. ET share facebook x reddit link Michael Cohen College Football and College Basketball Writer At last, the madness is upon us. Five long months of buildup to Selection Sunday came to an end with another glorious reveal of this year’s NCAA Men's Basketball Tournament bracket. There are heavyweights at the top in 1-seeds Duke , Arizona , Michigan and Florida . There are newcomers like Queens and California Baptist. And there are more enticing storylines than fans can consume: from Miami (OH) in the First Four to potential No. 1 overall draft picks in BYU ’s AJ Dybantsa and Kansas’ Darryn Peterson, from Nebraska seeking the first March Madness win in program history to the all-important heal... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "f4-1-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:03:38.293Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:03:38.293Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke Caleb Foster injury Final Four 2026 impact",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:03:39.628Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fuk%2Fncaa%2Dbasketball%2Fduke%2Fnews%2Fduke%2Dbasketball%2Djon%2Dscheyer%2Drealistic%2Dcaleb%2Dfoster%2Dinjury%2Dtimeline%2Dmarch%2Dmadness%2F0a8a315cad33eb46991c8423&rut=fc0977dbb1d041e9fe6fef4648f3663a668308d41227652f8ef81a492bd86a1d",
+          "snippet": "A lot of Duke fans are wondering if he will be ready for the ACC Tournament or March Madness. Coach Scheyer outlines that his veteran guard could come back during the NCAA Tournament&#x27;s Final Four ..."
+        },
+        {
+          "title": "Crucial Injury Updates Provided on Duke&#x27;s Foster and Ngongba",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fduke%2Fblue%2Ddevils%2Dcrucial%2Dinjury%2Dupdates%2Dprovided%2Don%2Dfoster%2Dngongba&rut=930812caa80ae65cb5071b650b4caea7b07ca52e4ef108c71df63125a5a5496f",
+          "snippet": "Jon Scheyer provided key injury updates on Caleb Foster and Patrick Ngongba following Duke&#x27;s win over North Carolina."
+        },
+        {
+          "title": "Caleb Foster injury updates: Will Duke star play in 2026 March ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fcaleb%2Dfoster%2Dinjury%2Dupdates%2Dwill%2Dduke%2Dstar%2Dplay%2Din%2D2026%2Dmarch%2Dmadness%2Dopener%2Far%2DAA1YK0tL&rut=98f8c47c5b24d64664a5c2eb71924b2c411cfd819c705ebb6ef016c4f7eb45c6",
+          "snippet": "While Ngongba is expected back, Foster&#x27;s status is much murkier. How long will Caleb Foster be out? Scheyer said Foster is expected to remain out until at least the Final Four . Even if Duke ..."
+        },
+        {
+          "title": "Duke won&#x27;t have Caleb Foster, Patrick Ngongba II for ACC Tournament ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fapnews.com%2Farticle%2Fduke%2Dfoster%2Dngongba%2Dinjuries%2D8de351d9d5e68200ea18ac01279f819f&rut=0cc2921f4e71c7343369dcb931a4d7fc604f908d321e90e06294e33ecc1b2283",
+          "snippet": "Duke&#x27;s Caleb Foster sits on the bench wearing a boot after suffering an injury during the first half of an NCAA college basketball game against North Carolina in Durham, N.C., Saturday, March 7, 2026 ."
+        },
+        {
+          "title": "Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b",
+          "snippet": "Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won&#x27;t play in this week&#x27;s ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fuk%2Fncaa%2Dbasketball%2Fduke%2Fnews%2Fduke%2Dbasketball%2Djon%2Dscheyer%2Drealistic%2Dcaleb%2Dfoster%2Dinjury%2Dtimeline%2Dmarch%2Dmadness%2F0a8a315cad33eb46991c8423&rut=fc0977dbb1d041e9fe6fef4648f3663a668308d41227652f8ef81a492bd86a1d\",\n      \"snippet\": \"A lot of Duke fans are wondering if he will be ready for the ACC Tournament or March Madness. Coach Scheyer outlines that his veteran guard could come back during the NCAA Tournament&#x27;s Final Four ...\"\n    },\n    {\n      \"title\": \"Crucial Injury Updates Provided on Duke&#x27;s Foster and Ngongba\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fduke%2Fblue%2Ddevils%2Dcrucial%2Dinjury%2Dupdates%2Dprovided%2Don%2Dfoster%2Dngongba&rut=930812caa80ae65cb5071b650b4caea7b07ca52e4ef108c71df63125a5a5496f\",\n      \"snippet\": \"Jon Scheyer provided key injury updates on Caleb Foster and Patrick Ngongba following Duke&#x27;s win over North Carolina.\"\n    },\n    {\n      \"title\": \"Caleb Foster injury updates: Will Duke star play in 2026 March ... - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fcaleb%2Dfoster%2Dinjury%2Dupdates%2Dwill%2Dduke%2Dstar%2Dplay%2Din%2D2026%2Dmarch%2Dmadness%2Dopener%2Far%2DAA1YK0tL&rut=98f8c47c5b24d64664a5c2eb71924b2c411cfd819c705ebb6ef016c4f7eb45c6\",\n      \"snippet\": \"While Ngongba is expected back, Foster&#x27;s status is much murkier. How long will Caleb Foster be out? Scheyer said Foster is expected to remain out until at least the Final Four . Even if Duke ...\"\n    },\n    {\n      \"title\": \"Duke won&#x27;t have Caleb Foster, Patrick Ngongba II for ACC Tournament ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fapnews.com%2Farticle%2Fduke%2Dfoster%2Dngongba%2Dinjuries%2D8de351d9d5e68200ea18ac01279f819f&rut=0cc2921f4e71c7343369dcb931a4d7fc604f908d321e90e06294e33ecc1b2283\",\n      \"snippet\": \"Duke&#x27;s Caleb Foster sits on the bench wearing a boot after suffering an injury during the first half of an NCAA college basketball game against North Carolina in Durham, N.C., Saturday, March 7, 2026 .\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "f4-1-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:03:41.365Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:03:41.365Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/uk/ncaa-basketball/duke/news/duke-basketball-jon-scheyer-realistic-caleb-foster-injury-timeline-march-madness/0a8a315cad33eb46991c8423"
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:03:41.634Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportingnews.com/uk/ncaa-basketball/duke/news/duke-basketball-jon-scheyer-realistic-caleb-foster-injury-timeline-march-madness/0a8a315cad33eb46991c8423",
+        "text": "Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for March Madness | Sporting News United Kingdom Skip to main content The Archive Shop Tickets Football Football Home News 2026 FIFA World Cup Teams Leagues Scores Fixtures Tables EXPLORE FOOTBALL Leagues & Cups Premier League Champions League Europa League 2026 FIFA World Cup 2025 Club World Cup TOP TEAMS Arsenal Chelsea Liverpool Manchester City Manchester United Tottenham Hotspur Barcelona Real Madrid England Boxing Boxing News Cricket Cricket News Darts Darts News ••• Explore More NFL NBA F1 MMA WWE Golf Tennis Horse Racing More Sports Betting Watch Watch How to Watch Streaming Services TNT Sports DAZN NFL Game Pass Continue Without Login Featured Football Boxing Cricket Darts Sports Football NFL NBA Darts F1 Boxing MMA WWE Golf Tennis Horse Racing Cricket More Sports Explore More Betting Watch Editions United Kingdom Argentina Australia Brasil Canada India 日本 México 대한민국 España ไทย United States [English] United States [Español] Việt Nam About Us Careers Privacy Preferences Terms of Use Privacy Policy Cookie Policy Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for March Madness Jay Postrado • Add The Sporting News on Google div))]:my-4\" data-testid=\"advert--mobile_branded_logo\" id=\"Branded_Logo_Mobile\"> The Duke Blue Devils are gearing up to make a big run in the ACC Tournament. Eventually, the goal is to gain momentum during March Madness and then notch their first NCAA Tournament National Championship since 2015. Obviously, Coach Jon Scheyer will have to rely on his stars like Cam Boozer and Maliq Brown. Caleb Foster, on the other hand, still remains indefinitely out but it might not be long until he makes a return. Scheyer, Blue Devils target Final Four return for Foster Duke will need to stall for a lot of time before they get Foster back. He went down in the first half against the UNC Tar Heels and it was another injury on his right foot, the same one he has struggled with in seasons past. Foster was immediately taken to have surgery after the unfortunate incident at the rivalry game. A lot of Duke fans are wondering if he will be ready for the ACC Tournament or March Madness. Coach Scheyer outlines that his veteran guard could come back during the NCAA Tournament's Final Four, via ESPN. \"In his mind and our mind, we'll do everything we possibly can with our mindset to continue to advance where we can give him a shot to come back when it's all said and done. I think the reality of it is, we'd have to advance to a Final Four. Is there a chance earlier? I'm not going to eliminate that right now. But I think that's really difficult to try to even imagine that scenario. We're not going to have him the next couple of weeks, the next few weeks,\" the Blue Devils head coach declared. This now means that Foster's return for Duke's March Madness run will be a up in the air. Coach Scheyer will have to rely on his other guards after starting Foster throughou"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/uk/ncaa-basketball/duke/news/duke-basketball-jon-scheyer-realistic-caleb-foster-injury-timeline-march-madness/0a8a315cad33eb46991c8423\",\n    \"text\": \"Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for March Madness | Sporting News United Kingdom Skip to main content The Archive Shop Tickets Football Football Home News 2026 FIFA World Cup Teams Leagues Scores Fixtures Tables EXPLORE FOOTBALL Leagues & Cups Premier League Champions League Europa League 2026 FIFA World Cup 2025 Club World Cup TOP TEAMS Arsenal Chelsea Liverpool Manchester City Manchester United Tottenham Hotspur Barcelona Real Madrid England Boxing Boxing News Cricket Cricket News Darts Darts News ••• Explore More NFL NBA F1 MMA WWE Golf Tennis Horse Racing More Sports Betting Watch Watch How to Watch Streaming Services TNT Sports DAZN NFL Game Pass Continue Without Login Featured Football Boxing Cricket Darts Sports Football NFL NBA Darts F1 Boxing MMA WWE Golf Tennis Horse Racing Cricket More Sports Explore More Betting Watch Editions United Kingdom Argentina Australia Brasil Canada India 日本 México 대한민국 España ไทย United States [English] United States [Español] Việt Nam About Us Careers Privacy Preferences Terms of Use Privacy Policy Cookie Policy Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for March Madness Jay Post... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "f4-1-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:04:02.459Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:04:02.459Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Houston Cougars Final Four 2026 injury news",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:04:03.282Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Houston Cougars Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fhouston%2Dcougars%2Finjuries&rut=36a3728f6d4b2adfe6a5526ab3ea3bf33c67a76626289ff93387eb585946a2ed",
+          "snippet": "Stay In the Know: Check Out Houston Cougars Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "Houston Cougars Injuries 2025-2026 - Updated NCAAF Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Ffootball%2Fncaaf%2Fteams%2Fmain%2Fhouston%2Dcougars%2Finjuries&rut=baa3c537a14d4bfd9cca0736e0a8e3cc3ca7d1c4e0aa7852058a49650b2c79bc",
+          "snippet": "Stay In the Know: Check Out Houston Cougars Injuries Impacting The 2025- 2026 NCAAF Season."
+        },
+        {
+          "title": "Houston Cougars News - College Basketball | FOX Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fcollege%2Dbasketball%2Fhouston%2Dcougars%2Dteam&rut=77c4b9ec2b983d79aa1d983442472a1cdbfa8681f86d597df7f11c21121e210b",
+          "snippet": "View the latest in Houston Cougars , NCAA basketball news here. Trending news , game recaps, highlights, player information, rumors, videos and more from FOX Sports."
+        },
+        {
+          "title": "Houston Cougars Football News | Latest News - NewsNow",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsnow.co.uk%2Fh%2FSport%2FUS%2BSports%2FNCAA%2BFootball%2FBig%2B12%2FHouston&rut=c372ccb94454c69d9976ba64513703c26b2104242977ff2ed2e1f31aef2460c5",
+          "snippet": "Stay informed about Houston Cougars Football through our comprehensive NewsNow feed, which provides real-time updates on recruiting developments, match results, injury reports, and Big 12 Conference standings."
+        },
+        {
+          "title": "Houston Cougars: Breaking News, Rumors & Highlights | Yardbarker",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.yardbarker.com%2Fcolleges%2Fhouston_cougars%2F114&rut=381420a548fc47f778f91825606da065bbceb824476f0d27c7de384cca63e0e4",
+          "snippet": "The Houston Cougars wrapped up their regular season in heartbreaking fashion, dropping the Big 12 championship game in a thriller to the Arizona Wildcats 79-74."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Houston Cougars Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fhouston%2Dcougars%2Finjuries&rut=36a3728f6d4b2adfe6a5526ab3ea3bf33c67a76626289ff93387eb585946a2ed\",\n      \"snippet\": \"Stay In the Know: Check Out Houston Cougars Injuries Impacting The 2025- 2026 NCAAB Season.\"\n    },\n    {\n      \"title\": \"Houston Cougars Injuries 2025-2026 - Updated NCAAF Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Ffootball%2Fncaaf%2Fteams%2Fmain%2Fhouston%2Dcougars%2Finjuries&rut=baa3c537a14d4bfd9cca0736e0a8e3cc3ca7d1c4e0aa7852058a49650b2c79bc\",\n      \"snippet\": \"Stay In the Know: Check Out Houston Cougars Injuries Impacting The 2025- 2026 NCAAF Season.\"\n    },\n    {\n      \"title\": \"Houston Cougars News - College Basketball | FOX Sports\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fcollege%2Dbasketball%2Fhouston%2Dcougars%2Dteam&rut=77c4b9ec2b983d79aa1d983442472a1cdbfa8681f86d597df7f11c21121e210b\",\n      \"snippet\": \"View the latest in Houston Cougars , NCAA basketball news here. Trending news , game recaps, highlights, player information, rumors, videos and more from FOX Sports.\"\n    },\n    {\n      \"title\": \"Houston Cougars Football News | Latest News - NewsNow\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsnow.co.uk%2Fh%2FSport%2FUS%2BSports%2FNCAA%2BFootball%2FBig%2B12%2FHouston&rut=c372ccb94454c69d9976ba64513703c26b2104242977ff2ed2e1f31aef2460c5\",\n      \"snippet\": \"Stay informed about Houston Cougars Football through our comprehensive NewsNow feed, which provides real-time updates on recruiting developments, match results, injury reports, and Big 12 Conference standings.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "f4-1-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:04:11.264Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:04:11.264Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/houston-cougars/injuries"
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:04:11.703Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.covers.com/sport/basketball/ncaab/teams/main/houston-cougars/injuries",
+        "text": "Houston Cougars Injuries 2025-2026 - Updated NCAAB Injury Report Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Revenue Tracker Arizona Arkansas California Colorado Connecticut DC Florida Georgia Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Mississippi Missouri Nevada New Hampshire New Jersey New York North Carolina Ohio Oregon Pennsylvania Tennessee Texas Vermont Virginia West Virginia Wyoming Provinces Alberta British Columbia Manitoba Quebec (English) Quebec (francais) New Brunswick Newfoundland and Labrador Northwest Territories Nova Scotia Nunavut Ontario Prince Edward Island Saskatchewan Yukon Betting By Sport Baseball Basketball Boxing College Football F1 Football Super Bowl Golf Hockey Horse Racing March Madness Soccer UFC World Cup Betting Apps Best Sports Betting Apps USA Canada Sports Betting Apps Ontario Sports Betting Apps Rest of World UK International Betting Guides All Guides Glossary Betting Calculators Odds Converter Parlay Calculator Futures Betting Guide Moneyline Betting Guide Over/Under Betting Guide Parlay Betting Guide Point Spread Betting Guide Prop Betting Guide Sports Betting Guides How To Bet On Sports Guide NFL Betting Guide NHL Betting Guide NBA Betting Guide MLB Betting Guide NCAAB Betting Guide NCAAF Betting Guide Golf Betting Guide Tennis Betting Guide Teaser Betting Guide Betting News All News Industry News Podcasts Covers Videos Covers Writers Offers & Boosts Promos Sportsbook Promos Canada Sportsbook Promos Bonuses By Sportsbook 1xBet Promo Code 888sport Promo Code bet365 Bonus Code BET99 Promo Code BetMGM Bonus Code BetRivers Bonus Code Betway Bonus Code Borgata Promo Code Caesars Sportsbook Promo DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Hard Rock Bet Promo Code NorthStar Bets Promo Code Sports Interaction Promo Stake Promo Code TonyBet Promo Code Bonuses By Region Arkansas Promos A"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.covers.com/sport/basketball/ncaab/teams/main/houston-cougars/injuries\",\n    \"text\": \"Houston Cougars Injuries 2025-2026 - Updated NCAAB Injury Report Sports NFL NFL Home Scores & Matchups Prop Projections Free Picks Weather Injuries NCAAF NCAAF Home Scores & Matchups Prop Projections Free Picks Weather Injuries NBA NBA Home Scores & Matchups Prop Projections Free Picks Injuries NCAAB NCAAB Home Scores & Matchups Free Picks Injuries MLB MLB Home Scores & Matchups Prop Projections Free Picks Weather Injuries NHL NHL Home Scores & Matchups Prop Projections Free Picks Injuries World Cup Soccer UFC WNBA WNBA Home Scores & Matchups Free Picks Injuries CFL CFL Home Scores & Matchups Free Picks Golf Golf Home Golf Odds Masters Odds PGA Championship Odds US Open Odds British Open Odds Ryder Cup Odds Golf Picks Odds All Odds NFL NCAAF NBA NCAAB MLB NHL Golf Soccer Odds MLS Odds Champions League Odds Premier League Odds UFC WNBA CFL Election Odds Futures NFL NBA MLB NHL NCAAF NCAAB Sports Odds History Picks All Picks NFL NBA NHL MLB NCAAF NCAAB Golf WNBA CFL User Picks Team User Picks Consensus Picks All Consensus Picks NFL NBA NHL MLB NCAAF NCAAB CFL WNBA Consensus FAQ Public Money Betting US Betting Sites Canada Betting Sites Sportsbook Reviews States US Legal Tracker Reven... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "f4-1-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:04:28.774Z",
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:04:28.774Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke vs Houston Final Four 2026 preview",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "f4-1-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:04:29.702Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "2026 NCAA Tournament Predictions: Final Four Picks",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fantasypros.com%2F2026%2F03%2F2026%2Dncaa%2Dtournament%2Dpredictions%2Dfinal%2Dfour%2Dpicks%2F&rut=bc274cb8bccc188c103b3d48951e27738f097acc260f394a830e1068585f6a4c",
+          "snippet": "Let&#x27;s dive into some of our favorite 2026 NCAA Tournament predictions. 2026 NCAA Tournament predictions for March Madness!"
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "NCAA bracket predictions: Final Four, upsets and is it Arizona&#x27;s year?",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F16%2Fmarch%2Dmadness%2Dpredictions%2Dupset%2Dpicks%2Dfinal%2Dfour%2Dncaa%2Dtournament%2Dbracket%2D2026%2F89064207007%2F&rut=cfaae64b53ddd6df1a96bd24f7a45cd2a461d46ab52b736e7701e2847da162d6",
+          "snippet": "Duke got the No. 1 overall seed in Men&#x27;s March Madness. Big whoop. The NCAA selection committee&#x27;s bracket did Duke dirty. Arizona must be loving it."
+        },
+        {
+          "title": "Instant men&#x27;s March Madness bracket: Predicting every game",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48217204%2Fmarch%2Dmadness%2Dbracket%2Dpredictions%2Dpicks%2Dncaa%2Dtournament%2Dfinal%2Dfour%2D2026&rut=651ad27f689cc695cc431fe8a4c24e2ed85c839bad9c8d308f801ee096dec492",
+          "snippet": "Jeff Borzello makes his picks for the 2026 NCAA tournament, from the First Four through the Final Four ."
+        },
+        {
+          "title": "2026 NCAA Tournament Schedule, Predictions and Picks",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnews.com%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Dschedule%2Dpredictions%2Dpicks&rut=e7af8236e248b8fc5c70537a45741a4874ab4ff36914e8d4efa5f43229a7fda9",
+          "snippet": "The 2026 NCAA Tournament full schedule, game previews , predictions, and betting lines for every game from the First Four through the national championship."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"2026 NCAA Tournament Predictions: Final Four Picks\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.fantasypros.com%2F2026%2F03%2F2026%2Dncaa%2Dtournament%2Dpredictions%2Dfinal%2Dfour%2Dpicks%2F&rut=bc274cb8bccc188c103b3d48951e27738f097acc260f394a830e1068585f6a4c\",\n      \"snippet\": \"Let&#x27;s dive into some of our favorite 2026 NCAA Tournament predictions. 2026 NCAA Tournament predictions for March Madness!\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament.\"\n    },\n    {\n      \"title\": \"NCAA bracket predictions: Final Four, upsets and is it Arizona&#x27;s year?\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fncaab%2F2026%2F03%2F16%2Fmarch%2Dmadness%2Dpredictions%2Dupset%2Dpicks%2Dfinal%2Dfour%2Dncaa%2Dtournament%2Dbracket%2D2026%2F89064207007%2F&rut=cfaae64b53ddd6df1a96bd24f7a45cd2a461d46ab52b736e7701e2847da162d6\",\n      \"snippet\": \"Duke got the No. 1 overall seed in Men&#x27;s March Madness. Big whoop. The NCAA selection committee&#x27;s bracket did Duke dirty. Arizona must be loving it.\"\n    },\n    {\n      \"title\": \"Instant men&#x27;s March Madness bracket: Predicting every game\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48217204%2Fmarch%2Dmadness%2Dbracket%2Dpredictions%2Dpicks%2Dncaa%2Dtournament%2Dfinal%2Dfour%2D2026&rut=651ad27f689cc695cc431fe8a4c24e2ed85c839bad9c8d308f801ee096dec492\",\n      \"snippet\": \"Jeff Borzello makes his picks for the 2026 NCAA tournament, from the First Four through the Final Four .\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "f4-1-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T11:04:43.513Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"f4-1\",\n    \"winnerId\": \"houston\",\n    \"confidence\": 0.68,\n    \"rationale\": \"Houston's elite defense, ranking 4th nationally in adjusted defensive efficiency, should disrupt Duke's offense, which has been compromised by the loss of starting point guard Caleb Foster to a foot fracture. While Duke remains the top-ranked team overall with the nation's best defense, the injury to Foster creates significant uncertainty in their backcourt execution against Houston's physical, disciplined style. The Cougars' experience in the Big 12 and proven ability to control tempo provide a reliable path to victory in this high-stakes Final Four matchup.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"1\",\n    \"title\": \"Investigate team ratings and injury context\",\n    \"summary\": \"Gathered efficiency metrics for both teams and confirmed Duke's key injury while finding no major health concerns for Houston.\",\n    \"evidence\": \"Duke ranks 1st in KenPom/Torvik with elite offense (adjO ~128) and defense (adjD ~90). Houston ranks 5th with strong defense (adjD ~92) and solid offense (adjO ~125). ESPN reports Duke's starting PG Caleb Foster is out indefinitely with a foot fracture, a significant blow to their backcourt. Houston has no major injury reports found.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"2\",\n    \"title\": \"Assess matchup dynamics and upset risk\",\n    \"summary\": \"Evaluated how Houston's defensive pressure matches against Duke's injured offense and considered Duke's remaining strengths.\",\n    \"evidence\": \"Houston's defense is built to force turnovers and disrupt rhythm, which could exploit Duke's Foster-less backcourt. Duke's defense remains elite, but their offensive efficiency may dip without Foster's playmaking. Houston's physicality and experience in close games give them a credible path, while Duke's talent depth still poses a threat.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"3\",\n    \"title\": \"Holistic decision with confidence calibration\",\n    \"summary\": \"Balanced team quality, matchup specifics, health, and form to finalize the pick.\",\n    \"evidence\": \"Duke is the overall top team but faces a major injury setback. Houston's defense and experience align well to challenge Duke in a Final Four setting. The underdog (Duke) has a credible path via their defense, but Houston's health and matchup advantage tilt the confidence slightly toward the Cougars.\"\n  }\n}"
+    }
+  ]
+}

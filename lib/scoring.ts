@@ -1,5 +1,38 @@
 import { indexGames, roundPoints } from "@/lib/bracket";
-import { ActualResults, BracketConfig, BracketSubmission, Leaderboard, LeaderboardEntry } from "@/lib/types";
+import {
+  ActualResults,
+  BracketConfig,
+  BracketSubmission,
+  CompetitorRef,
+  Leaderboard,
+  LeaderboardEntry
+} from "@/lib/types";
+
+function canRefStillProduceTeam(
+  config: BracketConfig,
+  resultMap: Map<string, string | undefined>,
+  ref: CompetitorRef,
+  teamId: string
+): boolean {
+  if (ref.kind === "team") {
+    return ref.teamId === teamId;
+  }
+
+  const knownWinner = resultMap.get(ref.gameId);
+  if (knownWinner) {
+    return knownWinner === teamId;
+  }
+
+  const sourceGame = config.games.find((game) => game.id === ref.gameId);
+  if (!sourceGame) {
+    return false;
+  }
+
+  return (
+    canRefStillProduceTeam(config, resultMap, sourceGame.slotA, teamId) ||
+    canRefStillProduceTeam(config, resultMap, sourceGame.slotB, teamId)
+  );
+}
 
 export function scoreSubmissions(
   runId: string,
@@ -27,6 +60,23 @@ export function scoreSubmissions(
 
     const totalPoints = gameScores.reduce((sum, game) => sum + game.pointsAwarded, 0);
     const maxPoints = config.games.reduce((sum, game) => sum + roundPoints(game.round), 0);
+    const pointsRemaining = submission.picks.reduce((sum, pick) => {
+      const game = gameIndex.get(pick.gameId);
+      if (!game) {
+        return sum;
+      }
+
+      const resultWinner = resultMap.get(pick.gameId);
+      if (resultWinner) {
+        return sum;
+      }
+
+      const stillAlive =
+        canRefStillProduceTeam(config, resultMap, game.slotA, pick.winnerId) ||
+        canRefStillProduceTeam(config, resultMap, game.slotB, pick.winnerId);
+
+      return stillAlive ? sum + roundPoints(game.round) : sum;
+    }, 0);
     const correctCount = gameScores.filter((game) => game.correct).length;
 
     return {
@@ -34,6 +84,7 @@ export function scoreSubmissions(
       modelLabel: submission.model.label,
       totalPoints,
       maxPoints,
+      pointsRemaining,
       accuracy: submission.picks.length === 0 ? 0 : correctCount / submission.picks.length,
       gameScores
     };

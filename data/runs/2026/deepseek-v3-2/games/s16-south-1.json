@@ -1,0 +1,995 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "deepseek-v3-2",
+    "label": "DeepSeek V3.2",
+    "provider": "deepseek",
+    "model": "deepseek-reasoner",
+    "description": "DeepSeek • General-purpose V-series model optimized for reasoning, coding, and efficient inference."
+  },
+  "gameId": "s16-south-1",
+  "generatedAt": "2026-03-18T11:09:18.776Z",
+  "pick": {
+    "gameId": "s16-south-1",
+    "winnerId": "vanderbilt",
+    "confidence": 0.68,
+    "rationale": "Vanderbilt's recent 91-74 victory over Florida in the SEC Tournament semifinal demonstrates their ability to exploit the Gators' weaknesses and provides a psychological edge. The Commodores' elite top-10 offense, which has carried them through the tournament, matches up well against Florida's stout defense. In a Sweet 16 rematch, Vanderbilt's confidence from that win and balanced attack should be enough to secure a narrow victory."
+  },
+  "reasoningStep": {
+    "id": "s16-south-1-analysis",
+    "title": "Sweet 16 South: Florida vs Vanderbilt Holistic Evaluation",
+    "summary": "Analyzed efficiency ratings, recent head-to-head result, and tournament context to determine that Vanderbilt's offensive firepower and recent win over Florida give them a slight edge in this competitive matchup.",
+    "evidence": "Ratings: Florida ranked 4th in Torvik and KenPom with top-5 defense; Vanderbilt ranked 10th in Torvik and 12th in KenPom with top-6 offense. Head-to-head: Vanderbilt defeated Florida 91-74 in the SEC Tournament semifinal on March 14, 2026. Injury search did not reveal new concerns for either team, suggesting both are at full strength for the Sweet 16."
+  },
+  "toolCalls": [
+    {
+      "id": "tool-j1sisdeb",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "florida",
+          "vanderbilt"
+        ]
+      },
+      "startedAt": "2026-03-18T11:07:03.750Z",
+      "completedAt": "2026-03-18T11:07:03.760Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "florida",
+          "teamName": "Florida",
+          "torvik": {
+            "rank": 4,
+            "team": "Florida",
+            "conf": "SEC",
+            "record": "26-7",
+            "adjoe": 126.12196938159076,
+            "oe Rank": 11,
+            "adjde": 92.21230634074736,
+            "de Rank": 5,
+            "barthag": 0.97343644351697,
+            "rank.1": 4,
+            "proj. W": 26,
+            "Proj. L": 7,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.7583882598362411,
+            "ncsos": 0.617849065236955,
+            "consos": 0.8420237621977154,
+            "Proj. SOS": 0.7583882598362411,
+            "Proj. Noncon SOS": 0.617849065236955,
+            "Proj. Con SOS": 0.8420237621977154,
+            "elite SOS": 0.6062120710931076,
+            "elite noncon SOS": 0.6810630889910168,
+            "Opp OE": 118.64441393055344,
+            "Opp DE": 104.2045337775804,
+            "Opp Proj. OE": 118.64441393055344,
+            "Opp Proj DE": 104.2045337775804,
+            "Con Adj OE": 129.48066879118193,
+            "Con Adj DE": 91.63932274272524,
+            "Qual O": 127.9049927234103,
+            "Qual D": 92.88695637906358,
+            "Qual Barthag": 0.9753712065472392,
+            "Qual Games": 20,
+            "FUN": -0.0336393163039373,
+            "ConPF": 1613,
+            "ConPA": 1307,
+            "ConPoss": 1303.2875,
+            "ConOE": 1.2376394310541612,
+            "ConDE": 1.0028485656464905,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 8.49793121807398,
+            "WAB Rk": 6,
+            "Fun Rk": 253,
+            "adjt": 70.36880119088951
+          },
+          "kenpom": {
+            "rank": 4,
+            "team": "Florida",
+            "conf": "SEC",
+            "record": "26-7",
+            "adj_em": 33.83,
+            "adj_o": 125.6,
+            "adj_o_rank": 9,
+            "adj_d": 91.8,
+            "adj_d_rank": 6,
+            "adj_t": 70.6,
+            "adj_t_rank": 28,
+            "luck": -0.036,
+            "luck_rank": 289,
+            "sos_adj_em": 15.99,
+            "sos_adj_em_rank": 5,
+            "sos_opp_o": 119.4,
+            "sos_opp_o_rank": 2,
+            "sos_opp_d": 103.4,
+            "sos_opp_d_rank": 24,
+            "ncsos_adj_em": 7.96,
+            "ncsos_adj_em_rank": 29
+          }
+        },
+        {
+          "teamId": "vanderbilt",
+          "teamName": "Vanderbilt",
+          "torvik": {
+            "rank": 10,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adjoe": 127.7662830868969,
+            "oe Rank": 6,
+            "adjde": 99.1821315162276,
+            "de Rank": 28,
+            "barthag": 0.9484518796077428,
+            "rank.1": 10,
+            "proj. W": 26.579287375551324,
+            "Proj. L": 7.420712624448677,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7314138659881364,
+            "ncsos": 0.5219085819619156,
+            "consos": 0.8576258536635891,
+            "Proj. SOS": 0.7372656689780072,
+            "Proj. Noncon SOS": 0.5219085819619156,
+            "Proj. Con SOS": 0.8576258536635891,
+            "elite SOS": 0.6297896175251544,
+            "elite noncon SOS": 0.8064822607060758,
+            "Opp OE": 116.90316363547312,
+            "Opp DE": 104.25404808761049,
+            "Opp Proj. OE": 117.22276673224675,
+            "Opp Proj DE": 104.18722606613916,
+            "Con Adj OE": 125.19516938866136,
+            "Con Adj DE": 100.7462475550942,
+            "Qual O": 130.56151343136426,
+            "Qual D": 102.58545871939936,
+            "Qual Barthag": 0.9412105978774796,
+            "Qual Games": 18,
+            "FUN": 0.0325592467209266,
+            "ConPF": 1470,
+            "ConPA": 1410,
+            "ConPoss": 1259.2750000000003,
+            "ConOE": 1.167338349447102,
+            "ConDE": 1.1196918862043634,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 7.5029767018986995,
+            "WAB Rk": 9,
+            "Fun Rk": 99,
+            "adjt": 69.06865817579379
+          },
+          "kenpom": {
+            "rank": 12,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adj_em": 28.12,
+            "adj_o": 127.3,
+            "adj_o_rank": 6,
+            "adj_d": 99.2,
+            "adj_d_rank": 29,
+            "adj_t": 69,
+            "adj_t_rank": 92,
+            "luck": 0.025,
+            "luck_rank": 122,
+            "sos_adj_em": 14.04,
+            "sos_adj_em_rank": 16,
+            "sos_opp_o": 117.6,
+            "sos_opp_o_rank": 13,
+            "sos_opp_d": 103.6,
+            "sos_opp_d_rank": 28,
+            "ncsos_adj_em": 1.1,
+            "ncsos_adj_em_rank": 149
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-l3us689v",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Florida Vanderbilt Sweet 16 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:07:11.421Z",
+      "completedAt": "2026-03-18T11:07:12.159Z",
+      "summary": "Returned 5 search results for \"Florida Vanderbilt Sweet 16 2026 NCAA tournament\".",
+      "result": [
+        {
+          "title": "Sports Shows Online - Sports on ITVX - Live & On-Demand on ITVX",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Ditv.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DGYKSrO_s9seJdqpNhJCYpGaUAfVdfB5LrNuZDa8Xsv%252DO8jylydNZInAhrQs6hbiJQzBilQDBr5c3Gq1yUCHbJyMru%252DiYkpBClhys73_k2nja_WZ0oxP4ToXc6mKgLIcV00HaezDqOS3KVwZwAIAyAjqvIZABGOAlq1UU8eVYu9k.b%252DxKQlodDkepVIQpnDdXeA%26rut%3Dfb82d4f506bfc3cd0ef2d0b8632ea18a2d0638381a6ca5af9352b5bcc9c8cb9b%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8IJ36zSf3zIFQZ4FJB499AzVUCUxEAyPPmaWmv460MRTNkeLCGh62g6RURtb8IwqifD9DdiY8_Hh3T5cJ_y9RsP3dShpGMxQKLDsIrLrSH_N%252DPEZSbN0huhzzLY7mBZ90ZHmMC9F3bx10FXQDRKd1wPbBOT0LXfPvaTFLS0H8wQ3oWxpPkpgan4Bp1tTfsaunPDjQyyxxpTiax4_NUbylpzk4bHc%2526u%253DaHR0cHMlM2ElMmYlMmZ0cmFjay50cmFmZmljZ3VhcmQuYWklMmZpdHZ4X2NfciUyZmdvb2dsZS1hZHMlMmZ2MSUyZmNsaWNrJTJmJTNmcHJvcGVydHlfaWQlM2R0Zy0wMTgyNzctMDAxJTI2c291cmNlX2lkJTNkcyUyNmNyZWF0aXZlX2lkJTNkJTI2Y2FtcGFpZ25faWQlM2Q1MjI2MDUwNzklMjZjcmVhdGl2ZV9zZXRfaWQlM2QxMzIyNzE1MDIyMDQxMjA5JTI2cGxhY2VtZW50X2lkJTNkJTI2a2V5d29yZCUzZHdhdGNoJTI1MjBzcG9ydHMlMjZzZXNzaW9uX2lkJTNkJTI2ZmVlZGl0ZW1pZCUzZCUyNnRhcmdldGlkJTNka3dkLTgyNjcxMjMxMDQ5OTQxJTNhbG9jLTE4OCUyNmxvY19pbnRlcmVzdF9tcyUzZCUyNmxvY19waHlzaWNhbF9tcyUzZDQxNjc1JTI2bWF0Y2h0eXBlJTNkYiUyNmRldmljZSUzZGMlMjZkZXZpY2Vtb2RlbCUzZCUyNmlmbW9iaWxlJTNkJTI2aWZub3Rtb2JpbGUlM2QxJTI2aWZzZWFyY2glM2QxJTI2aWZjb250ZW50JTNkJTI2dGFyZ2V0JTNkJTI2cGFyYW0xJTNkJTI2cGFyYW0yJTNkJTI2cmFuZG9tJTNkJTI2YWRwb3NpdGlvbiUzZCUyNmdhX3NvdXJjZWlkJTNkJTdic291cmNlaWQlN2QlMjZnYV9hZHR5cGUlM2QlMjZnYV9tZXJjaGFudF9pZCUzZCUyNmdhX3Byb2R1Y3RfY2hhbm5lbCUzZCUyNmdhX3Byb2R1Y3RfaWQlM2QlMjZnYV9wcm9kdWN0X2NvdW50cnklM2QlMjZnYV9wcm9kdWN0X2xhbmd1YWdlJTNkJTI2Z2FfcHJvZHVjdF9wYXJ0aXRpb25faWQlM2QlMjZnYV9zdG9yZV9jb2RlJTNkJTI2ZGVzdGluYXRpb25fdXJsJTNkaHR0cHMlMjUzQSUyNTJGJTI1MkZ3d3cuaXR2LmNvbSUyNTJGd2F0Y2glMjUyRmNhdGVnb3JpZXMlMjUyRnNwb3J0JTI2bXNjbGtpZCUzZGRiYmVmNjQwOGM0MDEyYjU0ZGE2OWZmYTBiMWZiNjA4JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkSVRWJTI1MjAlMjU3QyUyNTIwVUslMjUyMCUyNTdDJTI1MjBDb252ZXJzaW9uJTI1MjAlMjU3QyUyNTIwUmVhY3RpdmF0aW9uJTI1MjAlMjU3QyUyNTIwR2VuZXJpYyUyNnV0bV90ZXJtJTNkd2F0Y2glMjUyMHNwb3J0cyUyNnV0bV9jb250ZW50JTNkSVRWJTI1MjAlMjU3QyUyNTIwVUslMjUyMCUyNTdDJTI1MjBDb252ZXJzaW9uJTI1MjAlMjU3QyUyNTIwUmVhY3RpdmF0aW9uJTI1MjAlMjU3QyUyNTIwU3BvcnQ%2526rlid%253Ddbbef6408c4012b54da69ffa0b1fb608%26vqd%3D4%2D22401826690447958674462121184481894964%26iurl%3D%257B1%257DIG%253D9FD2923A1DF94918A91F41C0C228D206%2526CID%253D14959098C8E0608335B187B8C9EE616B%2526ID%253DDevEx%252C5045.1&rut=688514ab422a3eab7fbc75761e029d2381040737e9f5f40861d739e4ceded2b8",
+          "snippet": "All episodes in one place on ITVX. Stream sports free on ITVX, with more shows than anywhere else"
+        },
+        {
+          "title": "Vanderbilt 91-74 Florida (Mar 14, 2026) Game Recap - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401851569&rut=c1808266a0f5b10254607542d41a360ef6bc3f57b189142a311c291a6b4bf7df",
+          "snippet": "Expert recap and game analysis of the Vanderbilt Commodores vs. Florida Gators NCAAM game from March 14, 2026 on ESPN."
+        },
+        {
+          "title": "Vanderbilt 91-74 Florida (Mar 14, 2026) Video Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fvideo%3FgameId%3D401851569&rut=80967e53eb47500986e40b16fe254000896c954ec9dbf76a483babade96eb739",
+          "snippet": "Video highlights, recaps and play breakdowns of the Vanderbilt Commodores vs. Florida Gators NCAAM game from March 14, 2026 on ESPN."
+        },
+        {
+          "title": "Vanderbilt 91-74 Florida (14 Mar, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851569&rut=81de139356fada5de5dcccd7defc09d6bd848825f2a2530510a810951d342761",
+          "snippet": "Game summary of the Vanderbilt Commodores vs. Florida Gators NCAAM game, final score 91-74, from 14 March 2026 on ESPN."
+        },
+        {
+          "title": "Vanderbilt upsets streaking Gators in SEC tournament semis",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48206635%2Fvanderbilt%2Dupsets%2Dstreaking%2Dgators%2Dsec%2Dtournament%2Dsemis&rut=75c0c06bf283672ccb7dc1286762d6031e69cfa80252477b98e9302333a46ab9",
+          "snippet": "Vanderbilt upset Florida 91-74 in the SEC tournament semifinals Saturday, putting the Gators&#x27; quest for a No. 1 seed in the NCAA tournament in doubt."
+        }
+      ]
+    },
+    {
+      "id": "tool-r7lrog9v",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/recap/_/gameId/401851569"
+      },
+      "startedAt": "2026-03-18T11:07:18.761Z",
+      "completedAt": "2026-03-18T11:07:19.189Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/recap/_/gameId/401851569 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/recap/_/gameId/401851569",
+        "text": "Vanderbilt 91-74 Florida (Mar 14, 2026) Game Recap - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search Florida Gators vs Vanderbilt Commodores SEC Tournament - Semifinal 22 Vanderbilt Commodores Vanderbilt VAN 26-7 , 11-7 SEC 91 26-7 , 11-7 SEC Final 1 2 T Vanderbilt VAN 47 44 91 Florida FLA 34 40 74 4 Florida Gators Florida FLA 26-7 , 16-2 SEC 74 26-7 , 16-2 SEC Gamecast Recap Box Score Play-by-Play Team Stats Videos No. 22 Vanderbilt stops No. 4 Florida&#x27;s winning streak to reach SEC Tournament final By AP Updated: Mar 14, 2026, 03:34 pm Facebook Facebook Messenger Twitter Email NASHVILLE, Tenn. -- — Tyler Tanner scored 20 points as No. 22 Vanderbilt beat fourth-ranked Florida 91-74 on Saturday, ending the defending national champion's bid to win a second straight Southeastern Conference Tournament title and possibly hurt the Gators' bid for a No. 1 seed in the NCAA Tournament. The fourth-seeded Commodores won their fourth straight game. Vanderbilt (26-7) will play either Mississippi or No. 17 Arkansas on Sunday as it goes for its first tournament title since 2012. Four other Vanderbilt players scored in double figures, with Jalen Washington adding 17, Duke Miles 15, Devin McGlockton 12 and AK Okereke 11. Six different Commodores made at least one 3-pointer, and everyone who played scored at least a bucket. The Gators (26-7) saw their 12-game winning streak end. Thomas Haugh led them with 19 points, Boogie Fland had 15, Alex Condon 13 and Rueben Chinyelu 12. Florida had been dominant during its streak, winning by an average of 21.7 points to end the regular season. On Saturday, it never led by more than 2 early on. The nation's top rebounding team dominated the boards (38-23) again, but the Gators struggled to find the basket, missing 12 of 13 shots in the first half. Miles hit a 3-pointer putting Vanderbilt ahead to stay, and he finished off a spurt of 11 straight points with a layup. Vanderbilt led 47-34 at halftime. Florida never got closer than 13 in the second half. Vanderbilt pushed its lead to as much as 76-51 with 8:11 to go on seven straight points, capped by a pair of Miles' free throws for a technical called on Florida coach Todd Golden. Up next Vanderbilt has a chance to win its third SEC Tournament title. The Commodores first won this event in 1951. Florida waits to see if winning the SEC regular-season title was enough for a No. 1 seed. ------ Get poll alerts and updates on the AP Top 25 throughout the season. Sign up here and here (AP News mobile app). AP college basketball: https://apnews.com/hub/ap-top-25-college-basketball-poll and https://apnews.com/hub/college-basketball Game Information Nashville , TN ESPN Referee : Doug Shows Referee : K.B. Burdett Referee : Pat Adams 2025-26 Standings NCAA Division I Southeastern Conference Southeastern Conference CONF GB OVR Florida 16-2 - 26"
+      }
+    },
+    {
+      "id": "tool-pla4ftxi",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Florida Gators injury March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:07:25.200Z",
+      "completedAt": "2026-03-18T11:07:26.062Z",
+      "summary": "Returned 5 search results for \"Florida Gators injury March 2026 NCAA tournament\".",
+      "result": [
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed",
+          "snippet": "From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries."
+        },
+        {
+          "title": "Florida basketball 2026 March Madness bracketology live updates",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.gainesville.com%2Flive%2Dstory%2Fsports%2Fcollege%2Fbasketball%2F2026%2F02%2F27%2Fflorida%2Dbasketball%2D2026%2Dmarch%2Dmadness%2Dbracketology%2Dlive%2Dupdates%2F88898476007%2F&rut=ff7f1da9277504084c28a2a3f0d029ca6df151f0e759bc86ae28b9ea0b350c06",
+          "snippet": "How did Florida basketball&#x27;s SEC tournament exit affect its March Madness bracketology? The latest."
+        },
+        {
+          "title": "Florida basketball&#x27;s nightmare 2026 March Madness ... - ClutchPoints",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fflorida%2Dbasketballs%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios&rut=b3ba4fad3adf4309e25d98db679d7f50a76b0a1b22a3c50f0a22002cc7d90570",
+          "snippet": "Florida basketball&#x27;s nightmare 2026 March Madness bracket scenarios Florida was the regular season SEC champions, but they have a nightmare scenario in March Madness that could end their quest ..."
+        },
+        {
+          "title": "Kentucky basketball SEC Tournament loss to Florida, UK March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Fkentucky%2F2026%2F03%2F13%2Fkentucky%2Dflorida%2Dscore%2Dtoday%2Dsec%2Dtournament%2Dbracket%2D2026%2Duk%2Dmarch%2Dmadness%2Dprediction%2Dky%2Dncaa%2Dseed%2F89033695007%2F&rut=85f42cfa2ee6e3b76f4a827104f8bdec000fc260f9df0350f3da56e702dd5fb5",
+          "snippet": "As Mark Pope and Kentucky Wildcats basketball await their NCAA Tournament draw, here&#x27;s what we learned from Kentucky&#x27;s SEC Tournament loss to Florida ."
+        },
+        {
+          "title": "Florida Gators Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fflorida%2Dgators%2Finjuries&rut=1a37624f097332e14059444944c9d9e0a4094a085b164a9148bbc6ea8a63b97a",
+          "snippet": "Stay In the Know: Check Out Florida Gators Injuries Impacting The 2025- 2026 NCAAB Season."
+        }
+      ]
+    },
+    {
+      "id": "tool-239v4j9z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.nytimes.com/athletic/7125224/2026/03/17/march-madness-2026-player-injuries-caleb-foster-mikel-brown/"
+      },
+      "startedAt": "2026-03-18T11:07:31.970Z",
+      "completedAt": "2026-03-18T11:07:32.125Z",
+      "summary": "Fetched https://www.nytimes.com/athletic/7125224/2026/03/17/march-madness-2026-player-injuries-caleb-foster-mikel-brown/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.nytimes.com/athletic/7125224/2026/03/17/march-madness-2026-player-injuries-caleb-foster-mikel-brown/",
+        "text": "Key March Madness injuries to know while filling out your men’s NCAA Tournament bracket - The Athletic Premier League Champions League 2026 Men&#x27;s World Cup F1 Tennis FA Cup Cricket La Liga Europa League Women&#x27;s Football Olympics Global Sports Cycling Sailing Sports Business Boxing Golf Serie A Bundesliga International Football NFL NBA MLB World Baseball Classic NHL MLS Transfer News FPL League Cup Championship League One League Two Women&#x27;s Euros NWSL College Sports NCAAF NCAAM Peak MMA Motorsports NASCAR Culture Memorabilia & Collectibles Gaming Sports Betting The PL Is Being Left Behind Welcome to Chelsea, Liam Rosenior PL Player of the Year Nominees Log In Subscribe Now Tickets by Viagogo Connections: Sports Edition REGION U.S. International Search Top News Podcasts NCAAM Bracket Scores & Schedule Teams Alabama Arizona Arkansas Duke Florida Gonzaga Houston Illinois Iowa State Kansas Louisville Miami (FL) Michigan State Michigan Nebraska North Carolina Purdue Saint Mary&#x27;s St. John&#x27;s Tennessee Texas Tech UConn Vanderbilt Virginia Wisconsin Standings Beat Our Expert&#x27;s Bracket Tournament Projections Printable Bracket Predictions Game Men&#x27;s March Madness LIVE First Four Updates Tournament Forecast Challenge Our Experts The Perfect Bracket Bracket Busters NBA Prospects to Watch Key Injuries To Know Key March Madness injuries to know while filling out your men’s NCAA Tournament bracket Patrick Ngongba II and Duke are the overall No. 1 seed, but a couple of injuries could make it more vulnerable. Grant Halverson / Getty Images By Jim Root March 17, 2026 Updated 3:19 pm EDT Share full article 2 The Athletic has live coverage of the First Four from 2026 Men’s March Madness. Roster attrition is a factor during the postseason in any sport. Optimistically, college basketball’s shorter regular season should mean the title picture is less altered by injuries than, say, the NBA. That is not necessarily the case this season, though. The injury bug has recently bitten two No. 1 seeds (Duke and Michigan), and a third (Arizona) played through a flurry of nagging injuries late in the season. Multiple All-Americans on dark-horse title contenders are out for the season. Advertisement Below is a repository of all the biggest injuries impacting the men’s NCAA Tournament. We have split them into two categories: Injuries worth monitoring (the players could or will return at some point during the tournament) and out for the season. Injuries to monitor Caleb Foster and Patrick Ngongba II, Duke Both Duke starters missed the ACC tournament. The Blue Devils managed to win that event regardless, but they might need some reinforcements to handle the competition they will see if they reach the Elite Eight and beyond. Ngongba, out with a foot injury, is arguably the more valuable piece due to his defensive presence, elite finishing and sneaky-strong passing. Fortunately for the Blue Devils, he is also much closer to returning than Foster, though"
+      }
+    },
+    {
+      "id": "tool-0a5c6fkh",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Florida basketball injury update March 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:07:36.785Z",
+      "completedAt": "2026-03-18T11:07:37.608Z",
+      "summary": "Returned 5 search results for \"Florida basketball injury update March 2026\".",
+      "result": [
+        {
+          "title": "NBA Injury Status - 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65",
+          "snippet": "Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve."
+        },
+        {
+          "title": "Florida Gators Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F57%2Fflorida%2Dgators&rut=fe54e68ed00e5db73ac534fefeb25a926e1b706f1559bf72eaba88139ea9258a",
+          "snippet": "Visit ESPN for Florida Gators live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "NBA on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2F&rut=3448c510d2510078b307cc27724da53fc193ca77ef29681a53707beca5f55cec",
+          "snippet": "Visit ESPN for NBA live scores, video highlights and latest news. Stream games on ESPN and play Fantasy Basketball ."
+        },
+        {
+          "title": "NBA Scores, 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Fscoreboard&rut=1b0119b40b01d04d61be0d9c30e0de7923d2167638fa2171cdaf3962d3821a50",
+          "snippet": "Live scores for every 2025-26 NBA season game on ESPN. Includes box scores, video highlights, play breakdowns and updated odds."
+        },
+        {
+          "title": "ESPN.com - Men&#x27;s College Basketball Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fncb%2Finjuries%2Findex.html&rut=f3167e7dc8b5befef6322d3d7e7dacfb0589d800de5ecd7c1c8688bb1732dcc3",
+          "snippet": "ESPN.com - Men&#x27;s College Basketball Injuries Men&#x27;s College Basketball Slants Dick Vitale Andy Katz Broadcast TV Schedule Video Highlights Audio Highlights SportsMall NikeTown TeamStore Sport ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-if92emrx",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Vanderbilt Commodores Sweet 16 2026 preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:07:42.296Z",
+      "completedAt": "2026-03-18T11:07:43.134Z",
+      "summary": "Returned 5 search results for \"Vanderbilt Commodores Sweet 16 2026 preview\".",
+      "result": [
+        {
+          "title": "Will Vanderbilt basketball make Sweet 16 in March Madness? Jay Bilas ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fvanderbilt%2Dbasketball%2Dsweet%2D16%2Dmarch%2D183147712.html&rut=4971ca5a29f5dbce72beb0c2c542d8035b9979def165cfa9b1bd486b40530ff3",
+          "snippet": "Bilas predicted every March Madness game and has picked Vanderbilt (26-8), a No. 5 seed in the South Region, to win first- and second-round games before falling to Florida in the Sweet 16 ."
+        },
+        {
+          "title": "McNeese State Cowboys at Vanderbilt Commodores Pick, Odds",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.capperspicks.com%2Ffree%2Dpicks%2Fai%2Fmcneese%2Dstate%2Dcowboys%2Dat%2Dvanderbilt%2Dcommodores%2Dpick%2Dncaa%2Dbasketball%2Dprediction%2Dpreview%2Dodds%2D3%2D19%2D2026%2F&rut=4e6c2e882ac10935f24aa139ac743539ddf69270d0ff45e49e955c6fa0f5bdde",
+          "snippet": "McNeese State Cowboys at Vanderbilt Commodores Pick, NCAA Basketball Prediction, Preview & Odds 3/19/26 March 17, 2026 by PDX PIX Leave a Comment"
+        },
+        {
+          "title": "2026 women&#x27;s March Madness bracket picks: Why Chantel Jennings picked ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuk.sports.yahoo.com%2Fnews%2F2026%2Dwomen%2Dmarch%2Dmadness%2Dbracket%2D021608199.html&rut=f734917c60c097239105c016ad94fc0650a601f3ccd885d20cadde9277c8fc7b",
+          "snippet": "There&#x27;s a lot to like about Vanderbilt , but what really stands out is how battle-tested the Commodores have become through the regular season."
+        },
+        {
+          "title": "Vanderbilt Commodores Advance in March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Ftn%2Fnashville%2Fnews%2F2026%2F03%2F18%2Fvanderbilt%2Dcommodores%2Dadvance%2Din%2Dmarch%2Dmadness%2F&rut=0366a4a9ec3752a6d00ea371c33a1a8449e485b1b26a98d15eb26e6a03bc00fc",
+          "snippet": "The Vanderbilt Commodores , the SEC&#x27;s smallest and only private university, are experiencing a rare moment of March Madness success. Both the men&#x27;s and women&#x27;s basketball teams have advanced to the Sweet Sixteen of the NCAA Tournament, marking the first time in school history that both programs have reached this stage of the postseason at the same time."
+        },
+        {
+          "title": "Why Vanderbilt is on upset alert in 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fwhy%2Dvanderbilt%2Dbasketball%2Dis%2Don%2Dupset%2Dalert%2Din%2D2026%2Dncaa%2Dtournament&rut=7406e0143a209d25b673908a5f19b72dbf022614ab99896e5dacf295a99d2c93",
+          "snippet": "Why Vanderbilt basketball is on upset alert in 2026 NCAA Tournament Vanderbilt basketball will aim to bring its deep SEC tournament run over to March Madness. But McNeese State will be no pushover."
+        }
+      ]
+    },
+    {
+      "id": "tool-vkldv8uz",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://sports.yahoo.com/articles/vanderbilt-basketball-sweet-16-march-183147712.html"
+      },
+      "startedAt": "2026-03-18T11:07:49.378Z",
+      "completedAt": "2026-03-18T11:07:50.265Z",
+      "summary": "Fetched https://sports.yahoo.com/articles/vanderbilt-basketball-sweet-16-march-183147712.html and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://sports.yahoo.com/articles/vanderbilt-basketball-sweet-16-march-183147712.html",
+        "text": "Will Vanderbilt basketball make Sweet 16 in March Madness? Jay Bilas&#x27; prediction - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Streaming TVs Gift ideas Best gifts for men Best gift cards Best gifts for mom Best gifts for teens Best gifts for couples Best gifts for sister-in-law Best gifts for girlfriends Best gifts for grandma Best gifts for sisters Best gifts for husbands Best birthday gifts for her Best get well soon gifts Best travel gifts Best gifts for mother-in-law Best anniversary gifts for wife Stores Amazon Best Buy Coach Outlet Home Depot Kate Spade New York Lowes Macy&#x27;s Nordstrom Sephora Sur La Table Target Ulta Walmart Wayfair Zappos Shopping Guides Best cordless stick vacuums Best water bottles Best vacuums Best air fryers Best luggage Best jeans Best bras Best nontoxic nail polish Best under eye cream Best skin tightening creams Best coffee makers Best comforters Best mops Best Hoka shoes for walking Best instant pot Deals Toys and games General Food Travel Autos EV & Future Tech Classic & Collector Deals & Buying Guides Ownership Safety & Recalls Policy & Environment New Vehicles & Reviews Auto Shows General People & Culture Gift ideas Buying guides Amazon Spring Sale deals Amazon Spring Sale tech deals Entertainment Celebrity TV Movies Music How to Watch Interviews Videos Finance My portfolio News Latest Originals Newsletters Stock market Crypto Earnings Tariffs Economics Tech Housing Fed meeting Markets Most active stocks Top stock gainers Biggest stock losers Trending tickers Highest dividend stocks Crypto Prediction markets Options Sectors Futures World indices Research Equities screener Penny stock screener Most shorted screener Undervalued growth screener Financial calendar Earnings calendar Stock comparison Currency converter Advanced charts Community Personal finance My Money Credit cards Banking Mortgages Mortgage calculator Insurance Taxes Student Loans"
+      }
+    },
+    {
+      "id": "tool-c9cysfnt",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "\"Florida\" \"Vanderbilt\" Sweet 16 prediction",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T11:08:03.717Z",
+      "completedAt": "2026-03-18T11:08:04.431Z",
+      "summary": "Returned 5 search results for \"\"Florida\" \"Vanderbilt\" Sweet 16 prediction\".",
+      "result": [
+        {
+          "title": "Will Vanderbilt basketball make Sweet 16 in March Madness? Jay Bilas ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fvanderbilt%2Dbasketball%2Dsweet%2D16%2Dmarch%2D183147712.html&rut=4971ca5a29f5dbce72beb0c2c542d8035b9979def165cfa9b1bd486b40530ff3",
+          "snippet": "Bilas predicted every March Madness game and has picked Vanderbilt (26-8), a No. 5 seed in the South Region, to win first- and second-round games before falling to Florida in the Sweet 16 ."
+        },
+        {
+          "title": "Vanderbilt vs Florida Prediction, Picks & Odds | 14 Mar 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsgambler.com%2Fbetting%2Dtips%2Fbasketball%2Fvanderbilt%2Dcommodores%2Dvs%2Dflorida%2Dgators%2Dprediction%2Dodds%2D2026%2D03%2D14%2F&rut=d669ce619d40933325c0ace0510cf26bc48ebd3577aee27fdb4a104dc2cf6bf4",
+          "snippet": "Vanderbilt vs Florida prediction and same game parlay picks. NCAA College Basketball preview with betting odds, player props and stats."
+        },
+        {
+          "title": "Vanderbilt vs Florida Prediction, Picks & Odds for Today&#x27;s SEC ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fncaab%2Fvanderbilt%2Dvs%2Dflorida%2Dpredictions%2Dpicks%2Dodds%2Dsaturday%2D3%2D14%2D2026&rut=43869881b6e7b9f9c4ab923ae24643aa8ae4a0ef34ba3d7133b7ae8a91e1a56b",
+          "snippet": "These Vanderbilt vs. Florida predictions expect one piece of normalcy to persist in Nashville on Saturday, March 14."
+        },
+        {
+          "title": "Vanderbilt vs. Florida Pick, Odds & Analysis March 14",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.predictem.com%2Fcollege%2Dbasketball%2Fcommodores%2Dvs%2Dgators%2Dprediction%2D2026%2D03%2D14%2F&rut=dcad58934d28269eb964af441c2996c39ba8f1213ea866840ceebe7b5abedee4",
+          "snippet": "The pace clash is the wildcard here. Florida wants 72 possessions; Vanderbilt wants 65. The blended projection sits at 68.5, which favors Vanderbilt&#x27;s style more than Florida&#x27;s . Every possession the Gators don&#x27;t get is one less opportunity to exploit their rebounding advantage and one more chance for Vanderbilt to execute in the halfcourt. KenPom&#x27;s got Florida winning 83-77 with a 71% ..."
+        },
+        {
+          "title": "Vanderbilt Commodores vs Florida Gators Picks, Prediction, Odds, and ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwinnersandwhiners.com%2Ffree%2Dpicks%2Fcollege%2Dbasketball%2Fvanderbilt%2Dcommodores%2Dvs%2Dflorida%2Dgators%2Dpicks%2Dprediction%2Dodds%2Dand%2Dline%2Dmovement%2Dfor%2Dsaturday%2Dmarch%2D14%2D2026&rut=c6fc62e947e4ef7a94d670f879523eff316ebb15e31a38521a611083726e27fc",
+          "snippet": "The SEC Tournament semifinals have delivered high-octane basketball all week, and Saturday&#x27;s Florida vs Vanderbilt prediction may be the most compelling number on the board. The Gators have steamrolled through the bracket behind one of the most physically dominant frontcourts in the country, w..."
+        }
+      ]
+    },
+    {
+      "id": "tool-jmsz7c80",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.predictem.com/college-basketball/commodores-vs-gators-prediction-2026-03-14/"
+      },
+      "startedAt": "2026-03-18T11:08:08.447Z",
+      "completedAt": "2026-03-18T11:08:11.911Z",
+      "summary": "Fetched https://www.predictem.com/college-basketball/commodores-vs-gators-prediction-2026-03-14/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.predictem.com/college-basketball/commodores-vs-gators-prediction-2026-03-14/",
+        "text": "Vanderbilt vs. Florida Pick, Odds & Analysis March 14 Free Picks NFL Picks College Football Picks NBA Picks College Basketball Picks UFC Picks MLB Picks Boxing Picks NASCAR Picks Golf Picks Free Bets Best Sportsbooks Bonuses Sportsbook Promo Codes Reduced Juice $1 Min Deposit Sportsbooks Bitcoin Parlay Odds Teaser Odds MLB Dime Lines Free $100 Betting Sites Bovada MyBookie BetOnline BetAnything XBet Everygame SportsBetting BetNow WagerWeb Sportsbook News Sports Betting Horse Betting Aqueduct Picks Gulfstream Park Picks Santa Anita Picks Racebooks Race Betting Guide Forum Vanderbilt vs Florida Prediction: SEC Tournament Efficiency Clash by Bryan Bash | Mar 14, 2026 | cbb Bash is fading the public narrative and backing Vanderbilt to cover in a pace-clash SEC Tournament semifinal where the model sees 5.1 points of value against a Florida team that&#8217;s been overvalued by the market. The Line and the Thesis Florida&#8217;s laying 8 points against Vanderbilt in Saturday&#8217;s SEC Tournament semifinal at Bridgestone Arena, and I&#8217;m already hearing the chorus: &#8220;But Florida&#8217;s #4 in the country! They&#8217;re on a 10-game win streak!&#8221; Look, I get it. The Gators are elite. But when you dig into the collegebasketballdata.com numbers, this spread is inflated by poll position rather than actual efficiency separation. Florida checks in at #4 in adjusted net efficiency with a +35.3 rating. Vanderbilt sits at #16 with +26.9. That&#8217;s an 8.4-point gap on a neutral floor, and the market just hung an 8-point spread. The math doesn&#8217;t support giving away free points here. This is a classic mid-major metric gap vs. Power 5 public perception spot—except both teams are Power 5, and Vanderbilt&#8217;s efficiency profile is being disrespected because they don&#8217;t carry the same brand recognition. The model projects Florida by 2.9 points with a total around 151. The market disagrees by more than a full possession on the spread and nine points on the total. That&#8217;s not a minor discrepancy—that&#8217;s a market overreaction to recent results and poll rankings. Why the Market Landed Here Florida&#8217;s 10-game winning streak is real, and their 17-2 SEC record is dominant. But let&#8217;s talk about strength of schedule context from Warren Nolan. Florida&#8217;s SOS ranks #11 nationally, while Vanderbilt&#8217;s sits at #26. Both teams have been battle-tested, but Vanderbilt&#8217;s played a tougher non-conference slate (NC SOS #58 vs. Florida&#8217;s #14), and their efficiency metrics suggest they&#8217;re closer to Florida than the spread implies. The Gators are #10 in adjusted offensive efficiency (125.5) and #5 in adjusted defensive efficiency (90.2). Vanderbilt counters with #8 offense (126.2) and #31 defense (99.3). Here&#8217;s the key: Vanderbilt&#8217;s offense is actually more efficient than Florida&#8217;s when you adjust for competition. The 0.7-point gap favors the Commodores. The market&#8217;s pricing in Florida&#8"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "s16-south-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T11:06:58.392Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: s16-south-1\nCurrent game label: South Sweet 16 1\nRound: Sweet 16\nResolved teams: Florida (florida) vs Vanderbilt (vanderbilt)\nPrior committed picks: 56"
+    },
+    {
+      "id": "s16-south-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T11:06:58.392Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"s16-south-1\",\n      \"round\": \"Sweet 16\",\n      \"region\": \"South\",\n      \"label\": \"South Sweet 16 1\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r32-south-1\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r32-south-2\"\n      }\n    },\n    \"slotAName\": \"Florida\",\n    \"slotBName\": \"Vanderbilt\",\n    \"slotATeamId\": \"florida\",\n    \"slotBTeamId\": \"vanderbilt\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Texas's high-powered offense, which ranks among the nation's best, should be the difference in a close game against NC State. The Longhorns have the firepower to overcome their defensive deficiencies, while NC State's inconsistent season makes them vulnerable in a one-and-done setting. Expect Texas to make enough key plays down the stretch to secure a narrow victory.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.82,\n        \"rationale\": \"SMU's significantly higher efficiency ratings, particularly a top-30 offense that should exploit Miami (OH)'s weaker defense, is the key differentiator. The Mustangs' experience against a much tougher ACC schedule has prepared them for this moment, while the RedHawks' remarkable 31-1 record was built against a far weaker MAC. Expect SMU's superior talent and athleticism to control the game and secure a win, though Miami's resilience could keep it competitive for a while.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"howard\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Howard's recent head-to-head victory over UMBC demonstrates their capability to win close games in tournament settings. Although UMBC holds slightly better efficiency ratings, Howard's psychological edge and proven ability to perform under pressure in their previous matchup make them the choice. In the high-stakes First Four environment, recent success often trumps minor statistical advantages, favoring the Bison to advance.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Lehigh's slight edge in efficiency metrics, particularly on offense, gives them the advantage in this First Four matchup. The Mountain Hawks come from a marginally stronger Patriot League and have shown resilience in winning their conference tournament. While Prairie View A&M is capable, Lehigh's better offensive ranking should be the difference in a closely contested game.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Duke is the No. 1 overall seed with the nation's top defense and an elite offense, even without two starters. The Blue Devils' talent, depth, and experience against a tough ACC schedule are far beyond what Siena has faced, making a historic upset extremely unlikely. Expect Duke to control the game from the opening tip and win comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"ohio-state\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Ohio State's top-30 offensive efficiency, led by senior guard Bruce Thornton, provides a slight advantage over TCU's strong defense. The Buckeyes' overall higher KenPom rating and experience in close games from the Big Ten should help them in a tight, low-possession contest. Expect a narrow victory for Ohio State in a typical 8-9 seed battle.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.82,\n        \"rationale\": \"St. John's elite defense, ranked 12th nationally, should overwhelm Northern Iowa's mediocre offense and create transition opportunities. The Red Storm's significant advantage in efficiency metrics reflects their superior talent and Big East-tested resilience. While 12-seed upsets are possible, Northern Iowa's offensive limitations make it difficult for them to score enough to pull off the shocker.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Kansas's elite defense, ranked 10th nationally in adjusted efficiency, should overwhelm California Baptist's offense and control the game. The Jayhawks' experience against a rigorous Big 12 schedule has prepared them for tournament play, while the Lancers' lack of high-major competition leaves them vulnerable. Though 13-seed upsets are possible, Kansas's defensive prowess and talent advantage make them a reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Louisville's significant advantage in efficiency metrics, ranking 16th in Torvik and 18th in KenPom compared to South Florida's 50th in both systems, reflects their superior talent and high-major pedigree. The Cardinals' balanced top-25 offense and defense, tested against a rigorous ACC schedule, should overwhelm a South Florida squad that lacks comparable firepower on either end. While 11-seed upsets are possible, Louisville's clear edge in both adjusted efficiency and quality of competition makes them a reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Michigan State's high-major talent, fortified by a challenging Big Ten schedule, provides a significant edge over North Dakota State. The Spartans' defensive discipline and tournament experience should neutralize the Bison's balanced scoring attack. While North Dakota State is capable, Michigan State's overall superiority and heavy favoritism in the odds make them a clear choice to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.82,\n        \"rationale\": \"UCLA's significantly higher efficiency ratings, particularly a top-20 offense that should exploit UCF's vulnerable defense, gives them a clear edge. The Bruins' leading scorer Tyler Bilodeau is expected to play despite a minor knee strain, and their experience in the tough Big Ten has prepared them for tournament play. While UCF is capable, UCLA's superior offensive firepower and defensive discipline should control the game and secure a win.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.93,\n        \"rationale\": \"UConn is a No. 6-ranked powerhouse from the Big East with a 29-4 record and a recent conference tournament run, showcasing their readiness for March. The Huskies possess far superior talent, size, and athleticism compared to Furman, whose efficiency ratings rank outside the top 190 nationally. While Furman is healthy and has improved its interior presence, the vast gulf in high-major experience and overall team quality makes a monumental 15-seed upset highly improbable.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Arizona's elite defense, ranked 3rd nationally in adjusted efficiency, and a top-10 offense create a overwhelming mismatch against LIU. The Wildcats' 31-2 record was built against a rigorous Big 12 schedule, providing high-major experience that LIU lacks from the NEC. With such a vast disparity in talent and team quality, Arizona should control this game from start to finish and advance comfortably.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"utah-state\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Utah State enters the tournament with a 28-6 record and the momentum of sweeping the Mountain West regular-season and conference tournament titles, led by Mountain West Player of the Year Mason Falslev and Tournament MVP MJ Collins Jr. Villanova boasts a top-40 efficiency profile, but the Aggies' recent form, superior win total, and slight favoritism in the betting markets tip the scales in their favor. In a classic toss-up 8/9 game, Utah State's cohesion and high-level play over the past month provide the edge.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Wisconsin's elite top-10 offense, built against a rigorous Big Ten schedule, should overwhelm High Point's vulnerable defense. The Badgers are expected to be at full strength with Nolan Winter's return, providing additional frontcourt depth and scoring. While High Point's 30-4 record is impressive, their weaker competition and defensive limitations make a 12-seed upset unlikely in this matchup.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Arkansas's elite top-5 offense, built against rigorous SEC competition, provides a significant advantage over Hawai'i's likely weaker defensive capabilities. The Razorbacks' high-major talent and experience in close games should overwhelm the Rainbow Warriors, who lack comparable firepower and face a substantial gap in team quality. While 13-seed upsets are possible, Arkansas's offensive efficiency and defensive solidity make them a reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.82,\n        \"rationale\": \"BYU's elite top-10 offensive efficiency, combined with a significantly better defense than Texas, provides a clear advantage in this matchup. The Cougars' experience in the rigorous Big 12 has prepared them for tournament play, while Texas's defensive deficiencies, ranking outside the top 100, make them vulnerable. Although Texas has a high-powered offense, BYU's balanced attack and defensive solidity should secure a victory.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Gonzaga's elite defensive efficiency, ranking 9th nationally, and a 30-3 record built against a strong schedule create an overwhelming mismatch against a Kennesaw State team lacking a comparable rating profile. The Bulldogs' high-major talent and consistent tournament pedigree provide the discipline to avoid a historic upset. While any 14-seed is capable of a shock, the vast gap in team quality and Gonzaga's defensive prowess makes a Kennesaw State victory highly improbable.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Miami's superior efficiency metrics, particularly a top-45 defense that contrasts with Missouri's vulnerable unit, provide a clear edge in this 7-10 matchup. The Hurricanes' 25-8 record against rigorous ACC competition demonstrates their readiness for tournament play, while Missouri's weaker defensive ranking (68th in Torvik) may struggle to contain Miami's balanced offensive attack. Although 10-seed upsets are common, Miami's overall team quality and defensive discipline should secure a victory.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Purdue's elite offense, ranked first nationally in adjusted efficiency, faces a Queens defense that ranks 316th, creating a massive mismatch that should overwhelm the 15-seed. The Boilermakers' high-major talent and experience from the rigorous Big Ten schedule provide a level of competition that Queens has not encountered in the Atlantic Sun. While 15-seed upsets occasionally happen, the vast disparity in team quality and Purdue's offensive firepower make a Queens victory highly improbable.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Florida is the defending national champion and the No. 1 seed in the South Region, boasting elite efficiency ratings on both offense and defense. Lehigh, despite winning the Patriot League and a First Four game, ranks outside the top 280 nationally and faces a massive talent disparity. The Gators' high-major experience and superior athleticism should lead to a comfortable victory with little upset risk.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Iowa's superior offensive efficiency, ranked 29th nationally, should challenge Clemson's defense, which is weakened by the loss of starting center Carter Welling to a season-ending ACL injury. The Hawkeyes enter the tournament healthy and are slight favorites in the betting markets, indicating their edge in this toss-up 8/9 matchup. Clemson's offensive limitations may prevent them from keeping pace if Iowa's offense finds its rhythm.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Vanderbilt's elite top-10 offense, built against rigorous SEC competition, should overwhelm McNeese's defense. The Commodores' significant advantage in efficiency metrics and high-major experience makes them a reliable pick, and the 11.5-point spread indicates a comfortable margin. While 12-seed upsets are possible, McNeese's lower efficiency rankings suggest they lack the firepower to pull off the shocker.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Nebraska's elite defense, ranked 7th nationally in adjusted efficiency, should overwhelm Troy's mediocre offense and control the game. The Cornhuskers' significant advantage in team quality, built against a rigorous Big Ten schedule, provides a level of competition that Troy has not consistently faced. While 13-seed upsets are possible, Troy's defensive limitations and lower efficiency ratings make a credible path to victory unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"vcu\",\n        \"confidence\": 0.68,\n        \"rationale\": \"VCU's strong season and North Carolina's key injury to Caleb Wilson create an opportunity for an upset. The Tar Heels have struggled without their star freshman, losing consecutive games, while the Rams enter with momentum from a successful A-10 campaign. VCU's offensive efficiency could exploit UNC's adjustment period, leading to a narrow victory.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Illinois boasts the nation's top-ranked offense and a top-25 defense, creating an overwhelming mismatch against a Penn squad that ranks outside the top 150 in efficiency metrics. The Fighting Illini's high-major talent and experience from the rigorous Big Ten schedule provide a level of competition that the Ivy League champion has not consistently faced. While 14-seed upsets occasionally happen, the vast disparity in team quality and Illinois's elite offensive firepower make a credible path to victory for Penn highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Saint Mary's superior defensive efficiency, ranked 22nd nationally, should limit Texas A&M's offense and control the game's tempo. The Gaels' higher overall efficiency ratings and disciplined style provide a tangible edge in this 7-10 matchup. While Texas A&M's SEC experience is a factor, Saint Mary's defensive strength and team cohesion make them the more reliable pick.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Houston's elite defense, ranked 4th nationally, and top-20 offense create an overwhelming mismatch against Idaho's lower efficiency ratings. The Cougars' 28-5 record was built against rigorous Big 12 competition, providing high-major experience that Idaho lacks from the Big Sky. While 15-seed upsets occasionally happen, the vast disparity in team quality and Houston's defensive prowess makes a credible path to victory for Idaho highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Michigan's status as a No. 1 seed with elite efficiency on both ends of the floor creates an overwhelming mismatch against Howard. The Wolverines' top-10 offense and second-ranked defense, built against rigorous Big Ten competition, provide a level of team quality that the MEAC champion has not faced. While 16-seed upsets are historic, the vast disparity in talent and Michigan's balanced dominance makes a credible path to victory for Howard highly improbable.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Georgia's elite top-15 offense, built against rigorous SEC competition, provides a slight advantage over Saint Louis's solid but less potent attack. The Bulldogs' high-major experience and ability to score against quality defenses should outweigh their defensive deficiencies, while Saint Louis's impressive record was compiled against weaker A10 opposition. In a typical toss-up 8/9 game, Georgia's offensive firepower and tougher schedule give them the edge.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Texas Tech's elite offensive efficiency, built against a rigorous Big 12 schedule, should exploit Akron's below-average defense and control the game. The Red Raiders' significant advantage in adjusted efficiency metrics and high-major experience provides a tangible edge over a MAC champion that has not consistently faced top competition. While 12-seed upsets are always a possibility, the substantial gap in team quality and Texas Tech's balanced attack makes them a reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Alabama's elite offense, ranked 3rd nationally in adjusted efficiency, should overwhelm Hofstra's average defense. The Crimson Tide's significant advantage in team quality, built against rigorous SEC competition, provides a level of high-major experience that Hofstra has not consistently faced from the CAA. While 13-seed upsets are possible, the substantial gap in offensive firepower and Alabama's ability to score in bunches makes a credible path to victory for the Pride unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Tennessee's elite defense, ranked 13th nationally in adjusted efficiency, should effectively contain SMU's solid but not overwhelming offense. The Volunteers' significant advantage in overall team quality, reflected in their top-15 efficiency ratings and rigorous SEC schedule, provides a reliable edge. While SMU's offensive prowess could keep the game interesting, Tennessee's defensive discipline and balanced attack should lead to a comfortable victory.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-6\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Virginia's elite defense, ranked 14th nationally, and efficient offense should overwhelm Wright State. The Cavaliers' 29-4 record against rigorous ACC competition provides a level of high-major experience that the Horizon League champion has not faced. While 14-seed upsets are possible, the substantial gap in team quality and Virginia's disciplined style makes a credible path to victory for Wright State unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-7\",\n        \"winnerId\": \"kentucky\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Kentucky's defensive efficiency, ranked 32nd nationally, should help contain Santa Clara's elite offense, while the Wildcats can exploit the Broncos' weaker defense. Despite Santa Clara's impressive season and upset potential, Kentucky's experience in the rigorous SEC provides a tangible edge in a close game. The slight favoritism in the odds and Kentucky's balanced profile make them the pick to advance in a competitive matchup.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-8\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Iowa State's high seeding and power conference pedigree provide a significant advantage over Tennessee State, which is making its first tournament appearance in over three decades. The Cyclones' talent and experience against top competition should overwhelm the Tigers, leading to a comfortable victory.\"\n      },\n      {\n        \"gameId\": \"r32-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Duke's elite defense, ranked best in the nation, should contain Ohio State's offense and control the game. Even without injured starters Caleb Foster and potentially Patrick Ngongba, the Blue Devils' depth and offensive efficiency, built against a rigorous ACC schedule, provide a significant edge. Ohio State is a solid opponent, but the overall No. 1 seed has demonstrated the ability to win without key players and should advance to the Sweet 16.\"\n      },\n      {\n        \"gameId\": \"r32-east-2\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.68,\n        \"rationale\": \"St. John's earns a narrow edge due to slightly better offensive efficiency, a superior 27-6 record, and a marginally higher overall rating in both Torvik and KenPom. Both teams possess elite top-12 defenses, but the Red Storm's offensive versatility and ability to create scoring opportunities against a similarly stout Kansas defense will be the difference. In a tightly contested matchup where each possession matters, St. John's slightly more potent offense should allow them to advance to the Sweet 16.\"\n      },\n      {\n        \"gameId\": \"r32-east-3\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Michigan State's tournament pedigree as a No. 3 seed and experience from a rigorous Big Ten schedule provides a tangible edge, but Louisville's top-25 efficiency on both ends ensures a highly competitive game. The Spartans' defensive discipline and ability to control tempo should limit Louisville's balanced attack in a low-possession battle. Expect a close contest where Michigan State's March maturity proves decisive in the final minutes.\"\n      },\n      {\n        \"gameId\": \"r32-east-4\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.82,\n        \"rationale\": \"UConn's superior record (29-5) and higher national ranking reflect a more consistent performance against high-level competition, including multiple ranked wins. The Huskies' balanced attack and interior defense, led by Tarris Reed Jr., should challenge UCLA's offense, which relies heavily on Tyler Bilodeau. While UCLA is capable of pulling an upset with its top-20 offense, UConn's overall team quality and tournament experience give them the edge to advance to the Sweet 16.\"\n      },\n      {\n        \"gameId\": \"r32-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Arizona's elite efficiency on both ends of the floor, ranking 3rd nationally with a top-10 offense and top-3 defense, creates a substantial mismatch against Utah State. The Wildcats' 31-2 record was built against a rigorous Big 12 schedule, providing high-major experience that the Aggies' Mountain West campaign cannot match. While Utah State is a solid team with good metrics, they lack the firepower to keep pace with Arizona's balanced attack and defensive intensity over 40 minutes.\"\n      },\n      {\n        \"gameId\": \"r32-west-2\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Arkansas earns a narrow edge in what projects as a classic toss-up game between two elite offensive teams. The Razorbacks' slightly higher-ranked offense, combined with their experience in close SEC games, should be enough to overcome Wisconsin's balanced attack. In a high-scoring affair where both teams will score consistently, Arkansas's ability to create a few more key stops or clutch baskets will be the difference in a tight contest that could go either way.\"\n      },\n      {\n        \"gameId\": \"r32-west-3\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Gonzaga's elite defense, ranked 9th nationally, should be able to contain BYU's high-powered offense, while the Bulldogs' efficient offense can exploit the Cougars' weaker defense. The Bulldogs' experience in March and their 30-3 record provide an additional edge in a matchup that favors their style of play. Expect Gonzaga to control the tempo and advance to the Sweet 16.\"\n      },\n      {\n        \"gameId\": \"r32-west-4\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Purdue's elite offense, ranked first nationally in adjusted efficiency, should overpower Miami's solid but not elite defense. The Boilermakers' significant advantage in overall team quality and high-major experience from the rigorous Big Ten schedule provides a reliable edge. While Miami is a capable team with a balanced attack, they lack the firepower to keep pace with Purdue's offensive juggernaut over 40 minutes.\"\n      },\n      {\n        \"gameId\": \"r32-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Florida's status as the defending national champion and No. 1 seed is backed by elite efficiency, ranking 4th nationally with a top-5 defense and top-10 offense. The Gators' championship experience and the high-level competition of the SEC provide a significant edge over an Iowa team with a weaker defensive profile. While Iowa's solid offense can keep them competitive, Florida's balanced attack and defensive intensity should control the game and secure a spot in the Sweet 16.\"\n      },\n      {\n        \"gameId\": \"r32-south-2\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Vanderbilt's elite top-10 offense, combined with their higher overall efficiency ratings, gives them an edge over Nebraska's stout defense. While Nebraska's defense is formidable, Vanderbilt's balanced attack and the prediction from analyst Jay Bilas that their guards will be the difference support a Commodores victory. In a tight contest, Vanderbilt's offensive firepower should prevail.\"\n      },\n      {\n        \"gameId\": \"r32-south-3\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Illinois boasts the nation's top-ranked offense, which should overwhelm VCU's defense that ranks outside the top 80 in efficiency. The Fighting Illini's substantial advantage in overall team quality, reflected in their top-10 ratings versus VCU's top-50 profile, provides a reliable edge. While VCU is capable after defeating North Carolina, Illinois's balanced attack and high-major pedigree should control the game and secure a Sweet 16 berth.\"\n      },\n      {\n        \"gameId\": \"r32-south-4\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Houston's elite defense, ranked 4th nationally, should stifle Saint Mary's mediocre offense and control the game. The Cougars' high-major experience from the rigorous Big 12 provides a tangible edge over the Gaels' WCC pedigree. While Saint Mary's defense is solid, Houston's balanced attack and defensive intensity should secure a victory.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.93,\n        \"rationale\": \"Michigan's elite defense, ranked second nationally, should stifle Georgia's offense, while the Wolverines' top‑10 offense can exploit Georgia's weaker defense. The significant gap in overall team quality, reflected in Michigan's 31‑2 record and No. 2 efficiency ranking, provides a reliable edge. Expect Michigan to control the game from the outset and advance comfortably to the Sweet 16.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-2\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Texas Tech's more balanced profile, featuring a top‑10 offense and a top‑30 defense, gives them a slight edge over Alabama's elite but one‑dimensional attack. The Red Raiders' ability to get timely stops should prove decisive in what figures to be a high‑scoring affair, while their own efficient offense can exploit the Crimson Tide's defensive vulnerabilities. Although Alabama's offense is formidable, Texas Tech's two‑way strength and Big‑12‑tested resilience make them the pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-3\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Virginia's slightly superior efficiency metrics and higher seeding give them a narrow edge in what projects as a defensive battle. Both teams feature elite top‑15 defenses, but the Cavaliers' more efficient offense and disciplined style should produce just enough scoring opportunities to advance. In a low‑possession game where every basket matters, Virginia's experience and consistency will be decisive.\"\n      },\n      {\n        \"gameId\": \"r32-midwest-4\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Iowa State's status as a No. 2 seed reflects a high-major team with superior overall talent and efficiency compared to Kentucky. The Cyclones' expected top-tier defense should contain a Kentucky offense that ranks outside the top 40, while their own balanced attack can exploit the Wildcats' defensive vulnerabilities. Although 7-seed upsets are possible, Iowa State's seed advantage and tournament pedigree make them the clear choice to advance to the Sweet 16.\"\n      },\n      {\n        \"gameId\": \"s16-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Duke's status as the No. 1 overall seed is backed by the nation's top defense and an elite top-5 offense, creating a significant mismatch against St. John's. Despite the absence of Caleb Foster, the expected return of Patrick Ngongba provides interior stability, and the Blue Devils have shown they can win with their depth. St. John's stout defense will challenge, but Duke's superior efficiency and tournament pedigree should secure a victory in the Sweet 16.\"\n      },\n      {\n        \"gameId\": \"s16-east-2\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Michigan State's tournament experience and defensive discipline provide a solid foundation for Sweet 16 success. UConn's offense may be compromised by the ankle injury to top scorer Tarris Reed Jr., limiting their scoring efficiency. In a matchup where health is crucial, the Spartans' depth and consistency should secure a narrow victory.\"\n      },\n      {\n        \"gameId\": \"s16-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Arizona's elite balance, featuring a top-10 offense and the nation's 3rd-ranked defense, provides a decisive edge over Arkansas's more one-dimensional profile. The Wildcats' 31-2 record against a rigorous Big 12 schedule demonstrates their readiness for the tournament's pressure, while Arkansas's 50th-ranked defense is a significant vulnerability at this stage. Expect Arizona's defensive intensity to limit the Razorbacks' potent offense and control the tempo, securing a spot in the Elite Eight.\"\n      },\n      {\n        \"gameId\": \"s16-west-2\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Purdue's top-ranked offense, which leads the nation in adjusted efficiency, provides a significant advantage against Gonzaga's stout defense. While Gonzaga's defensive prowess could keep the game close, Purdue's ability to score consistently and exploit Gonzaga's relatively weaker offense should prevail. The Boilermakers' experience in high-stakes Big Ten games also gives them an edge in this Sweet 16 matchup.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r32-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Florida's status as the defending national champion and No. 1 seed is backed by elite efficiency, ranking 4th nationally with a top-5 defense and top-10 offense. The Gators' championship experience and the high-level competition of the SEC provide a significant edge over an Iowa team with a weaker defensive profile. While Iowa's solid offense can keep them competitive, Florida's balanced attack and defensive intensity should control the game and secure a spot in the Sweet 16.\"\n    },\n    {\n      \"gameId\": \"r32-south-2\",\n      \"winnerId\": \"vanderbilt\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Vanderbilt's elite top-10 offense, combined with their higher overall efficiency ratings, gives them an edge over Nebraska's stout defense. While Nebraska's defense is formidable, Vanderbilt's balanced attack and the prediction from analyst Jay Bilas that their guards will be the difference support a Commodores victory. In a tight contest, Vanderbilt's offensive firepower should prevail.\"\n    },\n    {\n      \"gameId\": \"r32-south-3\",\n      \"winnerId\": \"illinois\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Illinois boasts the nation's top-ranked offense, which should overwhelm VCU's defense that ranks outside the top 80 in efficiency. The Fighting Illini's substantial advantage in overall team quality, reflected in their top-10 ratings versus VCU's top-50 profile, provides a reliable edge. While VCU is capable after defeating North Carolina, Illinois's balanced attack and high-major pedigree should control the game and secure a Sweet 16 berth.\"\n    },\n    {\n      \"gameId\": \"r32-south-4\",\n      \"winnerId\": \"houston\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Houston's elite defense, ranked 4th nationally, should stifle Saint Mary's mediocre offense and control the game. The Cougars' high-major experience from the rigorous Big 12 provides a tangible edge over the Gaels' WCC pedigree. While Saint Mary's defense is solid, Houston's balanced attack and defensive intensity should secure a victory.\"\n    },\n    {\n      \"gameId\": \"r32-midwest-1\",\n      \"winnerId\": \"michigan\",\n      \"confidence\": 0.93,\n      \"rationale\": \"Michigan's elite defense, ranked second nationally, should stifle Georgia's offense, while the Wolverines' top‑10 offense can exploit Georgia's weaker defense. The significant gap in overall team quality, reflected in Michigan's 31‑2 record and No. 2 efficiency ranking, provides a reliable edge. Expect Michigan to control the game from the outset and advance comfortably to the Sweet 16.\"\n    },\n    {\n      \"gameId\": \"r32-midwest-2\",\n      \"winnerId\": \"texas-tech\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Texas Tech's more balanced profile, featuring a top‑10 offense and a top‑30 defense, gives them a slight edge over Alabama's elite but one‑dimensional attack. The Red Raiders' ability to get timely stops should prove decisive in what figures to be a high‑scoring affair, while their own efficient offense can exploit the Crimson Tide's defensive vulnerabilities. Although Alabama's offense is formidable, Texas Tech's two‑way strength and Big‑12‑tested resilience make them the pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-midwest-3\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Virginia's slightly superior efficiency metrics and higher seeding give them a narrow edge in what projects as a defensive battle. Both teams feature elite top‑15 defenses, but the Cavaliers' more efficient offense and disciplined style should produce just enough scoring opportunities to advance. In a low‑possession game where every basket matters, Virginia's experience and consistency will be decisive.\"\n    },\n    {\n      \"gameId\": \"r32-midwest-4\",\n      \"winnerId\": \"iowa-state\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Iowa State's status as a No. 2 seed reflects a high-major team with superior overall talent and efficiency compared to Kentucky. The Cyclones' expected top-tier defense should contain a Kentucky offense that ranks outside the top 40, while their own balanced attack can exploit the Wildcats' defensive vulnerabilities. Although 7-seed upsets are possible, Iowa State's seed advantage and tournament pedigree make them the clear choice to advance to the Sweet 16.\"\n    },\n    {\n      \"gameId\": \"s16-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Duke's status as the No. 1 overall seed is backed by the nation's top defense and an elite top-5 offense, creating a significant mismatch against St. John's. Despite the absence of Caleb Foster, the expected return of Patrick Ngongba provides interior stability, and the Blue Devils have shown they can win with their depth. St. John's stout defense will challenge, but Duke's superior efficiency and tournament pedigree should secure a victory in the Sweet 16.\"\n    },\n    {\n      \"gameId\": \"s16-east-2\",\n      \"winnerId\": \"michigan-state\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Michigan State's tournament experience and defensive discipline provide a solid foundation for Sweet 16 success. UConn's offense may be compromised by the ankle injury to top scorer Tarris Reed Jr., limiting their scoring efficiency. In a matchup where health is crucial, the Spartans' depth and consistency should secure a narrow victory.\"\n    },\n    {\n      \"gameId\": \"s16-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Arizona's elite balance, featuring a top-10 offense and the nation's 3rd-ranked defense, provides a decisive edge over Arkansas's more one-dimensional profile. The Wildcats' 31-2 record against a rigorous Big 12 schedule demonstrates their readiness for the tournament's pressure, while Arkansas's 50th-ranked defense is a significant vulnerability at this stage. Expect Arizona's defensive intensity to limit the Razorbacks' potent offense and control the tempo, securing a spot in the Elite Eight.\"\n    },\n    {\n      \"gameId\": \"s16-west-2\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Purdue's top-ranked offense, which leads the nation in adjusted efficiency, provides a significant advantage against Gonzaga's stout defense. While Gonzaga's defensive prowess could keep the game close, Purdue's ability to score consistently and exploit Gonzaga's relatively weaker offense should prevail. The Boilermakers' experience in high-stakes Big Ten games also gives them an edge in this Sweet 16 matchup.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:07:03.750Z",
+      "content": "I need to predict the Sweet 16 game between Florida and Vanderbilt. First, let me gather some data about these teams. I'll start by getting their ratings."
+    },
+    {
+      "id": "s16-south-1-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:07:03.750Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "florida",
+          "vanderbilt"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:07:03.760Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "florida",
+          "teamName": "Florida",
+          "torvik": {
+            "rank": 4,
+            "team": "Florida",
+            "conf": "SEC",
+            "record": "26-7",
+            "adjoe": 126.12196938159076,
+            "oe Rank": 11,
+            "adjde": 92.21230634074736,
+            "de Rank": 5,
+            "barthag": 0.97343644351697,
+            "rank.1": 4,
+            "proj. W": 26,
+            "Proj. L": 7,
+            "Pro Con W": 16,
+            "Pro Con L": 2,
+            "Con Rec.": "16-2",
+            "sos": 0.7583882598362411,
+            "ncsos": 0.617849065236955,
+            "consos": 0.8420237621977154,
+            "Proj. SOS": 0.7583882598362411,
+            "Proj. Noncon SOS": 0.617849065236955,
+            "Proj. Con SOS": 0.8420237621977154,
+            "elite SOS": 0.6062120710931076,
+            "elite noncon SOS": 0.6810630889910168,
+            "Opp OE": 118.64441393055344,
+            "Opp DE": 104.2045337775804,
+            "Opp Proj. OE": 118.64441393055344,
+            "Opp Proj DE": 104.2045337775804,
+            "Con Adj OE": 129.48066879118193,
+            "Con Adj DE": 91.63932274272524,
+            "Qual O": 127.9049927234103,
+            "Qual D": 92.88695637906358,
+            "Qual Barthag": 0.9753712065472392,
+            "Qual Games": 20,
+            "FUN": -0.0336393163039373,
+            "ConPF": 1613,
+            "ConPA": 1307,
+            "ConPoss": 1303.2875,
+            "ConOE": 1.2376394310541612,
+            "ConDE": 1.0028485656464905,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8888888888888888,
+            "WAB": 8.49793121807398,
+            "WAB Rk": 6,
+            "Fun Rk": 253,
+            "adjt": 70.36880119088951
+          },
+          "kenpom": {
+            "rank": 4,
+            "team": "Florida",
+            "conf": "SEC",
+            "record": "26-7",
+            "adj_em": 33.83,
+            "adj_o": 125.6,
+            "adj_o_rank": 9,
+            "adj_d": 91.8,
+            "adj_d_rank": 6,
+            "adj_t": 70.6,
+            "adj_t_rank": 28,
+            "luck": -0.036,
+            "luck_rank": 289,
+            "sos_adj_em": 15.99,
+            "sos_adj_em_rank": 5,
+            "sos_opp_o": 119.4,
+            "sos_opp_o_rank": 2,
+            "sos_opp_d": 103.4,
+            "sos_opp_d_rank": 24,
+            "ncsos_adj_em": 7.96,
+            "ncsos_adj_em_rank": 29
+          }
+        },
+        {
+          "teamId": "vanderbilt",
+          "teamName": "Vanderbilt",
+          "torvik": {
+            "rank": 10,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adjoe": 127.7662830868969,
+            "oe Rank": 6,
+            "adjde": 99.1821315162276,
+            "de Rank": 28,
+            "barthag": 0.9484518796077428,
+            "rank.1": 10,
+            "proj. W": 26.579287375551324,
+            "Proj. L": 7.420712624448677,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7314138659881364,
+            "ncsos": 0.5219085819619156,
+            "consos": 0.8576258536635891,
+            "Proj. SOS": 0.7372656689780072,
+            "Proj. Noncon SOS": 0.5219085819619156,
+            "Proj. Con SOS": 0.8576258536635891,
+            "elite SOS": 0.6297896175251544,
+            "elite noncon SOS": 0.8064822607060758,
+            "Opp OE": 116.90316363547312,
+            "Opp DE": 104.25404808761049,
+            "Opp Proj. OE": 117.22276673224675,
+            "Opp Proj DE": 104.18722606613916,
+            "Con Adj OE": 125.19516938866136,
+            "Con Adj DE": 100.7462475550942,
+            "Qual O": 130.56151343136426,
+            "Qual D": 102.58545871939936,
+            "Qual Barthag": 0.9412105978774796,
+            "Qual Games": 18,
+            "FUN": 0.0325592467209266,
+            "ConPF": 1470,
+            "ConPA": 1410,
+            "ConPoss": 1259.2750000000003,
+            "ConOE": 1.167338349447102,
+            "ConDE": 1.1196918862043634,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 7.5029767018986995,
+            "WAB Rk": 9,
+            "Fun Rk": 99,
+            "adjt": 69.06865817579379
+          },
+          "kenpom": {
+            "rank": 12,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adj_em": 28.12,
+            "adj_o": 127.3,
+            "adj_o_rank": 6,
+            "adj_d": 99.2,
+            "adj_d_rank": 29,
+            "adj_t": 69,
+            "adj_t_rank": 92,
+            "luck": 0.025,
+            "luck_rank": 122,
+            "sos_adj_em": 14.04,
+            "sos_adj_em_rank": 16,
+            "sos_opp_o": 117.6,
+            "sos_opp_o_rank": 13,
+            "sos_opp_d": 103.6,
+            "sos_opp_d_rank": 28,
+            "ncsos_adj_em": 1.1,
+            "ncsos_adj_em_rank": 149
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"florida\",\n      \"teamName\": \"Florida\",\n      \"torvik\": {\n        \"rank\": 4,\n        \"team\": \"Florida\",\n        \"conf\": \"SEC\",\n        \"record\": \"26-7\",\n        \"adjoe\": 126.12196938159076,\n        \"oe Rank\": 11,\n        \"adjde\": 92.21230634074736,\n        \"de Rank\": 5\n      },\n      \"kenpom\": {\n        \"rank\": 4,\n        \"team\": \"Florida\",\n        \"conf\": \"SEC\",\n        \"record\": \"26-7\",\n        \"adj_em\": 33.83,\n        \"adj_o\": 125.6,\n        \"adj_o_rank\": 9,\n        \"adj_d\": 91.8\n      }\n    },\n    {\n      \"teamId\": \"vanderbilt\",\n      \"teamName\": \"Vanderbilt\",\n      \"torvik\": {\n        \"rank\": 10,\n        \"team\": \"Vanderbilt\",\n        \"conf\": \"SEC\",\n        \"record\": \"26-7\",\n        \"adjoe\": 127.7662830868969,\n        \"oe Rank\": 6,\n        \"adjde\": 99.1821315162276,\n        \"de Rank\": 28\n      },\n      \"kenpom\": {\n        \"rank\": 12,\n        \"team\": \"Vanderbilt\",\n        \"conf\": \"SEC\",\n        \"record\": \"26-7\",\n        \"adj_em\": 28.12,\n        \"adj_o\": 127.3,\n        \"adj_o_rank\": 6,\n        \"adj_d\": 99.2\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:07:11.420Z",
+      "content": "Interesting. Both are SEC teams with identical 26-7 records. Florida is ranked 4th overall with elite defense (5th in Torvik, 4th in KenPom defense) and very good offense (11th/9th). Vanderbilt is ranked 10th/12th with elite offense (6th) but weaker defense (28th). This looks like a classic offense vs defense matchup.\n\nLet me search for recent news about these teams, injuries, and any Sweet 16 analysis."
+    },
+    {
+      "id": "s16-south-1-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:07:11.421Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Florida Vanderbilt Sweet 16 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:07:12.159Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Sports Shows Online - Sports on ITVX - Live & On-Demand on ITVX",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Ditv.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DGYKSrO_s9seJdqpNhJCYpGaUAfVdfB5LrNuZDa8Xsv%252DO8jylydNZInAhrQs6hbiJQzBilQDBr5c3Gq1yUCHbJyMru%252DiYkpBClhys73_k2nja_WZ0oxP4ToXc6mKgLIcV00HaezDqOS3KVwZwAIAyAjqvIZABGOAlq1UU8eVYu9k.b%252DxKQlodDkepVIQpnDdXeA%26rut%3Dfb82d4f506bfc3cd0ef2d0b8632ea18a2d0638381a6ca5af9352b5bcc9c8cb9b%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8IJ36zSf3zIFQZ4FJB499AzVUCUxEAyPPmaWmv460MRTNkeLCGh62g6RURtb8IwqifD9DdiY8_Hh3T5cJ_y9RsP3dShpGMxQKLDsIrLrSH_N%252DPEZSbN0huhzzLY7mBZ90ZHmMC9F3bx10FXQDRKd1wPbBOT0LXfPvaTFLS0H8wQ3oWxpPkpgan4Bp1tTfsaunPDjQyyxxpTiax4_NUbylpzk4bHc%2526u%253DaHR0cHMlM2ElMmYlMmZ0cmFjay50cmFmZmljZ3VhcmQuYWklMmZpdHZ4X2NfciUyZmdvb2dsZS1hZHMlMmZ2MSUyZmNsaWNrJTJmJTNmcHJvcGVydHlfaWQlM2R0Zy0wMTgyNzctMDAxJTI2c291cmNlX2lkJTNkcyUyNmNyZWF0aXZlX2lkJTNkJTI2Y2FtcGFpZ25faWQlM2Q1MjI2MDUwNzklMjZjcmVhdGl2ZV9zZXRfaWQlM2QxMzIyNzE1MDIyMDQxMjA5JTI2cGxhY2VtZW50X2lkJTNkJTI2a2V5d29yZCUzZHdhdGNoJTI1MjBzcG9ydHMlMjZzZXNzaW9uX2lkJTNkJTI2ZmVlZGl0ZW1pZCUzZCUyNnRhcmdldGlkJTNka3dkLTgyNjcxMjMxMDQ5OTQxJTNhbG9jLTE4OCUyNmxvY19pbnRlcmVzdF9tcyUzZCUyNmxvY19waHlzaWNhbF9tcyUzZDQxNjc1JTI2bWF0Y2h0eXBlJTNkYiUyNmRldmljZSUzZGMlMjZkZXZpY2Vtb2RlbCUzZCUyNmlmbW9iaWxlJTNkJTI2aWZub3Rtb2JpbGUlM2QxJTI2aWZzZWFyY2glM2QxJTI2aWZjb250ZW50JTNkJTI2dGFyZ2V0JTNkJTI2cGFyYW0xJTNkJTI2cGFyYW0yJTNkJTI2cmFuZG9tJTNkJTI2YWRwb3NpdGlvbiUzZCUyNmdhX3NvdXJjZWlkJTNkJTdic291cmNlaWQlN2QlMjZnYV9hZHR5cGUlM2QlMjZnYV9tZXJjaGFudF9pZCUzZCUyNmdhX3Byb2R1Y3RfY2hhbm5lbCUzZCUyNmdhX3Byb2R1Y3RfaWQlM2QlMjZnYV9wcm9kdWN0X2NvdW50cnklM2QlMjZnYV9wcm9kdWN0X2xhbmd1YWdlJTNkJTI2Z2FfcHJvZHVjdF9wYXJ0aXRpb25faWQlM2QlMjZnYV9zdG9yZV9jb2RlJTNkJTI2ZGVzdGluYXRpb25fdXJsJTNkaHR0cHMlMjUzQSUyNTJGJTI1MkZ3d3cuaXR2LmNvbSUyNTJGd2F0Y2glMjUyRmNhdGVnb3JpZXMlMjUyRnNwb3J0JTI2bXNjbGtpZCUzZGRiYmVmNjQwOGM0MDEyYjU0ZGE2OWZmYTBiMWZiNjA4JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkSVRWJTI1MjAlMjU3QyUyNTIwVUslMjUyMCUyNTdDJTI1MjBDb252ZXJzaW9uJTI1MjAlMjU3QyUyNTIwUmVhY3RpdmF0aW9uJTI1MjAlMjU3QyUyNTIwR2VuZXJpYyUyNnV0bV90ZXJtJTNkd2F0Y2glMjUyMHNwb3J0cyUyNnV0bV9jb250ZW50JTNkSVRWJTI1MjAlMjU3QyUyNTIwVUslMjUyMCUyNTdDJTI1MjBDb252ZXJzaW9uJTI1MjAlMjU3QyUyNTIwUmVhY3RpdmF0aW9uJTI1MjAlMjU3QyUyNTIwU3BvcnQ%2526rlid%253Ddbbef6408c4012b54da69ffa0b1fb608%26vqd%3D4%2D22401826690447958674462121184481894964%26iurl%3D%257B1%257DIG%253D9FD2923A1DF94918A91F41C0C228D206%2526CID%253D14959098C8E0608335B187B8C9EE616B%2526ID%253DDevEx%252C5045.1&rut=688514ab422a3eab7fbc75761e029d2381040737e9f5f40861d739e4ceded2b8",
+          "snippet": "All episodes in one place on ITVX. Stream sports free on ITVX, with more shows than anywhere else"
+        },
+        {
+          "title": "Vanderbilt 91-74 Florida (Mar 14, 2026) Game Recap - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401851569&rut=c1808266a0f5b10254607542d41a360ef6bc3f57b189142a311c291a6b4bf7df",
+          "snippet": "Expert recap and game analysis of the Vanderbilt Commodores vs. Florida Gators NCAAM game from March 14, 2026 on ESPN."
+        },
+        {
+          "title": "Vanderbilt 91-74 Florida (Mar 14, 2026) Video Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fvideo%3FgameId%3D401851569&rut=80967e53eb47500986e40b16fe254000896c954ec9dbf76a483babade96eb739",
+          "snippet": "Video highlights, recaps and play breakdowns of the Vanderbilt Commodores vs. Florida Gators NCAAM game from March 14, 2026 on ESPN."
+        },
+        {
+          "title": "Vanderbilt 91-74 Florida (14 Mar, 2026) Final Score - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851569&rut=81de139356fada5de5dcccd7defc09d6bd848825f2a2530510a810951d342761",
+          "snippet": "Game summary of the Vanderbilt Commodores vs. Florida Gators NCAAM game, final score 91-74, from 14 March 2026 on ESPN."
+        },
+        {
+          "title": "Vanderbilt upsets streaking Gators in SEC tournament semis",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48206635%2Fvanderbilt%2Dupsets%2Dstreaking%2Dgators%2Dsec%2Dtournament%2Dsemis&rut=75c0c06bf283672ccb7dc1286762d6031e69cfa80252477b98e9302333a46ab9",
+          "snippet": "Vanderbilt upset Florida 91-74 in the SEC tournament semifinals Saturday, putting the Gators&#x27; quest for a No. 1 seed in the NCAA tournament in doubt."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Sports Shows Online - Sports on ITVX - Live & On-Demand on ITVX\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fduckduckgo.com%2Fy.js%3Fad_domain%3Ditv.com%26ad_provider%3Dbingv7aa%26ad_type%3Dtxad%26click_metadata%3DGYKSrO_s9seJdqpNhJCYpGaUAfVdfB5LrNuZDa8Xsv%252DO8jylydNZInAhrQs6hbiJQzBilQDBr5c3Gq1yUCHbJyMru%252DiYkpBClhys73_k2nja_WZ0oxP4ToXc6mKgLIcV00HaezDqOS3KVwZwAIAyAjqvIZABGOAlq1UU8eVYu9k.b%252DxKQlodDkepVIQpnDdXeA%26rut%3Dfb82d4f506bfc3cd0ef2d0b8632ea18a2d0638381a6ca5af9352b5bcc9c8cb9b%26u3%3Dhttps%253A%252F%252Fwww.bing.com%252Faclick%253Fld%253De8IJ36zSf3zIFQZ4FJB499AzVUCUxEAyPPmaWmv460MRTNkeLCGh62g6RURtb8IwqifD9DdiY8_Hh3T5cJ_y9RsP3dShpGMxQKLDsIrLrSH_N%252DPEZSbN0huhzzLY7mBZ90ZHmMC9F3bx10FXQDRKd1wPbBOT0LXfPvaTFLS0H8wQ3oWxpPkpgan4Bp1tTfsaunPDjQyyxxpTiax4_NUbylpzk4bHc%2526u%253DaHR0cHMlM2ElMmYlMmZ0cmFjay50cmFmZmljZ3VhcmQuYWklMmZpdHZ4X2NfciUyZmdvb2dsZS1hZHMlMmZ2MSUyZmNsaWNrJTJmJTNmcHJvcGVydHlfaWQlM2R0Zy0wMTgyNzctMDAxJTI2c291cmNlX2lkJTNkcyUyNmNyZWF0aXZlX2lkJTNkJTI2Y2FtcGFpZ25faWQlM2Q1MjI2MDUwNzklMjZjcmVhdGl2ZV9zZXRfaWQlM2QxMzIyNzE1MDIyMDQxMjA5JTI2cGxhY2VtZW50X2lkJTNkJTI2a2V5d29yZCUzZHdhdGNoJTI1MjBzcG9ydHMlMjZzZXNzaW9uX2lkJTNkJTI2ZmVlZGl0ZW1pZCUzZCUyNnRhcmdldGlkJTNka3dkLTgyNjcxMjMxMDQ5OTQxJTNhbG9jLTE4OCUyNmxvY19pbnRlcmVzdF9tcyUzZCUyNmxvY19waHlzaWNhbF... [truncated 1380 chars]\",\n      \"snippet\": \"All episodes in one place on ITVX. Stream sports free on ITVX, with more shows than anywhere else\"\n    },\n    {\n      \"title\": \"Vanderbilt 91-74 Florida (Mar 14, 2026) Game Recap - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Frecap%2F_%2FgameId%2F401851569&rut=c1808266a0f5b10254607542d41a360ef6bc3f57b189142a311c291a6b4bf7df\",\n      \"snippet\": \"Expert recap and game analysis of the Vanderbilt Commodores vs. Florida Gators NCAAM game from March 14, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"Vanderbilt 91-74 Florida (Mar 14, 2026) Video Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fvideo%3FgameId%3D401851569&rut=80967e53eb47500986e40b16fe254000896c954ec9dbf76a483babade96eb739\",\n      \"snippet\": \"Video highlights, recaps and play breakdowns of the Vanderbilt Commodores vs. Florida Gators NCAAM game from March 14, 2026 on ESPN.\"\n    },\n    {\n      \"title\": \"Vanderbilt 91-74 Florida (14 Mar, 2026) Final Score - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fafrica.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fgame%3FgameId%3D401851569&rut=81de139356fada5de5dcccd7defc09d6bd848825f2a2530510a810951d342761\",\n      \"snippet\": \"Game summary of the Vanderbilt Commodores vs. Florida Gators NCAAM game, final score 91-74, from 14 March 2026 on ESPN.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:07:18.761Z",
+      "content": "Interesting, there's a recent game recap from March 14, 2026 (which is likely the SEC Tournament). Vanderbilt beat Florida 91-74. That's a convincing win. Let me fetch that recap to get more details."
+    },
+    {
+      "id": "s16-south-1-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:07:18.761Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/recap/_/gameId/401851569"
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:07:19.189Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/recap/_/gameId/401851569",
+        "text": "Vanderbilt 91-74 Florida (Mar 14, 2026) Game Recap - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search Florida Gators vs Vanderbilt Commodores SEC Tournament - Semifinal 22 Vanderbilt Commodores Vanderbilt VAN 26-7 , 11-7 SEC 91 26-7 , 11-7 SEC Final 1 2 T Vanderbilt VAN 47 44 91 Florida FLA 34 40 74 4 Florida Gators Florida FLA 26-7 , 16-2 SEC 74 26-7 , 16-2 SEC Gamecast Recap Box Score Play-by-Play Team Stats Videos No. 22 Vanderbilt stops No. 4 Florida&#x27;s winning streak to reach SEC Tournament final By AP Updated: Mar 14, 2026, 03:34 pm Facebook Facebook Messenger Twitter Email NASHVILLE, Tenn. -- — Tyler Tanner scored 20 points as No. 22 Vanderbilt beat fourth-ranked Florida 91-74 on Saturday, ending the defending national champion's bid to win a second straight Southeastern Conference Tournament title and possibly hurt the Gators' bid for a No. 1 seed in the NCAA Tournament. The fourth-seeded Commodores won their fourth straight game. Vanderbilt (26-7) will play either Mississippi or No. 17 Arkansas on Sunday as it goes for its first tournament title since 2012. Four other Vanderbilt players scored in double figures, with Jalen Washington adding 17, Duke Miles 15, Devin McGlockton 12 and AK Okereke 11. Six different Commodores made at least one 3-pointer, and everyone who played scored at least a bucket. The Gators (26-7) saw their 12-game winning streak end. Thomas Haugh led them with 19 points, Boogie Fland had 15, Alex Condon 13 and Rueben Chinyelu 12. Florida had been dominant during its streak, winning by an average of 21.7 points to end the regular season. On Saturday, it never led by more than 2 early on. The nation's top rebounding team dominated the boards (38-23) again, but the Gators struggled to find the basket, missing 12 of 13 shots in the first half. Miles hit a 3-pointer putting Vanderbilt ahead to stay, and he finished off a spurt of 11 straight points with a layup. Vanderbilt led 47-34 at halftime. Florida never got closer than 13 in the second half. Vanderbilt pushed its lead to as much as 76-51 with 8:11 to go on seven straight points, capped by a pair of Miles' free throws for a technical called on Florida coach Todd Golden. Up next Vanderbilt has a chance to win its third SEC Tournament title. The Commodores first won this event in 1951. Florida waits to see if winning the SEC regular-season title was enough for a No. 1 seed. ------ Get poll alerts and updates on the AP Top 25 throughout the season. Sign up here and here (AP News mobile app). AP college basketball: https://apnews.com/hub/ap-top-25-college-basketball-poll and https://apnews.com/hub/college-basketball Game Information Nashville , TN ESPN Referee : Doug Shows Referee : K.B. Burdett Referee : Pat Adams 2025-26 Standings NCAA Division I Southeastern Conference Southeastern Conference CONF GB OVR Florida 16-2 - 26"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/recap/_/gameId/401851569\",\n    \"text\": \"Vanderbilt 91-74 Florida (Mar 14, 2026) Game Recap - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search Florida Gators vs Vanderbilt Commodores SEC Tournament - Semifinal 22 Vanderbilt Commodores Vanderbilt VAN 26-7 , 11-7 SEC 91 26-7 , 11-7 SEC Final 1 2 T Vanderbilt VAN 47 44 91 Florida FLA 34 40 74 4 Florida Gators Florida FLA 26-7 , 16-2 SEC 74 26-7 , 16-2 SEC Gamecast Recap Box Score Play-by-Play Team Stats Videos No. 22 Vanderbilt stops No. 4 Florida&#x27;s winning streak to reach SEC Tournament final By AP Updated: Mar 14, 2026, 03:34 pm Facebook Facebook Messenger Twitter Email NASHVILLE, Tenn. -- — Tyler Tanner scored 20 points as No. 22 Vanderbilt beat fourth-ranked Florida 91-74 on Saturday, ending the defending national champion's bid to win a second straight Southeastern Conference Tournament title and possibly hurt the Gators' bid for a No. 1 seed in the NCAA Tournament. The fourth-seeded Commodores won their fourth straight game. Vanderbilt (26-7) will play either Mississippi or No. 17 Arkansas on Sunday as it goes for its fir... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:07:25.200Z",
+      "content": "So Vanderbilt beat Florida in the SEC Tournament semifinal on March 14, 2026, 91-74. That's recent and relevant. Let me also search for any injury news or updates."
+    },
+    {
+      "id": "s16-south-1-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:07:25.200Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Florida Gators injury March 2026 NCAA tournament",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:07:26.062Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Key March Madness injuries to know while filling out your men&#x27;s NCAA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed",
+          "snippet": "From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries."
+        },
+        {
+          "title": "Florida basketball 2026 March Madness bracketology live updates",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.gainesville.com%2Flive%2Dstory%2Fsports%2Fcollege%2Fbasketball%2F2026%2F02%2F27%2Fflorida%2Dbasketball%2D2026%2Dmarch%2Dmadness%2Dbracketology%2Dlive%2Dupdates%2F88898476007%2F&rut=ff7f1da9277504084c28a2a3f0d029ca6df151f0e759bc86ae28b9ea0b350c06",
+          "snippet": "How did Florida basketball&#x27;s SEC tournament exit affect its March Madness bracketology? The latest."
+        },
+        {
+          "title": "Florida basketball&#x27;s nightmare 2026 March Madness ... - ClutchPoints",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fflorida%2Dbasketballs%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios&rut=b3ba4fad3adf4309e25d98db679d7f50a76b0a1b22a3c50f0a22002cc7d90570",
+          "snippet": "Florida basketball&#x27;s nightmare 2026 March Madness bracket scenarios Florida was the regular season SEC champions, but they have a nightmare scenario in March Madness that could end their quest ..."
+        },
+        {
+          "title": "Kentucky basketball SEC Tournament loss to Florida, UK March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Fkentucky%2F2026%2F03%2F13%2Fkentucky%2Dflorida%2Dscore%2Dtoday%2Dsec%2Dtournament%2Dbracket%2D2026%2Duk%2Dmarch%2Dmadness%2Dprediction%2Dky%2Dncaa%2Dseed%2F89033695007%2F&rut=85f42cfa2ee6e3b76f4a827104f8bdec000fc260f9df0350f3da56e702dd5fb5",
+          "snippet": "As Mark Pope and Kentucky Wildcats basketball await their NCAA Tournament draw, here&#x27;s what we learned from Kentucky&#x27;s SEC Tournament loss to Florida ."
+        },
+        {
+          "title": "Florida Gators Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fflorida%2Dgators%2Finjuries&rut=1a37624f097332e14059444944c9d9e0a4094a085b164a9148bbc6ea8a63b97a",
+          "snippet": "Stay In the Know: Check Out Florida Gators Injuries Impacting The 2025- 2026 NCAAB Season."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Key March Madness injuries to know while filling out your men&#x27;s NCAA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2F7125224%2F2026%2F03%2F17%2Fmarch%2Dmadness%2D2026%2Dplayer%2Dinjuries%2Dcaleb%2Dfoster%2Dmikel%2Dbrown%2F&rut=a7872b80ee55822ba283591c4dfc10d71953dd45616544610bb906b41ff25bed\",\n      \"snippet\": \"From Duke and Michigan to Texas Tech and Louisville, several teams hoping for a deep tournament run are battling injuries.\"\n    },\n    {\n      \"title\": \"Florida basketball 2026 March Madness bracketology live updates\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.gainesville.com%2Flive%2Dstory%2Fsports%2Fcollege%2Fbasketball%2F2026%2F02%2F27%2Fflorida%2Dbasketball%2D2026%2Dmarch%2Dmadness%2Dbracketology%2Dlive%2Dupdates%2F88898476007%2F&rut=ff7f1da9277504084c28a2a3f0d029ca6df151f0e759bc86ae28b9ea0b350c06\",\n      \"snippet\": \"How did Florida basketball&#x27;s SEC tournament exit affect its March Madness bracketology? The latest.\"\n    },\n    {\n      \"title\": \"Florida basketball&#x27;s nightmare 2026 March Madness ... - ClutchPoints\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fflorida%2Dbasketballs%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios&rut=b3ba4fad3adf4309e25d98db679d7f50a76b0a1b22a3c50f0a22002cc7d90570\",\n      \"snippet\": \"Florida basketball&#x27;s nightmare 2026 March Madness bracket scenarios Florida was the regular season SEC champions, but they have a nightmare scenario in March Madness that could end their quest ...\"\n    },\n    {\n      \"title\": \"Kentucky basketball SEC Tournament loss to Florida, UK March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.courier%2Djournal.com%2Fstory%2Fsports%2Fcollege%2Fkentucky%2F2026%2F03%2F13%2Fkentucky%2Dflorida%2Dscore%2Dtoday%2Dsec%2Dtournament%2Dbracket%2D2026%2Duk%2Dmarch%2Dmadness%2Dprediction%2Dky%2Dncaa%2Dseed%2F89033695007%2F&rut=85f42cfa2ee6e3b76f4a827104f8bdec000fc260f9df0350f3da56e702dd5fb5\",\n      \"snippet\": \"As Mark Pope and Kentucky Wildcats basketball await their NCAA Tournament draw, here&#x27;s what we learned from Kentucky&#x27;s SEC Tournament loss to Florida .\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:07:31.970Z",
+      "content": "Let me fetch the Athletic article about injuries to see if Florida or Vanderbilt are mentioned."
+    },
+    {
+      "id": "s16-south-1-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:07:31.970Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.nytimes.com/athletic/7125224/2026/03/17/march-madness-2026-player-injuries-caleb-foster-mikel-brown/"
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:07:32.126Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.nytimes.com/athletic/7125224/2026/03/17/march-madness-2026-player-injuries-caleb-foster-mikel-brown/",
+        "text": "Key March Madness injuries to know while filling out your men’s NCAA Tournament bracket - The Athletic Premier League Champions League 2026 Men&#x27;s World Cup F1 Tennis FA Cup Cricket La Liga Europa League Women&#x27;s Football Olympics Global Sports Cycling Sailing Sports Business Boxing Golf Serie A Bundesliga International Football NFL NBA MLB World Baseball Classic NHL MLS Transfer News FPL League Cup Championship League One League Two Women&#x27;s Euros NWSL College Sports NCAAF NCAAM Peak MMA Motorsports NASCAR Culture Memorabilia & Collectibles Gaming Sports Betting The PL Is Being Left Behind Welcome to Chelsea, Liam Rosenior PL Player of the Year Nominees Log In Subscribe Now Tickets by Viagogo Connections: Sports Edition REGION U.S. International Search Top News Podcasts NCAAM Bracket Scores & Schedule Teams Alabama Arizona Arkansas Duke Florida Gonzaga Houston Illinois Iowa State Kansas Louisville Miami (FL) Michigan State Michigan Nebraska North Carolina Purdue Saint Mary&#x27;s St. John&#x27;s Tennessee Texas Tech UConn Vanderbilt Virginia Wisconsin Standings Beat Our Expert&#x27;s Bracket Tournament Projections Printable Bracket Predictions Game Men&#x27;s March Madness LIVE First Four Updates Tournament Forecast Challenge Our Experts The Perfect Bracket Bracket Busters NBA Prospects to Watch Key Injuries To Know Key March Madness injuries to know while filling out your men’s NCAA Tournament bracket Patrick Ngongba II and Duke are the overall No. 1 seed, but a couple of injuries could make it more vulnerable. Grant Halverson / Getty Images By Jim Root March 17, 2026 Updated 3:19 pm EDT Share full article 2 The Athletic has live coverage of the First Four from 2026 Men’s March Madness. Roster attrition is a factor during the postseason in any sport. Optimistically, college basketball’s shorter regular season should mean the title picture is less altered by injuries than, say, the NBA. That is not necessarily the case this season, though. The injury bug has recently bitten two No. 1 seeds (Duke and Michigan), and a third (Arizona) played through a flurry of nagging injuries late in the season. Multiple All-Americans on dark-horse title contenders are out for the season. Advertisement Below is a repository of all the biggest injuries impacting the men’s NCAA Tournament. We have split them into two categories: Injuries worth monitoring (the players could or will return at some point during the tournament) and out for the season. Injuries to monitor Caleb Foster and Patrick Ngongba II, Duke Both Duke starters missed the ACC tournament. The Blue Devils managed to win that event regardless, but they might need some reinforcements to handle the competition they will see if they reach the Elite Eight and beyond. Ngongba, out with a foot injury, is arguably the more valuable piece due to his defensive presence, elite finishing and sneaky-strong passing. Fortunately for the Blue Devils, he is also much closer to returning than Foster, though"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.nytimes.com/athletic/7125224/2026/03/17/march-madness-2026-player-injuries-caleb-foster-mikel-brown/\",\n    \"text\": \"Key March Madness injuries to know while filling out your men’s NCAA Tournament bracket - The Athletic Premier League Champions League 2026 Men&#x27;s World Cup F1 Tennis FA Cup Cricket La Liga Europa League Women&#x27;s Football Olympics Global Sports Cycling Sailing Sports Business Boxing Golf Serie A Bundesliga International Football NFL NBA MLB World Baseball Classic NHL MLS Transfer News FPL League Cup Championship League One League Two Women&#x27;s Euros NWSL College Sports NCAAF NCAAM Peak MMA Motorsports NASCAR Culture Memorabilia & Collectibles Gaming Sports Betting The PL Is Being Left Behind Welcome to Chelsea, Liam Rosenior PL Player of the Year Nominees Log In Subscribe Now Tickets by Viagogo Connections: Sports Edition REGION U.S. International Search Top News Podcasts NCAAM Bracket Scores & Schedule Teams Alabama Arizona Arkansas Duke Florida Gonzaga Houston Illinois Iowa State Kansas Louisville Miami (FL) Michigan State Michigan Nebraska North Carolina Purdue Saint Mary&#x27;s St. John&#x27;s Tennessee Texas Tech UConn Vanderbilt Virginia Wisconsin Standings Beat Our Expert&#x27;s Bracket Tournament Projections Printable Bracket Predictions Game Men&#x27;s March Mad... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:07:36.785Z",
+      "content": "The article is truncated. Let me search for specific Florida injury news."
+    },
+    {
+      "id": "s16-south-1-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:07:36.785Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Florida basketball injury update March 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:07:37.608Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "NBA Injury Status - 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65",
+          "snippet": "Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve."
+        },
+        {
+          "title": "Florida Gators Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F57%2Fflorida%2Dgators&rut=fe54e68ed00e5db73ac534fefeb25a926e1b706f1559bf72eaba88139ea9258a",
+          "snippet": "Visit ESPN for Florida Gators live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule."
+        },
+        {
+          "title": "NBA on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2F&rut=3448c510d2510078b307cc27724da53fc193ca77ef29681a53707beca5f55cec",
+          "snippet": "Visit ESPN for NBA live scores, video highlights and latest news. Stream games on ESPN and play Fantasy Basketball ."
+        },
+        {
+          "title": "NBA Scores, 2025-26 Season - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Fscoreboard&rut=1b0119b40b01d04d61be0d9c30e0de7923d2167638fa2171cdaf3962d3821a50",
+          "snippet": "Live scores for every 2025-26 NBA season game on ESPN. Includes box scores, video highlights, play breakdowns and updated odds."
+        },
+        {
+          "title": "ESPN.com - Men&#x27;s College Basketball Injuries",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fncb%2Finjuries%2Findex.html&rut=f3167e7dc8b5befef6322d3d7e7dacfb0589d800de5ecd7c1c8688bb1732dcc3",
+          "snippet": "ESPN.com - Men&#x27;s College Basketball Injuries Men&#x27;s College Basketball Slants Dick Vitale Andy Katz Broadcast TV Schedule Video Highlights Audio Highlights SportsMall NikeTown TeamStore Sport ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"NBA Injury Status - 2025-26 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Finjuries&rut=5fbfa085ff644aaebbf391c8f26eac76b17256f9d2964e500074c1f891527d65\",\n      \"snippet\": \"Visit ESPN for the 2025-26 NBA season injury status per team, with details on players that are out, day-to-day, or on the injured reserve.\"\n    },\n    {\n      \"title\": \"Florida Gators Scores, Stats and Highlights - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F57%2Fflorida%2Dgators&rut=fe54e68ed00e5db73ac534fefeb25a926e1b706f1559bf72eaba88139ea9258a\",\n      \"snippet\": \"Visit ESPN for Florida Gators live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule.\"\n    },\n    {\n      \"title\": \"NBA on ESPN - Scores, Stats and Highlights\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2F&rut=3448c510d2510078b307cc27724da53fc193ca77ef29681a53707beca5f55cec\",\n      \"snippet\": \"Visit ESPN for NBA live scores, video highlights and latest news. Stream games on ESPN and play Fantasy Basketball .\"\n    },\n    {\n      \"title\": \"NBA Scores, 2025-26 Season - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fnba%2Fscoreboard&rut=1b0119b40b01d04d61be0d9c30e0de7923d2167638fa2171cdaf3962d3821a50\",\n      \"snippet\": \"Live scores for every 2025-26 NBA season game on ESPN. Includes box scores, video highlights, play breakdowns and updated odds.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:07:42.296Z",
+      "content": "Not finding injury updates. Let me search for Vanderbilt news."
+    },
+    {
+      "id": "s16-south-1-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:07:42.296Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Vanderbilt Commodores Sweet 16 2026 preview",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:07:43.134Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Will Vanderbilt basketball make Sweet 16 in March Madness? Jay Bilas ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fvanderbilt%2Dbasketball%2Dsweet%2D16%2Dmarch%2D183147712.html&rut=4971ca5a29f5dbce72beb0c2c542d8035b9979def165cfa9b1bd486b40530ff3",
+          "snippet": "Bilas predicted every March Madness game and has picked Vanderbilt (26-8), a No. 5 seed in the South Region, to win first- and second-round games before falling to Florida in the Sweet 16 ."
+        },
+        {
+          "title": "McNeese State Cowboys at Vanderbilt Commodores Pick, Odds",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.capperspicks.com%2Ffree%2Dpicks%2Fai%2Fmcneese%2Dstate%2Dcowboys%2Dat%2Dvanderbilt%2Dcommodores%2Dpick%2Dncaa%2Dbasketball%2Dprediction%2Dpreview%2Dodds%2D3%2D19%2D2026%2F&rut=4e6c2e882ac10935f24aa139ac743539ddf69270d0ff45e49e955c6fa0f5bdde",
+          "snippet": "McNeese State Cowboys at Vanderbilt Commodores Pick, NCAA Basketball Prediction, Preview & Odds 3/19/26 March 17, 2026 by PDX PIX Leave a Comment"
+        },
+        {
+          "title": "2026 women&#x27;s March Madness bracket picks: Why Chantel Jennings picked ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fuk.sports.yahoo.com%2Fnews%2F2026%2Dwomen%2Dmarch%2Dmadness%2Dbracket%2D021608199.html&rut=f734917c60c097239105c016ad94fc0650a601f3ccd885d20cadde9277c8fc7b",
+          "snippet": "There&#x27;s a lot to like about Vanderbilt , but what really stands out is how battle-tested the Commodores have become through the regular season."
+        },
+        {
+          "title": "Vanderbilt Commodores Advance in March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Ftn%2Fnashville%2Fnews%2F2026%2F03%2F18%2Fvanderbilt%2Dcommodores%2Dadvance%2Din%2Dmarch%2Dmadness%2F&rut=0366a4a9ec3752a6d00ea371c33a1a8449e485b1b26a98d15eb26e6a03bc00fc",
+          "snippet": "The Vanderbilt Commodores , the SEC&#x27;s smallest and only private university, are experiencing a rare moment of March Madness success. Both the men&#x27;s and women&#x27;s basketball teams have advanced to the Sweet Sixteen of the NCAA Tournament, marking the first time in school history that both programs have reached this stage of the postseason at the same time."
+        },
+        {
+          "title": "Why Vanderbilt is on upset alert in 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fwhy%2Dvanderbilt%2Dbasketball%2Dis%2Don%2Dupset%2Dalert%2Din%2D2026%2Dncaa%2Dtournament&rut=7406e0143a209d25b673908a5f19b72dbf022614ab99896e5dacf295a99d2c93",
+          "snippet": "Why Vanderbilt basketball is on upset alert in 2026 NCAA Tournament Vanderbilt basketball will aim to bring its deep SEC tournament run over to March Madness. But McNeese State will be no pushover."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Will Vanderbilt basketball make Sweet 16 in March Madness? Jay Bilas ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fvanderbilt%2Dbasketball%2Dsweet%2D16%2Dmarch%2D183147712.html&rut=4971ca5a29f5dbce72beb0c2c542d8035b9979def165cfa9b1bd486b40530ff3\",\n      \"snippet\": \"Bilas predicted every March Madness game and has picked Vanderbilt (26-8), a No. 5 seed in the South Region, to win first- and second-round games before falling to Florida in the Sweet 16 .\"\n    },\n    {\n      \"title\": \"McNeese State Cowboys at Vanderbilt Commodores Pick, Odds\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.capperspicks.com%2Ffree%2Dpicks%2Fai%2Fmcneese%2Dstate%2Dcowboys%2Dat%2Dvanderbilt%2Dcommodores%2Dpick%2Dncaa%2Dbasketball%2Dprediction%2Dpreview%2Dodds%2D3%2D19%2D2026%2F&rut=4e6c2e882ac10935f24aa139ac743539ddf69270d0ff45e49e955c6fa0f5bdde\",\n      \"snippet\": \"McNeese State Cowboys at Vanderbilt Commodores Pick, NCAA Basketball Prediction, Preview & Odds 3/19/26 March 17, 2026 by PDX PIX Leave a Comment\"\n    },\n    {\n      \"title\": \"2026 women&#x27;s March Madness bracket picks: Why Chantel Jennings picked ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fuk.sports.yahoo.com%2Fnews%2F2026%2Dwomen%2Dmarch%2Dmadness%2Dbracket%2D021608199.html&rut=f734917c60c097239105c016ad94fc0650a601f3ccd885d20cadde9277c8fc7b\",\n      \"snippet\": \"There&#x27;s a lot to like about Vanderbilt , but what really stands out is how battle-tested the Commodores have become through the regular season.\"\n    },\n    {\n      \"title\": \"Vanderbilt Commodores Advance in March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fnationaltoday.com%2Fus%2Ftn%2Fnashville%2Fnews%2F2026%2F03%2F18%2Fvanderbilt%2Dcommodores%2Dadvance%2Din%2Dmarch%2Dmadness%2F&rut=0366a4a9ec3752a6d00ea371c33a1a8449e485b1b26a98d15eb26e6a03bc00fc\",\n      \"snippet\": \"The Vanderbilt Commodores , the SEC&#x27;s smallest and only private university, are experiencing a rare moment of March Madness success. Both the men&#x27;s and women&#x27;s basketball teams have advanced to the Sweet Sixteen of the NCAA Tournament, marking the first time in school history that both programs have reached this stage of the postseason at the same time.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:07:49.378Z",
+      "content": "Interesting. The Yahoo article says Jay Bilas predicted Vanderbilt to win first and second round games before falling to Florida in the Sweet 16. That's a pick from an analyst. Let me fetch that article."
+    },
+    {
+      "id": "s16-south-1-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:07:49.378Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://sports.yahoo.com/articles/vanderbilt-basketball-sweet-16-march-183147712.html"
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:07:50.265Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://sports.yahoo.com/articles/vanderbilt-basketball-sweet-16-march-183147712.html",
+        "text": "Will Vanderbilt basketball make Sweet 16 in March Madness? Jay Bilas&#x27; prediction - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Streaming TVs Gift ideas Best gifts for men Best gift cards Best gifts for mom Best gifts for teens Best gifts for couples Best gifts for sister-in-law Best gifts for girlfriends Best gifts for grandma Best gifts for sisters Best gifts for husbands Best birthday gifts for her Best get well soon gifts Best travel gifts Best gifts for mother-in-law Best anniversary gifts for wife Stores Amazon Best Buy Coach Outlet Home Depot Kate Spade New York Lowes Macy&#x27;s Nordstrom Sephora Sur La Table Target Ulta Walmart Wayfair Zappos Shopping Guides Best cordless stick vacuums Best water bottles Best vacuums Best air fryers Best luggage Best jeans Best bras Best nontoxic nail polish Best under eye cream Best skin tightening creams Best coffee makers Best comforters Best mops Best Hoka shoes for walking Best instant pot Deals Toys and games General Food Travel Autos EV & Future Tech Classic & Collector Deals & Buying Guides Ownership Safety & Recalls Policy & Environment New Vehicles & Reviews Auto Shows General People & Culture Gift ideas Buying guides Amazon Spring Sale deals Amazon Spring Sale tech deals Entertainment Celebrity TV Movies Music How to Watch Interviews Videos Finance My portfolio News Latest Originals Newsletters Stock market Crypto Earnings Tariffs Economics Tech Housing Fed meeting Markets Most active stocks Top stock gainers Biggest stock losers Trending tickers Highest dividend stocks Crypto Prediction markets Options Sectors Futures World indices Research Equities screener Penny stock screener Most shorted screener Undervalued growth screener Financial calendar Earnings calendar Stock comparison Currency converter Advanced charts Community Personal finance My Money Credit cards Banking Mortgages Mortgage calculator Insurance Taxes Student Loans"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://sports.yahoo.com/articles/vanderbilt-basketball-sweet-16-march-183147712.html\",\n    \"text\": \"Will Vanderbilt basketball make Sweet 16 in March Madness? Jay Bilas&#x27; prediction - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:08:03.717Z",
+      "content": "Truncated. Let me search for \"Florida Vanderbilt Sweet 16 prediction\"."
+    },
+    {
+      "id": "s16-south-1-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:08:03.717Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "\"Florida\" \"Vanderbilt\" Sweet 16 prediction",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:08:04.432Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Will Vanderbilt basketball make Sweet 16 in March Madness? Jay Bilas ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fvanderbilt%2Dbasketball%2Dsweet%2D16%2Dmarch%2D183147712.html&rut=4971ca5a29f5dbce72beb0c2c542d8035b9979def165cfa9b1bd486b40530ff3",
+          "snippet": "Bilas predicted every March Madness game and has picked Vanderbilt (26-8), a No. 5 seed in the South Region, to win first- and second-round games before falling to Florida in the Sweet 16 ."
+        },
+        {
+          "title": "Vanderbilt vs Florida Prediction, Picks & Odds | 14 Mar 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsgambler.com%2Fbetting%2Dtips%2Fbasketball%2Fvanderbilt%2Dcommodores%2Dvs%2Dflorida%2Dgators%2Dprediction%2Dodds%2D2026%2D03%2D14%2F&rut=d669ce619d40933325c0ace0510cf26bc48ebd3577aee27fdb4a104dc2cf6bf4",
+          "snippet": "Vanderbilt vs Florida prediction and same game parlay picks. NCAA College Basketball preview with betting odds, player props and stats."
+        },
+        {
+          "title": "Vanderbilt vs Florida Prediction, Picks & Odds for Today&#x27;s SEC ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fncaab%2Fvanderbilt%2Dvs%2Dflorida%2Dpredictions%2Dpicks%2Dodds%2Dsaturday%2D3%2D14%2D2026&rut=43869881b6e7b9f9c4ab923ae24643aa8ae4a0ef34ba3d7133b7ae8a91e1a56b",
+          "snippet": "These Vanderbilt vs. Florida predictions expect one piece of normalcy to persist in Nashville on Saturday, March 14."
+        },
+        {
+          "title": "Vanderbilt vs. Florida Pick, Odds & Analysis March 14",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.predictem.com%2Fcollege%2Dbasketball%2Fcommodores%2Dvs%2Dgators%2Dprediction%2D2026%2D03%2D14%2F&rut=dcad58934d28269eb964af441c2996c39ba8f1213ea866840ceebe7b5abedee4",
+          "snippet": "The pace clash is the wildcard here. Florida wants 72 possessions; Vanderbilt wants 65. The blended projection sits at 68.5, which favors Vanderbilt&#x27;s style more than Florida&#x27;s . Every possession the Gators don&#x27;t get is one less opportunity to exploit their rebounding advantage and one more chance for Vanderbilt to execute in the halfcourt. KenPom&#x27;s got Florida winning 83-77 with a 71% ..."
+        },
+        {
+          "title": "Vanderbilt Commodores vs Florida Gators Picks, Prediction, Odds, and ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwinnersandwhiners.com%2Ffree%2Dpicks%2Fcollege%2Dbasketball%2Fvanderbilt%2Dcommodores%2Dvs%2Dflorida%2Dgators%2Dpicks%2Dprediction%2Dodds%2Dand%2Dline%2Dmovement%2Dfor%2Dsaturday%2Dmarch%2D14%2D2026&rut=c6fc62e947e4ef7a94d670f879523eff316ebb15e31a38521a611083726e27fc",
+          "snippet": "The SEC Tournament semifinals have delivered high-octane basketball all week, and Saturday&#x27;s Florida vs Vanderbilt prediction may be the most compelling number on the board. The Gators have steamrolled through the bracket behind one of the most physically dominant frontcourts in the country, w..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Will Vanderbilt basketball make Sweet 16 in March Madness? Jay Bilas ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fvanderbilt%2Dbasketball%2Dsweet%2D16%2Dmarch%2D183147712.html&rut=4971ca5a29f5dbce72beb0c2c542d8035b9979def165cfa9b1bd486b40530ff3\",\n      \"snippet\": \"Bilas predicted every March Madness game and has picked Vanderbilt (26-8), a No. 5 seed in the South Region, to win first- and second-round games before falling to Florida in the Sweet 16 .\"\n    },\n    {\n      \"title\": \"Vanderbilt vs Florida Prediction, Picks & Odds | 14 Mar 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsgambler.com%2Fbetting%2Dtips%2Fbasketball%2Fvanderbilt%2Dcommodores%2Dvs%2Dflorida%2Dgators%2Dprediction%2Dodds%2D2026%2D03%2D14%2F&rut=d669ce619d40933325c0ace0510cf26bc48ebd3577aee27fdb4a104dc2cf6bf4\",\n      \"snippet\": \"Vanderbilt vs Florida prediction and same game parlay picks. NCAA College Basketball preview with betting odds, player props and stats.\"\n    },\n    {\n      \"title\": \"Vanderbilt vs Florida Prediction, Picks & Odds for Today&#x27;s SEC ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fncaab%2Fvanderbilt%2Dvs%2Dflorida%2Dpredictions%2Dpicks%2Dodds%2Dsaturday%2D3%2D14%2D2026&rut=43869881b6e7b9f9c4ab923ae24643aa8ae4a0ef34ba3d7133b7ae8a91e1a56b\",\n      \"snippet\": \"These Vanderbilt vs. Florida predictions expect one piece of normalcy to persist in Nashville on Saturday, March 14.\"\n    },\n    {\n      \"title\": \"Vanderbilt vs. Florida Pick, Odds & Analysis March 14\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.predictem.com%2Fcollege%2Dbasketball%2Fcommodores%2Dvs%2Dgators%2Dprediction%2D2026%2D03%2D14%2F&rut=dcad58934d28269eb964af441c2996c39ba8f1213ea866840ceebe7b5abedee4\",\n      \"snippet\": \"The pace clash is the wildcard here. Florida wants 72 possessions; Vanderbilt wants 65. The blended projection sits at 68.5, which favors Vanderbilt&#x27;s style more than Florida&#x27;s . Every possession the Gators don&#x27;t get is one less opportunity to exploit their rebounding advantage and one more chance for Vanderbilt to execute in the halfcourt. KenPom&#x27;s got Florida winning 83-77 with a 71% ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "s16-south-1-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T11:08:08.447Z",
+      "content": "Let me fetch the Predictem article for analysis."
+    },
+    {
+      "id": "s16-south-1-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T11:08:08.447Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.predictem.com/college-basketball/commodores-vs-gators-prediction-2026-03-14/"
+      },
+      "content": ""
+    },
+    {
+      "id": "s16-south-1-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T11:08:11.911Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.predictem.com/college-basketball/commodores-vs-gators-prediction-2026-03-14/",
+        "text": "Vanderbilt vs. Florida Pick, Odds & Analysis March 14 Free Picks NFL Picks College Football Picks NBA Picks College Basketball Picks UFC Picks MLB Picks Boxing Picks NASCAR Picks Golf Picks Free Bets Best Sportsbooks Bonuses Sportsbook Promo Codes Reduced Juice $1 Min Deposit Sportsbooks Bitcoin Parlay Odds Teaser Odds MLB Dime Lines Free $100 Betting Sites Bovada MyBookie BetOnline BetAnything XBet Everygame SportsBetting BetNow WagerWeb Sportsbook News Sports Betting Horse Betting Aqueduct Picks Gulfstream Park Picks Santa Anita Picks Racebooks Race Betting Guide Forum Vanderbilt vs Florida Prediction: SEC Tournament Efficiency Clash by Bryan Bash | Mar 14, 2026 | cbb Bash is fading the public narrative and backing Vanderbilt to cover in a pace-clash SEC Tournament semifinal where the model sees 5.1 points of value against a Florida team that&#8217;s been overvalued by the market. The Line and the Thesis Florida&#8217;s laying 8 points against Vanderbilt in Saturday&#8217;s SEC Tournament semifinal at Bridgestone Arena, and I&#8217;m already hearing the chorus: &#8220;But Florida&#8217;s #4 in the country! They&#8217;re on a 10-game win streak!&#8221; Look, I get it. The Gators are elite. But when you dig into the collegebasketballdata.com numbers, this spread is inflated by poll position rather than actual efficiency separation. Florida checks in at #4 in adjusted net efficiency with a +35.3 rating. Vanderbilt sits at #16 with +26.9. That&#8217;s an 8.4-point gap on a neutral floor, and the market just hung an 8-point spread. The math doesn&#8217;t support giving away free points here. This is a classic mid-major metric gap vs. Power 5 public perception spot—except both teams are Power 5, and Vanderbilt&#8217;s efficiency profile is being disrespected because they don&#8217;t carry the same brand recognition. The model projects Florida by 2.9 points with a total around 151. The market disagrees by more than a full possession on the spread and nine points on the total. That&#8217;s not a minor discrepancy—that&#8217;s a market overreaction to recent results and poll rankings. Why the Market Landed Here Florida&#8217;s 10-game winning streak is real, and their 17-2 SEC record is dominant. But let&#8217;s talk about strength of schedule context from Warren Nolan. Florida&#8217;s SOS ranks #11 nationally, while Vanderbilt&#8217;s sits at #26. Both teams have been battle-tested, but Vanderbilt&#8217;s played a tougher non-conference slate (NC SOS #58 vs. Florida&#8217;s #14), and their efficiency metrics suggest they&#8217;re closer to Florida than the spread implies. The Gators are #10 in adjusted offensive efficiency (125.5) and #5 in adjusted defensive efficiency (90.2). Vanderbilt counters with #8 offense (126.2) and #31 defense (99.3). Here&#8217;s the key: Vanderbilt&#8217;s offense is actually more efficient than Florida&#8217;s when you adjust for competition. The 0.7-point gap favors the Commodores. The market&#8217;s pricing in Florida&#8"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.predictem.com/college-basketball/commodores-vs-gators-prediction-2026-03-14/\",\n    \"text\": \"Vanderbilt vs. Florida Pick, Odds & Analysis March 14 Free Picks NFL Picks College Football Picks NBA Picks College Basketball Picks UFC Picks MLB Picks Boxing Picks NASCAR Picks Golf Picks Free Bets Best Sportsbooks Bonuses Sportsbook Promo Codes Reduced Juice $1 Min Deposit Sportsbooks Bitcoin Parlay Odds Teaser Odds MLB Dime Lines Free $100 Betting Sites Bovada MyBookie BetOnline BetAnything XBet Everygame SportsBetting BetNow WagerWeb Sportsbook News Sports Betting Horse Betting Aqueduct Picks Gulfstream Park Picks Santa Anita Picks Racebooks Race Betting Guide Forum Vanderbilt vs Florida Prediction: SEC Tournament Efficiency Clash by Bryan Bash | Mar 14, 2026 | cbb Bash is fading the public narrative and backing Vanderbilt to cover in a pace-clash SEC Tournament semifinal where the model sees 5.1 points of value against a Florida team that&#8217;s been overvalued by the market. The Line and the Thesis Florida&#8217;s laying 8 points against Vanderbilt in Saturday&#8217;s SEC Tournament semifinal at Bridgestone Arena, and I&#8217;m already hearing the chorus: &#8220;But Florida&#8217;s #4 in the country! They&#8217;re on a 10-game win streak!&#8221; Look, I get it. The Gators a... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "s16-south-1-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T11:09:18.776Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"s16-south-1\",\n    \"winnerId\": \"vanderbilt\",\n    \"confidence\": 0.68,\n    \"rationale\": \"Vanderbilt's recent 91-74 victory over Florida in the SEC Tournament semifinal demonstrates their ability to exploit the Gators' weaknesses and provides a psychological edge. The Commodores' elite top-10 offense, which has carried them through the tournament, matches up well against Florida's stout defense. In a Sweet 16 rematch, Vanderbilt's confidence from that win and balanced attack should be enough to secure a narrow victory.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"s16-south-1-analysis\",\n    \"title\": \"Sweet 16 South: Florida vs Vanderbilt Holistic Evaluation\",\n    \"summary\": \"Analyzed efficiency ratings, recent head-to-head result, and tournament context to determine that Vanderbilt's offensive firepower and recent win over Florida give them a slight edge in this competitive matchup.\",\n    \"evidence\": \"Ratings: Florida ranked 4th in Torvik and KenPom with top-5 defense; Vanderbilt ranked 10th in Torvik and 12th in KenPom with top-6 offense. Head-to-head: Vanderbilt defeated Florida 91-74 in the SEC Tournament semifinal on March 14, 2026. Injury search did not reveal new concerns for either team, suggesting both are at full strength for the Sweet 16.\"\n  }\n}"
+    }
+  ]
+}
