@@ -71,6 +71,12 @@ body {
     line-height: 1.5;
 }
 
+.app-frame {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .theme-toggle {
     position: fixed;
     top: 18px;
@@ -190,6 +196,20 @@ h3 {
     width: min(1120px, calc(100vw - 32px));
     margin: 0 auto;
     padding: 24px 0 48px;
+    flex: 1 0 auto;
+}
+
+.site-footer {
+    width: min(1120px, calc(100vw - 32px));
+    margin: 0 auto;
+    padding: 0 0 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
 .hero,
@@ -1213,6 +1233,11 @@ h3 {
         grid-row: 3;
         justify-self: start;
         text-align: left;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .model-summary {
