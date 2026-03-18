@@ -3,13 +3,13 @@ import { BracketBoard } from "@/components/bracket-board";
 import { loadRunManifest, loadSubmissionView } from "@/lib/repository";
 import { notFound } from "next/navigation";
 
-const RUN_ID = "demo-2026";
+const RUN_ID = "2026";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const manifest = await loadRunManifest(RUN_ID);
   return manifest.submissions.map((submission) => ({
-    modelId: submission.modelId
+    modelId: submission.modelId,
   }));
 }
 

@@ -1,0 +1,895 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mimo",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "r64-midwest-7",
+  "generatedAt": "2026-03-18T10:22:12.564Z",
+  "pick": {
+    "gameId": "r64-midwest-7",
+    "winnerId": "kentucky",
+    "confidence": 0.78,
+    "rationale": "Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance."
+  },
+  "reasoningStep": {
+    "id": "1",
+    "title": "Team Quality and Efficiency Metrics",
+    "summary": "Kentucky ranks 28th in KenPom and 32nd in Torvik, while Santa Clara ranks 35th in KenPom and 28th in Torvik, showing a close overall quality but with Kentucky's defense being significantly better.",
+    "evidence": "Kentucky's adjD is 99.1 (KenPom) and 99.94 (Torvik), compared to Santa Clara's 104.3 and 103.66, indicating a defensive edge for the Wildcats."
+  },
+  "toolCalls": [
+    {
+      "id": "tool-ws81i1g7",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "kentucky",
+          "santa-clara"
+        ]
+      },
+      "startedAt": "2026-03-18T10:21:05.884Z",
+      "completedAt": "2026-03-18T10:21:05.889Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "kentucky",
+          "teamName": "Kentucky",
+          "torvik": {
+            "rank": 32,
+            "team": "Kentucky",
+            "conf": "SEC",
+            "record": "21-13",
+            "adjoe": 119.85606007066336,
+            "oe Rank": 40,
+            "adjde": 99.94110481724763,
+            "de Rank": 32,
+            "barthag": 0.8898951272957313,
+            "rank.1": 32,
+            "proj. W": 21,
+            "Proj. L": 13,
+            "Pro Con W": 10,
+            "Pro Con L": 8,
+            "Con Rec.": "10-8",
+            "sos": 0.7362764410833077,
+            "ncsos": 0.5233848857064667,
+            "consos": 0.8683919068615373,
+            "Proj. SOS": 0.7362764410833077,
+            "Proj. Noncon SOS": 0.5233848857064667,
+            "Proj. Con SOS": 0.8683919068615373,
+            "elite SOS": 0.5922501087172751,
+            "elite noncon SOS": 0.7310092009810059,
+            "Opp OE": 118.11508589459228,
+            "Opp DE": 104.1789245230384,
+            "Opp Proj. OE": 118.11508589459228,
+            "Opp Proj DE": 104.1789245230384,
+            "Con Adj OE": 121.07429630675506,
+            "Con Adj DE": 101.39951219596418,
+            "Qual O": 119.33265666425687,
+            "Qual D": 100.99560281183358,
+            "Qual Barthag": 0.8719864258964943,
+            "Qual Games": 20,
+            "FUN": 0.0432104748905605,
+            "ConPF": 1414,
+            "ConPA": 1404,
+            "ConPoss": 1245.875,
+            "ConOE": 1.13494531955453,
+            "ConDE": 1.126918832146082,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5555555555555556,
+            "WAB": 3.228408757133929,
+            "WAB Rk": 30,
+            "Fun Rk": 81,
+            "adjt": 68.29361532377644
+          },
+          "kenpom": {
+            "rank": 28,
+            "team": "Kentucky",
+            "conf": "SEC",
+            "record": "21-13",
+            "adj_em": 21.47,
+            "adj_o": 120.5,
+            "adj_o_rank": 39,
+            "adj_d": 99.1,
+            "adj_d_rank": 27,
+            "adj_t": 68.4,
+            "adj_t_rank": 124,
+            "luck": -0.019,
+            "luck_rank": 235,
+            "sos_adj_em": 15.85,
+            "sos_adj_em_rank": 6,
+            "sos_opp_o": 119.1,
+            "sos_opp_o_rank": 5,
+            "sos_opp_d": 103.2,
+            "sos_opp_d_rank": 21,
+            "ncsos_adj_em": 1.23,
+            "ncsos_adj_em_rank": 142
+          }
+        },
+        {
+          "teamId": "santa-clara",
+          "teamName": "Santa Clara",
+          "torvik": {
+            "rank": 28,
+            "team": "Santa Clara",
+            "conf": "WCC",
+            "record": "26-8",
+            "adjoe": 124.9813866099338,
+            "oe Rank": 15,
+            "adjde": 103.65963030294128,
+            "de Rank": 76,
+            "barthag": 0.8957714144040974,
+            "rank.1": 28,
+            "proj. W": 26,
+            "Proj. L": 8,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.6123840398028353,
+            "ncsos": 0.5496543998188612,
+            "consos": 0.6197183673730097,
+            "Proj. SOS": 0.6123840398028353,
+            "Proj. Noncon SOS": 0.5496543998188612,
+            "Proj. Con SOS": 0.6197183673730097,
+            "elite SOS": 0.7652114095576885,
+            "elite noncon SOS": 0.8147671989795817,
+            "Opp OE": 111.80756414343806,
+            "Opp DE": 105.12064042867485,
+            "Opp Proj. OE": 111.80756414343806,
+            "Opp Proj DE": 105.12064042867485,
+            "Con Adj OE": 125.87117278431568,
+            "Con Adj DE": 103.18315988173084,
+            "Qual O": 121.85226541938889,
+            "Qual D": 104.67246636316835,
+            "Qual Barthag": 0.8516615282822377,
+            "Qual Games": 8,
+            "FUN": 0.0059195971890551,
+            "ConPF": 1569,
+            "ConPA": 1330,
+            "ConPoss": 1280.9500000000005,
+            "ConOE": 1.224872165189898,
+            "ConDE": 1.03829189273586,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": 2.097848164042765,
+            "WAB Rk": 36,
+            "Fun Rk": 159,
+            "adjt": 69.24329289306755
+          },
+          "kenpom": {
+            "rank": 35,
+            "team": "Santa Clara",
+            "conf": "WCC",
+            "record": "26-8",
+            "adj_em": 19.42,
+            "adj_o": 123.7,
+            "adj_o_rank": 23,
+            "adj_d": 104.3,
+            "adj_d_rank": 81,
+            "adj_t": 69.2,
+            "adj_t_rank": 82,
+            "luck": 0.015,
+            "luck_rank": 142,
+            "sos_adj_em": 5.99,
+            "sos_adj_em_rank": 85,
+            "sos_opp_o": 111.8,
+            "sos_opp_o_rank": 92,
+            "sos_opp_d": 105.9,
+            "sos_opp_d_rank": 77,
+            "ncsos_adj_em": 3.87,
+            "ncsos_adj_em_rank": 88
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-yw5oov2j",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Kentucky basketball 2026 March Madness injury news roster",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:21:09.425Z",
+      "completedAt": "2026-03-18T10:21:10.318Z",
+      "summary": "Returned 5 search results for \"Kentucky basketball 2026 March Madness injury news roster\".",
+      "result": [
+        {
+          "title": "Jaland Lowe injury, Kentucky basketball roster as March Madness nears",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fkentucky%2F2026%2F03%2F12%2Fjaland%2Dlowe%2Dinjury%2Dkentucky%2Dbasketball%2Droster%2Duk%2Dsec%2Dtournament%2Dbracket%2Dky%2Dflorida%2Dgame%2Dtime%2Dchannel%2F89033697007%2F&rut=c40034fabc61ea7c7c55901720d230b1e635419195dca5d57c44b40d0043af9e",
+          "snippet": "Will Jaland Lowe be back in the mix for Mark Pope and Kentucky Wildcats basketball next season? That&#x27;s the plan, the guard said at the SEC Tournament."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for."
+        },
+        {
+          "title": "Kentucky Wildcats Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fkentucky%2Dwildcats%2Finjuries&rut=e59dd5c3b113447322f17c8c2a3ea62eecf483f7fe4f16ddd7aa4b5603342e27",
+          "snippet": "Stay In the Know: Check Out Kentucky Wildcats Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Men&#x27;s Basketball - UK Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fukathletics.com%2Fsports%2Fmbball%2F&rut=2590beafcfba4e961257eb05b89e8326957aa745a9ba40667aa3253c6d824082",
+          "snippet": "The Official Athletic Site of UK Athletics, partner of WMT Digital. The most comprehensive coverage of Kentucky Wildcats Men&#x27;s Basketball on the web with highlights, scores, news , schedules, rosters , and more!"
+        }
+      ]
+    },
+    {
+      "id": "tool-am6wj4id",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144"
+      },
+      "startedAt": "2026-03-18T10:21:12.220Z",
+      "completedAt": "2026-03-18T10:21:12.723Z",
+      "summary": "Fetched https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144",
+        "text": "March Madness 2026 Injuries: Key News By Region in the NCAA Tournament | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injuries: March Madness First Round NCAA Tournament injuries to consider are reviewed. Discover which player are in, out or uncertain before filling out your brackets for March Madness 2026. Updated on March 17, 2026 5:33PM EST Share Share to X Share to Reddit Share to Facebook Share To BlueSky By: Ryan Andrade X logo @Roto_Ryan Updated on March 17, 2026 5:33PM EST Smart Money NEW "
+      }
+    },
+    {
+      "id": "tool-e18bo985",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Santa Clara basketball 2026 March Madness injury news roster",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:21:17.106Z",
+      "completedAt": "2026-03-18T10:21:17.893Z",
+      "summary": "Returned 5 search results for \"Santa Clara basketball 2026 March Madness injury news roster\".",
+      "result": [
+        {
+          "title": "Santa Clara Broncos Men&#x27;s College Basketball Roster - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Froster%2F_%2Fid%2F2541&rut=a8ab5fc16b091c2aaca85c1e31c2938002b4cb00ba4581a8f75aca82f0c46059",
+          "snippet": "Explore the 2025-26 Santa Clara Broncos NCAAM roster on ESPN. Includes full details on point guards, shooting guards, power forwards, small forwards and centers."
+        },
+        {
+          "title": "2025-26 Santa Clara Broncos Men&#x27;s Roster and Stats | College Basketball ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fsanta%2Dclara%2Fmen%2F2026.html&rut=0b9989064c3ec2a8d2abd1cd59cdb917a6e4a9dbcf2dd9c9a749096b8c08268d",
+          "snippet": "Check out the detailed 2025-26 Santa Clara Broncos Roster and Stats for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "Men&#x27;s Basketball - Santa Clara University",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsantaclarabroncos.com%2Fsports%2Fmens%2Dbasketball&rut=4c5849272ff98daf6502224bfacffb06cbc5bbd6f3c25b511fcacc7884eb59d4",
+          "snippet": "The official Men&#x27;s Basketball page for the Santa Clara University"
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for."
+        },
+        {
+          "title": "Santa Clara returns to March Madness for first time in three decades",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mercurynews.com%2F2026%2F03%2F15%2Fsanta%2Dclara%2Dmarch%2Dmadness%2Ddrought%2Dkentucky%2Dbracket%2F&rut=ea32be896818df9b3b52fcb7479ae4ff21cf35c298d7071846b5cbd103c10506",
+          "snippet": "Members of the Santa Clara University mens basketball team react to their selection in the NCAA March Madness tournament on Sunday, March 15, 2026 , in Santa Clara , Calif. (Aric Crabb/Bay Area News ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-arp4zk95",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2541"
+      },
+      "startedAt": "2026-03-18T10:21:21.225Z",
+      "completedAt": "2026-03-18T10:21:21.630Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/team/roster/_/id/2541 and extracted 2283 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2541",
+        "text": "Santa Clara Broncos Men&#x27;s College Basketball Roster - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search Santa Clara Broncos 26-8 3rd in WCC Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator Santa Clara Broncos Roster 2025-26 Team Roster Name POS HT WT Class Birthplace Noah Badibanga 10 F 6&#x27; 8&quot; 185 lbs FR Toulouse, France Francis Chukwudebelu 3 C 6&#x27; 10&quot; 220 lbs FR Dallas, TX KJ Cochran 7 G 6&#x27; 5&quot; 195 lbs FR West Chester, PA Thierry Darlan 15 G 6&#x27; 8&quot; 210 lbs JR Bangui, Central African Republic Malachi Douyon 54 G 6&#x27; 3&quot; 185 lbs SR Santa Cruz, CA Jake Ensminger 44 G 6&#x27; 9&quot; 215 lbs JR Ulm, Germany Sash Gavalyugov 2 G 6&#x27; 3&quot; 175 lbs FR Botevgrad, Bulgaria Allen Graves 22 F 6&#x27; 9&quot; 225 lbs FR Ponchatoula, LA Christian Hammond 1 G 6&#x27; 4&quot; 195 lbs SO Denver, CO Brenton Knapper 0 G 6&#x27; 0&quot; 175 lbs SR Charleston, WV Brad Longcor III 4 G 6&#x27; 4&quot; 180 lbs FR Quincy, IL Elijah Mahi 8 F 6&#x27; 7&quot; 220 lbs SR Toronto, Canada Gehrig Normand 9 G 6&#x27; 6&quot; 190 lbs SO North Richland Hills, TX Bukky Oboye 12 C 7&#x27; 1&quot; 220 lbs SO Houston, TX Juan Reyna 51 G 6&#x27; 3&quot; 195 lbs SR San Antonio, TX Chris Tadjo 14 F 6&#x27; 7&quot; 250 lbs SO Montreal, Canada Brendan Yarusso 50 G 6&#x27; 1&quot; 185 lbs SR Lombard, IL Coach Herb Sendek Men&#x27;s College Basketball News Tramon Mark&#x27;s late jumper gives Texas a 68-66 win over NC State in the First Four — Tramon Mark hit a fadeaway jumper from just inside the 3-point line with 1.1 seconds left, and Texas survived a late rally to beat N.C. State 68-66 on Tuesday night in a First... 37m Duke and Siena meet in first round of NCAA Tournament Siena Saints (23-11, 16-7 MAAC) vs. Duke Blue Devils (32-2, 20-1 ACC) 2h Georgia and Saint Louis meet in opening round of NCAA Tournament Saint Louis Billikens (28-5, 16-4 A-10) vs. Georgia Bulldogs (22-10, 10-9 SEC) 2h All NCAAM News Terms of Use Privacy Policy EU Privacy Rights Cookie Policy Manage Privacy Preferences © ESPN Enterprises, Inc. All rights reserved."
+      }
+    },
+    {
+      "id": "tool-sdkwuqpz",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Kentucky vs Santa Clara 2026 March Madness matchup preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:21:22.792Z",
+      "completedAt": "2026-03-18T10:21:23.609Z",
+      "summary": "Returned 5 search results for \"Kentucky vs Santa Clara 2026 March Madness matchup preview\".",
+      "result": [
+        {
+          "title": "Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fkentucky%2Dsanta%2Dclara%2Dmarch%2Dmadness%2Dbracket%2Dpick%2F5e9ab0508c1261fd9ce94b5f&rut=b6d8e0978d79baf32f6024c56e7f6a9e082f092f276fe446bef7cadc2b691372",
+          "snippet": "Here is a complete guide to picking No. 7 Kentucky and No. 10 Santa Clara in your 2026 March Madness bracket, including updated odds and our expert predictions for the Midwest Region game."
+        },
+        {
+          "title": "Kentucky vs Santa Clara picks, predictions, odds for March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F16%2Fkentucky%2Dsanta%2Dclara%2Dpicks%2Dpredictions%2Dodds%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2F88420304007%2F&rut=9df88d887ef0964ee41305befd0073860809e90c5c12f06deca72956c4459007",
+          "snippet": "March Madness picks, predictions, odds for Santa Clara vs Kentucky NCAA Tournament first-round Midwest Region game Friday, March 20, 2026 . Who wins?"
+        },
+        {
+          "title": "Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=9a974f0c48e88feeffacc4cebf866e55700106f933d0435f198442b05a7ec3a6",
+          "snippet": "The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#x27;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament!"
+        },
+        {
+          "title": "Kentucky Vs. Santa Clara Preview: Key Matchups, Predictions, And ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.stadiumrant.com%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dpreview%2Dkey%2Dmatchups%2F&rut=3dff3c27f2682726e27e01f00aea15c60a1292767cf66d9267ecb14006dfba12",
+          "snippet": "A game between the Kentucky Wildcats and the Santa Clara Broncos is just the type of matchup that often becomes a trendy upset pick. The Wildcats and Broncos will do battle on Friday at 12:15 ET to kick off the madness and with so much on the line, it&#x27;s critical to get off to a hot start. Santa Clara Scouting Report The Broncos arrive with confidence after an impressive WCC run. Coach Herb ..."
+        },
+        {
+          "title": "Santa Clara vs. Kentucky Prediction | 2026 March Madness Picks & Odds",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fsanta%2Dclara%2Dvs%2Dkentucky%2Dprediction%2Dpicks%2Dodds%2Dmarch%2Dmadness%2D2026%2F&rut=de75f7ac9418e63869c6e45d178c7f58c6bac4d236979e9d0563e9d20fb132a9",
+          "snippet": "My Santa Clara vs . Kentucky prediction breaks down the best bets, player props, and same-game parlay I&#x27;m betting for March Madness First Round."
+        }
+      ]
+    },
+    {
+      "id": "tool-77aer3oh",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f"
+      },
+      "startedAt": "2026-03-18T10:21:44.255Z",
+      "completedAt": "2026-03-18T10:21:44.887Z",
+      "summary": "Fetched https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f",
+        "text": "Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Stre"
+      }
+    },
+    {
+      "id": "tool-us3udjl6",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.usatoday.com/story/sports/college/2026/03/16/kentucky-santa-clara-picks-predictions-odds-march-madness-ncaa-tournament/88420304007/"
+      },
+      "startedAt": "2026-03-18T10:21:48.453Z",
+      "completedAt": "2026-03-18T10:21:49.608Z",
+      "summary": "Fetched https://www.usatoday.com/story/sports/college/2026/03/16/kentucky-santa-clara-picks-predictions-odds-march-madness-ncaa-tournament/88420304007/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.usatoday.com/story/sports/college/2026/03/16/kentucky-santa-clara-picks-predictions-odds-march-madness-ncaa-tournament/88420304007/",
+        "text": "Kentucky vs Santa Clara picks, predictions for NCAA March Madness game Skip to main content Home NCAAB NCAAW MLB Women's Sports NFL NBA NCAAF WNBA Sports Betting Big Ten Sports SEC Sports Boxing Coaches Salaries Draft Hub Fantasy Football For The Win Formula 1 Golfweek High School Sports High School Sports Awards IndyCar MMA NASCAR National Signing Day NHL Olympics Soccer Sports Business Sports Pulse Sports Seriously Tennis WWE Youth Sports Outdoors Fantasy Bet With the People Clear Play Arizona Sports Indiana Sports Michigan Sports Ohio Sports Tennessee Sports Wisconsin Teams For Subscribers Kentucky vs Santa Clara picks, predictions, odds for March Madness Jeremy Cluff Arizona Republic Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. No. 7 seed Kentucky and No. 10 seed Santa Clara play Friday, March 20, in a March Madness NCAA Tournament first-round game . The Midwest Region game is scheduled for 9:15 a.m. MST and can be seen on CBS ( stream with FUBO ). Who will win the March Madness game and advance to the second round in the NCAA Tournament bracket ? Check out these March Madness picks and March Madness predictions for the men's college basketball NCAA Tournament matchup . Kentucky is a 2.5-point favorite over Santa Clara in the game in March Madness odds provided by BetMGM Sportsbook . The Wildcats are -150 on the moneyline. The Broncos are +125. The over/under for the game is set at 160.5 points. March Madness picks: Ohio State-TCU | Nebraska-Troy | Louisville-South Florida | Wisconsin-High Point | Duke-Siena | Vanderbilt-McNeese | Michigan State-North Dakota State | Arkansas-Hawaii | North Carolina-VCU | Saint Mary's-Texas A&M | Illinois-Penn | Georgia-Saint Louis | Gonzaga-Kennesaw State | Houston-Idaho | Kentucky-Santa Clara | Texas Tech-Akron | Arizona-Long Island | Virginia-Wright State | Iowa State-Tennessee State | Alabama-Hofstra | Villanova-Utah State | Clemson-Iowa | St. John's-UNI | UCLA-UCF | Purdue-Queens | Kansas-Cal Baptist | UConn-Furman | Miami-Missouri | The Republic's score predictions Watch Kentucky vs Santa Clara on FUBO (free trial) The Arizona Republic : Santa Clara 83, Kentucky 80 Jeremy Cluff writes: \"The Wildcats struggled down the stretch. Could they be on upset alert against the Broncos? Yes. The Broncos are capable of giving Big Blue Nation fits.\" March Madness picks: Predictions for NCAA Tournament first-round games Dimers : Kentucky 82, Santa Clara 79 It writes: \"After extensive simulations, our model gives Santa Clara a win probability of 40%, while Kentucky has a win probability of 60%.\" How to watch March Madness: Ohio State-TCU | Nebraska-Troy | Louisville-South Florida | Wisconsin-High Point | Duke-Siena | Vanderbilt-McNeese | Michigan State-North Dakota State | Arkansas-Hawaii | North Carolina-VCU | Saint Mary's-Texas A&M | Illinois-Penn | Georgia-Sain"
+      }
+    },
+    {
+      "id": "tool-lr14o3kb",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/"
+      },
+      "startedAt": "2026-03-18T10:21:56.280Z",
+      "completedAt": "2026-03-18T10:21:57.426Z",
+      "summary": "Fetched https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/",
+        "text": "Kentucky vs. Santa Clara: NCAA Tournament Predictions &#038; Preview | BettingPros to prevent flash of incorrect theme on page load --> Skip to main content Skip to navigation Skip to footer Click to go to homepage Picks Odds Tools Research Leaders Click to expand More menu Home Games Picks Upgrade Menu Click to Find a bet ... Contest Click to expand picks panel Click to open Sharp AI Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview by BettingPros Staff | @BettingPros | Mar 15, 2026 by BettingPros Staff | @BettingPros | Mar 15, 2026 The 2026 NCAA Tournament is officially here! The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#8217;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament! We&#8217;re here to help as we&#8217;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for Kentucky vs. Santa Clara. NCAA Tournament Odds NCAA Tournament Pick&#8217;Em Contest NCAA Tournament March Madness Bracket Optimizer NCAA Tournament Betting Trends 2026 NCAA Tournament Predictions & Preview: Kentucky vs. Santa Clara Here are the odds for this opening-round matchup of the 2026 NCAA Tournament. Let&#8217;s dive into our preview and predictions for this NCAA Tournament matchup. Kentucky 2026 NCAA Tournament Preview Mark Pope&#8217;s second season in Lexington has been nothing but adversity management, and it didn&#8217;t quite produce the results the fanbase expected. Kentucky started the year ninth in the AP Preseason Poll, then it was seemingly all downhill from there with the injuries that have hit this squad. Kentucky went 9-4 with the 50th-ranked offense in non-conference play. Then, SEC play started, and the Wildcats ended up as a 9-seed in the conference tournament, playing in the first round against LSU. The problem is that the roster never found its footing for an entire month-long stretch. Injuries created lineup inconsistencies that made it hard to build any real continuity, and a 2-5 finish to the regular season raised fresh questions about this group&#8217;s ceiling. This is an all-around team propped up by Otega Oweh that has competed against one of the toughest schedules in hoops. Kentucky does everything reasonable well but nothing spectacularly, ranking in the top 75 in offensive turnover rate and offensive rebound rate, and 102nd in effective field goal percentage. Over their last month of play, the Wildcats went 4-5, ranking outside the top 40 on both ends of the court. Kentucky&#8217;s brand is bigger than this team, and the Wildcats lack the talent to make a deep run. Pope will have them ready to compete. Whether that&#8217;s enough to make it to the second weekend is left to be discovered. Santa Clara 2026 NCAA Tournament Preview Herb Sendek&#8217;s Broncos had their best season in decades, finishing 26-8 overall and reaching the WCC Tournament championship game"
+      }
+    },
+    {
+      "id": "tool-qxiq6auu",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Kentucky Santa Clara March Madness 2026 injury",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:22:02.700Z",
+      "completedAt": "2026-03-18T10:22:03.343Z",
+      "summary": "Returned 0 search results for \"Kentucky Santa Clara March Madness 2026 injury\".",
+      "result": []
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r64-midwest-7-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T10:21:04.820Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r64-midwest-7\nCurrent game label: Midwest 7/10\nRound: Round of 64\nResolved teams: Kentucky (kentucky) vs Santa Clara (santa-clara)\nPrior committed picks: 34"
+    },
+    {
+      "id": "r64-midwest-7-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T10:21:04.820Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r64-midwest-7\",\n      \"round\": \"Round of 64\",\n      \"region\": \"Midwest\",\n      \"label\": \"Midwest 7/10\",\n      \"slotA\": {\n        \"kind\": \"team\",\n        \"teamId\": \"kentucky\"\n      },\n      \"slotB\": {\n        \"kind\": \"team\",\n        \"teamId\": \"santa-clara\"\n      }\n    },\n    \"slotAName\": \"Kentucky\",\n    \"slotBName\": \"Santa Clara\",\n    \"slotATeamId\": \"kentucky\",\n    \"slotBTeamId\": \"santa-clara\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Texas holds a clear edge in advanced metrics, ranking 37th in KenPom and 45th in Torvik compared to NC State's unranked status, and they just defeated the Wolfpack 68-66 in a tight First Four game where Tramon Mark hit a game-winning jumper. While NC State showed resilience and kept the game close, Texas's superior offensive efficiency and proven ability to execute in clutch moments give them the advantage in this rematch. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Texas's experience and recent head-to-head win make them the more reliable pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"SMU holds a significant edge in advanced metrics, ranking 42nd in KenPom and Torvik compared to Miami (OH)'s 87th-93rd range, with a stronger adjusted offensive efficiency (123 vs. 116.8) that should exploit the RedHawks' weaker defense. While Miami (OH) boasts an impressive 31-1 record, their competition level in the MAC is inferior, and SMU's experience in the ACC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but SMU's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"howard\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Howard enters this First Four matchup with a recent head-to-head victory over UMBC, having won 86-83 in the 2026 tournament, which demonstrates their ability to execute in clutch moments. While UMBC holds a slight edge in raw offensive efficiency metrics, Howard's balanced attack and superior defensive rebounding proved decisive in their previous encounter. The underdog's path relies on hot three-point shooting and forcing turnovers, but Howard's proven resilience and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Lehigh holds a slight edge in advanced metrics, ranking 284th in KenPom compared to Prairie View A&M's 291st, with a marginally better adjusted offensive efficiency that should exploit the Panthers' weaker defense. While Prairie View A&M has a balanced record, Lehigh's recent Patriot League championship demonstrates clutch performance and tournament readiness. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Lehigh's proven form and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Duke is the overwhelming favorite as the tournament's top-ranked team in both KenPom and Torvik, boasting a 31-2 record and elite efficiency on both ends of the floor. Siena, the MAAC champion, faces a massive talent gap, ranking 187th in Torvik and 192nd in KenPom, with no credible path to exploit Duke's weaknesses. While Siena's recent form and championship experience provide some intangible value, Duke's superior size, athleticism, and defensive prowess make this a near-certain outcome.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.68,\n        \"rationale\": \"TCU holds a clear edge in advanced metrics, ranking 43rd in KenPom and 48th in Torvik with a strong defensive efficiency (adjde 99.6) that should disrupt Ohio State's offense. While Ohio State is a traditional power, the lack of available ratings suggests they may be unranked or lower-tier this season, making their path to victory reliant on offensive execution against a disciplined Big 12 defense. TCU's experience in a tougher conference and proven defensive prowess give them the advantage in this matchup.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.82,\n        \"rationale\": \"St. John's holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 20th in KenPom and 18th in Torvik compared to Northern Iowa's 71st and 70th, respectively. Their elite defense (adjde 95.1) should effectively contain Northern Iowa's average offense (adjoe 110.1), while their own potent offense can exploit the Panthers' defense. While Northern Iowa has a credible path through disciplined play and rebounding, St. John's superior talent and efficiency make them the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Kansas is a top-25 team in both KenPom and Torvik with an elite defense ranked 10th in adjusted defensive efficiency, while California Baptist lacks any available advanced metrics, indicating they are a low-major automatic qualifier with a significant talent gap. The Jayhawks' experience in the Big 12 and proven ability to dominate defensively make them the overwhelming favorite, and the underdog's only path would require a perfect shooting night and Kansas having an off game, which is highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Louisville holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 18th in KenPom and 16th in Torvik compared to South Florida's 50th in both, with a significantly stronger adjusted offensive efficiency (124.1 vs. 117.7) that should exploit the Bulls' average defense. While South Florida has a solid 24-8 record and a credible path through disciplined play and rebounding, Louisville's superior talent, experience in the ACC, and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's path would require a perfect shooting night and Louisville having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State, a 3-seed from the Big Ten, holds a significant talent and experience advantage over 14-seed North Dakota State, a Summit League automatic qualifier. While specific advanced metrics are unavailable, the Spartans' conference strength and historical tournament pedigree provide a clear edge. North Dakota State's path relies on perimeter shooting and forcing turnovers, but Michigan State's disciplined defense and superior size should control the game. The underdog's upset potential is limited without a major shooting night from the Bison and a poor performance from the Spartans.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.78,\n        \"rationale\": \"UCLA holds a clear edge in advanced metrics, ranking 24th in Torvik and 27th in KenPom compared to UCF's 58th and 54th, with a stronger adjusted offensive efficiency and a defense that should contain the Knights' attack. While UCF has shown resilience in close games and plays in the tough Big 12, UCLA's superior talent, experience, and recent form—including a dominant sweep of USC—make them the more reliable pick. The underdog's path relies on hot three-point shooting and forcing turnovers, but UCLA's balanced attack and defensive prowess should control the tempo and secure the win.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.92,\n        \"rationale\": \"UConn is a top-tier program with a significant talent and efficiency advantage over Furman, which ranks outside the top 190 in both KenPom and Torvik metrics. While Furman has a credible upset path through disciplined play and three-point shooting, UConn's elite defense, physical frontcourt, and tournament experience make them the overwhelming favorite. The Huskies' ability to control the tempo and dominate the paint should neutralize Furman's strengths and secure a comfortable win.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while LIU, a 234th-ranked NEC champion, lacks the offensive firepower to compete. The Wildcats' top-10 adjusted offense and defense should overwhelm LIU's average attack, and there are no significant injury concerns for Arizona. Although LIU has momentum from its conference title, the talent gap is too wide for a credible upset path.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Villanova holds a clear advantage in advanced metrics, ranking 33rd in KenPom and 36th in Torvik with a balanced offensive and defensive efficiency that should exploit Utah State's lack of available ratings, indicating they are likely a lower-tier automatic qualifier. While Utah State's path relies on disciplined play and perimeter shooting, Villanova's experience in the Big East and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Villanova having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Wisconsin holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 21st in Torvik and 22nd in KenPom compared to High Point's 93rd and 92nd, with a top-11 adjusted offense that should overwhelm the Panthers' average defense. While High Point boasts a strong 30-4 record, their competition level in the Big South is inferior, and Wisconsin's experience in the Big Ten provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Wisconsin's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Arkansas holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 17th in KenPom and 20th in Torvik with a top-5 adjusted offense that should overwhelm Hawai'i, which lacks any available advanced ratings and is likely a low-major automatic qualifier. While Hawai'i's path relies on disciplined play and perimeter shooting, Arkansas's experience in the SEC and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Arkansas having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"BYU holds a clear edge in advanced metrics, ranking 23rd in KenPom and 33rd in Torvik with a top-10 adjusted offense that should exploit Texas's 125th-ranked defense. While Texas has a strong offense, their defensive struggles and a weaker 18-14 record suggest inconsistency, whereas BYU's 23-11 record and recent form in the Big 12 provide stability. The underdog's path relies on Texas's perimeter shooting and forcing turnovers, but BYU's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Gonzaga enters as a dominant 3-seed with elite efficiency metrics, ranking 11th in both KenPom and Torvik, while Kennesaw State lacks any available advanced ratings, indicating they are a low-major automatic qualifier with a significant talent gap. The Bulldogs' top-10 adjusted defense and potent offense should overwhelm the Owls, and there are no significant injury concerns for Gonzaga. Although Kennesaw State has momentum from its conference title, the talent gap is too wide for a credible upset path, making Gonzaga the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Miami (FL) holds a clear edge in advanced metrics, ranking 30th in KenPom and 35th in Torvik compared to Missouri's 52nd and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Tigers' attack. While Missouri plays in the tougher SEC, Miami's superior efficiency, balanced attack, and recent form in the ACC provide a more reliable path to victory. The underdog's upset potential is limited without a major shooting night from Missouri and a poor performance from Miami, which is unlikely given the metrics and matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team nationally with elite offensive efficiency (ranked 1st in Torvik offensive rating) and a strong defense, while Queens ranks outside the top 190 and has a significant talent gap as a lower-major automatic qualifier. The Boilermakers' experience in the Big Ten and proven ability to dominate physically should overwhelm Queens' average attack, and there are no reported injury concerns for Purdue. Although Queens has momentum from its conference title, the matchup dynamics and efficiency metrics make a credible upset path highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Florida is a top-5 team nationally with elite efficiency on both ends of the floor, ranking 4th in KenPom and Torvik, while Lehigh, a 284th-ranked Patriot League team, lacks the offensive firepower to compete. The Gators' top-10 adjusted offense and top-5 defense should overwhelm Lehigh's average attack, and there are no significant injury concerns for Florida. Although Lehigh has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Florida the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Iowa holds a slight edge in both offensive and defensive efficiency metrics, ranking 25th in KenPom and 26th in Torvik compared to Clemson's 36th and 29th, with a top-30 adjusted offense that can exploit Clemson's average attack. While Clemson's defense is solid, Iowa's superior offensive firepower and experience in the Big Ten provide a more reliable path to victory in a tight 8/9 matchup. The underdog's path relies on Clemson's defense forcing turnovers and winning the rebounding battle, but Iowa's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Vanderbilt holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 10th in Torvik and 12th in KenPom with a top-6 adjusted offense that should overwhelm McNeese's 91st-ranked attack. While McNeese boasts a strong 28-5 record, their competition level in the Southland Conference is inferior, and Vanderbilt's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Vanderbilt's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Nebraska, a 4-seed from the Big Ten, holds a decisive advantage over 13-seed Troy, ranking 14th in KenPom and 19th in Torvik with a top-7 adjusted defense that should stifle Troy's average offense. While Troy has Sun Belt championship momentum, the talent and efficiency gap is substantial, and Nebraska's recent form—including a 26-6 record and strong defensive metrics—makes them the reliable pick. The underdog's path would require a perfect shooting night and Nebraska having an off game, which is unlikely given the matchup dynamics and prior picks favoring higher-seeded teams in the South region.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.85,\n        \"rationale\": \"North Carolina holds a clear edge in advanced metrics, ranking 27th in Torvik and 29th in KenPom compared to VCU's 51st and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Rams' attack. While VCU has a solid 26-7 record and a credible path through disciplined play and forcing turnovers, North Carolina's superior talent, experience in the ACC, and recent form—including a win over Duke—make them the more reliable pick. The underdog's upset potential is limited without a major shooting night from VCU and a poor performance from the Tar Heels, which is unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Illinois is a top-10 team nationally with elite offensive efficiency, ranking 1st in KenPom adjusted offensive efficiency and 2nd in Torvik offensive rating, while Penn ranks outside the top 150 in both metrics. The Illini's top-25 defense should contain Penn's average attack, and there are no reported injury concerns for Illinois. Although Penn has Ivy League championship experience, the talent and efficiency gap is too wide for a credible upset path, making Illinois the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Saint Mary's holds a slight edge in both offensive and defensive efficiency metrics, ranking 24th in KenPom and 25th in Torvik compared to Texas A&M's 39th in both, with a superior adjusted defensive efficiency that should contain the Aggies' attack. While Texas A&M plays in the tougher SEC, Saint Mary's disciplined style, experience in the WCC, and recent form—including a 27-5 record—provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on Texas A&M's perimeter shooting and forcing turnovers, but Saint Mary's balanced attack and defensive prowess make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Houston is a top-5 team nationally with elite defensive efficiency (4th in KenPom adjD) and a potent offense, while Idaho ranks outside the top 130 and lacks the firepower to compete. The Cougars' experience in the Big 12 and recent form—including a 28-5 record—make them the overwhelming favorite, and there are no reported injury concerns. Idaho's only path would require a perfect shooting night and Houston having an off game, which is highly unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Michigan enters as a dominant 1-seed with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Howard, a 206th-ranked MEAC team, lacks the offensive firepower to compete. The Wolverines' top-2 offense and defense should overwhelm the Bison, and there are no significant injury concerns for Michigan. Although Howard has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Michigan the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Georgia holds a slight edge in advanced metrics, ranking 31st in KenPom and 37th in Torvik compared to Saint Louis's 41st and 44th, with a stronger adjusted offensive efficiency that should exploit the Billikens' average defense. While Saint Louis boasts an impressive 28-5 record, their competition in the A10 is inferior to the SEC's rigor, and Georgia's recent form in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Georgia's balanced attack and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Texas Tech holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 12th in Torvik and 19th in KenPom compared to Akron's 68th and 64th, with a top-10 adjusted offense that should overwhelm the Zips' average defense. While Akron boasts a strong 28-5 record, their competition in the MAC is inferior to the Big 12's rigor, and Texas Tech's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Texas Tech's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Alabama holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 16th in KenPom and 17th in Torvik with a top-3 adjusted offense that should overwhelm Hofstra's 87th-ranked defense. While Hofstra has a solid 24-10 record and CAA championship momentum, their competition level is inferior to the SEC's rigor, and Alabama's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Alabama's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Tennessee holds a decisive edge in overall team quality, ranking 15th in both KenPom and Torvik with a top-15 defense that should disrupt SMU's offense, which has shown recent vulnerability with a late-season slump and an injury to key guard BJ Edwards. While SMU's offense is potent on paper, their defensive rating is significantly weaker (95th in Torvik), and Tennessee's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on SMU's shooting and forcing turnovers, but Tennessee's disciplined defense and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-6\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-south-3\",\n      \"winnerId\": \"vanderbilt\",\n      \"confidence\": 0.88,\n      \"rationale\": \"Vanderbilt holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 10th in Torvik and 12th in KenPom with a top-6 adjusted offense that should overwhelm McNeese's 91st-ranked attack. While McNeese boasts a strong 28-5 record, their competition level in the Southland Conference is inferior, and Vanderbilt's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Vanderbilt's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-south-4\",\n      \"winnerId\": \"nebraska\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Nebraska, a 4-seed from the Big Ten, holds a decisive advantage over 13-seed Troy, ranking 14th in KenPom and 19th in Torvik with a top-7 adjusted defense that should stifle Troy's average offense. While Troy has Sun Belt championship momentum, the talent and efficiency gap is substantial, and Nebraska's recent form—including a 26-6 record and strong defensive metrics—makes them the reliable pick. The underdog's path would require a perfect shooting night and Nebraska having an off game, which is unlikely given the matchup dynamics and prior picks favoring higher-seeded teams in the South region.\"\n    },\n    {\n      \"gameId\": \"r64-south-5\",\n      \"winnerId\": \"north-carolina\",\n      \"confidence\": 0.85,\n      \"rationale\": \"North Carolina holds a clear edge in advanced metrics, ranking 27th in Torvik and 29th in KenPom compared to VCU's 51st and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Rams' attack. While VCU has a solid 26-7 record and a credible path through disciplined play and forcing turnovers, North Carolina's superior talent, experience in the ACC, and recent form—including a win over Duke—make them the more reliable pick. The underdog's upset potential is limited without a major shooting night from VCU and a poor performance from the Tar Heels, which is unlikely given the matchup dynamics and efficiency metrics.\"\n    },\n    {\n      \"gameId\": \"r64-south-6\",\n      \"winnerId\": \"illinois\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Illinois is a top-10 team nationally with elite offensive efficiency, ranking 1st in KenPom adjusted offensive efficiency and 2nd in Torvik offensive rating, while Penn ranks outside the top 150 in both metrics. The Illini's top-25 defense should contain Penn's average attack, and there are no reported injury concerns for Illinois. Although Penn has Ivy League championship experience, the talent and efficiency gap is too wide for a credible upset path, making Illinois the clear favorite to advance.\"\n    },\n    {\n      \"gameId\": \"r64-south-7\",\n      \"winnerId\": \"saint-mary-s\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Saint Mary's holds a slight edge in both offensive and defensive efficiency metrics, ranking 24th in KenPom and 25th in Torvik compared to Texas A&M's 39th in both, with a superior adjusted defensive efficiency that should contain the Aggies' attack. While Texas A&M plays in the tougher SEC, Saint Mary's disciplined style, experience in the WCC, and recent form—including a 27-5 record—provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on Texas A&M's perimeter shooting and forcing turnovers, but Saint Mary's balanced attack and defensive prowess make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-south-8\",\n      \"winnerId\": \"houston\",\n      \"confidence\": 0.97,\n      \"rationale\": \"Houston is a top-5 team nationally with elite defensive efficiency (4th in KenPom adjD) and a potent offense, while Idaho ranks outside the top 130 and lacks the firepower to compete. The Cougars' experience in the Big 12 and recent form—including a 28-5 record—make them the overwhelming favorite, and there are no reported injury concerns. Idaho's only path would require a perfect shooting night and Houston having an off game, which is highly unlikely given the matchup dynamics and efficiency metrics.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-1\",\n      \"winnerId\": \"michigan\",\n      \"confidence\": 0.98,\n      \"rationale\": \"Michigan enters as a dominant 1-seed with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Howard, a 206th-ranked MEAC team, lacks the offensive firepower to compete. The Wolverines' top-2 offense and defense should overwhelm the Bison, and there are no significant injury concerns for Michigan. Although Howard has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Michigan the clear favorite to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-2\",\n      \"winnerId\": \"georgia\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Georgia holds a slight edge in advanced metrics, ranking 31st in KenPom and 37th in Torvik compared to Saint Louis's 41st and 44th, with a stronger adjusted offensive efficiency that should exploit the Billikens' average defense. While Saint Louis boasts an impressive 28-5 record, their competition in the A10 is inferior to the SEC's rigor, and Georgia's recent form in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Georgia's balanced attack and superior efficiency metrics make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-3\",\n      \"winnerId\": \"texas-tech\",\n      \"confidence\": 0.85,\n      \"rationale\": \"Texas Tech holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 12th in Torvik and 19th in KenPom compared to Akron's 68th and 64th, with a top-10 adjusted offense that should overwhelm the Zips' average defense. While Akron boasts a strong 28-5 record, their competition in the MAC is inferior to the Big 12's rigor, and Texas Tech's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Texas Tech's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-4\",\n      \"winnerId\": \"alabama\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Alabama holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 16th in KenPom and 17th in Torvik with a top-3 adjusted offense that should overwhelm Hofstra's 87th-ranked defense. While Hofstra has a solid 24-10 record and CAA championship momentum, their competition level is inferior to the SEC's rigor, and Alabama's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Alabama's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-5\",\n      \"winnerId\": \"tennessee\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Tennessee holds a decisive edge in overall team quality, ranking 15th in both KenPom and Torvik with a top-15 defense that should disrupt SMU's offense, which has shown recent vulnerability with a late-season slump and an injury to key guard BJ Edwards. While SMU's offense is potent on paper, their defensive rating is significantly weaker (95th in Torvik), and Tennessee's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on SMU's shooting and forcing turnovers, but Tennessee's disciplined defense and superior efficiency metrics make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-6\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:21:05.884Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:21:05.884Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "kentucky",
+          "santa-clara"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:21:05.889Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "kentucky",
+          "teamName": "Kentucky",
+          "torvik": {
+            "rank": 32,
+            "team": "Kentucky",
+            "conf": "SEC",
+            "record": "21-13",
+            "adjoe": 119.85606007066336,
+            "oe Rank": 40,
+            "adjde": 99.94110481724763,
+            "de Rank": 32,
+            "barthag": 0.8898951272957313,
+            "rank.1": 32,
+            "proj. W": 21,
+            "Proj. L": 13,
+            "Pro Con W": 10,
+            "Pro Con L": 8,
+            "Con Rec.": "10-8",
+            "sos": 0.7362764410833077,
+            "ncsos": 0.5233848857064667,
+            "consos": 0.8683919068615373,
+            "Proj. SOS": 0.7362764410833077,
+            "Proj. Noncon SOS": 0.5233848857064667,
+            "Proj. Con SOS": 0.8683919068615373,
+            "elite SOS": 0.5922501087172751,
+            "elite noncon SOS": 0.7310092009810059,
+            "Opp OE": 118.11508589459228,
+            "Opp DE": 104.1789245230384,
+            "Opp Proj. OE": 118.11508589459228,
+            "Opp Proj DE": 104.1789245230384,
+            "Con Adj OE": 121.07429630675506,
+            "Con Adj DE": 101.39951219596418,
+            "Qual O": 119.33265666425687,
+            "Qual D": 100.99560281183358,
+            "Qual Barthag": 0.8719864258964943,
+            "Qual Games": 20,
+            "FUN": 0.0432104748905605,
+            "ConPF": 1414,
+            "ConPA": 1404,
+            "ConPoss": 1245.875,
+            "ConOE": 1.13494531955453,
+            "ConDE": 1.126918832146082,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.5555555555555556,
+            "WAB": 3.228408757133929,
+            "WAB Rk": 30,
+            "Fun Rk": 81,
+            "adjt": 68.29361532377644
+          },
+          "kenpom": {
+            "rank": 28,
+            "team": "Kentucky",
+            "conf": "SEC",
+            "record": "21-13",
+            "adj_em": 21.47,
+            "adj_o": 120.5,
+            "adj_o_rank": 39,
+            "adj_d": 99.1,
+            "adj_d_rank": 27,
+            "adj_t": 68.4,
+            "adj_t_rank": 124,
+            "luck": -0.019,
+            "luck_rank": 235,
+            "sos_adj_em": 15.85,
+            "sos_adj_em_rank": 6,
+            "sos_opp_o": 119.1,
+            "sos_opp_o_rank": 5,
+            "sos_opp_d": 103.2,
+            "sos_opp_d_rank": 21,
+            "ncsos_adj_em": 1.23,
+            "ncsos_adj_em_rank": 142
+          }
+        },
+        {
+          "teamId": "santa-clara",
+          "teamName": "Santa Clara",
+          "torvik": {
+            "rank": 28,
+            "team": "Santa Clara",
+            "conf": "WCC",
+            "record": "26-8",
+            "adjoe": 124.9813866099338,
+            "oe Rank": 15,
+            "adjde": 103.65963030294128,
+            "de Rank": 76,
+            "barthag": 0.8957714144040974,
+            "rank.1": 28,
+            "proj. W": 26,
+            "Proj. L": 8,
+            "Pro Con W": 15,
+            "Pro Con L": 3,
+            "Con Rec.": "15-3",
+            "sos": 0.6123840398028353,
+            "ncsos": 0.5496543998188612,
+            "consos": 0.6197183673730097,
+            "Proj. SOS": 0.6123840398028353,
+            "Proj. Noncon SOS": 0.5496543998188612,
+            "Proj. Con SOS": 0.6197183673730097,
+            "elite SOS": 0.7652114095576885,
+            "elite noncon SOS": 0.8147671989795817,
+            "Opp OE": 111.80756414343806,
+            "Opp DE": 105.12064042867485,
+            "Opp Proj. OE": 111.80756414343806,
+            "Opp Proj DE": 105.12064042867485,
+            "Con Adj OE": 125.87117278431568,
+            "Con Adj DE": 103.18315988173084,
+            "Qual O": 121.85226541938889,
+            "Qual D": 104.67246636316835,
+            "Qual Barthag": 0.8516615282822377,
+            "Qual Games": 8,
+            "FUN": 0.0059195971890551,
+            "ConPF": 1569,
+            "ConPA": 1330,
+            "ConPoss": 1280.9500000000005,
+            "ConOE": 1.224872165189898,
+            "ConDE": 1.03829189273586,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.8333333333333334,
+            "WAB": 2.097848164042765,
+            "WAB Rk": 36,
+            "Fun Rk": 159,
+            "adjt": 69.24329289306755
+          },
+          "kenpom": {
+            "rank": 35,
+            "team": "Santa Clara",
+            "conf": "WCC",
+            "record": "26-8",
+            "adj_em": 19.42,
+            "adj_o": 123.7,
+            "adj_o_rank": 23,
+            "adj_d": 104.3,
+            "adj_d_rank": 81,
+            "adj_t": 69.2,
+            "adj_t_rank": 82,
+            "luck": 0.015,
+            "luck_rank": 142,
+            "sos_adj_em": 5.99,
+            "sos_adj_em_rank": 85,
+            "sos_opp_o": 111.8,
+            "sos_opp_o_rank": 92,
+            "sos_opp_d": 105.9,
+            "sos_opp_d_rank": 77,
+            "ncsos_adj_em": 3.87,
+            "ncsos_adj_em_rank": 88
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"kentucky\",\n      \"teamName\": \"Kentucky\",\n      \"torvik\": {\n        \"rank\": 32,\n        \"team\": \"Kentucky\",\n        \"conf\": \"SEC\",\n        \"record\": \"21-13\",\n        \"adjoe\": 119.85606007066336,\n        \"oe Rank\": 40,\n        \"adjde\": 99.94110481724763,\n        \"de Rank\": 32\n      },\n      \"kenpom\": {\n        \"rank\": 28,\n        \"team\": \"Kentucky\",\n        \"conf\": \"SEC\",\n        \"record\": \"21-13\",\n        \"adj_em\": 21.47,\n        \"adj_o\": 120.5,\n        \"adj_o_rank\": 39,\n        \"adj_d\": 99.1\n      }\n    },\n    {\n      \"teamId\": \"santa-clara\",\n      \"teamName\": \"Santa Clara\",\n      \"torvik\": {\n        \"rank\": 28,\n        \"team\": \"Santa Clara\",\n        \"conf\": \"WCC\",\n        \"record\": \"26-8\",\n        \"adjoe\": 124.9813866099338,\n        \"oe Rank\": 15,\n        \"adjde\": 103.65963030294128,\n        \"de Rank\": 76\n      },\n      \"kenpom\": {\n        \"rank\": 35,\n        \"team\": \"Santa Clara\",\n        \"conf\": \"WCC\",\n        \"record\": \"26-8\",\n        \"adj_em\": 19.42,\n        \"adj_o\": 123.7,\n        \"adj_o_rank\": 23,\n        \"adj_d\": 104.3\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:21:09.425Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:21:09.425Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Kentucky basketball 2026 March Madness injury news roster",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:21:10.318Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Jaland Lowe injury, Kentucky basketball roster as March Madness nears",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fkentucky%2F2026%2F03%2F12%2Fjaland%2Dlowe%2Dinjury%2Dkentucky%2Dbasketball%2Droster%2Duk%2Dsec%2Dtournament%2Dbracket%2Dky%2Dflorida%2Dgame%2Dtime%2Dchannel%2F89033697007%2F&rut=c40034fabc61ea7c7c55901720d230b1e635419195dca5d57c44b40d0043af9e",
+          "snippet": "Will Jaland Lowe be back in the mix for Mark Pope and Kentucky Wildcats basketball next season? That&#x27;s the plan, the guard said at the SEC Tournament."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for."
+        },
+        {
+          "title": "Kentucky Wildcats Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fkentucky%2Dwildcats%2Finjuries&rut=e59dd5c3b113447322f17c8c2a3ea62eecf483f7fe4f16ddd7aa4b5603342e27",
+          "snippet": "Stay In the Know: Check Out Kentucky Wildcats Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "Men&#x27;s Basketball - UK Athletics",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fukathletics.com%2Fsports%2Fmbball%2F&rut=2590beafcfba4e961257eb05b89e8326957aa745a9ba40667aa3253c6d824082",
+          "snippet": "The Official Athletic Site of UK Athletics, partner of WMT Digital. The most comprehensive coverage of Kentucky Wildcats Men&#x27;s Basketball on the web with highlights, scores, news , schedules, rosters , and more!"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Jaland Lowe injury, Kentucky basketball roster as March Madness nears\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fgolfweek.usatoday.com%2Fstory%2Fsports%2Fcollege%2Fkentucky%2F2026%2F03%2F12%2Fjaland%2Dlowe%2Dinjury%2Dkentucky%2Dbasketball%2Droster%2Duk%2Dsec%2Dtournament%2Dbracket%2Dky%2Dflorida%2Dgame%2Dtime%2Dchannel%2F89033697007%2F&rut=c40034fabc61ea7c7c55901720d230b1e635419195dca5d57c44b40d0043af9e\",\n      \"snippet\": \"Will Jaland Lowe be back in the mix for Mark Pope and Kentucky Wildcats basketball next season? That&#x27;s the plan, the guard said at the SEC Tournament.\"\n    },\n    {\n      \"title\": \"March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5\",\n      \"snippet\": \"College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for.\"\n    },\n    {\n      \"title\": \"Kentucky Wildcats Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fkentucky%2Dwildcats%2Finjuries&rut=e59dd5c3b113447322f17c8c2a3ea62eecf483f7fe4f16ddd7aa4b5603342e27\",\n      \"snippet\": \"Stay In the Know: Check Out Kentucky Wildcats Injuries Impacting The 2025- 2026 NCAAB Season.\"\n    },\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295\",\n      \"snippet\": \"March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:21:12.220Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:21:12.220Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144"
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:21:12.723Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144",
+        "text": "March Madness 2026 Injuries: Key News By Region in the NCAA Tournament | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fantasy Picks Sleeper Picks MLB Picks & Props NBA Picks & Props College BB CBB Draft Kit My Leagues CBB Latest College Basketball News College Basketball Injury News College Basketball Injury Report College Basketball Lineups Advanced NCAAB Lineups College Basketball Depth Charts College Basketball Player Rankings College Basketball Projections Daily College Basketball Projections College Basketball Poll Rankings College Basketball Stats College Basketball Team Stats ACC News Big Ten News Big 12 News Big East News SEC News College Basketball Articles Bracketology Daily CBB DFS Projections DraftKings CBB Lineup Optimizer CBB Daily Matchup Info Latest College Basketball Odds College Basketball Futures College Basketball Player Props Top College Basketball Picks & Prop Bets DraftKings Picks & Prop Bets FanDuel Picks & Prop Bets BetMGM Picks & Prop Bets Caesars Picks & Prop Bets DraftKings Pick6 Cards Hard Rock Props BetRivers Props Picks App for iPhone Picks App for Android Bracketology Analysis NCAA Tournament Preview NET and RPI Conference Previews College Basketball Box Scores College Basketball Standings Fanduel CBB DFS Lineup Optimizer Your Saved CBB Lineups Top CBB DFS Plays DFS Performance Tracker Discord All CBB DFS Pages CBB DFS Analysis College Basketball Team Rankings CBB Props vs Projections Wooden Award Odds NBA Draft Futures March Madness Odds College Basketball Picks College Basketball Injuries: March Madness First Round NCAA Tournament injuries to consider are reviewed. Discover which player are in, out or uncertain before filling out your brackets for March Madness 2026. Updated on March 17, 2026 5:33PM EST Share Share to X Share to Reddit Share to Facebook Share To BlueSky By: Ryan Andrade X logo @Roto_Ryan Updated on March 17, 2026 5:33PM EST Smart Money NEW "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.rotowire.com/cbasketball/article/college-basketball-injuries-ncaa-tournament-march-madness-first-round-108144\",\n    \"text\": \"March Madness 2026 Injuries: Key News By Region in the NCAA Tournament | RotoWire Featured DFS Betting Picks & Props NFL Fantasy Fantasy Football News NFL Draft Analysis NFL Best Ball Rankings My Leagues NFL Fantasy Football Dynasty Rankings MLB Fantasy MLB Draft Kit MLB Draft Assistant MLB ADP Report Top 400 MLB Prospects WBC Lineups NBA Fantasy NBA Starting Lineups My Leagues NBA Latest NBA News NBA Injury Report NBA Depth Charts NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports Cricket NFL DFS DraftKings NFL Lineup Optimizer FanDuel NFL Lineup Optimizer Top NFL DFS Plays Fantasy Football Defense vs. Position NFL Rostership % Projections MLB DFS DraftKings MLB Lineup Optimizer MLB Starting Lineups Batter vs Pitcher Top MLB DFS Plays MLB Weather NBA DFS DraftKings NBA Lineup Optimizer NBA Defense vs Position Top NBA DFS Plays NBA On/Off Court Stats NFL Betting Latest NFL Odds NFL Player Futures NFL Picks NFL Super Bowl Odds NFL MVP Odds MLB Betting MLB Futures Smart Money MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds NBA Historical Odds NBA Player Props NFL Picks & Props PrizePicks Picks Underdog Fanta... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:21:17.106Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:21:17.106Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Santa Clara basketball 2026 March Madness injury news roster",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:21:17.894Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Santa Clara Broncos Men&#x27;s College Basketball Roster - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Froster%2F_%2Fid%2F2541&rut=a8ab5fc16b091c2aaca85c1e31c2938002b4cb00ba4581a8f75aca82f0c46059",
+          "snippet": "Explore the 2025-26 Santa Clara Broncos NCAAM roster on ESPN. Includes full details on point guards, shooting guards, power forwards, small forwards and centers."
+        },
+        {
+          "title": "2025-26 Santa Clara Broncos Men&#x27;s Roster and Stats | College Basketball ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fsanta%2Dclara%2Fmen%2F2026.html&rut=0b9989064c3ec2a8d2abd1cd59cdb917a6e4a9dbcf2dd9c9a749096b8c08268d",
+          "snippet": "Check out the detailed 2025-26 Santa Clara Broncos Roster and Stats for College Basketball at Sports-Reference.com"
+        },
+        {
+          "title": "Men&#x27;s Basketball - Santa Clara University",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsantaclarabroncos.com%2Fsports%2Fmens%2Dbasketball&rut=4c5849272ff98daf6502224bfacffb06cbc5bbd6f3c25b511fcacc7884eb59d4",
+          "snippet": "The official Men&#x27;s Basketball page for the Santa Clara University"
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for."
+        },
+        {
+          "title": "Santa Clara returns to March Madness for first time in three decades",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mercurynews.com%2F2026%2F03%2F15%2Fsanta%2Dclara%2Dmarch%2Dmadness%2Ddrought%2Dkentucky%2Dbracket%2F&rut=ea32be896818df9b3b52fcb7479ae4ff21cf35c298d7071846b5cbd103c10506",
+          "snippet": "Members of the Santa Clara University mens basketball team react to their selection in the NCAA March Madness tournament on Sunday, March 15, 2026 , in Santa Clara , Calif. (Aric Crabb/Bay Area News ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Santa Clara Broncos Men&#x27;s College Basketball Roster - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2Froster%2F_%2Fid%2F2541&rut=a8ab5fc16b091c2aaca85c1e31c2938002b4cb00ba4581a8f75aca82f0c46059\",\n      \"snippet\": \"Explore the 2025-26 Santa Clara Broncos NCAAM roster on ESPN. Includes full details on point guards, shooting guards, power forwards, small forwards and centers.\"\n    },\n    {\n      \"title\": \"2025-26 Santa Clara Broncos Men&#x27;s Roster and Stats | College Basketball ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fsanta%2Dclara%2Fmen%2F2026.html&rut=0b9989064c3ec2a8d2abd1cd59cdb917a6e4a9dbcf2dd9c9a749096b8c08268d\",\n      \"snippet\": \"Check out the detailed 2025-26 Santa Clara Broncos Roster and Stats for College Basketball at Sports-Reference.com\"\n    },\n    {\n      \"title\": \"Men&#x27;s Basketball - Santa Clara University\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsantaclarabroncos.com%2Fsports%2Fmens%2Dbasketball&rut=4c5849272ff98daf6502224bfacffb06cbc5bbd6f3c25b511fcacc7884eb59d4\",\n      \"snippet\": \"The official Men&#x27;s Basketball page for the Santa Clara University\"\n    },\n    {\n      \"title\": \"March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5\",\n      \"snippet\": \"College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:21:21.225Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:21:21.225Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2541"
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:21:21.630Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2541",
+        "text": "Santa Clara Broncos Men&#x27;s College Basketball Roster - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search Santa Clara Broncos 26-8 3rd in WCC Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator Santa Clara Broncos Roster 2025-26 Team Roster Name POS HT WT Class Birthplace Noah Badibanga 10 F 6&#x27; 8&quot; 185 lbs FR Toulouse, France Francis Chukwudebelu 3 C 6&#x27; 10&quot; 220 lbs FR Dallas, TX KJ Cochran 7 G 6&#x27; 5&quot; 195 lbs FR West Chester, PA Thierry Darlan 15 G 6&#x27; 8&quot; 210 lbs JR Bangui, Central African Republic Malachi Douyon 54 G 6&#x27; 3&quot; 185 lbs SR Santa Cruz, CA Jake Ensminger 44 G 6&#x27; 9&quot; 215 lbs JR Ulm, Germany Sash Gavalyugov 2 G 6&#x27; 3&quot; 175 lbs FR Botevgrad, Bulgaria Allen Graves 22 F 6&#x27; 9&quot; 225 lbs FR Ponchatoula, LA Christian Hammond 1 G 6&#x27; 4&quot; 195 lbs SO Denver, CO Brenton Knapper 0 G 6&#x27; 0&quot; 175 lbs SR Charleston, WV Brad Longcor III 4 G 6&#x27; 4&quot; 180 lbs FR Quincy, IL Elijah Mahi 8 F 6&#x27; 7&quot; 220 lbs SR Toronto, Canada Gehrig Normand 9 G 6&#x27; 6&quot; 190 lbs SO North Richland Hills, TX Bukky Oboye 12 C 7&#x27; 1&quot; 220 lbs SO Houston, TX Juan Reyna 51 G 6&#x27; 3&quot; 195 lbs SR San Antonio, TX Chris Tadjo 14 F 6&#x27; 7&quot; 250 lbs SO Montreal, Canada Brendan Yarusso 50 G 6&#x27; 1&quot; 185 lbs SR Lombard, IL Coach Herb Sendek Men&#x27;s College Basketball News Tramon Mark&#x27;s late jumper gives Texas a 68-66 win over NC State in the First Four — Tramon Mark hit a fadeaway jumper from just inside the 3-point line with 1.1 seconds left, and Texas survived a late rally to beat N.C. State 68-66 on Tuesday night in a First... 37m Duke and Siena meet in first round of NCAA Tournament Siena Saints (23-11, 16-7 MAAC) vs. Duke Blue Devils (32-2, 20-1 ACC) 2h Georgia and Saint Louis meet in opening round of NCAA Tournament Saint Louis Billikens (28-5, 16-4 A-10) vs. Georgia Bulldogs (22-10, 10-9 SEC) 2h All NCAAM News Terms of Use Privacy Policy EU Privacy Rights Cookie Policy Manage Privacy Preferences © ESPN Enterprises, Inc. All rights reserved."
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/team/roster/_/id/2541\",\n    \"text\": \"Santa Clara Broncos Men&#x27;s College Basketball Roster - ESPN Skip to main content Skip to navigation ESPN NFL NFL NBA NBA NCAAM NCAAM NCAAW NCAAW MLB MLB NHL NHL Soccer Soccer More Sports More Sports Watch Watch Fantasy Fantasy Where to Watch Search Santa Clara Broncos 26-8 3rd in WCC Home Schedule Statistics Roster Tickets External Link Men&#x27;s Tournament Challenge NEW: TC Eliminator Santa Clara Broncos Roster 2025-26 Team Roster Name POS HT WT Class Birthplace Noah Badibanga 10 F 6&#x27; 8&quot; 185 lbs FR Toulouse, France Francis Chukwudebelu 3 C 6&#x27; 10&quot; 220 lbs FR Dallas, TX KJ Cochran 7 G 6&#x27; 5&quot; 195 lbs FR West Chester, PA Thierry Darlan 15 G 6&#x27; 8&quot; 210 lbs JR Bangui, Central African Republic Malachi Douyon 54 G 6&#x27; 3&quot; 185 lbs SR Santa Cruz, CA Jake Ensminger 44 G 6&#x27; 9&quot; 215 lbs JR Ulm, Germany Sash Gavalyugov 2 G 6&#x27; 3&quot; 175 lbs FR Botevgrad, Bulgaria Allen Graves 22 F 6&#x27; 9&quot; 225 lbs FR Ponchatoula, LA Christian Hammond 1 G 6&#x27; 4&quot; 195 lbs SO Denver, CO Brenton Knapper 0 G 6&#x27; 0&quot; 175 lbs SR Charleston, WV Brad Longcor III 4 G 6&#x27; 4&quot; 180 lbs FR Quincy, IL Elijah Mahi 8 F 6&#x27; 7&quo... [truncated 1083 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:21:22.792Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:21:22.792Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Kentucky vs Santa Clara 2026 March Madness matchup preview",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:21:23.609Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fkentucky%2Dsanta%2Dclara%2Dmarch%2Dmadness%2Dbracket%2Dpick%2F5e9ab0508c1261fd9ce94b5f&rut=b6d8e0978d79baf32f6024c56e7f6a9e082f092f276fe446bef7cadc2b691372",
+          "snippet": "Here is a complete guide to picking No. 7 Kentucky and No. 10 Santa Clara in your 2026 March Madness bracket, including updated odds and our expert predictions for the Midwest Region game."
+        },
+        {
+          "title": "Kentucky vs Santa Clara picks, predictions, odds for March Madness",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F16%2Fkentucky%2Dsanta%2Dclara%2Dpicks%2Dpredictions%2Dodds%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2F88420304007%2F&rut=9df88d887ef0964ee41305befd0073860809e90c5c12f06deca72956c4459007",
+          "snippet": "March Madness picks, predictions, odds for Santa Clara vs Kentucky NCAA Tournament first-round Midwest Region game Friday, March 20, 2026 . Who wins?"
+        },
+        {
+          "title": "Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=9a974f0c48e88feeffacc4cebf866e55700106f933d0435f198442b05a7ec3a6",
+          "snippet": "The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#x27;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament!"
+        },
+        {
+          "title": "Kentucky Vs. Santa Clara Preview: Key Matchups, Predictions, And ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.stadiumrant.com%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dpreview%2Dkey%2Dmatchups%2F&rut=3dff3c27f2682726e27e01f00aea15c60a1292767cf66d9267ecb14006dfba12",
+          "snippet": "A game between the Kentucky Wildcats and the Santa Clara Broncos is just the type of matchup that often becomes a trendy upset pick. The Wildcats and Broncos will do battle on Friday at 12:15 ET to kick off the madness and with so much on the line, it&#x27;s critical to get off to a hot start. Santa Clara Scouting Report The Broncos arrive with confidence after an impressive WCC run. Coach Herb ..."
+        },
+        {
+          "title": "Santa Clara vs. Kentucky Prediction | 2026 March Madness Picks & Odds",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fsanta%2Dclara%2Dvs%2Dkentucky%2Dprediction%2Dpicks%2Dodds%2Dmarch%2Dmadness%2D2026%2F&rut=de75f7ac9418e63869c6e45d178c7f58c6bac4d236979e9d0563e9d20fb132a9",
+          "snippet": "My Santa Clara vs . Kentucky prediction breaks down the best bets, player props, and same-game parlay I&#x27;m betting for March Madness First Round."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fkentucky%2Dsanta%2Dclara%2Dmarch%2Dmadness%2Dbracket%2Dpick%2F5e9ab0508c1261fd9ce94b5f&rut=b6d8e0978d79baf32f6024c56e7f6a9e082f092f276fe446bef7cadc2b691372\",\n      \"snippet\": \"Here is a complete guide to picking No. 7 Kentucky and No. 10 Santa Clara in your 2026 March Madness bracket, including updated odds and our expert predictions for the Midwest Region game.\"\n    },\n    {\n      \"title\": \"Kentucky vs Santa Clara picks, predictions, odds for March Madness\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fsports%2Fcollege%2F2026%2F03%2F16%2Fkentucky%2Dsanta%2Dclara%2Dpicks%2Dpredictions%2Dodds%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2F88420304007%2F&rut=9df88d887ef0964ee41305befd0073860809e90c5c12f06deca72956c4459007\",\n      \"snippet\": \"March Madness picks, predictions, odds for Santa Clara vs Kentucky NCAA Tournament first-round Midwest Region game Friday, March 20, 2026 . Who wins?\"\n    },\n    {\n      \"title\": \"Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.bettingpros.com%2Farticles%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dncaa%2Dtournament%2Dpredictions%2Dpreview%2F&rut=9a974f0c48e88feeffacc4cebf866e55700106f933d0435f198442b05a7ec3a6\",\n      \"snippet\": \"The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#x27;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament!\"\n    },\n    {\n      \"title\": \"Kentucky Vs. Santa Clara Preview: Key Matchups, Predictions, And ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.stadiumrant.com%2Fkentucky%2Dvs%2Dsanta%2Dclara%2Dpreview%2Dkey%2Dmatchups%2F&rut=3dff3c27f2682726e27e01f00aea15c60a1292767cf66d9267ecb14006dfba12\",\n      \"snippet\": \"A game between the Kentucky Wildcats and the Santa Clara Broncos is just the type of matchup that often becomes a trendy upset pick. The Wildcats and Broncos will do battle on Friday at 12:15 ET to kick off the madness and with so much on the line, it&#x27;s critical to get off to a hot start. Santa Clara Scouting Report The Broncos arrive with confidence after an impressive WCC run. Coach Herb ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:21:44.255Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:21:44.255Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f"
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:21:44.887Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f",
+        "text": "Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch How to Watch Stre"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/kentucky-santa-clara-march-madness-bracket-pick/5e9ab0508c1261fd9ce94b5f\",\n    \"text\": \"Kentucky or Santa Clara? How to pick 7 vs. 10 matchup in 2026 March Madness bracket | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlot... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:21:48.453Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:21:48.453Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.usatoday.com/story/sports/college/2026/03/16/kentucky-santa-clara-picks-predictions-odds-march-madness-ncaa-tournament/88420304007/"
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:21:49.608Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.usatoday.com/story/sports/college/2026/03/16/kentucky-santa-clara-picks-predictions-odds-march-madness-ncaa-tournament/88420304007/",
+        "text": "Kentucky vs Santa Clara picks, predictions for NCAA March Madness game Skip to main content Home NCAAB NCAAW MLB Women's Sports NFL NBA NCAAF WNBA Sports Betting Big Ten Sports SEC Sports Boxing Coaches Salaries Draft Hub Fantasy Football For The Win Formula 1 Golfweek High School Sports High School Sports Awards IndyCar MMA NASCAR National Signing Day NHL Olympics Soccer Sports Business Sports Pulse Sports Seriously Tennis WWE Youth Sports Outdoors Fantasy Bet With the People Clear Play Arizona Sports Indiana Sports Michigan Sports Ohio Sports Tennessee Sports Wisconsin Teams For Subscribers Kentucky vs Santa Clara picks, predictions, odds for March Madness Jeremy Cluff Arizona Republic Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. No. 7 seed Kentucky and No. 10 seed Santa Clara play Friday, March 20, in a March Madness NCAA Tournament first-round game . The Midwest Region game is scheduled for 9:15 a.m. MST and can be seen on CBS ( stream with FUBO ). Who will win the March Madness game and advance to the second round in the NCAA Tournament bracket ? Check out these March Madness picks and March Madness predictions for the men's college basketball NCAA Tournament matchup . Kentucky is a 2.5-point favorite over Santa Clara in the game in March Madness odds provided by BetMGM Sportsbook . The Wildcats are -150 on the moneyline. The Broncos are +125. The over/under for the game is set at 160.5 points. March Madness picks: Ohio State-TCU | Nebraska-Troy | Louisville-South Florida | Wisconsin-High Point | Duke-Siena | Vanderbilt-McNeese | Michigan State-North Dakota State | Arkansas-Hawaii | North Carolina-VCU | Saint Mary's-Texas A&M | Illinois-Penn | Georgia-Saint Louis | Gonzaga-Kennesaw State | Houston-Idaho | Kentucky-Santa Clara | Texas Tech-Akron | Arizona-Long Island | Virginia-Wright State | Iowa State-Tennessee State | Alabama-Hofstra | Villanova-Utah State | Clemson-Iowa | St. John's-UNI | UCLA-UCF | Purdue-Queens | Kansas-Cal Baptist | UConn-Furman | Miami-Missouri | The Republic's score predictions Watch Kentucky vs Santa Clara on FUBO (free trial) The Arizona Republic : Santa Clara 83, Kentucky 80 Jeremy Cluff writes: \"The Wildcats struggled down the stretch. Could they be on upset alert against the Broncos? Yes. The Broncos are capable of giving Big Blue Nation fits.\" March Madness picks: Predictions for NCAA Tournament first-round games Dimers : Kentucky 82, Santa Clara 79 It writes: \"After extensive simulations, our model gives Santa Clara a win probability of 40%, while Kentucky has a win probability of 60%.\" How to watch March Madness: Ohio State-TCU | Nebraska-Troy | Louisville-South Florida | Wisconsin-High Point | Duke-Siena | Vanderbilt-McNeese | Michigan State-North Dakota State | Arkansas-Hawaii | North Carolina-VCU | Saint Mary's-Texas A&M | Illinois-Penn | Georgia-Sain"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.usatoday.com/story/sports/college/2026/03/16/kentucky-santa-clara-picks-predictions-odds-march-madness-ncaa-tournament/88420304007/\",\n    \"text\": \"Kentucky vs Santa Clara picks, predictions for NCAA March Madness game Skip to main content Home NCAAB NCAAW MLB Women's Sports NFL NBA NCAAF WNBA Sports Betting Big Ten Sports SEC Sports Boxing Coaches Salaries Draft Hub Fantasy Football For The Win Formula 1 Golfweek High School Sports High School Sports Awards IndyCar MMA NASCAR National Signing Day NHL Olympics Soccer Sports Business Sports Pulse Sports Seriously Tennis WWE Youth Sports Outdoors Fantasy Bet With the People Clear Play Arizona Sports Indiana Sports Michigan Sports Ohio Sports Tennessee Sports Wisconsin Teams For Subscribers Kentucky vs Santa Clara picks, predictions, odds for March Madness Jeremy Cluff Arizona Republic Show Caption Hide Caption March Madness Final Four predictions and national champion picks From chalk favorites to hot upsets, the panel shares Final Four picks and bold calls on who cuts down the nets. No. 7 seed Kentucky and No. 10 seed Santa Clara play Friday, March 20, in a March Madness NCAA Tournament first-round game . The Midwest Region game is scheduled for 9:15 a.m. MST and can be seen on CBS ( stream with FUBO ). Who will win the March Madness game and advance to the second round in the ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:21:56.280Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:21:56.280Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/"
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:21:57.426Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/",
+        "text": "Kentucky vs. Santa Clara: NCAA Tournament Predictions &#038; Preview | BettingPros to prevent flash of incorrect theme on page load --> Skip to main content Skip to navigation Skip to footer Click to go to homepage Picks Odds Tools Research Leaders Click to expand More menu Home Games Picks Upgrade Menu Click to Find a bet ... Contest Click to expand picks panel Click to open Sharp AI Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview by BettingPros Staff | @BettingPros | Mar 15, 2026 by BettingPros Staff | @BettingPros | Mar 15, 2026 The 2026 NCAA Tournament is officially here! The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#8217;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament! We&#8217;re here to help as we&#8217;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for Kentucky vs. Santa Clara. NCAA Tournament Odds NCAA Tournament Pick&#8217;Em Contest NCAA Tournament March Madness Bracket Optimizer NCAA Tournament Betting Trends 2026 NCAA Tournament Predictions & Preview: Kentucky vs. Santa Clara Here are the odds for this opening-round matchup of the 2026 NCAA Tournament. Let&#8217;s dive into our preview and predictions for this NCAA Tournament matchup. Kentucky 2026 NCAA Tournament Preview Mark Pope&#8217;s second season in Lexington has been nothing but adversity management, and it didn&#8217;t quite produce the results the fanbase expected. Kentucky started the year ninth in the AP Preseason Poll, then it was seemingly all downhill from there with the injuries that have hit this squad. Kentucky went 9-4 with the 50th-ranked offense in non-conference play. Then, SEC play started, and the Wildcats ended up as a 9-seed in the conference tournament, playing in the first round against LSU. The problem is that the roster never found its footing for an entire month-long stretch. Injuries created lineup inconsistencies that made it hard to build any real continuity, and a 2-5 finish to the regular season raised fresh questions about this group&#8217;s ceiling. This is an all-around team propped up by Otega Oweh that has competed against one of the toughest schedules in hoops. Kentucky does everything reasonable well but nothing spectacularly, ranking in the top 75 in offensive turnover rate and offensive rebound rate, and 102nd in effective field goal percentage. Over their last month of play, the Wildcats went 4-5, ranking outside the top 40 on both ends of the court. Kentucky&#8217;s brand is bigger than this team, and the Wildcats lack the talent to make a deep run. Pope will have them ready to compete. Whether that&#8217;s enough to make it to the second weekend is left to be discovered. Santa Clara 2026 NCAA Tournament Preview Herb Sendek&#8217;s Broncos had their best season in decades, finishing 26-8 overall and reaching the WCC Tournament championship game"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.bettingpros.com/articles/kentucky-vs-santa-clara-ncaa-tournament-predictions-preview/\",\n    \"text\": \"Kentucky vs. Santa Clara: NCAA Tournament Predictions &#038; Preview | BettingPros to prevent flash of incorrect theme on page load --> Skip to main content Skip to navigation Skip to footer Click to go to homepage Picks Odds Tools Research Leaders Click to expand More menu Home Games Picks Upgrade Menu Click to Find a bet ... Contest Click to expand picks panel Click to open Sharp AI Kentucky vs. Santa Clara: NCAA Tournament Predictions & Preview by BettingPros Staff | @BettingPros | Mar 15, 2026 by BettingPros Staff | @BettingPros | Mar 15, 2026 The 2026 NCAA Tournament is officially here! The March Madness Bracket is set, and first-round NCAA Tournament matchups are in place. It&#8217;s time to make your picks and predictions for the first round of the 2026 NCAA Tournament! We&#8217;re here to help as we&#8217;ll have picks and predictions for each of the first round 2026 NCAA Tournament games. Here are our NCAA Tournament predictions and preview for Kentucky vs. Santa Clara. NCAA Tournament Odds NCAA Tournament Pick&#8217;Em Contest NCAA Tournament March Madness Bracket Optimizer NCAA Tournament Betting Trends 2026 NCAA Tournament Predictions & Preview: Kentucky vs. Santa Clara... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r64-midwest-7-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:22:02.700Z",
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:22:02.700Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Kentucky Santa Clara March Madness 2026 injury",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r64-midwest-7-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:22:03.343Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r64-midwest-7-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T10:22:12.563Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r64-midwest-7\",\n    \"winnerId\": \"kentucky\",\n    \"confidence\": 0.78,\n    \"rationale\": \"Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"1\",\n    \"title\": \"Team Quality and Efficiency Metrics\",\n    \"summary\": \"Kentucky ranks 28th in KenPom and 32nd in Torvik, while Santa Clara ranks 35th in KenPom and 28th in Torvik, showing a close overall quality but with Kentucky's defense being significantly better.\",\n    \"evidence\": \"Kentucky's adjD is 99.1 (KenPom) and 99.94 (Torvik), compared to Santa Clara's 104.3 and 103.66, indicating a defensive edge for the Wildcats.\"\n  }\n}"
+    }
+  ]
+}

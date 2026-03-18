@@ -10,6 +10,47 @@ function readArg(flag: string) {
   return index >= 0 ? process.argv[index + 1] : null;
 }
 
+function normalizeSubmission(submission: BracketSubmission): BracketSubmission {
+  return {
+    ...submission,
+    picks: submission.picks.map((pick) => ({
+      ...pick,
+      confidence:
+        typeof pick.confidence === "number" && pick.confidence > 1 && pick.confidence <= 100
+          ? pick.confidence / 100
+          : pick.confidence
+    })),
+    reasoning: submission.reasoning.map((step) => ({
+      ...step,
+      evidence: Array.isArray(step.evidence)
+        ? step.evidence
+        : typeof step.evidence === "string"
+          ? [step.evidence]
+          : []
+    })),
+    gameRuns: (submission.gameRuns ?? []).map((gameRun) => ({
+      ...gameRun,
+      pick: {
+        ...gameRun.pick,
+        confidence:
+          typeof gameRun.pick.confidence === "number" && gameRun.pick.confidence > 1 && gameRun.pick.confidence <= 100
+            ? gameRun.pick.confidence / 100
+            : gameRun.pick.confidence
+      },
+      reasoningStep: gameRun.reasoningStep
+        ? {
+            ...gameRun.reasoningStep,
+            evidence: Array.isArray(gameRun.reasoningStep.evidence)
+              ? gameRun.reasoningStep.evidence
+              : typeof gameRun.reasoningStep.evidence === "string"
+                ? [gameRun.reasoningStep.evidence]
+                : []
+          }
+        : gameRun.reasoningStep
+    }))
+  };
+}
+
 async function main() {
   const runId = readArg("--run-id");
   const actualResultsPath = readArg("--results");
@@ -27,11 +68,13 @@ async function main() {
   );
 
   const submissions: BracketSubmission[] = await Promise.all(
-    manifest.submissions.map(async (submission) =>
-      bracketSubmissionSchema.parse(
-        await readJsonFile<BracketSubmission>(path.join(process.cwd(), submission.file))
-      ) as BracketSubmission
-    )
+    manifest.submissions.map(async (submission) => {
+      const filePath = path.join(process.cwd(), submission.file);
+      const normalized = normalizeSubmission(await readJsonFile<BracketSubmission>(filePath));
+      const parsed = bracketSubmissionSchema.parse(normalized) as BracketSubmission;
+      await writeJsonFile(filePath, parsed);
+      return parsed;
+    })
   );
 
   const leaderboard = scoreSubmissions(runId, config, submissions, actualResults);

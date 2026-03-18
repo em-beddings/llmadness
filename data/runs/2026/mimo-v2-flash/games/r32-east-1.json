@@ -1,0 +1,993 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mimo",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "r32-east-1",
+  "generatedAt": "2026-03-18T10:24:20.919Z",
+  "pick": {
+    "gameId": "r32-east-1",
+    "winnerId": "duke",
+    "confidence": 0.72,
+    "rationale": "Duke remains the superior team by a wide margin in efficiency metrics, ranking 1st nationally in both KenPom and Torvik, but the loss of starting point guard Caleb Foster to a foot fracture introduces meaningful uncertainty and could disrupt their offensive rhythm. TCU's defense is solid (30th in Torvik adjD) and could exploit Duke's backcourt vulnerability, but the Horned Frogs' offense is only 83rd in efficiency, making it difficult to fully capitalize. Ultimately, Duke's elite defense, depth, and talent advantage should still prevail, but the injury lowers confidence from the near-certain level of the first round."
+  },
+  "reasoningStep": {
+    "id": "1",
+    "title": "Investigate team health and recent news",
+    "summary": "Checked for injury updates and found that Duke's starting point guard Caleb Foster is out indefinitely with a foot fracture, which could impact their offensive flow and depth.",
+    "evidence": "ESPN and Yahoo Sports reports confirm Foster's injury, noting it occurred in the regular-season finale and required surgery, with no clear timeline for return."
+  },
+  "toolCalls": [
+    {
+      "id": "tool-ouywrqkm",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "duke",
+          "tcu"
+        ]
+      },
+      "startedAt": "2026-03-18T10:23:14.953Z",
+      "completedAt": "2026-03-18T10:23:14.960Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "duke",
+          "teamName": "Duke",
+          "torvik": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adjoe": 128.01924984850498,
+            "oe Rank": 4,
+            "adjde": 90.44607016864468,
+            "de Rank": 1,
+            "barthag": 0.9819325227198022,
+            "rank.1": 1,
+            "proj. W": 31.77263480392547,
+            "Proj. L": 2.2273651960745293,
+            "Pro Con W": 17,
+            "Pro Con L": 1,
+            "Con Rec.": "17-1",
+            "sos": 0.7350779717539253,
+            "ncsos": 0.6248828246440576,
+            "consos": 0.8004871126999,
+            "Proj. SOS": 0.7411389942783231,
+            "Proj. Noncon SOS": 0.6248828246440576,
+            "Proj. Con SOS": 0.8004871126999,
+            "elite SOS": 0.6154338494473306,
+            "elite noncon SOS": 0.6350244038172387,
+            "Opp OE": 116.43303268254998,
+            "Opp DE": 103.17328486033144,
+            "Opp Proj. OE": 116.58941508909258,
+            "Opp Proj DE": 102.95262216602733,
+            "Con Adj OE": 129.25576212251133,
+            "Con Adj DE": 90.79514971478837,
+            "Qual O": 127.85704514358656,
+            "Qual D": 89.47568126665206,
+            "Qual Barthag": 0.9837755473959358,
+            "Qual Games": 19,
+            "FUN": 0.0627594166033986,
+            "ConPF": 1457,
+            "ConPA": 1123,
+            "ConPoss": 1174.9625,
+            "ConOE": 1.2400395757311404,
+            "ConDE": 0.9557751843143932,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.9444444444444444,
+            "WAB": 12.883073206764472,
+            "WAB Rk": 2,
+            "Fun Rk": 47,
+            "adjt": 65.82335494511732
+          },
+          "kenpom": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adj_em": 39.17,
+            "adj_o": 127.9,
+            "adj_o_rank": 4,
+            "adj_d": 88.7,
+            "adj_d_rank": 2,
+            "adj_t": 65.4,
+            "adj_t_rank": 287,
+            "luck": 0.042,
+            "luck_rank": 80,
+            "sos_adj_em": 13.78,
+            "sos_adj_em_rank": 19,
+            "sos_opp_o": 116.8,
+            "sos_opp_o_rank": 24,
+            "sos_opp_d": 103,
+            "sos_opp_d_rank": 13,
+            "ncsos_adj_em": 10,
+            "ncsos_adj_em_rank": 18
+          }
+        },
+        {
+          "teamId": "tcu",
+          "teamName": "TCU",
+          "torvik": {
+            "rank": 48,
+            "team": "TCU",
+            "conf": "B12",
+            "record": "22-11",
+            "adjoe": 114.86249191977416,
+            "oe Rank": 83,
+            "adjde": 99.62520024824192,
+            "de Rank": 30,
+            "barthag": 0.8370835302196232,
+            "rank.1": 48,
+            "proj. W": 22,
+            "Proj. L": 11,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.6725539013930872,
+            "ncsos": 0.42733618038342,
+            "consos": 0.8305864114851623,
+            "Proj. SOS": 0.6725539013930872,
+            "Proj. Noncon SOS": 0.42733618038342,
+            "Proj. Con SOS": 0.8305864114851623,
+            "elite SOS": 0.6609029684897177,
+            "elite noncon SOS": 0.7976706049668045,
+            "Opp OE": 114.58037316668222,
+            "Opp DE": 104.65965585083796,
+            "Opp Proj. OE": 114.58037316668222,
+            "Opp Proj DE": 104.65965585083796,
+            "Con Adj OE": 115.25478022516629,
+            "Con Adj DE": 99.34163392283833,
+            "Qual O": 117.1952267425924,
+            "Qual D": 93.13005233189644,
+            "Qual Barthag": 0.9335911663611628,
+            "Qual Games": 13,
+            "FUN": 0.0924835464429918,
+            "ConPF": 1372,
+            "ConPA": 1371,
+            "ConPoss": 1268.1124999999995,
+            "ConOE": 1.0819229366479712,
+            "ConDE": 1.0811343630789858,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 2.342056001141492,
+            "WAB Rk": 35,
+            "Fun Rk": 14,
+            "adjt": 67.55883337258985
+          },
+          "kenpom": {
+            "rank": 43,
+            "team": "TCU",
+            "conf": "B12",
+            "record": "22-11",
+            "adj_em": 17.62,
+            "adj_o": 115.5,
+            "adj_o_rank": 81,
+            "adj_d": 97.8,
+            "adj_d_rank": 23,
+            "adj_t": 67.8,
+            "adj_t_rank": 159,
+            "luck": 0.004,
+            "luck_rank": 179,
+            "sos_adj_em": 11.02,
+            "sos_adj_em_rank": 53,
+            "sos_opp_o": 115.2,
+            "sos_opp_o_rank": 53,
+            "sos_opp_d": 104.2,
+            "sos_opp_d_rank": 45,
+            "ncsos_adj_em": -6.98,
+            "ncsos_adj_em_rank": 333
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-1w9u7gru",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Duke TCU March Madness 2026 injury news",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:23:16.507Z",
+      "completedAt": "2026-03-18T10:23:17.293Z",
+      "summary": "Returned 5 search results for \"Duke TCU March Madness 2026 injury news\".",
+      "result": [
+        {
+          "title": "Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b",
+          "snippet": "Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won&#x27;t play in this week&#x27;s ..."
+        },
+        {
+          "title": "How Caleb Wilson&#x27;s injury impacts UNC-Duke, NCAA tournament and NBA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48124467%2Fcaleb%2Dwilson%2Dinjury%2Dimpact%2Dunc%2Dduke%2Dncaa%2Dtournament%2Dnba%2Ddraft&rut=4b4b45db3d74435c971a510e0824f8966edf3758336ca9311d01aef5824441e6",
+          "snippet": "What does his absence mean for North Carolina&#x27;s chances against Duke on Saturday (6:30 p.m. ET, ESPN) -- and through the NCAA tournament? What about Wilson&#x27;s outlook in the 2026 NBA draft?"
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=0c86a36b38fe8a85cfca17567cf51b782b5e714eb40e4e241fb8a636a44aaba1",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Duke Blue Devils Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=d6bcf80025b06743fd52d54637c63655e1dc2bb35b61c45c1a0db1de6957841b",
+          "snippet": "Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        }
+      ]
+    },
+    {
+      "id": "tool-omlr6t83",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture"
+      },
+      "startedAt": "2026-03-18T10:23:19.207Z",
+      "completedAt": "2026-03-18T10:23:19.688Z",
+      "summary": "Fetched https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture",
+        "text": "Duke's Caleb Foster out indefinitely with foot fracture - ESPN Duke's Foster out indefinitely with foot fracture --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Duke's Foster out indefinitely with foot fracture Duke Blue Devils 8d Mark saves day, sends Texas to NCAA first round Texas Longhorns 6h Adam Rittenberg Howard checks last box with first NCAAT win Howard Bison 9h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 18h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 18h EMU hires Clemson assistant Donlon as coach Clemson Tigers 10h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 14h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 18h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 21h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 22h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 3d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 6h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 18h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello Duke's Caleb Foster out indefinitely with foot fracture play Caleb Foster lays it in for a Duke bucket (0:21) Caleb Foster banks it in off the glass to extend Duke’s first-half lead. (0:21) Associated Press Multiple Authors Mar 10, 2026, 10:20 AM ET Email Print Open Extended Reactions Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won't play in this week's Atlantic Coast Con"
+      }
+    },
+    {
+      "id": "tool-b9voh4jh",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke TCU March Madness 2026 preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:23:22.548Z",
+      "completedAt": "2026-03-18T10:23:23.922Z",
+      "summary": "Returned 5 search results for \"Duke TCU March Madness 2026 preview\".",
+      "result": [
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=59a54b08a4a01a561957618f694cf60e2f570003ee167da248e32ea2108fa9f4",
+          "snippet": "Duke has all the ingredients of a national champion: a superstar with an all-around game (Boozer), a roster with multiple likely 2026 NBA first-round draft picks (Boozer, Ngongba, Isaiah Evans ..."
+        },
+        {
+          "title": "March Madness bracket predictions: Expert picks, upsets, winners, odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd",
+          "snippet": "Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis, including predictions, upsets, Vegas odds and more to help you ..."
+        },
+        {
+          "title": "Duke vs Siena, Ohio State vs TCU predictions for 2026 NCAA first ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fduke%2Dvs%2Dsiena%2Dohio%2Dstate%2Dvs%2Dtcu%2Dpredictions%2Dfor%2D2026%2Dncaa%2Dfirst%2Dround%2Din%2Dgreenville%2Far%2DAA1YH3e0&rut=e35290dc4ac1c77a31f3b7a04eafae016b3cd1d8122eeda48e014e6c49b8c0f0",
+          "snippet": "TCU (22-11) went three straight times from 2022-24 but hasn&#x27;t been past the first round. In 2022, the Horned Frogs beat Seton Hall for their first March Madness win in 35 years."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "2026 March Madness odds and predictions: Breakdown of First Round in ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nbcsports.com%2Fbetting%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dmarch%2Dmadness%2Dodds%2Dand%2Dpredictions%2Da%2Dbreakdown%2Dof%2Dthe%2Dopening%2Dround%2Din%2Dthe%2Deast%2Dregion%2Dincluding%2Dupsets&rut=39c7cfbea5105af8bfed8dfd45be4f703a37ee3eddabab369f9e4bc38e27c98b",
+          "snippet": "TCU is 9-3 ATS and 6-6 on the ML as an underdog this season, while Ohio State is 7-10-1 ATS and 16-2 on the ML as a favorite. This is a small spread, but I believe TCU can win this game outright with its strong defense and upset Jake Diebler in his first NCAA Tournament game as a head coach of Ohio State.\""
+        }
+      ]
+    },
+    {
+      "id": "tool-i8n8jb3d",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.msn.com/en-us/sports/other/duke-vs-siena-ohio-state-vs-tcu-predictions-for-2026-ncaa-first-round-in-greenville-ar-aa1yh3e0"
+      },
+      "startedAt": "2026-03-18T10:23:43.893Z",
+      "completedAt": "2026-03-18T10:23:43.987Z",
+      "summary": "fetch_webpage failed: 404 <!DOCTYPE html>\r\n<html xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:Web=\"http://schemas.live.com/Web/\">\r\n<head>\r\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\t<title>MSN</title>\r\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n</head>\r\n<body>\r\n\t<div>\r\n\t\t\t<style>\r\n\t\tbody, html {\r\n\t\t\tfont-family: \"Segoe UI Semibold\",\"Segoe WP Semibold\",\"Segoe WP\",\"Segoe UI\",Arial,Sans-Serif !important;\r\n\t\t\tline-height: 30px;\r\n\t\t\tcolor: black;\r\n\t\t\tbackground-color: #F7F7F7;\r\n\t\t}\r\n\r\n\t\ta {\r\n\t\t\tcolor: #333333;\r\n\t\t\ttext-decoration: none;\r\n\t\t\tfont-family: \"Segoe UI Semibold\",\"Segoe WP Semibold\",\"Segoe WP\",\"Segoe UI\",Arial,Sans-Serif !important;\r\n\t\t\tfont-weight: 600;\r\n\t\t\tfont-size: 10px;\r\n\t\t\tline-height: 10px;\r\n\t\t}\r\n\r\n\t\t\ta.copyrightmicrosoft {\r\n\t\t\t\tcolor: #333333;\r\n\t\t\t\ttext-decoration: none;\r\n\t\t\t\tfont-size: 10px;\r\n\t\t\t}\r\n\r\n\t\t.article {\r\n\t\t\tpadding-top: 100px;\r\n\t\t\tpadding-left: 120px;\r\n\t\t\twidth: 100%;\r\n\t\t\ttext-align: left;\r\n\t\t}\r\n\r\n\t\t.articletitlefgstart {\r\n\t\t\tfont-size: 38px;\r\n\t\t}\r\n\r\n\t\t.articledesc {\r\n\r\n\t\t}\r\n\r\n\t\t.footer {\r\n\t\t\tposition: fixed;\r\n\t\t\tleft: 0;\r\n\t\t\tbottom: 0;\r\n\t\t\twidth: 100%;\r\n\t\t\tcolor: white;\r\n\t\t\ttext-align: center;\r\n\t\t}\r\n\r\n\t\t.header {\r\n\t\t\tposition: fixed;\r\n\t\t\tleft: 0;\r\n\t\t\ttop: 0;\r\n\t\t\tpadding: 30px;\r\n\t\t\twidth: 100%;\r\n\t\t\tcolor: white;\r\n\t\t\ttext-align: center;\r\n\t\t}\r\n\r\n\t\t.logowrapper {\r\n\t\t\tpadding-left: 100px;\r\n\t\t\ttext-align: left;\r\n\t\t}\r\n\r\n\t\ta:hover {\r\n\t\t\ttext-decoration: underline\r\n\t\t}\r\n\r\n\t\ta.copyrightmicrosoft:hover {\r\n\t\t\ttext-decoration: none\r\n\t\t}\r\n\r\n\t\t* {\r\n\t\t\tbox-sizing: border-box;\r\n\t\t}\r\n\r\n\t\tform.searchBox input[type=search] {\r\n\t\t\tpadding: 10px;\r\n\t\t\tfont-size: 17px;\r\n\t\t\tborder: 1px solid grey;\r\n\t\t\tfloat: left;\r\n\t\t\twidth: 80%;\r\n\t\t\tbackground: #f1f1f1;\r\n\t\t}\r\n\t\tform.searchBox button {\r\n\t\t\tfloat: left;\r\n\t\t\twidth: 70px;\r\n\t\t\tpadding: 10px;\r\n\t\t\tbackground: #2196F3;\r\n\t\t\tcolor: white;\r\n\t\t\tfont-size: 17px;\r\n\t\t\tborder: 1px solid grey;\r\n\t\t\tborder-left: none;\r\n\t\t\tcursor: pointer;\r\n\t\t}\r\n\r\n\t\tform.searchBox button:hover {\r\n\t\t\tbackground: #0b7dda;\r\n\t\t}\r\n\r\n\t\tform.searchBox::after {\r\n\t\t\tcontent: \"\";\r\n\t\t\tclear: both;\r\n\t\t\tdisplay: table;\r\n\t\t}\r\n\t\t@ media screen and (prefers-color-scheme: dark) {\r\n\t\t\tbody, html {\r\n\t\t\t\tbackground-color: #242424;\r\n\t\t\t\tcolor: white;\r\n\t\t\t}\r\n\r\n\t\t\ta {\r\n\t\t\t\tcolor: white;\r\n\t\t\t\ttext-decoration: none;\r\n\t\t\t\tfont-family: \"Segoe UI Semibold\",\"Segoe WP Semibold\",\"Segoe WP\",\"Segoe UI\",Arial,Sans-Serif !important;\r\n\t\t\t\tfont-weight: 600;\r\n\t\t\t\tfont-size: 10px;\r\n\t\t\t\tline-height: 10px;\r\n\t\t\t}\r\n\r\n\t\t\t\ta.copyrightmicrosoft {\r\n\t\t\t\t\tcolor: white;\r\n\t\t\t\t\ttext-decoration: none;\r\n\t\t\t\t\tfont-size: 10px;\r\n\t\t\t\t}\r\n\r\n\t\t\t.footer {\r\n\t\t\t\tbackground-color: #242424;\r\n\t\t\t\tcolor: white;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t@ media(max-width: 736px) {\r\n\t\t\tbody {\r\n\t\t\t\tfont-family: HelveticaNeue,Roboto,Arial,sans-serif\r\n\t\t\t}\r\n\r\n\t\t\t.footer {\r\n\t\t\t\tposition: fixed;\r\n\t\t\t\tleft: 0;\r\n\t\t\t\tbottom: 0;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tcolor: white;\r\n\t\t\t\ttext-align: center;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t#whoopsDiv {\r\n\t\t\tdisplay: none;\r\n\t\t}\r\n\r\n\t\t#errorref.hidden {\r\n\t\t\tvisibility: hidden;\r\n\t\t}\r\n\t</style>\r\n\t<div class=\"header\">\r\n        <table style=\"width:70%\">\r\n            <tr>\r\n                <td>\r\n\t\t\t\t\t<div class=\"logowrapper\" id=\"logo\">\r\n\t\t\t\t\t\t<a class=\"logo\" role=\"link\" tabindex=\"0\" href=\"https://www.msn.com/\" aria-label=\"MSN\" data-t=\"{\"n\":\"CommonHeaderLogoLink\",\"b\":1}\">\r\n\t\t\t\t\t\t\t<svg width=\"74\" height=\"28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n\t\t\t\t\t\t\t<path d=\"M15.234 22.383s-1.231 5.661 2.234 5.611c2.613-.038 4.184-3.752 1.895-9.302 0 0-1.945-.925-4.13 3.69Z\" fill=\"url(#a)\" />\r\n\t\t\t\t\t\t\t<path d=\"M15.234 22.383s-1.231 5.661 2.234 5.611c2.613-.038 4.184-3.752 1.895-9.302 0 0-1.945-.925-4.13 3.69Z\" fill=\"url(#b)\" />\r\n\t\t\t\t\t\t\t<path d=\"M12.978 22.297S10.2 28.21 5.926 27.994c-4.272-.216-5.334-7.74 4.075-11.23 0 0 3.883 1.507 2.976 5.533h.001Z\" fill=\"url(#c)\" />\r\n\t\t\t\t\t\t\t<path d=\"m51.295 24.537 1.395-1.805c.454.43.938.754 1.454.973.516.219 1.06.328 1.63.328.649 0 1.145-.125 1.49-.375.351-.25.527-.617.527-1.102 0-.39-.153-.711-.457-.962-.305-.258-.794-.461-1.466-.61-1.524-.336-2.6-.805-3.224-1.407-.618-.609-.927-1.363-.927-2.263 0-1.125.426-2.028 1.278-2.708.86-.688 1.958-1.032 3.295-1.032.743 0 1.438.11 2.087.328a5.339 5.339 0 0 1 1.794 1.02l-1.313 1.748c-.461-.344-.9-.595-1.313-.75a3.628 3.628 0 0 0-1.349-.247c-.61 0-1.07.121-1.383.364-.305.234-.458.559-.458.973 0 .398.16.707.481.926.32.211.91.415 1.77.61 1.282.281 2.24.73 2.873 1.348.641.618.962 1.415.962 2.392 0 1.165-.43 2.099-1.29 2.803-.852.703-1.99 1.055-3.412 1.055-.868 0-1.68-.133-2.439-.399a5.885 5.885 0 0 1-2.005-1.208ZM73.201 25.862H70.4v-6.847c0-1.055-.199-1.853-.598-2.392-.39-.54-.98-.81-1.77-.81-.813 0-1.482.306-2.005.915-.524.602-.786 1.364-.786 2.287v6.847h-2.814V13.856h2.814v1.829h.047c.438-.696.985-1.22 1.642-1.571.664-.36 1.407-.54 2.227-.54 1.33 0 2.334.422 3.014 1.266.688.837 1.031 2.056 1.031 3.66v7.362ZM46.804 25.863h2.814v-7.434c0-1.618-.336-2.83-1.009-3.635-.672-.813-1.649-1.22-2.931-1.22-.883 0-1.665.188-2.345.563-.672.375-1.24.942-1.7 1.7a3.366 3.366 0 0 0-1.29-1.653c-.594-.406-1.31-.61-2.146-.61-.797 0-1.524.184-2.18.551a4.285 4.285 0 0 0-1.595 1.513h-.047v-1.782H31.56v12.007h2.814v-6.755c0-.992.23-1.79.691-2.391.462-.602 1.064-.903 1.806-.903.774 0 1.352.254 1.736.762.383.5.574 1.255.574 2.263v7.024h2.814v-6.778c0-.915.239-1.688.715-2.322.477-.633 1.075-.95 1.794-.95.806 0 1.388.255 1.748.763.367.508.55 1.31.55 2.404v6.883Z\" fill=\"#212121\" />\r\n\t\t\t\t\t\t\t<path d=\"M15.232 22.383S16.4 8.388 22.517 7.135c3.787-.776 5.481 1.534 5.481 4.485 0 4.028-4.252 6.236-6.993 7.05-3.08.913-4.742 2.358-5.773 3.714v-.001Z\" fill=\"url(#d)\" />\r\n\t\t\t\t\t\t\t<path d=\"M12.977 22.306s.678-2.363-5.72-5.641C.86 13.385.113 9.405.01 7.109-.092 4.814.598 2.843 1.76 1.73 3.404.154 4.898-.127 7.082.06c2.902.25 5.942 3.221 7.46 7.87 2.205 6.755-1.565 14.376-1.565 14.376Z\" fill=\"url(#e)\" />\r\n\t\t\t\t\t\t\t<path d=\"M12.977 22.297s.678-2.364-5.72-5.642C.86 13.375.113 9.395.01 7.099c-.102-2.295.588-4.266 1.75-5.378C3.404.144 4.898-.136 7.082.05c2.902.249 5.942 3.22 7.46 7.868 2.205 6.756-1.565 14.378-1.565 14.378Z\" fill=\"url(#f)\" />\r\n\t\t\t\t\t\t\t<defs>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"a\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"matrix(-2.72413 -8.52658 15.54159 -4.96533 17.746 27.995)\"><stop stop-color=\"#FFB657\" /> <stop offset=\".643\" stop-color=\"#FF835C\" /> <stop offset=\".961\" stop-color=\"#CA2134\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"b\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"rotate(94.548 .426 17.642) scale(10.3454 8.7988)\"><stop offset=\".707\" stop-color=\"#FFCD0F\" stop-opacity=\"0\" /><stop offset=\"1\" stop-color=\"#FFCD0F\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"c\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"rotate(-71.159 25.14 12.158) scale(16.5824 10.8568)\"><stop offset=\".045\" stop-color=\"#FFC800\" /><stop offset=\".257\" stop-color=\"#B5BA1E\" /><stop offset=\".368\" stop-color=\"#98BD42\" /><stop offset=\".587\" stop-color=\"#52B471\" /><stop offset=\".767\" stop-color=\"#018D32\" /><stop offset=\".878\" stop-color=\"#006523\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"d\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"matrix(-.31812 -16.3302 19.5232 -.38032 17.442 22.799)\"><stop offset=\".066\" stop-color=\"#BD00FF\" /><stop offset=\"1\" stop-color=\"#FF5F3D\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"e\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"rotate(94.968 5.683 3.287) scale(21.167 34.1452)\"><stop stop-color=\"#3BD5FF\" /><stop offset=\".417\" stop-color=\"#0D91E1\" /><stop offset=\".744\" stop-color=\"#2764E7\" /><stop offset=\"1\" stop-color=\"#2052CB\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"f\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"matrix(-.58321 18.55704 -32.85658 -1.03262 10.71 -5.196)\"><stop stop-color=\"#3DEEDF\" stop-opacity=\".7\" /><stop offset=\"1\" stop-color=\"#0D91E1\" stop-opacity=\"0\" /></radialGradient>\r\n\t\t\t\t\t\t\t</defs>\r\n\t\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t</a>\r\n\t\t\t\t\t</div>\r\n                </td>\r\n                <td>\r\n                    <form class=\"searchBox\" action=\"https://www.bing.com/search?scope=web\" method=\"get\" id=\"srchfrm\" data-form-code=\"\" data-bing-action-uri=\"https://www.bing.com/search?scope=web\" style=\"margin:auto;max-width:600px\">\r\n                        <input id=\"q\" name=\"q\" accesskey=\"S\" autocomplete=\"off\" type=\"search\" value=\"\" maxlength=\"250\" class=\"searchTerm\" aria-label=\"Enter your search term\" title=\"enter your search term\">\r\n                        <button id=\"sb_form_go\" class=\"searchButton\" title=\"web search\" style=\"width: 70px; height: 42px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAsCAYAAADYQc64AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAOZSURBVGhD7ZrdS1NhHMe/e3PHOW1Op1tlppim2AtUZIJFSCF4IRFdBP0HQXQRRBFEEHRReFNXXQe90UUQQYERZi8XQoWVSC9WqNOmc06bc9vZ6febRwg7oymeZ83O52bjefbC+ex5vr/fs8204+qggv8cmxmocSnYah9DjdkPj8cDGjKIJ4H+oAm3/V68kusQCAQMMYvpGnXgo+w1xGjRFzPEaPIpZDLEaMGZY4hJgyEmDYaYNGS9wdtf7cDhxkI0lNlRKJlhojE5qWAqmkTvcBQ334bRNzo3/2CBZE1MmdOKc/tLsLtCgtlsQiSWxNiMDFlRYLeY4C20Io9u5xIK7vfP4NrLydRjRJEVMdVuGy4e9GBTaR784QTu9IVx43VYnZ3HkWfG8SYX2jc74aCe/cW3WZx9HBAmR3jG8AWfanGjpiQPb0aiOPlg7A8pDAu43B3E2UcBDE3F0VyZj9N73eqs/ggXc2x7EbavlfB1Mo5LTyfwJRhXZ7ThlXLlWRATERktGx04uKlAndEXoWJ4teyrcoBiBA8HZv4qZQGW0z0YgdNuRlvtKhTTvCEfPgrV0ekEnnyOqKOZ8ZzkhKIyqiifNrhs6qh+CBVTVWyDZDPBT2K+hzJbLQvwignNJrHGbkEthbbeCBVjoXfjPoXL8nIYp5yx0mtwGdcboWIWKM5f3tu66XlcrJMcUjojVAxXojlZQTk1dxzES2HXeglFkgVh6oi/hxLqqH4IFfPhRwwTP2VUuKxor1tadWmi4OYVM0QN4Ycf+h8RhIrhwO2h6sIZ0VZLHW2Gq2aL144DNQWIUzRxCItAqBjm3rvpVP/CF3tmX8lf5fDx4URzcers9NYfxS06VIpAuBiuKnHKGRMVljbaTtcPebGHtokWHQ1OdLaXY5tPwqeJGDp7guqM/gg9RPKnf761FPVl9tSF8paqpN4mmVToPJTAwHgMCbpfSB1unccOT4El1SX3Ds0fCzLtlFcCYWJ+l9JP4Xmhaxyj1M8c3VaEjnpnaquYf2tP+DuZQapivPXu9k2ro+IQIkZLyuJPn7OmqUKCRHstPCej5+usOpMddBeTiZR/EV3DN1elMLqJyWUpjC5icl0Ks+JiVoMUZkXFrBYpzIqKqXTZsG6NNeelMFn5+SQX0K0q5TqGmDQYYtJgiEmDIUYD/nurIUYD/s+vIUaDRpvfELOYVm8E1Rg2xDCcKfVuBUfKR7BTeQ+fz4dfAON6nd0k3S8AAAAASUVORK5CYII=);\"><i class=\"fa fa-search\" ></i></button>\r\n                    </form>\r\n                </td>\r\n            </tr>\r\n        </table>\r\n    </div>\r\n\t<div class=\"article\" id=\"whoopsDiv\">\r\n\t <div class=\"articlehead\">\r\n\t\t <h1 class=\"articletitle fg start\">Whoops!</h1>\r\n\t\t <br />\r\n\t\t <p class=\"articledesc\">This page doesn’t exist or can’t be found.</p>\r\n\t </div>\r\n\t</div>\r\n\t<div class=\"footer\">\r\n\t   <table style=\"width:90%\">\r\n\t\t\t<tr>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<a class=\"copyrightmicrosoft\" href=\"https://www.microsoft.com/en-us/\" data-id=\"14\" data-m='{\"i\":14,\"p\":13,\"n\":\"MicrosoftCopyright\",\"y\":14,\"o\":1}'>\r\n\t\t\t\t\t\t<svg width=\"106\" height=\"22\" viewBox=\"0 0 106 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n\t\t\t\t\t\t\t<path d=\"M45.2018 4.40014V17.6001H42.921V7.24181H42.8906L38.8156 17.6001H37.295L33.1288 7.24181H33.0983V17.6001H31V4.40014H34.2844L38.0553 14.1779H38.1161L42.0999 4.40014H45.2018ZM47.0873 5.40847C47.0873 5.04181 47.2089 4.73625 47.4826 4.49181C47.7563 4.24736 48.0604 4.12514 48.4254 4.12514C48.8207 4.12514 49.1552 4.24736 49.3985 4.52236C49.6418 4.76681 49.7938 5.07236 49.7938 5.43903C49.7938 5.8057 49.6722 6.11125 49.3985 6.3557C49.1248 6.60014 48.8207 6.72236 48.4254 6.72236C48.03 6.72236 47.7259 6.60014 47.4826 6.3557C47.2393 6.05014 47.0873 5.74459 47.0873 5.40847ZM49.5505 8.12792V17.6001H47.3306V8.12792H49.5505ZM56.2713 15.9807C56.6058 15.9807 56.9708 15.889 57.3661 15.7363C57.7614 15.5835 58.1264 15.3696 58.4609 15.1251V17.2029C58.096 17.4168 57.7006 17.5696 57.2445 17.6613C56.7883 17.7529 56.3017 17.814 55.7543 17.814C54.3554 17.814 53.2302 17.3863 52.3787 16.5001C51.4968 15.614 51.0711 14.4835 51.0711 13.139C51.0711 11.6113 51.5273 10.3585 52.4092 9.3807C53.2911 8.40292 54.5379 7.91403 56.1801 7.91403C56.6058 7.91403 57.0012 7.97514 57.4269 8.06681C57.8527 8.18903 58.1872 8.31125 58.4305 8.43348V10.5724C58.096 10.3279 57.731 10.114 57.3965 9.99181C57.0316 9.83903 56.6667 9.77792 56.3017 9.77792C55.4198 9.77792 54.7204 10.0529 54.173 10.6335C53.6256 11.214 53.3519 11.9779 53.3519 12.9557C53.3519 13.9029 53.5952 14.6668 54.1122 15.1863C54.69 15.7057 55.3894 15.9807 56.2713 15.9807ZM64.7559 7.97514C64.9384 7.97514 65.0904 7.97514 65.2425 8.0057C65.3945 8.03625 65.5162 8.06681 65.6074 8.09736V10.3585C65.4858 10.2668 65.3337 10.2057 65.0904 10.114C64.8776 10.0224 64.6039 9.99181 64.2693 9.99181C63.722 9.99181 63.2658 10.2363 62.9009 10.6946C62.5359 11.1529 62.3231 11.8557 62.3231 12.8335V17.6001H60.1031V8.12792H62.3231V9.62514H62.3535C62.5663 9.1057 62.8705 8.70847 63.2658 8.40292C63.6915 8.12792 64.1781 7.97514 64.7559 7.97514ZM65.7291 13.0168C65.7291 11.4585 66.1548 10.2057 67.0367 9.28903C67.9186 8.37236 69.1351 7.91403 70.7164 7.91403C72.1761 7.91403 73.3317 8.34181 74.1528 9.22792C74.9739 10.114 75.3997 11.3057 75.3997 12.8029C75.3997 14.3307 74.9739 15.5529 74.092 16.4696C73.2101 17.3863 72.0241 17.8446 70.5036 17.8446C69.0438 17.8446 67.8882 17.4168 67.0367 16.5613C66.1548 15.6751 65.7291 14.4835 65.7291 13.0168ZM68.0403 12.9251C68.0403 13.9029 68.2532 14.6668 68.7093 15.1863C69.1655 15.7057 69.8041 15.9807 70.6252 15.9807C71.4463 15.9807 72.0545 15.7057 72.4802 15.1863C72.906 14.6668 73.1189 13.9029 73.1189 12.864C73.1189 11.8557 72.906 11.0918 72.4498 10.5724C72.0241 10.0529 71.4159 9.80847 70.6252 9.80847C69.8041 9.80847 69.1959 10.0835 68.7397 10.6335C68.2532 11.1529 68.0403 11.9168 68.0403 12.9251ZM78.684 10.6335C78.684 10.939 78.7753 11.214 78.9881 11.3974C79.201 11.5807 79.6268 11.7946 80.3262 12.0696C81.2081 12.4363 81.8468 12.8335 82.1813 13.2613C82.5462 13.7196 82.7287 14.239 82.7287 14.8807C82.7287 15.7668 82.3941 16.5001 81.6947 17.0196C81.0257 17.5696 80.0829 17.8446 78.9273 17.8446C78.532 17.8446 78.1062 17.7835 77.6197 17.6918C77.1331 17.6001 76.7377 17.4779 76.4032 17.3251V15.1251C76.7986 15.4001 77.2547 15.6446 77.7109 15.7974C78.1671 15.9501 78.5928 16.0418 78.9881 16.0418C79.4747 16.0418 79.8701 15.9807 80.0829 15.8279C80.3262 15.6751 80.4479 15.4613 80.4479 15.1251C80.4479 14.8196 80.3262 14.5446 80.0829 14.3613C79.8396 14.1474 79.3531 13.9029 78.684 13.6279C77.8629 13.2918 77.2851 12.8946 76.9506 12.4668C76.6161 12.039 76.4336 11.489 76.4336 10.8168C76.4336 9.96125 76.7682 9.25847 77.4372 8.70847C78.1062 8.15847 78.9881 7.88347 80.0525 7.88347C80.387 7.88347 80.752 7.91403 81.1473 8.0057C81.5426 8.06681 81.9076 8.18903 82.1813 8.2807V10.389C81.8772 10.2057 81.5426 10.0224 81.1473 9.86959C80.752 9.71681 80.3566 9.6557 79.9917 9.6557C79.5659 9.6557 79.2314 9.74736 79.0186 9.90014C78.8057 10.114 78.684 10.3279 78.684 10.6335ZM83.6714 13.0168C83.6714 11.4585 84.0972 10.2057 84.9791 9.28903C85.861 8.37236 87.0774 7.91403 88.6588 7.91403C90.1185 7.91403 91.2741 8.34181 92.0952 9.22792C92.9163 10.114 93.342 11.3057 93.342 12.8029C93.342 14.3307 92.9163 15.5529 92.0343 16.4696C91.1524 17.3863 89.9664 17.8446 88.4459 17.8446C86.9862 17.8446 85.8306 17.4168 84.9791 16.5613C84.1276 15.6751 83.6714 14.4835 83.6714 13.0168ZM85.9826 12.9251C85.9826 13.9029 86.1955 14.6668 86.6517 15.1863C87.1078 15.7057 87.7464 15.9807 88.5675 15.9807C89.3886 15.9807 89.9968 15.7057 90.4226 15.1863C90.8483 14.6668 91.0612 13.9029 91.0612 12.864C91.0612 11.8557 90.8483 11.0918 90.3922 10.5724C89.9664 10.0529 89.3582 9.80847 88.5675 9.80847C87.7464 9.80847 87.1382 10.0835 86.6821 10.6335C86.2259 11.1529 85.9826 11.9168 85.9826 12.9251ZM100.701 9.96125H97.3866V17.6001H95.1362V9.96125H93.5549V8.12792H95.1362V6.81403C95.1362 5.8057 95.4708 5.01125 96.1094 4.36959C96.748 3.72792 97.5691 3.42236 98.5727 3.42236C98.8464 3.42236 99.0896 3.42236 99.3025 3.45292C99.5154 3.48347 99.6979 3.51403 99.8499 3.57514V5.50014C99.7891 5.46959 99.637 5.40847 99.4546 5.34736C99.2721 5.28625 99.0592 5.2557 98.8159 5.2557C98.3598 5.2557 97.9949 5.40847 97.7516 5.68347C97.5083 5.98903 97.3866 6.41681 97.3866 6.96681V8.09736H100.701V5.95847L102.921 5.28625V8.09736H105.172V9.9307H102.921V14.3613C102.921 14.9418 103.013 15.3696 103.226 15.5835C103.438 15.8279 103.773 15.9501 104.229 15.9501C104.351 15.9501 104.503 15.9196 104.685 15.8585C104.868 15.7974 105.02 15.7363 105.172 15.6446V17.4779C105.02 17.5696 104.807 17.6307 104.472 17.6918C104.138 17.7529 103.834 17.7835 103.499 17.7835C102.556 17.7835 101.857 17.539 101.401 17.0196C100.945 16.5307 100.701 15.7668 100.701 14.7585V9.96125Z\" fill=\"#737373\"/>\r\n\t\t\t\t\t\t\t<path d=\"M10.4005 0H0V10.45H10.4005V0Z\" fill=\"#F25022\" />\r\n\t\t\t\t\t\t\t<path d=\"M21.8958 0H11.4954V10.45H21.8958V0Z\" fill=\"#7FBA00\" />\r\n\t\t\t\t\t\t\t<path d=\"M10.4005 11.5503H0V22.0003H10.4005V11.5503Z\" fill=\"#00A4EF\" />\r\n\t\t\t\t\t\t\t<path d=\"M21.8958 11.5503H11.4954V22.0003H21.8958V11.5503Z\" fill=\"#FFB900\" />\r\n\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t<br>&#169 <span id=\"fullyear\"></span> Microsoft\r\n\t\t\t\t\t</a>\r\n\t\t\t   </td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<ul id=\"links\">\r\n\t\t\t\t\t\t<table style=\"width:100%\">\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkId=521839\" data-id=\"15\" data-m='{\"i\":15,\"p\":13,\"n\":\"footer_privacy\",\"y\":14,\"o\":2}'>\r\n\t\t\t\t\t\t\t\t\t\tPrivacy &amp; Cookies\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkID=246338\" data-id=\"16\" data-m='{\"i\":16,\"p\":13,\"n\":\"footer_legal\",\"y\":14,\"o\":3}'>\r\n\t\t\t\t\t\t\t\t\t\tTerms of use\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkID=286759\" data-id=\"17\" data-m='{\"i\":17,\"p\":13,\"n\":\"footer_adprivacyinfo\",\"y\":14,\"o\":4}'>\r\n\t\t\t\t\t\t\t\t\t\tAbout our Ads\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"#\" id=\"footer_feedback\" data-id=\"18\" data-m='{\"i\":18,\"p\":13,\"n\":\"footer_feedback\",\"y\":14,\"o\":5}' target=\"_self\">\r\n\t\t\t\t\t\t\t\t\t\tFeedback\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkId=512703\" data-id=\"19\" data-m='{\"i\":19,\"p\":13,\"n\":\"footer_help\",\"y\":14,\"o\":6}'>\r\n\t\t\t\t\t\t\t\t\t\tHelp\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://www.msn.com/en-us/msn-worldwide\" data-id=\"20\" data-m='{\"i\":20,\"p\":13,\"n\":\"footer_worldwide\",\"y\":14,\"o\":7}'>\r\n\t\t\t\t\t\t\t\t\t\tMSN Worldwide\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?linkid=875132\" data-id=\"21\" data-m='{\"i\":21,\"p\":13,\"n\":\"footer_advertise\",\"y\":14,\"o\":8}'>\r\n\t\t\t\t\t\t\t\t\t\tAdvertise\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://blogs.msn.com/\" data-id=\"22\" data-m='{\"i\":22,\"p\":13,\"n\":\"footer_msn_blog\",\"y\":14,\"o\":9}'>\r\n\t\t\t\t\t\t\t\t\t\tMSN Blog\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://www.msn.com/en-us/news/us/about-us/ar-BBN0NAK\" data-id=\"23\" data-m='{\"i\":23,\"p\":13,\"n\":\"footer_aboutus\",\"y\":14,\"o\":10}'>\r\n\t\t\t\t\t\t\t\t\t\tAbout Us\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t   </table>\r\n\t</div>\r\n <script type=\"text/javascript\">\r\n\tdocument.getElementById(\"whoopsDiv\").style.display = \"block\";\r\n\tvar n = new Date().getFullYear();\r\n\tdocument.getElementById(\"fullyear\").innerHTML = n;\r\n\tsetTimeout('Redirect()', 5000);\r\n\tfunction Redirect() {\r\n\t\twindow.location = \"https://www.msn.com/\";\r\n\t}\r\n </script>\r\n\r\n\t</div>\r\n</body>\r\n</html>\r\n",
+      "result": {
+        "error": "fetch_webpage failed: 404 <!DOCTYPE html>\r\n<html xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:Web=\"http://schemas.live.com/Web/\">\r\n<head>\r\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\t<title>MSN</title>\r\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n</head>\r\n<body>\r\n\t<div>\r\n\t\t\t<style>\r\n\t\tbody, html {\r\n\t\t\tfont-family: \"Segoe UI Semibold\",\"Segoe WP Semibold\",\"Segoe WP\",\"Segoe UI\",Arial,Sans-Serif !important;\r\n\t\t\tline-height: 30px;\r\n\t\t\tcolor: black;\r\n\t\t\tbackground-color: #F7F7F7;\r\n\t\t}\r\n\r\n\t\ta {\r\n\t\t\tcolor: #333333;\r\n\t\t\ttext-decoration: none;\r\n\t\t\tfont-family: \"Segoe UI Semibold\",\"Segoe WP Semibold\",\"Segoe WP\",\"Segoe UI\",Arial,Sans-Serif !important;\r\n\t\t\tfont-weight: 600;\r\n\t\t\tfont-size: 10px;\r\n\t\t\tline-height: 10px;\r\n\t\t}\r\n\r\n\t\t\ta.copyrightmicrosoft {\r\n\t\t\t\tcolor: #333333;\r\n\t\t\t\ttext-decoration: none;\r\n\t\t\t\tfont-size: 10px;\r\n\t\t\t}\r\n\r\n\t\t.article {\r\n\t\t\tpadding-top: 100px;\r\n\t\t\tpadding-left: 120px;\r\n\t\t\twidth: 100%;\r\n\t\t\ttext-align: left;\r\n\t\t}\r\n\r\n\t\t.articletitlefgstart {\r\n\t\t\tfont-size: 38px;\r\n\t\t}\r\n\r\n\t\t.articledesc {\r\n\r\n\t\t}\r\n\r\n\t\t.footer {\r\n\t\t\tposition: fixed;\r\n\t\t\tleft: 0;\r\n\t\t\tbottom: 0;\r\n\t\t\twidth: 100%;\r\n\t\t\tcolor: white;\r\n\t\t\ttext-align: center;\r\n\t\t}\r\n\r\n\t\t.header {\r\n\t\t\tposition: fixed;\r\n\t\t\tleft: 0;\r\n\t\t\ttop: 0;\r\n\t\t\tpadding: 30px;\r\n\t\t\twidth: 100%;\r\n\t\t\tcolor: white;\r\n\t\t\ttext-align: center;\r\n\t\t}\r\n\r\n\t\t.logowrapper {\r\n\t\t\tpadding-left: 100px;\r\n\t\t\ttext-align: left;\r\n\t\t}\r\n\r\n\t\ta:hover {\r\n\t\t\ttext-decoration: underline\r\n\t\t}\r\n\r\n\t\ta.copyrightmicrosoft:hover {\r\n\t\t\ttext-decoration: none\r\n\t\t}\r\n\r\n\t\t* {\r\n\t\t\tbox-sizing: border-box;\r\n\t\t}\r\n\r\n\t\tform.searchBox input[type=search] {\r\n\t\t\tpadding: 10px;\r\n\t\t\tfont-size: 17px;\r\n\t\t\tborder: 1px solid grey;\r\n\t\t\tfloat: left;\r\n\t\t\twidth: 80%;\r\n\t\t\tbackground: #f1f1f1;\r\n\t\t}\r\n\t\tform.searchBox button {\r\n\t\t\tfloat: left;\r\n\t\t\twidth: 70px;\r\n\t\t\tpadding: 10px;\r\n\t\t\tbackground: #2196F3;\r\n\t\t\tcolor: white;\r\n\t\t\tfont-size: 17px;\r\n\t\t\tborder: 1px solid grey;\r\n\t\t\tborder-left: none;\r\n\t\t\tcursor: pointer;\r\n\t\t}\r\n\r\n\t\tform.searchBox button:hover {\r\n\t\t\tbackground: #0b7dda;\r\n\t\t}\r\n\r\n\t\tform.searchBox::after {\r\n\t\t\tcontent: \"\";\r\n\t\t\tclear: both;\r\n\t\t\tdisplay: table;\r\n\t\t}\r\n\t\t@ media screen and (prefers-color-scheme: dark) {\r\n\t\t\tbody, html {\r\n\t\t\t\tbackground-color: #242424;\r\n\t\t\t\tcolor: white;\r\n\t\t\t}\r\n\r\n\t\t\ta {\r\n\t\t\t\tcolor: white;\r\n\t\t\t\ttext-decoration: none;\r\n\t\t\t\tfont-family: \"Segoe UI Semibold\",\"Segoe WP Semibold\",\"Segoe WP\",\"Segoe UI\",Arial,Sans-Serif !important;\r\n\t\t\t\tfont-weight: 600;\r\n\t\t\t\tfont-size: 10px;\r\n\t\t\t\tline-height: 10px;\r\n\t\t\t}\r\n\r\n\t\t\t\ta.copyrightmicrosoft {\r\n\t\t\t\t\tcolor: white;\r\n\t\t\t\t\ttext-decoration: none;\r\n\t\t\t\t\tfont-size: 10px;\r\n\t\t\t\t}\r\n\r\n\t\t\t.footer {\r\n\t\t\t\tbackground-color: #242424;\r\n\t\t\t\tcolor: white;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t@ media(max-width: 736px) {\r\n\t\t\tbody {\r\n\t\t\t\tfont-family: HelveticaNeue,Roboto,Arial,sans-serif\r\n\t\t\t}\r\n\r\n\t\t\t.footer {\r\n\t\t\t\tposition: fixed;\r\n\t\t\t\tleft: 0;\r\n\t\t\t\tbottom: 0;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tcolor: white;\r\n\t\t\t\ttext-align: center;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t#whoopsDiv {\r\n\t\t\tdisplay: none;\r\n\t\t}\r\n\r\n\t\t#errorref.hidden {\r\n\t\t\tvisibility: hidden;\r\n\t\t}\r\n\t</style>\r\n\t<div class=\"header\">\r\n        <table style=\"width:70%\">\r\n            <tr>\r\n                <td>\r\n\t\t\t\t\t<div class=\"logowrapper\" id=\"logo\">\r\n\t\t\t\t\t\t<a class=\"logo\" role=\"link\" tabindex=\"0\" href=\"https://www.msn.com/\" aria-label=\"MSN\" data-t=\"{\"n\":\"CommonHeaderLogoLink\",\"b\":1}\">\r\n\t\t\t\t\t\t\t<svg width=\"74\" height=\"28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n\t\t\t\t\t\t\t<path d=\"M15.234 22.383s-1.231 5.661 2.234 5.611c2.613-.038 4.184-3.752 1.895-9.302 0 0-1.945-.925-4.13 3.69Z\" fill=\"url(#a)\" />\r\n\t\t\t\t\t\t\t<path d=\"M15.234 22.383s-1.231 5.661 2.234 5.611c2.613-.038 4.184-3.752 1.895-9.302 0 0-1.945-.925-4.13 3.69Z\" fill=\"url(#b)\" />\r\n\t\t\t\t\t\t\t<path d=\"M12.978 22.297S10.2 28.21 5.926 27.994c-4.272-.216-5.334-7.74 4.075-11.23 0 0 3.883 1.507 2.976 5.533h.001Z\" fill=\"url(#c)\" />\r\n\t\t\t\t\t\t\t<path d=\"m51.295 24.537 1.395-1.805c.454.43.938.754 1.454.973.516.219 1.06.328 1.63.328.649 0 1.145-.125 1.49-.375.351-.25.527-.617.527-1.102 0-.39-.153-.711-.457-.962-.305-.258-.794-.461-1.466-.61-1.524-.336-2.6-.805-3.224-1.407-.618-.609-.927-1.363-.927-2.263 0-1.125.426-2.028 1.278-2.708.86-.688 1.958-1.032 3.295-1.032.743 0 1.438.11 2.087.328a5.339 5.339 0 0 1 1.794 1.02l-1.313 1.748c-.461-.344-.9-.595-1.313-.75a3.628 3.628 0 0 0-1.349-.247c-.61 0-1.07.121-1.383.364-.305.234-.458.559-.458.973 0 .398.16.707.481.926.32.211.91.415 1.77.61 1.282.281 2.24.73 2.873 1.348.641.618.962 1.415.962 2.392 0 1.165-.43 2.099-1.29 2.803-.852.703-1.99 1.055-3.412 1.055-.868 0-1.68-.133-2.439-.399a5.885 5.885 0 0 1-2.005-1.208ZM73.201 25.862H70.4v-6.847c0-1.055-.199-1.853-.598-2.392-.39-.54-.98-.81-1.77-.81-.813 0-1.482.306-2.005.915-.524.602-.786 1.364-.786 2.287v6.847h-2.814V13.856h2.814v1.829h.047c.438-.696.985-1.22 1.642-1.571.664-.36 1.407-.54 2.227-.54 1.33 0 2.334.422 3.014 1.266.688.837 1.031 2.056 1.031 3.66v7.362ZM46.804 25.863h2.814v-7.434c0-1.618-.336-2.83-1.009-3.635-.672-.813-1.649-1.22-2.931-1.22-.883 0-1.665.188-2.345.563-.672.375-1.24.942-1.7 1.7a3.366 3.366 0 0 0-1.29-1.653c-.594-.406-1.31-.61-2.146-.61-.797 0-1.524.184-2.18.551a4.285 4.285 0 0 0-1.595 1.513h-.047v-1.782H31.56v12.007h2.814v-6.755c0-.992.23-1.79.691-2.391.462-.602 1.064-.903 1.806-.903.774 0 1.352.254 1.736.762.383.5.574 1.255.574 2.263v7.024h2.814v-6.778c0-.915.239-1.688.715-2.322.477-.633 1.075-.95 1.794-.95.806 0 1.388.255 1.748.763.367.508.55 1.31.55 2.404v6.883Z\" fill=\"#212121\" />\r\n\t\t\t\t\t\t\t<path d=\"M15.232 22.383S16.4 8.388 22.517 7.135c3.787-.776 5.481 1.534 5.481 4.485 0 4.028-4.252 6.236-6.993 7.05-3.08.913-4.742 2.358-5.773 3.714v-.001Z\" fill=\"url(#d)\" />\r\n\t\t\t\t\t\t\t<path d=\"M12.977 22.306s.678-2.363-5.72-5.641C.86 13.385.113 9.405.01 7.109-.092 4.814.598 2.843 1.76 1.73 3.404.154 4.898-.127 7.082.06c2.902.25 5.942 3.221 7.46 7.87 2.205 6.755-1.565 14.376-1.565 14.376Z\" fill=\"url(#e)\" />\r\n\t\t\t\t\t\t\t<path d=\"M12.977 22.297s.678-2.364-5.72-5.642C.86 13.375.113 9.395.01 7.099c-.102-2.295.588-4.266 1.75-5.378C3.404.144 4.898-.136 7.082.05c2.902.249 5.942 3.22 7.46 7.868 2.205 6.756-1.565 14.378-1.565 14.378Z\" fill=\"url(#f)\" />\r\n\t\t\t\t\t\t\t<defs>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"a\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"matrix(-2.72413 -8.52658 15.54159 -4.96533 17.746 27.995)\"><stop stop-color=\"#FFB657\" /> <stop offset=\".643\" stop-color=\"#FF835C\" /> <stop offset=\".961\" stop-color=\"#CA2134\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"b\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"rotate(94.548 .426 17.642) scale(10.3454 8.7988)\"><stop offset=\".707\" stop-color=\"#FFCD0F\" stop-opacity=\"0\" /><stop offset=\"1\" stop-color=\"#FFCD0F\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"c\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"rotate(-71.159 25.14 12.158) scale(16.5824 10.8568)\"><stop offset=\".045\" stop-color=\"#FFC800\" /><stop offset=\".257\" stop-color=\"#B5BA1E\" /><stop offset=\".368\" stop-color=\"#98BD42\" /><stop offset=\".587\" stop-color=\"#52B471\" /><stop offset=\".767\" stop-color=\"#018D32\" /><stop offset=\".878\" stop-color=\"#006523\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"d\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"matrix(-.31812 -16.3302 19.5232 -.38032 17.442 22.799)\"><stop offset=\".066\" stop-color=\"#BD00FF\" /><stop offset=\"1\" stop-color=\"#FF5F3D\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"e\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"rotate(94.968 5.683 3.287) scale(21.167 34.1452)\"><stop stop-color=\"#3BD5FF\" /><stop offset=\".417\" stop-color=\"#0D91E1\" /><stop offset=\".744\" stop-color=\"#2764E7\" /><stop offset=\"1\" stop-color=\"#2052CB\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"f\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"matrix(-.58321 18.55704 -32.85658 -1.03262 10.71 -5.196)\"><stop stop-color=\"#3DEEDF\" stop-opacity=\".7\" /><stop offset=\"1\" stop-color=\"#0D91E1\" stop-opacity=\"0\" /></radialGradient>\r\n\t\t\t\t\t\t\t</defs>\r\n\t\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t</a>\r\n\t\t\t\t\t</div>\r\n                </td>\r\n                <td>\r\n                    <form class=\"searchBox\" action=\"https://www.bing.com/search?scope=web\" method=\"get\" id=\"srchfrm\" data-form-code=\"\" data-bing-action-uri=\"https://www.bing.com/search?scope=web\" style=\"margin:auto;max-width:600px\">\r\n                        <input id=\"q\" name=\"q\" accesskey=\"S\" autocomplete=\"off\" type=\"search\" value=\"\" maxlength=\"250\" class=\"searchTerm\" aria-label=\"Enter your search term\" title=\"enter your search term\">\r\n                        <button id=\"sb_form_go\" class=\"searchButton\" title=\"web search\" style=\"width: 70px; height: 42px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAsCAYAAADYQc64AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAOZSURBVGhD7ZrdS1NhHMe/e3PHOW1Op1tlppim2AtUZIJFSCF4IRFdBP0HQXQRRBFEEHRReFNXXQe90UUQQYERZi8XQoWVSC9WqNOmc06bc9vZ6febRwg7oymeZ83O52bjefbC+ex5vr/fs8204+qggv8cmxmocSnYah9DjdkPj8cDGjKIJ4H+oAm3/V68kusQCAQMMYvpGnXgo+w1xGjRFzPEaPIpZDLEaMGZY4hJgyEmDYaYNGS9wdtf7cDhxkI0lNlRKJlhojE5qWAqmkTvcBQ334bRNzo3/2CBZE1MmdOKc/tLsLtCgtlsQiSWxNiMDFlRYLeY4C20Io9u5xIK7vfP4NrLydRjRJEVMdVuGy4e9GBTaR784QTu9IVx43VYnZ3HkWfG8SYX2jc74aCe/cW3WZx9HBAmR3jG8AWfanGjpiQPb0aiOPlg7A8pDAu43B3E2UcBDE3F0VyZj9N73eqs/ggXc2x7EbavlfB1Mo5LTyfwJRhXZ7ThlXLlWRATERktGx04uKlAndEXoWJ4teyrcoBiBA8HZv4qZQGW0z0YgdNuRlvtKhTTvCEfPgrV0ekEnnyOqKOZ8ZzkhKIyqiifNrhs6qh+CBVTVWyDZDPBT2K+hzJbLQvwignNJrHGbkEthbbeCBVjoXfjPoXL8nIYp5yx0mtwGdcboWIWKM5f3tu66XlcrJMcUjojVAxXojlZQTk1dxzES2HXeglFkgVh6oi/hxLqqH4IFfPhRwwTP2VUuKxor1tadWmi4OYVM0QN4Ycf+h8RhIrhwO2h6sIZ0VZLHW2Gq2aL144DNQWIUzRxCItAqBjm3rvpVP/CF3tmX8lf5fDx4URzcers9NYfxS06VIpAuBiuKnHKGRMVljbaTtcPebGHtokWHQ1OdLaXY5tPwqeJGDp7guqM/gg9RPKnf761FPVl9tSF8paqpN4mmVToPJTAwHgMCbpfSB1unccOT4El1SX3Ds0fCzLtlFcCYWJ+l9JP4Xmhaxyj1M8c3VaEjnpnaquYf2tP+DuZQapivPXu9k2ro+IQIkZLyuJPn7OmqUKCRHstPCej5+usOpMddBeTiZR/EV3DN1elMLqJyWUpjC5icl0Ks+JiVoMUZkXFrBYpzIqKqXTZsG6NNeelMFn5+SQX0K0q5TqGmDQYYtJgiEmDIUYD/nurIUYD/s+vIUaDRpvfELOYVm8E1Rg2xDCcKfVuBUfKR7BTeQ+fz4dfAON6nd0k3S8AAAAASUVORK5CYII=);\"><i class=\"fa fa-search\" ></i></button>\r\n                    </form>\r\n                </td>\r\n            </tr>\r\n        </table>\r\n    </div>\r\n\t<div class=\"article\" id=\"whoopsDiv\">\r\n\t <div class=\"articlehead\">\r\n\t\t <h1 class=\"articletitle fg start\">Whoops!</h1>\r\n\t\t <br />\r\n\t\t <p class=\"articledesc\">This page doesn’t exist or can’t be found.</p>\r\n\t </div>\r\n\t</div>\r\n\t<div class=\"footer\">\r\n\t   <table style=\"width:90%\">\r\n\t\t\t<tr>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<a class=\"copyrightmicrosoft\" href=\"https://www.microsoft.com/en-us/\" data-id=\"14\" data-m='{\"i\":14,\"p\":13,\"n\":\"MicrosoftCopyright\",\"y\":14,\"o\":1}'>\r\n\t\t\t\t\t\t<svg width=\"106\" height=\"22\" viewBox=\"0 0 106 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n\t\t\t\t\t\t\t<path d=\"M45.2018 4.40014V17.6001H42.921V7.24181H42.8906L38.8156 17.6001H37.295L33.1288 7.24181H33.0983V17.6001H31V4.40014H34.2844L38.0553 14.1779H38.1161L42.0999 4.40014H45.2018ZM47.0873 5.40847C47.0873 5.04181 47.2089 4.73625 47.4826 4.49181C47.7563 4.24736 48.0604 4.12514 48.4254 4.12514C48.8207 4.12514 49.1552 4.24736 49.3985 4.52236C49.6418 4.76681 49.7938 5.07236 49.7938 5.43903C49.7938 5.8057 49.6722 6.11125 49.3985 6.3557C49.1248 6.60014 48.8207 6.72236 48.4254 6.72236C48.03 6.72236 47.7259 6.60014 47.4826 6.3557C47.2393 6.05014 47.0873 5.74459 47.0873 5.40847ZM49.5505 8.12792V17.6001H47.3306V8.12792H49.5505ZM56.2713 15.9807C56.6058 15.9807 56.9708 15.889 57.3661 15.7363C57.7614 15.5835 58.1264 15.3696 58.4609 15.1251V17.2029C58.096 17.4168 57.7006 17.5696 57.2445 17.6613C56.7883 17.7529 56.3017 17.814 55.7543 17.814C54.3554 17.814 53.2302 17.3863 52.3787 16.5001C51.4968 15.614 51.0711 14.4835 51.0711 13.139C51.0711 11.6113 51.5273 10.3585 52.4092 9.3807C53.2911 8.40292 54.5379 7.91403 56.1801 7.91403C56.6058 7.91403 57.0012 7.97514 57.4269 8.06681C57.8527 8.18903 58.1872 8.31125 58.4305 8.43348V10.5724C58.096 10.3279 57.731 10.114 57.3965 9.99181C57.0316 9.83903 56.6667 9.77792 56.3017 9.77792C55.4198 9.77792 54.7204 10.0529 54.173 10.6335C53.6256 11.214 53.3519 11.9779 53.3519 12.9557C53.3519 13.9029 53.5952 14.6668 54.1122 15.1863C54.69 15.7057 55.3894 15.9807 56.2713 15.9807ZM64.7559 7.97514C64.9384 7.97514 65.0904 7.97514 65.2425 8.0057C65.3945 8.03625 65.5162 8.06681 65.6074 8.09736V10.3585C65.4858 10.2668 65.3337 10.2057 65.0904 10.114C64.8776 10.0224 64.6039 9.99181 64.2693 9.99181C63.722 9.99181 63.2658 10.2363 62.9009 10.6946C62.5359 11.1529 62.3231 11.8557 62.3231 12.8335V17.6001H60.1031V8.12792H62.3231V9.62514H62.3535C62.5663 9.1057 62.8705 8.70847 63.2658 8.40292C63.6915 8.12792 64.1781 7.97514 64.7559 7.97514ZM65.7291 13.0168C65.7291 11.4585 66.1548 10.2057 67.0367 9.28903C67.9186 8.37236 69.1351 7.91403 70.7164 7.91403C72.1761 7.91403 73.3317 8.34181 74.1528 9.22792C74.9739 10.114 75.3997 11.3057 75.3997 12.8029C75.3997 14.3307 74.9739 15.5529 74.092 16.4696C73.2101 17.3863 72.0241 17.8446 70.5036 17.8446C69.0438 17.8446 67.8882 17.4168 67.0367 16.5613C66.1548 15.6751 65.7291 14.4835 65.7291 13.0168ZM68.0403 12.9251C68.0403 13.9029 68.2532 14.6668 68.7093 15.1863C69.1655 15.7057 69.8041 15.9807 70.6252 15.9807C71.4463 15.9807 72.0545 15.7057 72.4802 15.1863C72.906 14.6668 73.1189 13.9029 73.1189 12.864C73.1189 11.8557 72.906 11.0918 72.4498 10.5724C72.0241 10.0529 71.4159 9.80847 70.6252 9.80847C69.8041 9.80847 69.1959 10.0835 68.7397 10.6335C68.2532 11.1529 68.0403 11.9168 68.0403 12.9251ZM78.684 10.6335C78.684 10.939 78.7753 11.214 78.9881 11.3974C79.201 11.5807 79.6268 11.7946 80.3262 12.0696C81.2081 12.4363 81.8468 12.8335 82.1813 13.2613C82.5462 13.7196 82.7287 14.239 82.7287 14.8807C82.7287 15.7668 82.3941 16.5001 81.6947 17.0196C81.0257 17.5696 80.0829 17.8446 78.9273 17.8446C78.532 17.8446 78.1062 17.7835 77.6197 17.6918C77.1331 17.6001 76.7377 17.4779 76.4032 17.3251V15.1251C76.7986 15.4001 77.2547 15.6446 77.7109 15.7974C78.1671 15.9501 78.5928 16.0418 78.9881 16.0418C79.4747 16.0418 79.8701 15.9807 80.0829 15.8279C80.3262 15.6751 80.4479 15.4613 80.4479 15.1251C80.4479 14.8196 80.3262 14.5446 80.0829 14.3613C79.8396 14.1474 79.3531 13.9029 78.684 13.6279C77.8629 13.2918 77.2851 12.8946 76.9506 12.4668C76.6161 12.039 76.4336 11.489 76.4336 10.8168C76.4336 9.96125 76.7682 9.25847 77.4372 8.70847C78.1062 8.15847 78.9881 7.88347 80.0525 7.88347C80.387 7.88347 80.752 7.91403 81.1473 8.0057C81.5426 8.06681 81.9076 8.18903 82.1813 8.2807V10.389C81.8772 10.2057 81.5426 10.0224 81.1473 9.86959C80.752 9.71681 80.3566 9.6557 79.9917 9.6557C79.5659 9.6557 79.2314 9.74736 79.0186 9.90014C78.8057 10.114 78.684 10.3279 78.684 10.6335ZM83.6714 13.0168C83.6714 11.4585 84.0972 10.2057 84.9791 9.28903C85.861 8.37236 87.0774 7.91403 88.6588 7.91403C90.1185 7.91403 91.2741 8.34181 92.0952 9.22792C92.9163 10.114 93.342 11.3057 93.342 12.8029C93.342 14.3307 92.9163 15.5529 92.0343 16.4696C91.1524 17.3863 89.9664 17.8446 88.4459 17.8446C86.9862 17.8446 85.8306 17.4168 84.9791 16.5613C84.1276 15.6751 83.6714 14.4835 83.6714 13.0168ZM85.9826 12.9251C85.9826 13.9029 86.1955 14.6668 86.6517 15.1863C87.1078 15.7057 87.7464 15.9807 88.5675 15.9807C89.3886 15.9807 89.9968 15.7057 90.4226 15.1863C90.8483 14.6668 91.0612 13.9029 91.0612 12.864C91.0612 11.8557 90.8483 11.0918 90.3922 10.5724C89.9664 10.0529 89.3582 9.80847 88.5675 9.80847C87.7464 9.80847 87.1382 10.0835 86.6821 10.6335C86.2259 11.1529 85.9826 11.9168 85.9826 12.9251ZM100.701 9.96125H97.3866V17.6001H95.1362V9.96125H93.5549V8.12792H95.1362V6.81403C95.1362 5.8057 95.4708 5.01125 96.1094 4.36959C96.748 3.72792 97.5691 3.42236 98.5727 3.42236C98.8464 3.42236 99.0896 3.42236 99.3025 3.45292C99.5154 3.48347 99.6979 3.51403 99.8499 3.57514V5.50014C99.7891 5.46959 99.637 5.40847 99.4546 5.34736C99.2721 5.28625 99.0592 5.2557 98.8159 5.2557C98.3598 5.2557 97.9949 5.40847 97.7516 5.68347C97.5083 5.98903 97.3866 6.41681 97.3866 6.96681V8.09736H100.701V5.95847L102.921 5.28625V8.09736H105.172V9.9307H102.921V14.3613C102.921 14.9418 103.013 15.3696 103.226 15.5835C103.438 15.8279 103.773 15.9501 104.229 15.9501C104.351 15.9501 104.503 15.9196 104.685 15.8585C104.868 15.7974 105.02 15.7363 105.172 15.6446V17.4779C105.02 17.5696 104.807 17.6307 104.472 17.6918C104.138 17.7529 103.834 17.7835 103.499 17.7835C102.556 17.7835 101.857 17.539 101.401 17.0196C100.945 16.5307 100.701 15.7668 100.701 14.7585V9.96125Z\" fill=\"#737373\"/>\r\n\t\t\t\t\t\t\t<path d=\"M10.4005 0H0V10.45H10.4005V0Z\" fill=\"#F25022\" />\r\n\t\t\t\t\t\t\t<path d=\"M21.8958 0H11.4954V10.45H21.8958V0Z\" fill=\"#7FBA00\" />\r\n\t\t\t\t\t\t\t<path d=\"M10.4005 11.5503H0V22.0003H10.4005V11.5503Z\" fill=\"#00A4EF\" />\r\n\t\t\t\t\t\t\t<path d=\"M21.8958 11.5503H11.4954V22.0003H21.8958V11.5503Z\" fill=\"#FFB900\" />\r\n\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t<br>&#169 <span id=\"fullyear\"></span> Microsoft\r\n\t\t\t\t\t</a>\r\n\t\t\t   </td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<ul id=\"links\">\r\n\t\t\t\t\t\t<table style=\"width:100%\">\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkId=521839\" data-id=\"15\" data-m='{\"i\":15,\"p\":13,\"n\":\"footer_privacy\",\"y\":14,\"o\":2}'>\r\n\t\t\t\t\t\t\t\t\t\tPrivacy &amp; Cookies\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkID=246338\" data-id=\"16\" data-m='{\"i\":16,\"p\":13,\"n\":\"footer_legal\",\"y\":14,\"o\":3}'>\r\n\t\t\t\t\t\t\t\t\t\tTerms of use\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkID=286759\" data-id=\"17\" data-m='{\"i\":17,\"p\":13,\"n\":\"footer_adprivacyinfo\",\"y\":14,\"o\":4}'>\r\n\t\t\t\t\t\t\t\t\t\tAbout our Ads\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"#\" id=\"footer_feedback\" data-id=\"18\" data-m='{\"i\":18,\"p\":13,\"n\":\"footer_feedback\",\"y\":14,\"o\":5}' target=\"_self\">\r\n\t\t\t\t\t\t\t\t\t\tFeedback\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkId=512703\" data-id=\"19\" data-m='{\"i\":19,\"p\":13,\"n\":\"footer_help\",\"y\":14,\"o\":6}'>\r\n\t\t\t\t\t\t\t\t\t\tHelp\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://www.msn.com/en-us/msn-worldwide\" data-id=\"20\" data-m='{\"i\":20,\"p\":13,\"n\":\"footer_worldwide\",\"y\":14,\"o\":7}'>\r\n\t\t\t\t\t\t\t\t\t\tMSN Worldwide\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?linkid=875132\" data-id=\"21\" data-m='{\"i\":21,\"p\":13,\"n\":\"footer_advertise\",\"y\":14,\"o\":8}'>\r\n\t\t\t\t\t\t\t\t\t\tAdvertise\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://blogs.msn.com/\" data-id=\"22\" data-m='{\"i\":22,\"p\":13,\"n\":\"footer_msn_blog\",\"y\":14,\"o\":9}'>\r\n\t\t\t\t\t\t\t\t\t\tMSN Blog\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://www.msn.com/en-us/news/us/about-us/ar-BBN0NAK\" data-id=\"23\" data-m='{\"i\":23,\"p\":13,\"n\":\"footer_aboutus\",\"y\":14,\"o\":10}'>\r\n\t\t\t\t\t\t\t\t\t\tAbout Us\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t   </table>\r\n\t</div>\r\n <script type=\"text/javascript\">\r\n\tdocument.getElementById(\"whoopsDiv\").style.display = \"block\";\r\n\tvar n = new Date().getFullYear();\r\n\tdocument.getElementById(\"fullyear\").innerHTML = n;\r\n\tsetTimeout('Redirect()', 5000);\r\n\tfunction Redirect() {\r\n\t\twindow.location = \"https://www.msn.com/\";\r\n\t}\r\n </script>\r\n\r\n\t</div>\r\n</body>\r\n</html>\r\n"
+      }
+    },
+    {
+      "id": "tool-bbm74iu0",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke injury Caleb Foster TCU matchup March Madness 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:23:49.889Z",
+      "completedAt": "2026-03-18T10:23:51.292Z",
+      "summary": "Returned 5 search results for \"Duke injury Caleb Foster TCU matchup March Madness 2026\".",
+      "result": [
+        {
+          "title": "March Madness key injuries to know: How Caleb Foster, JT Toppin and ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fmarch%2Dmadness%2Dkey%2Dinjuries%2Dknow%2D181833623.html&rut=f88521f85f3b6943b2eeafda9997f36d82419a49e500989b3729f978bd631052",
+          "snippet": "March Madness key injuries to know: How Caleb Foster , JT Toppin and more will impact 2026 brackets King McClure thinks Duke might have an early exit at the hands of TCU"
+        },
+        {
+          "title": "Caleb Foster injury updates: Will Duke star play in 2026 March Madness ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fcaleb%2Dfoster%2Dinjury%2Dupdates%2Dwill%2Dduke%2Dstar%2Dplay%2Din%2D2026%2Dmarch%2Dmadness%2Dopener%2Far%2DAA1YK0tL&rut=98f8c47c5b24d64664a5c2eb71924b2c411cfd819c705ebb6ef016c4f7eb45c6",
+          "snippet": "Foster suffered a fracture in his right foot and underwent surgery, Scheyer told reporters ahead of the ACC Tournament. The injury occurred in Duke&#x27;s regular-season finale against North Carolina."
+        },
+        {
+          "title": "Duke basketball injury update for March Madness tournament | Raleigh ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fduke%2Farticle315059036.html&rut=e7af8cca5273659c22bc0f655e11af9d4a22b3dfe263cd4faf23b264c8d53e17",
+          "snippet": "Duke&#x27;s Caleb Foster and Patrick Ngongba II cheer on the Blue Devils in the second half of Duke&#x27;s 80-79 victory over Florida State in the quarterfinals of the 2026 ACC Men&#x27;s Basketball ..."
+        },
+        {
+          "title": "Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fuk%2Fncaa%2Dbasketball%2Fduke%2Fnews%2Fduke%2Dbasketball%2Djon%2Dscheyer%2Drealistic%2Dcaleb%2Dfoster%2Dinjury%2Dtimeline%2Dmarch%2Dmadness%2F0a8a315cad33eb46991c8423&rut=fc0977dbb1d041e9fe6fef4648f3663a668308d41227652f8ef81a492bd86a1d",
+          "snippet": "The Duke Blue Devils are gearing up to make a big run in the ACC Tournament. Eventually, the goal is to gain momentum during March Madness and then notch their first NCAA Tournament National ..."
+        },
+        {
+          "title": "Caleb Foster injury: Duke guard out for &#x27;foreseeable&#x27; future after ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fcaleb%2Dfoster%2Dinjury%2Dduke%2D2026%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2F&rut=41e2c670581e2c1116efdffdfe68ed01ff8a02abfba27fe5818faa6f330aab70",
+          "snippet": "The postseason outlook for No. 1 Duke took a significant hit Tuesday when coach Jon Scheyer confirmed that starting point guard Caleb Foster suffered a fracture in his right foot in the Blue ..."
+        }
+      ]
+    },
+    {
+      "id": "tool-5o59ln8v",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://sports.yahoo.com/articles/march-madness-key-injuries-know-181833623.html"
+      },
+      "startedAt": "2026-03-18T10:23:55.663Z",
+      "completedAt": "2026-03-18T10:23:56.603Z",
+      "summary": "Fetched https://sports.yahoo.com/articles/march-madness-key-injuries-know-181833623.html and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://sports.yahoo.com/articles/march-madness-key-injuries-know-181833623.html",
+        "text": "March Madness key injuries to know: How Caleb Foster, JT Toppin and more will impact 2026 brackets - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Streaming TVs Gift ideas Best gifts for men Best gift cards Best gifts for mom Best gifts for teens Best gifts for couples Best gifts for sister-in-law Best gifts for girlfriends Best gifts for grandma Best gifts for sisters Best gifts for husbands Best birthday gifts for her Best get well soon gifts Best travel gifts Best gifts for mother-in-law Best anniversary gifts for wife Stores Amazon Best Buy Coach Outlet Home Depot Kate Spade New York Lowes Macy&#x27;s Nordstrom Sephora Sur La Table Target Ulta Walmart Wayfair Zappos Shopping Guides Best cordless stick vacuums Best water bottles Best vacuums Best air fryers Best luggage Best jeans Best bras Best nontoxic nail polish Best under eye cream Best skin tightening creams Best coffee makers Best comforters Best mops Best Hoka shoes for walking Best instant pot Deals Toys and games General Food Travel Autos EV & Future Tech Classic & Collector Deals & Buying Guides Ownership Safety & Recalls Policy & Environment New Vehicles & Reviews Auto Shows General People & Culture Gift ideas Buying guides Amazon Spring Sale deals Amazon Spring Sale tech deals Entertainment Celebrity TV Movies Music How to Watch Interviews Videos Finance My portfolio News Latest Originals Newsletters Stock market Crypto Earnings Tariffs Economics Tech Housing Fed meeting Markets Most active stocks Top stock gainers Biggest stock losers Trending tickers Highest dividend stocks Crypto Prediction markets Options Sectors Futures World indices Research Equities screener Penny stock screener Most shorted screener Undervalued growth screener Financial calendar Earnings calendar Stock comparison Currency converter Advanced charts Community Personal finance My Money Credit cards Banking Mortgages Mortgage calculator Insurance Taxes "
+      }
+    },
+    {
+      "id": "tool-uxtw8v9j",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke vs TCU 2026 NCAA tournament preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:24:02.180Z",
+      "completedAt": "2026-03-18T10:24:03.102Z",
+      "summary": "Returned 5 search results for \"Duke vs TCU 2026 NCAA tournament preview\".",
+      "result": [
+        {
+          "title": "Duke vs Siena, Ohio State vs TCU predictions for 2026 NCAA first ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fduke%2Dvs%2Dsiena%2Dohio%2Dstate%2Dvs%2Dtcu%2Dpredictions%2Dfor%2D2026%2Dncaa%2Dfirst%2Dround%2Din%2Dgreenville%2Far%2DAA1YH3e0&rut=e35290dc4ac1c77a31f3b7a04eafae016b3cd1d8122eeda48e014e6c49b8c0f0",
+          "snippet": "Ohio State vs TCU prediction Ohio State (21-12) is back in the NCAA Tournament for the first time in six years. TCU (22-11) went three straight times from 2022-24 but hasn&#x27;t been past the first ..."
+        },
+        {
+          "title": "March Madness East Region Predictions 2026 | NCAA Tournament Bracket ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Deast%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=25e6368f544675f01902e26368a5f0c4bdbd53bbe7041aac490fe6f40bf291f2",
+          "snippet": "I&#x27;m breaking down my March Madness East Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament ."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament ."
+        },
+        {
+          "title": "March Madness bracket predictions: Expert picks, upsets, winners, odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd",
+          "snippet": "Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis, including predictions, upsets, Vegas odds and more to help you ..."
+        },
+        {
+          "title": "2026 NCAA Tournament East Region bracket preview ... - CBS Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Deast%2Dregion%2Dbracket%2Dpreview%2F&rut=3317e88aa32f07ad78b865bcbc054478b2d66700f1605ed022ccd6393dacb39b",
+          "snippet": "Breaking down the 2026 NCAA Tournament East Region with predictions, upset picks, sleeper teams, best first-round games and players to watch in March Madness."
+        }
+      ]
+    },
+    {
+      "id": "tool-whb6ffyh",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbookreview.com/picks/ncaa-basketball/march-madness-east-region-predictions-picks-best-bets-2026/"
+      },
+      "startedAt": "2026-03-18T10:24:10.576Z",
+      "completedAt": "2026-03-18T10:24:11.449Z",
+      "summary": "Fetched https://www.sportsbookreview.com/picks/ncaa-basketball/march-madness-east-region-predictions-picks-best-bets-2026/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportsbookreview.com/picks/ncaa-basketball/march-madness-east-region-predictions-picks-best-bets-2026/",
+        "text": "March Madness East Region Predictions 2026 | NCAA Tournament Bracket Odds & Best Bets Sportsbooks Menu Sportsbooks Country Sportsbooks Country Best Betting Sites US Best Sportsbooks US Sports Betting Apps US Betting Sites Canada Best Sportsbooks Canada Sports Betting Apps Canada Paris Sportifs au Canada US States Sportsbooks US States Arizona California Colorado Florida Illinois Indiana Iowa Kentucky Louisiana Maryland Massachusetts Michigan Missouri New Jersey New York North Carolina Ohio Pennsylvania Tennessee Texas Virginia West Virginia CA Provinces Sportsbooks CA Provinces Alberta British Columbia Manitoba Nova Scotia Quebec Ontario Paris Sportifs au Quebec By Category Sportsbooks By Category Prop Betting Sites Parlay Betting Sites Fastest Payout Sportsbooks Social Sportsbooks Best DFS Sites Horse Racing Betting Sites NBA Betting Sites F1 Betting Sites Boxing Betting Sites UFC Betting Sites NHL Betting Sites MLB Betting Sites Golf Betting Sites Soccer Betting Sites March Madness Betting Sites March Madness Betting Promos Sportsbook Referral Bonus Boxing Betting SItes UFC Betting Sites Sportsbook Reviews Sportsbooks Sportsbook Reviews BetMGM Review DraftKings Review bet365 Review FanDuel Review Caesars Review Fanatics Sportsbook Review Hard Rock Bet Review Bally Bet Review Promos Menu Promos Country Promos Promos Country Promos Sportsbook Promos US Sportsbook Promos Canada US State Promos Promos US State Promos Arizona Sportsbook Promos Colorado Sportsbook Promos Connecticut Promos Illinois Sportsbook Promos Indiana Sportsbook Promos Iowa Sportsbook Promos Kentucky Sportsbook Promos Louisiana Promos Maryland Sportsbook Promos Massachusetts Promos Michigan Sportsbook Promos NJ Sportsbook Promos NY Sportsbook Promos NC Sportsbook Promos Ohio Sportsbook Promos PA Sportsbook Promos Tennessee Promos Texas Sportsbook Promos Virginia Sportsbook Promos WV Sportsbook Promos Missouri Sportsbook Promos US Promos Promos US Promos bet365 Bonus Code BetMGM Bonus Code Betr Picks Promo Code BetRivers Bonus Code Borgata Promo Code Caesars Sportsbook Promo Code DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Fliff Promo Code Hard Rock Bet Promo Thrillzz Promo Code CA Promos Promos CA Promos Bet99 Promo Code BetVictor Promo Code Betway Promo Code Sports Interaction Bonus Code Stake Promo Code TonyBet Promo Code Odds Menu Odds All Odds Betting Odds NFL NFL Odds NCAAF NCAAF Odds NBA NBA Odds NBA Futures NCAAB NCAAB Odds MLB MLB Odds MLB Futures NHL NHL Odds NHL Futures Soccer MLS Odds EPL Odds Champions League Odds Picks Menu Picks Best Bets Today NFL Picks NBA Picks MLB Picks NHL Picks NCAAF Picks NCAAB Picks CFL Picks Golf Picks Forum & Tools Menu Forum & Tools SBR Forum Forum & Tools SBR Forum Forum Home Players Talk Betting Industry NFL Betting Forum College Football Betting Forum NBA Betting Forum MLB Betting Forum College Basketball Betting Forum NHL Betting Forum Betting News Forum & Tools Betting News NFL NBA MLB NHL NCAAF NCAAB UFC Gol"
+      }
+    },
+    {
+      "id": "tool-oyhqglqa",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke TCU 2026 NCAA tournament matchup analysis",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:24:15.605Z",
+      "completedAt": "2026-03-18T10:24:16.414Z",
+      "summary": "Returned 5 search results for \"Duke TCU 2026 NCAA tournament matchup analysis\".",
+      "result": [
+        {
+          "title": "Seth Davis&#x27; NCAA Men&#x27;s 2026 Tournament Bracket Analysis - Hoops HQ",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hoopshq.com%2Fbracketology%2Fseth%2Ddavis%2Dncaa%2Dmens%2D2026%2Dtournament%2Dbracket&rut=086cf1cc96921078bc9ac7e13cff9b7df2c1b2811d0aea44aed5622c77a44016",
+          "snippet": "Hoops HQ Editor-In-Chief Seth Davis reveals his bracket for the 2026 NCAA Tournament , straight from the Selection Show studio set."
+        },
+        {
+          "title": "2026 NCAA Tournament East Region Breakdown: Duke, UConn, Kansas Lead ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fathlonsports.com%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Deast%2Dregion%2Dbreakdown%2Dduke%2Duconn%2Dkansas&rut=7b550881ee32b16d9dce694a073f0aa4f2f86ab17dc36d52b234f162821bb947",
+          "snippet": "The 2026 NCAA Tournament East Region is stacked with blue bloods, legendary coaches and dangerous matchups . Duke , UConn, Kansas and St. John&#x27;s headline what could be the toughest bracket in ..."
+        },
+        {
+          "title": "2026 NCAA Tournament Quick Analysis: East And West Regions | OutKick",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.outkick.com%2Fsports%2Foutkick%2D2026%2Dncaa%2Dtournament%2Dbreakdown%2Deast%2Dwest%2Dregions&rut=038c698ac4656383c057234982a482a4af9650a8d60da015c14bf2fdb8125ec3",
+          "snippet": "Our bracket preview breaks down the 2026 NCAA Tournament East and West regions, spotlighting Duke and Arizona plus the Sweet 16 clashes and first-round games to watch."
+        },
+        {
+          "title": "March Madness bracket predictions: Expert picks, upsets, winners, odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd",
+          "snippet": "Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis , including predictions, upsets, Vegas odds and more to help you ..."
+        },
+        {
+          "title": "2026 NCAA Men&#x27;s Basketball Tournament Breakdown | FOX Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fstories%2Fcollege%2Dbasketball%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dbreakdown%2Dtop%2Dmatchups%2Dupsets%2Dpredictions&rut=1181b071545d870a756388903ddafd9c82e07af1942bdeb07ad64378668ff901",
+          "snippet": "From upset picks to Final Four predictions, FOX Sports&#x27; Michael Cohen breaks down the complete NCAA Men&#x27;s Basketball Tournament bracket."
+        }
+      ]
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r32-east-1-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T10:23:13.909Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r32-east-1\nCurrent game label: East Round of 32 1\nRound: Round of 32\nResolved teams: Duke (duke) vs TCU (tcu)\nPrior committed picks: 36"
+    },
+    {
+      "id": "r32-east-1-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T10:23:13.909Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r32-east-1\",\n      \"round\": \"Round of 32\",\n      \"region\": \"East\",\n      \"label\": \"East Round of 32 1\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-east-1\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-east-2\"\n      }\n    },\n    \"slotAName\": \"Duke\",\n    \"slotBName\": \"TCU\",\n    \"slotATeamId\": \"duke\",\n    \"slotBTeamId\": \"tcu\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Texas holds a clear edge in advanced metrics, ranking 37th in KenPom and 45th in Torvik compared to NC State's unranked status, and they just defeated the Wolfpack 68-66 in a tight First Four game where Tramon Mark hit a game-winning jumper. While NC State showed resilience and kept the game close, Texas's superior offensive efficiency and proven ability to execute in clutch moments give them the advantage in this rematch. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Texas's experience and recent head-to-head win make them the more reliable pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"SMU holds a significant edge in advanced metrics, ranking 42nd in KenPom and Torvik compared to Miami (OH)'s 87th-93rd range, with a stronger adjusted offensive efficiency (123 vs. 116.8) that should exploit the RedHawks' weaker defense. While Miami (OH) boasts an impressive 31-1 record, their competition level in the MAC is inferior, and SMU's experience in the ACC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but SMU's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"howard\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Howard enters this First Four matchup with a recent head-to-head victory over UMBC, having won 86-83 in the 2026 tournament, which demonstrates their ability to execute in clutch moments. While UMBC holds a slight edge in raw offensive efficiency metrics, Howard's balanced attack and superior defensive rebounding proved decisive in their previous encounter. The underdog's path relies on hot three-point shooting and forcing turnovers, but Howard's proven resilience and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Lehigh holds a slight edge in advanced metrics, ranking 284th in KenPom compared to Prairie View A&M's 291st, with a marginally better adjusted offensive efficiency that should exploit the Panthers' weaker defense. While Prairie View A&M has a balanced record, Lehigh's recent Patriot League championship demonstrates clutch performance and tournament readiness. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Lehigh's proven form and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Duke is the overwhelming favorite as the tournament's top-ranked team in both KenPom and Torvik, boasting a 31-2 record and elite efficiency on both ends of the floor. Siena, the MAAC champion, faces a massive talent gap, ranking 187th in Torvik and 192nd in KenPom, with no credible path to exploit Duke's weaknesses. While Siena's recent form and championship experience provide some intangible value, Duke's superior size, athleticism, and defensive prowess make this a near-certain outcome.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.68,\n        \"rationale\": \"TCU holds a clear edge in advanced metrics, ranking 43rd in KenPom and 48th in Torvik with a strong defensive efficiency (adjde 99.6) that should disrupt Ohio State's offense. While Ohio State is a traditional power, the lack of available ratings suggests they may be unranked or lower-tier this season, making their path to victory reliant on offensive execution against a disciplined Big 12 defense. TCU's experience in a tougher conference and proven defensive prowess give them the advantage in this matchup.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.82,\n        \"rationale\": \"St. John's holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 20th in KenPom and 18th in Torvik compared to Northern Iowa's 71st and 70th, respectively. Their elite defense (adjde 95.1) should effectively contain Northern Iowa's average offense (adjoe 110.1), while their own potent offense can exploit the Panthers' defense. While Northern Iowa has a credible path through disciplined play and rebounding, St. John's superior talent and efficiency make them the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Kansas is a top-25 team in both KenPom and Torvik with an elite defense ranked 10th in adjusted defensive efficiency, while California Baptist lacks any available advanced metrics, indicating they are a low-major automatic qualifier with a significant talent gap. The Jayhawks' experience in the Big 12 and proven ability to dominate defensively make them the overwhelming favorite, and the underdog's only path would require a perfect shooting night and Kansas having an off game, which is highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Louisville holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 18th in KenPom and 16th in Torvik compared to South Florida's 50th in both, with a significantly stronger adjusted offensive efficiency (124.1 vs. 117.7) that should exploit the Bulls' average defense. While South Florida has a solid 24-8 record and a credible path through disciplined play and rebounding, Louisville's superior talent, experience in the ACC, and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's path would require a perfect shooting night and Louisville having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State, a 3-seed from the Big Ten, holds a significant talent and experience advantage over 14-seed North Dakota State, a Summit League automatic qualifier. While specific advanced metrics are unavailable, the Spartans' conference strength and historical tournament pedigree provide a clear edge. North Dakota State's path relies on perimeter shooting and forcing turnovers, but Michigan State's disciplined defense and superior size should control the game. The underdog's upset potential is limited without a major shooting night from the Bison and a poor performance from the Spartans.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.78,\n        \"rationale\": \"UCLA holds a clear edge in advanced metrics, ranking 24th in Torvik and 27th in KenPom compared to UCF's 58th and 54th, with a stronger adjusted offensive efficiency and a defense that should contain the Knights' attack. While UCF has shown resilience in close games and plays in the tough Big 12, UCLA's superior talent, experience, and recent form—including a dominant sweep of USC—make them the more reliable pick. The underdog's path relies on hot three-point shooting and forcing turnovers, but UCLA's balanced attack and defensive prowess should control the tempo and secure the win.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.92,\n        \"rationale\": \"UConn is a top-tier program with a significant talent and efficiency advantage over Furman, which ranks outside the top 190 in both KenPom and Torvik metrics. While Furman has a credible upset path through disciplined play and three-point shooting, UConn's elite defense, physical frontcourt, and tournament experience make them the overwhelming favorite. The Huskies' ability to control the tempo and dominate the paint should neutralize Furman's strengths and secure a comfortable win.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while LIU, a 234th-ranked NEC champion, lacks the offensive firepower to compete. The Wildcats' top-10 adjusted offense and defense should overwhelm LIU's average attack, and there are no significant injury concerns for Arizona. Although LIU has momentum from its conference title, the talent gap is too wide for a credible upset path.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Villanova holds a clear advantage in advanced metrics, ranking 33rd in KenPom and 36th in Torvik with a balanced offensive and defensive efficiency that should exploit Utah State's lack of available ratings, indicating they are likely a lower-tier automatic qualifier. While Utah State's path relies on disciplined play and perimeter shooting, Villanova's experience in the Big East and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Villanova having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Wisconsin holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 21st in Torvik and 22nd in KenPom compared to High Point's 93rd and 92nd, with a top-11 adjusted offense that should overwhelm the Panthers' average defense. While High Point boasts a strong 30-4 record, their competition level in the Big South is inferior, and Wisconsin's experience in the Big Ten provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Wisconsin's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Arkansas holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 17th in KenPom and 20th in Torvik with a top-5 adjusted offense that should overwhelm Hawai'i, which lacks any available advanced ratings and is likely a low-major automatic qualifier. While Hawai'i's path relies on disciplined play and perimeter shooting, Arkansas's experience in the SEC and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Arkansas having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"BYU holds a clear edge in advanced metrics, ranking 23rd in KenPom and 33rd in Torvik with a top-10 adjusted offense that should exploit Texas's 125th-ranked defense. While Texas has a strong offense, their defensive struggles and a weaker 18-14 record suggest inconsistency, whereas BYU's 23-11 record and recent form in the Big 12 provide stability. The underdog's path relies on Texas's perimeter shooting and forcing turnovers, but BYU's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Gonzaga enters as a dominant 3-seed with elite efficiency metrics, ranking 11th in both KenPom and Torvik, while Kennesaw State lacks any available advanced ratings, indicating they are a low-major automatic qualifier with a significant talent gap. The Bulldogs' top-10 adjusted defense and potent offense should overwhelm the Owls, and there are no significant injury concerns for Gonzaga. Although Kennesaw State has momentum from its conference title, the talent gap is too wide for a credible upset path, making Gonzaga the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Miami (FL) holds a clear edge in advanced metrics, ranking 30th in KenPom and 35th in Torvik compared to Missouri's 52nd and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Tigers' attack. While Missouri plays in the tougher SEC, Miami's superior efficiency, balanced attack, and recent form in the ACC provide a more reliable path to victory. The underdog's upset potential is limited without a major shooting night from Missouri and a poor performance from Miami, which is unlikely given the metrics and matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team nationally with elite offensive efficiency (ranked 1st in Torvik offensive rating) and a strong defense, while Queens ranks outside the top 190 and has a significant talent gap as a lower-major automatic qualifier. The Boilermakers' experience in the Big Ten and proven ability to dominate physically should overwhelm Queens' average attack, and there are no reported injury concerns for Purdue. Although Queens has momentum from its conference title, the matchup dynamics and efficiency metrics make a credible upset path highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Florida is a top-5 team nationally with elite efficiency on both ends of the floor, ranking 4th in KenPom and Torvik, while Lehigh, a 284th-ranked Patriot League team, lacks the offensive firepower to compete. The Gators' top-10 adjusted offense and top-5 defense should overwhelm Lehigh's average attack, and there are no significant injury concerns for Florida. Although Lehigh has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Florida the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Iowa holds a slight edge in both offensive and defensive efficiency metrics, ranking 25th in KenPom and 26th in Torvik compared to Clemson's 36th and 29th, with a top-30 adjusted offense that can exploit Clemson's average attack. While Clemson's defense is solid, Iowa's superior offensive firepower and experience in the Big Ten provide a more reliable path to victory in a tight 8/9 matchup. The underdog's path relies on Clemson's defense forcing turnovers and winning the rebounding battle, but Iowa's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Vanderbilt holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 10th in Torvik and 12th in KenPom with a top-6 adjusted offense that should overwhelm McNeese's 91st-ranked attack. While McNeese boasts a strong 28-5 record, their competition level in the Southland Conference is inferior, and Vanderbilt's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Vanderbilt's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Nebraska, a 4-seed from the Big Ten, holds a decisive advantage over 13-seed Troy, ranking 14th in KenPom and 19th in Torvik with a top-7 adjusted defense that should stifle Troy's average offense. While Troy has Sun Belt championship momentum, the talent and efficiency gap is substantial, and Nebraska's recent form—including a 26-6 record and strong defensive metrics—makes them the reliable pick. The underdog's path would require a perfect shooting night and Nebraska having an off game, which is unlikely given the matchup dynamics and prior picks favoring higher-seeded teams in the South region.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.85,\n        \"rationale\": \"North Carolina holds a clear edge in advanced metrics, ranking 27th in Torvik and 29th in KenPom compared to VCU's 51st and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Rams' attack. While VCU has a solid 26-7 record and a credible path through disciplined play and forcing turnovers, North Carolina's superior talent, experience in the ACC, and recent form—including a win over Duke—make them the more reliable pick. The underdog's upset potential is limited without a major shooting night from VCU and a poor performance from the Tar Heels, which is unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Illinois is a top-10 team nationally with elite offensive efficiency, ranking 1st in KenPom adjusted offensive efficiency and 2nd in Torvik offensive rating, while Penn ranks outside the top 150 in both metrics. The Illini's top-25 defense should contain Penn's average attack, and there are no reported injury concerns for Illinois. Although Penn has Ivy League championship experience, the talent and efficiency gap is too wide for a credible upset path, making Illinois the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Saint Mary's holds a slight edge in both offensive and defensive efficiency metrics, ranking 24th in KenPom and 25th in Torvik compared to Texas A&M's 39th in both, with a superior adjusted defensive efficiency that should contain the Aggies' attack. While Texas A&M plays in the tougher SEC, Saint Mary's disciplined style, experience in the WCC, and recent form—including a 27-5 record—provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on Texas A&M's perimeter shooting and forcing turnovers, but Saint Mary's balanced attack and defensive prowess make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Houston is a top-5 team nationally with elite defensive efficiency (4th in KenPom adjD) and a potent offense, while Idaho ranks outside the top 130 and lacks the firepower to compete. The Cougars' experience in the Big 12 and recent form—including a 28-5 record—make them the overwhelming favorite, and there are no reported injury concerns. Idaho's only path would require a perfect shooting night and Houston having an off game, which is highly unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Michigan enters as a dominant 1-seed with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Howard, a 206th-ranked MEAC team, lacks the offensive firepower to compete. The Wolverines' top-2 offense and defense should overwhelm the Bison, and there are no significant injury concerns for Michigan. Although Howard has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Michigan the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Georgia holds a slight edge in advanced metrics, ranking 31st in KenPom and 37th in Torvik compared to Saint Louis's 41st and 44th, with a stronger adjusted offensive efficiency that should exploit the Billikens' average defense. While Saint Louis boasts an impressive 28-5 record, their competition in the A10 is inferior to the SEC's rigor, and Georgia's recent form in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Georgia's balanced attack and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Texas Tech holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 12th in Torvik and 19th in KenPom compared to Akron's 68th and 64th, with a top-10 adjusted offense that should overwhelm the Zips' average defense. While Akron boasts a strong 28-5 record, their competition in the MAC is inferior to the Big 12's rigor, and Texas Tech's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Texas Tech's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Alabama holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 16th in KenPom and 17th in Torvik with a top-3 adjusted offense that should overwhelm Hofstra's 87th-ranked defense. While Hofstra has a solid 24-10 record and CAA championship momentum, their competition level is inferior to the SEC's rigor, and Alabama's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Alabama's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Tennessee holds a decisive edge in overall team quality, ranking 15th in both KenPom and Torvik with a top-15 defense that should disrupt SMU's offense, which has shown recent vulnerability with a late-season slump and an injury to key guard BJ Edwards. While SMU's offense is potent on paper, their defensive rating is significantly weaker (95th in Torvik), and Tennessee's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on SMU's shooting and forcing turnovers, but Tennessee's disciplined defense and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-6\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-7\",\n        \"winnerId\": \"kentucky\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-8\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Iowa State enters as a 2-seed from the Big 12 with a proven track record under coach T.J. Otzelberger, having reached the Sweet 16 twice recently and earning a high seed due to strong conference play and defensive identity. Tennessee State, while riding momentum from an OVC championship and a 23-9 record, faces a significant talent and efficiency gap against a Power 5 opponent that regularly competes at a high level. The Tigers' path relies on hot three-point shooting and forcing turnovers, but Iowa State's disciplined defense, superior rebounding, and experience in high-stakes games make them the reliable pick to advance.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-south-5\",\n      \"winnerId\": \"north-carolina\",\n      \"confidence\": 0.85,\n      \"rationale\": \"North Carolina holds a clear edge in advanced metrics, ranking 27th in Torvik and 29th in KenPom compared to VCU's 51st and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Rams' attack. While VCU has a solid 26-7 record and a credible path through disciplined play and forcing turnovers, North Carolina's superior talent, experience in the ACC, and recent form—including a win over Duke—make them the more reliable pick. The underdog's upset potential is limited without a major shooting night from VCU and a poor performance from the Tar Heels, which is unlikely given the matchup dynamics and efficiency metrics.\"\n    },\n    {\n      \"gameId\": \"r64-south-6\",\n      \"winnerId\": \"illinois\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Illinois is a top-10 team nationally with elite offensive efficiency, ranking 1st in KenPom adjusted offensive efficiency and 2nd in Torvik offensive rating, while Penn ranks outside the top 150 in both metrics. The Illini's top-25 defense should contain Penn's average attack, and there are no reported injury concerns for Illinois. Although Penn has Ivy League championship experience, the talent and efficiency gap is too wide for a credible upset path, making Illinois the clear favorite to advance.\"\n    },\n    {\n      \"gameId\": \"r64-south-7\",\n      \"winnerId\": \"saint-mary-s\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Saint Mary's holds a slight edge in both offensive and defensive efficiency metrics, ranking 24th in KenPom and 25th in Torvik compared to Texas A&M's 39th in both, with a superior adjusted defensive efficiency that should contain the Aggies' attack. While Texas A&M plays in the tougher SEC, Saint Mary's disciplined style, experience in the WCC, and recent form—including a 27-5 record—provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on Texas A&M's perimeter shooting and forcing turnovers, but Saint Mary's balanced attack and defensive prowess make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-south-8\",\n      \"winnerId\": \"houston\",\n      \"confidence\": 0.97,\n      \"rationale\": \"Houston is a top-5 team nationally with elite defensive efficiency (4th in KenPom adjD) and a potent offense, while Idaho ranks outside the top 130 and lacks the firepower to compete. The Cougars' experience in the Big 12 and recent form—including a 28-5 record—make them the overwhelming favorite, and there are no reported injury concerns. Idaho's only path would require a perfect shooting night and Houston having an off game, which is highly unlikely given the matchup dynamics and efficiency metrics.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-1\",\n      \"winnerId\": \"michigan\",\n      \"confidence\": 0.98,\n      \"rationale\": \"Michigan enters as a dominant 1-seed with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Howard, a 206th-ranked MEAC team, lacks the offensive firepower to compete. The Wolverines' top-2 offense and defense should overwhelm the Bison, and there are no significant injury concerns for Michigan. Although Howard has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Michigan the clear favorite to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-2\",\n      \"winnerId\": \"georgia\",\n      \"confidence\": 0.68,\n      \"rationale\": \"Georgia holds a slight edge in advanced metrics, ranking 31st in KenPom and 37th in Torvik compared to Saint Louis's 41st and 44th, with a stronger adjusted offensive efficiency that should exploit the Billikens' average defense. While Saint Louis boasts an impressive 28-5 record, their competition in the A10 is inferior to the SEC's rigor, and Georgia's recent form in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Georgia's balanced attack and superior efficiency metrics make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-3\",\n      \"winnerId\": \"texas-tech\",\n      \"confidence\": 0.85,\n      \"rationale\": \"Texas Tech holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 12th in Torvik and 19th in KenPom compared to Akron's 68th and 64th, with a top-10 adjusted offense that should overwhelm the Zips' average defense. While Akron boasts a strong 28-5 record, their competition in the MAC is inferior to the Big 12's rigor, and Texas Tech's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Texas Tech's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-4\",\n      \"winnerId\": \"alabama\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Alabama holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 16th in KenPom and 17th in Torvik with a top-3 adjusted offense that should overwhelm Hofstra's 87th-ranked defense. While Hofstra has a solid 24-10 record and CAA championship momentum, their competition level is inferior to the SEC's rigor, and Alabama's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Alabama's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-5\",\n      \"winnerId\": \"tennessee\",\n      \"confidence\": 0.82,\n      \"rationale\": \"Tennessee holds a decisive edge in overall team quality, ranking 15th in both KenPom and Torvik with a top-15 defense that should disrupt SMU's offense, which has shown recent vulnerability with a late-season slump and an injury to key guard BJ Edwards. While SMU's offense is potent on paper, their defensive rating is significantly weaker (95th in Torvik), and Tennessee's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on SMU's shooting and forcing turnovers, but Tennessee's disciplined defense and superior efficiency metrics make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-6\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-7\",\n      \"winnerId\": \"kentucky\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-8\",\n      \"winnerId\": \"iowa-state\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Iowa State enters as a 2-seed from the Big 12 with a proven track record under coach T.J. Otzelberger, having reached the Sweet 16 twice recently and earning a high seed due to strong conference play and defensive identity. Tennessee State, while riding momentum from an OVC championship and a 23-9 record, faces a significant talent and efficiency gap against a Power 5 opponent that regularly competes at a high level. The Tigers' path relies on hot three-point shooting and forcing turnovers, but Iowa State's disciplined defense, superior rebounding, and experience in high-stakes games make them the reliable pick to advance.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:23:14.953Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:23:14.953Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "duke",
+          "tcu"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:23:14.960Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "duke",
+          "teamName": "Duke",
+          "torvik": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adjoe": 128.01924984850498,
+            "oe Rank": 4,
+            "adjde": 90.44607016864468,
+            "de Rank": 1,
+            "barthag": 0.9819325227198022,
+            "rank.1": 1,
+            "proj. W": 31.77263480392547,
+            "Proj. L": 2.2273651960745293,
+            "Pro Con W": 17,
+            "Pro Con L": 1,
+            "Con Rec.": "17-1",
+            "sos": 0.7350779717539253,
+            "ncsos": 0.6248828246440576,
+            "consos": 0.8004871126999,
+            "Proj. SOS": 0.7411389942783231,
+            "Proj. Noncon SOS": 0.6248828246440576,
+            "Proj. Con SOS": 0.8004871126999,
+            "elite SOS": 0.6154338494473306,
+            "elite noncon SOS": 0.6350244038172387,
+            "Opp OE": 116.43303268254998,
+            "Opp DE": 103.17328486033144,
+            "Opp Proj. OE": 116.58941508909258,
+            "Opp Proj DE": 102.95262216602733,
+            "Con Adj OE": 129.25576212251133,
+            "Con Adj DE": 90.79514971478837,
+            "Qual O": 127.85704514358656,
+            "Qual D": 89.47568126665206,
+            "Qual Barthag": 0.9837755473959358,
+            "Qual Games": 19,
+            "FUN": 0.0627594166033986,
+            "ConPF": 1457,
+            "ConPA": 1123,
+            "ConPoss": 1174.9625,
+            "ConOE": 1.2400395757311404,
+            "ConDE": 0.9557751843143932,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.9444444444444444,
+            "WAB": 12.883073206764472,
+            "WAB Rk": 2,
+            "Fun Rk": 47,
+            "adjt": 65.82335494511732
+          },
+          "kenpom": {
+            "rank": 1,
+            "team": "Duke",
+            "conf": "ACC",
+            "record": "31-2",
+            "adj_em": 39.17,
+            "adj_o": 127.9,
+            "adj_o_rank": 4,
+            "adj_d": 88.7,
+            "adj_d_rank": 2,
+            "adj_t": 65.4,
+            "adj_t_rank": 287,
+            "luck": 0.042,
+            "luck_rank": 80,
+            "sos_adj_em": 13.78,
+            "sos_adj_em_rank": 19,
+            "sos_opp_o": 116.8,
+            "sos_opp_o_rank": 24,
+            "sos_opp_d": 103,
+            "sos_opp_d_rank": 13,
+            "ncsos_adj_em": 10,
+            "ncsos_adj_em_rank": 18
+          }
+        },
+        {
+          "teamId": "tcu",
+          "teamName": "TCU",
+          "torvik": {
+            "rank": 48,
+            "team": "TCU",
+            "conf": "B12",
+            "record": "22-11",
+            "adjoe": 114.86249191977416,
+            "oe Rank": 83,
+            "adjde": 99.62520024824192,
+            "de Rank": 30,
+            "barthag": 0.8370835302196232,
+            "rank.1": 48,
+            "proj. W": 22,
+            "Proj. L": 11,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.6725539013930872,
+            "ncsos": 0.42733618038342,
+            "consos": 0.8305864114851623,
+            "Proj. SOS": 0.6725539013930872,
+            "Proj. Noncon SOS": 0.42733618038342,
+            "Proj. Con SOS": 0.8305864114851623,
+            "elite SOS": 0.6609029684897177,
+            "elite noncon SOS": 0.7976706049668045,
+            "Opp OE": 114.58037316668222,
+            "Opp DE": 104.65965585083796,
+            "Opp Proj. OE": 114.58037316668222,
+            "Opp Proj DE": 104.65965585083796,
+            "Con Adj OE": 115.25478022516629,
+            "Con Adj DE": 99.34163392283833,
+            "Qual O": 117.1952267425924,
+            "Qual D": 93.13005233189644,
+            "Qual Barthag": 0.9335911663611628,
+            "Qual Games": 13,
+            "FUN": 0.0924835464429918,
+            "ConPF": 1372,
+            "ConPA": 1371,
+            "ConPoss": 1268.1124999999995,
+            "ConOE": 1.0819229366479712,
+            "ConDE": 1.0811343630789858,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 2.342056001141492,
+            "WAB Rk": 35,
+            "Fun Rk": 14,
+            "adjt": 67.55883337258985
+          },
+          "kenpom": {
+            "rank": 43,
+            "team": "TCU",
+            "conf": "B12",
+            "record": "22-11",
+            "adj_em": 17.62,
+            "adj_o": 115.5,
+            "adj_o_rank": 81,
+            "adj_d": 97.8,
+            "adj_d_rank": 23,
+            "adj_t": 67.8,
+            "adj_t_rank": 159,
+            "luck": 0.004,
+            "luck_rank": 179,
+            "sos_adj_em": 11.02,
+            "sos_adj_em_rank": 53,
+            "sos_opp_o": 115.2,
+            "sos_opp_o_rank": 53,
+            "sos_opp_d": 104.2,
+            "sos_opp_d_rank": 45,
+            "ncsos_adj_em": -6.98,
+            "ncsos_adj_em_rank": 333
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"duke\",\n      \"teamName\": \"Duke\",\n      \"torvik\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adjoe\": 128.01924984850498,\n        \"oe Rank\": 4,\n        \"adjde\": 90.44607016864468,\n        \"de Rank\": 1\n      },\n      \"kenpom\": {\n        \"rank\": 1,\n        \"team\": \"Duke\",\n        \"conf\": \"ACC\",\n        \"record\": \"31-2\",\n        \"adj_em\": 39.17,\n        \"adj_o\": 127.9,\n        \"adj_o_rank\": 4,\n        \"adj_d\": 88.7\n      }\n    },\n    {\n      \"teamId\": \"tcu\",\n      \"teamName\": \"TCU\",\n      \"torvik\": {\n        \"rank\": 48,\n        \"team\": \"TCU\",\n        \"conf\": \"B12\",\n        \"record\": \"22-11\",\n        \"adjoe\": 114.86249191977416,\n        \"oe Rank\": 83,\n        \"adjde\": 99.62520024824192,\n        \"de Rank\": 30\n      },\n      \"kenpom\": {\n        \"rank\": 43,\n        \"team\": \"TCU\",\n        \"conf\": \"B12\",\n        \"record\": \"22-11\",\n        \"adj_em\": 17.62,\n        \"adj_o\": 115.5,\n        \"adj_o_rank\": 81,\n        \"adj_d\": 97.8\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:23:16.507Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:23:16.507Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Duke TCU March Madness 2026 injury news",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:23:17.293Z",
+      "toolName": "search_espn_news",
+      "result": [
+        {
+          "title": "Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b",
+          "snippet": "Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won&#x27;t play in this week&#x27;s ..."
+        },
+        {
+          "title": "How Caleb Wilson&#x27;s injury impacts UNC-Duke, NCAA tournament and NBA ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48124467%2Fcaleb%2Dwilson%2Dinjury%2Dimpact%2Dunc%2Dduke%2Dncaa%2Dtournament%2Dnba%2Ddraft&rut=4b4b45db3d74435c971a510e0824f8966edf3758336ca9311d01aef5824441e6",
+          "snippet": "What does his absence mean for North Carolina&#x27;s chances against Duke on Saturday (6:30 p.m. ET, ESPN) -- and through the NCAA tournament? What about Wilson&#x27;s outlook in the 2026 NBA draft?"
+        },
+        {
+          "title": "Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=0c86a36b38fe8a85cfca17567cf51b782b5e714eb40e4e241fb8a636a44aaba1",
+          "snippet": "The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title."
+        },
+        {
+          "title": "Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa",
+          "snippet": "Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis."
+        },
+        {
+          "title": "Duke Blue Devils Scores, Stats and Highlights - ESPN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fteam%2F_%2Fid%2F150%2Fduke%2Dblue%2Ddevils&rut=d6bcf80025b06743fd52d54637c63655e1dc2bb35b61c45c1a0db1de6957841b",
+          "snippet": "Visit ESPN for Duke Blue Devils live scores, video highlights, and latest news . Find standings and the full 2025-26 season schedule."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": [\n    {\n      \"title\": \"Duke&#x27;s Caleb Foster out indefinitely with foot fracture - ESPN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48162553%2Fduke%2Dcaleb%2Dfoster%2Dindefinitely%2Dfoot%2Dfracture&rut=9c64290adc9c8f71f01c8392cca1967b82d556fcc9b61ffa8573bbf30f9cd99b\",\n      \"snippet\": \"Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won&#x27;t play in this week&#x27;s ...\"\n    },\n    {\n      \"title\": \"How Caleb Wilson&#x27;s injury impacts UNC-Duke, NCAA tournament and NBA ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48124467%2Fcaleb%2Dwilson%2Dinjury%2Dimpact%2Dunc%2Dduke%2Dncaa%2Dtournament%2Dnba%2Ddraft&rut=4b4b45db3d74435c971a510e0824f8966edf3758336ca9311d01aef5824441e6\",\n      \"snippet\": \"What does his absence mean for North Carolina&#x27;s chances against Duke on Saturday (6:30 p.m. ET, ESPN) -- and through the NCAA tournament? What about Wilson&#x27;s outlook in the 2026 NBA draft?\"\n    },\n    {\n      \"title\": \"Men&#x27;s March Madness 2026 bracket: Get to know all 68 teams\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48156563%2Fmarch%2Dmadness%2D2026%2Devery%2Dteam%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dexplained&rut=0c86a36b38fe8a85cfca17567cf51b782b5e714eb40e4e241fb8a636a44aaba1\",\n      \"snippet\": \"The men&#x27;s bracket has been revealed. Here&#x27;s what you need to know about every competitor for the national title.\"\n    },\n    {\n      \"title\": \"Men&#x27;s College Basketball on ESPN - Scores, Stats and Highlights\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2F&rut=6e57010eb80c0784fabc4a89632079d00b3e580bcd967a0e833a8efc728b08aa\",\n      \"snippet\": \"Visit ESPN for Men&#x27;s College Basketball live scores, video highlights and latest news . Get the latest NCAAM standings and game analysis.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:23:19.207Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:23:19.207Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture"
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:23:19.688Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture",
+        "text": "Duke's Caleb Foster out indefinitely with foot fracture - ESPN Duke's Foster out indefinitely with foot fracture --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Duke's Foster out indefinitely with foot fracture Duke Blue Devils 8d Mark saves day, sends Texas to NCAA first round Texas Longhorns 6h Adam Rittenberg Howard checks last box with first NCAAT win Howard Bison 9h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 18h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 18h EMU hires Clemson assistant Donlon as coach Clemson Tigers 10h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 14h Stephen Holder Charlotte fires coach Fearne after three seasons Charlotte 49ers 18h Butler's Matta retires from coaching with 502 wins Butler Bulldogs 2d Jeff Borzello Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Joe Lunardi's ultimate guide to men's March Madness 2026 Duke Blue Devils 21h Joe Lunardi Jay Bilas predicts every game of the 2026 NCAA tournament Duke Blue Devils 2d Jay Bilas Men's March Madness Giant Killers: Most probable first-round NCAA tournament upsets VCU Rams 22h Keith Lipscomb Men's March Madness 2026 bracket: Get to know all 68 teams Duke Blue Devils 3d Myron Medcalf March Madness 101: NCAA tournament format, history, facts UConn Huskies 2d Dana E. Lee and Alonzo Olmedo 2026 Tournament Challenge guide to team mascots, school colors and famous alumni 2d Sach Chandan Men's tournament: Odds, spreads and totals for every men's opening round games 6h ESPN Men's tournament: Best bets for the round of 64, plus Eliminator picks High Point Panthers 18h Mark Zinno Reactions to the 2026 men's NCAA tournament field of 68 Arizona Wildcats 2d Joe Lunardi Ament, Dybantsa, and co. - Nine African players to watch at March Madness Duke Blue Devils 1d Leonard Solms Men's basketball coaching carousel tracker: Who could be up next at Butler? Boston College Eagles 2d Jeff Borzello Duke's Caleb Foster out indefinitely with foot fracture play Caleb Foster lays it in for a Duke bucket (0:21) Caleb Foster banks it in off the glass to extend Duke’s first-half lead. (0:21) Associated Press Multiple Authors Mar 10, 2026, 10:20 AM ET Email Print Open Extended Reactions Top-ranked Duke has lost starting point guard Caleb Foster to a broken right foot that will keep him out for an extended period, while starting big man Patrick Ngongba II won't play in this week's Atlantic Coast Con"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.espn.com/mens-college-basketball/story/_/id/48162553/duke-caleb-foster-indefinitely-foot-fracture\",\n    \"text\": \"Duke's Caleb Foster out indefinitely with foot fracture - ESPN Duke's Foster out indefinitely with foot fracture --> Skip to main content Skip to navigation &lt; &gt; Menu ESPN scores NFL NBA NCAAM NCAAW MLB NHL Soccer More Sports Boxing NCAA Cricket F1 Gaming Professional Wrestling Golf Horse LLWS MMA NASCAR NLL NBA G League NBA Summer League NCAAF NWSL Olympics PLL Racing RN BB RN FB Rugby Sports Betting Tennis TGL UFL WNBA WWE Editions Where to Watch Fantasy Watch NCAAM Home Scores NCAA Bracket Men's Tournament Challenge Schedule Standings Stats Teams Odds Recruiting Rankings Where To Watch NBA Draft Tickets NCAA Tournament Dates Duke's Foster out indefinitely with foot fracture Duke Blue Devils 8d Mark saves day, sends Texas to NCAA first round Texas Longhorns 6h Adam Rittenberg Howard checks last box with first NCAAT win Howard Bison 9h Adam Rittenberg Cops: Bama's Holloway had 2.1 pounds of pot Alabama Crimson Tide 18h Myron Medcalf Boozer among freshmen on All-America 1st team Duke Blue Devils 18h EMU hires Clemson assistant Donlon as coach Clemson Tigers 10h Colts ink Notre Dame hooper Towt as TE prospect Indianapolis Colts 14h Stephen Holder Charlotte fires coach Fearne af... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:23:22.548Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:23:22.548Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke TCU March Madness 2026 preview",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:23:23.922Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=59a54b08a4a01a561957618f694cf60e2f570003ee167da248e32ea2108fa9f4",
+          "snippet": "Duke has all the ingredients of a national champion: a superstar with an all-around game (Boozer), a roster with multiple likely 2026 NBA first-round draft picks (Boozer, Ngongba, Isaiah Evans ..."
+        },
+        {
+          "title": "March Madness bracket predictions: Expert picks, upsets, winners, odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd",
+          "snippet": "Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis, including predictions, upsets, Vegas odds and more to help you ..."
+        },
+        {
+          "title": "Duke vs Siena, Ohio State vs TCU predictions for 2026 NCAA first ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fduke%2Dvs%2Dsiena%2Dohio%2Dstate%2Dvs%2Dtcu%2Dpredictions%2Dfor%2D2026%2Dncaa%2Dfirst%2Dround%2Din%2Dgreenville%2Far%2DAA1YH3e0&rut=e35290dc4ac1c77a31f3b7a04eafae016b3cd1d8122eeda48e014e6c49b8c0f0",
+          "snippet": "TCU (22-11) went three straight times from 2022-24 but hasn&#x27;t been past the first round. In 2022, the Horned Frogs beat Seton Hall for their first March Madness win in 35 years."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament."
+        },
+        {
+          "title": "2026 March Madness odds and predictions: Breakdown of First Round in ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nbcsports.com%2Fbetting%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dmarch%2Dmadness%2Dodds%2Dand%2Dpredictions%2Da%2Dbreakdown%2Dof%2Dthe%2Dopening%2Dround%2Din%2Dthe%2Deast%2Dregion%2Dincluding%2Dupsets&rut=39c7cfbea5105af8bfed8dfd45be4f703a37ee3eddabab369f9e4bc38e27c98b",
+          "snippet": "TCU is 9-3 ATS and 6-6 on the ML as an underdog this season, while Ohio State is 7-10-1 ATS and 16-2 on the ML as a favorite. This is a small spread, but I believe TCU can win this game outright with its strong defense and upset Jake Diebler in his first NCAA Tournament game as a head coach of Ohio State.\""
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Joe Lunardi&#x27;s ultimate guide to men&#x27;s March Madness 2026\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219697%2Fjoe%2Dlunardi%2Dmens%2Dmarch%2Dmadness%2Dncaa%2Dtournament%2Dguide%2D2026&rut=59a54b08a4a01a561957618f694cf60e2f570003ee167da248e32ea2108fa9f4\",\n      \"snippet\": \"Duke has all the ingredients of a national champion: a superstar with an all-around game (Boozer), a roster with multiple likely 2026 NBA first-round draft picks (Boozer, Ngongba, Isaiah Evans ...\"\n    },\n    {\n      \"title\": \"March Madness bracket predictions: Expert picks, upsets, winners, odds ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd\",\n      \"snippet\": \"Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis, including predictions, upsets, Vegas odds and more to help you ...\"\n    },\n    {\n      \"title\": \"Duke vs Siena, Ohio State vs TCU predictions for 2026 NCAA first ... - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fduke%2Dvs%2Dsiena%2Dohio%2Dstate%2Dvs%2Dtcu%2Dpredictions%2Dfor%2D2026%2Dncaa%2Dfirst%2Dround%2Din%2Dgreenville%2Far%2DAA1YH3e0&rut=e35290dc4ac1c77a31f3b7a04eafae016b3cd1d8122eeda48e014e6c49b8c0f0\",\n      \"snippet\": \"TCU (22-11) went three straight times from 2022-24 but hasn&#x27;t been past the first round. In 2022, the Horned Frogs beat Seton Hall for their first March Madness win in 35 years.\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:23:43.893Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:23:43.893Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.msn.com/en-us/sports/other/duke-vs-siena-ohio-state-vs-tcu-predictions-for-2026-ncaa-first-round-in-greenville-ar-aa1yh3e0"
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:23:43.987Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "error": "fetch_webpage failed: 404 <!DOCTYPE html>\r\n<html xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:Web=\"http://schemas.live.com/Web/\">\r\n<head>\r\n\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\t<title>MSN</title>\r\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n</head>\r\n<body>\r\n\t<div>\r\n\t\t\t<style>\r\n\t\tbody, html {\r\n\t\t\tfont-family: \"Segoe UI Semibold\",\"Segoe WP Semibold\",\"Segoe WP\",\"Segoe UI\",Arial,Sans-Serif !important;\r\n\t\t\tline-height: 30px;\r\n\t\t\tcolor: black;\r\n\t\t\tbackground-color: #F7F7F7;\r\n\t\t}\r\n\r\n\t\ta {\r\n\t\t\tcolor: #333333;\r\n\t\t\ttext-decoration: none;\r\n\t\t\tfont-family: \"Segoe UI Semibold\",\"Segoe WP Semibold\",\"Segoe WP\",\"Segoe UI\",Arial,Sans-Serif !important;\r\n\t\t\tfont-weight: 600;\r\n\t\t\tfont-size: 10px;\r\n\t\t\tline-height: 10px;\r\n\t\t}\r\n\r\n\t\t\ta.copyrightmicrosoft {\r\n\t\t\t\tcolor: #333333;\r\n\t\t\t\ttext-decoration: none;\r\n\t\t\t\tfont-size: 10px;\r\n\t\t\t}\r\n\r\n\t\t.article {\r\n\t\t\tpadding-top: 100px;\r\n\t\t\tpadding-left: 120px;\r\n\t\t\twidth: 100%;\r\n\t\t\ttext-align: left;\r\n\t\t}\r\n\r\n\t\t.articletitlefgstart {\r\n\t\t\tfont-size: 38px;\r\n\t\t}\r\n\r\n\t\t.articledesc {\r\n\r\n\t\t}\r\n\r\n\t\t.footer {\r\n\t\t\tposition: fixed;\r\n\t\t\tleft: 0;\r\n\t\t\tbottom: 0;\r\n\t\t\twidth: 100%;\r\n\t\t\tcolor: white;\r\n\t\t\ttext-align: center;\r\n\t\t}\r\n\r\n\t\t.header {\r\n\t\t\tposition: fixed;\r\n\t\t\tleft: 0;\r\n\t\t\ttop: 0;\r\n\t\t\tpadding: 30px;\r\n\t\t\twidth: 100%;\r\n\t\t\tcolor: white;\r\n\t\t\ttext-align: center;\r\n\t\t}\r\n\r\n\t\t.logowrapper {\r\n\t\t\tpadding-left: 100px;\r\n\t\t\ttext-align: left;\r\n\t\t}\r\n\r\n\t\ta:hover {\r\n\t\t\ttext-decoration: underline\r\n\t\t}\r\n\r\n\t\ta.copyrightmicrosoft:hover {\r\n\t\t\ttext-decoration: none\r\n\t\t}\r\n\r\n\t\t* {\r\n\t\t\tbox-sizing: border-box;\r\n\t\t}\r\n\r\n\t\tform.searchBox input[type=search] {\r\n\t\t\tpadding: 10px;\r\n\t\t\tfont-size: 17px;\r\n\t\t\tborder: 1px solid grey;\r\n\t\t\tfloat: left;\r\n\t\t\twidth: 80%;\r\n\t\t\tbackground: #f1f1f1;\r\n\t\t}\r\n\t\tform.searchBox button {\r\n\t\t\tfloat: left;\r\n\t\t\twidth: 70px;\r\n\t\t\tpadding: 10px;\r\n\t\t\tbackground: #2196F3;\r\n\t\t\tcolor: white;\r\n\t\t\tfont-size: 17px;\r\n\t\t\tborder: 1px solid grey;\r\n\t\t\tborder-left: none;\r\n\t\t\tcursor: pointer;\r\n\t\t}\r\n\r\n\t\tform.searchBox button:hover {\r\n\t\t\tbackground: #0b7dda;\r\n\t\t}\r\n\r\n\t\tform.searchBox::after {\r\n\t\t\tcontent: \"\";\r\n\t\t\tclear: both;\r\n\t\t\tdisplay: table;\r\n\t\t}\r\n\t\t@ media screen and (prefers-color-scheme: dark) {\r\n\t\t\tbody, html {\r\n\t\t\t\tbackground-color: #242424;\r\n\t\t\t\tcolor: white;\r\n\t\t\t}\r\n\r\n\t\t\ta {\r\n\t\t\t\tcolor: white;\r\n\t\t\t\ttext-decoration: none;\r\n\t\t\t\tfont-family: \"Segoe UI Semibold\",\"Segoe WP Semibold\",\"Segoe WP\",\"Segoe UI\",Arial,Sans-Serif !important;\r\n\t\t\t\tfont-weight: 600;\r\n\t\t\t\tfont-size: 10px;\r\n\t\t\t\tline-height: 10px;\r\n\t\t\t}\r\n\r\n\t\t\t\ta.copyrightmicrosoft {\r\n\t\t\t\t\tcolor: white;\r\n\t\t\t\t\ttext-decoration: none;\r\n\t\t\t\t\tfont-size: 10px;\r\n\t\t\t\t}\r\n\r\n\t\t\t.footer {\r\n\t\t\t\tbackground-color: #242424;\r\n\t\t\t\tcolor: white;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t@ media(max-width: 736px) {\r\n\t\t\tbody {\r\n\t\t\t\tfont-family: HelveticaNeue,Roboto,Arial,sans-serif\r\n\t\t\t}\r\n\r\n\t\t\t.footer {\r\n\t\t\t\tposition: fixed;\r\n\t\t\t\tleft: 0;\r\n\t\t\t\tbottom: 0;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tcolor: white;\r\n\t\t\t\ttext-align: center;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\t#whoopsDiv {\r\n\t\t\tdisplay: none;\r\n\t\t}\r\n\r\n\t\t#errorref.hidden {\r\n\t\t\tvisibility: hidden;\r\n\t\t}\r\n\t</style>\r\n\t<div class=\"header\">\r\n        <table style=\"width:70%\">\r\n            <tr>\r\n                <td>\r\n\t\t\t\t\t<div class=\"logowrapper\" id=\"logo\">\r\n\t\t\t\t\t\t<a class=\"logo\" role=\"link\" tabindex=\"0\" href=\"https://www.msn.com/\" aria-label=\"MSN\" data-t=\"{\"n\":\"CommonHeaderLogoLink\",\"b\":1}\">\r\n\t\t\t\t\t\t\t<svg width=\"74\" height=\"28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n\t\t\t\t\t\t\t<path d=\"M15.234 22.383s-1.231 5.661 2.234 5.611c2.613-.038 4.184-3.752 1.895-9.302 0 0-1.945-.925-4.13 3.69Z\" fill=\"url(#a)\" />\r\n\t\t\t\t\t\t\t<path d=\"M15.234 22.383s-1.231 5.661 2.234 5.611c2.613-.038 4.184-3.752 1.895-9.302 0 0-1.945-.925-4.13 3.69Z\" fill=\"url(#b)\" />\r\n\t\t\t\t\t\t\t<path d=\"M12.978 22.297S10.2 28.21 5.926 27.994c-4.272-.216-5.334-7.74 4.075-11.23 0 0 3.883 1.507 2.976 5.533h.001Z\" fill=\"url(#c)\" />\r\n\t\t\t\t\t\t\t<path d=\"m51.295 24.537 1.395-1.805c.454.43.938.754 1.454.973.516.219 1.06.328 1.63.328.649 0 1.145-.125 1.49-.375.351-.25.527-.617.527-1.102 0-.39-.153-.711-.457-.962-.305-.258-.794-.461-1.466-.61-1.524-.336-2.6-.805-3.224-1.407-.618-.609-.927-1.363-.927-2.263 0-1.125.426-2.028 1.278-2.708.86-.688 1.958-1.032 3.295-1.032.743 0 1.438.11 2.087.328a5.339 5.339 0 0 1 1.794 1.02l-1.313 1.748c-.461-.344-.9-.595-1.313-.75a3.628 3.628 0 0 0-1.349-.247c-.61 0-1.07.121-1.383.364-.305.234-.458.559-.458.973 0 .398.16.707.481.926.32.211.91.415 1.77.61 1.282.281 2.24.73 2.873 1.348.641.618.962 1.415.962 2.392 0 1.165-.43 2.099-1.29 2.803-.852.703-1.99 1.055-3.412 1.055-.868 0-1.68-.133-2.439-.399a5.885 5.885 0 0 1-2.005-1.208ZM73.201 25.862H70.4v-6.847c0-1.055-.199-1.853-.598-2.392-.39-.54-.98-.81-1.77-.81-.813 0-1.482.306-2.005.915-.524.602-.786 1.364-.786 2.287v6.847h-2.814V13.856h2.814v1.829h.047c.438-.696.985-1.22 1.642-1.571.664-.36 1.407-.54 2.227-.54 1.33 0 2.334.422 3.014 1.266.688.837 1.031 2.056 1.031 3.66v7.362ZM46.804 25.863h2.814v-7.434c0-1.618-.336-2.83-1.009-3.635-.672-.813-1.649-1.22-2.931-1.22-.883 0-1.665.188-2.345.563-.672.375-1.24.942-1.7 1.7a3.366 3.366 0 0 0-1.29-1.653c-.594-.406-1.31-.61-2.146-.61-.797 0-1.524.184-2.18.551a4.285 4.285 0 0 0-1.595 1.513h-.047v-1.782H31.56v12.007h2.814v-6.755c0-.992.23-1.79.691-2.391.462-.602 1.064-.903 1.806-.903.774 0 1.352.254 1.736.762.383.5.574 1.255.574 2.263v7.024h2.814v-6.778c0-.915.239-1.688.715-2.322.477-.633 1.075-.95 1.794-.95.806 0 1.388.255 1.748.763.367.508.55 1.31.55 2.404v6.883Z\" fill=\"#212121\" />\r\n\t\t\t\t\t\t\t<path d=\"M15.232 22.383S16.4 8.388 22.517 7.135c3.787-.776 5.481 1.534 5.481 4.485 0 4.028-4.252 6.236-6.993 7.05-3.08.913-4.742 2.358-5.773 3.714v-.001Z\" fill=\"url(#d)\" />\r\n\t\t\t\t\t\t\t<path d=\"M12.977 22.306s.678-2.363-5.72-5.641C.86 13.385.113 9.405.01 7.109-.092 4.814.598 2.843 1.76 1.73 3.404.154 4.898-.127 7.082.06c2.902.25 5.942 3.221 7.46 7.87 2.205 6.755-1.565 14.376-1.565 14.376Z\" fill=\"url(#e)\" />\r\n\t\t\t\t\t\t\t<path d=\"M12.977 22.297s.678-2.364-5.72-5.642C.86 13.375.113 9.395.01 7.099c-.102-2.295.588-4.266 1.75-5.378C3.404.144 4.898-.136 7.082.05c2.902.249 5.942 3.22 7.46 7.868 2.205 6.756-1.565 14.378-1.565 14.378Z\" fill=\"url(#f)\" />\r\n\t\t\t\t\t\t\t<defs>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"a\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"matrix(-2.72413 -8.52658 15.54159 -4.96533 17.746 27.995)\"><stop stop-color=\"#FFB657\" /> <stop offset=\".643\" stop-color=\"#FF835C\" /> <stop offset=\".961\" stop-color=\"#CA2134\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"b\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"rotate(94.548 .426 17.642) scale(10.3454 8.7988)\"><stop offset=\".707\" stop-color=\"#FFCD0F\" stop-opacity=\"0\" /><stop offset=\"1\" stop-color=\"#FFCD0F\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"c\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"rotate(-71.159 25.14 12.158) scale(16.5824 10.8568)\"><stop offset=\".045\" stop-color=\"#FFC800\" /><stop offset=\".257\" stop-color=\"#B5BA1E\" /><stop offset=\".368\" stop-color=\"#98BD42\" /><stop offset=\".587\" stop-color=\"#52B471\" /><stop offset=\".767\" stop-color=\"#018D32\" /><stop offset=\".878\" stop-color=\"#006523\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"d\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"matrix(-.31812 -16.3302 19.5232 -.38032 17.442 22.799)\"><stop offset=\".066\" stop-color=\"#BD00FF\" /><stop offset=\"1\" stop-color=\"#FF5F3D\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"e\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"rotate(94.968 5.683 3.287) scale(21.167 34.1452)\"><stop stop-color=\"#3BD5FF\" /><stop offset=\".417\" stop-color=\"#0D91E1\" /><stop offset=\".744\" stop-color=\"#2764E7\" /><stop offset=\"1\" stop-color=\"#2052CB\" /></radialGradient>\r\n\t\t\t\t\t\t\t\t<radialGradient id=\"f\" cx=\"0\" cy=\"0\" r=\"1\" gradientUnits=\"userSpaceOnUse\" gradientTransform=\"matrix(-.58321 18.55704 -32.85658 -1.03262 10.71 -5.196)\"><stop stop-color=\"#3DEEDF\" stop-opacity=\".7\" /><stop offset=\"1\" stop-color=\"#0D91E1\" stop-opacity=\"0\" /></radialGradient>\r\n\t\t\t\t\t\t\t</defs>\r\n\t\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t</a>\r\n\t\t\t\t\t</div>\r\n                </td>\r\n                <td>\r\n                    <form class=\"searchBox\" action=\"https://www.bing.com/search?scope=web\" method=\"get\" id=\"srchfrm\" data-form-code=\"\" data-bing-action-uri=\"https://www.bing.com/search?scope=web\" style=\"margin:auto;max-width:600px\">\r\n                        <input id=\"q\" name=\"q\" accesskey=\"S\" autocomplete=\"off\" type=\"search\" value=\"\" maxlength=\"250\" class=\"searchTerm\" aria-label=\"Enter your search term\" title=\"enter your search term\">\r\n                        <button id=\"sb_form_go\" class=\"searchButton\" title=\"web search\" style=\"width: 70px; height: 42px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAsCAYAAADYQc64AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAOZSURBVGhD7ZrdS1NhHMe/e3PHOW1Op1tlppim2AtUZIJFSCF4IRFdBP0HQXQRRBFEEHRReFNXXQe90UUQQYERZi8XQoWVSC9WqNOmc06bc9vZ6febRwg7oymeZ83O52bjefbC+ex5vr/fs8204+qggv8cmxmocSnYah9DjdkPj8cDGjKIJ4H+oAm3/V68kusQCAQMMYvpGnXgo+w1xGjRFzPEaPIpZDLEaMGZY4hJgyEmDYaYNGS9wdtf7cDhxkI0lNlRKJlhojE5qWAqmkTvcBQ334bRNzo3/2CBZE1MmdOKc/tLsLtCgtlsQiSWxNiMDFlRYLeY4C20Io9u5xIK7vfP4NrLydRjRJEVMdVuGy4e9GBTaR784QTu9IVx43VYnZ3HkWfG8SYX2jc74aCe/cW3WZx9HBAmR3jG8AWfanGjpiQPb0aiOPlg7A8pDAu43B3E2UcBDE3F0VyZj9N73eqs/ggXc2x7EbavlfB1Mo5LTyfwJRhXZ7ThlXLlWRATERktGx04uKlAndEXoWJ4teyrcoBiBA8HZv4qZQGW0z0YgdNuRlvtKhTTvCEfPgrV0ekEnnyOqKOZ8ZzkhKIyqiifNrhs6qh+CBVTVWyDZDPBT2K+hzJbLQvwignNJrHGbkEthbbeCBVjoXfjPoXL8nIYp5yx0mtwGdcboWIWKM5f3tu66XlcrJMcUjojVAxXojlZQTk1dxzES2HXeglFkgVh6oi/hxLqqH4IFfPhRwwTP2VUuKxor1tadWmi4OYVM0QN4Ycf+h8RhIrhwO2h6sIZ0VZLHW2Gq2aL144DNQWIUzRxCItAqBjm3rvpVP/CF3tmX8lf5fDx4URzcers9NYfxS06VIpAuBiuKnHKGRMVljbaTtcPebGHtokWHQ1OdLaXY5tPwqeJGDp7guqM/gg9RPKnf761FPVl9tSF8paqpN4mmVToPJTAwHgMCbpfSB1unccOT4El1SX3Ds0fCzLtlFcCYWJ+l9JP4Xmhaxyj1M8c3VaEjnpnaquYf2tP+DuZQapivPXu9k2ro+IQIkZLyuJPn7OmqUKCRHstPCej5+usOpMddBeTiZR/EV3DN1elMLqJyWUpjC5icl0Ks+JiVoMUZkXFrBYpzIqKqXTZsG6NNeelMFn5+SQX0K0q5TqGmDQYYtJgiEmDIUYD/nurIUYD/s+vIUaDRpvfELOYVm8E1Rg2xDCcKfVuBUfKR7BTeQ+fz4dfAON6nd0k3S8AAAAASUVORK5CYII=);\"><i class=\"fa fa-search\" ></i></button>\r\n                    </form>\r\n                </td>\r\n            </tr>\r\n        </table>\r\n    </div>\r\n\t<div class=\"article\" id=\"whoopsDiv\">\r\n\t <div class=\"articlehead\">\r\n\t\t <h1 class=\"articletitle fg start\">Whoops!</h1>\r\n\t\t <br />\r\n\t\t <p class=\"articledesc\">This page doesn’t exist or can’t be found.</p>\r\n\t </div>\r\n\t</div>\r\n\t<div class=\"footer\">\r\n\t   <table style=\"width:90%\">\r\n\t\t\t<tr>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<a class=\"copyrightmicrosoft\" href=\"https://www.microsoft.com/en-us/\" data-id=\"14\" data-m='{\"i\":14,\"p\":13,\"n\":\"MicrosoftCopyright\",\"y\":14,\"o\":1}'>\r\n\t\t\t\t\t\t<svg width=\"106\" height=\"22\" viewBox=\"0 0 106 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n\t\t\t\t\t\t\t<path d=\"M45.2018 4.40014V17.6001H42.921V7.24181H42.8906L38.8156 17.6001H37.295L33.1288 7.24181H33.0983V17.6001H31V4.40014H34.2844L38.0553 14.1779H38.1161L42.0999 4.40014H45.2018ZM47.0873 5.40847C47.0873 5.04181 47.2089 4.73625 47.4826 4.49181C47.7563 4.24736 48.0604 4.12514 48.4254 4.12514C48.8207 4.12514 49.1552 4.24736 49.3985 4.52236C49.6418 4.76681 49.7938 5.07236 49.7938 5.43903C49.7938 5.8057 49.6722 6.11125 49.3985 6.3557C49.1248 6.60014 48.8207 6.72236 48.4254 6.72236C48.03 6.72236 47.7259 6.60014 47.4826 6.3557C47.2393 6.05014 47.0873 5.74459 47.0873 5.40847ZM49.5505 8.12792V17.6001H47.3306V8.12792H49.5505ZM56.2713 15.9807C56.6058 15.9807 56.9708 15.889 57.3661 15.7363C57.7614 15.5835 58.1264 15.3696 58.4609 15.1251V17.2029C58.096 17.4168 57.7006 17.5696 57.2445 17.6613C56.7883 17.7529 56.3017 17.814 55.7543 17.814C54.3554 17.814 53.2302 17.3863 52.3787 16.5001C51.4968 15.614 51.0711 14.4835 51.0711 13.139C51.0711 11.6113 51.5273 10.3585 52.4092 9.3807C53.2911 8.40292 54.5379 7.91403 56.1801 7.91403C56.6058 7.91403 57.0012 7.97514 57.4269 8.06681C57.8527 8.18903 58.1872 8.31125 58.4305 8.43348V10.5724C58.096 10.3279 57.731 10.114 57.3965 9.99181C57.0316 9.83903 56.6667 9.77792 56.3017 9.77792C55.4198 9.77792 54.7204 10.0529 54.173 10.6335C53.6256 11.214 53.3519 11.9779 53.3519 12.9557C53.3519 13.9029 53.5952 14.6668 54.1122 15.1863C54.69 15.7057 55.3894 15.9807 56.2713 15.9807ZM64.7559 7.97514C64.9384 7.97514 65.0904 7.97514 65.2425 8.0057C65.3945 8.03625 65.5162 8.06681 65.6074 8.09736V10.3585C65.4858 10.2668 65.3337 10.2057 65.0904 10.114C64.8776 10.0224 64.6039 9.99181 64.2693 9.99181C63.722 9.99181 63.2658 10.2363 62.9009 10.6946C62.5359 11.1529 62.3231 11.8557 62.3231 12.8335V17.6001H60.1031V8.12792H62.3231V9.62514H62.3535C62.5663 9.1057 62.8705 8.70847 63.2658 8.40292C63.6915 8.12792 64.1781 7.97514 64.7559 7.97514ZM65.7291 13.0168C65.7291 11.4585 66.1548 10.2057 67.0367 9.28903C67.9186 8.37236 69.1351 7.91403 70.7164 7.91403C72.1761 7.91403 73.3317 8.34181 74.1528 9.22792C74.9739 10.114 75.3997 11.3057 75.3997 12.8029C75.3997 14.3307 74.9739 15.5529 74.092 16.4696C73.2101 17.3863 72.0241 17.8446 70.5036 17.8446C69.0438 17.8446 67.8882 17.4168 67.0367 16.5613C66.1548 15.6751 65.7291 14.4835 65.7291 13.0168ZM68.0403 12.9251C68.0403 13.9029 68.2532 14.6668 68.7093 15.1863C69.1655 15.7057 69.8041 15.9807 70.6252 15.9807C71.4463 15.9807 72.0545 15.7057 72.4802 15.1863C72.906 14.6668 73.1189 13.9029 73.1189 12.864C73.1189 11.8557 72.906 11.0918 72.4498 10.5724C72.0241 10.0529 71.4159 9.80847 70.6252 9.80847C69.8041 9.80847 69.1959 10.0835 68.7397 10.6335C68.2532 11.1529 68.0403 11.9168 68.0403 12.9251ZM78.684 10.6335C78.684 10.939 78.7753 11.214 78.9881 11.3974C79.201 11.5807 79.6268 11.7946 80.3262 12.0696C81.2081 12.4363 81.8468 12.8335 82.1813 13.2613C82.5462 13.7196 82.7287 14.239 82.7287 14.8807C82.7287 15.7668 82.3941 16.5001 81.6947 17.0196C81.0257 17.5696 80.0829 17.8446 78.9273 17.8446C78.532 17.8446 78.1062 17.7835 77.6197 17.6918C77.1331 17.6001 76.7377 17.4779 76.4032 17.3251V15.1251C76.7986 15.4001 77.2547 15.6446 77.7109 15.7974C78.1671 15.9501 78.5928 16.0418 78.9881 16.0418C79.4747 16.0418 79.8701 15.9807 80.0829 15.8279C80.3262 15.6751 80.4479 15.4613 80.4479 15.1251C80.4479 14.8196 80.3262 14.5446 80.0829 14.3613C79.8396 14.1474 79.3531 13.9029 78.684 13.6279C77.8629 13.2918 77.2851 12.8946 76.9506 12.4668C76.6161 12.039 76.4336 11.489 76.4336 10.8168C76.4336 9.96125 76.7682 9.25847 77.4372 8.70847C78.1062 8.15847 78.9881 7.88347 80.0525 7.88347C80.387 7.88347 80.752 7.91403 81.1473 8.0057C81.5426 8.06681 81.9076 8.18903 82.1813 8.2807V10.389C81.8772 10.2057 81.5426 10.0224 81.1473 9.86959C80.752 9.71681 80.3566 9.6557 79.9917 9.6557C79.5659 9.6557 79.2314 9.74736 79.0186 9.90014C78.8057 10.114 78.684 10.3279 78.684 10.6335ZM83.6714 13.0168C83.6714 11.4585 84.0972 10.2057 84.9791 9.28903C85.861 8.37236 87.0774 7.91403 88.6588 7.91403C90.1185 7.91403 91.2741 8.34181 92.0952 9.22792C92.9163 10.114 93.342 11.3057 93.342 12.8029C93.342 14.3307 92.9163 15.5529 92.0343 16.4696C91.1524 17.3863 89.9664 17.8446 88.4459 17.8446C86.9862 17.8446 85.8306 17.4168 84.9791 16.5613C84.1276 15.6751 83.6714 14.4835 83.6714 13.0168ZM85.9826 12.9251C85.9826 13.9029 86.1955 14.6668 86.6517 15.1863C87.1078 15.7057 87.7464 15.9807 88.5675 15.9807C89.3886 15.9807 89.9968 15.7057 90.4226 15.1863C90.8483 14.6668 91.0612 13.9029 91.0612 12.864C91.0612 11.8557 90.8483 11.0918 90.3922 10.5724C89.9664 10.0529 89.3582 9.80847 88.5675 9.80847C87.7464 9.80847 87.1382 10.0835 86.6821 10.6335C86.2259 11.1529 85.9826 11.9168 85.9826 12.9251ZM100.701 9.96125H97.3866V17.6001H95.1362V9.96125H93.5549V8.12792H95.1362V6.81403C95.1362 5.8057 95.4708 5.01125 96.1094 4.36959C96.748 3.72792 97.5691 3.42236 98.5727 3.42236C98.8464 3.42236 99.0896 3.42236 99.3025 3.45292C99.5154 3.48347 99.6979 3.51403 99.8499 3.57514V5.50014C99.7891 5.46959 99.637 5.40847 99.4546 5.34736C99.2721 5.28625 99.0592 5.2557 98.8159 5.2557C98.3598 5.2557 97.9949 5.40847 97.7516 5.68347C97.5083 5.98903 97.3866 6.41681 97.3866 6.96681V8.09736H100.701V5.95847L102.921 5.28625V8.09736H105.172V9.9307H102.921V14.3613C102.921 14.9418 103.013 15.3696 103.226 15.5835C103.438 15.8279 103.773 15.9501 104.229 15.9501C104.351 15.9501 104.503 15.9196 104.685 15.8585C104.868 15.7974 105.02 15.7363 105.172 15.6446V17.4779C105.02 17.5696 104.807 17.6307 104.472 17.6918C104.138 17.7529 103.834 17.7835 103.499 17.7835C102.556 17.7835 101.857 17.539 101.401 17.0196C100.945 16.5307 100.701 15.7668 100.701 14.7585V9.96125Z\" fill=\"#737373\"/>\r\n\t\t\t\t\t\t\t<path d=\"M10.4005 0H0V10.45H10.4005V0Z\" fill=\"#F25022\" />\r\n\t\t\t\t\t\t\t<path d=\"M21.8958 0H11.4954V10.45H21.8958V0Z\" fill=\"#7FBA00\" />\r\n\t\t\t\t\t\t\t<path d=\"M10.4005 11.5503H0V22.0003H10.4005V11.5503Z\" fill=\"#00A4EF\" />\r\n\t\t\t\t\t\t\t<path d=\"M21.8958 11.5503H11.4954V22.0003H21.8958V11.5503Z\" fill=\"#FFB900\" />\r\n\t\t\t\t\t\t</svg>\r\n\t\t\t\t\t\t<br>&#169 <span id=\"fullyear\"></span> Microsoft\r\n\t\t\t\t\t</a>\r\n\t\t\t   </td>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<ul id=\"links\">\r\n\t\t\t\t\t\t<table style=\"width:100%\">\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkId=521839\" data-id=\"15\" data-m='{\"i\":15,\"p\":13,\"n\":\"footer_privacy\",\"y\":14,\"o\":2}'>\r\n\t\t\t\t\t\t\t\t\t\tPrivacy &amp; Cookies\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkID=246338\" data-id=\"16\" data-m='{\"i\":16,\"p\":13,\"n\":\"footer_legal\",\"y\":14,\"o\":3}'>\r\n\t\t\t\t\t\t\t\t\t\tTerms of use\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkID=286759\" data-id=\"17\" data-m='{\"i\":17,\"p\":13,\"n\":\"footer_adprivacyinfo\",\"y\":14,\"o\":4}'>\r\n\t\t\t\t\t\t\t\t\t\tAbout our Ads\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"#\" id=\"footer_feedback\" data-id=\"18\" data-m='{\"i\":18,\"p\":13,\"n\":\"footer_feedback\",\"y\":14,\"o\":5}' target=\"_self\">\r\n\t\t\t\t\t\t\t\t\t\tFeedback\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?LinkId=512703\" data-id=\"19\" data-m='{\"i\":19,\"p\":13,\"n\":\"footer_help\",\"y\":14,\"o\":6}'>\r\n\t\t\t\t\t\t\t\t\t\tHelp\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://www.msn.com/en-us/msn-worldwide\" data-id=\"20\" data-m='{\"i\":20,\"p\":13,\"n\":\"footer_worldwide\",\"y\":14,\"o\":7}'>\r\n\t\t\t\t\t\t\t\t\t\tMSN Worldwide\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://go.microsoft.com/fwlink/?linkid=875132\" data-id=\"21\" data-m='{\"i\":21,\"p\":13,\"n\":\"footer_advertise\",\"y\":14,\"o\":8}'>\r\n\t\t\t\t\t\t\t\t\t\tAdvertise\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://blogs.msn.com/\" data-id=\"22\" data-m='{\"i\":22,\"p\":13,\"n\":\"footer_msn_blog\",\"y\":14,\"o\":9}'>\r\n\t\t\t\t\t\t\t\t\t\tMSN Blog\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t\t\t\t<a href=\"https://www.msn.com/en-us/news/us/about-us/ar-BBN0NAK\" data-id=\"23\" data-m='{\"i\":23,\"p\":13,\"n\":\"footer_aboutus\",\"y\":14,\"o\":10}'>\r\n\t\t\t\t\t\t\t\t\t\tAbout Us\r\n\t\t\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t   </table>\r\n\t</div>\r\n <script type=\"text/javascript\">\r\n\tdocument.getElementById(\"whoopsDiv\").style.display = \"block\";\r\n\tvar n = new Date().getFullYear();\r\n\tdocument.getElementById(\"fullyear\").innerHTML = n;\r\n\tsetTimeout('Redirect()', 5000);\r\n\tfunction Redirect() {\r\n\t\twindow.location = \"https://www.msn.com/\";\r\n\t}\r\n </script>\r\n\r\n\t</div>\r\n</body>\r\n</html>\r\n"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"error\": \"fetch_webpage failed: 404 <!DOCTYPE html>\\r\\n<html xml:lang=\\\"en\\\" xmlns=\\\"http://www.w3.org/1999/xhtml\\\" xmlns:Web=\\\"http://schemas.live.com/Web/\\\">\\r\\n<head>\\r\\n\\t<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=UTF-8\\\" />\\r\\n\\t<title>MSN</title>\\r\\n\\t<meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=edge,chrome=1\\\" />\\r\\n\\t<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\" />\\r\\n</head>\\r\\n<body>\\r\\n\\t<div>\\r\\n\\t\\t\\t<style>\\r\\n\\t\\tbody, html {\\r\\n\\t\\t\\tfont-family: \\\"Segoe UI Semibold\\\",\\\"Segoe WP Semibold\\\",\\\"Segoe WP\\\",\\\"Segoe UI\\\",Arial,Sans-Serif !important;\\r\\n\\t\\t\\tline-height: 30px;\\r\\n\\t\\t\\tcolor: black;\\r\\n\\t\\t\\tbackground-color: #F7F7F7;\\r\\n\\t\\t}\\r\\n\\r\\n\\t\\ta {\\r\\n\\t\\t\\tcolor: #333333;\\r\\n\\t\\t\\ttext-decoration: none;\\r\\n\\t\\t\\tfont-family: \\\"Segoe UI Semibold\\\",\\\"Segoe WP Semibold\\\",\\\"Segoe WP\\\",\\\"Segoe UI\\\",Arial,Sans-Serif !important;\\r\\n\\t\\t\\tfont-weight: 600;\\r\\n\\t\\t\\tfont-size: 10px;\\r\\n\\t\\t\\tline-height: 10px;\\r\\n\\t\\t}\\r\\n\\r\\n\\t\\t\\ta.copyrightmicrosoft {\\r\\n\\t\\t\\t\\tcolor: #333333;\\r\\n\\t\\t\\t\\ttext-decoration: none;\\r\\n\\t\\t\\t\\tfont-size: 10px;\\r\\n\\t\\t\\t}\\r\\n\\r\\n\\t\\t.article {\\r\\n\\t\\t\\tpadding-top: 100px;\\r\\n\\t\\t\\tpadding-left: 120px;\\r\\n\\t\\t\\twidth: 100%;\\r\\n\\t\\t\\ttext-align: left;\\r\\n\\t\\t}\\r\\n\\r\\n\\t\\t.articletitlefgstart {\\r\\n\\t\\t\\tfont-size: 38px;\\r\\n\\t\\t}\\r\\n\\r\\n\\t\\t.articledesc {\\r\\n\\r\\n\\t\\t}\\r\\n\\r\\n\\t\\t.footer {\\r\\n\\t\\t\\tposition: fixed;\\r\\n\\t\\t\\tleft: ... [truncated 17965 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:23:49.889Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:23:49.889Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke injury Caleb Foster TCU matchup March Madness 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:23:51.292Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "March Madness key injuries to know: How Caleb Foster, JT Toppin and ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fmarch%2Dmadness%2Dkey%2Dinjuries%2Dknow%2D181833623.html&rut=f88521f85f3b6943b2eeafda9997f36d82419a49e500989b3729f978bd631052",
+          "snippet": "March Madness key injuries to know: How Caleb Foster , JT Toppin and more will impact 2026 brackets King McClure thinks Duke might have an early exit at the hands of TCU"
+        },
+        {
+          "title": "Caleb Foster injury updates: Will Duke star play in 2026 March Madness ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fcaleb%2Dfoster%2Dinjury%2Dupdates%2Dwill%2Dduke%2Dstar%2Dplay%2Din%2D2026%2Dmarch%2Dmadness%2Dopener%2Far%2DAA1YK0tL&rut=98f8c47c5b24d64664a5c2eb71924b2c411cfd819c705ebb6ef016c4f7eb45c6",
+          "snippet": "Foster suffered a fracture in his right foot and underwent surgery, Scheyer told reporters ahead of the ACC Tournament. The injury occurred in Duke&#x27;s regular-season finale against North Carolina."
+        },
+        {
+          "title": "Duke basketball injury update for March Madness tournament | Raleigh ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fduke%2Farticle315059036.html&rut=e7af8cca5273659c22bc0f655e11af9d4a22b3dfe263cd4faf23b264c8d53e17",
+          "snippet": "Duke&#x27;s Caleb Foster and Patrick Ngongba II cheer on the Blue Devils in the second half of Duke&#x27;s 80-79 victory over Florida State in the quarterfinals of the 2026 ACC Men&#x27;s Basketball ..."
+        },
+        {
+          "title": "Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fuk%2Fncaa%2Dbasketball%2Fduke%2Fnews%2Fduke%2Dbasketball%2Djon%2Dscheyer%2Drealistic%2Dcaleb%2Dfoster%2Dinjury%2Dtimeline%2Dmarch%2Dmadness%2F0a8a315cad33eb46991c8423&rut=fc0977dbb1d041e9fe6fef4648f3663a668308d41227652f8ef81a492bd86a1d",
+          "snippet": "The Duke Blue Devils are gearing up to make a big run in the ACC Tournament. Eventually, the goal is to gain momentum during March Madness and then notch their first NCAA Tournament National ..."
+        },
+        {
+          "title": "Caleb Foster injury: Duke guard out for &#x27;foreseeable&#x27; future after ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2Fcaleb%2Dfoster%2Dinjury%2Dduke%2D2026%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2F&rut=41e2c670581e2c1116efdffdfe68ed01ff8a02abfba27fe5818faa6f330aab70",
+          "snippet": "The postseason outlook for No. 1 Duke took a significant hit Tuesday when coach Jon Scheyer confirmed that starting point guard Caleb Foster suffered a fracture in his right foot in the Blue ..."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"March Madness key injuries to know: How Caleb Foster, JT Toppin and ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fmarch%2Dmadness%2Dkey%2Dinjuries%2Dknow%2D181833623.html&rut=f88521f85f3b6943b2eeafda9997f36d82419a49e500989b3729f978bd631052\",\n      \"snippet\": \"March Madness key injuries to know: How Caleb Foster , JT Toppin and more will impact 2026 brackets King McClure thinks Duke might have an early exit at the hands of TCU\"\n    },\n    {\n      \"title\": \"Caleb Foster injury updates: Will Duke star play in 2026 March Madness ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fcaleb%2Dfoster%2Dinjury%2Dupdates%2Dwill%2Dduke%2Dstar%2Dplay%2Din%2D2026%2Dmarch%2Dmadness%2Dopener%2Far%2DAA1YK0tL&rut=98f8c47c5b24d64664a5c2eb71924b2c411cfd819c705ebb6ef016c4f7eb45c6\",\n      \"snippet\": \"Foster suffered a fracture in his right foot and underwent surgery, Scheyer told reporters ahead of the ACC Tournament. The injury occurred in Duke&#x27;s regular-season finale against North Carolina.\"\n    },\n    {\n      \"title\": \"Duke basketball injury update for March Madness tournament | Raleigh ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.newsobserver.com%2Fsports%2Fcollege%2Facc%2Fduke%2Farticle315059036.html&rut=e7af8cca5273659c22bc0f655e11af9d4a22b3dfe263cd4faf23b264c8d53e17\",\n      \"snippet\": \"Duke&#x27;s Caleb Foster and Patrick Ngongba II cheer on the Blue Devils in the second half of Duke&#x27;s 80-79 victory over Florida State in the quarterfinals of the 2026 ACC Men&#x27;s Basketball ...\"\n    },\n    {\n      \"title\": \"Duke&#x27;s Jon Scheyer gives realistic Caleb Foster injury timeline for ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fuk%2Fncaa%2Dbasketball%2Fduke%2Fnews%2Fduke%2Dbasketball%2Djon%2Dscheyer%2Drealistic%2Dcaleb%2Dfoster%2Dinjury%2Dtimeline%2Dmarch%2Dmadness%2F0a8a315cad33eb46991c8423&rut=fc0977dbb1d041e9fe6fef4648f3663a668308d41227652f8ef81a492bd86a1d\",\n      \"snippet\": \"The Duke Blue Devils are gearing up to make a big run in the ACC Tournament. Eventually, the goal is to gain momentum during March Madness and then notch their first NCAA Tournament National ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:23:55.663Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:23:55.663Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://sports.yahoo.com/articles/march-madness-key-injuries-know-181833623.html"
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:23:56.603Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://sports.yahoo.com/articles/march-madness-key-injuries-know-181833623.html",
+        "text": "March Madness key injuries to know: How Caleb Foster, JT Toppin and more will impact 2026 brackets - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Computers Phones Smart home Streaming TVs Gift ideas Best gifts for men Best gift cards Best gifts for mom Best gifts for teens Best gifts for couples Best gifts for sister-in-law Best gifts for girlfriends Best gifts for grandma Best gifts for sisters Best gifts for husbands Best birthday gifts for her Best get well soon gifts Best travel gifts Best gifts for mother-in-law Best anniversary gifts for wife Stores Amazon Best Buy Coach Outlet Home Depot Kate Spade New York Lowes Macy&#x27;s Nordstrom Sephora Sur La Table Target Ulta Walmart Wayfair Zappos Shopping Guides Best cordless stick vacuums Best water bottles Best vacuums Best air fryers Best luggage Best jeans Best bras Best nontoxic nail polish Best under eye cream Best skin tightening creams Best coffee makers Best comforters Best mops Best Hoka shoes for walking Best instant pot Deals Toys and games General Food Travel Autos EV & Future Tech Classic & Collector Deals & Buying Guides Ownership Safety & Recalls Policy & Environment New Vehicles & Reviews Auto Shows General People & Culture Gift ideas Buying guides Amazon Spring Sale deals Amazon Spring Sale tech deals Entertainment Celebrity TV Movies Music How to Watch Interviews Videos Finance My portfolio News Latest Originals Newsletters Stock market Crypto Earnings Tariffs Economics Tech Housing Fed meeting Markets Most active stocks Top stock gainers Biggest stock losers Trending tickers Highest dividend stocks Crypto Prediction markets Options Sectors Futures World indices Research Equities screener Penny stock screener Most shorted screener Undervalued growth screener Financial calendar Earnings calendar Stock comparison Currency converter Advanced charts Community Personal finance My Money Credit cards Banking Mortgages Mortgage calculator Insurance Taxes "
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://sports.yahoo.com/articles/march-madness-key-injuries-know-181833623.html\",\n    \"text\": \"March Madness key injuries to know: How Caleb Foster, JT Toppin and more will impact 2026 brackets - Yahoo Sports News Today&#x27;s news US Politics World Weather Climate change Health Wellness Mental health Sexual health Dermatology Oral health Hair loss Foot health Nutrition Healthy eating Meal delivery Weight loss Vitamins and supplements Fitness Equipment Exercise Women&#x27;s health Sleep Healthy aging Hearing Mobility Science Originals Newsletters Games Life Health Wellness Nutrition Fitness Healthy aging Sleep Your body Children&#x27;s health Dermatology Foot health Hair loss Oral health Sexual health Weight management Women&#x27;s health Conditions Cardiovascular health Digestive health Endocrine system Hearing Mental health Parenting Family health So mini ways Horoscopes Shopping Amazon Spring Sale Amazon Spring Sale early deals Amazon Spring Sale annoucement Style Accessories Clothing Luggage Shoes Beauty Fragrance Hair Makeup Nails Skincare Sunscreen Health Dental Fitness Hair loss Mental health Nutrition Personal care Sleep Women&#x27;s health Home and garden Bath Bedding Cleaning Gardening Home decor Home improvement Kitchen Outdoor Pets Tech Accessories Audio Auto Com... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:24:02.180Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:24:02.180Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke vs TCU 2026 NCAA tournament preview",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:24:03.102Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Duke vs Siena, Ohio State vs TCU predictions for 2026 NCAA first ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fduke%2Dvs%2Dsiena%2Dohio%2Dstate%2Dvs%2Dtcu%2Dpredictions%2Dfor%2D2026%2Dncaa%2Dfirst%2Dround%2Din%2Dgreenville%2Far%2DAA1YH3e0&rut=e35290dc4ac1c77a31f3b7a04eafae016b3cd1d8122eeda48e014e6c49b8c0f0",
+          "snippet": "Ohio State vs TCU prediction Ohio State (21-12) is back in the NCAA Tournament for the first time in six years. TCU (22-11) went three straight times from 2022-24 but hasn&#x27;t been past the first ..."
+        },
+        {
+          "title": "March Madness East Region Predictions 2026 | NCAA Tournament Bracket ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Deast%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=25e6368f544675f01902e26368a5f0c4bdbd53bbe7041aac490fe6f40bf291f2",
+          "snippet": "I&#x27;m breaking down my March Madness East Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament ."
+        },
+        {
+          "title": "Men&#x27;s 2026 March Madness NCAA tournament forecast bracket",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002",
+          "snippet": "From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament ."
+        },
+        {
+          "title": "March Madness bracket predictions: Expert picks, upsets, winners, odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd",
+          "snippet": "Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis, including predictions, upsets, Vegas odds and more to help you ..."
+        },
+        {
+          "title": "2026 NCAA Tournament East Region bracket preview ... - CBS Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cbssports.com%2Fcollege%2Dbasketball%2Fnews%2F2026%2Dncaa%2Dtournament%2Deast%2Dregion%2Dbracket%2Dpreview%2F&rut=3317e88aa32f07ad78b865bcbc054478b2d66700f1605ed022ccd6393dacb39b",
+          "snippet": "Breaking down the 2026 NCAA Tournament East Region with predictions, upset picks, sleeper teams, best first-round games and players to watch in March Madness."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Duke vs Siena, Ohio State vs TCU predictions for 2026 NCAA first ... - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fduke%2Dvs%2Dsiena%2Dohio%2Dstate%2Dvs%2Dtcu%2Dpredictions%2Dfor%2D2026%2Dncaa%2Dfirst%2Dround%2Din%2Dgreenville%2Far%2DAA1YH3e0&rut=e35290dc4ac1c77a31f3b7a04eafae016b3cd1d8122eeda48e014e6c49b8c0f0\",\n      \"snippet\": \"Ohio State vs TCU prediction Ohio State (21-12) is back in the NCAA Tournament for the first time in six years. TCU (22-11) went three straight times from 2022-24 but hasn&#x27;t been past the first ...\"\n    },\n    {\n      \"title\": \"March Madness East Region Predictions 2026 | NCAA Tournament Bracket ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbookreview.com%2Fpicks%2Fncaa%2Dbasketball%2Fmarch%2Dmadness%2Deast%2Dregion%2Dpredictions%2Dpicks%2Dbest%2Dbets%2D2026%2F&rut=25e6368f544675f01902e26368a5f0c4bdbd53bbe7041aac490fe6f40bf291f2\",\n      \"snippet\": \"I&#x27;m breaking down my March Madness East Region predictions with bracket picks for the first round, teams on upset alert, and my best bets for the NCAA Tournament .\"\n    },\n    {\n      \"title\": \"Men&#x27;s 2026 March Madness NCAA tournament forecast bracket\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.nytimes.com%2Fathletic%2Finteractive%2Fmens%2Dmarch%2Dmadness%2Dbracket%2Dncaa%2Dtournament%2Dforecast%2D2026%2F&rut=93d788d0e70bab0234e794ffacdfe3af6bfde122e79ef63b35c472520b6ff002\",\n      \"snippet\": \"From Selection Sunday to the Championship, track every team&#x27;s odds of advancing through each round of the Men&#x27;s NCAA Tournament .\"\n    },\n    {\n      \"title\": \"March Madness bracket predictions: Expert picks, upsets, winners, odds ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd\",\n      \"snippet\": \"Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis, including predictions, upsets, Vegas odds and more to help you ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:24:10.576Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:24:10.576Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportsbookreview.com/picks/ncaa-basketball/march-madness-east-region-predictions-picks-best-bets-2026/"
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:24:11.449Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportsbookreview.com/picks/ncaa-basketball/march-madness-east-region-predictions-picks-best-bets-2026/",
+        "text": "March Madness East Region Predictions 2026 | NCAA Tournament Bracket Odds & Best Bets Sportsbooks Menu Sportsbooks Country Sportsbooks Country Best Betting Sites US Best Sportsbooks US Sports Betting Apps US Betting Sites Canada Best Sportsbooks Canada Sports Betting Apps Canada Paris Sportifs au Canada US States Sportsbooks US States Arizona California Colorado Florida Illinois Indiana Iowa Kentucky Louisiana Maryland Massachusetts Michigan Missouri New Jersey New York North Carolina Ohio Pennsylvania Tennessee Texas Virginia West Virginia CA Provinces Sportsbooks CA Provinces Alberta British Columbia Manitoba Nova Scotia Quebec Ontario Paris Sportifs au Quebec By Category Sportsbooks By Category Prop Betting Sites Parlay Betting Sites Fastest Payout Sportsbooks Social Sportsbooks Best DFS Sites Horse Racing Betting Sites NBA Betting Sites F1 Betting Sites Boxing Betting Sites UFC Betting Sites NHL Betting Sites MLB Betting Sites Golf Betting Sites Soccer Betting Sites March Madness Betting Sites March Madness Betting Promos Sportsbook Referral Bonus Boxing Betting SItes UFC Betting Sites Sportsbook Reviews Sportsbooks Sportsbook Reviews BetMGM Review DraftKings Review bet365 Review FanDuel Review Caesars Review Fanatics Sportsbook Review Hard Rock Bet Review Bally Bet Review Promos Menu Promos Country Promos Promos Country Promos Sportsbook Promos US Sportsbook Promos Canada US State Promos Promos US State Promos Arizona Sportsbook Promos Colorado Sportsbook Promos Connecticut Promos Illinois Sportsbook Promos Indiana Sportsbook Promos Iowa Sportsbook Promos Kentucky Sportsbook Promos Louisiana Promos Maryland Sportsbook Promos Massachusetts Promos Michigan Sportsbook Promos NJ Sportsbook Promos NY Sportsbook Promos NC Sportsbook Promos Ohio Sportsbook Promos PA Sportsbook Promos Tennessee Promos Texas Sportsbook Promos Virginia Sportsbook Promos WV Sportsbook Promos Missouri Sportsbook Promos US Promos Promos US Promos bet365 Bonus Code BetMGM Bonus Code Betr Picks Promo Code BetRivers Bonus Code Borgata Promo Code Caesars Sportsbook Promo Code DraftKings Promo Code Fanatics Sportsbook Promo FanDuel Promo Code Fliff Promo Code Hard Rock Bet Promo Thrillzz Promo Code CA Promos Promos CA Promos Bet99 Promo Code BetVictor Promo Code Betway Promo Code Sports Interaction Bonus Code Stake Promo Code TonyBet Promo Code Odds Menu Odds All Odds Betting Odds NFL NFL Odds NCAAF NCAAF Odds NBA NBA Odds NBA Futures NCAAB NCAAB Odds MLB MLB Odds MLB Futures NHL NHL Odds NHL Futures Soccer MLS Odds EPL Odds Champions League Odds Picks Menu Picks Best Bets Today NFL Picks NBA Picks MLB Picks NHL Picks NCAAF Picks NCAAB Picks CFL Picks Golf Picks Forum & Tools Menu Forum & Tools SBR Forum Forum & Tools SBR Forum Forum Home Players Talk Betting Industry NFL Betting Forum College Football Betting Forum NBA Betting Forum MLB Betting Forum College Basketball Betting Forum NHL Betting Forum Betting News Forum & Tools Betting News NFL NBA MLB NHL NCAAF NCAAB UFC Gol"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportsbookreview.com/picks/ncaa-basketball/march-madness-east-region-predictions-picks-best-bets-2026/\",\n    \"text\": \"March Madness East Region Predictions 2026 | NCAA Tournament Bracket Odds & Best Bets Sportsbooks Menu Sportsbooks Country Sportsbooks Country Best Betting Sites US Best Sportsbooks US Sports Betting Apps US Betting Sites Canada Best Sportsbooks Canada Sports Betting Apps Canada Paris Sportifs au Canada US States Sportsbooks US States Arizona California Colorado Florida Illinois Indiana Iowa Kentucky Louisiana Maryland Massachusetts Michigan Missouri New Jersey New York North Carolina Ohio Pennsylvania Tennessee Texas Virginia West Virginia CA Provinces Sportsbooks CA Provinces Alberta British Columbia Manitoba Nova Scotia Quebec Ontario Paris Sportifs au Quebec By Category Sportsbooks By Category Prop Betting Sites Parlay Betting Sites Fastest Payout Sportsbooks Social Sportsbooks Best DFS Sites Horse Racing Betting Sites NBA Betting Sites F1 Betting Sites Boxing Betting Sites UFC Betting Sites NHL Betting Sites MLB Betting Sites Golf Betting Sites Soccer Betting Sites March Madness Betting Sites March Madness Betting Promos Sportsbook Referral Bonus Boxing Betting SItes UFC Betting Sites Sportsbook Reviews Sportsbooks Sportsbook Reviews BetMGM Review DraftKings Review bet365 Revi... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r32-east-1-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:24:15.605Z",
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:24:15.605Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Duke TCU 2026 NCAA tournament matchup analysis",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-east-1-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:24:16.414Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Seth Davis&#x27; NCAA Men&#x27;s 2026 Tournament Bracket Analysis - Hoops HQ",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hoopshq.com%2Fbracketology%2Fseth%2Ddavis%2Dncaa%2Dmens%2D2026%2Dtournament%2Dbracket&rut=086cf1cc96921078bc9ac7e13cff9b7df2c1b2811d0aea44aed5622c77a44016",
+          "snippet": "Hoops HQ Editor-In-Chief Seth Davis reveals his bracket for the 2026 NCAA Tournament , straight from the Selection Show studio set."
+        },
+        {
+          "title": "2026 NCAA Tournament East Region Breakdown: Duke, UConn, Kansas Lead ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fathlonsports.com%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Deast%2Dregion%2Dbreakdown%2Dduke%2Duconn%2Dkansas&rut=7b550881ee32b16d9dce694a073f0aa4f2f86ab17dc36d52b234f162821bb947",
+          "snippet": "The 2026 NCAA Tournament East Region is stacked with blue bloods, legendary coaches and dangerous matchups . Duke , UConn, Kansas and St. John&#x27;s headline what could be the toughest bracket in ..."
+        },
+        {
+          "title": "2026 NCAA Tournament Quick Analysis: East And West Regions | OutKick",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.outkick.com%2Fsports%2Foutkick%2D2026%2Dncaa%2Dtournament%2Dbreakdown%2Deast%2Dwest%2Dregions&rut=038c698ac4656383c057234982a482a4af9650a8d60da015c14bf2fdb8125ec3",
+          "snippet": "Our bracket preview breaks down the 2026 NCAA Tournament East and West regions, spotlighting Duke and Arizona plus the Sweet 16 clashes and first-round games to watch."
+        },
+        {
+          "title": "March Madness bracket predictions: Expert picks, upsets, winners, odds ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd",
+          "snippet": "Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis , including predictions, upsets, Vegas odds and more to help you ..."
+        },
+        {
+          "title": "2026 NCAA Men&#x27;s Basketball Tournament Breakdown | FOX Sports",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.foxsports.com%2Fstories%2Fcollege%2Dbasketball%2Fncaa%2Dmens%2Dbasketball%2Dtournament%2Dbreakdown%2Dtop%2Dmatchups%2Dupsets%2Dpredictions&rut=1181b071545d870a756388903ddafd9c82e07af1942bdeb07ad64378668ff901",
+          "snippet": "From upset picks to Final Four predictions, FOX Sports&#x27; Michael Cohen breaks down the complete NCAA Men&#x27;s Basketball Tournament bracket."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Seth Davis&#x27; NCAA Men&#x27;s 2026 Tournament Bracket Analysis - Hoops HQ\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.hoopshq.com%2Fbracketology%2Fseth%2Ddavis%2Dncaa%2Dmens%2D2026%2Dtournament%2Dbracket&rut=086cf1cc96921078bc9ac7e13cff9b7df2c1b2811d0aea44aed5622c77a44016\",\n      \"snippet\": \"Hoops HQ Editor-In-Chief Seth Davis reveals his bracket for the 2026 NCAA Tournament , straight from the Selection Show studio set.\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament East Region Breakdown: Duke, UConn, Kansas Lead ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fathlonsports.com%2Fcollege%2Dbasketball%2F2026%2Dncaa%2Dtournament%2Deast%2Dregion%2Dbreakdown%2Dduke%2Duconn%2Dkansas&rut=7b550881ee32b16d9dce694a073f0aa4f2f86ab17dc36d52b234f162821bb947\",\n      \"snippet\": \"The 2026 NCAA Tournament East Region is stacked with blue bloods, legendary coaches and dangerous matchups . Duke , UConn, Kansas and St. John&#x27;s headline what could be the toughest bracket in ...\"\n    },\n    {\n      \"title\": \"2026 NCAA Tournament Quick Analysis: East And West Regions | OutKick\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.outkick.com%2Fsports%2Foutkick%2D2026%2Dncaa%2Dtournament%2Dbreakdown%2Deast%2Dwest%2Dregions&rut=038c698ac4656383c057234982a482a4af9650a8d60da015c14bf2fdb8125ec3\",\n      \"snippet\": \"Our bracket preview breaks down the 2026 NCAA Tournament East and West regions, spotlighting Duke and Arizona plus the Sweet 16 clashes and first-round games to watch.\"\n    },\n    {\n      \"title\": \"March Madness bracket predictions: Expert picks, upsets, winners, odds ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2D2026%2Dbracket%2Dpredictions%2Dpicks%2Dupset%2Dodds%2F0aad571f4a7578977de47f5b&rut=88fc7e734dec0831a825ac584356debf25921bb3c732310ed3d83c23852a1ddd\",\n      \"snippet\": \"Struggling with who to pick in your 2026 March Madness bracket? Here is a guide to Sporting News&#x27; expert NCAA Tournament analysis , including predictions, upsets, Vegas odds and more to help you ...\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-east-1-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T10:24:20.919Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r32-east-1\",\n    \"winnerId\": \"duke\",\n    \"confidence\": 0.72,\n    \"rationale\": \"Duke remains the superior team by a wide margin in efficiency metrics, ranking 1st nationally in both KenPom and Torvik, but the loss of starting point guard Caleb Foster to a foot fracture introduces meaningful uncertainty and could disrupt their offensive rhythm. TCU's defense is solid (30th in Torvik adjD) and could exploit Duke's backcourt vulnerability, but the Horned Frogs' offense is only 83rd in efficiency, making it difficult to fully capitalize. Ultimately, Duke's elite defense, depth, and talent advantage should still prevail, but the injury lowers confidence from the near-certain level of the first round.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"1\",\n    \"title\": \"Investigate team health and recent news\",\n    \"summary\": \"Checked for injury updates and found that Duke's starting point guard Caleb Foster is out indefinitely with a foot fracture, which could impact their offensive flow and depth.\",\n    \"evidence\": \"ESPN and Yahoo Sports reports confirm Foster's injury, noting it occurred in the regular-season finale and required surgery, with no clear timeline for return.\"\n  }\n}"
+    }
+  ]
+}
