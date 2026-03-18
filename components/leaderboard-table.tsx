@@ -139,7 +139,7 @@ export function LeaderboardTable({
                 <span className="leader-meta-label">Max</span>
               </div>
               <div className="leader-cost">
-                <strong>{formatCost(entry.totalCostUsd)}</strong>
+                {formatCost(entry.totalCostUsd)}
               </div>
               <div className="leader-bottomline leader-bottomline-nowrap">
                 <strong>{summary?.championshipPick ?? "Unknown"}</strong>
