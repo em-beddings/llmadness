@@ -1,5 +1,5 @@
 import path from "node:path";
-import { mkdir } from "node:fs/promises";
+import { mkdir, readdir } from "node:fs/promises";
 import { loadEnvConfig } from "@next/env";
 import { CentralBracketAgent } from "@/agents/central-agent";
 import { MockModelAdapter } from "@/agents/mock-model";
@@ -28,6 +28,19 @@ async function loadExistingManifest(outDir: string) {
   }
 }
 
+async function discoverSubmissionRefs(outDir: string) {
+  const entries = await readdir(outDir, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
+    .map((entry) => entry.name)
+    .filter((name) => !["manifest.json", "leaderboard.json", "actual-results.json"].includes(name))
+    .map((name) => ({
+      modelId: name.replace(/\.json$/, ""),
+      file: path.join("data", "runs", path.basename(outDir), name)
+    }))
+    .sort((left, right) => left.modelId.localeCompare(right.modelId));
+}
+
 async function main() {
   loadEnvConfig(process.cwd());
 
@@ -47,6 +60,7 @@ async function main() {
   const outDir = path.join(process.cwd(), "data", "runs", runId);
   await mkdir(outDir, { recursive: true });
   const existingManifest = await loadExistingManifest(outDir);
+  const discoveredSubmissions = await discoverSubmissionRefs(outDir);
 
   if (existingManifest && existingManifest.configPath !== configPath) {
     throw new Error(
@@ -63,7 +77,12 @@ async function main() {
     ])
   );
 
-  const manifest: RunManifest = existingManifest ?? {
+  const manifest: RunManifest = existingManifest
+    ? {
+        ...existingManifest,
+        submissions: [...existingManifest.submissions]
+      }
+    : {
     id: runId,
     title: `${config.title} bracket run`,
     createdAt: new Date().toISOString(),
@@ -73,6 +92,15 @@ async function main() {
 
   manifest.title = `${config.title} bracket run`;
   manifest.configPath = configPath;
+
+  for (const discovered of discoveredSubmissions) {
+    const existingIndex = manifest.submissions.findIndex((entry) => entry.modelId === discovered.modelId);
+    if (existingIndex >= 0) {
+      manifest.submissions[existingIndex] = discovered;
+    } else {
+      manifest.submissions.push(discovered);
+    }
+  }
 
   for (const model of models) {
     const submission = await agent.run(runId, config, model);
