@@ -1,0 +1,943 @@
+{
+  "runId": "2026",
+  "configId": "demo-2026-bracket",
+  "model": {
+    "id": "mimo-v2-flash",
+    "label": "MiMo-V2-Flash",
+    "provider": "mimo",
+    "model": "mimo-v2-flash",
+    "description": "MiMo • Flash-tier model configured through a custom endpoint for fast inference and lightweight agent tasks."
+  },
+  "gameId": "r32-south-2",
+  "generatedAt": "2026-03-18T10:35:26.215Z",
+  "pick": {
+    "gameId": "r32-south-2",
+    "winnerId": "vanderbilt",
+    "confidence": 0.75,
+    "rationale": "Vanderbilt holds a decisive edge in offensive efficiency, ranking 6th in KenPom adjusted offense and 10th overall in Torvik, which should exploit Nebraska's weaker defense despite the Cornhuskers' top-10 defensive rating. While Nebraska's defense is elite, their offense is only 55th-62nd in efficiency, and they lack a consistent go-to scorer, which could limit their ability to keep pace with Vanderbilt's high-powered attack. Vanderbilt's recent form in the SEC and superior overall efficiency metrics make them the more reliable pick, though Nebraska's defensive prowess gives them a credible path if they can force turnovers and control tempo."
+  },
+  "reasoningStep": {
+    "id": "1",
+    "title": "Investigate team ratings and matchup dynamics",
+    "summary": "Vanderbilt ranks 12th in KenPom and 10th in Torvik with elite offensive efficiency (6th in KenPom adjO), while Nebraska ranks 14th in KenPom and 19th in Torvik with a top-7 defense but a 55th-62nd ranked offense. The matchup favors Vanderbilt's offense against Nebraska's defense, but Nebraska's defensive strength could keep it close.",
+    "evidence": "Vanderbilt: KenPom rank 12, adjO 127.3 (6th), adjD 99.2; Torvik rank 10, adjOE 127.8 (6th), adjDE 99.2 (28th). Nebraska: KenPom rank 14, adjO 118.6 (55th), adjD 92.5 (7th); Torvik rank 19, adjOE 117.3 (62nd), adjDE 93.5 (7th)."
+  },
+  "toolCalls": [
+    {
+      "id": "tool-esvx94h0",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "vanderbilt",
+          "nebraska"
+        ]
+      },
+      "startedAt": "2026-03-18T10:34:15.253Z",
+      "completedAt": "2026-03-18T10:34:15.263Z",
+      "summary": "Returned combined Torvik/KenPom ratings for 2 teams.",
+      "result": [
+        {
+          "teamId": "nebraska",
+          "teamName": "Nebraska",
+          "torvik": {
+            "rank": 19,
+            "team": "Nebraska",
+            "conf": "B10",
+            "record": "26-6",
+            "adjoe": 117.27796684737694,
+            "oe Rank": 62,
+            "adjde": 93.46840021311463,
+            "de Rank": 7,
+            "barthag": 0.9314781537049296,
+            "rank.1": 19,
+            "proj. W": 26,
+            "Proj. L": 6,
+            "Pro Con W": 15,
+            "Pro Con L": 5,
+            "Con Rec.": "15-5",
+            "sos": 0.6951814450638842,
+            "ncsos": 0.4149932058188231,
+            "consos": 0.8359744072593,
+            "Proj. SOS": 0.6951814450638842,
+            "Proj. Noncon SOS": 0.4149932058188231,
+            "Proj. Con SOS": 0.8359744072593,
+            "elite SOS": 0.6472617378161862,
+            "elite noncon SOS": 0.8838403507984011,
+            "Opp OE": 116.33058484348182,
+            "Opp DE": 104.77392235709344,
+            "Opp Proj. OE": 116.33058484348182,
+            "Opp Proj DE": 104.77392235709344,
+            "Con Adj OE": 119.68368130690658,
+            "Con Adj DE": 91.53903263225212,
+            "Qual O": 120.06365714631067,
+            "Qual D": 93.99493628898776,
+            "Qual Barthag": 0.9434801497937928,
+            "Qual Games": 16,
+            "FUN": 0.1034160220523613,
+            "ConPF": 1502,
+            "ConPA": 1324,
+            "ConPoss": 1326.75,
+            "ConOE": 1.1320896928584887,
+            "ConDE": 0.997927265875259,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.75,
+            "WAB": 7.397417399976277,
+            "WAB Rk": 10,
+            "Fun Rk": 11,
+            "adjt": 66.79105163931216
+          },
+          "kenpom": {
+            "rank": 14,
+            "team": "Nebraska",
+            "conf": "B10",
+            "record": "26-6",
+            "adj_em": 26.12,
+            "adj_o": 118.6,
+            "adj_o_rank": 55,
+            "adj_d": 92.5,
+            "adj_d_rank": 7,
+            "adj_t": 66.8,
+            "adj_t_rank": 218,
+            "luck": 0.034,
+            "luck_rank": 98,
+            "sos_adj_em": 11.51,
+            "sos_adj_em_rank": 41,
+            "sos_opp_o": 116.3,
+            "sos_opp_o_rank": 32,
+            "sos_opp_d": 104.8,
+            "sos_opp_d_rank": 62,
+            "ncsos_adj_em": -6.07,
+            "ncsos_adj_em_rank": 319
+          }
+        },
+        {
+          "teamId": "vanderbilt",
+          "teamName": "Vanderbilt",
+          "torvik": {
+            "rank": 10,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adjoe": 127.7662830868969,
+            "oe Rank": 6,
+            "adjde": 99.1821315162276,
+            "de Rank": 28,
+            "barthag": 0.9484518796077428,
+            "rank.1": 10,
+            "proj. W": 26.579287375551324,
+            "Proj. L": 7.420712624448677,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7314138659881364,
+            "ncsos": 0.5219085819619156,
+            "consos": 0.8576258536635891,
+            "Proj. SOS": 0.7372656689780072,
+            "Proj. Noncon SOS": 0.5219085819619156,
+            "Proj. Con SOS": 0.8576258536635891,
+            "elite SOS": 0.6297896175251544,
+            "elite noncon SOS": 0.8064822607060758,
+            "Opp OE": 116.90316363547312,
+            "Opp DE": 104.25404808761049,
+            "Opp Proj. OE": 117.22276673224675,
+            "Opp Proj DE": 104.18722606613916,
+            "Con Adj OE": 125.19516938866136,
+            "Con Adj DE": 100.7462475550942,
+            "Qual O": 130.56151343136426,
+            "Qual D": 102.58545871939936,
+            "Qual Barthag": 0.9412105978774796,
+            "Qual Games": 18,
+            "FUN": 0.0325592467209266,
+            "ConPF": 1470,
+            "ConPA": 1410,
+            "ConPoss": 1259.2750000000003,
+            "ConOE": 1.167338349447102,
+            "ConDE": 1.1196918862043634,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 7.5029767018986995,
+            "WAB Rk": 9,
+            "Fun Rk": 99,
+            "adjt": 69.06865817579379
+          },
+          "kenpom": {
+            "rank": 12,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adj_em": 28.12,
+            "adj_o": 127.3,
+            "adj_o_rank": 6,
+            "adj_d": 99.2,
+            "adj_d_rank": 29,
+            "adj_t": 69,
+            "adj_t_rank": 92,
+            "luck": 0.025,
+            "luck_rank": 122,
+            "sos_adj_em": 14.04,
+            "sos_adj_em_rank": 16,
+            "sos_opp_o": 117.6,
+            "sos_opp_o_rank": 13,
+            "sos_opp_d": 103.6,
+            "sos_opp_d_rank": 28,
+            "ncsos_adj_em": 1.1,
+            "ncsos_adj_em_rank": 149
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool-w0r2q6rj",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Vanderbilt Nebraska March Madness 2026 injury news",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:34:20.963Z",
+      "completedAt": "2026-03-18T10:34:21.111Z",
+      "summary": "Returned 0 search results for \"Vanderbilt Nebraska March Madness 2026 injury news\".",
+      "result": []
+    },
+    {
+      "id": "tool-hohy6ixj",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Vanderbilt Nebraska basketball injury news 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:34:22.832Z",
+      "completedAt": "2026-03-18T10:34:23.498Z",
+      "summary": "Returned 5 search results for \"Vanderbilt Nebraska basketball injury news 2026\".",
+      "result": [
+        {
+          "title": "Vanderbilt Commodores Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fvanderbilt%2Dcommodores%2Finjuries&rut=6d8558d29e1f75fa3ec30f2f478a59a48790bd71b79481f4a580eb4f25571498",
+          "snippet": "Stay In the Know: Check Out Vanderbilt Commodores Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "Vanderbilt news: Mark Byington gives injury updates Duke Miles, Frankie ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fvanderbilt%2Dbasketball%2Dnews%2Dmark%2Dbyington%2Dgives%2Dmurky%2Dinjury%2Dupdates%2Don%2Dduke%2Dmiles%2Dfrankie%2Dcollins&rut=79f581fc640e5c865ba2155ad3ecdebf734ad4dc4302af4f3626fd0002edd119",
+          "snippet": "Vanderbilt is having a solid basketball season, but are missing some players. Mark Byington is now giving updates on the injured players."
+        },
+        {
+          "title": "Vanderbilt basketball gives injury updates on Duke Miles, Frankie ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fvanderbilt%2Dbasketball%2Dgives%2Dinjury%2Dupdates%2D234324980.html&rut=0a59cec1c5e0bea15e4d9c1d4aa201e8ee5291989f698eba43078173d0fa9f9d",
+          "snippet": "Vanderbilt basketball coach Mark Byington says Duke Miles is close to returning from his knee injury , while Frankie Collins&#x27; status is less certain."
+        },
+        {
+          "title": "Vanderbilt Basketball Injury Report Update Ahead of Saturday&#x27;s Game ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fvanderbilt%2Fbasketball%2Fvanderbilt%2Dbasketball%2Dinjury%2Dreport%2Dupdate%2Dahead%2Dof%2Dsaturday%2Ds%2Dgame%2Dagainst%2Doklahoma&rut=618d3421bacc9f788303574f350a3898e6abd2344664f5ed402d3841d485207b",
+          "snippet": "After Vanderbilt&#x27;s last game in a 71-68 win over Ole Miss, Vanderbilt head coach Mark Byington did provide a positive update to Collins&#x27; return. \"Frankie is medically cleared to play."
+        },
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=f1413f8111203286478c533d2ba7092871ce85212817bc623e72e492ebffe4d4",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report."
+        }
+      ]
+    },
+    {
+      "id": "tool-bqju0jqo",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://clutchpoints.com/ncaa-basketball/vanderbilt-basketball-news-mark-byington-gives-murky-injury-updates-on-duke-miles-frankie-collins"
+      },
+      "startedAt": "2026-03-18T10:34:29.157Z",
+      "completedAt": "2026-03-18T10:34:30.942Z",
+      "summary": "Fetched https://clutchpoints.com/ncaa-basketball/vanderbilt-basketball-news-mark-byington-gives-murky-injury-updates-on-duke-miles-frankie-collins and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://clutchpoints.com/ncaa-basketball/vanderbilt-basketball-news-mark-byington-gives-murky-injury-updates-on-duke-miles-frankie-collins",
+        "text": "Vanderbilt news: Mark Byington gives injury updates Duke Miles, Frankie Collins NBA Eastern Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Western Pacific Golden State Warriors Los Angeles Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz NFL AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers East Buffalo Bills Miami Dolphins New England Patriots New York Jets NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders MLB National East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants American East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NCAAB NHL Eastern Metropolitan Carolina Hurricanes Columbus Blue Jackets New Jersey Devils New York Islanders New York Rangers Philadelphia Flyers Pittsburgh Penguins Washington Capitals Atlantic Boston Bruins Buffalo Sabres Detroit Red Wings Florida Panthers Montreal Canadiens Ottawa Senators Tampa Bay Lightning Toronto Maple Leafs Western Central Chicago Blackhawks Colorado Avalanche Dallas Stars Minnesota Wild Nashville Predators St. Louis Blues Utah Mammoth Winnipeg Jets Pacific Anahiem Ducks Calgary Flames Edmonton Oilers Los Angeles Kings San Jose Sharks Seattle Kraken Vancouver Canucks Vegas Golden Knights HBCU Women&#x27;s Sports • • • WNBA NCAAF Gaming Entertainment Soccer NCAA Sports Fantasy UFC Golf WWE Newsletters Clutch Games Sneakers Clutch Covers Quizzes Videos Podcasts Get The App NCAA Basketball Vanderbilt Basketball Vanderbilt’s Mark Byington gives murky injury updates on Duke Miles, Frankie Collins Vanderbilt is having a solid basketball season, but are missing some players. Mark Byington is now giving updates on the injured players. By Bryan Logan Feb 8, 2026 at 2:15 PM ET Vanderbilt is coming off a one"
+      }
+    },
+    {
+      "id": "tool-64q78xro",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Nebraska basketball injury news 2026 March Madness",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:34:32.354Z",
+      "completedAt": "2026-03-18T10:34:33.382Z",
+      "summary": "Returned 5 search results for \"Nebraska basketball injury news 2026 March Madness\".",
+      "result": [
+        {
+          "title": "Nebraska basketball&#x27;s nightmare 2026 March Madness bracket scenarios",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnebraska%2Dbasketball%2Ds%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios%2Far%2DAA1XJrkO&rut=2c399aa85679effb4ee349d6620120e342c21034de7806937208fb661d47b0be",
+          "snippet": "Nebraska&#x27;s lack of a go-to scorer and struggles on the glass will come back to haunt it in the 2026 NCAA Tournament March Madness bracket"
+        },
+        {
+          "title": "March Madness key injuries to know: How Caleb Foster ... - Sporting News",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dcaleb%2Dfoster%2Djt%2Dtoppin%2D2026%2Dbrackets%2F310f01ec055e579a2f819984&rut=4930c52a30981b049a2902a5ccc59c491e7868223b2dc012e028231da748647f",
+          "snippet": "March Madness key injuries to know 2026 Caleb Foster, Duke The tournament&#x27;s No. 1 overall seed, Duke, cruised through the regular season at 32-2."
+        },
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for."
+        },
+        {
+          "title": "Purdue vs Nebraska Basketball Injury Report: Latest on Henry Burt ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fpurdue%2Dnebraska%2Dinjury%2Dreport%2Dconnor%2Dessegian%2Doscar%2Dcluff%2F&rut=76fa6c276168d7f07f88d3269e64f04d304a4b87ffa6803c593e9d5c6c4f4ea9",
+          "snippet": "Purdue vs Nebraska Basketball Injury Report: Latest on Henry Burt, Connor Essegian, and Oscar Cluff March 13, 2026 | 8:46 AM EDT"
+        }
+      ]
+    },
+    {
+      "id": "tool-hksh66n0",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-injuries-caleb-foster-jt-toppin-2026-brackets/310f01ec055e579a2f819984"
+      },
+      "startedAt": "2026-03-18T10:34:43.697Z",
+      "completedAt": "2026-03-18T10:34:43.808Z",
+      "summary": "Fetched https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-injuries-caleb-foster-jt-toppin-2026-brackets/310f01ec055e579a2f819984 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-injuries-caleb-foster-jt-toppin-2026-brackets/310f01ec055e579a2f819984",
+        "text": "March Madness key injuries to know: How Caleb Foster, JT Toppin and more will impact 2026 brackets | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch Ho"
+      }
+    },
+    {
+      "id": "tool-l0pc8weo",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Vanderbilt vs Nebraska head to head 2026",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:35:02.163Z",
+      "completedAt": "2026-03-18T10:35:03.487Z",
+      "summary": "Returned 5 search results for \"Vanderbilt vs Nebraska head to head 2026\".",
+      "result": [
+        {
+          "title": "Jay Bilas predicts every game of the 2026 NCAA tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219737%2F2026%2Dmen%2Dncaa%2Dtournament%2Djay%2Dbilas%2Dpredictions%2Dbracket&rut=eaedfea26948501d6b080aa70104ab93b7551e1edbc3efff0fa4f6894cda41f0",
+          "snippet": "Jay Williams, Jay Bilas, Seth Greenberg and Rece Davis reveal their picks for the 2026 men&#x27;s NCAA tournament. (2:42)"
+        },
+        {
+          "title": "Previewing Vanderbilt basketball for the 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2F247sports.com%2Fcollege%2Fvanderbilt%2Flongformarticle%2Fpreviewing%2Dvanderbilt%2Dbasketball%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2D277950598%2F&rut=1945e5a5ca216d11681bf65df9894342dc8f3de9dbd46a95686c58edc4ca130a",
+          "snippet": "Previewing Vanderbilt basketball for the 2026 NCAA Tournament Vanderbilt enters the NCAA tournament as the No. 5 seed in the South Regional, where it&#x27;ll face McNeese in the first round."
+        },
+        {
+          "title": "Vanderbilt or McNeese? How to pick 5 vs. 12 matchup in 2026 March ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fvanderbilt%2Dor%2Dmcneese%2Dhow%2Dto%2Dpick%2D5%2Dvs%2D12%2Dmatchup%2Din%2D2026%2Dmarch%2Dmadness%2Dbracket%2Far%2DAA1YGLiQ&rut=a01c59b12ffd26de632440621c8d750d9f0008c52edbd41cc3df74f9f660db98",
+          "snippet": "Here is a complete guide to picking No. 5 Vanderbilt and No. 12 McNeese in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game."
+        },
+        {
+          "title": "Latest 2026 Men&#x27;s NCAA Tournament Bracket Projections",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Farticles%2F25397141%2Dlatest%2D2026%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dprojections&rut=b40252394b2cef35acd45fcac00045f072e165e6dddd9252b2614b1bbe8b4fe2",
+          "snippet": "Can you believe the 2026 men&#x27;s NCAA tournament begins in one month?"
+        },
+        {
+          "title": "Vanderbilt Men&#x27;s Basketball Head-to-Head Results | College Basketball ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fvanderbilt%2Fmen%2Fhead%2Dto%2Dhead.html&rut=03ad511bed6c8c1377155fe6ea28cf13f5d54e5917662b2eccece1a2ef6d5841",
+          "snippet": "Check out Vanderbilt&#x27;s College Head-to-Head Results and More About College Basketball at Sports-Reference.com"
+        }
+      ]
+    },
+    {
+      "id": "tool-66tj21w5",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://247sports.com/college/vanderbilt/longformarticle/previewing-vanderbilt-basketball-for-the-2026-ncaa-tournament-277950598/"
+      },
+      "startedAt": "2026-03-18T10:35:10.857Z",
+      "completedAt": "2026-03-18T10:35:11.290Z",
+      "summary": "Fetched https://247sports.com/college/vanderbilt/longformarticle/previewing-vanderbilt-basketball-for-the-2026-ncaa-tournament-277950598/ and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://247sports.com/college/vanderbilt/longformarticle/previewing-vanderbilt-basketball-for-the-2026-ncaa-tournament-277950598/",
+        "text": "Previewing Vanderbilt basketball for the 2026 NCAA Tournament 247Sports Logo 247Sports 247Sports Home FB Rec FB Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Recruiter Rankings Class Calculator All Time Top Recruits Transfer Portal BK Rec BK Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Class Calculator Transfer Portal Transfer Portal Top FB Transfers Latest FB Transfers By Position FB Transfers Top BK Transfers Latest BK Transfers By Position BK Transfers NCAA FB Teams Latest News Scores Schedules College Team Talent Expert Picks Polls Player Leaders Team Leaders Videos Odds NCAA BK Teams Latest News Scores Schedules Polls Player Leaders Team Leaders Odds CBS Sports CBS SPORTS HQ SportsLine MaxPreps Shop Stubhub Betting Follow YouTube Facebook X Instagram TikTok 247Sports Logo 247Sports 247Sports Home FB Rec FB Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Recruiter Rankings Class Calculator All Time Top Recruits Transfer Portal BK Rec BK Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Class Calculator Transfer Portal Transfer Portal Top FB Transfers Latest FB Transfers By Position FB Transfers Top BK Transfers Latest BK Transfers By Position BK Transfers NCAA FB Teams Latest News Scores Schedules College Team Talent Expert Picks Polls Player Leaders Team Leaders Videos Odds NCAA BK Teams Latest News Scores Schedules Polls Player Leaders Team Leaders Odds News News News Latest News Videos Board Football Football Scores Schedules Stats Roster Expert Picks Draft History 2026 NFL Draft College Team Talent SEC Schedules SEC Standings NCAA polls NCAA Player Leaders NCAA Team Leaders Videos Odds FB Rec FB Rec FB Recruiting Home Latest News Commitments Decommitments Scheduled Commits Scholarship Distribution Targets Offers Team Rankings Player Rankings Player Search Crystal Ball Latest Crystal Ball Recruiter Rankings Official Visits Class Calculator All Time Recruits All Time Top Recruits Transfer Portal Basketball Basketball Scores Schedules Stats Roster NCAA Player Leaders NCAA Team Leaders Videos NBA Draft Odds BK Rec BK Rec BK Recruiting Home Latest News Commitments Decommitments Scheduled Commits Scholarship Distribution Targets Offers Team Rankings Player Rankings Player Search Crystal Ball Latest Crystal Ball Official Visits Class Calculator All Time Recruits Transfer Portal More More More VIP Membership Podcast Newsletter Text Alerts Help Center Stubhub Shop Play Watch Watch CBS Sports College Football CBS Sports College Basketball CBSSports HQ Paramount+ Premium Forum Search Player Search Magnifying Glass Advanced player search Full site search Play Watch CBS Sports College Football CBS Sports College Basketball CBSSpor"
+      }
+    },
+    {
+      "id": "tool-fgk5i6w4",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Nebraska basketball 2026 March Madness preview",
+        "maxResults": 5
+      },
+      "startedAt": "2026-03-18T10:35:15.473Z",
+      "completedAt": "2026-03-18T10:35:16.374Z",
+      "summary": "Returned 5 search results for \"Nebraska basketball 2026 March Madness preview\".",
+      "result": [
+        {
+          "title": "March Madness 2026: Bracket, Top Teams & Tournament Preview",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.quantsportsai.com%2Fblog%2Fncaa%2Dmarch%2Dmadness%2D2026&rut=60cd1260e8c2b8f1eacd36b9638913ee69e982fe9a4b4627512ee2b7af845174",
+          "snippet": "🏀 March Madness 2026 Is Here — The Bracket Is Set and the Madness Begins Today Published March 17, 2026 | Quant Sports AI It&#x27;s the most exciting three weeks in all of sports — and it starts today. The 2026 NCAA Men&#x27;s Basketball Tournament bracket was revealed on Selection Sunday, and 68 teams are now locked in for the road to Indianapolis."
+        },
+        {
+          "title": "Andy Katz&#x27;s latest 2026 March Madness men&#x27;s basketball bracket ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Farticle%2F2026%2D02%2D17%2Fandy%2Dkatzs%2Dlatest%2D2026%2Dmarch%2Dmadness%2Dmens%2Dbasketball%2Dbracket%2Dpredictions&rut=c7a6bf41ba7e83ead2028c11e00ce364c2a78f776d0119192ac2ff59703f574b",
+          "snippet": "NCAA March Madness Live, tri-presented by NCAA Corporate Champions AT&T, Capital One and Coca-Cola, returns with new premium viewing experiences for the 2026 NCAA Division I men&#x27;s basketball ..."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s men&#x27;s Bracketology March Madness watch guide",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47204818%2Fmens%2Dcollege%2Dbasketball%2Djoe%2Dlunardi%2Dbracketology%2Dwatch%2Dguide%2D2026%2Dmarch%2Dmadness&rut=3afe7978c207c2fc013cf4cff3e829c610690f2fc471ec822473de7a839dd5fe",
+          "snippet": "We&#x27;re fast approaching the hour in which we&#x27;ll find out the field for the 2026 men&#x27;s NCAA tournament. Until then, some movement in the projections is still possible. Joe Lunardi&#x27;s Bracketology has ..."
+        },
+        {
+          "title": "March Madness bracket predictions 4.0: Projecting the Field of 68 for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dbracket%2Dpredictions%2D2026%2Dncaa%2Dtournament%2Ff1c0b79af405cc7c92f83ad9&rut=23b0b712a84f364980d3d272fe3665098274a2e7c9c9123ef274e157b59c3274",
+          "snippet": "March Madness bracket predictions 4.0: Projecting the Field of 68 for 2026 NCAA Tournament Bill Bender February 24, 2026 6:00 am PST Add The Sporting News on Google"
+        },
+        {
+          "title": "2026 NSAA Boys Basketball Championships Preview - Nebraska School ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnsaahome.org%2F2026%2Dnsaa%2Dboys%2Dbasketball%2Dchampionships%2Dpreview%2F&rut=5d2d6fc313b917c72b7a18235e88e9c71559b17376b7c73a88156f40f8ff674f",
+          "snippet": "The 2026 Nebraska School Activities Association&#x27;s state boys basketball championships begin play on Wednesday at Pinnacle Bank Arena and the Bob Devaney Sports Center. Opening round games at both sites will tip off at 9:00 AM each day of the tournament."
+        }
+      ]
+    },
+    {
+      "id": "tool-7k5zbnl9",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.quantsportsai.com/blog/ncaa-march-madness-2026"
+      },
+      "startedAt": "2026-03-18T10:35:20.175Z",
+      "completedAt": "2026-03-18T10:35:21.240Z",
+      "summary": "Fetched https://www.quantsportsai.com/blog/ncaa-march-madness-2026 and extracted 3000 characters of text.",
+      "result": {
+        "url": "https://www.quantsportsai.com/blog/ncaa-march-madness-2026",
+        "text": "March Madness 2026: Bracket, Top Teams & Tournament Preview Store Home Blog Scoreboard LOG IN Newsletter NCAA March Madness 2026 basketball bracket college basketball college basketball tournament march madness 2026 ncaa basketball ncaa bracket ncaa tournament Mar 17, 2026 🏀 March Madness 2026 Is Here &mdash; The Bracket Is Set and the Madness Begins Today Published March 17, 2026 | Quant Sports AI It's the most exciting three weeks in all of sports &mdash; and it starts today . The 2026 NCAA Men's Basketball Tournament bracket was revealed on Selection Sunday, and 68 teams are now locked in for the road to Indianapolis. The First Four tips off tonight in Dayton, Ohio, and by Thursday the full Round of 64 will be underway across the country. Whether you're a die-hard college basketball fan or someone who only tunes in when the brackets come out, one thing is certain &mdash; March Madness delivers like nothing else in sports. Single elimination. Win or go home. And every year, at least one team nobody saw coming makes a run that changes everything. Here's your complete overview of the 2026 tournament &mdash; the teams to watch, the storylines that matter, and how Quant Sports AI is built to analyze it all. 📊 The 2026 Bracket at a Glance ⬆️ The official 2026 NCAA Men's Basketball Tournament bracket. Link with 68 teams, four regions, one champion.➡️ View the full interactive bracket at NCAA.com 🏆 The Four No. 1 Seeds The selection committee has spoken, and this year's top line features four powerhouse programs &mdash; each with a legitimate shot at cutting down the nets in Indianapolis on April 6th. Duke Blue Devils &mdash; No. 1 Overall Seed | East Region | 32&ndash;2 Duke enters as the tournament's top overall seed after winning the ACC championship. Led by star forward Cameron Boozer , the Blue Devils have been the most dominant team in the country all season. But here's the catch &mdash; they drew the toughest region in the bracket. UConn (2-seed), Michigan State (3-seed), and Kansas (4-seed) all stand between Duke and the Final Four. Being the best team doesn't always mean getting the easiest road. 📈 Title Odds: +333 &mdash; Second favorite behind Michigan Arizona Wildcats &mdash; No. 1 Seed | West Region | 32&ndash;2 Arizona comes in as the No. 2 overall seed with a record that mirrors Duke's. The Wildcats won the Big 12 and have the depth and talent to make a serious title run. Their West Region path includes Purdue as the 2-seed and Gonzaga as the 3 &mdash; tough, but a region Arizona has the firepower to navigate. 📈 Title Odds: +425 Michigan Wolverines &mdash; No. 1 Seed | Midwest Region | 31&ndash;3 Michigan is the betting favorite to win it all. Led by Big Ten Player of the Year Yaxel Lendeborg , the Wolverines set a Big Ten record with 19 conference wins and dominated the regular season with an average winning margin of over 19 points per game. The question: they lost to Purdue in the Big Ten championship game. Can they shake that o"
+      }
+    }
+  ],
+  "modelTrace": [
+    {
+      "id": "r32-south-2-system",
+      "type": "system_prompt",
+      "createdAt": "2026-03-18T10:34:13.621Z",
+      "content": "You are an analyst predicting a single March Madness game inside a bracket run.\nYou have live tools. Use them before making a pick when they can reduce uncertainty.\nYou are not filling the whole bracket in one response. Predict only the current game.\nUse prior picks as already committed bracket state.\nYou may use at most 10 tool rounds before you must finalize your answer.\nBefore making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.\nTake a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.\nDo not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.\nReturn strict JSON only.\nFinal JSON keys: pick, reasoningStep.\npick must contain gameId, winnerId, confidence, rationale.\nThe rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.\nreasoningStep must contain id, title, summary, evidence.\nBracket config id: demo-2026-bracket\nTournament year: 2026\nCurrent game id: r32-south-2\nCurrent game label: South Round of 32 2\nRound: Round of 32\nResolved teams: Vanderbilt (vanderbilt) vs Nebraska (nebraska)\nPrior committed picks: 45"
+    },
+    {
+      "id": "r32-south-2-user",
+      "type": "user_prompt",
+      "createdAt": "2026-03-18T10:34:13.621Z",
+      "content": "Predict the winner of the current game only.\nUse only one of the two resolved team IDs as winnerId.\nThe prior picks are the committed winners of earlier rounds and define the matchup path.\nWrite the pick rationale as a short paragraph, not bullets or fragments.\n\n{\n  \"currentGame\": {\n    \"game\": {\n      \"id\": \"r32-south-2\",\n      \"round\": \"Round of 32\",\n      \"region\": \"South\",\n      \"label\": \"South Round of 32 2\",\n      \"slotA\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-south-3\"\n      },\n      \"slotB\": {\n        \"kind\": \"winner\",\n        \"gameId\": \"r64-south-4\"\n      }\n    },\n    \"slotAName\": \"Vanderbilt\",\n    \"slotBName\": \"Nebraska\",\n    \"slotATeamId\": \"vanderbilt\",\n    \"slotBTeamId\": \"nebraska\",\n    \"priorPicks\": [\n      {\n        \"gameId\": \"ff-west-11\",\n        \"winnerId\": \"texas\",\n        \"confidence\": 0.65,\n        \"rationale\": \"Texas holds a clear edge in advanced metrics, ranking 37th in KenPom and 45th in Torvik compared to NC State's unranked status, and they just defeated the Wolfpack 68-66 in a tight First Four game where Tramon Mark hit a game-winning jumper. While NC State showed resilience and kept the game close, Texas's superior offensive efficiency and proven ability to execute in clutch moments give them the advantage in this rematch. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Texas's experience and recent head-to-head win make them the more reliable pick.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-11\",\n        \"winnerId\": \"smu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"SMU holds a significant edge in advanced metrics, ranking 42nd in KenPom and Torvik compared to Miami (OH)'s 87th-93rd range, with a stronger adjusted offensive efficiency (123 vs. 116.8) that should exploit the RedHawks' weaker defense. While Miami (OH) boasts an impressive 31-1 record, their competition level in the MAC is inferior, and SMU's experience in the ACC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but SMU's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-midwest-16\",\n        \"winnerId\": \"howard\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Howard enters this First Four matchup with a recent head-to-head victory over UMBC, having won 86-83 in the 2026 tournament, which demonstrates their ability to execute in clutch moments. While UMBC holds a slight edge in raw offensive efficiency metrics, Howard's balanced attack and superior defensive rebounding proved decisive in their previous encounter. The underdog's path relies on hot three-point shooting and forcing turnovers, but Howard's proven resilience and recent form make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"ff-south-16\",\n        \"winnerId\": \"lehigh\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Lehigh holds a slight edge in advanced metrics, ranking 284th in KenPom compared to Prairie View A&M's 291st, with a marginally better adjusted offensive efficiency that should exploit the Panthers' weaker defense. While Prairie View A&M has a balanced record, Lehigh's recent Patriot League championship demonstrates clutch performance and tournament readiness. The underdog's path relies on forcing turnovers and winning the rebounding battle, but Lehigh's proven form and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Duke is the overwhelming favorite as the tournament's top-ranked team in both KenPom and Torvik, boasting a 31-2 record and elite efficiency on both ends of the floor. Siena, the MAAC champion, faces a massive talent gap, ranking 187th in Torvik and 192nd in KenPom, with no credible path to exploit Duke's weaknesses. While Siena's recent form and championship experience provide some intangible value, Duke's superior size, athleticism, and defensive prowess make this a near-certain outcome.\"\n      },\n      {\n        \"gameId\": \"r64-east-2\",\n        \"winnerId\": \"tcu\",\n        \"confidence\": 0.68,\n        \"rationale\": \"TCU holds a clear edge in advanced metrics, ranking 43rd in KenPom and 48th in Torvik with a strong defensive efficiency (adjde 99.6) that should disrupt Ohio State's offense. While Ohio State is a traditional power, the lack of available ratings suggests they may be unranked or lower-tier this season, making their path to victory reliant on offensive execution against a disciplined Big 12 defense. TCU's experience in a tougher conference and proven defensive prowess give them the advantage in this matchup.\"\n      },\n      {\n        \"gameId\": \"r64-east-3\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.82,\n        \"rationale\": \"St. John's holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 20th in KenPom and 18th in Torvik compared to Northern Iowa's 71st and 70th, respectively. Their elite defense (adjde 95.1) should effectively contain Northern Iowa's average offense (adjoe 110.1), while their own potent offense can exploit the Panthers' defense. While Northern Iowa has a credible path through disciplined play and rebounding, St. John's superior talent and efficiency make them the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-east-4\",\n        \"winnerId\": \"kansas\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Kansas is a top-25 team in both KenPom and Torvik with an elite defense ranked 10th in adjusted defensive efficiency, while California Baptist lacks any available advanced metrics, indicating they are a low-major automatic qualifier with a significant talent gap. The Jayhawks' experience in the Big 12 and proven ability to dominate defensively make them the overwhelming favorite, and the underdog's only path would require a perfect shooting night and Kansas having an off game, which is highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-east-5\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Louisville holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 18th in KenPom and 16th in Torvik compared to South Florida's 50th in both, with a significantly stronger adjusted offensive efficiency (124.1 vs. 117.7) that should exploit the Bulls' average defense. While South Florida has a solid 24-8 record and a credible path through disciplined play and rebounding, Louisville's superior talent, experience in the ACC, and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's path would require a perfect shooting night and Louisville having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-east-6\",\n        \"winnerId\": \"michigan-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Michigan State, a 3-seed from the Big Ten, holds a significant talent and experience advantage over 14-seed North Dakota State, a Summit League automatic qualifier. While specific advanced metrics are unavailable, the Spartans' conference strength and historical tournament pedigree provide a clear edge. North Dakota State's path relies on perimeter shooting and forcing turnovers, but Michigan State's disciplined defense and superior size should control the game. The underdog's upset potential is limited without a major shooting night from the Bison and a poor performance from the Spartans.\"\n      },\n      {\n        \"gameId\": \"r64-east-7\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.78,\n        \"rationale\": \"UCLA holds a clear edge in advanced metrics, ranking 24th in Torvik and 27th in KenPom compared to UCF's 58th and 54th, with a stronger adjusted offensive efficiency and a defense that should contain the Knights' attack. While UCF has shown resilience in close games and plays in the tough Big 12, UCLA's superior talent, experience, and recent form—including a dominant sweep of USC—make them the more reliable pick. The underdog's path relies on hot three-point shooting and forcing turnovers, but UCLA's balanced attack and defensive prowess should control the tempo and secure the win.\"\n      },\n      {\n        \"gameId\": \"r64-east-8\",\n        \"winnerId\": \"uconn\",\n        \"confidence\": 0.92,\n        \"rationale\": \"UConn is a top-tier program with a significant talent and efficiency advantage over Furman, which ranks outside the top 190 in both KenPom and Torvik metrics. While Furman has a credible upset path through disciplined play and three-point shooting, UConn's elite defense, physical frontcourt, and tournament experience make them the overwhelming favorite. The Huskies' ability to control the tempo and dominate the paint should neutralize Furman's strengths and secure a comfortable win.\"\n      },\n      {\n        \"gameId\": \"r64-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while LIU, a 234th-ranked NEC champion, lacks the offensive firepower to compete. The Wildcats' top-10 adjusted offense and defense should overwhelm LIU's average attack, and there are no significant injury concerns for Arizona. Although LIU has momentum from its conference title, the talent gap is too wide for a credible upset path.\"\n      },\n      {\n        \"gameId\": \"r64-west-2\",\n        \"winnerId\": \"villanova\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Villanova holds a clear advantage in advanced metrics, ranking 33rd in KenPom and 36th in Torvik with a balanced offensive and defensive efficiency that should exploit Utah State's lack of available ratings, indicating they are likely a lower-tier automatic qualifier. While Utah State's path relies on disciplined play and perimeter shooting, Villanova's experience in the Big East and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Villanova having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-3\",\n        \"winnerId\": \"wisconsin\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Wisconsin holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 21st in Torvik and 22nd in KenPom compared to High Point's 93rd and 92nd, with a top-11 adjusted offense that should overwhelm the Panthers' average defense. While High Point boasts a strong 30-4 record, their competition level in the Big South is inferior, and Wisconsin's experience in the Big Ten provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Wisconsin's balanced attack and superior defensive rebounding make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-4\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Arkansas holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 17th in KenPom and 20th in Torvik with a top-5 adjusted offense that should overwhelm Hawai'i, which lacks any available advanced ratings and is likely a low-major automatic qualifier. While Hawai'i's path relies on disciplined play and perimeter shooting, Arkansas's experience in the SEC and proven ability to execute in high-pressure situations make them the more reliable pick. The underdog's upset potential is limited without a major shooting night and Arkansas having an off game, which is unlikely given the metrics and recent form.\"\n      },\n      {\n        \"gameId\": \"r64-west-5\",\n        \"winnerId\": \"byu\",\n        \"confidence\": 0.72,\n        \"rationale\": \"BYU holds a clear edge in advanced metrics, ranking 23rd in KenPom and 33rd in Torvik with a top-10 adjusted offense that should exploit Texas's 125th-ranked defense. While Texas has a strong offense, their defensive struggles and a weaker 18-14 record suggest inconsistency, whereas BYU's 23-11 record and recent form in the Big 12 provide stability. The underdog's path relies on Texas's perimeter shooting and forcing turnovers, but BYU's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-6\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Gonzaga enters as a dominant 3-seed with elite efficiency metrics, ranking 11th in both KenPom and Torvik, while Kennesaw State lacks any available advanced ratings, indicating they are a low-major automatic qualifier with a significant talent gap. The Bulldogs' top-10 adjusted defense and potent offense should overwhelm the Owls, and there are no significant injury concerns for Gonzaga. Although Kennesaw State has momentum from its conference title, the talent gap is too wide for a credible upset path, making Gonzaga the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-west-7\",\n        \"winnerId\": \"miami-fl\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Miami (FL) holds a clear edge in advanced metrics, ranking 30th in KenPom and 35th in Torvik compared to Missouri's 52nd and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Tigers' attack. While Missouri plays in the tougher SEC, Miami's superior efficiency, balanced attack, and recent form in the ACC provide a more reliable path to victory. The underdog's upset potential is limited without a major shooting night from Missouri and a poor performance from Miami, which is unlikely given the metrics and matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r64-west-8\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.96,\n        \"rationale\": \"Purdue is a top-10 team nationally with elite offensive efficiency (ranked 1st in Torvik offensive rating) and a strong defense, while Queens ranks outside the top 190 and has a significant talent gap as a lower-major automatic qualifier. The Boilermakers' experience in the Big Ten and proven ability to dominate physically should overwhelm Queens' average attack, and there are no reported injury concerns for Purdue. Although Queens has momentum from its conference title, the matchup dynamics and efficiency metrics make a credible upset path highly unlikely.\"\n      },\n      {\n        \"gameId\": \"r64-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.95,\n        \"rationale\": \"Florida is a top-5 team nationally with elite efficiency on both ends of the floor, ranking 4th in KenPom and Torvik, while Lehigh, a 284th-ranked Patriot League team, lacks the offensive firepower to compete. The Gators' top-10 adjusted offense and top-5 defense should overwhelm Lehigh's average attack, and there are no significant injury concerns for Florida. Although Lehigh has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Florida the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-2\",\n        \"winnerId\": \"iowa\",\n        \"confidence\": 0.62,\n        \"rationale\": \"Iowa holds a slight edge in both offensive and defensive efficiency metrics, ranking 25th in KenPom and 26th in Torvik compared to Clemson's 36th and 29th, with a top-30 adjusted offense that can exploit Clemson's average attack. While Clemson's defense is solid, Iowa's superior offensive firepower and experience in the Big Ten provide a more reliable path to victory in a tight 8/9 matchup. The underdog's path relies on Clemson's defense forcing turnovers and winning the rebounding battle, but Iowa's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-3\",\n        \"winnerId\": \"vanderbilt\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Vanderbilt holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 10th in Torvik and 12th in KenPom with a top-6 adjusted offense that should overwhelm McNeese's 91st-ranked attack. While McNeese boasts a strong 28-5 record, their competition level in the Southland Conference is inferior, and Vanderbilt's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on hot three-point shooting and forcing turnovers, but Vanderbilt's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-4\",\n        \"winnerId\": \"nebraska\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Nebraska, a 4-seed from the Big Ten, holds a decisive advantage over 13-seed Troy, ranking 14th in KenPom and 19th in Torvik with a top-7 adjusted defense that should stifle Troy's average offense. While Troy has Sun Belt championship momentum, the talent and efficiency gap is substantial, and Nebraska's recent form—including a 26-6 record and strong defensive metrics—makes them the reliable pick. The underdog's path would require a perfect shooting night and Nebraska having an off game, which is unlikely given the matchup dynamics and prior picks favoring higher-seeded teams in the South region.\"\n      },\n      {\n        \"gameId\": \"r64-south-5\",\n        \"winnerId\": \"north-carolina\",\n        \"confidence\": 0.85,\n        \"rationale\": \"North Carolina holds a clear edge in advanced metrics, ranking 27th in Torvik and 29th in KenPom compared to VCU's 51st and 46th, with a stronger adjusted offensive efficiency and a defense that should contain the Rams' attack. While VCU has a solid 26-7 record and a credible path through disciplined play and forcing turnovers, North Carolina's superior talent, experience in the ACC, and recent form—including a win over Duke—make them the more reliable pick. The underdog's upset potential is limited without a major shooting night from VCU and a poor performance from the Tar Heels, which is unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-south-6\",\n        \"winnerId\": \"illinois\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Illinois is a top-10 team nationally with elite offensive efficiency, ranking 1st in KenPom adjusted offensive efficiency and 2nd in Torvik offensive rating, while Penn ranks outside the top 150 in both metrics. The Illini's top-25 defense should contain Penn's average attack, and there are no reported injury concerns for Illinois. Although Penn has Ivy League championship experience, the talent and efficiency gap is too wide for a credible upset path, making Illinois the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-7\",\n        \"winnerId\": \"saint-mary-s\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Saint Mary's holds a slight edge in both offensive and defensive efficiency metrics, ranking 24th in KenPom and 25th in Torvik compared to Texas A&M's 39th in both, with a superior adjusted defensive efficiency that should contain the Aggies' attack. While Texas A&M plays in the tougher SEC, Saint Mary's disciplined style, experience in the WCC, and recent form—including a 27-5 record—provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on Texas A&M's perimeter shooting and forcing turnovers, but Saint Mary's balanced attack and defensive prowess make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-south-8\",\n        \"winnerId\": \"houston\",\n        \"confidence\": 0.97,\n        \"rationale\": \"Houston is a top-5 team nationally with elite defensive efficiency (4th in KenPom adjD) and a potent offense, while Idaho ranks outside the top 130 and lacks the firepower to compete. The Cougars' experience in the Big 12 and recent form—including a 28-5 record—make them the overwhelming favorite, and there are no reported injury concerns. Idaho's only path would require a perfect shooting night and Houston having an off game, which is highly unlikely given the matchup dynamics and efficiency metrics.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-1\",\n        \"winnerId\": \"michigan\",\n        \"confidence\": 0.98,\n        \"rationale\": \"Michigan enters as a dominant 1-seed with elite efficiency metrics, ranking 2nd in both KenPom and Torvik, while Howard, a 206th-ranked MEAC team, lacks the offensive firepower to compete. The Wolverines' top-2 offense and defense should overwhelm the Bison, and there are no significant injury concerns for Michigan. Although Howard has momentum from its First Four win, the talent gap is too wide for a credible upset path, making Michigan the clear favorite to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-2\",\n        \"winnerId\": \"georgia\",\n        \"confidence\": 0.68,\n        \"rationale\": \"Georgia holds a slight edge in advanced metrics, ranking 31st in KenPom and 37th in Torvik compared to Saint Louis's 41st and 44th, with a stronger adjusted offensive efficiency that should exploit the Billikens' average defense. While Saint Louis boasts an impressive 28-5 record, their competition in the A10 is inferior to the SEC's rigor, and Georgia's recent form in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Georgia's balanced attack and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-3\",\n        \"winnerId\": \"texas-tech\",\n        \"confidence\": 0.85,\n        \"rationale\": \"Texas Tech holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 12th in Torvik and 19th in KenPom compared to Akron's 68th and 64th, with a top-10 adjusted offense that should overwhelm the Zips' average defense. While Akron boasts a strong 28-5 record, their competition in the MAC is inferior to the Big 12's rigor, and Texas Tech's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Texas Tech's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-4\",\n        \"winnerId\": \"alabama\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Alabama holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 16th in KenPom and 17th in Torvik with a top-3 adjusted offense that should overwhelm Hofstra's 87th-ranked defense. While Hofstra has a solid 24-10 record and CAA championship momentum, their competition level is inferior to the SEC's rigor, and Alabama's experience in a tougher conference provides better tournament preparation. The underdog's path relies on hot three-point shooting and forcing turnovers, but Alabama's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-5\",\n        \"winnerId\": \"tennessee\",\n        \"confidence\": 0.82,\n        \"rationale\": \"Tennessee holds a decisive edge in overall team quality, ranking 15th in both KenPom and Torvik with a top-15 defense that should disrupt SMU's offense, which has shown recent vulnerability with a late-season slump and an injury to key guard BJ Edwards. While SMU's offense is potent on paper, their defensive rating is significantly weaker (95th in Torvik), and Tennessee's experience in the SEC provides better preparation for tournament pressure. The underdog's path relies on SMU's shooting and forcing turnovers, but Tennessee's disciplined defense and superior efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-6\",\n        \"winnerId\": \"virginia\",\n        \"confidence\": 0.92,\n        \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-7\",\n        \"winnerId\": \"kentucky\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r64-midwest-8\",\n        \"winnerId\": \"iowa-state\",\n        \"confidence\": 0.9,\n        \"rationale\": \"Iowa State enters as a 2-seed from the Big 12 with a proven track record under coach T.J. Otzelberger, having reached the Sweet 16 twice recently and earning a high seed due to strong conference play and defensive identity. Tennessee State, while riding momentum from an OVC championship and a 23-9 record, faces a significant talent and efficiency gap against a Power 5 opponent that regularly competes at a high level. The Tigers' path relies on hot three-point shooting and forcing turnovers, but Iowa State's disciplined defense, superior rebounding, and experience in high-stakes games make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-east-1\",\n        \"winnerId\": \"duke\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Duke remains the superior team by a wide margin in efficiency metrics, ranking 1st nationally in both KenPom and Torvik, but the loss of starting point guard Caleb Foster to a foot fracture introduces meaningful uncertainty and could disrupt their offensive rhythm. TCU's defense is solid (30th in Torvik adjD) and could exploit Duke's backcourt vulnerability, but the Horned Frogs' offense is only 83rd in efficiency, making it difficult to fully capitalize. Ultimately, Duke's elite defense, depth, and talent advantage should still prevail, but the injury lowers confidence from the near-certain level of the first round.\"\n      },\n      {\n        \"gameId\": \"r32-east-2\",\n        \"winnerId\": \"st-john-s\",\n        \"confidence\": 0.68,\n        \"rationale\": \"St. John's holds a slight edge in overall efficiency metrics, ranking 18th in Torvik and 20th in KenPom compared to Kansas's 22nd and 21st, with a more balanced offensive attack and a defense that has proven elite all season. While Kansas boasts a top-10 adjusted defense, their offense is less potent (56th-57th in efficiency) and they have shown vulnerability in close games against top competition, whereas St. John's has won 27 games and the Big East title under Rick Pitino. The underdog's path for Kansas relies on their defense forcing turnovers and winning the rebounding battle, but St. John's superior form, experience in a tougher conference, and recent championship pedigree make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-east-3\",\n        \"winnerId\": \"louisville\",\n        \"confidence\": 0.75,\n        \"rationale\": \"Louisville holds a clear edge in advanced metrics, ranking 18th in KenPom and 16th in Torvik with a top-20 offense and defense, while Michigan State's ratings are unavailable, suggesting they may be lower-tier this season. The Cardinals' recent form, including a 23-10 record and strong ACC play, provides a reliable path to victory, whereas Michigan State's path relies on tournament experience and defensive grit but lacks the statistical backing to overcome Louisville's efficiency. The underdog's upset potential is limited without a major shooting night from the Spartans and a poor performance from Louisville, which is unlikely given the matchup dynamics.\"\n      },\n      {\n        \"gameId\": \"r32-east-4\",\n        \"winnerId\": \"ucla\",\n        \"confidence\": 0.65,\n        \"rationale\": \"UCLA holds a clear edge in available advanced metrics, ranking 24th in Torvik and 27th in KenPom with a top-20 offense and solid defense, while UConn's ratings are unavailable, suggesting they may be lower-tier this season. The Bruins' recent form, including a strong finish to the Big Ten schedule and a first-round win over UCF, provides momentum and proven tournament readiness. UConn's path relies on their championship pedigree and defensive grit, but without statistical backing or clear health updates, UCLA's efficiency and balanced attack make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-1\",\n        \"winnerId\": \"arizona\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while Villanova ranks 33rd-36th, creating a significant talent gap. The Wildcats' top-10 adjusted offense and defense should overwhelm Villanova's balanced but less potent attack, and there are no reported injury concerns for either side. Villanova's path relies on disciplined play and perimeter shooting, but Arizona's superior efficiency, depth, and recent form—including a 31-2 record and wins over top teams—make them the reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-2\",\n        \"winnerId\": \"arkansas\",\n        \"confidence\": 0.72,\n        \"rationale\": \"Arkansas holds a slight edge in overall efficiency metrics, ranking 17th in KenPom and 20th in Torvik compared to Wisconsin's 22nd and 21st, with a top-5 adjusted offense that can exploit the Badgers' defense. While Wisconsin's offense is potent, Arkansas's experience in the tougher SEC and superior defensive rebounding provide a more reliable path to victory in this neutral-site matchup. The underdog's path for Wisconsin relies on hot three-point shooting and forcing turnovers, but Arkansas's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-3\",\n        \"winnerId\": \"gonzaga\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Gonzaga holds a decisive edge in overall efficiency metrics, ranking 11th in both KenPom and Torvik with a top-10 defense that should contain BYU's high-powered offense, which ranks 10th in KenPom but 88th in defense. While BYU's offensive firepower is elite, Gonzaga's defensive prowess, experience in big games, and historical dominance in this rivalry (winning the last four WCC tournament finals) provide a more reliable path to victory. The underdog's path for BYU relies on hot three-point shooting and forcing turnovers, but Gonzaga's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n      },\n      {\n        \"gameId\": \"r32-west-4\",\n        \"winnerId\": \"purdue\",\n        \"confidence\": 0.78,\n        \"rationale\": \"Purdue holds a decisive edge in overall efficiency metrics, ranking 8th in both KenPom and Torvik with the nation's top-ranked adjusted offense (132.6 Torvik, 131 KenPom) that should overwhelm Miami's 35th-ranked attack. While Miami has a credible path through disciplined play and perimeter shooting, as noted by analysts, Purdue's elite offensive firepower, superior rebounding, and experience in the Big Ten provide a more reliable path to victory in this neutral-site matchup. The underdog's upset potential is limited without a major shooting night from Miami and a poor performance from Purdue, which is unlikely given the efficiency gap and recent form.\"\n      },\n      {\n        \"gameId\": \"r32-south-1\",\n        \"winnerId\": \"florida\",\n        \"confidence\": 0.88,\n        \"rationale\": \"Florida enters as the top-5 overall team with elite efficiency on both ends, ranking 4th in KenPom and Torvik, while Iowa's 25th-26th ranking shows a clear talent gap. The Gators' top-5 defense should disrupt Iowa's potent offense, and Florida's recent form—including a 26-7 record and dominant first-round win—provides momentum. Iowa's path relies on hot three-point shooting and forcing turnovers, but Florida's superior efficiency, depth, and matchup advantage make them the reliable pick to advance.\"\n      }\n    ]\n  },\n  \"priorPicks\": [\n    {\n      \"gameId\": \"r64-midwest-6\",\n      \"winnerId\": \"virginia\",\n      \"confidence\": 0.92,\n      \"rationale\": \"Virginia holds a decisive advantage in both offensive and defensive efficiency metrics, ranking 13th in KenPom and 14th in Torvik with a top-15 defense that should stifle Wright State's average attack. While Wright State won the Horizon League, their competition level is significantly inferior to Virginia's ACC schedule, and the Cavaliers' recent form—including a 29-5 record and elite rim protection from Ugonna Onyenso—makes them the reliable pick. The underdog's path would require a perfect shooting night and Virginia having an off game, which is unlikely given the matchup dynamics and efficiency gap.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-7\",\n      \"winnerId\": \"kentucky\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Kentucky holds a slight edge in overall efficiency metrics and defensive rating compared to Santa Clara, which has a potent offense but a weaker defense that could be exploited by the Wildcats' balanced attack. While Santa Clara's 26-8 record and WCC championship show they can win, Kentucky's experience in the tougher SEC and superior defensive metrics provide a more reliable path to victory in this neutral-site matchup. The underdog's path relies on hot three-point shooting and forcing turnovers, but Kentucky's disciplined defense and efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r64-midwest-8\",\n      \"winnerId\": \"iowa-state\",\n      \"confidence\": 0.9,\n      \"rationale\": \"Iowa State enters as a 2-seed from the Big 12 with a proven track record under coach T.J. Otzelberger, having reached the Sweet 16 twice recently and earning a high seed due to strong conference play and defensive identity. Tennessee State, while riding momentum from an OVC championship and a 23-9 record, faces a significant talent and efficiency gap against a Power 5 opponent that regularly competes at a high level. The Tigers' path relies on hot three-point shooting and forcing turnovers, but Iowa State's disciplined defense, superior rebounding, and experience in high-stakes games make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-east-1\",\n      \"winnerId\": \"duke\",\n      \"confidence\": 0.72,\n      \"rationale\": \"Duke remains the superior team by a wide margin in efficiency metrics, ranking 1st nationally in both KenPom and Torvik, but the loss of starting point guard Caleb Foster to a foot fracture introduces meaningful uncertainty and could disrupt their offensive rhythm. TCU's defense is solid (30th in Torvik adjD) and could exploit Duke's backcourt vulnerability, but the Horned Frogs' offense is only 83rd in efficiency, making it difficult to fully capitalize. Ultimately, Duke's elite defense, depth, and talent advantage should still prevail, but the injury lowers confidence from the near-certain level of the first round.\"\n    },\n    {\n      \"gameId\": \"r32-east-2\",\n      \"winnerId\": \"st-john-s\",\n      \"confidence\": 0.68,\n      \"rationale\": \"St. John's holds a slight edge in overall efficiency metrics, ranking 18th in Torvik and 20th in KenPom compared to Kansas's 22nd and 21st, with a more balanced offensive attack and a defense that has proven elite all season. While Kansas boasts a top-10 adjusted defense, their offense is less potent (56th-57th in efficiency) and they have shown vulnerability in close games against top competition, whereas St. John's has won 27 games and the Big East title under Rick Pitino. The underdog's path for Kansas relies on their defense forcing turnovers and winning the rebounding battle, but St. John's superior form, experience in a tougher conference, and recent championship pedigree make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-east-3\",\n      \"winnerId\": \"louisville\",\n      \"confidence\": 0.75,\n      \"rationale\": \"Louisville holds a clear edge in advanced metrics, ranking 18th in KenPom and 16th in Torvik with a top-20 offense and defense, while Michigan State's ratings are unavailable, suggesting they may be lower-tier this season. The Cardinals' recent form, including a 23-10 record and strong ACC play, provides a reliable path to victory, whereas Michigan State's path relies on tournament experience and defensive grit but lacks the statistical backing to overcome Louisville's efficiency. The underdog's upset potential is limited without a major shooting night from the Spartans and a poor performance from Louisville, which is unlikely given the matchup dynamics.\"\n    },\n    {\n      \"gameId\": \"r32-east-4\",\n      \"winnerId\": \"ucla\",\n      \"confidence\": 0.65,\n      \"rationale\": \"UCLA holds a clear edge in available advanced metrics, ranking 24th in Torvik and 27th in KenPom with a top-20 offense and solid defense, while UConn's ratings are unavailable, suggesting they may be lower-tier this season. The Bruins' recent form, including a strong finish to the Big Ten schedule and a first-round win over UCF, provides momentum and proven tournament readiness. UConn's path relies on their championship pedigree and defensive grit, but without statistical backing or clear health updates, UCLA's efficiency and balanced attack make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-west-1\",\n      \"winnerId\": \"arizona\",\n      \"confidence\": 0.88,\n      \"rationale\": \"Arizona enters as a dominant 1-seed with elite efficiency metrics, ranking 3rd in both KenPom and Torvik, while Villanova ranks 33rd-36th, creating a significant talent gap. The Wildcats' top-10 adjusted offense and defense should overwhelm Villanova's balanced but less potent attack, and there are no reported injury concerns for either side. Villanova's path relies on disciplined play and perimeter shooting, but Arizona's superior efficiency, depth, and recent form—including a 31-2 record and wins over top teams—make them the reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-west-2\",\n      \"winnerId\": \"arkansas\",\n      \"confidence\": 0.72,\n      \"rationale\": \"Arkansas holds a slight edge in overall efficiency metrics, ranking 17th in KenPom and 20th in Torvik compared to Wisconsin's 22nd and 21st, with a top-5 adjusted offense that can exploit the Badgers' defense. While Wisconsin's offense is potent, Arkansas's experience in the tougher SEC and superior defensive rebounding provide a more reliable path to victory in this neutral-site matchup. The underdog's path for Wisconsin relies on hot three-point shooting and forcing turnovers, but Arkansas's balanced attack and efficiency metrics make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-west-3\",\n      \"winnerId\": \"gonzaga\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Gonzaga holds a decisive edge in overall efficiency metrics, ranking 11th in both KenPom and Torvik with a top-10 defense that should contain BYU's high-powered offense, which ranks 10th in KenPom but 88th in defense. While BYU's offensive firepower is elite, Gonzaga's defensive prowess, experience in big games, and historical dominance in this rivalry (winning the last four WCC tournament finals) provide a more reliable path to victory. The underdog's path for BYU relies on hot three-point shooting and forcing turnovers, but Gonzaga's balanced attack and superior efficiency make them the more reliable pick to advance.\"\n    },\n    {\n      \"gameId\": \"r32-west-4\",\n      \"winnerId\": \"purdue\",\n      \"confidence\": 0.78,\n      \"rationale\": \"Purdue holds a decisive edge in overall efficiency metrics, ranking 8th in both KenPom and Torvik with the nation's top-ranked adjusted offense (132.6 Torvik, 131 KenPom) that should overwhelm Miami's 35th-ranked attack. While Miami has a credible path through disciplined play and perimeter shooting, as noted by analysts, Purdue's elite offensive firepower, superior rebounding, and experience in the Big Ten provide a more reliable path to victory in this neutral-site matchup. The underdog's upset potential is limited without a major shooting night from Miami and a poor performance from Purdue, which is unlikely given the efficiency gap and recent form.\"\n    },\n    {\n      \"gameId\": \"r32-south-1\",\n      \"winnerId\": \"florida\",\n      \"confidence\": 0.88,\n      \"rationale\": \"Florida enters as the top-5 overall team with elite efficiency on both ends, ranking 4th in KenPom and Torvik, while Iowa's 25th-26th ranking shows a clear talent gap. The Gators' top-5 defense should disrupt Iowa's potent offense, and Florida's recent form—including a 26-7 record and dominant first-round win—provides momentum. Iowa's path relies on hot three-point shooting and forcing turnovers, but Florida's superior efficiency, depth, and matchup advantage make them the reliable pick to advance.\"\n    }\n  ],\n  \"configId\": \"demo-2026-bracket\"\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-0",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:34:15.253Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-0-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:34:15.253Z",
+      "toolName": "lookup_cbb_ratings",
+      "arguments": {
+        "teamIds": [
+          "vanderbilt",
+          "nebraska"
+        ]
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-0-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:34:15.263Z",
+      "toolName": "lookup_cbb_ratings",
+      "result": [
+        {
+          "teamId": "nebraska",
+          "teamName": "Nebraska",
+          "torvik": {
+            "rank": 19,
+            "team": "Nebraska",
+            "conf": "B10",
+            "record": "26-6",
+            "adjoe": 117.27796684737694,
+            "oe Rank": 62,
+            "adjde": 93.46840021311463,
+            "de Rank": 7,
+            "barthag": 0.9314781537049296,
+            "rank.1": 19,
+            "proj. W": 26,
+            "Proj. L": 6,
+            "Pro Con W": 15,
+            "Pro Con L": 5,
+            "Con Rec.": "15-5",
+            "sos": 0.6951814450638842,
+            "ncsos": 0.4149932058188231,
+            "consos": 0.8359744072593,
+            "Proj. SOS": 0.6951814450638842,
+            "Proj. Noncon SOS": 0.4149932058188231,
+            "Proj. Con SOS": 0.8359744072593,
+            "elite SOS": 0.6472617378161862,
+            "elite noncon SOS": 0.8838403507984011,
+            "Opp OE": 116.33058484348182,
+            "Opp DE": 104.77392235709344,
+            "Opp Proj. OE": 116.33058484348182,
+            "Opp Proj DE": 104.77392235709344,
+            "Con Adj OE": 119.68368130690658,
+            "Con Adj DE": 91.53903263225212,
+            "Qual O": 120.06365714631067,
+            "Qual D": 93.99493628898776,
+            "Qual Barthag": 0.9434801497937928,
+            "Qual Games": 16,
+            "FUN": 0.1034160220523613,
+            "ConPF": 1502,
+            "ConPA": 1324,
+            "ConPoss": 1326.75,
+            "ConOE": 1.1320896928584887,
+            "ConDE": 0.997927265875259,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.75,
+            "WAB": 7.397417399976277,
+            "WAB Rk": 10,
+            "Fun Rk": 11,
+            "adjt": 66.79105163931216
+          },
+          "kenpom": {
+            "rank": 14,
+            "team": "Nebraska",
+            "conf": "B10",
+            "record": "26-6",
+            "adj_em": 26.12,
+            "adj_o": 118.6,
+            "adj_o_rank": 55,
+            "adj_d": 92.5,
+            "adj_d_rank": 7,
+            "adj_t": 66.8,
+            "adj_t_rank": 218,
+            "luck": 0.034,
+            "luck_rank": 98,
+            "sos_adj_em": 11.51,
+            "sos_adj_em_rank": 41,
+            "sos_opp_o": 116.3,
+            "sos_opp_o_rank": 32,
+            "sos_opp_d": 104.8,
+            "sos_opp_d_rank": 62,
+            "ncsos_adj_em": -6.07,
+            "ncsos_adj_em_rank": 319
+          }
+        },
+        {
+          "teamId": "vanderbilt",
+          "teamName": "Vanderbilt",
+          "torvik": {
+            "rank": 10,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adjoe": 127.7662830868969,
+            "oe Rank": 6,
+            "adjde": 99.1821315162276,
+            "de Rank": 28,
+            "barthag": 0.9484518796077428,
+            "rank.1": 10,
+            "proj. W": 26.579287375551324,
+            "Proj. L": 7.420712624448677,
+            "Pro Con W": 11,
+            "Pro Con L": 7,
+            "Con Rec.": "11-7",
+            "sos": 0.7314138659881364,
+            "ncsos": 0.5219085819619156,
+            "consos": 0.8576258536635891,
+            "Proj. SOS": 0.7372656689780072,
+            "Proj. Noncon SOS": 0.5219085819619156,
+            "Proj. Con SOS": 0.8576258536635891,
+            "elite SOS": 0.6297896175251544,
+            "elite noncon SOS": 0.8064822607060758,
+            "Opp OE": 116.90316363547312,
+            "Opp DE": 104.25404808761049,
+            "Opp Proj. OE": 117.22276673224675,
+            "Opp Proj DE": 104.18722606613916,
+            "Con Adj OE": 125.19516938866136,
+            "Con Adj DE": 100.7462475550942,
+            "Qual O": 130.56151343136426,
+            "Qual D": 102.58545871939936,
+            "Qual Barthag": 0.9412105978774796,
+            "Qual Games": 18,
+            "FUN": 0.0325592467209266,
+            "ConPF": 1470,
+            "ConPA": 1410,
+            "ConPoss": 1259.2750000000003,
+            "ConOE": 1.167338349447102,
+            "ConDE": 1.1196918862043634,
+            "ConSOSRemain": 0,
+            "Conf Win%": 0.6111111111111112,
+            "WAB": 7.5029767018986995,
+            "WAB Rk": 9,
+            "Fun Rk": 99,
+            "adjt": 69.06865817579379
+          },
+          "kenpom": {
+            "rank": 12,
+            "team": "Vanderbilt",
+            "conf": "SEC",
+            "record": "26-7",
+            "adj_em": 28.12,
+            "adj_o": 127.3,
+            "adj_o_rank": 6,
+            "adj_d": 99.2,
+            "adj_d_rank": 29,
+            "adj_t": 69,
+            "adj_t_rank": 92,
+            "luck": 0.025,
+            "luck_rank": 122,
+            "sos_adj_em": 14.04,
+            "sos_adj_em_rank": 16,
+            "sos_opp_o": 117.6,
+            "sos_opp_o_rank": 13,
+            "sos_opp_d": 103.6,
+            "sos_opp_d_rank": 28,
+            "ncsos_adj_em": 1.1,
+            "ncsos_adj_em_rank": 149
+          }
+        }
+      ],
+      "content": "{\n  \"toolName\": \"lookup_cbb_ratings\",\n  \"result\": [\n    {\n      \"teamId\": \"nebraska\",\n      \"teamName\": \"Nebraska\",\n      \"torvik\": {\n        \"rank\": 19,\n        \"team\": \"Nebraska\",\n        \"conf\": \"B10\",\n        \"record\": \"26-6\",\n        \"adjoe\": 117.27796684737694,\n        \"oe Rank\": 62,\n        \"adjde\": 93.46840021311463,\n        \"de Rank\": 7\n      },\n      \"kenpom\": {\n        \"rank\": 14,\n        \"team\": \"Nebraska\",\n        \"conf\": \"B10\",\n        \"record\": \"26-6\",\n        \"adj_em\": 26.12,\n        \"adj_o\": 118.6,\n        \"adj_o_rank\": 55,\n        \"adj_d\": 92.5\n      }\n    },\n    {\n      \"teamId\": \"vanderbilt\",\n      \"teamName\": \"Vanderbilt\",\n      \"torvik\": {\n        \"rank\": 10,\n        \"team\": \"Vanderbilt\",\n        \"conf\": \"SEC\",\n        \"record\": \"26-7\",\n        \"adjoe\": 127.7662830868969,\n        \"oe Rank\": 6,\n        \"adjde\": 99.1821315162276,\n        \"de Rank\": 28\n      },\n      \"kenpom\": {\n        \"rank\": 12,\n        \"team\": \"Vanderbilt\",\n        \"conf\": \"SEC\",\n        \"record\": \"26-7\",\n        \"adj_em\": 28.12,\n        \"adj_o\": 127.3,\n        \"adj_o_rank\": 6,\n        \"adj_d\": 99.2\n      }\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-1",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:34:20.962Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-1-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:34:20.962Z",
+      "toolName": "search_espn_news",
+      "arguments": {
+        "query": "Vanderbilt Nebraska March Madness 2026 injury news",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-1-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:34:21.112Z",
+      "toolName": "search_espn_news",
+      "result": [],
+      "content": "{\n  \"toolName\": \"search_espn_news\",\n  \"result\": []\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-2",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:34:22.832Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-2-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:34:22.832Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Vanderbilt Nebraska basketball injury news 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-2-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:34:23.498Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Vanderbilt Commodores Injuries 2025-2026 - Updated NCAAB Injury Report",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fvanderbilt%2Dcommodores%2Finjuries&rut=6d8558d29e1f75fa3ec30f2f478a59a48790bd71b79481f4a580eb4f25571498",
+          "snippet": "Stay In the Know: Check Out Vanderbilt Commodores Injuries Impacting The 2025- 2026 NCAAB Season."
+        },
+        {
+          "title": "Vanderbilt news: Mark Byington gives injury updates Duke Miles, Frankie ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fvanderbilt%2Dbasketball%2Dnews%2Dmark%2Dbyington%2Dgives%2Dmurky%2Dinjury%2Dupdates%2Don%2Dduke%2Dmiles%2Dfrankie%2Dcollins&rut=79f581fc640e5c865ba2155ad3ecdebf734ad4dc4302af4f3626fd0002edd119",
+          "snippet": "Vanderbilt is having a solid basketball season, but are missing some players. Mark Byington is now giving updates on the injured players."
+        },
+        {
+          "title": "Vanderbilt basketball gives injury updates on Duke Miles, Frankie ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fvanderbilt%2Dbasketball%2Dgives%2Dinjury%2Dupdates%2D234324980.html&rut=0a59cec1c5e0bea15e4d9c1d4aa201e8ee5291989f698eba43078173d0fa9f9d",
+          "snippet": "Vanderbilt basketball coach Mark Byington says Duke Miles is close to returning from his knee injury , while Frankie Collins&#x27; status is less certain."
+        },
+        {
+          "title": "Vanderbilt Basketball Injury Report Update Ahead of Saturday&#x27;s Game ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fvanderbilt%2Fbasketball%2Fvanderbilt%2Dbasketball%2Dinjury%2Dreport%2Dupdate%2Dahead%2Dof%2Dsaturday%2Ds%2Dgame%2Dagainst%2Doklahoma&rut=618d3421bacc9f788303574f350a3898e6abd2344664f5ed402d3841d485207b",
+          "snippet": "After Vanderbilt&#x27;s last game in a 71-68 win over Ole Miss, Vanderbilt head coach Mark Byington did provide a positive update to Collins&#x27; return. \"Frankie is medically cleared to play."
+        },
+        {
+          "title": "2026 College Basketball Injuries - Latest NCAAB Injury Report - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Finjury%2Dreport.php&rut=f1413f8111203286478c533d2ba7092871ce85212817bc623e72e492ebffe4d4",
+          "snippet": "Stay up to date with the latest college basketball injuries by using the updated NCAAB injury report."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Vanderbilt Commodores Injuries 2025-2026 - Updated NCAAB Injury Report\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.covers.com%2Fsport%2Fbasketball%2Fncaab%2Fteams%2Fmain%2Fvanderbilt%2Dcommodores%2Finjuries&rut=6d8558d29e1f75fa3ec30f2f478a59a48790bd71b79481f4a580eb4f25571498\",\n      \"snippet\": \"Stay In the Know: Check Out Vanderbilt Commodores Injuries Impacting The 2025- 2026 NCAAB Season.\"\n    },\n    {\n      \"title\": \"Vanderbilt news: Mark Byington gives injury updates Duke Miles, Frankie ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fclutchpoints.com%2Fncaa%2Dbasketball%2Fvanderbilt%2Dbasketball%2Dnews%2Dmark%2Dbyington%2Dgives%2Dmurky%2Dinjury%2Dupdates%2Don%2Dduke%2Dmiles%2Dfrankie%2Dcollins&rut=79f581fc640e5c865ba2155ad3ecdebf734ad4dc4302af4f3626fd0002edd119\",\n      \"snippet\": \"Vanderbilt is having a solid basketball season, but are missing some players. Mark Byington is now giving updates on the injured players.\"\n    },\n    {\n      \"title\": \"Vanderbilt basketball gives injury updates on Duke Miles, Frankie ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fsports.yahoo.com%2Farticles%2Fvanderbilt%2Dbasketball%2Dgives%2Dinjury%2Dupdates%2D234324980.html&rut=0a59cec1c5e0bea15e4d9c1d4aa201e8ee5291989f698eba43078173d0fa9f9d\",\n      \"snippet\": \"Vanderbilt basketball coach Mark Byington says Duke Miles is close to returning from his knee injury , while Frankie Collins&#x27; status is less certain.\"\n    },\n    {\n      \"title\": \"Vanderbilt Basketball Injury Report Update Ahead of Saturday&#x27;s Game ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.si.com%2Fcollege%2Fvanderbilt%2Fbasketball%2Fvanderbilt%2Dbasketball%2Dinjury%2Dreport%2Dupdate%2Dahead%2Dof%2Dsaturday%2Ds%2Dgame%2Dagainst%2Doklahoma&rut=618d3421bacc9f788303574f350a3898e6abd2344664f5ed402d3841d485207b\",\n      \"snippet\": \"After Vanderbilt&#x27;s last game in a 71-68 win over Ole Miss, Vanderbilt head coach Mark Byington did provide a positive update to Collins&#x27; return. \\\"Frankie is medically cleared to play.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-3",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:34:29.156Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-3-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:34:29.157Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://clutchpoints.com/ncaa-basketball/vanderbilt-basketball-news-mark-byington-gives-murky-injury-updates-on-duke-miles-frankie-collins"
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-3-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:34:30.942Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://clutchpoints.com/ncaa-basketball/vanderbilt-basketball-news-mark-byington-gives-murky-injury-updates-on-duke-miles-frankie-collins",
+        "text": "Vanderbilt news: Mark Byington gives injury updates Duke Miles, Frankie Collins NBA Eastern Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Western Pacific Golden State Warriors Los Angeles Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz NFL AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers East Buffalo Bills Miami Dolphins New England Patriots New York Jets NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders MLB National East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants American East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NCAAB NHL Eastern Metropolitan Carolina Hurricanes Columbus Blue Jackets New Jersey Devils New York Islanders New York Rangers Philadelphia Flyers Pittsburgh Penguins Washington Capitals Atlantic Boston Bruins Buffalo Sabres Detroit Red Wings Florida Panthers Montreal Canadiens Ottawa Senators Tampa Bay Lightning Toronto Maple Leafs Western Central Chicago Blackhawks Colorado Avalanche Dallas Stars Minnesota Wild Nashville Predators St. Louis Blues Utah Mammoth Winnipeg Jets Pacific Anahiem Ducks Calgary Flames Edmonton Oilers Los Angeles Kings San Jose Sharks Seattle Kraken Vancouver Canucks Vegas Golden Knights HBCU Women&#x27;s Sports • • • WNBA NCAAF Gaming Entertainment Soccer NCAA Sports Fantasy UFC Golf WWE Newsletters Clutch Games Sneakers Clutch Covers Quizzes Videos Podcasts Get The App NCAA Basketball Vanderbilt Basketball Vanderbilt’s Mark Byington gives murky injury updates on Duke Miles, Frankie Collins Vanderbilt is having a solid basketball season, but are missing some players. Mark Byington is now giving updates on the injured players. By Bryan Logan Feb 8, 2026 at 2:15 PM ET Vanderbilt is coming off a one"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://clutchpoints.com/ncaa-basketball/vanderbilt-basketball-news-mark-byington-gives-murky-injury-updates-on-duke-miles-frankie-collins\",\n    \"text\": \"Vanderbilt news: Mark Byington gives injury updates Duke Miles, Frankie Collins NBA Eastern Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Western Pacific Golden State Warriors Los Angeles Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz NFL AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers East Buffalo Bills Miami Dolphins New England Patriots New York Jets NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers North Chicago Bears Detroit Lions Green Bay Packers Minnesot... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-4",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:34:32.354Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-4-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:34:32.354Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Nebraska basketball injury news 2026 March Madness",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-4-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:34:33.382Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Nebraska basketball&#x27;s nightmare 2026 March Madness bracket scenarios",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnebraska%2Dbasketball%2Ds%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios%2Far%2DAA1XJrkO&rut=2c399aa85679effb4ee349d6620120e342c21034de7806937208fb661d47b0be",
+          "snippet": "Nebraska&#x27;s lack of a go-to scorer and struggles on the glass will come back to haunt it in the 2026 NCAA Tournament March Madness bracket"
+        },
+        {
+          "title": "March Madness key injuries to know: How Caleb Foster ... - Sporting News",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dcaleb%2Dfoster%2Djt%2Dtoppin%2D2026%2Dbrackets%2F310f01ec055e579a2f819984&rut=4930c52a30981b049a2902a5ccc59c491e7868223b2dc012e028231da748647f",
+          "snippet": "March Madness key injuries to know 2026 Caleb Foster, Duke The tournament&#x27;s No. 1 overall seed, Duke, cruised through the regular season at 32-2."
+        },
+        {
+          "title": "March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295",
+          "snippet": "March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks."
+        },
+        {
+          "title": "March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5",
+          "snippet": "College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for."
+        },
+        {
+          "title": "Purdue vs Nebraska Basketball Injury Report: Latest on Henry Burt ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fcollegefootballnetwork.com%2Fmens%2Dcollege%2Dbasketball%2Fpurdue%2Dnebraska%2Dinjury%2Dreport%2Dconnor%2Dessegian%2Doscar%2Dcluff%2F&rut=76fa6c276168d7f07f88d3269e64f04d304a4b87ffa6803c593e9d5c6c4f4ea9",
+          "snippet": "Purdue vs Nebraska Basketball Injury Report: Latest on Henry Burt, Connor Essegian, and Oscar Cluff March 13, 2026 | 8:46 AM EDT"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Nebraska basketball&#x27;s nightmare 2026 March Madness bracket scenarios\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fnebraska%2Dbasketball%2Ds%2Dnightmare%2D2026%2Dmarch%2Dmadness%2Dbracket%2Dscenarios%2Far%2DAA1XJrkO&rut=2c399aa85679effb4ee349d6620120e342c21034de7806937208fb661d47b0be\",\n      \"snippet\": \"Nebraska&#x27;s lack of a go-to scorer and struggles on the glass will come back to haunt it in the 2026 NCAA Tournament March Madness bracket\"\n    },\n    {\n      \"title\": \"March Madness key injuries to know: How Caleb Foster ... - Sporting News\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dinjuries%2Dcaleb%2Dfoster%2Djt%2Dtoppin%2D2026%2Dbrackets%2F310f01ec055e579a2f819984&rut=4930c52a30981b049a2902a5ccc59c491e7868223b2dc012e028231da748647f\",\n      \"snippet\": \"March Madness key injuries to know 2026 Caleb Foster, Duke The tournament&#x27;s No. 1 overall seed, Duke, cruised through the regular season at 32-2.\"\n    },\n    {\n      \"title\": \"March Madness Injuries & Absences for 2026 NCAA Tournament - Is Aden ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportsbettingdime.com%2Fnews%2Fcollege%2Dbasketball%2Fmarch%2Dmadness%2Dinjuries%2Dknow%2Dfor%2Dfirst%2Dround%2Dof%2D2026%2Dncaa%2Dtournament%2F&rut=39794e740c817f85a25e8ff588aaccb2516315758567a07d9a1335975d3e7295\",\n      \"snippet\": \"March Madness injuries and absences for 2026 first round. See 2026 NCAA Tournament injuries before making your picks.\"\n    },\n    {\n      \"title\": \"March Madness 2026 Injuries: Key News By Region in the NCAA ... - RotoWire\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.rotowire.com%2Fcbasketball%2Farticle%2Fcollege%2Dbasketball%2Dinjuries%2Dncaa%2Dtournament%2Dmarch%2Dmadness%2Dfirst%2Dround%2D108144&rut=c606343c2a2fcb0fdd8151f53a61faefc250fbbe07d0b86e469cd496129a8db5\",\n      \"snippet\": \"College Basketball Injury Report for First Round of March Madness Every year when filling out your bracket, deciding what bets to place, or making a DFS lineup, you have to consider injuries coming into the NCAA Tournament. In 2026 , there is a lengthy list of recent injuries to some big-name players we need to watch out for.\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-5",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:34:43.697Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-5-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:34:43.697Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-injuries-caleb-foster-jt-toppin-2026-brackets/310f01ec055e579a2f819984"
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-5-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:34:43.808Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-injuries-caleb-foster-jt-toppin-2026-brackets/310f01ec055e579a2f819984",
+        "text": "March Madness key injuries to know: How Caleb Foster, JT Toppin and more will impact 2026 brackets | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlanta Hawks Charlotte Hornets Miami Heat Orlando Magic Washington Wizards Northwest Denver Nuggets Minnesota Timberwolves Oklahoma City Thunder Portland Trail Blazers Utah Jazz Pacific Golden State Warriors LA Clippers Los Angeles Lakers Phoenix Suns Sacramento Kings Southwest Dallas Mavericks Houston Rockets Memphis Grizzlies New Orleans Pelicans San Antonio Spurs MLB MLB Home News Teams Playoffs Scores Schedule Standings Stats Transactions Injuries MLB Teams AL East Baltimore Orioles Boston Red Sox New York Yankees Tampa Bay Rays Toronto Blue Jays AL Central Chicago White Sox Cleveland Guardians Detroit Tigers Kansas City Royals Minnesota Twins AL West Athletics Houston Astros Los Angeles Angels Seattle Mariners Texas Rangers NL East Atlanta Braves Miami Marlins New York Mets Philadelphia Phillies Washington Nationals NL Central Chicago Cubs Cincinnati Reds Milwaukee Brewers Pittsburgh Pirates St. Louis Cardinals NL West Arizona Diamondbacks Colorado Rockies Los Angeles Dodgers San Diego Padres San Francisco Giants NCAAMB NCAAMB Home News Teams Scores Schedule Standings Polls Bracket Explore NCAAMB Top Teams Alabama Duke Florida Gonzaga Houston Illinois Iowa State Kansas Kentucky Michigan Michigan State Noth Carolina Tennessee Texas Tech UConn NCAAWB NCAAWB Home News Teams Bracket Explore NCAAWB Top Teams Duke Iowa LSU Notre Dame South Carolina Texas UCLA UConn ••• Explore More Soccer NHL NCAAF WNBA Boxing MMA WWE F1 NASCAR Golf Tennis College High School Darts Horse Racing Olympics More Sports Fantasy Fantasy See More Football News Rankings Player Stats Depth Chart Transactions Injuries Baseball News Betting Betting See More Explore Betting Home Sports Betting Guides How We Produce Content Sportsbook Guides Bet365 BetMGM Caesars DraftKings Fanatics FanDuel Watch Watch Ho"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.sportingnews.com/us/ncaa-basketball/news/march-madness-injuries-caleb-foster-jt-toppin-2026-brackets/310f01ec055e579a2f819984\",\n    \"text\": \"March Madness key injuries to know: How Caleb Foster, JT Toppin and more will impact 2026 brackets | Sporting News Skip to main content SN 140 The Archive Shop Tickets NFL NFL Home News Teams Scores Schedule Standings Stats Depth Chart Transactions Injuries NFL Teams AFC East Buffalo Bills Miami Dolphins New England Patriots New York Jets AFC North Baltimore Ravens Cincinnati Bengals Cleveland Browns Pittsburgh Steelers AFC South Houston Texans Indianapolis Colts Jacksonville Jaguars Tennessee Titans AFC West Denver Broncos Kansas City Chiefs Las Vegas Raiders Los Angeles Chargers NFC East Dallas Cowboys New York Giants Philadelphia Eagles Washington Commanders NFC North Chicago Bears Detroit Lions Green Bay Packers Minnesota Vikings NFC South Atlanta Falcons Carolina Panthers New Orleans Saints Tampa Bay Buccaneers NFC West Arizona Cardinals Los Angeles Rams San Francisco 49ers Seattle Seahawks NBA NBA Home News Teams Scores Schedule Standings Stats Transactions Injuries Playoffs NBA Teams Atlantic Boston Celtics Brooklyn Nets New York Knicks Philadelphia 76ers Toronto Raptors Central Chicago Bulls Cleveland Cavaliers Detroit Pistons Indiana Pacers Milwaukee Bucks Southeast Atlant... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-6",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:35:02.163Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-6-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:35:02.163Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Vanderbilt vs Nebraska head to head 2026",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-6-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:35:03.487Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "Jay Bilas predicts every game of the 2026 NCAA tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219737%2F2026%2Dmen%2Dncaa%2Dtournament%2Djay%2Dbilas%2Dpredictions%2Dbracket&rut=eaedfea26948501d6b080aa70104ab93b7551e1edbc3efff0fa4f6894cda41f0",
+          "snippet": "Jay Williams, Jay Bilas, Seth Greenberg and Rece Davis reveal their picks for the 2026 men&#x27;s NCAA tournament. (2:42)"
+        },
+        {
+          "title": "Previewing Vanderbilt basketball for the 2026 NCAA Tournament",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2F247sports.com%2Fcollege%2Fvanderbilt%2Flongformarticle%2Fpreviewing%2Dvanderbilt%2Dbasketball%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2D277950598%2F&rut=1945e5a5ca216d11681bf65df9894342dc8f3de9dbd46a95686c58edc4ca130a",
+          "snippet": "Previewing Vanderbilt basketball for the 2026 NCAA Tournament Vanderbilt enters the NCAA tournament as the No. 5 seed in the South Regional, where it&#x27;ll face McNeese in the first round."
+        },
+        {
+          "title": "Vanderbilt or McNeese? How to pick 5 vs. 12 matchup in 2026 March ... - MSN",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fvanderbilt%2Dor%2Dmcneese%2Dhow%2Dto%2Dpick%2D5%2Dvs%2D12%2Dmatchup%2Din%2D2026%2Dmarch%2Dmadness%2Dbracket%2Far%2DAA1YGLiQ&rut=a01c59b12ffd26de632440621c8d750d9f0008c52edbd41cc3df74f9f660db98",
+          "snippet": "Here is a complete guide to picking No. 5 Vanderbilt and No. 12 McNeese in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game."
+        },
+        {
+          "title": "Latest 2026 Men&#x27;s NCAA Tournament Bracket Projections",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Farticles%2F25397141%2Dlatest%2D2026%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dprojections&rut=b40252394b2cef35acd45fcac00045f072e165e6dddd9252b2614b1bbe8b4fe2",
+          "snippet": "Can you believe the 2026 men&#x27;s NCAA tournament begins in one month?"
+        },
+        {
+          "title": "Vanderbilt Men&#x27;s Basketball Head-to-Head Results | College Basketball ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sports%2Dreference.com%2Fcbb%2Fschools%2Fvanderbilt%2Fmen%2Fhead%2Dto%2Dhead.html&rut=03ad511bed6c8c1377155fe6ea28cf13f5d54e5917662b2eccece1a2ef6d5841",
+          "snippet": "Check out Vanderbilt&#x27;s College Head-to-Head Results and More About College Basketball at Sports-Reference.com"
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"Jay Bilas predicts every game of the 2026 NCAA tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F48219737%2F2026%2Dmen%2Dncaa%2Dtournament%2Djay%2Dbilas%2Dpredictions%2Dbracket&rut=eaedfea26948501d6b080aa70104ab93b7551e1edbc3efff0fa4f6894cda41f0\",\n      \"snippet\": \"Jay Williams, Jay Bilas, Seth Greenberg and Rece Davis reveal their picks for the 2026 men&#x27;s NCAA tournament. (2:42)\"\n    },\n    {\n      \"title\": \"Previewing Vanderbilt basketball for the 2026 NCAA Tournament\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2F247sports.com%2Fcollege%2Fvanderbilt%2Flongformarticle%2Fpreviewing%2Dvanderbilt%2Dbasketball%2Dfor%2Dthe%2D2026%2Dncaa%2Dtournament%2D277950598%2F&rut=1945e5a5ca216d11681bf65df9894342dc8f3de9dbd46a95686c58edc4ca130a\",\n      \"snippet\": \"Previewing Vanderbilt basketball for the 2026 NCAA Tournament Vanderbilt enters the NCAA tournament as the No. 5 seed in the South Regional, where it&#x27;ll face McNeese in the first round.\"\n    },\n    {\n      \"title\": \"Vanderbilt or McNeese? How to pick 5 vs. 12 matchup in 2026 March ... - MSN\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.msn.com%2Fen%2Dus%2Fsports%2Fother%2Fvanderbilt%2Dor%2Dmcneese%2Dhow%2Dto%2Dpick%2D5%2Dvs%2D12%2Dmatchup%2Din%2D2026%2Dmarch%2Dmadness%2Dbracket%2Far%2DAA1YGLiQ&rut=a01c59b12ffd26de632440621c8d750d9f0008c52edbd41cc3df74f9f660db98\",\n      \"snippet\": \"Here is a complete guide to picking No. 5 Vanderbilt and No. 12 McNeese in your 2026 March Madness bracket, including updated odds and our expert predictions for the South Region game.\"\n    },\n    {\n      \"title\": \"Latest 2026 Men&#x27;s NCAA Tournament Bracket Projections\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fbleacherreport.com%2Farticles%2F25397141%2Dlatest%2D2026%2Dmens%2Dncaa%2Dtournament%2Dbracket%2Dprojections&rut=b40252394b2cef35acd45fcac00045f072e165e6dddd9252b2614b1bbe8b4fe2\",\n      \"snippet\": \"Can you believe the 2026 men&#x27;s NCAA tournament begins in one month?\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-7",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:35:10.857Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-7-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:35:10.857Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://247sports.com/college/vanderbilt/longformarticle/previewing-vanderbilt-basketball-for-the-2026-ncaa-tournament-277950598/"
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-7-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:35:11.291Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://247sports.com/college/vanderbilt/longformarticle/previewing-vanderbilt-basketball-for-the-2026-ncaa-tournament-277950598/",
+        "text": "Previewing Vanderbilt basketball for the 2026 NCAA Tournament 247Sports Logo 247Sports 247Sports Home FB Rec FB Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Recruiter Rankings Class Calculator All Time Top Recruits Transfer Portal BK Rec BK Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Class Calculator Transfer Portal Transfer Portal Top FB Transfers Latest FB Transfers By Position FB Transfers Top BK Transfers Latest BK Transfers By Position BK Transfers NCAA FB Teams Latest News Scores Schedules College Team Talent Expert Picks Polls Player Leaders Team Leaders Videos Odds NCAA BK Teams Latest News Scores Schedules Polls Player Leaders Team Leaders Odds CBS Sports CBS SPORTS HQ SportsLine MaxPreps Shop Stubhub Betting Follow YouTube Facebook X Instagram TikTok 247Sports Logo 247Sports 247Sports Home FB Rec FB Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Recruiter Rankings Class Calculator All Time Top Recruits Transfer Portal BK Rec BK Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Class Calculator Transfer Portal Transfer Portal Top FB Transfers Latest FB Transfers By Position FB Transfers Top BK Transfers Latest BK Transfers By Position BK Transfers NCAA FB Teams Latest News Scores Schedules College Team Talent Expert Picks Polls Player Leaders Team Leaders Videos Odds NCAA BK Teams Latest News Scores Schedules Polls Player Leaders Team Leaders Odds News News News Latest News Videos Board Football Football Scores Schedules Stats Roster Expert Picks Draft History 2026 NFL Draft College Team Talent SEC Schedules SEC Standings NCAA polls NCAA Player Leaders NCAA Team Leaders Videos Odds FB Rec FB Rec FB Recruiting Home Latest News Commitments Decommitments Scheduled Commits Scholarship Distribution Targets Offers Team Rankings Player Rankings Player Search Crystal Ball Latest Crystal Ball Recruiter Rankings Official Visits Class Calculator All Time Recruits All Time Top Recruits Transfer Portal Basketball Basketball Scores Schedules Stats Roster NCAA Player Leaders NCAA Team Leaders Videos NBA Draft Odds BK Rec BK Rec BK Recruiting Home Latest News Commitments Decommitments Scheduled Commits Scholarship Distribution Targets Offers Team Rankings Player Rankings Player Search Crystal Ball Latest Crystal Ball Official Visits Class Calculator All Time Recruits Transfer Portal More More More VIP Membership Podcast Newsletter Text Alerts Help Center Stubhub Shop Play Watch Watch CBS Sports College Football CBS Sports College Basketball CBSSports HQ Paramount+ Premium Forum Search Player Search Magnifying Glass Advanced player search Full site search Play Watch CBS Sports College Football CBS Sports College Basketball CBSSpor"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://247sports.com/college/vanderbilt/longformarticle/previewing-vanderbilt-basketball-for-the-2026-ncaa-tournament-277950598/\",\n    \"text\": \"Previewing Vanderbilt basketball for the 2026 NCAA Tournament 247Sports Logo 247Sports 247Sports Home FB Rec FB Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Recruiter Rankings Class Calculator All Time Top Recruits Transfer Portal BK Rec BK Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Class Calculator Transfer Portal Transfer Portal Top FB Transfers Latest FB Transfers By Position FB Transfers Top BK Transfers Latest BK Transfers By Position BK Transfers NCAA FB Teams Latest News Scores Schedules College Team Talent Expert Picks Polls Player Leaders Team Leaders Videos Odds NCAA BK Teams Latest News Scores Schedules Polls Player Leaders Team Leaders Odds CBS Sports CBS SPORTS HQ SportsLine MaxPreps Shop Stubhub Betting Follow YouTube Facebook X Instagram TikTok 247Sports Logo 247Sports 247Sports Home FB Rec FB Recruiting Home Latest News Team Rankings Commitments Decommitments Scheduled Commits Player Rankings Player Search Crystal Ball Recruiter Rankings Class Calculator All Time Top Recruits Transfer Portal BK Rec ... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-8",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:35:15.473Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-8-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:35:15.473Z",
+      "toolName": "search_web",
+      "arguments": {
+        "query": "Nebraska basketball 2026 March Madness preview",
+        "maxResults": 5
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-8-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:35:16.374Z",
+      "toolName": "search_web",
+      "result": [
+        {
+          "title": "March Madness 2026: Bracket, Top Teams & Tournament Preview",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.quantsportsai.com%2Fblog%2Fncaa%2Dmarch%2Dmadness%2D2026&rut=60cd1260e8c2b8f1eacd36b9638913ee69e982fe9a4b4627512ee2b7af845174",
+          "snippet": "🏀 March Madness 2026 Is Here — The Bracket Is Set and the Madness Begins Today Published March 17, 2026 | Quant Sports AI It&#x27;s the most exciting three weeks in all of sports — and it starts today. The 2026 NCAA Men&#x27;s Basketball Tournament bracket was revealed on Selection Sunday, and 68 teams are now locked in for the road to Indianapolis."
+        },
+        {
+          "title": "Andy Katz&#x27;s latest 2026 March Madness men&#x27;s basketball bracket ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Farticle%2F2026%2D02%2D17%2Fandy%2Dkatzs%2Dlatest%2D2026%2Dmarch%2Dmadness%2Dmens%2Dbasketball%2Dbracket%2Dpredictions&rut=c7a6bf41ba7e83ead2028c11e00ce364c2a78f776d0119192ac2ff59703f574b",
+          "snippet": "NCAA March Madness Live, tri-presented by NCAA Corporate Champions AT&T, Capital One and Coca-Cola, returns with new premium viewing experiences for the 2026 NCAA Division I men&#x27;s basketball ..."
+        },
+        {
+          "title": "Joe Lunardi&#x27;s men&#x27;s Bracketology March Madness watch guide",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47204818%2Fmens%2Dcollege%2Dbasketball%2Djoe%2Dlunardi%2Dbracketology%2Dwatch%2Dguide%2D2026%2Dmarch%2Dmadness&rut=3afe7978c207c2fc013cf4cff3e829c610690f2fc471ec822473de7a839dd5fe",
+          "snippet": "We&#x27;re fast approaching the hour in which we&#x27;ll find out the field for the 2026 men&#x27;s NCAA tournament. Until then, some movement in the projections is still possible. Joe Lunardi&#x27;s Bracketology has ..."
+        },
+        {
+          "title": "March Madness bracket predictions 4.0: Projecting the Field of 68 for ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dbracket%2Dpredictions%2D2026%2Dncaa%2Dtournament%2Ff1c0b79af405cc7c92f83ad9&rut=23b0b712a84f364980d3d272fe3665098274a2e7c9c9123ef274e157b59c3274",
+          "snippet": "March Madness bracket predictions 4.0: Projecting the Field of 68 for 2026 NCAA Tournament Bill Bender February 24, 2026 6:00 am PST Add The Sporting News on Google"
+        },
+        {
+          "title": "2026 NSAA Boys Basketball Championships Preview - Nebraska School ...",
+          "url": "//duckduckgo.com/l/?uddg=https%3A%2F%2Fnsaahome.org%2F2026%2Dnsaa%2Dboys%2Dbasketball%2Dchampionships%2Dpreview%2F&rut=5d2d6fc313b917c72b7a18235e88e9c71559b17376b7c73a88156f40f8ff674f",
+          "snippet": "The 2026 Nebraska School Activities Association&#x27;s state boys basketball championships begin play on Wednesday at Pinnacle Bank Arena and the Bob Devaney Sports Center. Opening round games at both sites will tip off at 9:00 AM each day of the tournament."
+        }
+      ],
+      "content": "{\n  \"toolName\": \"search_web\",\n  \"result\": [\n    {\n      \"title\": \"March Madness 2026: Bracket, Top Teams & Tournament Preview\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.quantsportsai.com%2Fblog%2Fncaa%2Dmarch%2Dmadness%2D2026&rut=60cd1260e8c2b8f1eacd36b9638913ee69e982fe9a4b4627512ee2b7af845174\",\n      \"snippet\": \"🏀 March Madness 2026 Is Here — The Bracket Is Set and the Madness Begins Today Published March 17, 2026 | Quant Sports AI It&#x27;s the most exciting three weeks in all of sports — and it starts today. The 2026 NCAA Men&#x27;s Basketball Tournament bracket was revealed on Selection Sunday, and 68 teams are now locked in for the road to Indianapolis.\"\n    },\n    {\n      \"title\": \"Andy Katz&#x27;s latest 2026 March Madness men&#x27;s basketball bracket ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ncaa.com%2Fnews%2Fbasketball%2Dmen%2Farticle%2F2026%2D02%2D17%2Fandy%2Dkatzs%2Dlatest%2D2026%2Dmarch%2Dmadness%2Dmens%2Dbasketball%2Dbracket%2Dpredictions&rut=c7a6bf41ba7e83ead2028c11e00ce364c2a78f776d0119192ac2ff59703f574b\",\n      \"snippet\": \"NCAA March Madness Live, tri-presented by NCAA Corporate Champions AT&T, Capital One and Coca-Cola, returns with new premium viewing experiences for the 2026 NCAA Division I men&#x27;s basketball ...\"\n    },\n    {\n      \"title\": \"Joe Lunardi&#x27;s men&#x27;s Bracketology March Madness watch guide\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.espn.com%2Fmens%2Dcollege%2Dbasketball%2Fstory%2F_%2Fid%2F47204818%2Fmens%2Dcollege%2Dbasketball%2Djoe%2Dlunardi%2Dbracketology%2Dwatch%2Dguide%2D2026%2Dmarch%2Dmadness&rut=3afe7978c207c2fc013cf4cff3e829c610690f2fc471ec822473de7a839dd5fe\",\n      \"snippet\": \"We&#x27;re fast approaching the hour in which we&#x27;ll find out the field for the 2026 men&#x27;s NCAA tournament. Until then, some movement in the projections is still possible. Joe Lunardi&#x27;s Bracketology has ...\"\n    },\n    {\n      \"title\": \"March Madness bracket predictions 4.0: Projecting the Field of 68 for ...\",\n      \"url\": \"//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.sportingnews.com%2Fus%2Fncaa%2Dbasketball%2Fnews%2Fmarch%2Dmadness%2Dbracket%2Dpredictions%2D2026%2Dncaa%2Dtournament%2Ff1c0b79af405cc7c92f83ad9&rut=23b0b712a84f364980d3d272fe3665098274a2e7c9c9123ef274e157b59c3274\",\n      \"snippet\": \"March Madness bracket predictions 4.0: Projecting the Field of 68 for 2026 NCAA Tournament Bill Bender February 24, 2026 6:00 am PST Add The Sporting News on Google\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "r32-south-2-assistant-9",
+      "type": "assistant_message",
+      "createdAt": "2026-03-18T10:35:20.175Z",
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-call-9-0",
+      "type": "tool_call",
+      "createdAt": "2026-03-18T10:35:20.175Z",
+      "toolName": "fetch_webpage",
+      "arguments": {
+        "url": "https://www.quantsportsai.com/blog/ncaa-march-madness-2026"
+      },
+      "content": ""
+    },
+    {
+      "id": "r32-south-2-tool-result-9-0",
+      "type": "tool_result",
+      "createdAt": "2026-03-18T10:35:21.240Z",
+      "toolName": "fetch_webpage",
+      "result": {
+        "url": "https://www.quantsportsai.com/blog/ncaa-march-madness-2026",
+        "text": "March Madness 2026: Bracket, Top Teams & Tournament Preview Store Home Blog Scoreboard LOG IN Newsletter NCAA March Madness 2026 basketball bracket college basketball college basketball tournament march madness 2026 ncaa basketball ncaa bracket ncaa tournament Mar 17, 2026 🏀 March Madness 2026 Is Here &mdash; The Bracket Is Set and the Madness Begins Today Published March 17, 2026 | Quant Sports AI It's the most exciting three weeks in all of sports &mdash; and it starts today . The 2026 NCAA Men's Basketball Tournament bracket was revealed on Selection Sunday, and 68 teams are now locked in for the road to Indianapolis. The First Four tips off tonight in Dayton, Ohio, and by Thursday the full Round of 64 will be underway across the country. Whether you're a die-hard college basketball fan or someone who only tunes in when the brackets come out, one thing is certain &mdash; March Madness delivers like nothing else in sports. Single elimination. Win or go home. And every year, at least one team nobody saw coming makes a run that changes everything. Here's your complete overview of the 2026 tournament &mdash; the teams to watch, the storylines that matter, and how Quant Sports AI is built to analyze it all. 📊 The 2026 Bracket at a Glance ⬆️ The official 2026 NCAA Men's Basketball Tournament bracket. Link with 68 teams, four regions, one champion.➡️ View the full interactive bracket at NCAA.com 🏆 The Four No. 1 Seeds The selection committee has spoken, and this year's top line features four powerhouse programs &mdash; each with a legitimate shot at cutting down the nets in Indianapolis on April 6th. Duke Blue Devils &mdash; No. 1 Overall Seed | East Region | 32&ndash;2 Duke enters as the tournament's top overall seed after winning the ACC championship. Led by star forward Cameron Boozer , the Blue Devils have been the most dominant team in the country all season. But here's the catch &mdash; they drew the toughest region in the bracket. UConn (2-seed), Michigan State (3-seed), and Kansas (4-seed) all stand between Duke and the Final Four. Being the best team doesn't always mean getting the easiest road. 📈 Title Odds: +333 &mdash; Second favorite behind Michigan Arizona Wildcats &mdash; No. 1 Seed | West Region | 32&ndash;2 Arizona comes in as the No. 2 overall seed with a record that mirrors Duke's. The Wildcats won the Big 12 and have the depth and talent to make a serious title run. Their West Region path includes Purdue as the 2-seed and Gonzaga as the 3 &mdash; tough, but a region Arizona has the firepower to navigate. 📈 Title Odds: +425 Michigan Wolverines &mdash; No. 1 Seed | Midwest Region | 31&ndash;3 Michigan is the betting favorite to win it all. Led by Big Ten Player of the Year Yaxel Lendeborg , the Wolverines set a Big Ten record with 19 conference wins and dominated the regular season with an average winning margin of over 19 points per game. The question: they lost to Purdue in the Big Ten championship game. Can they shake that o"
+      },
+      "content": "{\n  \"toolName\": \"fetch_webpage\",\n  \"result\": {\n    \"url\": \"https://www.quantsportsai.com/blog/ncaa-march-madness-2026\",\n    \"text\": \"March Madness 2026: Bracket, Top Teams & Tournament Preview Store Home Blog Scoreboard LOG IN Newsletter NCAA March Madness 2026 basketball bracket college basketball college basketball tournament march madness 2026 ncaa basketball ncaa bracket ncaa tournament Mar 17, 2026 🏀 March Madness 2026 Is Here &mdash; The Bracket Is Set and the Madness Begins Today Published March 17, 2026 | Quant Sports AI It's the most exciting three weeks in all of sports &mdash; and it starts today . The 2026 NCAA Men's Basketball Tournament bracket was revealed on Selection Sunday, and 68 teams are now locked in for the road to Indianapolis. The First Four tips off tonight in Dayton, Ohio, and by Thursday the full Round of 64 will be underway across the country. Whether you're a die-hard college basketball fan or someone who only tunes in when the brackets come out, one thing is certain &mdash; March Madness delivers like nothing else in sports. Single elimination. Win or go home. And every year, at least one team nobody saw coming makes a run that changes everything. Here's your complete overview of the 2026 tournament &mdash; the teams to watch, the storylines that matter, and how Quant Sports AI is... [truncated 1800 chars]\"\n  }\n}"
+    },
+    {
+      "id": "r32-south-2-final-json",
+      "type": "final_json",
+      "createdAt": "2026-03-18T10:35:26.215Z",
+      "content": "{\n  \"pick\": {\n    \"gameId\": \"r32-south-2\",\n    \"winnerId\": \"vanderbilt\",\n    \"confidence\": 0.75,\n    \"rationale\": \"Vanderbilt holds a decisive edge in offensive efficiency, ranking 6th in KenPom adjusted offense and 10th overall in Torvik, which should exploit Nebraska's weaker defense despite the Cornhuskers' top-10 defensive rating. While Nebraska's defense is elite, their offense is only 55th-62nd in efficiency, and they lack a consistent go-to scorer, which could limit their ability to keep pace with Vanderbilt's high-powered attack. Vanderbilt's recent form in the SEC and superior overall efficiency metrics make them the more reliable pick, though Nebraska's defensive prowess gives them a credible path if they can force turnovers and control tempo.\"\n  },\n  \"reasoningStep\": {\n    \"id\": \"1\",\n    \"title\": \"Investigate team ratings and matchup dynamics\",\n    \"summary\": \"Vanderbilt ranks 12th in KenPom and 10th in Torvik with elite offensive efficiency (6th in KenPom adjO), while Nebraska ranks 14th in KenPom and 19th in Torvik with a top-7 defense but a 55th-62nd ranked offense. The matchup favors Vanderbilt's offense against Nebraska's defense, but Nebraska's defensive strength could keep it close.\",\n    \"evidence\": \"Vanderbilt: KenPom rank 12, adjO 127.3 (6th), adjD 99.2; Torvik rank 10, adjOE 127.8 (6th), adjDE 99.2 (28th). Nebraska: KenPom rank 14, adjO 118.6 (55th), adjD 92.5 (7th); Torvik rank 19, adjOE 117.3 (62nd), adjDE 93.5 (7th).\"\n  }\n}"
+    }
+  ]
+}
