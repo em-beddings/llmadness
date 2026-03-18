@@ -201,6 +201,33 @@ h3 {
     margin-top: 18px;
 }
 
+.model-summary {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+    margin: -8px 0 24px;
+}
+
+.model-summary .stat-chip {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.model-summary .stat-chip strong {
+    display: block;
+}
+
+.model-summary .stat-chip span {
+    margin-left: 0;
+}
+
+.model-summary-pick strong {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .stat-chip,
 .pick-chip {
     border: 0;
@@ -942,6 +969,7 @@ h3 {
 @media (max-width: 1080px) {
     .hero,
     .page-header,
+    .model-summary,
     .podium-grid,
     .first-four-grid,
     .regions-overview,
@@ -1041,5 +1069,13 @@ h3 {
         grid-row: 3;
         justify-self: start;
         text-align: left;
+    }
+
+    .model-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .model-summary-pick {
+        grid-column: 1 / -1;
     }
 }
