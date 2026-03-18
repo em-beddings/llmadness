@@ -11,8 +11,14 @@ const REGIONAL_ROUNDS = [
   "Elite 8",
 ] as const;
 
+const REGION_DISPLAY_ORDER = ["East", "West", "South", "Midwest"] as const;
+
+function normalizeRegionName(region: string) {
+  return region.trim().toLowerCase();
+}
+
 function getRegions(view: SubmissionView) {
-  return Array.from(
+  const discoveredRegions = Array.from(
     new Set(
       view.gamesByRound
         .flatMap((round) => round.games)
@@ -20,6 +26,28 @@ function getRegions(view: SubmissionView) {
         .filter((region): region is string => Boolean(region)),
     ),
   );
+
+  const prioritizedRegions = REGION_DISPLAY_ORDER.flatMap((targetRegion) =>
+    discoveredRegions.filter(
+      (region) =>
+        normalizeRegionName(region) === normalizeRegionName(targetRegion),
+    ),
+  );
+
+  const remainingRegions = discoveredRegions.filter(
+    (region) =>
+      !REGION_DISPLAY_ORDER.some(
+        (targetRegion) =>
+          normalizeRegionName(targetRegion) === normalizeRegionName(region),
+      ),
+  );
+
+  return [...prioritizedRegions, ...remainingRegions];
+}
+
+function getRegionSide(region: string) {
+  const normalized = normalizeRegionName(region);
+  return normalized === "west" || normalized === "midwest" ? "right" : "left";
 }
 
 function getRegionalRounds(view: SubmissionView, region: string) {
@@ -58,15 +86,17 @@ function rowCount(firstRoundGames: number) {
 function GameNode({
   game,
   align,
+  hideConnector = false,
   onSelect,
 }: {
   game: SubmissionView["gamesByRound"][number]["games"][number];
   align: "left" | "right" | "center";
+  hideConnector?: boolean;
   onSelect: (gameId: string) => void;
 }) {
   return (
     <button
-      className={`bracket-node bracket-node-${align}`}
+      className={`bracket-node bracket-node-${align}${hideConnector ? " bracket-node-no-connector" : ""}`}
       onClick={() => onSelect(game.id)}
       type="button"
     >
@@ -116,7 +146,7 @@ function RegionBracket({
 
   return (
     <section className="region-panel">
-      <div className="region-header">
+      <div className={`region-header ${side === "right" ? "region-header-right" : ""}`}>
         <h3>{region}</h3>
       </div>
       <div
@@ -146,7 +176,12 @@ function RegionBracket({
                       gridRow: `${rowStart(sourceRoundIndex, gameIndex)} / span 1`,
                     }}
                   >
-                    <GameNode game={game} align={side} onSelect={onSelect} />
+                    <GameNode
+                      game={game}
+                      align={side}
+                      hideConnector={roundName === "Elite 8"}
+                      onSelect={onSelect}
+                    />
                   </div>
                 ))}
               </div>
@@ -262,12 +297,12 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
         <div className="tournament-bracket">
           <FinalsBracket onSelect={setSelectedGameId} view={view} />
           <div className="regions-overview">
-            {regions.map((region, index) => (
+            {regions.map((region) => (
               <RegionBracket
                 key={region}
                 onSelect={setSelectedGameId}
                 region={region}
-                side={index < 2 ? "left" : "right"}
+                side={getRegionSide(region)}
                 view={view}
               />
             ))}
