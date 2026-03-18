@@ -11,6 +11,22 @@ function readArg(flag: string) {
   return index >= 0 ? process.argv[index + 1] : null;
 }
 
+function normalizeEvidenceItem(item: unknown) {
+  if (typeof item === "string") {
+    return item;
+  }
+
+  if (item == null) {
+    return "";
+  }
+
+  if (typeof item === "object") {
+    return JSON.stringify(item);
+  }
+
+  return String(item);
+}
+
 function normalizeSubmission(submission: BracketSubmission): BracketSubmission {
   return {
     ...submission,
@@ -28,7 +44,7 @@ function normalizeSubmission(submission: BracketSubmission): BracketSubmission {
       ...step,
       id: String(step.id),
       evidence: Array.isArray(step.evidence)
-        ? step.evidence
+        ? step.evidence.map(normalizeEvidenceItem)
         : typeof step.evidence === "string"
           ? [step.evidence]
           : []
@@ -44,7 +60,7 @@ function normalizeSubmission(submission: BracketSubmission): BracketSubmission {
             ...gameRun.reasoningStep,
             id: String(gameRun.reasoningStep.id),
             evidence: Array.isArray(gameRun.reasoningStep.evidence)
-              ? gameRun.reasoningStep.evidence
+              ? gameRun.reasoningStep.evidence.map(normalizeEvidenceItem)
               : typeof gameRun.reasoningStep.evidence === "string"
                 ? [gameRun.reasoningStep.evidence]
                 : []

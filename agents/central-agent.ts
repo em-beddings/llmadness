@@ -14,6 +14,22 @@ import {
   ReasoningStep
 } from "@/lib/types";
 
+function normalizeEvidenceItem(item: unknown) {
+  if (typeof item === "string") {
+    return item;
+  }
+
+  if (item == null) {
+    return "";
+  }
+
+  if (typeof item === "object") {
+    return JSON.stringify(item);
+  }
+
+  return String(item);
+}
+
 async function readExistingGameRun(filePath: string) {
   try {
     const raw = await readJsonFile<GameRunArtifact>(filePath);
@@ -31,7 +47,7 @@ async function readExistingGameRun(filePath: string) {
             ...raw.reasoningStep,
             evidence:
               Array.isArray(raw.reasoningStep.evidence)
-                ? raw.reasoningStep.evidence
+                ? raw.reasoningStep.evidence.map(normalizeEvidenceItem)
                 : typeof raw.reasoningStep.evidence === "string"
                   ? [raw.reasoningStep.evidence]
                   : []

@@ -83,10 +83,7 @@ export function LeaderboardTable({
                   <span className="leader-meta-label">Max</span>{" "}
                   {entry.pointsRemaining}
                 </span>
-                <span>
-                  <span className="leader-meta-label">Cost</span>{" "}
-                  {formatCost(entry.totalCostUsd)}
-                </span>
+                <span>{formatCost(entry.totalCostUsd)}</span>
               </div>
               {summary?.championshipMatchup ? (
                 <div className="leaderboard-matchup">
@@ -143,7 +140,6 @@ export function LeaderboardTable({
               </div>
               <div className="leader-cost">
                 <strong>{formatCost(entry.totalCostUsd)}</strong>
-                <span className="leader-meta-label">Cost</span>
               </div>
               <div className="leader-bottomline leader-bottomline-nowrap">
                 <strong>{summary?.championshipPick ?? "Unknown"}</strong>
