@@ -94,6 +94,27 @@ export function scoreSubmissions(
   return {
     runId,
     scoredAt: new Date().toISOString(),
-    entries: entries.sort((left, right) => right.totalPoints - left.totalPoints)
+    entries: entries.sort((left, right) => {
+      if (right.totalPoints !== left.totalPoints) {
+        return right.totalPoints - left.totalPoints;
+      }
+
+      const leftCost = left.totalCostUsd;
+      const rightCost = right.totalCostUsd;
+
+      if (leftCost == null && rightCost == null) {
+        return 0;
+      }
+
+      if (leftCost == null) {
+        return 1;
+      }
+
+      if (rightCost == null) {
+        return -1;
+      }
+
+      return leftCost - rightCost;
+    })
   };
 }
