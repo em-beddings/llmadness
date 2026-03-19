@@ -51,7 +51,7 @@ export function LeaderboardTable({
         <div>
           <h2>Leaderboard</h2>
         </div>
-        <p>Round-weighted scoring with title picks called out.</p>
+        <p>Round-weighted scoring with cost tiebreaker</p>
       </div>
 
       <div className="podium-grid">

@@ -81,7 +81,7 @@ body {
     position: fixed;
     top: 18px;
     right: 18px;
-    z-index: 60;
+    z-index: 40;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -210,7 +210,6 @@ h3 {
     font-size: 0.72rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    white-space: nowrap;
 }
 
 .hero,
@@ -384,6 +383,38 @@ h3 {
     gap: 16px;
     align-items: baseline;
     margin-bottom: 12px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.about-card,
+.about-prompt-card {
+    min-width: 0;
+}
+
+.about-card ul {
+    margin-bottom: 0;
+    padding-left: 18px;
+}
+
+.about-score-grid {
+    display: grid;
+    gap: 6px;
+}
+
+.about-score-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.about-code-block {
+    margin-top: 0;
 }
 
 .bracket-section-header {
@@ -1146,6 +1177,7 @@ h3 {
 @media (max-width: 1080px) {
     .hero,
     .page-header,
+    .about-grid,
     .model-summary,
     .podium-grid,
     .first-four-grid,
@@ -1173,7 +1205,7 @@ h3 {
     }
 
     .back-link {
-        justify-self: start;
+        justify-self: center;
     }
 }
 
@@ -1191,10 +1223,8 @@ h3 {
     }
 
     .section-header,
-    .leader-topline,
     .leader-bottomline,
-    .region-header,
-    .game-modal-header {
+    .region-header {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -1202,6 +1232,31 @@ h3 {
     .podium-meta {
         flex-direction: row;
         align-items: baseline;
+    }
+
+    .game-modal {
+        width: 100vw;
+        max-width: none;
+        height: 100dvh;
+        max-height: none;
+        border-radius: 0;
+        padding: 18px 18px 28px;
+        background-image: none;
+    }
+
+    .modal-overlay {
+        place-items: stretch;
+        padding: 0;
+    }
+
+    .game-modal-header,
+    .leader-topline {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .game-modal-header {
+        justify-content: space-between;
     }
 
     .leader-card {
@@ -1258,6 +1313,12 @@ h3 {
         grid-row: 3;
         justify-self: end;
         text-align: right;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .model-summary {

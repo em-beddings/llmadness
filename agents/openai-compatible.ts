@@ -1,5 +1,6 @@
 import { ModelDefinition, ModelTraceEvent } from "@/lib/types";
 import { ModelAdapter, PredictionInput } from "@/agents/interfaces";
+import { renderSystemPrompt, renderUserPrompt } from "@/lib/methodology";
 import { resolveProviderRuntime } from "@/lib/providers";
 
 interface RateLimitBudget {
@@ -142,28 +143,18 @@ function buildSystemPrompt(input: PredictionInput, maxToolRounds: number) {
     throw new Error("OpenAICompatibleAdapter requires currentGame.");
   }
 
-  return [
-    "You are an analyst predicting a single March Madness game inside a bracket run.",
-    "You have live tools. Use them before making a pick when they can reduce uncertainty.",
-    "You are not filling the whole bracket in one response. Predict only the current game.",
-    "Use prior picks as already committed bracket state.",
-    `You may use at most ${maxToolRounds} tool rounds before you must finalize your answer.`,
-    "Before making a pick, investigate relevant context such as injuries or availability concerns, recent team news, prior head-to-head results when useful, and multiple raw statistics from the available ratings and matchup data.",
-    "Take a holistic approach. Balance team quality, matchup specifics, health, form, schedule context, and upset risk instead of relying on one metric.",
-    "Do not force an upset, but explicitly consider whether the underdog has a credible path to win and let that affect confidence and rationale.",
-    "Return strict JSON only.",
-    "Final JSON keys: pick, reasoningStep.",
-    "pick must contain gameId, winnerId, confidence, rationale.",
-    "The rationale must be a short paragraph of 2 to 4 sentences explaining why the winner was chosen.",
-    "reasoningStep must contain id, title, summary, evidence.",
-    `Bracket config id: ${input.config.id}`,
-    `Tournament year: ${input.config.year}`,
-    `Current game id: ${currentGame.game.id}`,
-    `Current game label: ${currentGame.game.label}`,
-    `Round: ${currentGame.game.round}`,
-    `Resolved teams: ${currentGame.slotAName} (${currentGame.slotATeamId}) vs ${currentGame.slotBName} (${currentGame.slotBTeamId})`,
-    `Prior committed picks: ${input.priorPicks.length}`
-  ].join("\n");
+  return renderSystemPrompt(maxToolRounds, {
+    configId: input.config.id,
+    year: input.config.year,
+    gameId: currentGame.game.id,
+    gameLabel: currentGame.game.label,
+    round: currentGame.game.round,
+    slotAName: currentGame.slotAName,
+    slotATeamId: currentGame.slotATeamId,
+    slotBName: currentGame.slotBName,
+    slotBTeamId: currentGame.slotBTeamId,
+    priorPickCount: input.priorPicks.length
+  });
 }
 
 function buildUserPrompt(input: PredictionInput) {
@@ -172,22 +163,11 @@ function buildUserPrompt(input: PredictionInput) {
     throw new Error("OpenAICompatibleAdapter requires currentGame.");
   }
 
-  return [
-    "Predict the winner of the current game only.",
-    "Use only one of the two resolved team IDs as winnerId.",
-    "The prior picks are the committed winners of earlier rounds and define the matchup path.",
-    "Write the pick rationale as a short paragraph, not bullets or fragments.",
-    "",
-    JSON.stringify(
-      {
-        currentGame,
-        priorPicks: input.priorPicks.slice(-12),
-        configId: input.config.id
-      },
-      null,
-      2
-    )
-  ].join("\n");
+  return renderUserPrompt({
+    currentGame,
+    priorPicks: input.priorPicks.slice(-12),
+    configId: input.config.id
+  });
 }
 
 function buildFinalJsonInstruction() {

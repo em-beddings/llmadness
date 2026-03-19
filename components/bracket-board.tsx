@@ -342,7 +342,7 @@ export function BracketBoard({ view }: { view: SubmissionView }) {
     <>
       <section className="panel bracket-shell">
         <div className="section-header bracket-section-header">
-          <p>Click any game for rationale, confidence, and the model trace.</p>
+          <p>Click any game for rationale, confidence, and the model trace</p>
         </div>
         <div className="tournament-bracket">
           <FinalsBracket onSelect={setSelectedGameId} view={view} />
