@@ -195,7 +195,7 @@ The bracket config is graph-based rather than hardcoded to 64 games:
 - `games[]` defines each matchup
 - each game uses either a team slot or a prior-game winner slot
 
-That means you can load the real NCAA bracket tomorrow without changing the app shape.
+That means you can load the real bracket tomorrow without changing the app shape.
 
 ## Domain direction
 

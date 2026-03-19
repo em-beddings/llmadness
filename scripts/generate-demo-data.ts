@@ -107,75 +107,263 @@ function winnerRef(gameId: string): CompetitorRef {
 
 const REGION_FIELDS: Record<RegionName, Record<number, SeedEntry>> = {
   East: {
-    1: { kind: "team", team: { name: "Duke", shortName: "DUKE", conference: "ACC" } },
-    2: { kind: "team", team: { name: "UConn", shortName: "UCONN", conference: "Big East" } },
-    3: { kind: "team", team: { name: "Michigan State", shortName: "MSU", conference: "Big Ten" } },
-    4: { kind: "team", team: { name: "Kansas", shortName: "KU", conference: "Big 12" } },
-    5: { kind: "team", team: { name: "St. John's", shortName: "SJU", conference: "Big East" } },
-    6: { kind: "team", team: { name: "Louisville", shortName: "LOU", conference: "ACC" } },
-    7: { kind: "team", team: { name: "UCLA", shortName: "UCLA", conference: "Big Ten" } },
-    8: { kind: "team", team: { name: "Ohio State", shortName: "OSU", conference: "Big Ten" } },
-    9: { kind: "team", team: { name: "TCU", shortName: "TCU", conference: "Big 12" } },
-    10: { kind: "team", team: { name: "UCF", shortName: "UCF", conference: "Big 12" } },
-    11: { kind: "team", team: { name: "South Florida", shortName: "USF", conference: "AAC" } },
-    12: { kind: "team", team: { name: "Northern Iowa", shortName: "UNI", conference: "MVC" } },
-    13: { kind: "team", team: { name: "California Baptist", shortName: "CBU", conference: "WAC" } },
-    14: { kind: "team", team: { name: "North Dakota State", shortName: "NDSU", conference: "Summit" } },
-    15: { kind: "team", team: { name: "Furman", shortName: "FUR", conference: "SoCon" } },
-    16: { kind: "team", team: { name: "Siena", shortName: "SIE", conference: "MAAC" } },
+    1: {
+      kind: "team",
+      team: { name: "Duke", shortName: "DUKE", conference: "ACC" },
+    },
+    2: {
+      kind: "team",
+      team: { name: "UConn", shortName: "UCONN", conference: "Big East" },
+    },
+    3: {
+      kind: "team",
+      team: { name: "Michigan State", shortName: "MSU", conference: "Big Ten" },
+    },
+    4: {
+      kind: "team",
+      team: { name: "Kansas", shortName: "KU", conference: "Big 12" },
+    },
+    5: {
+      kind: "team",
+      team: { name: "St. John's", shortName: "SJU", conference: "Big East" },
+    },
+    6: {
+      kind: "team",
+      team: { name: "Louisville", shortName: "LOU", conference: "ACC" },
+    },
+    7: {
+      kind: "team",
+      team: { name: "UCLA", shortName: "UCLA", conference: "Big Ten" },
+    },
+    8: {
+      kind: "team",
+      team: { name: "Ohio State", shortName: "OSU", conference: "Big Ten" },
+    },
+    9: {
+      kind: "team",
+      team: { name: "TCU", shortName: "TCU", conference: "Big 12" },
+    },
+    10: {
+      kind: "team",
+      team: { name: "UCF", shortName: "UCF", conference: "Big 12" },
+    },
+    11: {
+      kind: "team",
+      team: { name: "South Florida", shortName: "USF", conference: "AAC" },
+    },
+    12: {
+      kind: "team",
+      team: { name: "Northern Iowa", shortName: "UNI", conference: "MVC" },
+    },
+    13: {
+      kind: "team",
+      team: { name: "California Baptist", shortName: "CBU", conference: "WAC" },
+    },
+    14: {
+      kind: "team",
+      team: {
+        name: "North Dakota State",
+        shortName: "NDSU",
+        conference: "Summit",
+      },
+    },
+    15: {
+      kind: "team",
+      team: { name: "Furman", shortName: "FUR", conference: "SoCon" },
+    },
+    16: {
+      kind: "team",
+      team: { name: "Siena", shortName: "SIE", conference: "MAAC" },
+    },
   },
   West: {
-    1: { kind: "team", team: { name: "Arizona", shortName: "ARIZ", conference: "Big 12" } },
-    2: { kind: "team", team: { name: "Purdue", shortName: "PUR", conference: "Big Ten" } },
-    3: { kind: "team", team: { name: "Gonzaga", shortName: "GONZ", conference: "WCC" } },
-    4: { kind: "team", team: { name: "Arkansas", shortName: "ARK", conference: "SEC" } },
-    5: { kind: "team", team: { name: "Wisconsin", shortName: "WIS", conference: "Big Ten" } },
-    6: { kind: "team", team: { name: "BYU", shortName: "BYU", conference: "Big 12" } },
-    7: { kind: "team", team: { name: "Miami (FL)", shortName: "MIA", conference: "ACC" } },
-    8: { kind: "team", team: { name: "Villanova", shortName: "NOVA", conference: "Big East" } },
-    9: { kind: "team", team: { name: "Utah State", shortName: "USU", conference: "MWC" } },
-    10: { kind: "team", team: { name: "Missouri", shortName: "MIZZ", conference: "SEC" } },
+    1: {
+      kind: "team",
+      team: { name: "Arizona", shortName: "ARIZ", conference: "Big 12" },
+    },
+    2: {
+      kind: "team",
+      team: { name: "Purdue", shortName: "PUR", conference: "Big Ten" },
+    },
+    3: {
+      kind: "team",
+      team: { name: "Gonzaga", shortName: "GONZ", conference: "WCC" },
+    },
+    4: {
+      kind: "team",
+      team: { name: "Arkansas", shortName: "ARK", conference: "SEC" },
+    },
+    5: {
+      kind: "team",
+      team: { name: "Wisconsin", shortName: "WIS", conference: "Big Ten" },
+    },
+    6: {
+      kind: "team",
+      team: { name: "BYU", shortName: "BYU", conference: "Big 12" },
+    },
+    7: {
+      kind: "team",
+      team: { name: "Miami (FL)", shortName: "MIA", conference: "ACC" },
+    },
+    8: {
+      kind: "team",
+      team: { name: "Villanova", shortName: "NOVA", conference: "Big East" },
+    },
+    9: {
+      kind: "team",
+      team: { name: "Utah State", shortName: "USU", conference: "MWC" },
+    },
+    10: {
+      kind: "team",
+      team: { name: "Missouri", shortName: "MIZZ", conference: "SEC" },
+    },
     11: { kind: "play-in", playInGameId: "ff-west-11" },
-    12: { kind: "team", team: { name: "High Point", shortName: "HPU", conference: "Big South" } },
-    13: { kind: "team", team: { name: "Hawai'i", shortName: "HAW", conference: "Big West" } },
-    14: { kind: "team", team: { name: "Kennesaw State", shortName: "KENN", conference: "Conference USA" } },
-    15: { kind: "team", team: { name: "Queens", shortName: "QUE", conference: "ASUN" } },
-    16: { kind: "team", team: { name: "LIU", shortName: "LIU", conference: "NEC" } },
+    12: {
+      kind: "team",
+      team: { name: "High Point", shortName: "HPU", conference: "Big South" },
+    },
+    13: {
+      kind: "team",
+      team: { name: "Hawai'i", shortName: "HAW", conference: "Big West" },
+    },
+    14: {
+      kind: "team",
+      team: {
+        name: "Kennesaw State",
+        shortName: "KENN",
+        conference: "Conference USA",
+      },
+    },
+    15: {
+      kind: "team",
+      team: { name: "Queens", shortName: "QUE", conference: "ASUN" },
+    },
+    16: {
+      kind: "team",
+      team: { name: "LIU", shortName: "LIU", conference: "NEC" },
+    },
   },
   South: {
-    1: { kind: "team", team: { name: "Florida", shortName: "FLA", conference: "SEC" } },
-    2: { kind: "team", team: { name: "Houston", shortName: "HOU", conference: "Big 12" } },
-    3: { kind: "team", team: { name: "Illinois", shortName: "ILL", conference: "Big Ten" } },
-    4: { kind: "team", team: { name: "Nebraska", shortName: "NEB", conference: "Big Ten" } },
-    5: { kind: "team", team: { name: "Vanderbilt", shortName: "VANDY", conference: "SEC" } },
-    6: { kind: "team", team: { name: "North Carolina", shortName: "UNC", conference: "ACC" } },
-    7: { kind: "team", team: { name: "Saint Mary's", shortName: "SMC", conference: "WCC" } },
-    8: { kind: "team", team: { name: "Clemson", shortName: "CLEM", conference: "ACC" } },
-    9: { kind: "team", team: { name: "Iowa", shortName: "IOWA", conference: "Big Ten" } },
-    10: { kind: "team", team: { name: "Texas A&M", shortName: "TAMU", conference: "SEC" } },
-    11: { kind: "team", team: { name: "VCU", shortName: "VCU", conference: "A-10" } },
-    12: { kind: "team", team: { name: "McNeese", shortName: "MCN", conference: "Southland" } },
-    13: { kind: "team", team: { name: "Troy", shortName: "TROY", conference: "Sun Belt" } },
-    14: { kind: "team", team: { name: "Penn", shortName: "PENN", conference: "Ivy" } },
-    15: { kind: "team", team: { name: "Idaho", shortName: "IDA", conference: "Big Sky" } },
+    1: {
+      kind: "team",
+      team: { name: "Florida", shortName: "FLA", conference: "SEC" },
+    },
+    2: {
+      kind: "team",
+      team: { name: "Houston", shortName: "HOU", conference: "Big 12" },
+    },
+    3: {
+      kind: "team",
+      team: { name: "Illinois", shortName: "ILL", conference: "Big Ten" },
+    },
+    4: {
+      kind: "team",
+      team: { name: "Nebraska", shortName: "NEB", conference: "Big Ten" },
+    },
+    5: {
+      kind: "team",
+      team: { name: "Vanderbilt", shortName: "VANDY", conference: "SEC" },
+    },
+    6: {
+      kind: "team",
+      team: { name: "North Carolina", shortName: "UNC", conference: "ACC" },
+    },
+    7: {
+      kind: "team",
+      team: { name: "Saint Mary's", shortName: "SMC", conference: "WCC" },
+    },
+    8: {
+      kind: "team",
+      team: { name: "Clemson", shortName: "CLEM", conference: "ACC" },
+    },
+    9: {
+      kind: "team",
+      team: { name: "Iowa", shortName: "IOWA", conference: "Big Ten" },
+    },
+    10: {
+      kind: "team",
+      team: { name: "Texas A&M", shortName: "TAMU", conference: "SEC" },
+    },
+    11: {
+      kind: "team",
+      team: { name: "VCU", shortName: "VCU", conference: "A-10" },
+    },
+    12: {
+      kind: "team",
+      team: { name: "McNeese", shortName: "MCN", conference: "Southland" },
+    },
+    13: {
+      kind: "team",
+      team: { name: "Troy", shortName: "TROY", conference: "Sun Belt" },
+    },
+    14: {
+      kind: "team",
+      team: { name: "Penn", shortName: "PENN", conference: "Ivy" },
+    },
+    15: {
+      kind: "team",
+      team: { name: "Idaho", shortName: "IDA", conference: "Big Sky" },
+    },
     16: { kind: "play-in", playInGameId: "ff-south-16" },
   },
   Midwest: {
-    1: { kind: "team", team: { name: "Michigan", shortName: "MICH", conference: "Big Ten" } },
-    2: { kind: "team", team: { name: "Iowa State", shortName: "ISU", conference: "Big 12" } },
-    3: { kind: "team", team: { name: "Virginia", shortName: "UVA", conference: "ACC" } },
-    4: { kind: "team", team: { name: "Alabama", shortName: "BAMA", conference: "SEC" } },
-    5: { kind: "team", team: { name: "Texas Tech", shortName: "TTU", conference: "Big 12" } },
-    6: { kind: "team", team: { name: "Tennessee", shortName: "TENN", conference: "SEC" } },
-    7: { kind: "team", team: { name: "Kentucky", shortName: "UK", conference: "SEC" } },
-    8: { kind: "team", team: { name: "Georgia", shortName: "UGA", conference: "SEC" } },
-    9: { kind: "team", team: { name: "Saint Louis", shortName: "SLU", conference: "A-10" } },
-    10: { kind: "team", team: { name: "Santa Clara", shortName: "SCU", conference: "WCC" } },
+    1: {
+      kind: "team",
+      team: { name: "Michigan", shortName: "MICH", conference: "Big Ten" },
+    },
+    2: {
+      kind: "team",
+      team: { name: "Iowa State", shortName: "ISU", conference: "Big 12" },
+    },
+    3: {
+      kind: "team",
+      team: { name: "Virginia", shortName: "UVA", conference: "ACC" },
+    },
+    4: {
+      kind: "team",
+      team: { name: "Alabama", shortName: "BAMA", conference: "SEC" },
+    },
+    5: {
+      kind: "team",
+      team: { name: "Texas Tech", shortName: "TTU", conference: "Big 12" },
+    },
+    6: {
+      kind: "team",
+      team: { name: "Tennessee", shortName: "TENN", conference: "SEC" },
+    },
+    7: {
+      kind: "team",
+      team: { name: "Kentucky", shortName: "UK", conference: "SEC" },
+    },
+    8: {
+      kind: "team",
+      team: { name: "Georgia", shortName: "UGA", conference: "SEC" },
+    },
+    9: {
+      kind: "team",
+      team: { name: "Saint Louis", shortName: "SLU", conference: "A-10" },
+    },
+    10: {
+      kind: "team",
+      team: { name: "Santa Clara", shortName: "SCU", conference: "WCC" },
+    },
     11: { kind: "play-in", playInGameId: "ff-midwest-11" },
-    12: { kind: "team", team: { name: "Akron", shortName: "AKR", conference: "MAC" } },
-    13: { kind: "team", team: { name: "Hofstra", shortName: "HOF", conference: "CAA" } },
-    14: { kind: "team", team: { name: "Wright State", shortName: "WSU", conference: "Horizon" } },
-    15: { kind: "team", team: { name: "Tennessee State", shortName: "TNST", conference: "OVC" } },
+    12: {
+      kind: "team",
+      team: { name: "Akron", shortName: "AKR", conference: "MAC" },
+    },
+    13: {
+      kind: "team",
+      team: { name: "Hofstra", shortName: "HOF", conference: "CAA" },
+    },
+    14: {
+      kind: "team",
+      team: { name: "Wright State", shortName: "WSU", conference: "Horizon" },
+    },
+    15: {
+      kind: "team",
+      team: { name: "Tennessee State", shortName: "TNST", conference: "OVC" },
+    },
     16: { kind: "play-in", playInGameId: "ff-midwest-16" },
   },
 };
@@ -320,7 +508,7 @@ function buildConfig(): BracketConfig {
 
   return {
     id: "2026-bracket",
-    title: "2026 NCAA Men's Tournament",
+    title: "2026 Men's Tournament",
     year: 2026,
     division: "mens",
     publishedAt: "2026-03-15T22:00:00Z",
@@ -418,7 +606,10 @@ async function main() {
 
   await writeJsonFile(path.join(ROOT, manifest.actualResultsPath), results);
   await writeJsonFile(path.join(ROOT, manifest.leaderboardPath), leaderboard);
-  await writeJsonFile(path.join(ROOT, "data", "runs", RUN_ID, "manifest.json"), manifest);
+  await writeJsonFile(
+    path.join(ROOT, "data", "runs", RUN_ID, "manifest.json"),
+    manifest,
+  );
 }
 
 main().catch((error) => {
