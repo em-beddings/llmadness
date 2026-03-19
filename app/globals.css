@@ -71,6 +71,30 @@ body {
     line-height: 1.5;
 }
 
+a,
+button,
+.theme-toggle,
+.leader-card,
+.podium-card,
+.bracket-node {
+    transition:
+        background-color 120ms ease,
+        color 120ms ease,
+        opacity 120ms ease,
+        transform 120ms ease,
+        outline-color 120ms ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+.theme-toggle:focus-visible,
+.leader-card:focus-visible,
+.podium-card:focus-visible,
+.bracket-node:focus-visible {
+    outline: 2px dashed var(--line-strong);
+    outline-offset: 2px;
+}
+
 .app-frame {
     min-height: 100vh;
     display: flex;
@@ -90,6 +114,10 @@ body {
     background: transparent;
     color: var(--ink);
     cursor: pointer;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
 }
 
 .theme-toggle-label {
@@ -306,6 +334,14 @@ h3 {
     color: var(--ink);
 }
 
+.hero-card a:hover,
+.back-link:hover,
+.modal-close:hover,
+.trace-toggle:hover,
+.admin-submit:hover {
+    background-color: var(--surface-soft);
+}
+
 .back-link {
     align-self: start;
     justify-self: end;
@@ -325,17 +361,21 @@ h3 {
     margin: -8px 0 24px;
 }
 
-.model-summary .stat-chip {
+.model-summary-item {
     display: grid;
-    gap: 2px;
+    gap: 6px;
+    padding: 6px 0;
     min-width: 0;
 }
 
-.model-summary .stat-chip strong {
+.model-summary-item strong {
     display: block;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
-.model-summary .stat-chip span {
+.model-summary-item span {
+    display: block;
     margin-left: 0;
 }
 
@@ -462,6 +502,11 @@ h3 {
         100% 2px,
         2px 100%;
     background-repeat: no-repeat;
+}
+
+.podium-card:hover,
+.leader-card:hover {
+    background-color: var(--surface-soft);
 }
 
 .podium-card h3 {
@@ -906,7 +951,8 @@ h3 {
 }
 
 .bracket-node:hover {
-    border-color: var(--ink);
+    background-color: var(--surface-soft);
+    transform: translateY(-1px);
 }
 
 .bracket-team {

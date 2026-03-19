@@ -58,25 +58,25 @@ export default async function ModelPage({
       </section>
       {leaderboardEntry ? (
         <section className="model-summary">
-          <div className="stat-chip">
-            <strong>{leaderboardEntry.totalPoints}</strong>
+          <div className="model-summary-item">
             <span className="leader-meta-label">Score</span>
+            <strong>{leaderboardEntry.totalPoints}</strong>
           </div>
-          <div className="stat-chip">
-            <strong>{Math.round(leaderboardEntry.accuracy * 100)}%</strong>
+          <div className="model-summary-item">
             <span className="leader-meta-label">Accuracy</span>
+            <strong>{Math.round(leaderboardEntry.accuracy * 100)}%</strong>
           </div>
-          <div className="stat-chip">
-            <strong>{leaderboardEntry.pointsRemaining}</strong>
+          <div className="model-summary-item">
             <span className="leader-meta-label">Max score</span>
+            <strong>{leaderboardEntry.pointsRemaining}</strong>
           </div>
-          <div className="stat-chip">
-            <strong>{formatCost(leaderboardEntry.totalCostUsd)}</strong>
+          <div className="model-summary-item">
             <span className="leader-meta-label">Cost</span>
+            <strong>{formatCost(leaderboardEntry.totalCostUsd)}</strong>
           </div>
-          <div className="stat-chip model-summary-pick">
-            <strong>{submissionSummary?.championshipPick ?? "Unknown"}</strong>
+          <div className="model-summary-item model-summary-pick">
             <span className="leader-meta-label">Championship pick</span>
+            <strong>{submissionSummary?.championshipPick ?? "Unknown"}</strong>
           </div>
         </section>
       ) : null}

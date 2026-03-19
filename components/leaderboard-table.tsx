@@ -80,8 +80,8 @@ export function LeaderboardTable({
               <div className="podium-meta">
                 <span>{Math.round(entry.accuracy * 100)}% accuracy</span>
                 <span>
-                  <span className="leader-meta-label">Max</span>{" "}
-                  {entry.pointsRemaining}
+                  {entry.pointsRemaining}{" "}
+                  <span className="leader-meta-label">Max</span>
                 </span>
                 <span>{formatCost(entry.totalCostUsd)}</span>
               </div>
