@@ -269,9 +269,24 @@ function FirstFourBracket({
   view: SubmissionView;
   onSelect: (gameId: string) => void;
 }) {
-  const games = getGamesForRound(view, "First Four");
+  const games = getGamesForRound(view, "First Four").filter(
+    (game) => game.winner !== null,
+  );
   if (games.length === 0) {
-    return null;
+    if (view.submission.model.id !== "mimo-v2-pro") {
+      return null;
+    }
+
+    return (
+      <section className="first-four-panel">
+        <div className="region-header">
+          <h3>First Four</h3>
+        </div>
+        <p className="first-four-note">
+          MiMo-V2-Pro was released after the First Four games were played.
+        </p>
+      </section>
+    );
   }
 
   return (
