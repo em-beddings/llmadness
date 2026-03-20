@@ -3,9 +3,36 @@ import {
   ActualResults,
   BracketConfig,
   BracketSubmission,
+  CompetitorRef,
   Leaderboard,
   LeaderboardEntry
 } from "@/lib/types";
+
+function canRefStillProduceTeam(
+  config: BracketConfig,
+  resultMap: Map<string, string | undefined>,
+  ref: CompetitorRef,
+  teamId: string
+): boolean {
+  if (ref.kind === "team") {
+    return ref.teamId === teamId;
+  }
+
+  const knownWinner = resultMap.get(ref.gameId);
+  if (knownWinner) {
+    return knownWinner === teamId;
+  }
+
+  const sourceGame = config.games.find((game) => game.id === ref.gameId);
+  if (!sourceGame) {
+    return false;
+  }
+
+  return (
+    canRefStillProduceTeam(config, resultMap, sourceGame.slotA, teamId) ||
+    canRefStillProduceTeam(config, resultMap, sourceGame.slotB, teamId)
+  );
+}
 
 export function scoreSubmissions(
   runId: string,
@@ -19,7 +46,6 @@ export function scoreSubmissions(
   const totalAvailablePoints = config.games.reduce((sum, game) => sum + roundPoints(game.round), 0);
 
   const entries: LeaderboardEntry[] = submissions.map((submission) => {
-    const submissionPickMap = new Map(submission.picks.map((pick) => [pick.gameId, pick]));
     const gameScores = submission.picks.map((pick) => {
       const resultWinner = resultMap.get(pick.gameId);
       const round = gameIndex.get(pick.gameId)?.round ?? "Round of 64";
@@ -35,25 +61,24 @@ export function scoreSubmissions(
     });
 
     const totalPoints = gameScores.reduce((sum, game) => sum + game.pointsAwarded, 0);
-    const lostResolvedPoints = actualResults.results.reduce((sum, result) => {
-      if (!result.winnerId) {
-        return sum;
-      }
-
-      const game = gameIndex.get(result.gameId);
+    const pointsRemaining = submission.picks.reduce((sum, pick) => {
+      const game = gameIndex.get(pick.gameId);
       if (!game) {
         return sum;
       }
 
-      const pick = submissionPickMap.get(result.gameId);
-      if (pick?.winnerId === result.winnerId) {
+      const resultWinner = resultMap.get(pick.gameId);
+      if (resultWinner) {
         return sum;
       }
 
-      return sum + roundPoints(game.round);
+      const stillAlive =
+        canRefStillProduceTeam(config, resultMap, game.slotA, pick.winnerId) ||
+        canRefStillProduceTeam(config, resultMap, game.slotB, pick.winnerId);
+
+      return stillAlive ? sum + roundPoints(game.round) : sum;
     }, 0);
-    const maxPoints = totalAvailablePoints - lostResolvedPoints;
-    const pointsRemaining = Math.max(0, maxPoints - totalPoints);
+    const maxPoints = totalPoints + pointsRemaining;
     const correctCount = gameScores.filter((game) => game.correct).length;
 
     return {
