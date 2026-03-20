@@ -41,6 +41,7 @@ export function scoreSubmissions(
   actualResults: ActualResults
 ): Leaderboard {
   const resultMap = new Map(actualResults.results.map((result) => [result.gameId, result.winnerId]));
+  const resolvedResultsCount = actualResults.results.filter((result) => Boolean(result.winnerId)).length;
   const gameIndex = indexGames(config);
 
   const entries: LeaderboardEntry[] = submissions.map((submission) => {
@@ -59,7 +60,6 @@ export function scoreSubmissions(
     });
 
     const totalPoints = gameScores.reduce((sum, game) => sum + game.pointsAwarded, 0);
-    const maxPoints = config.games.reduce((sum, game) => sum + roundPoints(game.round), 0);
     const pointsRemaining = submission.picks.reduce((sum, pick) => {
       const game = gameIndex.get(pick.gameId);
       if (!game) {
@@ -77,6 +77,7 @@ export function scoreSubmissions(
 
       return stillAlive ? sum + roundPoints(game.round) : sum;
     }, 0);
+    const maxPoints = totalPoints + pointsRemaining;
     const correctCount = gameScores.filter((game) => game.correct).length;
 
     return {
@@ -86,7 +87,7 @@ export function scoreSubmissions(
       maxPoints,
       pointsRemaining,
       totalCostUsd: submission.totalCostUsd ?? null,
-      accuracy: submission.picks.length === 0 ? 0 : correctCount / submission.picks.length,
+      accuracy: resolvedResultsCount === 0 ? 0 : correctCount / resolvedResultsCount,
       gameScores
     };
   });
