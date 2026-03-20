@@ -75,12 +75,12 @@ export function LeaderboardTable({
               </div>
               <div className="podium-score">
                 <strong>{entry.totalPoints}</strong>
-                <span className="score-available">/ {entry.maxPoints}</span>
+                <span className="score-available">/ {entry.totalAvailablePoints}</span>
               </div>
               <div className="podium-meta">
                 <span>{Math.round(entry.accuracy * 100)}% accuracy</span>
                 <span>
-                  {entry.pointsRemaining}{" "}
+                  {entry.maxPoints}{" "}
                   <span className="leader-meta-label">Max</span>
                 </span>
                 <span>{formatCost(entry.totalCostUsd)}</span>
@@ -129,14 +129,14 @@ export function LeaderboardTable({
               </div>
               <div className="leader-points">
                 <strong>{entry.totalPoints}</strong>
-                <span className="score-available">/ {entry.maxPoints}</span>
+                <span className="score-available">/ {entry.totalAvailablePoints}</span>
               </div>
               <div className="leader-accuracy">
                 <span>{Math.round(entry.accuracy * 100)}%</span>
                 <span className="leader-accuracy-label">accuracy</span>
               </div>
               <div className="leader-remaining">
-                <strong>{entry.pointsRemaining}</strong>
+                <strong>{entry.maxPoints}</strong>
                 <span className="leader-meta-label">Max</span>
               </div>
               <div className="leader-cost">

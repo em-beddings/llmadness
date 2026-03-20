@@ -68,7 +68,7 @@ export default async function ModelPage({
           </div>
           <div className="model-summary-item">
             <span className="leader-meta-label">Max score</span>
-            <strong>{leaderboardEntry.pointsRemaining}</strong>
+            <strong>{leaderboardEntry.maxPoints}</strong>
           </div>
           <div className="model-summary-item">
             <span className="leader-meta-label">Cost</span>

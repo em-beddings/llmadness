@@ -168,6 +168,7 @@ export interface LeaderboardEntry {
   modelId: string;
   modelLabel: string;
   totalPoints: number;
+  totalAvailablePoints: number;
   maxPoints: number;
   pointsRemaining: number;
   totalCostUsd?: number | null;
